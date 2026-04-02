@@ -1,0 +1,16 @@
+name: road_reason
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+    - torch==2.4.1 --index-url https://download.pytorch.org/whl/cu124
+    - torchvision==0.19.1 --index-url https://download.pytorch.org/whl/cu124
+    - transformers>=4.45.0
+    - accelerate>=0.34.0
+    - Pillow>=10.0
+    - numpy>=1.26
+    - matplotlib>=3.8
+    - opencv-python>=4.9
+    - sentencepiece

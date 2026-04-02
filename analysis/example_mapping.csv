@@ -1,0 +1,10 @@
+advisor_example_id,advisor_example,closest_label,label_type,match_type,match_score,frequency_in_dataset
+1,School bus discharging children; must stop even if lane is clear.,Ped-Stop-BusStop,triplet,direct_match,0.752,8559
+2,Cyclist signaling left turn with arm; reduce speed if coming in front.,Cyc-MovTow-IncomLane,triplet,partial_match,0.428,1277
+3,"Pedestrian looking at phone, not traffic; unlikely to cross yet.",Ped-Stop-LftPav,triplet,direct_match,0.604,72601
+4,Pedestrian looking at road; may cross.,Ped-XingFmLft,duplex,direct_match,0.513,35471
+5,Car brakes suddenly for a logical reason.,Car-Brake-VehLane,triplet,direct_match,0.657,53210
+6,Waymo stiff rule: stops for plastic bag — VLM provides semantic nuance.,LarVeh-Stop-VehLane,triplet,partial_match,0.428,1644
+7,Ambulance with sirens behind car; need to pull over.,Car-MovTow-IncomLane,triplet,direct_match,0.583,286573
+8,Road blocked; human gesturing left; must deviate from GPS path and turn left.,Ped-XingFmLft-Jun,triplet,partial_match,0.425,32292
+9,Long-tail scenario: school bus not seen enough times; model reasons through logic.,Ped-Stop-BusStop,triplet,direct_match,0.575,8559

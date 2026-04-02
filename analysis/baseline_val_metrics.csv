@@ -1,0 +1,2 @@
+model,epoch,metric,split,iou,agent_ness,agent,action,loc,duplex,triplet
+3D-RetinaNet-I3D,25,f-mAP,val,0.5,23.3482,17.760326,15.276041,13.732354,13.435377,9.169244
