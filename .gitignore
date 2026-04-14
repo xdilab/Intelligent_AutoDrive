@@ -1,0 +1,39 @@
+papers/
+working_docs/
+.claude
+.codex
+datasets/BDD-X/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Data and models
+*.pt
+*.pth
+*.onnx
+*.bin
+*.h5
+*.json.gz
+*.zip
+*.tar.gz
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+.env
+.venv
+env/
+venv/

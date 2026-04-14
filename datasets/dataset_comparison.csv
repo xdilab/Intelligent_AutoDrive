@@ -1,0 +1,35 @@
+Property,BDD-X,CoVLA
+Dataset,BDD-X,CoVLA
+Full name,Berkeley DeepDrive eXplanation,Comprehensive Vision-Language-Action
+Authors,Kim et al. (UC Berkeley),Arai et al. (Turing Inc.)
+Year,2018,2025
+Venue,ECCV 2018,arXiv 2408.10845
+Collection region,USA (diverse),"Tokyo, Japan (urban, highway, residential, mountain)"
+Total clips/scenes,12997,"10,000 (30s each)"
+Total frames,~8.4M,"6,000,000"
+Total hours,77+,83.3
+Camera resolution,~720p (BDD100K standard),"1928×1208 (H.265, 20FPS)"
+Annotation format,"CSV (wide — 1 row per video, up to 15 actions)","JSONL (concatenated JSON objects, one file per scene per modality)"
+Annotation granularity,Action-level (temporal segment),Frame-level
+Total annotated instances,26538,"6,000,000"
+Caption types,Action description + Justification (why),plain_caption (behavior) + rich_caption (extended) + risk (reason)
+Caption generation,"Manual (human annotators, US driving rules)",Auto (rule-based + VideoLLaMA2-7B; hallucination-mitigated)
+Action description field,Yes (Answer.Naction),Yes (plain_caption)
+Reasoning/explanation field,Yes (Answer.Njustification),Yes (risk field from rich_caption)
+Mean justification length,7.9 words,frame-level (varies)
+Trajectory data,No,"Yes (60 pts × 3D in vehicle frame, ~3s at 20FPS)"
+Ego speed,No (videos link to BDD100K which has speed),"Yes (vEgo, vEgoRaw in ego_state)"
+Steering angle,No (videos link to BDD100K which has steering),Yes (steeringAngleDeg in ego_state)
+Brake / gas,No,"Yes (brake, brakePressed, gas, gasPressed in ego_state)"
+Traffic light annotations,No,"Yes (class: green/red/amber, bbox per frame)"
+Leading vehicle annotations,No,"Yes (has_lead, lead_prob, lead_x/y, lead_speed_kmh)"
+Weather in annotations,No (implicit in video),"Yes (weather field in captions, with confidence rate)"
+Road type in annotations,No (implicit in video),"Yes (road field in captions, with confidence rate)"
+Train split,5588 videos,"7,000 scenes (70%)"
+Val split,698 videos,"1,500 scenes (15%)"
+Test split,698 videos,"1,500 scenes (15%)"
+License,UC Berkeley — non-commercial research,"Turing Inc. — non-commercial, no redistribution"
+DSDAG Y-node relevance,Action descriptions → Y node (what is happening),plain_caption → Y node (what ego action is occurring)
+DSDAG W reason mode relevance,Justifications → W reason mode (why it happened),risk field → W reason mode (why driver should be careful)
+Availability,GitHub clone + Google Drive (annotations only),"HuggingFace (gated, requires account)"
+Video availability,S3 URLs in CSV (may be expired); BDD100K needed,Included in HuggingFace download
