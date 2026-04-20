@@ -70,6 +70,12 @@ class QwenViTExtractor(nn.Module):
         Wrap the first n_layers ViT blocks with LoRA adapters via regex targeting.
         Only lora_A / lora_B params will have requires_grad=True after this call.
         """
+        # Some PEFT builds reference newer float8 dtype names that may not exist
+        # in the torch version available in this environment. Provide a fallback
+        # alias so adapter initialization remains compatible.
+        if not hasattr(torch, "float8_e8m0fnu") and hasattr(torch, "float8_e4m3fn"):
+            torch.float8_e8m0fnu = torch.float8_e4m3fn
+
         from peft import LoraConfig, get_peft_model
 
         block_range  = "|".join(str(i) for i in range(n_layers))

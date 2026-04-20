@@ -13,16 +13,16 @@ Metrics (label-set level, not box-level — no bbox IoU here):
                       (constrained runs only)
 
 Usage:
-    python baseline/eval_preds.py
-    python baseline/eval_preds.py --preds baseline/results/smolvlm_preds.json
-    python baseline/eval_preds.py --preds baseline/results/constrained_preds.json
+    python experiments/exp0_smolvlm_baselines/eval_preds.py
+    python experiments/exp0_smolvlm_baselines/eval_preds.py --preds experiments/exp0_smolvlm_baselines/results/smolvlm_preds.json
+    python experiments/exp0_smolvlm_baselines/eval_preds.py --preds experiments/exp0_smolvlm_baselines/results/constrained_preds.json
 """
 
 import argparse
 import json
 from collections import defaultdict
 
-DEFAULT_PREDS = "/data/repos/ROAD_Reason/baseline/results/smolvlm_preds.json"
+DEFAULT_PREDS = "/data/repos/ROAD_Reason/experiments/exp0_smolvlm_baselines/results/smolvlm_preds.json"
 
 
 def label_sets_from_gt(gt_detections):

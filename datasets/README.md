@@ -148,7 +148,7 @@ datasets/
 │       ├── traffic-lights-frame.jsonl ← real TL detection: green signal
 │       ├── front-car-frame.jsonl    ← real front-car entry: no lead at frame 44
 │       └── caption-pair.md          ← annotated plain_caption + risk with DSDAG mapping
-└── bdd-x/
+└── BDD-X/
     ├── dataset.md                   ← full BDD-X reference
     └── examples/
         ├── annotation-row.csv       ← real CSV row (header + 5-slot submission)
@@ -175,4 +175,4 @@ From Dr. Moradi's 2026-04-16 meeting notes:
 | How t-norm differs from paper | `road-waymo/dataset.md` → Paper vs. Implementation Differences |
 | Full list of Agent, Actions, Locations | `road-waymo/dataset.md` → class tables |
 | CoVLA data flow | `covla/dataset.md` → Data Flow |
-| BDD-X annotation schema | `bdd-x/dataset.md` → CSV Annotation Schema |
+| BDD-X annotation schema | `BDD-X/dataset.md` → CSV Annotation Schema |

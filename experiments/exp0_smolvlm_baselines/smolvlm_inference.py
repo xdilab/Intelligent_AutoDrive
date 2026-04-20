@@ -7,10 +7,10 @@ prompt listing valid ROAD-Waymo label classes, and saves predictions
 alongside ground truth annotations for offline evaluation.
 
 Usage:
-    python baseline/smolvlm_inference.py
-    python baseline/smolvlm_inference.py --n_videos 20 --frames_per_video 10
-    python baseline/smolvlm_inference.py --model HuggingFaceTB/SmolVLM-256M-Instruct
-    python baseline/smolvlm_inference.py --split train --output results/train_preds.json
+    python experiments/exp0_smolvlm_baselines/smolvlm_inference.py
+    python experiments/exp0_smolvlm_baselines/smolvlm_inference.py --n_videos 20 --frames_per_video 10
+    python experiments/exp0_smolvlm_baselines/smolvlm_inference.py --model HuggingFaceTB/SmolVLM-256M-Instruct
+    python experiments/exp0_smolvlm_baselines/smolvlm_inference.py --split train --output results/train_preds.json
 """
 
 import argparse
@@ -28,7 +28,7 @@ from transformers import AutoProcessor, AutoModelForVision2Seq
 # ── Paths ──────────────────────────────────────────────────────────────────────
 ANNO_FILE   = "/data/datasets/ROAD_plusplus/road_waymo_trainval_v1.0.json"
 FRAMES_DIR  = "/data/datasets/ROAD_plusplus/rgb-images"
-DEFAULT_OUT = "/data/repos/ROAD_Reason/baseline/results/smolvlm_preds.json"
+DEFAULT_OUT = "/data/repos/ROAD_Reason/experiments/exp0_smolvlm_baselines/results/smolvlm_preds.json"
 
 # ── Prompt ─────────────────────────────────────────────────────────────────────
 # Label sets are injected at runtime from the annotation JSON so the prompt

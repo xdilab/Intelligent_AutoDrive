@@ -40,7 +40,15 @@ Shared Qwen2.5-VL-7B backbone fine-tuned sequentially on three driving datasets 
 
 Training order (confirmed): ROAD-R → BDD-X → CoVLA → joint.
 
+Current interpretation of the ROAD-R line:
+- `exp1_road_r`: oracle-box semantic probe
+- `exp1b_road_r`: custom dense detector diagnostic
+- next baseline: `experiments/exp1c_qwen_native_grounding/qwen_native_grounding.py`
+- next localization architecture: OpenMixer
+
 **Experiment 1 (ROAD-R):** ViT encoder, video frames + ROAD-Waymo labels as input, triplet + duplex combinations as output, Łukasiewicz t-norm loss.
+
+**Experiment 1b lesson:** `exp1b_road_r` suggested strong semantics on GT-aligned internal evaluation, but it did not outperform the official 3D-RetinaNet baseline on the baseline-compatible frame-mAP evaluator. The repo therefore now treats `exp1b` as a diagnostic step before trying Qwen native grounding and then OpenMixer.
 
 ---
 
@@ -101,14 +109,14 @@ Three SmolVLM-500M-Instruct zero-shot baselines on ROAD-Waymo val frames.
 ### Zero-shot (flat label lists)
 
 ```bash
-python baseline/smolvlm_inference.py
+python experiments/exp0_smolvlm_baselines/smolvlm_inference.py
 # options: --n_videos 20 --frames_per_video 10 --model HuggingFaceTB/SmolVLM-Instruct
 ```
 
 ### Constraint-aware (49 valid duplexes + 86 valid triplets injected into prompt)
 
 ```bash
-python baseline/smolvlm_constrained.py
+python experiments/exp0_smolvlm_baselines/smolvlm_constrained.py
 ```
 
 ### GT-conditioned reasoning
@@ -116,15 +124,15 @@ python baseline/smolvlm_constrained.py
 Feeds ground-truth triplets alongside the image; model must explain why and predict agent intent. Isolates reasoning capability from detection.
 
 ```bash
-python baseline/smolvlm_gt_reasoning.py
+python experiments/exp0_smolvlm_baselines/smolvlm_gt_reasoning.py
 # --prefer_ped (default) biases frame selection toward pedestrian scenes
 ```
 
 ### Evaluate
 
 ```bash
-python baseline/eval_preds.py --preds baseline/results/smolvlm_preds.json
-python baseline/eval_preds.py --preds baseline/results/constrained_preds.json
+python experiments/exp0_smolvlm_baselines/eval_preds.py --preds experiments/exp0_smolvlm_baselines/results/smolvlm_preds.json
+python experiments/exp0_smolvlm_baselines/eval_preds.py --preds experiments/exp0_smolvlm_baselines/results/constrained_preds.json
 ```
 
 ---
@@ -133,10 +141,13 @@ python baseline/eval_preds.py --preds baseline/results/constrained_preds.json
 
 ```
 Intelligent_AutoDrive/
-├── baseline/               # SmolVLM zero-shot baselines + evaluation
+├── experiments/
+│   ├── exp0_smolvlm_baselines/
+│   ├── exp1_road_r/
+│   ├── exp1b_road_r/
+│   └── exp1c_qwen_native_grounding/
 ├── analysis/               # Dataset statistics and visualization
 ├── datasets/               # Dataset utilities and exploration scripts
-├── docs/                   # Public-facing documentation
 ├── viz/                    # Visualization outputs
 ├── tnorm_loss.py           # T-norm (Łukasiewicz) constraint loss
 ├── convert_waymo_to_coco.py

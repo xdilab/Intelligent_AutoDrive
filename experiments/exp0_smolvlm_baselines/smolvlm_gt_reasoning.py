@@ -1,18 +1,27 @@
 #!/usr/bin/env python3
 """
-SmolVLM constrained inference baseline on ROAD-Waymo (ROAD++).
+SmolVLM GT-conditioned reasoning baseline on ROAD-Waymo (ROAD++).
 
-Bakes all 135 valid ROAD-Waymo constraint labels (49 duplexes + 86 triplets)
-directly into the system prompt so the model can only produce combinations that
-are semantically legal according to the dataset ontology.
+Feeds ground-truth structured labels (triplets) alongside the image and asks
+the model to produce natural language reasoning about the scene. This isolates
+the reasoning capability from detection — the model is told what is present and
+must explain why and what it implies about agent intent.
 
-Contrast with smolvlm_inference.py (zero-shot, flat label lists).
+This is the most direct proxy for the Approach 3 thesis contribution:
+constrained natural language scene reasoning conditioned on structured labels.
+
+Output format per frame:
+  {
+    "triplets_given":  ["Ped-Wait2X-Jun", "Car-MovAway-VehLane", "TL-Red-Jun"],
+    "reasoning":       "A pedestrian is waiting at the junction ...",
+    "intent_summary":  "Pedestrian likely to cross once signal changes."
+  }
 
 Usage:
-    python baseline/smolvlm_constrained.py
-    python baseline/smolvlm_constrained.py --n_videos 20 --frames_per_video 10
-    python baseline/smolvlm_constrained.py --model HuggingFaceTB/SmolVLM-Instruct
-    python baseline/smolvlm_constrained.py --output results/constrained_preds.json
+    python experiments/exp0_smolvlm_baselines/smolvlm_gt_reasoning.py
+    python experiments/exp0_smolvlm_baselines/smolvlm_gt_reasoning.py --n_videos 20 --frames_per_video 10
+    python experiments/exp0_smolvlm_baselines/smolvlm_gt_reasoning.py --model HuggingFaceTB/SmolVLM-Instruct
+    python experiments/exp0_smolvlm_baselines/smolvlm_gt_reasoning.py --output results/gt_reasoning_preds.json
 """
 
 import argparse
@@ -30,62 +39,62 @@ from transformers import AutoProcessor, AutoModelForVision2Seq
 # ── Paths ──────────────────────────────────────────────────────────────────────
 ANNO_FILE   = "/data/datasets/ROAD_plusplus/road_waymo_trainval_v1.0.json"
 FRAMES_DIR  = "/data/datasets/ROAD_plusplus/rgb-images"
-DEFAULT_OUT = "/data/repos/ROAD_Reason/baseline/results/constrained_preds.json"
+DEFAULT_OUT = "/data/repos/ROAD_Reason/experiments/exp0_smolvlm_baselines/results/gt_reasoning_preds.json"
 
-# ── Prompt ─────────────────────────────────────────────────────────────────────
-# SYSTEM_TEMPLATE: presents the constraint ontology once at the top.
-# USER_TEMPLATE: the per-frame instruction with the valid-triplet list injected.
-#
-# Design rationale:
-#   - Valid duplexes tell the model which agent+action pairs are possible at all.
-#   - Valid triplets are the hard constraint: every detection must be drawn from
-#     this list, no other combination is legal.
-#   - Listing the triplets as a numbered menu gives the model a concrete reference
-#     to quote from, reducing hallucination of impossible combos.
+# ── Label glossary injected once into the system prompt ────────────────────────
+# Gives the model enough domain knowledge to reason meaningfully about the
+# ROAD-Waymo shorthand labels without needing to infer their meaning.
+LABEL_GLOSSARY = """
+Agent types:
+  Ped=Pedestrian, Car=Car, Cyc=Cyclist, Mobike=Motorbike, SmalVeh=Small vehicle,
+  MedVeh=Medium vehicle, LarVeh=Large vehicle, Bus=Bus, EmVeh=Emergency vehicle,
+  TL=Traffic light
+
+Actions:
+  Red/Amber/Green = traffic light state
+  MovAway=Moving away from camera, MovTow=Moving toward camera, Mov=Moving (lateral),
+  Rev=Reversing, Brake=Braking, Stop=Stationary, IncatLft/IncatRht=Indicating left/right,
+  HazLit=Hazard lights, TurLft/TurRht=Turning left/right, MovRht/MovLft=Moving right/left,
+  Ovtak=Overtaking, Wait2X=Waiting to cross, XingFmLft=Crossing from left,
+  XingFmRht=Crossing from right, Xing=Crossing, PushObj=Pushing an object
+
+Locations:
+  VehLane=Vehicle lane, OutgoLane=Outgoing lane, IncomLane=Incoming lane,
+  OutgoCycLane/IncomCycLane=Cycle lane, OutgoBusLane/IncomBusLane=Bus lane,
+  Pav=Pavement, LftPav=Left pavement, RhtPav=Right pavement,
+  Jun=Junction, xing=Pedestrian crossing, BusStop=Bus stop, parking=Parking area
+"""
 
 SYSTEM_PROMPT = (
-    "You are an expert autonomous-driving perception system. "
-    "You label road agents in dashcam frames using a fixed ontology. "
-    "Every detection you output MUST be drawn exactly from the valid triplet list "
-    "provided in each query — no other agent/action/location combinations exist in "
-    "this ontology."
+    "You are an expert autonomous-driving scene analyst. "
+    "You are given a dashcam image along with the verified ground-truth labels "
+    "for every road agent visible in the scene. "
+    "Your task is to reason about the scene — explaining what is happening, "
+    "why, and what each agent is likely to do next — using the labels as your "
+    "factual anchor. Do not contradict or ignore the provided labels.\n\n"
+    "Label glossary:\n" + LABEL_GLOSSARY
 )
 
 USER_TEMPLATE = """\
-Analyse this dashcam frame and identify every visible road agent.
+The following agent labels have been verified for this frame:
 
-## Valid agent–action pairs (duplexes)
-Only these agent+action combinations are legal:
-{duplex_block}
+{triplet_lines}
 
-## Valid agent–action–location triplets
-Your detections MUST come from this list only — do not invent combinations:
-{triplet_block}
+Using these labels and the image, provide:
+1. A scene description grounded in the labels (2–3 sentences).
+2. An intent summary for the most safety-relevant agent (1 sentence).
 
-## Output format
-Return a single JSON object with no markdown fences:
+Respond with a JSON object only — no markdown fences:
 {{
-  "detections": [
-    {{
-      "triplet": "<Agent>-<Action>-<Location>",
-      "confidence": "high" | "medium" | "low"
-    }}
-  ],
-  "av_context": "one sentence about what the ego-vehicle is doing",
-  "scene": "one sentence describing the overall scene"
-}}
-
-Rules:
-- Each "triplet" value must be copied verbatim from the valid triplets list above.
-- List one entry per visible agent instance (multiple of the same triplet is fine).
-- If you are uncertain, use confidence "low" rather than guessing a different triplet.\
+  "scene_description": "...",
+  "intent_summary": "..."
+}}\
 """
 
 
-def build_prompt(duplex_labels, triplet_labels):
-    duplex_block  = "\n".join(f"  {d}" for d in duplex_labels)
-    triplet_block = "\n".join(f"  {t}" for t in triplet_labels)
-    return USER_TEMPLATE.format(duplex_block=duplex_block, triplet_block=triplet_block)
+def build_user_prompt(triplets):
+    lines = "\n".join(f"  - {t}" for t in triplets)
+    return USER_TEMPLATE.format(triplet_lines=lines)
 
 
 def load_annotations(anno_file):
@@ -120,51 +129,34 @@ def frame_id_to_path(frames_dir, video_name, frame_id):
     return Path(frames_dir) / video_name / f"{int(frame_id):05d}.jpg"
 
 
-def parse_gt(frame_data, agent_labels, action_labels, loc_labels):
-    detections = []
+def gt_triplets(frame_data, agent_labels, action_labels, loc_labels):
+    """Build all agent-action-location triplet strings present in a frame."""
+    triplets = []
     for anno in frame_data.get("annos", {}).values():
         if not isinstance(anno, dict):
             continue
         agents    = [agent_labels[i]  for i in anno.get("agent_ids",  []) if i < len(agent_labels)]
         actions   = [action_labels[i] for i in anno.get("action_ids", []) if i < len(action_labels)]
         locations = [loc_labels[i]    for i in anno.get("loc_ids",    []) if i < len(loc_labels)]
-        triplets  = []
         for ag in agents:
             for ac in actions:
                 for lo in locations:
-                    triplets.append(f"{ag}-{ac}-{lo}")
-        detections.append({"agent": agents, "actions": actions, "locations": locations, "triplets": triplets})
-    return detections
+                    t = f"{ag}-{ac}-{lo}"
+                    if t not in triplets:
+                        triplets.append(t)
+    return triplets
 
 
-def parse_model_output(raw_text, valid_triplet_set):
+def parse_model_output(raw_text):
     text = re.sub(r"```(?:json)?\s*", "", raw_text).strip().rstrip("`").strip()
     start = text.find("{")
     end   = text.rfind("}") + 1
     if start == -1 or end == 0:
         return None, "no_json_found"
     try:
-        parsed = json.loads(text[start:end])
+        return json.loads(text[start:end]), None
     except json.JSONDecodeError as e:
         return None, str(e)
-
-    # Annotate each detection with whether its triplet is in the valid set
-    for det in parsed.get("detections", []):
-        t = det.get("triplet", "")
-        det["_valid"] = t in valid_triplet_set
-
-    return parsed, None
-
-
-def constraint_violation_rate(parsed, valid_triplet_set):
-    """Fraction of predicted triplets that are not in the valid set."""
-    if not parsed:
-        return None
-    dets = parsed.get("detections", [])
-    if not dets:
-        return 0.0
-    violations = sum(1 for d in dets if d.get("triplet", "") not in valid_triplet_set)
-    return violations / len(dets)
 
 
 def run_inference(args):
@@ -174,13 +166,6 @@ def run_inference(args):
     agent_labels   = data["agent_labels"]
     action_labels  = data["action_labels"]
     loc_labels     = data["loc_labels"]
-    duplex_labels  = data["duplex_labels"]
-    triplet_labels = data["triplet_labels"]
-    valid_triplets = set(triplet_labels)
-
-    print(f"Constraint set: {len(duplex_labels)} valid duplexes, {len(triplet_labels)} valid triplets")
-
-    user_prompt = build_prompt(duplex_labels, triplet_labels)
 
     # ── Sample frames ────────────────────────────────────────────────────────
     split_videos = get_split_videos(db, args.split)
@@ -197,14 +182,31 @@ def run_inference(args):
         annotated = get_annotated_frames(vdata)
         if not annotated:
             continue
-        chosen = rng.sample(annotated, min(args.frames_per_video, len(annotated)))
+        # Prefer frames with pedestrian labels for more interesting reasoning
+        ped_idx = data["agent_labels"].index("Ped") if "Ped" in data["agent_labels"] else -1
+        if args.prefer_ped and ped_idx >= 0:
+            ped_frames = [
+                (fid, fd) for fid, fd in annotated
+                if any(
+                    ped_idx in anno.get("agent_ids", [])
+                    for anno in fd.get("annos", {}).values()
+                    if isinstance(anno, dict)
+                )
+            ]
+            pool = ped_frames if ped_frames else annotated
+        else:
+            pool = annotated
+
+        chosen = rng.sample(pool, min(args.frames_per_video, len(pool)))
         for fid, fdata in chosen:
             img_path = frame_id_to_path(args.frames_dir, vname, fid)
             if not img_path.exists():
                 print(f"  WARNING: frame not found: {img_path}", flush=True)
                 continue
-            gt = parse_gt(fdata, agent_labels, action_labels, loc_labels)
-            samples.append((vname, fid, str(img_path), gt))
+            triplets = gt_triplets(fdata, agent_labels, action_labels, loc_labels)
+            if not triplets:
+                continue
+            samples.append((vname, fid, str(img_path), triplets))
 
     print(f"Sampled {len(samples)} frames across {len(sampled_videos)} videos")
 
@@ -227,13 +229,11 @@ def run_inference(args):
 
     # ── Inference loop ────────────────────────────────────────────────────────
     results = []
-    total_violation_rate = 0.0
-    n_with_dets = 0
+    for i, (vname, fid, img_path, triplets) in enumerate(samples):
+        print(f"[{i+1}/{len(samples)}] {vname} frame {fid}  ({len(triplets)} triplets)", end=" … ", flush=True)
 
-    for i, (vname, fid, img_path, gt) in enumerate(samples):
-        print(f"[{i+1}/{len(samples)}] {vname} frame {fid}", end=" … ", flush=True)
-
-        image = Image.open(img_path).convert("RGB")
+        image       = Image.open(img_path).convert("RGB")
+        user_prompt = build_user_prompt(triplets)
 
         messages = [
             {"role": "system", "content": [{"type": "text", "text": SYSTEM_PROMPT}]},
@@ -245,8 +245,6 @@ def run_inference(args):
                 ],
             },
         ]
-
-        # SmolVLM may not support system role — fall back to prepending to user content
         try:
             prompt = processor.apply_chat_template(messages, add_generation_prompt=True)
         except Exception:
@@ -274,64 +272,49 @@ def run_inference(args):
 
         generated = output_ids[0][inputs["input_ids"].shape[1]:]
         raw_text  = processor.decode(generated, skip_special_tokens=True)
+        parsed, parse_err = parse_model_output(raw_text)
 
-        parsed, parse_err = parse_model_output(raw_text, valid_triplets)
-        viol_rate = constraint_violation_rate(parsed, valid_triplets)
-
-        if viol_rate is not None:
-            total_violation_rate += viol_rate
-            n_with_dets += 1
-
-        status = "ok" if parsed else f"parse_error"
-        viol_str = f"  violations={viol_rate:.0%}" if viol_rate is not None else ""
-        print(f"{status}{viol_str} ({elapsed:.1f}s)", flush=True)
+        status = "ok" if parsed else "parse_error"
+        print(f"{status} ({elapsed:.1f}s)", flush=True)
+        if parsed:
+            # Print a preview so you can eyeball quality as it runs
+            scene = parsed.get("scene_description", "")
+            print(f"    > {scene[:120]}", flush=True)
 
         results.append({
-            "video":          vname,
-            "frame_id":       fid,
-            "img_path":       img_path,
-            "gt":             gt,
-            "raw":            raw_text,
-            "parsed":         parsed,
-            "parse_err":      parse_err,
-            "violation_rate": viol_rate,
-            "elapsed_s":      round(elapsed, 2),
+            "video":           vname,
+            "frame_id":        fid,
+            "img_path":        img_path,
+            "triplets_given":  triplets,
+            "raw":             raw_text,
+            "parsed":          parsed,
+            "parse_err":       parse_err,
+            "elapsed_s":       round(elapsed, 2),
         })
 
     # ── Save ─────────────────────────────────────────────────────────────────
     out_path = Path(args.output)
     out_path.parent.mkdir(parents=True, exist_ok=True)
-
-    mean_viol = total_violation_rate / n_with_dets if n_with_dets else None
     meta = {
-        "model":                   args.model,
-        "split":                   args.split,
-        "n_videos":                args.n_videos,
-        "frames_per_video":        args.frames_per_video,
-        "seed":                    args.seed,
-        "n_duplex_constraints":    len(duplex_labels),
-        "n_triplet_constraints":   len(triplet_labels),
-        "agent_labels":            agent_labels,
-        "action_labels":           action_labels,
-        "loc_labels":              loc_labels,
-        "duplex_labels":           duplex_labels,
-        "triplet_labels":          triplet_labels,
-        "total_frames":            len(results),
-        "parse_ok":                sum(1 for r in results if r["parsed"] is not None),
-        "mean_constraint_violation_rate": mean_viol,
+        "model":            args.model,
+        "split":            args.split,
+        "n_videos":         args.n_videos,
+        "frames_per_video": args.frames_per_video,
+        "prefer_ped":       args.prefer_ped,
+        "seed":             args.seed,
+        "total_frames":     len(results),
+        "parse_ok":         sum(1 for r in results if r["parsed"] is not None),
     }
     with open(out_path, "w") as f:
         json.dump({"meta": meta, "results": results}, f, indent=2)
 
     print(f"\nSaved {len(results)} results → {out_path}")
-    print(f"Parse success:           {meta['parse_ok']}/{meta['total_frames']}")
-    if mean_viol is not None:
-        print(f"Mean constraint violations: {mean_viol:.1%}")
+    print(f"Parse success: {meta['parse_ok']}/{meta['total_frames']}")
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="SmolVLM constraint-aware inference baseline on ROAD-Waymo"
+        description="SmolVLM GT-conditioned reasoning baseline on ROAD-Waymo"
     )
     parser.add_argument("--anno_file",        default=ANNO_FILE)
     parser.add_argument("--frames_dir",       default=FRAMES_DIR)
@@ -340,8 +323,11 @@ def main():
     parser.add_argument("--split",            default="val")
     parser.add_argument("--n_videos",         type=int, default=10)
     parser.add_argument("--frames_per_video", type=int, default=5)
-    parser.add_argument("--max_new_tokens",   type=int, default=512)
+    parser.add_argument("--max_new_tokens",   type=int, default=256)
     parser.add_argument("--seed",             type=int, default=42)
+    parser.add_argument("--prefer_ped",       action="store_true", default=True,
+                        help="Prefer frames containing pedestrians (more interesting reasoning)")
+    parser.add_argument("--no_prefer_ped",    dest="prefer_ped", action="store_false")
     args = parser.parse_args()
     run_inference(args)
 
