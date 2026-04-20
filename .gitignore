@@ -37,3 +37,9 @@ Thumbs.db
 .venv
 env/
 venv/
+.conda-cache/
+.conda-envs/
+.conda-pkgs/
+
+# Experiment artifacts
+experiments/*/logs/

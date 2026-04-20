@@ -1,0 +1,49 @@
+{
+  "_source": "road_waymo_trainval_v1.1.json — db['train_00407']['frames']['1']",
+  "_note": "agent_ids/action_ids/loc_ids/duplex_ids are 0-based indices into the label arrays in the JSON root. triplet_ids are raw dataset values (not 0-indexed into triplet_labels).",
+  "_label_key": {
+    "agent_ids":  ["Ped","Car","Cyc","Mobike","SmalVeh","MedVeh","LarVeh","Bus","EmVeh","TL"],
+    "action_ids": ["Red","Amber","Green","MovAway","MovTow","Mov","Rev","Brake","Stop","IncatLft","IncatRht","HazLit","TurLft","TurRht","MovRht","MovLft","Ovtak","Wait2X","XingFmLft","XingFmRht","Xing","PushObj"],
+    "loc_ids":    ["VehLane","OutgoLane","OutgoCycLane","OutgoBusLane","IncomLane","IncomCycLane","IncomBusLane","Pav","LftPav","RhtPav","Jun","xing","BusStop","parking","LftParking","rightParking"]
+  },
+
+  "annotated": 1,
+  "rgb_image_id": "1",
+  "width": 1920,
+  "height": 1280,
+
+  "annos": {
+    "b_1": {
+      "_decoded": "Car-MovAway-OutgoLane  →  duplex: Car-MovAway  →  triplet: Car-MovAway-OutgoLane (idx 23)",
+      "box": [0.411932125, 0.45235080468750005, 0.4237744375, 0.46715369531250006],
+      "agent_ids":  [1],
+      "action_ids": [3],
+      "loc_ids":    [1],
+      "duplex_ids": [9],
+      "triplet_ids": [109],
+      "tube_uid": "283ae350-0e37-460c-9d1a-d5d62a277a61"
+    },
+    "b_3": {
+      "_decoded": "Car-MovTow-Jun  →  duplex: Car-MovTow  →  triplet: Car-MovTow-Jun (idx 27)",
+      "box": [0.5886616171875, 0.47788665234375005, 0.6521495703125001, 0.50601214453125],
+      "agent_ids":  [1],
+      "action_ids": [4],
+      "loc_ids":    [10],
+      "duplex_ids": [10],
+      "triplet_ids": [128],
+      "tube_uid": "33f171fa-b993-4d18-99c8-bf79a2174bf3"
+    },
+    "b_33": {
+      "_decoded": "Ped-Stop-RhtPav  →  duplex: Ped-Stop  →  triplet: Ped-Stop-RhtPav (idx 12)",
+      "box": [0.6133331015625, 0.476653078125, 0.6281359921875, 0.525996046875],
+      "agent_ids":  [0],
+      "action_ids": [8],
+      "loc_ids":    [9],
+      "duplex_ids": [3],
+      "triplet_ids": [43],
+      "tube_uid": "ea080fb7-09ae-450f-935c-8a36fdfc2ceb"
+    }
+  },
+
+  "_note_triplet_reconstruct": "The dataset.py _parse_frame() does NOT use triplet_ids from JSON. It reconstructs triplets by cross-product of (agent_name, action_name, loc_name) looked up in _triplet_lookup — see dataset.py:197-208."
+}
