@@ -2,7 +2,20 @@ papers/
 working_docs/
 .claude
 .codex
-datasets/BDD-X/
+datasets/BDD-X/**
+!datasets/BDD-X/
+!datasets/BDD-X/dataset.md
+!datasets/BDD-X/README.md
+!datasets/BDD-X/LICENSE
+!datasets/BDD-X/examples/
+!datasets/BDD-X/examples/**
+!datasets/BDD-X/img/
+!datasets/BDD-X/img/*.png
+datasets/BDD-X/.git/
+datasets/BDD-X/BDD-X-Annotations_v1.csv
+datasets/BDD-X/train.txt
+datasets/BDD-X/val.txt
+datasets/BDD-X/test.txt
 
 # Python
 __pycache__/
