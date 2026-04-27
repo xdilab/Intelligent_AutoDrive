@@ -1,3 +1,4 @@
 model,epoch,metric,split,iou,agent_ness,agent,action,loc,duplex,triplet
 3D-RetinaNet-I3D,25,f-mAP,val,0.5,23.3482,17.760326,15.276041,13.732354,13.435377,9.169244
 3D-RetinaNet-I3D+Godel,29,f-mAP,val,0.5,23.292566,17.01471,15.2114935,13.440064,13.6185465,9.374968
+Exp1b-Qwen2.5VL-FCOS-baseline-compat,15,f-mAP,val,0.5,6.036374,3.198058,1.599435,2.548324,0.38059,1.370077

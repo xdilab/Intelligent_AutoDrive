@@ -19,6 +19,7 @@ Important note:
 from __future__ import annotations
 
 import argparse
+import csv
 import importlib.util
 import json
 import pickle
@@ -305,6 +306,74 @@ def summarize_results(results: dict) -> dict:
     return summary
 
 
+RESULTS_CSV = Path(__file__).resolve().parents[2] / "results" / "val_metrics.csv"
+CSV_FIELDS = [
+    "model", "source", "status", "epoch", "metric", "split", "iou",
+    "agent_ness", "agent", "action", "loc", "duplex", "triplet",
+]
+
+
+def write_to_csv(
+    csv_path: Path,
+    model_name: str,
+    source: str,
+    status: str,
+    epoch: int,
+    metric: str,
+    split: str,
+    iou: float | str,
+    summary: dict,
+) -> None:
+    """
+    Append (or update) one row in the shared results CSV.
+
+    Uniqueness key: (model, epoch, metric, split). If a row with the same key
+    already exists it is replaced in-place; otherwise the row is appended.
+    """
+    new_row = {
+        "model":  model_name,
+        "source": source,
+        "status": status,
+        "epoch":  epoch,
+        "metric": metric,
+        "split":  split,
+        "iou":    iou,
+        "agent_ness": summary.get("agent_ness", {}).get("mAP", ""),
+        "agent":      summary.get("agent",      {}).get("mAP", ""),
+        "action":     summary.get("action",     {}).get("mAP", ""),
+        "loc":        summary.get("loc",        {}).get("mAP", ""),
+        "duplex":     summary.get("duplex",     {}).get("mAP", ""),
+        "triplet":    summary.get("triplet",    {}).get("mAP", ""),
+    }
+
+    csv_path.parent.mkdir(parents=True, exist_ok=True)
+
+    rows: list[dict] = []
+    key = lambda r: (r["model"], str(r["epoch"]), r["metric"], r["split"])
+    new_key = key(new_row)
+
+    if csv_path.exists():
+        with open(csv_path, newline="") as f:
+            rows = list(csv.DictReader(f))
+
+    replaced = False
+    for i, r in enumerate(rows):
+        if key(r) == new_key:
+            rows[i] = new_row
+            replaced = True
+            break
+    if not replaced:
+        rows.append(new_row)
+
+    with open(csv_path, "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=CSV_FIELDS)
+        writer.writeheader()
+        writer.writerows(rows)
+
+    action = "Updated" if replaced else "Appended"
+    print(f"{action} results in {csv_path}")
+
+
 def infer_frame_size(anno_file: Path, frames_dir: Path, subset: str) -> tuple[int, int]:
     with open(anno_file) as f:
         anno_data = json.load(f)
@@ -327,17 +396,29 @@ def infer_frame_size(anno_file: Path, frames_dir: Path, subset: str) -> tuple[in
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", default=C.MODEL_ID)
-    parser.add_argument("--ckpt", default=str(Path(C.CKPT_DIR) / "best.pt"))
-    parser.add_argument("--anno", default=C.ANNO_FILE)
-    parser.add_argument("--frames", default=C.FRAMES_DIR)
-    parser.add_argument("--subset", default="val")
-    parser.add_argument("--det-pkl", default=str(Path(C.LOG_DIR) / "baseline_compat_dets.pkl"))
-    parser.add_argument("--out", default=str(Path(C.LOG_DIR) / "baseline_compat_results.json"))
-    parser.add_argument("--agentness-threshold", type=float, default=C.AGENTNESS_THRESHOLD)
-    parser.add_argument("--class-threshold", type=float, default=0.025)
-    parser.add_argument("--nms-iou-threshold", type=float, default=C.NMS_IOU_THRESHOLD)
-    parser.add_argument("--eval-iou", type=float, default=0.5)
+    parser.add_argument("--model",              default=C.MODEL_ID)
+    parser.add_argument("--ckpt",               default=str(Path(C.CKPT_DIR) / "best.pt"))
+    parser.add_argument("--anno",               default=C.ANNO_FILE)
+    parser.add_argument("--frames",             default=C.FRAMES_DIR)
+    parser.add_argument("--subset",             default="val")
+    parser.add_argument("--det-pkl",            default=str(Path(C.LOG_DIR) / "baseline_compat_dets.pkl"))
+    parser.add_argument("--out",                default=str(Path(C.LOG_DIR) / "baseline_compat_results.json"))
+    parser.add_argument("--agentness-threshold",type=float, default=C.AGENTNESS_THRESHOLD)
+    parser.add_argument("--class-threshold",    type=float, default=0.025)
+    parser.add_argument("--nms-iou-threshold",  type=float, default=C.NMS_IOU_THRESHOLD)
+    parser.add_argument("--eval-iou",           type=float, default=0.5)
+    parser.add_argument("--csv",                default=str(RESULTS_CSV),
+                        help="Path to shared results CSV (default: results/val_metrics.csv)")
+    parser.add_argument("--model-name",         default=None,
+                        help="Row label for the CSV (default: Exp1b-QwenViT-FCOS-Godel)")
+    parser.add_argument("--source",             default="novel",
+                        help="Source column value in CSV (default: novel)")
+    parser.add_argument("--status",             default="done",
+                        help="Status column value in CSV (default: done)")
+    parser.add_argument("--no-csv",             action="store_true",
+                        help="Skip writing to the results CSV")
+    parser.add_argument("--sync-sharepoint",    action="store_true",
+                        help="Push results/val_metrics.csv to OneDrive after writing CSV")
     args = parser.parse_args()
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -422,6 +503,29 @@ def main():
         if key in summary:
             print(f"  {key:10s} mAP={summary[key]['mAP']:.4f}  mR={summary[key]['mR']:.4f}")
     print(f"\nSaved results to {out_path}")
+
+    if not args.no_csv:
+        import torch as _torch
+        ckpt_data = _torch.load(args.ckpt, map_location="cpu", weights_only=True) \
+            if Path(args.ckpt).exists() else {}
+        epoch = ckpt_data.get("epoch", "?")
+        model_name = args.model_name or "Exp1b-QwenViT-FCOS-Godel"
+        write_to_csv(
+            csv_path=Path(args.csv),
+            model_name=model_name,
+            source=args.source,
+            status=args.status,
+            epoch=epoch,
+            metric="f-mAP",
+            split=args.subset,
+            iou=args.eval_iou,
+            summary=summary,
+        )
+
+    if args.sync_sharepoint:
+        import subprocess, sys as _sys
+        sync_script = Path(__file__).resolve().parents[2] / "results" / "sync_to_sharepoint.py"
+        subprocess.run([_sys.executable, str(sync_script)], check=True)
 
 
 if __name__ == "__main__":

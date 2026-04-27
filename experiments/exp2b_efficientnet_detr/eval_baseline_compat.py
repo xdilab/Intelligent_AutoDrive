@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Baseline-compatible evaluation for Exp2.
+Baseline-compatible evaluation for Exp2b.
 
 Two modes:
     --mode frame  : frame-level mAP (f-mAP) at IoU=0.5 using the official
@@ -48,7 +48,7 @@ if str(EXP1_DIR) not in sys.path:
 import config as C
 from losses import greedy_group_tubes
 from matcher import box_iou
-from model import DETRROADModel
+from model import EfficientNetFPNDETRModel
 
 
 def _load_module(name: str, path: Path):
@@ -320,7 +320,7 @@ def approximate_video_eval(
             frame_targets.append(parsed if parsed else None)
 
         pixel_values, image_grid_thw = preprocess_clip(pil_frames, processor, device, dtype)
-        outputs = model(pixel_values, image_grid_thw)
+        outputs = model(pil_frames, pixel_values, image_grid_thw)
         probs = {k: v.sigmoid() for k, v in outputs["pred_logits"].items()}
 
         # Filter to confident detections
@@ -391,7 +391,7 @@ def main():
     processor = AutoProcessor.from_pretrained(args.model)
 
     # Rebuild the model architecture exactly as in training
-    model = DETRROADModel(
+    model = EfficientNetFPNDETRModel(
         model_id=args.model,
         vit_dim=C.VIT_DIM,
         d_model=C.D_MODEL,
@@ -402,17 +402,18 @@ def main():
         nhead=C.NHEAD,
         dim_ffn=C.DIM_FFN,
         dropout=C.DROPOUT,
-        freeze_vit=True,
-    )
-    model.add_lora(
-        r=C.LORA_R,
+        n_deform_points=C.N_DEFORM_POINTS,
+        backbone_name=C.BACKBONE,
+        backbone_freeze_blocks=C.BACKBONE_FREEZE_BLOCKS,
+        fpn_in_channels=C.FPN_IN_CHANNELS,
+        gate_init=C.VLM_GATE_INIT,
+        lora_r=C.LORA_R,
         lora_alpha=C.LORA_ALPHA,
         lora_dropout=C.LORA_DROPOUT,
-        target_modules=C.LORA_TARGET_MODULES,
-        n_layers=C.LORA_N_LAYERS,
+        lora_target_modules=C.LORA_TARGET_MODULES,
+        lora_n_layers=C.LORA_N_LAYERS,
     )
-    ckpt = torch.load(args.ckpt, map_location=device)
-    # strict=False: LoRA adapter names may differ slightly from state_dict keys
+    ckpt = torch.load(args.ckpt, map_location=device, weights_only=False)
     model.load_state_dict(ckpt["model"], strict=False)
     model = model.to(device)
     model.eval()
@@ -486,11 +487,17 @@ def main():
             pixel_values, image_grid_thw = preprocess_clip(
                 pil_frames, processor, device, dtype
             )
-            outputs = model(pixel_values, image_grid_thw)
+            outputs = model(pil_frames, pixel_values, image_grid_thw)
             probs = {k: v.sigmoid() for k, v in outputs["pred_logits"].items()}
 
-            # Extract per-frame detections from the tube predictions.
-            # All 100 queries are passed — no agentness pre-filtering.
+            # Filter queries by agentness confidence. AP computation
+            # sweeps thresholds internally, so dropping near-zero confidence
+            # queries doesn't affect mAP — they'd rank last anyway.
+            # This cuts ~90% of detections and dramatically speeds up
+            # evaluate_frames().
+            keep = probs["agentness"].squeeze(1) > 0.01
+            kept_probs = {k: v[keep] for k, v in probs.items()}
+
             for t, fid in enumerate(clip_fids):
                 frame_key = videoname + f"{int(fid):05d}"
                 if frame_key in seen_frames:
@@ -498,10 +505,10 @@ def main():
                 seen_frames.add(frame_key)
 
                 # pred_boxes[:, t, :] = frame t's boxes from each query's tube
-                boxes_t = to_xyxy(outputs["pred_boxes"][:, t, :])  # [100, 4] in [0,1]
+                boxes_t = to_xyxy(outputs["pred_boxes"][keep, t, :])  # [N_kept, 4] in [0,1]
 
                 det = frame_to_detection_lists(
-                    boxes_t, probs, width, height, class_threshold=0.0
+                    boxes_t, kept_probs, width, height, class_threshold=0.0
                 )
                 for head, value in det.items():
                     detections[head][frame_key] = value
@@ -542,7 +549,7 @@ def main():
         ckpt_data = torch.load(args.ckpt, map_location="cpu", weights_only=True) \
             if Path(args.ckpt).exists() else {}
         epoch = ckpt_data.get("epoch", "?")
-        model_name = args.model_name or "Exp2-QwenViT-DETR-Godel"
+        model_name = args.model_name or "Exp2b-EfficientNet-DeformDETR-Godel"
         write_to_csv(
             csv_path=Path(args.csv),
             model_name=model_name,

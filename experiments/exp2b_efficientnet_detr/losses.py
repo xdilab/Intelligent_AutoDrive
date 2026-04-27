@@ -298,21 +298,12 @@ class SetCriterion(nn.Module):
         matched_pred: torch.Tensor,
     ) -> torch.Tensor:
         """
-        Focal loss on agentness for ALL 100 queries.
+        Focal loss on agentness for ALL queries (300 in exp2b).
 
-        Unlike classification, agentness is supervised for every query:
-            - Matched queries → target 1.0  (these are real agent detections)
-            - Unmatched queries → target 0.0 (these should be suppressed)
-
-        This teaches the model two things simultaneously:
-            1. Matched queries learn to be confident about their detections.
-            2. Unmatched queries learn to output near-zero confidence (suppression).
-
-        Focal loss is important here because with 100 queries and ~10 GT tubes per
-        clip, ~90 queries are unmatched on average. Without focal loss the majority
-        of the gradient would come from these easy negatives.
+        Matched queries → target 1.0; unmatched → target 0.0.
+        Focal loss down-weights the ~290 easy negatives per clip.
         """
-        logits = pred_logits["agentness"]           # [100, 1]
+        logits = pred_logits["agentness"]           # [N_queries, 1]
         n_queries = logits.shape[0]
         targets = torch.zeros(n_queries, 1, device=logits.device)
         targets[matched_pred] = 1.0                 # matched queries are positive
@@ -364,49 +355,35 @@ class SetCriterion(nn.Module):
         flat = torch.cat([agentness_probs, agent_probs, action_probs, loc_probs], dim=1)  # [N_matched, 49]
         return self.tnorm(flat)
 
-    def forward(
+    def _compute_loss(
         self,
         outputs: Dict[str, torch.Tensor],
-        frame_targets: List[dict | None],
+        gt_tubes: List[dict],
     ) -> tuple[torch.Tensor, dict]:
+        """Compute all loss components for one set of predictions against GT tubes.
+
+        Used for both the main (final layer) loss and auxiliary (earlier layer) losses.
         """
-        Full loss computation for one clip.
-
-        Steps:
-            1. Group per-frame annotations into GT tubes (greedy IoU linking)
-            2. Hungarian matching: assign each GT tube to its best predicted query
-            3. Compute all 5 loss components on the matched pairs
-            4. Weighted sum → total loss
-
-        Returns (total_loss, log_dict) where log_dict has per-component floats
-        for the training progress print.
-        """
-        # Step 1: build GT tubes from per-frame annotations
-        gt_tubes = greedy_group_tubes(frame_targets, iou_thresh=C.TUBE_LINK_IOU)
-
-        # Step 2: match
         matched_pred, matched_gt = self.matcher(
             outputs["pred_boxes"],
             outputs["pred_logits"],
             gt_tubes,
         )
 
-        # Step 3: compute losses
         l_cls = self._classification_loss(outputs["pred_logits"], matched_pred, gt_tubes, matched_gt)
         l_bbox, l_giou = self._box_losses(outputs["pred_boxes"], matched_pred, gt_tubes, matched_gt)
         l_tnorm = self._tnorm_loss(outputs["pred_logits"], matched_pred, gt_tubes, matched_gt)
         l_agentness = self._agentness_loss(outputs["pred_logits"], matched_pred)
 
-        # Step 4: weighted sum
         total = (
-            C.LAMBDA_CLS   * l_cls       # 2.0 × semantic classification
-            + C.LAMBDA_BBOX * l_bbox      # 5.0 × box L1
-            + C.LAMBDA_GIOU * l_giou      # 2.0 × box GIoU
-            + l_tnorm                     # 1.0 × constraint violations
-            + l_agentness                 # 1.0 × detection confidence
+            C.LAMBDA_CLS   * l_cls
+            + C.LAMBDA_BBOX * l_bbox
+            + C.LAMBDA_GIOU * l_giou
+            + l_tnorm
+            + l_agentness
         )
 
-        return total, {
+        log = {
             "L_total":    float(total.detach().item()),
             "L_cls":      float(l_cls.detach().item()),
             "L_bbox":     float(l_bbox.detach().item()),
@@ -416,6 +393,43 @@ class SetCriterion(nn.Module):
             "n_gt_tubes": float(len(gt_tubes)),
             "n_matched":  float(len(matched_pred)),
         }
+        return total, log
+
+    def forward(
+        self,
+        outputs: Dict[str, torch.Tensor],
+        frame_targets: List[dict | None],
+    ) -> tuple[torch.Tensor, dict]:
+        """
+        Full loss computation for one clip with auxiliary layer losses.
+
+        Steps:
+            1. Group per-frame annotations into GT tubes (greedy IoU linking)
+            2. Compute main loss (final decoder layer)
+            3. Compute auxiliary losses (earlier decoder layers), averaged
+            4. Total = main + aux
+
+        Returns (total_loss, log_dict) where log_dict has per-component floats
+        for the training progress print.
+        """
+        gt_tubes = greedy_group_tubes(frame_targets, iou_thresh=C.TUBE_LINK_IOU)
+
+        # Main loss (final decoder layer)
+        main_loss, main_log = self._compute_loss(outputs, gt_tubes)
+
+        # Auxiliary losses (earlier decoder layers)
+        aux_loss = torch.tensor(0.0, device=main_loss.device)
+        aux_outputs = outputs.get("aux_outputs", [])
+        if aux_outputs:
+            for aux_out in aux_outputs:
+                aux_l, _ = self._compute_loss(aux_out, gt_tubes)
+                aux_loss = aux_loss + aux_l
+            aux_loss = aux_loss / len(aux_outputs)
+
+        total = main_loss + aux_loss
+        main_log["L_aux"] = float(aux_loss.detach().item())
+        main_log["L_total"] = float(total.detach().item())
+        return total, main_log
 
 
 def load_constraint_children(anno_file: str) -> dict:

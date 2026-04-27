@@ -1,0 +1,9 @@
+model,source,status,epoch,metric,split,iou,agent_ness,agent,action,loc,duplex,triplet
+3D-RetinaNet-I3D,ROAD++ (replication),done,25,f-mAP,val,0.5,23.3482,17.760326,15.276041,13.732354,13.435377,9.169244
+3D-RetinaNet-I3D+Godel t-norm loss,ROAD++ (replication),done,29,f-mAP,val,0.5,23.292566,17.01471,15.2114935,13.440064,13.6185465,9.374968
+Exp1-QwenViT-Lukasiewicz,novel,done,6,macro-mAP-oracle,val,N/A,,35.67,22.23,33.56,12.28,8.76
+Exp1b-QwenViT-FCOS-Godel,novel,done,15,macro-mAP-fgtokens,val,N/A,,60.55,32.42,49.98,23.10,17.47
+Exp1b-QwenViT-FCOS-Godel,novel,done,15,f-mAP,val,0.5,6.036374,3.198058,1.599435,2.548324,0.38059,1.370077
+Exp2-QwenViT-DETR-Godel,novel,training,26,f-mAP,val,0.5,2.08452,0.631193,0.761151,0.999478,0.138863,0.796732
+OpenMixer+DSDAG,novel,design,n/a,n/a,n/a,n/a,,,,,,
+Exp2-QwenViT-DETR-Godel,novel,training,30,f-mAP,val,0.5,2.430053,0.683,0.781321,1.049508,0.144336,0.884995

@@ -18,7 +18,7 @@ if str(REPO_ROOT) not in sys.path:
 if str(EXP_DIR) not in sys.path:
     sys.path.insert(0, str(EXP_DIR))
 if str(EXP1_DIR) not in sys.path:
-    sys.path.insert(0, str(EXP1_DIR))
+    sys.path.append(str(EXP1_DIR))
 
 import config as C
 from losses import SetCriterion, compute_class_alphas, load_constraint_children
@@ -125,10 +125,7 @@ def main():
         for pil_frames, frame_targets in loader:
             pixel_values, image_grid_thw = preprocess_clip(pil_frames, processor, device, dtype)
             outputs = model(pixel_values, image_grid_thw)
-            gt_tubes = criterion.matcher.forward  # keep mypy happy
-            gt_tubes = None
             from losses import greedy_group_tubes
-
             gt_tubes = greedy_group_tubes(frame_targets, iou_thresh=C.TUBE_LINK_IOU)
             matched_pred, matched_gt = matcher(outputs["pred_boxes"], outputs["pred_logits"], gt_tubes)
             if len(matched_pred) == 0:

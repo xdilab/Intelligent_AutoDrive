@@ -114,7 +114,7 @@ def generalized_box_iou(boxes1: torch.Tensor, boxes2: torch.Tensor) -> torch.Ten
 
 class HungarianMatcher:
     """
-    Finds the optimal 1-to-1 assignment between 100 predicted tubes and M GT tubes.
+    Finds the optimal 1-to-1 assignment between predicted tubes and M GT tubes.
 
     Why bipartite matching (Hungarian algorithm):
         With anchor-based detectors (like 3D-RetinaNet), many anchors are assigned
@@ -236,7 +236,7 @@ class HungarianMatcher:
             matched_gt:   [N_matched] — indices into gt_tubes
 
         If gt_tubes is empty (no annotated agents in this clip), returns empty tensors.
-        N_matched = number of GT tubes (≤ 100 always, since we have 100 queries).
+        N_matched = number of GT tubes (≤ NUM_QUERIES, since each GT gets one query).
         """
         if len(gt_tubes) == 0:
             empty = torch.empty(0, dtype=torch.int64, device=pred_boxes.device)
