@@ -1,0 +1,33 @@
+Hi Dr. Moradi,
+
+Thanks - we're aligned. Here's what I modified after your comments:
+
+PROMPT (approach8_stage1_qwen_prompt.md) - one change:
+
+- Changed (box source): the agent box fed to Qwen is now stated as a
+  3D-RetinaNet prediction (pseudo-label), NOT ground truth, and I added an
+  instruction telling the model to reason over that detection and not
+  re-localize. This matches your point - Qwen reasons given RetinaNet's
+  detections, no use of ground truth in the framing.
+
+- No change needed (risk + rationale): both were already in the JSON schema,
+  so they're asked even in the untrained baseline - exactly so any later
+  CoVLA/BDD-X lift is attributable. Validation sources: risk -> CoVLA,
+  rationale -> BDD-X, the rest (agent/action/location/duplex/triplet) ->
+  ROAD-Waymo.
+
+- No change (agent/action/location/duplex/triplet): you approved these;
+  the location list comes straight from the ROAD-Waymo JSON (not VLM-derived
+  from xy/wh).
+
+UNDERSTOOD FOR THE MODEL SIDE (no prompt impact): fusion + added layers (or
+the remaining RetinaNet layers after internal fusion) train on the train
+split only; the RetinaNet that supplies boxes is trained on train and inferred
+on test; test stays fixed across all experiments.
+
+INITIAL RESULTS: the zero-shot Qwen run isn't finished yet - I'll drop the
+f-mAP / per-field numbers into the Excel with a screenshot here as soon as it
+completes.
+
+Best,
+Brandon
