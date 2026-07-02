@@ -56,3 +56,5 @@ venv/
 
 # Experiment artifacts
 experiments/*/logs/
+experiments/*/cache/
+experiments/*/checkpoints/
