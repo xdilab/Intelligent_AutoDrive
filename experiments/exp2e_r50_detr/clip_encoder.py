@@ -1,0 +1,1 @@
+../exp2c_frozen_detr/clip_encoder.py

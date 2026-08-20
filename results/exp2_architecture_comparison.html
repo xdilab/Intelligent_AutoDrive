@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exp2 Architecture Comparison — ROAD-Reason</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f1117; color: #e0e0e0; padding: 2rem; line-height: 1.5; }
+  h1 { text-align: center; margin-bottom: 0.5rem; font-size: 1.8rem; color: #fff; }
+  .subtitle { text-align: center; color: #888; margin-bottom: 2rem; font-size: 0.9rem; }
+
+  /* Timeline */
+  .timeline { display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+  .timeline-item { padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.2s; border: 2px solid transparent; }
+  .timeline-item:hover { transform: translateY(-2px); }
+  .timeline-item.active { border-color: #fff; }
+  .t-exp2 { background: #4a3728; color: #f0a060; }
+  .t-exp2b { background: #2d3a28; color: #80d060; }
+  .t-exp2c { background: #283a3a; color: #60c0c0; }
+  .t-exp2d { background: #2d2840; color: #a080e0; }
+  .t-exp2e { background: #3a2828; color: #e06060; }
+  .t-exp2f { background: #3a3528; color: #e0c040; }
+  .t-exp2g { background: #283040; color: #60a0f0; }
+
+  /* Summary table */
+  .table-wrap { overflow-x: auto; margin-bottom: 2.5rem; }
+  table { border-collapse: collapse; width: 100%; min-width: 900px; font-size: 0.82rem; }
+  th, td { padding: 0.6rem 0.8rem; border: 1px solid #2a2d35; text-align: left; }
+  th { background: #1a1d25; color: #aaa; font-weight: 600; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; position: sticky; left: 0; }
+  td { background: #14161e; }
+  tr:hover td { background: #1c1f28; }
+  td:first-child { font-weight: 600; color: #ccc; background: #181b22; white-space: nowrap; position: sticky; left: 0; z-index: 1; }
+  .highlight { background: #1a2a1a !important; color: #80ff80; font-weight: 600; }
+  .new-tag { display: inline-block; background: #2a4a2a; color: #80ff80; font-size: 0.65rem; padding: 0.1rem 0.4rem; border-radius: 3px; margin-left: 0.3rem; font-weight: 700; }
+  .removed-tag { display: inline-block; background: #4a2a2a; color: #ff8080; font-size: 0.65rem; padding: 0.1rem 0.4rem; border-radius: 3px; margin-left: 0.3rem; font-weight: 700; }
+
+  /* Cards */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem; }
+  .card { background: #14161e; border: 1px solid #2a2d35; border-radius: 12px; padding: 1.5rem; transition: border-color 0.2s; }
+  .card:hover { border-color: #4a4d55; }
+  .card h3 { font-size: 1rem; margin-bottom: 0.3rem; }
+  .card .tag { font-size: 0.7rem; display: inline-block; padding: 0.15rem 0.5rem; border-radius: 10px; margin-bottom: 0.8rem; font-weight: 600; }
+  .card p { font-size: 0.85rem; color: #aaa; margin-bottom: 0.5rem; }
+  .card .metric { font-size: 1.4rem; font-weight: 700; }
+  .card .metric-label { font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 0.5px; }
+  .card ul { list-style: none; padding: 0; }
+  .card li { font-size: 0.82rem; color: #bbb; padding: 0.25rem 0; border-bottom: 1px solid #1e2028; }
+  .card li:last-child { border-bottom: none; }
+  .card li strong { color: #e0e0e0; }
+
+  /* Architecture diagrams */
+  .arch-section { margin-bottom: 2.5rem; }
+  .arch-section h2 { font-size: 1.2rem; margin-bottom: 1rem; color: #fff; border-bottom: 1px solid #2a2d35; padding-bottom: 0.5rem; }
+  .arch-flow { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; padding: 1rem; background: #14161e; border-radius: 8px; border: 1px solid #2a2d35; margin-bottom: 1rem; }
+  .arch-block { padding: 0.6rem 1rem; border-radius: 6px; font-size: 0.78rem; font-weight: 600; text-align: center; min-width: 80px; }
+  .arch-arrow { color: #555; font-size: 1.2rem; }
+  .b-backbone { background: #2a1a1a; color: #ff9090; border: 1px solid #4a2a2a; }
+  .b-semantic { background: #1a2a2a; color: #90e0e0; border: 1px solid #2a4a4a; }
+  .b-encoder { background: #2a2a1a; color: #e0e090; border: 1px solid #4a4a2a; }
+  .b-decoder { background: #1a1a3a; color: #9090ff; border: 1px solid #2a2a5a; }
+  .b-head { background: #2a1a3a; color: #d090ff; border: 1px solid #4a2a5a; }
+  .b-loss { background: #1a2a1a; color: #90ff90; border: 1px solid #2a4a2a; }
+  .b-new { box-shadow: 0 0 8px rgba(100, 200, 100, 0.3); }
+
+  /* Key changes */
+  .changes { margin-top: 0.8rem; }
+  .change-item { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.4rem; font-size: 0.82rem; }
+  .change-icon { width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+  .icon-add { background: #1a3a1a; color: #60e060; }
+  .icon-change { background: #3a3a1a; color: #e0e060; }
+  .icon-remove { background: #3a1a1a; color: #e06060; }
+
+  /* Performance bar */
+  .perf-bar { margin-top: 2rem; }
+  .perf-bar h2 { font-size: 1.2rem; margin-bottom: 1rem; color: #fff; border-bottom: 1px solid #2a2d35; padding-bottom: 0.5rem; }
+  .bar-row { display: flex; align-items: center; margin-bottom: 0.6rem; }
+  .bar-label { width: 120px; font-size: 0.8rem; font-weight: 600; flex-shrink: 0; }
+  .bar-track { flex: 1; height: 24px; background: #1a1d25; border-radius: 4px; position: relative; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; display: flex; align-items: center; padding-left: 8px; font-size: 0.7rem; font-weight: 700; transition: width 0.5s; }
+  .bar-baseline { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); font-size: 0.7rem; color: #888; }
+</style>
+</head>
+<body>
+
+<h1>Exp2 Architecture Evolution</h1>
+<p class="subtitle">ROAD-Reason — Progression from vanilla DETR to MS-DETR with two-stage + O2M</p>
+
+<div class="timeline">
+  <div class="timeline-item t-exp2">exp2 — Qwen DETR</div>
+  <div class="timeline-item t-exp2b">exp2b — EfficientNet</div>
+  <div class="timeline-item t-exp2c">exp2c — Frozen-DETR</div>
+  <div class="timeline-item t-exp2d">exp2d — Swin-L</div>
+  <div class="timeline-item t-exp2e">exp2e — R50 (paper config)</div>
+  <div class="timeline-item t-exp2f">exp2f — Flat Head</div>
+  <div class="timeline-item t-exp2g active">exp2g — MS-DETR</div>
+</div>
+
+<!-- Summary Table -->
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>exp2</th>
+      <th>exp2b</th>
+      <th>exp2c</th>
+      <th>exp2d</th>
+      <th>exp2e</th>
+      <th>exp2f</th>
+      <th>exp2g</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Spatial Backbone</td>
+      <td>Qwen ViT (only)</td>
+      <td>EfficientNet-B0</td>
+      <td>EfficientNet-B0</td>
+      <td>Swin-L</td>
+      <td class="highlight">ResNet-50</td>
+      <td>ResNet-50</td>
+      <td>ResNet-50</td>
+    </tr>
+    <tr>
+      <td>Semantic Branch</td>
+      <td>Qwen ViT (LoRA)</td>
+      <td>Qwen ViT (LoRA)</td>
+      <td class="highlight">CLIP ViT-L/14 (frozen)</td>
+      <td>CLIP ViT-L/14 (frozen)</td>
+      <td>CLIP ViT-L/14 (frozen)</td>
+      <td>CLIP ViT-L/14 (frozen)</td>
+      <td>CLIP ViT-L/14 (frozen)</td>
+    </tr>
+    <tr>
+      <td>Encoder</td>
+      <td>None</td>
+      <td>None (gated fusion)</td>
+      <td class="highlight">Deformable 6L, 4 scales</td>
+      <td>Deformable 6L, 4 scales</td>
+      <td>Deformable 6L, 4 scales</td>
+      <td>Deformable 6L, 4 scales</td>
+      <td>Deformable 6L, 4 scales<span class="new-tag">+ proposals</span></td>
+    </tr>
+    <tr>
+      <td>Decoder</td>
+      <td>Vanilla DETR 6L</td>
+      <td>Deformable 6L</td>
+      <td class="highlight">Frozen-DETR 6L (CLS inj.)</td>
+      <td>Frozen-DETR 6L (CLS inj.)</td>
+      <td>Frozen-DETR 6L (CLS inj.)</td>
+      <td>Frozen-DETR 6L (CLS inj.)</td>
+      <td>MS-DETR 6L<span class="new-tag">O2O + O2M</span></td>
+    </tr>
+    <tr>
+      <td>Query Init</td>
+      <td>Learned (100)</td>
+      <td>Learned (300)</td>
+      <td>Learned (300)</td>
+      <td>Learned (300)</td>
+      <td>Learned (300)</td>
+      <td>Learned (300)</td>
+      <td class="highlight">Two-stage (900)<span class="new-tag">NEW</span></td>
+    </tr>
+    <tr>
+      <td>Cls Head</td>
+      <td>5 separate linears</td>
+      <td>5 separate linears</td>
+      <td>5 separate linears</td>
+      <td>5 separate linears</td>
+      <td>6 separate linears</td>
+      <td class="highlight">Flat Linear(256,184)</td>
+      <td>Flat Linear(256,184)<span class="new-tag">+ softmax agent</span></td>
+    </tr>
+    <tr>
+      <td>Input Resolution</td>
+      <td>448px fixed</td>
+      <td>448px fixed</td>
+      <td>448px fixed</td>
+      <td>384px fixed</td>
+      <td class="highlight">Variable AR (800/1333)</td>
+      <td>Variable AR</td>
+      <td>Variable AR</td>
+    </tr>
+    <tr>
+      <td>FFN Dim</td>
+      <td>1024</td>
+      <td>1024</td>
+      <td>1024</td>
+      <td class="highlight">2048</td>
+      <td>2048</td>
+      <td>2048</td>
+      <td>2048</td>
+    </tr>
+    <tr>
+      <td>Dropout</td>
+      <td>0.1</td>
+      <td>0.1</td>
+      <td>0.1</td>
+      <td>0.1</td>
+      <td class="highlight">0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>Loss Streams</td>
+      <td>1 (O2O)</td>
+      <td>1 (O2O)</td>
+      <td>1 (O2O)</td>
+      <td>1 (O2O)</td>
+      <td>1 (O2O)</td>
+      <td>1 (O2O, all queries)</td>
+      <td class="highlight">3 (O2O + O2M + Encoder)</td>
+    </tr>
+    <tr>
+      <td>Neg. Supervision</td>
+      <td>EOS weight (0.1)</td>
+      <td>EOS weight (0.1)</td>
+      <td>EOS weight (0.1)</td>
+      <td>EOS weight (0.1)</td>
+      <td>EOS weight (0.1)</td>
+      <td class="highlight">All-zeros on unmatched</td>
+      <td>All-zeros on unmatched</td>
+    </tr>
+    <tr>
+      <td>Total Params</td>
+      <td>~7.2B</td>
+      <td>~7.3B</td>
+      <td>~350M</td>
+      <td>~510M</td>
+      <td>~351M</td>
+      <td>~351M</td>
+      <td>~359M</td>
+    </tr>
+    <tr>
+      <td>Trainable Params</td>
+      <td>~22M</td>
+      <td>~35M</td>
+      <td>~46M</td>
+      <td>~106M</td>
+      <td>~47M</td>
+      <td>~47M</td>
+      <td>~54M</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<!-- Architecture Flow Diagrams -->
+<div class="arch-section">
+<h2>Architecture Flows</h2>
+
+<p style="font-size:0.82rem; color:#888; margin-bottom:1rem;"><strong>exp2</strong> — Qwen-only, vanilla DETR decoder</p>
+<div class="arch-flow">
+  <div class="arch-block b-backbone">Qwen2.5-VL<br>7B ViT<br><small>(LoRA)</small></div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-encoder">Spatial<br>Pos Enc</div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-decoder">Vanilla DETR<br>Decoder 6L<br><small>100 queries</small></div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-head">5 Heads<br><small>(A/Ac/L/D/T)</small></div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-loss">Focal + L1<br>+ GIoU + Tnorm</div>
+</div>
+
+<p style="font-size:0.82rem; color:#888; margin-bottom:1rem;"><strong>exp2b</strong> — Dual-branch, gated fusion, deformable decoder</p>
+<div class="arch-flow">
+  <div class="arch-block b-backbone">EfficientNet-B0<br><small>P3/P4/P5</small></div>
+  <span class="arch-arrow">↘</span>
+  <div class="arch-block b-encoder" style="border: 1px dashed #4a4a2a;">Gated<br>Fusion<br><small>(σ·VLM + CNN)</small></div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-decoder">Deformable<br>Decoder 6L<br><small>300 queries</small></div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-head">5 Heads</div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-loss">Focal + L1<br>+ GIoU + Tnorm</div>
+</div>
+<div style="margin-top:-0.8rem; margin-left:1rem; margin-bottom:1.5rem;">
+  <div class="arch-flow" style="display:inline-flex; border:none; background:none; padding:0;">
+    <div class="arch-block b-semantic">Qwen ViT<br><small>(LoRA)</small></div>
+    <span class="arch-arrow">↗</span>
+  </div>
+</div>
+
+<p style="font-size:0.82rem; color:#888; margin-bottom:1rem;"><strong>exp2c–2e</strong> — Frozen-DETR: CLIP as 4th encoder scale + CLS injection</p>
+<div class="arch-flow">
+  <div class="arch-block b-backbone">R50 / Swin-L<br><small>P3/P4/P5</small></div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-encoder">Deformable<br>Encoder 6L<br><small>4 scales (+ CLIP patches)</small></div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-decoder">Frozen-DETR<br>Decoder 6L<br><small>300 queries + CLS inj.</small></div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-head">5–6 Heads</div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-loss">Focal + L1<br>+ GIoU + Tnorm</div>
+</div>
+<div style="margin-top:-0.5rem; margin-left:1rem; margin-bottom:1.5rem;">
+  <div class="arch-flow" style="display:inline-flex; border:none; background:none; padding:0;">
+    <div class="arch-block b-semantic">CLIP ViT-L/14<br><small>(frozen)</small></div>
+    <span class="arch-arrow" style="font-size:0.8rem;">patches → encoder L4 &nbsp;|&nbsp; CLS → decoder layers</span>
+  </div>
+</div>
+
+<p style="font-size:0.82rem; color:#888; margin-bottom:1rem;"><strong>exp2f</strong> — Flat 184-dim head, all-query negative supervision</p>
+<div class="arch-flow">
+  <div class="arch-block b-backbone">ResNet-50<br><small>P3/P4/P5</small></div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-encoder">Deformable<br>Encoder 6L<br><small>4 scales</small></div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-decoder">Frozen-DETR<br>Decoder 6L<br><small>300 queries</small></div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-head b-new">Flat Linear<br>(256 → 184)<br><small>sigmoid all dims</small></div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-loss b-new">Focal on ALL<br>queries<br><small>(matched + unmatched)</small></div>
+</div>
+
+<p style="font-size:0.82rem; color:#888; margin-bottom:1rem;"><strong>exp2g</strong> — MS-DETR: two-stage + O2M + encoder loss + softmax agent</p>
+<div class="arch-flow">
+  <div class="arch-block b-backbone">ResNet-50<br><small>P3/P4/P5</small></div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-encoder b-new">Deformable Enc 6L<br>+ Proposal Head<br><small>top-900 → queries</small></div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-decoder b-new">MS-DETR Decoder 6L<br><small>O2O path + O2M path<br>(aux FFN per layer)</small></div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-head b-new">Flat 184-dim<br><small>softmax agent [1:11]<br>sigmoid rest</small></div>
+  <span class="arch-arrow">→</span>
+  <div class="arch-block b-loss b-new">3-stream loss<br><small>O2O + O2M(k=6)<br>+ Encoder loss</small></div>
+</div>
+</div>
+
+<!-- Key Changes Per Experiment -->
+<div class="arch-section">
+<h2>Key Changes at Each Step</h2>
+<div class="cards">
+
+<div class="card">
+  <h3>exp2 → exp2b</h3>
+  <div class="tag" style="background:#2d3a28; color:#80d060;">Architecture</div>
+  <div class="changes">
+    <div class="change-item"><div class="change-icon icon-add">+</div><div>EfficientNet-B0 as spatial backbone (CNN branch)</div></div>
+    <div class="change-item"><div class="change-icon icon-add">+</div><div>Deformable attention decoder (replaces vanilla)</div></div>
+    <div class="change-item"><div class="change-icon icon-add">+</div><div>Gated VLM-CNN fusion module</div></div>
+    <div class="change-item"><div class="change-icon icon-change">Δ</div><div>Queries: 100 → 300</div></div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>exp2b → exp2c</h3>
+  <div class="tag" style="background:#283a3a; color:#60c0c0;">Architecture</div>
+  <div class="changes">
+    <div class="change-item"><div class="change-icon icon-change">Δ</div><div>Qwen ViT → CLIP ViT-L/14 (fully frozen, no LoRA)</div></div>
+    <div class="change-item"><div class="change-icon icon-add">+</div><div>Deformable encoder (6L, 4 scales)</div></div>
+    <div class="change-item"><div class="change-icon icon-add">+</div><div>CLIP patches as 4th encoder scale (Frozen-DETR)</div></div>
+    <div class="change-item"><div class="change-icon icon-add">+</div><div>Per-layer CLS token injection in decoder</div></div>
+    <div class="change-item"><div class="change-icon icon-remove">−</div><div>Removed gated fusion module</div></div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>exp2c → exp2d</h3>
+  <div class="tag" style="background:#2d2840; color:#a080e0;">Backbone</div>
+  <div class="changes">
+    <div class="change-item"><div class="change-icon icon-change">Δ</div><div>EfficientNet-B0 → Swin-L (197M params)</div></div>
+    <div class="change-item"><div class="change-icon icon-change">Δ</div><div>FFN dim: 1024 → 2048 (match DINO checkpoint)</div></div>
+    <div class="change-item"><div class="change-icon icon-change">Δ</div><div>Input: 448px → 384px (Swin window constraint)</div></div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>exp2d → exp2e</h3>
+  <div class="tag" style="background:#3a2828; color:#e06060;">Replication</div>
+  <div class="changes">
+    <div class="change-item"><div class="change-icon icon-change">Δ</div><div>Swin-L → ResNet-50 (match paper exactly)</div></div>
+    <div class="change-item"><div class="change-icon icon-change">Δ</div><div>Fixed res → variable AR (train 480-800, val 800/1333)</div></div>
+    <div class="change-item"><div class="change-icon icon-change">Δ</div><div>Dropout: 0.1 → 0.0 (paper default)</div></div>
+    <div class="change-item"><div class="change-icon icon-change">Δ</div><div>Grad clip: 1.0 → 0.1 (paper default)</div></div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>exp2e → exp2f</h3>
+  <div class="tag" style="background:#3a3528; color:#e0c040;">Loss Fix</div>
+  <div class="changes">
+    <div class="change-item"><div class="change-icon icon-change">Δ</div><div>6 heads → single flat Linear(256, 184)</div></div>
+    <div class="change-item"><div class="change-icon icon-add">+</div><div>Sigmoid focal on ALL queries (not just matched)</div></div>
+    <div class="change-item"><div class="change-icon icon-add">+</div><div>Unmatched queries get explicit target=0 on all 184 dims</div></div>
+    <div class="change-item"><div class="change-icon icon-remove">−</div><div>Removed EOS class weighting</div></div>
+    <div class="change-item"><div class="change-icon icon-add">+</div><div>0.1x LR on deformable reference_points + sampling_offsets</div></div>
+  </div>
+  <p style="margin-top:0.8rem; font-size:0.78rem; color:#80ff80;">Result: agent f-mAP 1.40% → 4.40% (+3x)</p>
+</div>
+
+<div class="card">
+  <h3>exp2f → exp2g</h3>
+  <div class="tag" style="background:#283040; color:#60a0f0;">MS-DETR</div>
+  <div class="changes">
+    <div class="change-item"><div class="change-icon icon-add">+</div><div>Two-stage query init (encoder proposals → top-900)</div></div>
+    <div class="change-item"><div class="change-icon icon-add">+</div><div>Mixed selection (learnable content + proposal position)</div></div>
+    <div class="change-item"><div class="change-icon icon-add">+</div><div>O2M auxiliary branch (k=6 matches per GT)</div></div>
+    <div class="change-item"><div class="change-icon icon-add">+</div><div>Aux FFN per decoder layer (O2M features)</div></div>
+    <div class="change-item"><div class="change-icon icon-add">+</div><div>Encoder objectness + box loss</div></div>
+    <div class="change-item"><div class="change-icon icon-add">+</div><div>Softmax CE on agent dims (mutual exclusivity)</div></div>
+    <div class="change-item"><div class="change-icon icon-change">Δ</div><div>Queries: 300 → 900</div></div>
+    <div class="change-item"><div class="change-icon icon-change">Δ</div><div>LAMBDA_CLS: 2.0 → 1.0 (match reference script)</div></div>
+    <div class="change-item"><div class="change-icon icon-add">+</div><div>4D reference points with iterative refinement</div></div>
+    <div class="change-item"><div class="change-icon icon-add">+</div><div>valid_ratios + padding mask pipeline</div></div>
+  </div>
+  <p style="margin-top:0.8rem; font-size:0.78rem; color:#60a0f0;">Training in progress...</p>
+</div>
+
+</div>
+</div>
+
+<!-- Performance Comparison -->
+<div class="perf-bar">
+<h2>Agent f-mAP @ IoU 0.5 (val)</h2>
+
+<div class="bar-row">
+  <div class="bar-label" style="color:#e06060;">3D-RetinaNet</div>
+  <div class="bar-track">
+    <div class="bar-fill" style="width:100%; background: linear-gradient(90deg, #4a1a1a, #e06060);">17.76%</div>
+  </div>
+</div>
+
+<div class="bar-row">
+  <div class="bar-label" style="color:#e0c040;">exp2f (ep14)</div>
+  <div class="bar-track">
+    <div class="bar-fill" style="width:24.8%; background: linear-gradient(90deg, #3a3518, #e0c040);">4.40%</div>
+  </div>
+</div>
+
+<div class="bar-row">
+  <div class="bar-label" style="color:#f0a060;">exp2 (ep30)</div>
+  <div class="bar-track">
+    <div class="bar-fill" style="width:3.8%; background: linear-gradient(90deg, #3a2818, #f0a060);">0.68%</div>
+  </div>
+</div>
+
+<div class="bar-row">
+  <div class="bar-label" style="color:#80d060;">exp2b (ep27)</div>
+  <div class="bar-track">
+    <div class="bar-fill" style="width:9.6%; background: linear-gradient(90deg, #1a3a18, #80d060);">1.71%</div>
+  </div>
+</div>
+
+<div class="bar-row">
+  <div class="bar-label" style="color:#a080e0;">exp2d (ep28)</div>
+  <div class="bar-track">
+    <div class="bar-fill" style="width:9.4%; background: linear-gradient(90deg, #2a1840, #a080e0);">1.67%</div>
+  </div>
+</div>
+
+<div class="bar-row">
+  <div class="bar-label" style="color:#e06060;">exp2e (ep11)</div>
+  <div class="bar-track">
+    <div class="bar-fill" style="width:7.9%; background: linear-gradient(90deg, #3a1818, #e06060);">1.40%</div>
+  </div>
+</div>
+
+<div class="bar-row">
+  <div class="bar-label" style="color:#60a0f0;">exp2g</div>
+  <div class="bar-track">
+    <div class="bar-fill" style="width:3%; background: repeating-linear-gradient(90deg, #1a3040 0px, #283a50 10px, #1a3040 20px); animation: loading 1s infinite linear;">training...</div>
+  </div>
+</div>
+
+</div>
+
+<style>
+@keyframes loading {
+  0% { background-position: 0 0; }
+  100% { background-position: 20px 0; }
+}
+</style>
+
+<p style="text-align:center; margin-top:2rem; color:#555; font-size:0.75rem;">
+  Generated 2026-05-25 | ROAD-Reason exp2 series | Target: close gap with 3D-RetinaNet baseline (17.76% agent f-mAP)
+</p>
+
+</body>
+</html>

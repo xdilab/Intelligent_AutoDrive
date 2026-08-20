@@ -182,6 +182,45 @@ def _extract_json_array(text: str) -> Optional[list]:
     return None
 
 
+def _salvage_boxes(
+    text: str,
+    n_boxes: int,
+    agent_set: set,
+    action_set: set,
+    loc_set: set,
+) -> Dict[int, dict]:
+    """Per-object regex salvage for structurally corrupted arrays (e.g. fused
+    objects missing the `}, {` boundary — seen from the exp8 joint-tuned model,
+    which sometimes blends its two training JSON dialects). Splits the raw text
+    at each `"box_id": N` and reads that box's fields from its own segment.
+    Faithful recovery only: fields are extracted verbatim and validated against
+    the label sets exactly like the strict path; nothing is inferred."""
+    hits = list(re.finditer(r'"box_id"\s*:\s*(\d+)', text))
+    out: Dict[int, dict] = {}
+    for j, m in enumerate(hits):
+        bid = int(m.group(1))
+        if not (0 <= bid < n_boxes) or bid in out:
+            continue
+        seg = text[m.end(): hits[j + 1].start() if j + 1 < len(hits) else len(text)]
+        agent_m = re.search(r'"agent"\s*:\s*(?:null|"([^"]*)")', seg)
+        risk_m = re.search(r'"risk"\s*:\s*"(low|medium|high)"', seg)
+        rat_m = re.search(r'"rationale"\s*:\s*"((?:[^"\\]|\\.)*)"', seg)
+
+        def _strs(field: str) -> list:
+            lm = re.search(r'"%s"\s*:\s*\[([^\]]*)\]' % field, seg)
+            return re.findall(r'"([^"]+)"', lm.group(1)) if lm else []
+
+        agent = agent_m.group(1) if agent_m else None
+        out[bid] = {
+            "agent": agent if agent in agent_set else None,
+            "actions": [a for a in _strs("actions") if a in action_set],
+            "locations": [l for l in _strs("locations") if l in loc_set],
+            "risk": risk_m.group(1) if risk_m else None,
+            "rationale": rat_m.group(1) if rat_m else None,
+        }
+    return out
+
+
 def parse_qwen_response(
     text: str,
     n_boxes: int,
@@ -191,11 +230,13 @@ def parse_qwen_response(
 ) -> List[Optional[dict]]:
     """Return a length-`n_boxes` list. Each entry is a normalized dict
     {agent, actions, locations, risk, rationale} or None if the box was not
-    parseable. Invalid labels are dropped (kept faithful: no guessing)."""
+    parseable. Invalid labels are dropped (kept faithful: no guessing).
+    Boxes the strict array parse cannot recover fall back to per-object
+    salvage (_salvage_boxes); strict results always win."""
     out: List[Optional[dict]] = [None] * n_boxes
     arr = _extract_json_array(text)
     if not isinstance(arr, list):
-        return out
+        arr = []
     for obj in arr:
         if not isinstance(obj, dict):
             continue
@@ -215,4 +256,8 @@ def parse_qwen_response(
             "risk": risk,
             "rationale": obj.get("rationale") if isinstance(obj.get("rationale"), str) else None,
         }
+    if any(p is None for p in out):
+        for bid, sal in _salvage_boxes(text, n_boxes, agent_set, action_set, loc_set).items():
+            if out[bid] is None:
+                out[bid] = sal
     return out

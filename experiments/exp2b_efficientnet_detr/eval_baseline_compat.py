@@ -46,7 +46,7 @@ if str(EXP1_DIR) not in sys.path:
     sys.path.append(str(EXP1_DIR))
 
 import config as C
-from losses import greedy_group_tubes
+from losses import greedy_group_tubes, load_constraint_children
 from matcher import box_iou
 from model import EfficientNetFPNDETRModel
 
@@ -74,8 +74,61 @@ def preprocess_clip(pil_frames, processor, device, dtype):
 
 # Import baseline evaluation code AFTER adding its root to sys.path
 sys.path.insert(0, str(BASELINE_ROOT))
-from modules.evaluation import evaluate_frames  # noqa: E402
+from modules.evaluation import evaluate_frames as _evaluate_frames_orig  # noqa: E402
+from modules import evaluation as _eval_module  # noqa: E402
 import data.datasets as baseline_datasets       # noqa: E402
+
+
+def evaluate_frames(anno_file, det_file, subset, wh, iou_thresh=0.5, dataset='road'):
+    """Wrapper around baseline evaluate_frames() that adds progress printing.
+
+    Monkey-patches compute_class_ap to print progress per label_type × class,
+    then restores the original after evaluation completes.
+    """
+    import time as _time
+
+    _orig_compute = _eval_module.compute_class_ap
+    _state = {"label_type": "", "cl_idx": 0, "n_classes": 0, "t0": _time.perf_counter()}
+
+    # Patch get_gt_frames to capture label_type and class count
+    _orig_get_gt_frames = _eval_module.get_gt_frames
+
+    def _patched_get_gt_frames(annots, sub, label_type, ds, wh_):
+        result = _orig_get_gt_frames(annots, sub, label_type, ds, wh_)
+        # Figure out how many classes this label_type has
+        used_labels = {
+            "agent_ness": 1, "agent_labels": 10, "action_labels": 22,
+            "loc_labels": 16, "duplex_labels": 49, "triplet_labels": 86,
+        }
+        lt_key = label_type + "_labels" if label_type != "agent_ness" else "agent_ness"
+        _state["label_type"] = label_type
+        _state["cl_idx"] = 0
+        _state["n_classes"] = used_labels.get(lt_key, 0)
+        _state["t0"] = _time.perf_counter()
+        print(f"\n  [eval] computing AP for {label_type} ({_state['n_classes']} classes) ...",
+              flush=True)
+        return result
+
+    def _patched_compute(dets, gts, iou_fn, iou_th):
+        _state["cl_idx"] += 1
+        idx, total = _state["cl_idx"], _state["n_classes"]
+        if total > 0 and (idx % max(1, total // 5) == 0 or idx == total):
+            elapsed = _time.perf_counter() - _state["t0"]
+            print(f"    {_state['label_type']}: class {idx}/{total} "
+                  f"({elapsed:.1f}s elapsed)", flush=True)
+        return _orig_compute(dets, gts, iou_fn, iou_th)
+
+    _eval_module.compute_class_ap = _patched_compute
+    _eval_module.get_gt_frames = _patched_get_gt_frames
+
+    try:
+        result = _evaluate_frames_orig(anno_file, det_file, subset, wh,
+                                       iou_thresh, dataset)
+    finally:
+        _eval_module.compute_class_ap = _orig_compute
+        _eval_module.get_gt_frames = _orig_get_gt_frames
+
+    return result
 
 
 def is_in_subset(split_ids, subset: str) -> bool:
@@ -189,6 +242,7 @@ RESULTS_CSV = Path(__file__).resolve().parents[2] / "results" / "val_metrics.csv
 CSV_FIELDS = [
     "model", "source", "status", "epoch", "metric", "split", "iou",
     "agent_ness", "agent", "action", "loc", "duplex", "triplet",
+    "duplex_viol", "triplet_viol",
 ]
 
 
@@ -224,6 +278,8 @@ def write_to_csv(
         "loc":        summary.get("loc",        {}).get("mAP", ""),
         "duplex":     summary.get("duplex",     {}).get("mAP", ""),
         "triplet":    summary.get("triplet",    {}).get("mAP", ""),
+        "duplex_viol":  summary.get("duplex_viol", ""),
+        "triplet_viol": summary.get("triplet_viol", ""),
     }
 
     csv_path.parent.mkdir(parents=True, exist_ok=True)
@@ -360,6 +416,133 @@ def approximate_video_eval(
         "n_tubes": len(ap_like_scores),
         "note": "Approximate tube metric for early experiment iteration; replace with official video AP when available.",
     }
+
+
+def compute_constraint_violations(
+    det_pkl_path: Path,
+    anno_file: str,
+    thresholds: list[float] = [0.3, 0.5, 0.7, 0.9],
+) -> dict:
+    """
+    Compute constraint violation rates from saved detections.
+
+    For each detection with confidence > threshold, check whether predicted
+    agent+action pairs and agent+action+loc triples are valid according to
+    duplex_childs and triplet_childs from the annotation JSON.
+
+    Returns dict mapping threshold -> {duplex_viol_rate, triplet_viol_rate,
+    duplex_n_copreds, triplet_n_copreds}.
+    """
+    children = load_constraint_children(anno_file)
+    valid_d = set(map(tuple, children["duplex_childs"]))
+    valid_t = set(map(tuple, children["triplet_childs"]))
+
+    with open(det_pkl_path, "rb") as f:
+        detections = pickle.load(f)
+
+    # detections["agent"] is dict: frame_key -> list of C arrays [N_dets, 5]
+    # detections["action"] same structure, detections["loc"] same
+    # Each array index = class_id, each row = [x1, y1, x2, y2, score]
+
+    results = {}
+    for thresh in thresholds:
+        duplex_violations = 0
+        duplex_copreds = 0
+        triplet_violations = 0
+        triplet_copreds = 0
+
+        for frame_key in detections["agent"]:
+            # Get per-class detections for this frame
+            agent_dets = detections["agent"][frame_key]    # list of C arrays
+            action_dets = detections["action"][frame_key]
+            loc_dets = detections["loc"][frame_key]
+
+            # For each box, find which classes are active above threshold.
+            # Since each class has independent detections, we match by box IoU.
+            # Simpler: for each detection box that appears in agent class i with
+            # score > thresh AND action class j with score > thresh, that's a
+            # co-prediction. Check if (i,j) is valid.
+            #
+            # Efficient approach: collect all (box, class, score) tuples per head,
+            # then match boxes across heads by high IoU overlap.
+
+            # Collect confident detections per head
+            agent_active = []  # (box_array[4], class_id, score)
+            for cid, arr in enumerate(agent_dets):
+                if arr.shape[0] == 0:
+                    continue
+                mask = arr[:, 4] > thresh
+                for row in arr[mask]:
+                    agent_active.append((row[:4], cid, row[4]))
+
+            action_active = []
+            for cid, arr in enumerate(action_dets):
+                if arr.shape[0] == 0:
+                    continue
+                mask = arr[:, 4] > thresh
+                for row in arr[mask]:
+                    action_active.append((row[:4], cid, row[4]))
+
+            loc_active = []
+            for cid, arr in enumerate(loc_dets):
+                if arr.shape[0] == 0:
+                    continue
+                mask = arr[:, 4] > thresh
+                for row in arr[mask]:
+                    loc_active.append((row[:4], cid, row[4]))
+
+            if not agent_active or not action_active:
+                continue
+
+            # Match agent-action pairs by box overlap (IoU > 0.5 = same object)
+            for a_box, a_cid, _ in agent_active:
+                for ac_box, ac_cid, _ in action_active:
+                    # Quick IoU check
+                    x1 = max(a_box[0], ac_box[0])
+                    y1 = max(a_box[1], ac_box[1])
+                    x2 = min(a_box[2], ac_box[2])
+                    y2 = min(a_box[3], ac_box[3])
+                    inter = max(0, x2 - x1) * max(0, y2 - y1)
+                    if inter == 0:
+                        continue
+                    a_area = (a_box[2] - a_box[0]) * (a_box[3] - a_box[1])
+                    ac_area = (ac_box[2] - ac_box[0]) * (ac_box[3] - ac_box[1])
+                    union = a_area + ac_area - inter
+                    if union <= 0 or inter / union < 0.5:
+                        continue
+
+                    # This is a co-prediction on the same object
+                    duplex_copreds += 1
+                    if (a_cid, ac_cid) not in valid_d:
+                        duplex_violations += 1
+
+                    # Check triplets if loc active
+                    for l_box, l_cid, _ in loc_active:
+                        lx1 = max(a_box[0], l_box[0])
+                        ly1 = max(a_box[1], l_box[1])
+                        lx2 = min(a_box[2], l_box[2])
+                        ly2 = min(a_box[3], l_box[3])
+                        l_inter = max(0, lx2 - lx1) * max(0, ly2 - ly1)
+                        if l_inter == 0:
+                            continue
+                        l_area = (l_box[2] - l_box[0]) * (l_box[3] - l_box[1])
+                        l_union = a_area + l_area - l_inter
+                        if l_union <= 0 or l_inter / l_union < 0.5:
+                            continue
+                        triplet_copreds += 1
+                        if (a_cid, ac_cid, l_cid) not in valid_t:
+                            triplet_violations += 1
+
+        d_rate = duplex_violations / max(duplex_copreds, 1)
+        t_rate = triplet_violations / max(triplet_copreds, 1)
+        results[thresh] = {
+            "duplex_viol_rate": round(d_rate * 100, 2),
+            "triplet_viol_rate": round(t_rate * 100, 2),
+            "duplex_n_copreds": duplex_copreds,
+            "triplet_n_copreds": triplet_copreds,
+        }
+
+    return results
 
 
 def main():
@@ -544,6 +727,30 @@ def main():
     with open(out_path, "w") as f:
         json.dump(summary, f, indent=2)
     print(json.dumps(summary, indent=2))
+
+    # --- Constraint violation rates ---
+    print("\n  [eval] computing constraint violation rates ...", flush=True)
+    viol_thresholds = [0.3, 0.5, 0.7, 0.9]
+    viol_results = compute_constraint_violations(det_pkl, args.anno, viol_thresholds)
+
+    print("\n  Constraint violation rates (% of co-predictions that violate valid combos):")
+    print(f"  {'Threshold':<12} {'Duplex viol%':<15} {'Triplet viol%':<15} "
+          f"{'Duplex N':<12} {'Triplet N'}")
+    for th in viol_thresholds:
+        v = viol_results[th]
+        print(f"  conf>{th:<7} {v['duplex_viol_rate']:<15} {v['triplet_viol_rate']:<15} "
+              f"{v['duplex_n_copreds']:<12} {v['triplet_n_copreds']}")
+
+    # Save violation results alongside f-mAP
+    viol_out_path = out_path.with_name("eval_violations.json")
+    with open(viol_out_path, "w") as f:
+        json.dump({str(k): v for k, v in viol_results.items()}, f, indent=2)
+    print(f"\n  Violation results saved to {viol_out_path}", flush=True)
+
+    # Add violation rates at conf>0.5 to summary for CSV
+    if 0.5 in viol_results:
+        summary["duplex_viol"] = viol_results[0.5]["duplex_viol_rate"]
+        summary["triplet_viol"] = viol_results[0.5]["triplet_viol_rate"]
 
     if not args.no_csv:
         ckpt_data = torch.load(args.ckpt, map_location="cpu", weights_only=True) \

@@ -58,3 +58,7 @@ venv/
 experiments/*/logs/
 experiments/*/cache/
 experiments/*/checkpoints/
+
+# Cloned third-party reference repos + nohup noise
+experiments/*/reference/
+nohup.out

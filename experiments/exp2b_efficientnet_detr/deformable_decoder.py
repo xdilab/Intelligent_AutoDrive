@@ -1,7 +1,10 @@
 """Deformable DETR decoder with multi-scale deformable attention.
 
-Pure PyTorch implementation (no CUDA custom ops). Follows Zhu et al.,
-"Deformable DETR" (ICLR 2021) with all standard components:
+Uses the official CUDA kernel (SenseTime) when available for ~2-3x speedup
+on MSDeformAttn forward/backward. Falls back to pure PyTorch grid_sample
+if the CUDA extension is not installed.
+
+Follows Zhu et al., "Deformable DETR" (ICLR 2021) with all standard components:
 
 1. Per-frame decoding: B=T, each frame uses standard 2D spatial shapes.
    Temporal self-attention inside each layer for inter-frame reasoning.
@@ -25,6 +28,41 @@ import math
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from torch.autograd import Function
+from torch.autograd.function import once_differentiable
+
+# Try to load the official CUDA kernel for MSDeformAttn.
+# Falls back to pure-PyTorch grid_sample if not available.
+try:
+    import MultiScaleDeformableAttention as MSDA
+    _CUDA_MSDA = True
+except ImportError:
+    _CUDA_MSDA = False
+
+
+class _MSDeformAttnCUDA(Function):
+    """Autograd wrapper for the official CUDA MSDeformAttn kernel."""
+
+    @staticmethod
+    def forward(ctx, value, spatial_shapes, level_start_index,
+                sampling_locations, attention_weights):
+        ctx.save_for_backward(value, spatial_shapes, level_start_index,
+                              sampling_locations, attention_weights)
+        return MSDA.ms_deform_attn_forward(
+            value, spatial_shapes, level_start_index,
+            sampling_locations, attention_weights, 64)
+
+    @staticmethod
+    @once_differentiable
+    def backward(ctx, grad_output):
+        (value, spatial_shapes, level_start_index,
+         sampling_locations, attention_weights) = ctx.saved_tensors
+        grad_value, grad_sampling_loc, grad_attn_weight = \
+            MSDA.ms_deform_attn_backward(
+                value, spatial_shapes, level_start_index,
+                sampling_locations, attention_weights,
+                grad_output.contiguous(), 64)
+        return grad_value, None, None, grad_sampling_loc, grad_attn_weight
 
 
 def inverse_sigmoid(x: torch.Tensor, eps: float = 1e-5) -> torch.Tensor:
@@ -34,7 +72,7 @@ def inverse_sigmoid(x: torch.Tensor, eps: float = 1e-5) -> torch.Tensor:
 
 
 # ---------------------------------------------------------------------------
-# Multi-Scale Deformable Attention (pure PyTorch)
+# Multi-Scale Deformable Attention (CUDA kernel with PyTorch fallback)
 # ---------------------------------------------------------------------------
 
 class MSDeformAttn(nn.Module):
@@ -138,62 +176,105 @@ class MSDeformAttn(nn.Module):
             B, N_q, self.n_heads, self.n_levels, self.n_points
         )
 
-        # Normalize offsets by spatial shape so they're in [0,1] coordinate space
+        # Compute sampling locations in [0,1] coordinate space
         # reference_points: [B, N_q, n_levels, 2] → [B, N_q, 1, n_levels, 1, 2]
-        ref = reference_points[:, :, None, :, None, :]  # [B, N_q, 1, n_levels, 1, 2]
+        ref = reference_points[:, :, None, :, None, :]
         # spatial_shapes: [n_levels, 2] → offset_normalizer: [1, 1, 1, n_levels, 1, 2]
         offset_normalizer = spatial_shapes.flip(-1)[None, None, None, :, None, :].float()
         # Sampling locations in [0,1]: reference + offset / spatial_size
         sampling_locations = ref + offsets / offset_normalizer
-        # Convert from [0,1] to grid_sample coords [-1,1]
-        sampling_grid = 2.0 * sampling_locations - 1.0  # [B, N_q, n_heads, n_levels, n_points, 2]
+        # → [B, N_q, n_heads, n_levels, n_points, 2]
 
-        # Sample from each level using F.grid_sample
+        if _CUDA_MSDA:
+            output = self._forward_cuda(
+                value, spatial_shapes, level_start_index,
+                sampling_locations, attn_weights)
+        else:
+            output = self._forward_pytorch(
+                value, spatial_shapes, level_start_index,
+                sampling_locations, attn_weights, B, N_q)
+
+        return self.output_proj(output)
+
+    def _forward_cuda(
+        self,
+        value: torch.Tensor,
+        spatial_shapes: torch.Tensor,
+        level_start_index: torch.Tensor,
+        sampling_locations: torch.Tensor,
+        attn_weights: torch.Tensor,
+    ) -> torch.Tensor:
+        """CUDA kernel path — fused im2col, no Python-level loop over levels.
+
+        The kernel requires float32 (AT_DISPATCH_FLOATING_TYPES), so we cast
+        from bf16/fp16 if needed and cast back after.
+        """
+        orig_dtype = value.dtype
+        needs_cast = orig_dtype not in (torch.float32, torch.float64)
+
+        if needs_cast:
+            value = value.float()
+            sampling_locations = sampling_locations.float()
+            attn_weights = attn_weights.float()
+
+        # Kernel expects contiguous tensors and int64 shapes/indices
+        output = _MSDeformAttnCUDA.apply(
+            value.contiguous(),
+            spatial_shapes.to(torch.int64).contiguous(),
+            level_start_index.to(torch.int64).contiguous(),
+            sampling_locations.contiguous(),
+            attn_weights.contiguous(),
+        )
+        # output: [B, N_q, n_heads * head_dim] — kernel merges heads internally
+        if needs_cast:
+            output = output.to(orig_dtype)
+        return output
+
+    def _forward_pytorch(
+        self,
+        value: torch.Tensor,
+        spatial_shapes: torch.Tensor,
+        level_start_index: torch.Tensor,
+        sampling_locations: torch.Tensor,
+        attn_weights: torch.Tensor,
+        B: int,
+        N_q: int,
+    ) -> torch.Tensor:
+        """Pure-PyTorch fallback — loops over levels with F.grid_sample."""
+        # Convert from [0,1] to grid_sample coords [-1,1]
+        sampling_grid = 2.0 * sampling_locations - 1.0
+
         output = torch.zeros(B, N_q, self.n_heads, self.head_dim,
-                             device=query.device, dtype=query.dtype)
+                             device=value.device, dtype=value.dtype)
 
         for lvl in range(self.n_levels):
             H_l, W_l = spatial_shapes[lvl]
             start = level_start_index[lvl]
             end = start + H_l * W_l
 
-            # Extract this level's values: [B, H_l, W_l, n_heads, head_dim]
-            # → [B*n_heads, head_dim, H_l, W_l] for grid_sample
             val_lvl = value[:, start:end, :, :].view(B, H_l, W_l, self.n_heads, self.head_dim)
             val_lvl = val_lvl.permute(0, 3, 4, 1, 2).reshape(
                 B * self.n_heads, self.head_dim, H_l.item(), W_l.item()
             )
 
-            # Grid for this level: [B, N_q, n_heads, n_points, 2]
             grid_lvl = sampling_grid[:, :, :, lvl, :, :]
-            # → [B*n_heads, N_q, n_points, 2]
             grid_lvl = grid_lvl.permute(0, 2, 1, 3, 4).reshape(
                 B * self.n_heads, N_q, self.n_points, 2
             )
 
-            # F.grid_sample: input [B*H, C, H_l, W_l], grid [B*H, N_q, n_points, 2]
-            # → [B*H, head_dim, N_q, n_points]
             sampled = F.grid_sample(
                 val_lvl, grid_lvl,
                 mode="bilinear", padding_mode="zeros", align_corners=False,
             )
-            # → [B, n_heads, head_dim, N_q, n_points]
             sampled = sampled.view(B, self.n_heads, self.head_dim, N_q, self.n_points)
 
-            # Weighted sum over points: attn_weights[:, :, :, lvl, :] is [B, N_q, n_heads, n_points]
             w = attn_weights[:, :, :, lvl, :]  # [B, N_q, n_heads, n_points]
             w = w.permute(0, 2, 1, 3)          # [B, n_heads, N_q, n_points]
-
-            # sampled: [B, n_heads, head_dim, N_q, n_points]
-            # w:       [B, n_heads, N_q, n_points]
-            # sum over points → [B, n_heads, head_dim, N_q]
-            agg = (sampled * w.unsqueeze(2)).sum(dim=-1)  # [B, n_heads, head_dim, N_q]
-            # → [B, N_q, n_heads, head_dim]
+            agg = (sampled * w.unsqueeze(2)).sum(dim=-1)
             output += agg.permute(0, 3, 1, 2)
 
-        # Merge heads and project
         output = output.reshape(B, N_q, self.d_model)
-        return self.output_proj(output)
+        return output
 
 
 # ---------------------------------------------------------------------------

@@ -73,7 +73,11 @@ CLS_OFFSETS = {
 # ---- Qwen cache (exp5's NMS-fixed cache; boxes are deterministic re-runs of
 # the same frozen detector, so exp6's dumped boxes match the ones Qwen saw) ----
 EXP5_DIR = EXP_DIR.parent / "exp5_qwen_reasoning"
-QWEN_CACHE_DIR = EXP5_DIR / "cache" / "qwen"
+# exp8 leg: JOINT-tuned VLM cache (ROAD+BDD-X+CoVLA). Archived comparison
+# artifacts: cache/zeroshot_baseline + checkpoints/zeroshot_baseline (Stage-1
+# zero-shot control), cache/bddx_baseline + checkpoints/bddx_baseline (BDD-X-
+# only leg). exp5 caches "qwen" and "qwen_bddx_lora" likewise untouched.
+QWEN_CACHE_DIR = EXP5_DIR / "cache" / "qwen_joint_lora"
 MAX_BOXES_PER_FRAME = 40               # exp5 cap: Qwen classified the top 40
 
 # ---- Language embedding ----

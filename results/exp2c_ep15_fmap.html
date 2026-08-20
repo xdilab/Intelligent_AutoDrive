@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exp2c Frozen-DETR — f-mAP Results (Epoch 15)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f172a; color: #e2e8f0; padding: 2rem; }
+  h1 { font-size: 1.6rem; margin-bottom: 0.3rem; color: #f8fafc; }
+  .subtitle { color: #94a3b8; margin-bottom: 2rem; font-size: 0.95rem; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 1100px; }
+  .card { background: #1e293b; border-radius: 12px; padding: 1.5rem; border: 1px solid #334155; }
+  .card h2 { font-size: 1.1rem; color: #cbd5e1; margin-bottom: 1rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  th { text-align: left; padding: 0.5rem 0.75rem; color: #94a3b8; font-weight: 600; border-bottom: 2px solid #334155; }
+  td { padding: 0.5rem 0.75rem; border-bottom: 1px solid #1e293b; }
+  tr:hover td { background: #334155; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .highlight { color: #38bdf8; font-weight: 600; }
+  .dim { color: #64748b; }
+  .bar-cell { position: relative; }
+  .bar { position: absolute; left: 0; top: 4px; bottom: 4px; background: #38bdf820; border-radius: 4px; }
+  .recall-bar { background: #22c55e20; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; }
+  .badge-blue { background: #1e40af; color: #93c5fd; }
+  .badge-green { background: #166534; color: #86efac; }
+  .badge-amber { background: #78350f; color: #fcd34d; }
+  .badge-red { background: #7f1d1d; color: #fca5a5; }
+  .full-width { grid-column: 1 / -1; }
+  .comparison-row td:nth-child(1) { font-weight: 600; }
+  .us { color: #38bdf8; }
+  .baseline { color: #f97316; }
+  .challenge { color: #a78bfa; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+  .stat { text-align: center; padding: 1rem; background: #0f172a; border-radius: 8px; }
+  .stat .value { font-size: 1.8rem; font-weight: 700; }
+  .stat .label { font-size: 0.8rem; color: #94a3b8; margin-top: 0.25rem; }
+  .note { color: #94a3b8; font-size: 0.82rem; margin-top: 1rem; line-height: 1.5; }
+  .progress { margin-top: 0.5rem; }
+  .progress-bar { height: 6px; background: #334155; border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<h1>Exp2c Frozen-DETR — Frame-mAP Evaluation</h1>
+<p class="subtitle">Epoch 15/30 checkpoint &middot; ROAD-Waymo val split &middot; IoU=0.5 &middot; 2026-05-11</p>
+
+<div class="grid">
+
+  <!-- Key Stats -->
+  <div class="card full-width">
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="value us">1.76%</div>
+        <div class="label">Agent f-mAP</div>
+      </div>
+      <div class="stat">
+        <div class="value" style="color:#22c55e">59.0%</div>
+        <div class="label">Agent Recall</div>
+      </div>
+      <div class="stat">
+        <div class="value" style="color:#fbbf24">0.573</div>
+        <div class="label">GIoU Loss (ep18, ↓improving)</div>
+      </div>
+    </div>
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="value" style="color:#94a3b8">18/30</div>
+        <div class="label">Epochs Completed</div>
+      </div>
+      <div class="stat">
+        <div class="value" style="color:#94a3b8">~20M</div>
+        <div class="label">Trainable Params</div>
+      </div>
+      <div class="stat">
+        <div class="value" style="color:#94a3b8">~5.3M</div>
+        <div class="label">Backbone (EfficientNet-B0)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- f-mAP Results -->
+  <div class="card">
+    <h2>f-mAP @ IoU=0.5 <span class="badge badge-blue">Epoch 15</span></h2>
+    <table>
+      <tr><th>Head</th><th class="num">mAP %</th><th class="num">Recall %</th></tr>
+      <tr><td>Agent-ness</td><td class="num highlight">10.61</td><td class="num" style="color:#22c55e">48.2</td></tr>
+      <tr><td>Agent</td><td class="num highlight">1.76</td><td class="num" style="color:#22c55e">59.0</td></tr>
+      <tr><td>Action</td><td class="num">1.58</td><td class="num" style="color:#22c55e">61.2</td></tr>
+      <tr><td>Location</td><td class="num">2.30</td><td class="num" style="color:#22c55e">47.4</td></tr>
+      <tr><td>Duplex</td><td class="num dim">0.64</td><td class="num" style="color:#22c55e">59.9</td></tr>
+      <tr><td>Triplet</td><td class="num dim">1.44</td><td class="num" style="color:#22c55e">60.3</td></tr>
+    </table>
+    <p class="note">High recall (47–61%) indicates the model <em>finds</em> agents but box precision at IoU=0.5 is the gap.</p>
+  </div>
+
+  <!-- vs Exp2b -->
+  <div class="card">
+    <h2>Exp2c vs Previous Experiments</h2>
+    <table>
+      <tr><th>Metric</th><th class="num">Exp2b</th><th class="num">Exp2c</th><th class="num">Δ</th></tr>
+      <tr>
+        <td>Agent f-mAP</td>
+        <td class="num dim">1.71%</td>
+        <td class="num us">1.76%</td>
+        <td class="num" style="color:#22c55e">+0.05</td>
+      </tr>
+      <tr>
+        <td>Action f-mAP</td>
+        <td class="num dim">—</td>
+        <td class="num us">1.58%</td>
+        <td class="num dim">—</td>
+      </tr>
+      <tr>
+        <td>Backbone</td>
+        <td class="num dim">EffNet+Qwen</td>
+        <td class="num">EffNet+CLIP</td>
+        <td class="num dim">—</td>
+      </tr>
+      <tr>
+        <td>Encoder</td>
+        <td class="num dim">None</td>
+        <td class="num" style="color:#22c55e">6-layer</td>
+        <td class="num" style="color:#22c55e">✓</td>
+      </tr>
+      <tr>
+        <td>Trainable</td>
+        <td class="num dim">15.6M</td>
+        <td class="num">~20M</td>
+        <td class="num dim">+4.4M</td>
+      </tr>
+      <tr>
+        <td>GPU Memory</td>
+        <td class="num dim">~12 GB</td>
+        <td class="num" style="color:#22c55e">~7 GB</td>
+        <td class="num" style="color:#22c55e">−5 GB</td>
+      </tr>
+    </table>
+    <p class="note">Exp2c matches Exp2b f-mAP at only ep15 (vs ep27) while saving ~5 GB GPU. Still training.</p>
+  </div>
+
+  <!-- Landscape Comparison -->
+  <div class="card full-width">
+    <h2>ROAD-Waymo Landscape — Agent f-mAP @ IoU=0.5</h2>
+    <table>
+      <tr>
+        <th>Method</th>
+        <th class="num">Agent f-mAP</th>
+        <th class="num">Backbone</th>
+        <th class="num">Backbone Size</th>
+        <th>Notes</th>
+      </tr>
+      <tr>
+        <td class="baseline">3D-RetinaNet (I3D-08)</td>
+        <td class="num baseline">16.7%</td>
+        <td class="num">ResNet-50 I3D</td>
+        <td class="num">~46M</td>
+        <td><span class="badge badge-amber">Official Baseline</span></td>
+      </tr>
+      <tr>
+        <td class="baseline">3D-RetinaNet (SlowFast-08)</td>
+        <td class="num baseline">15.3%</td>
+        <td class="num">SlowFast</td>
+        <td class="num">~34M</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="challenge">YOLOv8x (agent-only)</td>
+        <td class="num challenge">31.6%</td>
+        <td class="num">YOLOv8x</td>
+        <td class="num">~68M</td>
+        <td><span class="badge badge-green">SOTA agent det.</span></td>
+      </tr>
+      <tr>
+        <td class="us">Exp2c Frozen-DETR (ep15)</td>
+        <td class="num us">1.76%</td>
+        <td class="num">EfficientNet-B0</td>
+        <td class="num">~5.3M</td>
+        <td><span class="badge badge-blue">9× smaller backbone</span></td>
+      </tr>
+      <tr>
+        <td class="dim">Exp2b Deformable DETR (ep27)</td>
+        <td class="num dim">1.71%</td>
+        <td class="num">EfficientNet-B0</td>
+        <td class="num">~5.3M</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="dim">Exp1b FCOS (ep15)</td>
+        <td class="num dim">3.2%</td>
+        <td class="num">Qwen ViT (LoRA)</td>
+        <td class="num">~675M</td>
+        <td></td>
+      </tr>
+    </table>
+    <p class="note">
+      <strong>Key insight:</strong> The 3D-RetinaNet baseline uses a backbone <strong>9× larger</strong> than our EfficientNet-B0.
+      YOLOv8x (ECCV 2024 challenge winner's detector) has a <strong>13× larger</strong> backbone.
+      Our model finds agents (59% recall) but precision at IoU=0.5 is the bottleneck — the boxes aren't tight enough yet.
+      GIoU loss is still improving at epoch 18 (0.573), so final results after 30 epochs should be better.
+    </p>
+  </div>
+
+  <!-- ECCV Challenge Winner -->
+  <div class="card full-width">
+    <h2>ECCV 2024 ROAD++ Challenge Winner <span class="badge badge-green">Track 1</span></h2>
+    <table>
+      <tr><th>Metric</th><th class="num">Baseline</th><th class="num">Winner</th><th class="num">Gain</th></tr>
+      <tr><td>Agent v-mAP @ 0.1</td><td class="num dim">8.96</td><td class="num challenge">39.57</td><td class="num" style="color:#22c55e">+30.6</td></tr>
+      <tr><td>Agent v-mAP @ 0.2</td><td class="num dim">5.71</td><td class="num challenge">34.48</td><td class="num" style="color:#22c55e">+28.8</td></tr>
+      <tr><td>Agent v-mAP @ 0.5</td><td class="num dim">1.37</td><td class="num challenge">18.41</td><td class="num" style="color:#22c55e">+17.0</td></tr>
+      <tr><td><strong>Average v-mAP</strong></td><td class="num dim">5.35</td><td class="num challenge"><strong>30.82</strong></td><td class="num" style="color:#22c55e">+25.5</td></tr>
+    </table>
+    <p class="note">
+      <strong>Method:</strong> YOLOv8x/m multi-branch with dual-stream low-light enhancement, extreme-size detection heads, class-imbalance mitigation.
+      <strong>No f-mAP reported.</strong> No VLM features — purely engineering optimization on a strong detector.
+      <br><strong>Paper:</strong> Zhang et al., arXiv:2410.23077
+    </p>
+  </div>
+
+  <!-- Training Progress -->
+  <div class="card full-width">
+    <h2>Training Progress — GIoU Loss Trend</h2>
+    <table>
+      <tr><th>Epoch</th><th class="num">Train GIoU</th><th class="num">Val GIoU</th><th class="num">Val Action mAP</th></tr>
+      <tr><td>1</td><td class="num">0.793</td><td class="num">0.883</td><td class="num dim">31.3%</td></tr>
+      <tr><td>5</td><td class="num">0.638</td><td class="num">0.800</td><td class="num">39.2%</td></tr>
+      <tr><td>10</td><td class="num">0.606</td><td class="num">0.780</td><td class="num">41.7%</td></tr>
+      <tr><td>15</td><td class="num">0.586</td><td class="num">0.773</td><td class="num">42.5%</td></tr>
+      <tr><td>18</td><td class="num" style="color:#22c55e">0.573</td><td class="num">0.771</td><td class="num" style="color:#22c55e">43.6%</td></tr>
+    </table>
+    <div class="progress" style="margin-top: 1rem;">
+      <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:#94a3b8; margin-bottom:4px;">
+        <span>Training: epoch 18/30</span><span>60%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width:60%; background: linear-gradient(90deg, #38bdf8, #818cf8);"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

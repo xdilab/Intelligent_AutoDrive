@@ -52,6 +52,10 @@ def main():
     ap.add_argument("--epochs", type=int, default=C.MAX_EPOCHS)
     ap.add_argument("--gpu", type=int, default=0)
     ap.add_argument("--limit", type=int, default=0, help="First N frames (debug). 0 = all.")
+    ap.add_argument("--zero-lang", action="store_true",
+                    help="Diagnostic: zero the language tracks (struct + rationale) so the "
+                         "head can only recalibrate detector logits. Separates 'objective "
+                         "hurts AP' from 'language hurts AP'. Checkpoints as fusion_zl_ep*.")
     args = ap.parse_args()
 
     device = torch.device(f"cuda:{args.gpu}" if torch.cuda.is_available() else "cpu")
@@ -79,6 +83,9 @@ def main():
         for step, (det, struct, rat, tgt) in enumerate(dl, 1):
             det, struct, rat, tgt = (x.to(device, non_blocking=True)
                                      for x in (det, struct, rat, tgt))
+            if args.zero_lang:
+                struct = torch.zeros_like(struct)
+                rat = torch.zeros_like(rat)
             logits = model(det, struct, rat)
             loss = sigmoid_focal_with_logits(logits, tgt, gamma=C.FOCAL_GAMMA,
                                              alpha=alphas)
@@ -93,7 +100,8 @@ def main():
                       f"loss={run_loss/n_steps:.5f} "
                       f"({(time.time()-t0)/step:.2f}s/step)", flush=True)
 
-        ckpt = C.CKPT_DIR / f"fusion_ep{epoch:03d}.pth"
+        prefix = "fusion_zl" if args.zero_lang else "fusion"
+        ckpt = C.CKPT_DIR / f"{prefix}_ep{epoch:03d}.pth"
         torch.save({"epoch": epoch, "model": model.state_dict(),
                     "loss": run_loss / max(n_steps, 1)}, ckpt)
         print(f"[train] epoch {epoch}/{args.epochs} done  "

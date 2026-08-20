@@ -25,12 +25,15 @@ from pathlib import Path
 
 EXP_DIR = Path(__file__).resolve().parent
 CACHE_DIR = EXP_DIR / "cache"
-QWEN_CACHE_DIR = CACHE_DIR / "qwen"
+# Stage 2 (exp8): caches below are for the JOINT-tuned VLM (ROAD+BDD-X+CoVLA).
+# Comparison caches, untouched: cache/qwen (zero-shot Stage-1 control),
+# cache/qwen_bddx_lora (BDD-X-only leg).
+QWEN_CACHE_DIR = CACHE_DIR / "qwen_joint_lora"
 # Detection-steered prompting (per Moradi update email 2026-07-02): the
 # detector's per-box class predictions go into the prompt as priors and Qwen
 # verifies/refines instead of classifying from scratch. Separate cache so the
 # plain zero-shot run stays untouched for comparison.
-QWEN_STEERED_CACHE_DIR = CACHE_DIR / "qwen_steered"
+QWEN_STEERED_CACHE_DIR = CACHE_DIR / "qwen_steered_joint_lora"
 LOG_DIR = EXP_DIR / "logs"
 
 # ---- Data (matches exp4) ----
@@ -62,7 +65,12 @@ NUM_CLASSES = 1 + N_AGENTS + N_ACTIONS + N_LOCS + N_DUPLEXES + N_TRIPLETS  # 184
 NUM_CLASSES_LIST = [1, N_AGENTS, N_ACTIONS, N_LOCS, N_DUPLEXES, N_TRIPLETS]
 
 # ---- Qwen ----
-QWEN_MODEL = "Qwen/Qwen2.5-VL-7B-Instruct"
+# exp8 joint LoRA merged checkpoint (best joint val loss, epoch 1 — epochs 2/3
+# overfit: 0.432/0.463/0.481). Prior runs: exp7 BDD-X-only used
+# exp7_bddx_lora/checkpoints/merged_checkpoint_3255; zero-shot used
+# "Qwen/Qwen2.5-VL-7B-Instruct".
+QWEN_MODEL = ("/data/repos/ROAD_Reason/experiments/exp8_joint_lora/"
+              "checkpoints/merged_checkpoint_9596")
 # Sized from the cache: real per-box objects (with rationale) run ~145 chars
 # median / 180 p95 at ~3.1 chars/token, so 40 boxes need ~2.3k tokens. 1536 cut
 # the median frame off at ~32/40 boxes (65% of frames truncated). 3072 covers 40

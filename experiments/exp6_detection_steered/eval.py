@@ -40,7 +40,8 @@ _LABEL_TYPES = ("agentness", "agent", "action", "loc", "duplex", "triplet")
 
 
 @torch.no_grad()
-def _predict_probs(samples: dict, ckpt: str | None, device) -> np.ndarray:
+def _predict_probs(samples: dict, ckpt: str | None, device,
+                   zero_lang: bool = False) -> np.ndarray:
     """[M, 184] per-sample class probabilities (fused, or raw detector)."""
     det = samples["det"]
     if ckpt is None:
@@ -49,13 +50,18 @@ def _predict_probs(samples: dict, ckpt: str | None, device) -> np.ndarray:
     state = torch.load(ckpt, map_location=device, weights_only=True)
     model.load_state_dict(state["model"])
     model.eval()
-    print(f"[eval] loaded {ckpt} (epoch {state.get('epoch', '?')})", flush=True)
+    print(f"[eval] loaded {ckpt} (epoch {state.get('epoch', '?')}, zero_lang={zero_lang})",
+          flush=True)
     probs = np.empty((det.shape[0], C.NUM_CLASSES), dtype=np.float32)
     bs = 4096
     for s in range(0, det.shape[0], bs):
         sl = slice(s, s + bs)
-        logits = model(det[sl].to(device), samples["struct"][sl].to(device),
-                       samples["rat"][sl].to(device))
+        struct = samples["struct"][sl].to(device)
+        rat = samples["rat"][sl].to(device)
+        if zero_lang:                       # match training distribution of the zl cell
+            struct = torch.zeros_like(struct)
+            rat = torch.zeros_like(rat)
+        logits = model(det[sl].to(device), struct, rat)
         probs[sl] = logits.sigmoid().cpu().numpy()
     return probs
 
@@ -68,6 +74,8 @@ def main():
                     help="Score raw RetinaNet logits over the same top-K rows (control).")
     ap.add_argument("--out", default=None)
     ap.add_argument("--limit", type=int, default=0, help="First N frames (debug). 0 = all.")
+    ap.add_argument("--zero-lang", action="store_true",
+                    help="Zero the language tracks at predict time (for fusion_zl_* ckpts).")
     args = ap.parse_args()
     if not args.detector_only and not args.ckpt:
         ap.error("need --ckpt or --detector-only")
@@ -75,7 +83,8 @@ def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     samples = build_samples(args.split, limit=args.limit)
     records, labels = samples["records"], samples["labels"]
-    probs = _predict_probs(samples, None if args.detector_only else args.ckpt, device)
+    probs = _predict_probs(samples, None if args.detector_only else args.ckpt, device,
+                           zero_lang=args.zero_lang)
 
     all_classes = [["agentness"], labels["agent"], labels["action"],
                    labels["loc"], labels["duplex"], labels["triplet"]]

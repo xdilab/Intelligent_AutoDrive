@@ -1,9 +1,18 @@
-model,source,status,epoch,metric,split,iou,agent_ness,agent,action,loc,duplex,triplet
-3D-RetinaNet-I3D,ROAD++ (replication),done,25,f-mAP,val,0.5,23.3482,17.760326,15.276041,13.732354,13.435377,9.169244
-3D-RetinaNet-I3D+Godel t-norm loss,ROAD++ (replication),done,29,f-mAP,val,0.5,23.292566,17.01471,15.2114935,13.440064,13.6185465,9.374968
-Exp1-QwenViT-Lukasiewicz,novel,done,6,macro-mAP-oracle,val,N/A,,35.67,22.23,33.56,12.28,8.76
-Exp1b-QwenViT-FCOS-Godel,novel,done,15,macro-mAP-fgtokens,val,N/A,,60.55,32.42,49.98,23.10,17.47
-Exp1b-QwenViT-FCOS-Godel,novel,done,15,f-mAP,val,0.5,6.036374,3.198058,1.599435,2.548324,0.38059,1.370077
-Exp2-QwenViT-DETR-Godel,novel,training,26,f-mAP,val,0.5,2.08452,0.631193,0.761151,0.999478,0.138863,0.796732
-OpenMixer+DSDAG,novel,design,n/a,n/a,n/a,n/a,,,,,,
-Exp2-QwenViT-DETR-Godel,novel,training,30,f-mAP,val,0.5,2.430053,0.683,0.781321,1.049508,0.144336,0.884995
+model,source,status,epoch,metric,split,iou,agent_ness,agent,action,loc,duplex,triplet,duplex_viol,triplet_viol
+3D-RetinaNet-I3D,ROAD++ (replication),done,25,f-mAP,val,0.5,23.3482,17.760326,15.276041,13.732354,13.435377,9.169244,,
+3D-RetinaNet-I3D+Godel t-norm loss,ROAD++ (replication),done,29,f-mAP,val,0.5,23.292566,17.01471,15.2114935,13.440064,13.6185465,9.374968,13.57,60.68
+Exp1-QwenViT-Lukasiewicz,novel,done,6,macro-mAP-oracle,val,N/A,,35.67,22.23,33.56,12.28,8.76,,
+Exp1b-QwenViT-FCOS-Godel,novel,done,15,macro-mAP-fgtokens,val,N/A,,60.55,32.42,49.98,23.10,17.47,,
+Exp1b-QwenViT-FCOS-Godel,novel,done,15,f-mAP,val,0.5,6.036374,3.198058,1.599435,2.548324,0.38059,1.370077,27.28,
+Exp2-QwenViT-DETR-Godel,novel,training,26,f-mAP,val,0.5,2.08452,0.631193,0.761151,0.999478,0.138863,0.796732,,
+OpenMixer+DSDAG,novel,design,n/a,n/a,n/a,n/a,,,,,,,,
+Exp2-QwenViT-DETR-Godel,novel,training,30,f-mAP,val,0.5,2.430053,0.683,0.781321,1.049508,0.144336,0.884995,,
+Exp2b-EfficientNet-DeformDETR-Godel,novel,training,27,f-mAP,val,0.5,9.723186,1.713524,1.783326,2.463807,0.471436,1.252949,33.47,
+Exp2c-EffNet-FrozenDETR-CLIP-Godel,novel,training,27,f-mAP,val,0.5,11.492737,1.74938,1.746094,2.465828,0.661368,1.543885,,
+Exp2d-SwinL-FrozenDETR-Godel,novel,training,28,f-mAP,val,0.5,5.971286,1.674563,2.226521,1.363879,0.296975,1.121464,58.25,94.82
+Exp2e-R50-FrozenDETR-CLIP-ViTL14,novel,training,11,f-mAP,val,0.5,5.535862,1.396018,1.765556,1.373169,0.347549,1.011158,57.35,94.79
+Exp2f-R50-FrozenDETR-CLIP-FlatHead,novel,training,4,f-mAP,val,0.5,2.431326,0.481257,0.718888,0.562935,0.156804,0.369102,1.15,75.06
+Exp2f-R50-FrozenDETR-CLIP-FlatHead,novel,training,8,f-mAP,val,0.5,6.743743,3.214379,2.224046,1.398421,0.753178,0.602256,1.58,84.54
+Exp2f-R50-FrozenDETR-CLIP-FlatHead,novel,training,14,f-mAP,val,0.5,5.821584,4.396727,3.278095,2.038277,0.62046,1.159824,0.24,83.76
+Exp2g-R50-FrozenDETR-CLIP-MSDETR,novel,training,4,f-mAP,val,0.5,0.038793,0.056192,0.016103,0.015841,0.002197,0.009528,0.29,66.48
+Exp2f-R50-FrozenDETR-CLIP-FlatHead,novel,training,30,f-mAP,val,0.5,13.375597,5.513739,4.204128,3.964559,1.111757,1.722433,0.62,80.09
