@@ -62,3 +62,11 @@ experiments/*/checkpoints/
 # Cloned third-party reference repos + nohup noise
 experiments/*/reference/
 nohup.out
+
+# exp11 heavy artifacts (regenerable from scripts + checkpoints)
+experiments/exp11_yolo/*.pkl
+experiments/exp11_yolo/*.pt
+experiments/exp11_yolo/*.log
+experiments/exp11_yolo/runs/
+experiments/exp11_yolo/venv26/
+experiments/exp11_yolo/*.tar.gz
