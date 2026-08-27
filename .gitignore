@@ -70,3 +70,8 @@ experiments/exp11_yolo/*.log
 experiments/exp11_yolo/runs/
 experiments/exp11_yolo/venv26/
 experiments/exp11_yolo/*.tar.gz
+experiments/exp12_phrase_head/*.pkl
+experiments/exp12_phrase_head/*.pkl.partial
+experiments/exp12_phrase_head/*.pt
+experiments/exp12_phrase_head/*.log
+experiments/exp11_yolo/*.pkl.partial

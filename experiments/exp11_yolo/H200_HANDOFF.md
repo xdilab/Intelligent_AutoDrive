@@ -32,3 +32,7 @@ Identical data and recipe so the v8 -> 26 comparison is clean.
   toward nominal batch 64, so effective batch stays comparable (24x3=72 vs 32x2=64),
   but per-GPU batch-norm statistics differ from the v8x run — a forced deviation, not
   a chosen one. On H200s (141GB), batch 32 fits; prefer it there for exact recipe match.
+- 2026-08-26: YOLO26x run stopped at epoch 26/50 by decision (October defense
+  timeline; its best checkpoint ep2 = 23.30 agent f-mAP already scored; curve
+  in steady over-training decline, best.pt fitness-locked). The aug-off-phase
+  behavior on 26 remains unmeasured - rerun on H200s if it ever matters.

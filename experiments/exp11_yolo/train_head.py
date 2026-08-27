@@ -26,6 +26,8 @@ ap.add_argument("--lam", type=float, required=True)
 ap.add_argument("--epochs", type=int, default=10)
 ap.add_argument("--bs", type=int, default=65536)
 ap.add_argument("--lr", type=float, default=1e-3)
+ap.add_argument("--junk-cache", default=None)
+ap.add_argument("--out-tag", default="")
 args = ap.parse_args()
 torch.manual_seed(0)
 
@@ -68,6 +70,12 @@ print("[train] loading cache ...", flush=True)
 d = pickle.load(open(E / "roi_feats_i3d_train.pkl", "rb"))
 X = np.concatenate([d["feats"][k] for k in sorted(d["feats"]) if d["feats"][k].shape[0]], 0)
 Y = np.concatenate([d["targets"][k] for k in sorted(d["feats"]) if d["feats"][k].shape[0]], 0)
+if args.junk_cache:
+    dj = pickle.load(open(args.junk_cache, "rb"))
+    Xj = np.concatenate([dj["feats"][k] for k in sorted(dj["feats"]) if dj["feats"][k].shape[0]], 0)
+    Yj = np.concatenate([dj["targets"][k] for k in sorted(dj["feats"]) if dj["feats"][k].shape[0]], 0)
+    X = np.concatenate([X, Xj], 0); Y = np.concatenate([Y, Yj], 0)
+    print(f"[train] + junk rows {Xj.shape[0]:,}", flush=True)
 assert X.shape[0] == Y.shape[0] and Y.shape[1] == NUM_CLASSES
 print(f"[train] rows {X.shape[0]:,}  pos-agentness {int(Y[:,0].astype(np.float64).sum()):,}", flush=True)
 
@@ -95,7 +103,7 @@ for ep in range(args.epochs):
         tot += float(loss); tf += float(focal); tt += float(tn); nb += 1
     print(f"[train] ep{ep+1}/{args.epochs}  loss {tot/nb:.5f}  focal {tf/nb:.5f}  "
           f"tnorm {tt/nb:.5f}  ({time.time()-t0:.0f}s)", flush=True)
-out = E / f"head_roialign_lam{args.lam:g}.pt"
+out = E / f"head_roialign_lam{args.lam:g}{args.out_tag}.pt"
 torch.save({"state": head.state_dict(), "lam": args.lam, "epochs": args.epochs,
             "rows": int(N)}, out)
 print(f"[train] saved {out}", flush=True)

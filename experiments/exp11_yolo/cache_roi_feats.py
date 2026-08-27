@@ -34,6 +34,7 @@ BOX_W, BOX_H = 840, 600
 ap = argparse.ArgumentParser()
 ap.add_argument("--split", required=True, choices=("train", "val"))
 ap.add_argument("--limit", type=int, default=0)
+ap.add_argument("--junk", action="store_true", help="train mode: pool at YOLO junk boxes (all-zero targets) instead of GT+random")
 args = ap.parse_args()
 rng = np.random.default_rng(0)
 
@@ -43,6 +44,13 @@ ds = ROADWaymoDataset(anno_file=C.ANNO_FILE, frames_dir=C.FRAMES_DIR,
 print(f"[cache] {args.split}: {len(ds):,} clips", flush=True)
 det = RetinaNetWrapper(ckpt_path=C.RETINANET_CKPT, top_k=40,
                        d_retina=C.RETINANET_SPATIAL_DIM).to(device).eval()
+
+junk = None
+if args.junk:
+    assert args.split == "train"
+    _d = pickle.load(open(E11 / "dets_v8x_best_train_fullcand.pkl", "rb"))["records"]
+    junk = {k.rsplit("_", 1)[0] + "/" + str(int(k.rsplit("_", 1)[1])): v for k, v in _d.items()}
+    rngj = np.random.default_rng(1)
 
 yolo = None
 if args.split == "val":
@@ -112,7 +120,33 @@ for i in range(len(ds)):
         if key in feats:
             boxes_pf.append(np.zeros((0, 4), np.float32)); targ_pf.append(None); keys_pf.append(None)
             continue
-        if args.split == "train":
+        if args.junk:
+            rec = junk.get(key)
+            ft = gt_frames[t]
+            if rec is None:
+                boxes_pf.append(np.zeros((0, 4), np.float32)); targ_pf.append(None); keys_pf.append(None)
+                continue
+            yb = rec["boxes_xyxyn"].astype(np.float32)
+            gtb = (ft["boxes"].cpu().numpy().astype(np.float32)
+                   if ft is not None and ft["boxes"].shape[0] else np.zeros((0, 4), np.float32))
+            gtn = gtb / np.array([BOX_W, BOX_H, BOX_W, BOX_H], np.float32) if gtb.shape[0] else gtb
+            if yb.shape[0] and gtn.shape[0]:
+                ax1, ay1, ax2, ay2 = yb[:, 0:1], yb[:, 1:2], yb[:, 2:3], yb[:, 3:4]
+                ix = np.clip(np.minimum(ax2, gtn[None, :, 2]) - np.maximum(ax1, gtn[None, :, 0]), 0, None)
+                iy = np.clip(np.minimum(ay2, gtn[None, :, 3]) - np.maximum(ay1, gtn[None, :, 1]), 0, None)
+                inter = ix * iy
+                aa = (ax2 - ax1) * (ay2 - ay1)
+                bb = (gtn[:, 2] - gtn[:, 0]) * (gtn[:, 3] - gtn[:, 1])
+                iou = inter / np.clip(aa + bb[None, :] - inter, 1e-9, None)
+                m = iou.max(1) < 0.3
+            else:
+                m = np.ones(yb.shape[0], bool)
+            cand = np.nonzero(m)[0]
+            if cand.shape[0] > 16:
+                cand = rngj.choice(cand, 16, replace=False)
+            bx = yb[cand] * np.array([BOX_W, BOX_H, BOX_W, BOX_H], np.float32)
+            tg = np.zeros((bx.shape[0], 1 + sum(num_c)), np.float32)
+        elif args.split == "train":
             ft = gt_frames[t]
             if ft is None or ft["boxes"].shape[0] == 0:
                 gtb = np.zeros((0, 4), np.float32)
@@ -146,7 +180,7 @@ for i in range(len(ds)):
         print(f"[cache] {i+1}/{len(ds)} clips  frames={len(feats):,}  "
               f"{(time.time()-t0)/(i+1):.2f}s/clip", flush=True)
 
-out = E11 / f"roi_feats_i3d_{args.split}.pkl"
+out = E11 / ("roi_feats_i3d_train_junk.pkl" if args.junk else f"roi_feats_i3d_{args.split}.pkl")
 with open(out, "wb") as f:
     pickle.dump({"feats": feats, "targets": targets if args.split == "train" else None,
                  "n_boxes": nb,

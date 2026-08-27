@@ -26,12 +26,31 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--head", required=True)
 ap.add_argument("--out", required=True)
 ap.add_argument("--gate", action="store_true", help="multiply head sigmoids by YOLO conf")
+ap.add_argument("--derive", action="store_true", help="replace duplex/triplet cols with min() of primitive sigmoids over valid tuples")
+ap.add_argument("--derive-mode", default="min", choices=("min", "product"))
+ap.add_argument("--comp-mlp", default=None, help="path to comp_mlp_*.pt; overwrite duplex/triplet cols with stacked-MLP scores")
+ap.add_argument("--comp-variant", default="sig", choices=("sig", "sigfeat"))
 args = ap.parse_args()
 
+DERIVE_D = DERIVE_T = None
+if "--derive" in sys.argv:
+    import json as _json
+    _spec = _json.loads(open("/data/repos/ROAD_Reason/experiments/exp9_joint_heterogeneous/constraints_verified.json").read())
+    DERIVE_D = _spec["duplex_childs_derived"]     # 49 (a,c), label-order aligned (verified)
+    DERIVE_T = _spec["triplet_childs_derived"]    # 86 (a,c,l)
 print("[eval] loading ...", flush=True)
 head = nn.Linear(256, 184)
 head.load_state_dict(torch.load(args.head, weights_only=True)["state"])
 head.eval()
+comp_mlp = None
+if args.comp_mlp:
+    _ck = torch.load(args.comp_mlp, weights_only=True)
+    assert _ck.get("head_ckpt") is None or Path(_ck["head_ckpt"]).name == Path(args.head).name, \
+        f"comp-mlp checkpoint was trained against head {_ck['head_ckpt']} but --head is {args.head}"
+    args.comp_variant = _ck.get("variant", args.comp_variant)
+    comp_mlp = nn.Sequential(nn.Linear(_ck["in_dim"], 512), nn.ReLU(), nn.Linear(512, 135))
+    comp_mlp.load_state_dict(_ck["state"])
+    comp_mlp.eval()
 feats = pickle.load(open(E / "roi_feats_i3d_val.pkl", "rb"))["feats"]
 yolo = pickle.load(open(E / "dets_v8x_best_val_fullcand.pkl", "rb"))["records"]
 yolo = {k.rsplit("_", 1)[0] + "/" + str(int(k.rsplit("_", 1)[1])): v for k, v in yolo.items()}
@@ -56,8 +75,30 @@ with torch.no_grad():
             continue
         sig = torch.sigmoid(head(torch.from_numpy(f).float())).numpy() if f.shape[0] \
             else np.zeros((0, 184), np.float32)
+        sig_raw = sig.copy() if comp_mlp is not None and f.shape[0] else None  # ungated
+        raw = sig.copy() if (args.derive and f.shape[0]) else None
         if args.gate and f.shape[0]:
             sig = sig * yrec["conf"].astype(np.float32)[:, None]
+        if args.derive and f.shape[0]:
+            g = (yrec["conf"].astype(np.float32) if args.gate else np.ones(f.shape[0], np.float32))
+            if args.derive_mode == "min":
+                for di, (a, c) in enumerate(DERIVE_D):
+                    sig[:, 49 + di] = g * np.minimum(raw[:, 1 + a], raw[:, 11 + c])
+                for ti, (a, c, l) in enumerate(DERIVE_T):
+                    sig[:, 98 + ti] = g * np.minimum(np.minimum(raw[:, 1 + a], raw[:, 11 + c]), raw[:, 33 + l])
+            else:
+                for di, (a, c) in enumerate(DERIVE_D):
+                    sig[:, 49 + di] = g * raw[:, 1 + a] * raw[:, 11 + c]
+                for ti, (a, c, l) in enumerate(DERIVE_T):
+                    sig[:, 98 + ti] = g * raw[:, 1 + a] * raw[:, 11 + c] * raw[:, 33 + l]
+        if comp_mlp is not None and f.shape[0]:
+            zin = sig_raw[:, :49] if args.comp_variant == "sig" \
+                else np.concatenate([sig_raw[:, :49], f.astype(np.float32)], 1)
+            comp = torch.sigmoid(comp_mlp(torch.from_numpy(zin))).numpy()
+            if args.gate:
+                comp = comp * yrec["conf"].astype(np.float32)[:, None]
+            sig[:, 49:98] = comp[:, :49]
+            sig[:, 98:184] = comp[:, 49:135]
         gt = i3d[key]["gt"]
         if gt is None or gt["boxes"].shape[0] == 0:
             gt_boxes = np.zeros((0, 4), np.float32)
@@ -95,5 +136,6 @@ Path(args.out).write_text(json.dumps(
     {"head": args.head, "summary": summary, "n_frames": n_frames,
      "per_class": {_LABEL_TYPES[t]: ap_strs[t] for t in range(nT)},
      "rows": "yolo_v8x_best_ep1_fullcand",
-     "scores": "roialign_head" + ("_confgated" if args.gate else "")}, indent=2))
+     "scores": "roialign_head" + ("_confgated" if args.gate else "") + ("_derived" if args.derive else "")
+      + (f"_compmlp_{args.comp_variant}" if args.comp_mlp else "")}, indent=2))
 print(f"[eval] wrote {args.out}", flush=True)
