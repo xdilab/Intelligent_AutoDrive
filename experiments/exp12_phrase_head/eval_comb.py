@@ -45,7 +45,8 @@ else:
         def forward(self, x):
             z = F.normalize(self.proj(x), dim=-1)
             return z @ self.P.t() * self.log_tau.exp() + self.bias
-    pe = torch.load(E12 / "phrase_embeds.pt", weights_only=False)
+    import os as _os
+    pe = torch.load(_os.environ.get("EMBEDS", str(E12 / "phrase_embeds.pt")), weights_only=False)
     head = PhraseHead(pe["embeds"], in_dim=FD)
 head.load_state_dict(ck["state"]); head.eval()
 comp = None

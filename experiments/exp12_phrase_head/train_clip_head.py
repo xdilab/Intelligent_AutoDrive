@@ -77,7 +77,8 @@ X = torch.from_numpy(X); Y = torch.from_numpy(Y)
 if args.head == "flat":
     head = nn.Linear(args.feat_dim, 184).to(dev)
 else:
-    pe = torch.load(E12 / "phrase_embeds.pt", weights_only=False)
+    import os as _os
+    pe = torch.load(_os.environ.get("EMBEDS", str(E12 / "phrase_embeds.pt")), weights_only=False)
     head = PhraseHead(pe["embeds"], in_dim=args.feat_dim).to(dev)
 alphas = torch.load(ALPHAS, weights_only=True)
 opt = torch.optim.Adam(head.parameters(), lr=args.lr)

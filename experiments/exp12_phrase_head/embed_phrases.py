@@ -29,7 +29,8 @@ def load_clip_s(device):  # verbatim from cache_clip_feats.py (module runs argpa
     return m.half().to(device).eval()
 
 d = json.load(open("/data/datasets/ROAD_plusplus/road_waymo_trainval_v1.1.json"))
-ph = json.load(open(E12 / "phrases.json"))
+import os
+ph = json.load(open(os.environ.get("PHRASES", str(E12 / "phrases.json"))))
 order, texts = ["agentness"], [ph["agentness"]]
 for h, labels in (("agent", d["agent_labels"]), ("action", d["action_labels"]),
                   ("loc", d["loc_labels"]), ("duplex", d["duplex_labels"]),
@@ -45,7 +46,7 @@ tok = {k: v.to(device) for k, v in tok.items()} if isinstance(tok, dict) else to
 with torch.no_grad(), torch.autocast("cuda", dtype=torch.float16):
     emb = model.encode_text(tok).float()
 emb = torch.nn.functional.normalize(emb, dim=-1).cpu()
-torch.save({"embeds": emb, "order": order}, E12 / "phrase_embeds.pt")
+torch.save({"embeds": emb, "order": order}, os.environ.get("EMBEDS_OUT", str(E12 / "phrase_embeds.pt")))
 print(f"[embed] {emb.shape} saved; sample cos(Ped, Ped-MovTow) = "
       f"{float(emb[order.index('agent:Ped')] @ emb[order.index('duplex:Ped-MovTow')]):.3f}, "
       f"cos(Ped, Car) = {float(emb[order.index('agent:Ped')] @ emb[order.index('agent:Car')]):.3f}")
