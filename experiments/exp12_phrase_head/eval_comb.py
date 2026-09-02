@@ -28,26 +28,34 @@ ap.add_argument("--out", required=True)
 ap.add_argument("--feat-cache", default=str(E12 / "clip_feats_val.pkl"))
 ap.add_argument("--key-style", default="stem", choices=("stem", "slash"))
 ap.add_argument("--comp-mlp", default=None)
+ap.add_argument("--phrase-ckpt", default=None,
+                help="exp14 fusion: phrase head whose raw composition sigmoids join the MLP input")
 args = ap.parse_args()
+
+
+class PhraseHead(nn.Module):
+    def __init__(self, embeds, in_dim=1024):
+        super().__init__()
+        self.proj = nn.Linear(in_dim, embeds.shape[1])
+        self.register_buffer("P", F.normalize(embeds.float(), dim=-1))
+        self.log_tau = nn.Parameter(torch.tensor(2.3))
+        self.bias = nn.Parameter(torch.zeros(embeds.shape[0]))
+    def forward(self, x):
+        z = F.normalize(self.proj(x), dim=-1)
+        return z @ self.P.t() * self.log_tau.exp() + self.bias
+
+
+def _load_embeds():
+    import os as _os
+    return torch.load(_os.environ.get("EMBEDS", str(E12 / "phrase_embeds.pt")), weights_only=False)
+
 
 ck = torch.load(args.ckpt, weights_only=False)
 FD = ck.get("feat_dim", 1024)
 if ck["head"] == "flat":
     head = nn.Linear(FD, 184)
 else:
-    class PhraseHead(nn.Module):
-        def __init__(self, embeds, in_dim=1024):
-            super().__init__()
-            self.proj = nn.Linear(in_dim, embeds.shape[1])
-            self.register_buffer("P", F.normalize(embeds.float(), dim=-1))
-            self.log_tau = nn.Parameter(torch.tensor(2.3))
-            self.bias = nn.Parameter(torch.zeros(embeds.shape[0]))
-        def forward(self, x):
-            z = F.normalize(self.proj(x), dim=-1)
-            return z @ self.P.t() * self.log_tau.exp() + self.bias
-    import os as _os
-    pe = torch.load(_os.environ.get("EMBEDS", str(E12 / "phrase_embeds.pt")), weights_only=False)
-    head = PhraseHead(pe["embeds"], in_dim=FD)
+    head = PhraseHead(_load_embeds()["embeds"], in_dim=FD)
 head.load_state_dict(ck["state"]); head.eval()
 comp = None
 if args.comp_mlp:
@@ -57,6 +65,16 @@ if args.comp_mlp:
         f"comp mlp trained against {_c['head_ckpt']}, got {args.ckpt}"
     comp = nn.Sequential(nn.Linear(_c["in_dim"], 512), nn.ReLU(), nn.Linear(512, 135))
     comp.load_state_dict(_c["state"]); comp.eval()
+phead = None
+if args.phrase_ckpt:
+    assert comp is not None and _c["in_dim"] == 49 + 135 + 1024, \
+        "--phrase-ckpt requires a fusion comp MLP (in_dim 1208)"
+    _pn = _c.get("phrase_ckpt")
+    assert _pn is None or Path(_pn).name == Path(args.phrase_ckpt).name, \
+        f"fusion mlp trained against {_pn}, got {args.phrase_ckpt}"
+    pck = torch.load(args.phrase_ckpt, weights_only=False)
+    phead = PhraseHead(_load_embeds()["embeds"], in_dim=pck.get("feat_dim", 1024))
+    phead.load_state_dict(pck["state"]); phead.eval()
 
 print("[eval] loading caches ...", flush=True)
 feats = pickle.load(open(args.feat_cache, "rb"))["feats"]
@@ -88,7 +106,11 @@ with torch.no_grad():
         sig_raw = sig.copy() if comp is not None else None
         sig = sig * yrec["conf"].astype(np.float32)[:, None]          # gate
         if comp is not None and f.shape[0]:
-            zin = torch.from_numpy(np.concatenate([sig_raw[:, :49], f32], 1))
+            if phead is not None:
+                psig_raw = torch.sigmoid(phead(torch.from_numpy(f32))).numpy()
+                zin = torch.from_numpy(np.concatenate([sig_raw[:, :49], psig_raw[:, 49:184], f32], 1))
+            else:
+                zin = torch.from_numpy(np.concatenate([sig_raw[:, :49], f32], 1))
             c = torch.sigmoid(comp(zin)).numpy() * yrec["conf"].astype(np.float32)[:, None]
             sig[:, 49:98] = c[:, :49]; sig[:, 98:184] = c[:, 49:135]
         gt = i3d[key]["gt"]
