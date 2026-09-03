@@ -30,6 +30,8 @@ ap.add_argument("--key-style", default="stem", choices=("stem", "slash"))
 ap.add_argument("--comp-mlp", default=None)
 ap.add_argument("--phrase-ckpt", default=None,
                 help="exp14 fusion: phrase head whose raw composition sigmoids join the MLP input")
+ap.add_argument("--coords", action="store_true",
+                help="append normalized [cx, cy, w, h] to the head input (coordinate ablation)")
 args = ap.parse_args()
 
 
@@ -101,6 +103,10 @@ with torch.no_grad():
         if f.shape[0] != yb.shape[0]:
             continue
         f32 = np.nan_to_num(f.astype(np.float32), nan=0.0, posinf=0.0, neginf=0.0)
+        if args.coords and f.shape[0]:
+            cf = np.stack([(yb[:, 0] + yb[:, 2]) / 2, (yb[:, 1] + yb[:, 3]) / 2,
+                           yb[:, 2] - yb[:, 0], yb[:, 3] - yb[:, 1]], 1).astype(np.float32)
+            f32 = np.concatenate([f32, cf], 1)
         sig = torch.sigmoid(head(torch.from_numpy(f32))).numpy() if f.shape[0] \
             else np.zeros((0, 184), np.float32)
         sig_raw = sig.copy() if comp is not None else None
