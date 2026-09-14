@@ -1,0 +1,5 @@
+import hashlib,json,subprocess,datetime
+from pathlib import Path
+r=Path('/work/bbyrd1/road-contrastive-pilot-20260914');out=r/'results/pilot-job.txt';assert not out.exists(),'Duplicate pilot submission refused'
+s=json.loads((r/'results/smoke.json').read_text());cfg=json.loads((r/'code/protocol.json').read_text());assert s['passed'] and s['protocol']==cfg and s['manifest_sha256']==hashlib.sha256((r/'manifest.json').read_bytes()).hexdigest();assert s['frozen_sha256_before']==s['frozen_sha256_after'];assert min(s['classification_visual_gradient_norm'],s['contrastive_visual_gradient_norm'],s['vision_parameter_update_l2'])>0
+job=subprocess.check_output(['sbatch','--parsable','--dependency=afterok:731612',str(r/'code/pilot.sbatch')],text=True).strip().split(';')[0];out.write_text(job+'\n');(r/'results/pilot-launch.json').write_text(json.dumps({'job':job,'submitted_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'smoke_sha256':hashlib.sha256((r/'results/smoke.json').read_bytes()).hexdigest(),'conditions':cfg['conditions']},indent=2));print(job)

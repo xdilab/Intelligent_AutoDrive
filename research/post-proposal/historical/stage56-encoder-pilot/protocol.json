@@ -1,0 +1,43 @@
+{
+  "version": "full-stage56-encoder-pilot-v1-20260914",
+  "root": "/work/bbyrd1/stage56-encoder-pilot-20260914",
+  "annotation": "/work/bbyrd1/adapted-road-20260911/road_waymo_trainval_v1.1.json",
+  "frames": "/work/bbyrd1/adapted-road-20260911/frames",
+  "expert_study": "/work/bbyrd1/class-gate-study-20260914",
+  "original_study": "/work/bbyrd1/proposal-study-20260910",
+  "model": "OpenGVLab/InternVideo2_CLIP_S",
+  "revision": "1f9fca1389fd883defc652634d95a21121c85a8c",
+  "seed": 0,
+  "train_videos": 32,
+  "dev_videos": 8,
+  "frames_per_video": 4,
+  "max_gt_per_frame": 6,
+  "background_per_frame": 2,
+  "epochs": 3,
+  "vision_lr": 1e-05,
+  "head_lr": 0.0001,
+  "weight_decay": 0.01,
+  "gradient_clip": 1.0,
+  "temperature": 0.07,
+  "contrastive_lambda": 0.001,
+  "conditions": [
+    "frozen",
+    "classification",
+    "contrastive"
+  ],
+  "visual_unfreezing": "last vision transformer block only; all other encoder parameters frozen",
+  "feature": "mean of 256 final-block tokens at keyframe time index, 1024-d; connected autograd hook",
+  "crop": "fixed keyframe GT box across eight neighboring frames, 2x padding, RoIAlign 224x224; not tracked boxes",
+  "split": "32 videos from existing 420-video expert partition; 8 from existing 90-video development partition; deterministic evenly spaced annotated frames",
+  "initialization": "original encoder plus seed0 420-video flat/phrase/Stage5/Stage6 checkpoints; same initialization across conditions within stage",
+  "classification": "class-weighted focal gamma2 on assembled 184 logits: flat primitives49 plus MLP compositions135; complete downstream modules jointly trainable",
+  "contrastive": "visual-to-fixed triplet prototypes; average log-softmax over every applicable positive class; one prototype per class, no duplicate in-batch false negatives; GT rows with no valid triplet and backgrounds excluded",
+  "aux_projection": "separate auxiliary 1024-to-512 projection initialized from phrase head, trainable only with contrastive; does not change Stage5 inference graph",
+  "pilot_scope": "full Stage5/Stage6 architectures on previous small crop manifest; one seed, not full dataset or YOLO detector mAP",
+  "checkpoint_selection": "highest internal development 86-triplet crop AP among baseline and epochs; exact ties keep earlier checkpoint",
+  "no_final_eval_tuning": true,
+  "architectures": [
+    "stage5",
+    "stage6"
+  ]
+}

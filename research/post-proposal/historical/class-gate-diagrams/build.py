@@ -1,0 +1,101 @@
+from pathlib import Path
+import xml.etree.ElementTree as E
+P=Path(__file__).parent
+colors={'input':('#d5e8d4','#82b366'),'model':('#ecf6f4','#0e8a7d'),'head':('#f8cecc','#b85450'),'op':('#fff2cc','#d6b656'),'feature':('#e1d5e7','#9673a6'),'gray':('#f5f5f5','#909090')}
+class Fig:
+ def __init__(self,name,w,h):
+  self.name=name;self.n=1;self.pos={};self.file=E.Element('mxfile',host='app.diagrams.net');d=E.SubElement(self.file,'diagram',name=name);g=E.SubElement(d,'mxGraphModel',page='1',pageWidth=str(w),pageHeight=str(h),background='#ffffff',grid='1',gridSize='10');self.root=E.SubElement(g,'root');E.SubElement(self.root,'mxCell',id='0');E.SubElement(self.root,'mxCell',id='1',parent='0')
+ def box(self,label,x,y,w,h,role='op',kind='plain',size=18,shape='',parent='1'):
+  self.n+=1;id=str(self.n);fill,stroke=colors[role];st=f'rounded=1;arcSize=6;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize={size};fontColor=#202734;fillColor={fill};strokeColor={stroke};strokeWidth={3 if kind=="trained" else 1.5};spacing=8;'
+  if kind=='frozen':st+='dashed=1;dashPattern=6 5;'
+  st+=shape
+  c=E.SubElement(self.root,'mxCell',id=id,value=label,style=st,vertex='1',parent=parent);E.SubElement(c,'mxGeometry',x=str(x),y=str(y),width=str(w),height=str(h),attrib={'as':'geometry'});self.pos[id]=(x,y,w,h);return id
+ def text(self,label,x,y,w,h,size=18,bold=False):
+  return self.box(label,x,y,w,h,'gray',size=size,shape=f'fillColor=none;strokeColor=none;align=left;spacing=0;fontStyle={1 if bold else 0};')
+ def edge(self,a,b,label='',ex=(1,.5),en=(0,.5),points=None,dash=False):
+  self.n+=1;st=f'edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=20;html=1;strokeColor=#242c38;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=Helvetica;fontSize=16;labelBackgroundColor=#ffffff;exitX={ex[0]};exitY={ex[1]};entryX={en[0]};entryY={en[1]};'
+  if dash:st+='dashed=1;dashPattern=5 4;'
+  c=E.SubElement(self.root,'mxCell',id=str(self.n),value=label,style=st,edge='1',parent='1',source=a,target=b);g=E.SubElement(c,'mxGeometry',relative='1',attrib={'as':'geometry'});E.SubElement(g,'mxPoint',x='0',y='-14',attrib={'as':'offset'})
+  if points:
+   ar=E.SubElement(g,'Array',attrib={'as':'points'})
+   for x,y in points:E.SubElement(ar,'mxPoint',x=str(x),y=str(y))
+ def legend(self,y):
+  self.box('Frozen during gate fitting',50,y,250,42,'model','frozen',16)
+  self.box('Learned gate parameters',330,y,250,42,'head','trained',16)
+  self.box('Parameter-free operation',610,y,250,42,'op',size=16)
+  self.box('Feature / probability vector',890,y,280,42,'feature',size=16)
+  self.text('Border indicates training state, not prior pretraining.',1200,y,620,42,16)
+ def save(self):E.indent(self.file);E.ElementTree(self.file).write(P/(self.name+'.drawio'),encoding='utf-8',xml_declaration=True)
+
+f=Fig('class-gate-architecture',1920,1080)
+f.text('CLASS-CONDITIONED LANGUAGE FUSION',50,30,1600,40,30,True)
+f.text('Proposed score-level module | Stage 5 composition expert + Stage 4 phrase expert | One detection at frame t',50,80,1750,30,18)
+f.text('A  SHARED TEMPORAL FEATURES',50,140,490,30,18,True)
+clip=f.box('Box at t defines one crop window<br>8 aligned RGB crops<br>t − 3 through t + 4',50,200,220,100,'input')
+enc=f.box('InternVideo2-S<br>Video Tower<br>(encoder)',50,365,220,100,'model','frozen',18,'shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=25;')
+x=f.box('Crop feature x<br>1,024 dimensions',350,375,170,80,'feature',shape='rounded=0;')
+f.edge(clip,enc,'',(.5,1),(.5,0));f.edge(enc,x,'1 × 1,024')
+f.text('B  TWO FROZEN EXPERTS',620,120,850,30,18,True)
+flat=f.box('Flat scoring head<br>Linear 1,024 → 184<br>Sigmoid',630,200,210,95,'head','frozen')
+concat=f.box('Concatenate<br>First 49 sigmoid scores<br>+ x (1,024)',910,200,210,95,'op')
+mlp=f.box('Composition MLP<br>1,073 → 512 → 135<br>ReLU, then sigmoid',1190,200,230,95,'head','frozen')
+pm=f.box('pM<br>135 probabilities',1490,210,170,75,'feature')
+f.edge(x,flat,'x',(1,.25),(0,.5),[(565,395),(565,247.5)])
+f.edge(flat,concat,'49');f.edge(x,concat,'',(1,.05),(.5,0),[(550,379),(550,160),(1015,160)])
+f.edge(concat,mlp,'1,073');f.edge(mlp,pm,'135')
+proj=f.box('Phrase projection<br>Linear 1,024 → 512<br>L2 normalize',630,375,210,95,'head','frozen')
+cos=f.box('Cosine similarity<br>with all 184 phrases',910,375,210,95,'op')
+scale=f.box('Learned scale + bias<br>Sigmoid<br>Select composition 135',1190,375,230,95,'head','frozen')
+pl=f.box('pL<br>135 probabilities',1490,385,170,75,'feature')
+f.edge(x,proj,'x',(1,.7),(0,.5),[(580,431),(580,422.5)])
+f.edge(proj,cos,'512');f.edge(cos,scale,'184');f.edge(scale,pl,'135')
+text=f.box('InternVideo2-S<br>Text Tower<br>(encoder)',630,570,210,95,'model','frozen',18,'shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=25;')
+phr=f.box('Phrase matrix P<br>184 × 512<br>Normalized rows',910,570,210,95,'feature')
+tokens=f.box('184 class phrases<br>Tokenized once',350,585,210,65,'input');f.edge(tokens,text,'')
+f.edge(text,phr,'');f.edge(phr,cos,'',(.5,0),(.5,1))
+f.text('Non-composition phrase scores are not used by the gate.',1190,575,430,55,17)
+blend=f.box('CLASS GATE<br>(1 − g) ⊙ pM<br>+ g ⊙ pL',1740,295,150,120,'op',size=19)
+f.edge(pm,blend,'',(1,.5),(.25,0),[(1690,247.5),(1777.5,247.5)])
+f.edge(pl,blend,'',(1,.5),(.25,1),[(1700,422.5),(1700,480),(1777.5,480)])
+g=f.box('135 gate logits a<br>g = sigmoid(a)<br>Same g for every crop',1700,550,190,115,'head','trained')
+f.edge(g,blend,'135 weights',(.802632,0),(.75,1))
+f.text('Each g[c] decides the mixture for one class.<br>g[c] = 0: MLP only; g[c] = 1: phrase only.',1490,690,390,65,17)
+f.text('C  FINAL OUTPUT ASSEMBLY',50,755,1100,30,18,True)
+other=f.box('Unchanged 49 scores<br>q + 10 YOLO agent scores<br>+ 22 action + 16 location',50,825,370,90,'gray')
+f.text('Action/location: flat probabilities × q. Only the predicted YOLO agent class is emitted, scored q.',330,930,1020,40,16)
+q=f.box('YOLO agentness q<br>One scalar per detection',590,825,270,90,'input')
+finalcomp=f.box('Multiply by q ONCE<br>135 fused composition scores',1050,825,350,90,'op')
+out=f.box('Per-frame detections<br>YOLO boxes + 184 scores<br>49 unchanged + 135 fused',1530,825,360,90,'gray')
+f.edge(blend,finalcomp,'135 fused probabilities',(1,.5),(.8,0),[(1920,355),(1920,785),(1330,785)])
+f.edge(q,finalcomp,'q');f.edge(finalcomp,out,'135')
+f.edge(other,out,'49 unchanged',(.5,1),(.5,1),[(235,985),(1710,985)])
+f.legend(1015);f.save()
+
+f=Fig('class-gate-training',1920,1100)
+f.text('HOW THE CLASS GATE IS FITTED AND REGULARIZED',50,30,1750,45,29,True)
+f.text('Proposed first experiment | Fixed experts, training-only held-out predictions | No gate tuning on final evaluation',50,85,1780,30,18)
+f.text('A  BUILD LEAKAGE-FREE GATE INPUTS',50,145,1750,30,19,True)
+split=f.box('Split training videos<br>Expert-fit / gate-fit / development<br>No neighboring-frame leakage',50,210,340,110,'input')
+experts=f.box('Previously fitted experts<br>Predict gate-fit videos<br>Hold out the MLP itself too',490,210,350,110,'model','frozen')
+rows=f.box('Gate-fitting rows<br>pM, pL: N × 135 each<br>Targets y: N × 135, multi-hot',940,210,350,110,'feature')
+f.edge(split,experts,'');f.edge(experts,rows,'');f.text('Alternative: nested video-level out-of-fold predictions.<br>Out-of-fold MLP inputs alone do not make its outputs held out.',1380,220,460,85,18)
+f.text('B  GLOBAL ANCHOR → CLASS-SPECIFIC WEIGHTS',50,390,1050,30,19,True)
+anchor=f.box('Fit one global logit a0<br>on gate-fit predictions<br>Then FIX a0',50,460,290,110,'gray')
+a=f.box('Learn class logits a[c]<br>135 parameters<br>Initialize every a[c] = a0',440,460,310,110,'head','trained')
+g=f.box('Sigmoid per class<br>g[c] = sigmoid(a[c])<br>135 weights in [0, 1]',850,460,310,110,'op')
+mix=f.box('Blend expert probabilities<br>p[c] = (1 − g[c]) pM[c]<br>+ g[c] pL[c]',1280,460,350,110,'op')
+f.edge(anchor,a,'initialize');f.edge(a,g,'135 logits');f.edge(g,mix,'135 weights')
+f.edge(rows,mix,'pM, pL',(.65,1),(.5,0),[(1167.5,350),(1455,350)])
+f.text('C  FITTING OBJECTIVE',650,745,510,30,19,True)
+data=f.box('Data loss: multi-label BCE<br>Ldata = mean BCE(y[c], p[c])<br>Before multiplying by q',1280,815,350,100,'head')
+reg=f.box('Shrinkage penalty<br>R = (1 / 135) Σc (a[c] − a0)²<br>λ controls the strength',50,815,470,100,'op')
+loss=f.box('Ltotal = Ldata + λ R<br>Optimize only the 135 logits a<br>Experts and a0 stay fixed',650,815,510,100,'head')
+f.edge(data,loss,'Ldata',(0,.5),(1,.5))
+f.edge(reg,loss,'R')
+f.edge(mix,data,'p',(.5,1),(.5,0))
+f.edge(a,reg,'a',(.5,1),(.75,0),[(595,685),(402.5,685)])
+f.edge(anchor,reg,'a0',(.5,1),(.25,0),[(195,650),(167.5,650)])
+f.edge(rows,data,'y',(1,.95),(1,.5),[(1860,314.5),(1860,865)])
+f.text('Shrinkage pulls each class toward the global blend.<br>It discourages extreme weights; it does not guarantee a tail gain.',720,610,550,80,18)
+f.text('λ = 0: independent class gates. Larger λ: weights stay closer to the global blend.<br>Choose λ on development videos; report untouched evaluation once. BCE is a proposed gate loss, not the existing experts’ focal loss.',50,985,1770,55,17)
+f.legend(1050);f.save()
