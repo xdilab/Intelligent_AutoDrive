@@ -1,13 +1,13 @@
 from pathlib import Path
-import json,time,hashlib,datetime
+import json,time,hashlib,datetime,os
 root=Path('/work/bbyrd1/stage56-full-20260914');frames=root/'frames';inventory=json.loads((root/'code/frame-inventory.json').read_text());deadline=time.monotonic()+6*3600
 while True:
- missing=0
- for rel,size in inventory['files']:
-  p=frames/rel
-  try:ok=p.stat().st_size==size
-  except FileNotFoundError:ok=False
-  missing+=not ok
+ actual={}
+ for directory in frames.iterdir():
+  if directory.is_dir():
+   for entry in os.scandir(directory):
+    if entry.is_file() and entry.name.endswith('.jpg'):actual[directory.name+'/'+entry.name]=entry.stat().st_size
+ missing=sum(actual.get(rel)!=size for rel,size in inventory['files'])
  print('FILES_REMAINING',missing,'of',len(inventory['files']),flush=True)
  if not missing:break
  if time.monotonic()>deadline:raise TimeoutError('Frame restore incomplete')

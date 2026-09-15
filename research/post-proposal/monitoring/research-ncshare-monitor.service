@@ -1,0 +1,7 @@
+[Unit]
+Description=Fetch NCShare research alerts and notify desktop
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /data/repos/ROAD_Reason/research/post-proposal/monitoring/pull.py
+TimeoutStartSec=90
