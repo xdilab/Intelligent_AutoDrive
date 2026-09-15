@@ -22,7 +22,7 @@ def main():
   for i,s in enumerate(keys):
    path=pred/f'{s}.npy'
    if path.exists():continue
-   v,f=s.rsplit('_',1);fid=int(f);nf=ann['db'][v]['numf'];fids=[min(max(fid-3+j,1),nf) for j in range(8)];b=yolo[s]['boxes_xyxyn'];q=yolo[s]['conf'].astype(np.float32);row={'video':v,'fid':fid,'fids':fids,'key_t':fids.index(fid),'boxes':b.tolist(),'targets':np.zeros((len(b),184),np.float32),'frame_sha256':[base.sha(Path(cfg['frames'])/v/f'{fj:05d}.jpg') for fj in fids]};scores=[]
+   v,f=s.rsplit('_',1);fid=int(f);nf=ann['db'][v]['numf'];fids=[min(max(fid-3+j,1),nf) for j in range(8)];b=yolo[s]['boxes_xyxyn'];q=yolo[s]['conf'].astype(np.float32);row={'video':v,'fid':fid,'fids':fids,'key_t':fids.index(fid),'boxes':b.tolist(),'targets':np.zeros((len(b),184),np.float32),'frame_sha256':[base.sha(base.frame_root(cfg)/v/f'{fj:05d}.jpg') for fj in fids]};scores=[]
    for part in parts(row,64):
     x,_=base.crops(part,cfg)
     with torch.autocast('cuda',dtype=torch.bfloat16):z,_,_=m(x,row['key_t'])
@@ -41,5 +41,5 @@ def main():
  zs={r['label']:r['z'] for r in json.loads((src/'code/train-counts.json').read_text())['rows']};tail={}
  for group,test in [('tail47',lambda z:z<0),('deep28',lambda z:z<-.5),('common39',lambda z:z>=0)]:
   ix=[i for i,n in enumerate(labels['triplet']) if test(zs[n])];tail[group]={'classes':len(ix),'mAP':float(np.mean([values['triplet'][i] for i in ix]))}
- output={'stage':a.stage,'condition':a.condition,'selected':r['selected'],'n_frames':len(keys),'candidate_sha256':candidate_hash,'frame_sha256':manifest['frame_sha256'],'summary':{k:float(np.mean(v)) for k,v in values.items()},'tail':tail,'ap_values':values,'protocol':cfg};(root/f'results/final-{name}.json').write_text(json.dumps(output,indent=2))
+ output={'effective_frame_root':str(base.frame_root(cfg)),'stage':a.stage,'condition':a.condition,'selected':r['selected'],'n_frames':len(keys),'candidate_sha256':candidate_hash,'frame_sha256':manifest['frame_sha256'],'summary':{k:float(np.mean(v)) for k,v in values.items()},'tail':tail,'ap_values':values,'protocol':cfg};(root/f'results/final-{name}.json').write_text(json.dumps(output,indent=2))
 if __name__=='__main__':main()

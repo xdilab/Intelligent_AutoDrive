@@ -11,3 +11,9 @@ Required preflight is one gradient step per complete architecture, not another t
 Jobs: prepare exact rows + image hashes; full training array; dependent full YOLO evaluation array using the locked36,717-frame manifest, original IoU.5 evaluator, candidate confidence once, and tail47/deep28/common39. The final set never selects checkpoints. Final inference saves per-frame arrays for resumability. Results live on NCShare and the wiki, not in this code directory.
 
 Run root /work/bbyrd1/stage56-full-20260914. Source code canonical home ROAD_Reason/research/post-proposal/stage56-full. Walltime requests are ceilings, not estimates. Estimate remaining time from actual full-data throughput.
+
+## September 15 recovery
+
+All original six training tasks failed during baseline development evaluation when the old shared staging frame directory disappeared. No training checkpoints had been saved. Cause of the directory disappearance is unknown. Restore uses intact local source images into this study's own `frames/` directory, selected by the original158,081-file inventory. `ROAD_FRAME_ROOT` overrides storage location without changing split, targets, crops, loss, or architecture. A CPU gate verifies all file sizes and every prepared train/dev frame hash before replacement jobs run.
+
+Development evaluation now atomically caches per-frame targets and predictions with model/data/crop-code provenance. Resume tests verify identical AP, recomputation of only missing frames, and rejection of a changed model. Existing final-detector inference was already resumable. `recovery-launch.json` and active job files identify replacement arrays; collectors read job IDs dynamically.

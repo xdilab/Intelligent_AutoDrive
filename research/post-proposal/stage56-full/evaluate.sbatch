@@ -9,6 +9,7 @@
 #SBATCH --time=7-00:00:00
 #SBATCH --array=0-5%2
 set -euo pipefail
+export ROAD_FRAME_ROOT=/work/bbyrd1/stage56-full-20260914/frames
 export HF_HOME=/work/bbyrd1/road_crop/hf_cache
 export HF_HUB_OFFLINE=1
 export PYTHONPATH=/work/bbyrd1/bddx-pilot-20260911/packages

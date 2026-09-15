@@ -1,4 +1,4 @@
-import argparse,hashlib,json,time,random
+import argparse,hashlib,json,time,random,os
 from pathlib import Path
 import numpy as np
 import torch
@@ -23,10 +23,12 @@ def crop_ap(y,p):
   prec=np.cumsum(yy)/np.arange(1,len(yy)+1);vals.append(float(np.maximum.accumulate(prec[::-1])[::-1][yy].sum()/n*100))
  return vals
 
+def frame_root(cfg):return Path(os.environ.get("ROAD_FRAME_ROOT",cfg["frames"]))
+
 def crops(row,cfg):
  imgs=[]
  for fid,digest in zip(row['fids'],row['frame_sha256']):
-  p=Path(cfg['frames'])/row['video']/f'{fid:05d}.jpg';assert sha(p)==digest
+  p=frame_root(cfg)/row['video']/f'{fid:05d}.jpg';assert sha(p)==digest
   with Image.open(p) as im:imgs.append(np.asarray(im.convert('RGB')).copy())
  ft=torch.from_numpy(np.stack(imgs)).cuda().permute(0,3,1,2).float()/255;H,W=imgs[0].shape[:2]
  mean=torch.tensor([.485,.456,.406],device='cuda')[None,:,None,None];std=torch.tensor([.229,.224,.225],device='cuda')[None,:,None,None];ft=(ft-mean)/std;b=np.array(row['boxes']);n=len(b);cx=(b[:,0]+b[:,2])/2*W;cy=(b[:,1]+b[:,3])/2*H;bw=np.maximum((b[:,2]-b[:,0])*W,8)*2;bh=np.maximum((b[:,3]-b[:,1])*H,8)*2

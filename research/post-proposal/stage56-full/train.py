@@ -1,4 +1,4 @@
-import argparse,json,time,random,signal
+import argparse,json,time,random,signal,hashlib
 from pathlib import Path
 import numpy as np
 import torch
@@ -24,14 +24,31 @@ def parts(row,size):
  for start in range(0,len(row['boxes']),size):
   d=dict(row);d['boxes']=row['boxes'][start:start+size];d['targets']=row['targets'][start:start+size];yield d
 @torch.no_grad()
-def evaluate(m,rows,cfg):
+def evaluate(m,rows,cfg,cache_dir):
+ cache_dir.mkdir(parents=True,exist_ok=True);digest=hashlib.sha256()
+ for name,param in m.named_parameters():digest.update(name.encode());digest.update(param.detach().cpu().contiguous().numpy().tobytes())
+ provenance={'model_sha256':digest.hexdigest(),'rows_sha256':base.sha(rows.path),'crop_code_sha256':base.sha(Path(base.__file__)),'version':'full-dev-cache-v1'}
+ marker=cache_dir/'provenance.json'
+ if marker.exists():assert json.loads(marker.read_text())==provenance,'Cached evaluation belongs to different model/data/code'
+ else:marker.write_text(json.dumps(provenance,indent=2))
  yy=[];pp=[]
  for i in range(len(rows)):
-  for r in parts(rows[i],64):
-   x,y=base.crops(r,cfg)
-   with torch.autocast('cuda',dtype=torch.bfloat16):z,_,_=m(x,r['key_t'])
-   yy.append(y[:,98:].cpu().numpy());pp.append(z[:,98:].float().sigmoid().cpu().numpy())
-  if i%2000==0:print('EVAL',i,len(rows),flush=True)
+  path=cache_dir/f'{i:06d}.npz'
+  if path.exists():
+   with np.load(path) as cached:yframe=cached['y'];pframe=cached['p']
+   assert yframe.shape==pframe.shape and yframe.shape[1]==86 and np.isfinite(pframe).all()
+  else:
+   ys=[];ps=[]
+   for r in parts(rows[i],64):
+    x,y=base.crops(r,cfg)
+    with torch.autocast('cuda',dtype=torch.bfloat16):z,_,_=m(x,r['key_t'])
+    ys.append(y[:,98:].cpu().numpy());ps.append(z[:,98:].float().sigmoid().cpu().numpy())
+   yframe=np.concatenate(ys) if ys else np.empty((0,86),np.float32);pframe=np.concatenate(ps) if ps else np.empty((0,86),np.float32)
+   temp=path.with_suffix('.tmp')
+   with temp.open('wb') as file:np.savez(file,y=yframe,p=pframe)
+   temp.replace(path)
+  yy.append(yframe);pp.append(pframe)
+  if i%100==0:print('EVAL',cache_dir.name,i,len(rows),flush=True)
  y=np.concatenate(yy);p=np.concatenate(pp);ap=base.crop_ap(y,p);return {'triplet_crop_AP':float(np.mean(ap)),'triplet_per_class_AP':ap,'rows':len(y)}
 
 def main():
@@ -41,7 +58,7 @@ def main():
  m=FullStage(cfg,a.condition,a.stage);assert m.parity()<=1e-6
  vision=[p for p in m.encoder.parameters() if p.requires_grad];other=[p for n,p in m.named_parameters() if p.requires_grad and not n.startswith('encoder.')];params=vision+other;opt=torch.optim.AdamW([{'params':vision,'lr':cfg['vision_lr']},{'params':other,'lr':cfg['head_lr']}],weight_decay=cfg['weight_decay']);frozen=base.frozen_hash(m)
  name=f'{a.stage}-{a.condition}';dest=root/'runs'/name;dest.mkdir(parents=True,exist_ok=True);resume=dest/'resume.pt';tr=Rows(root/'data/train.jsonl');dv=Rows(root/'data/dev.jsonl');ep=0;pos=0;steps=0
- report={'stage':a.stage,'condition':a.condition,'protocol':cfg,'data_sha256':prep['data_sha256'],'started_utc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'epochs':[],'selected':'baseline','trainable_names':[n for n,p in m.named_parameters() if p.requires_grad],'frozen_sha256_before':frozen}
+ report={'effective_frame_root':str(base.frame_root(cfg)),'stage':a.stage,'condition':a.condition,'protocol':cfg,'data_sha256':prep['data_sha256'],'started_utc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'epochs':[],'selected':'baseline','trainable_names':[n for n,p in m.named_parameters() if p.requires_grad],'frozen_sha256_before':frozen}
  def save(path,next_epoch,next_pos):
   state={n:p.detach().cpu() for n,p in m.named_parameters() if p.requires_grad};temp=path.with_suffix('.tmp');torch.save({'state':state,'optimizer':opt.state_dict(),'epoch':next_epoch,'position':next_pos,'steps':steps,'report':report,'protocol':cfg,'data_sha256':prep['data_sha256']},temp);temp.replace(path)
  if resume.exists():
@@ -50,7 +67,7 @@ def main():
    for n,v in ck['state'].items():named[n].copy_(v)
   opt.load_state_dict(ck['optimizer']);ep=ck['epoch'];pos=ck['position'];steps=ck['steps'];report=ck['report']
  else:
-  report['baseline']=evaluate(m,dv,cfg);save(resume,0,0)
+  report['baseline']=evaluate(m,dv,cfg,dest/'dev-cache-baseline');save(resume,0,0)
  for epoch in range(ep,cfg['epochs']):
   order=np.random.default_rng(cfg['seed']+epoch).permutation(len(tr));cursor=pos if epoch==ep else 0;loss_sum=0;row_count=0;start=time.time()
   while cursor<len(order):
@@ -67,7 +84,7 @@ def main():
    torch.nn.utils.clip_grad_norm_(params,cfg['gradient_clip'],error_if_nonfinite=True);opt.step();steps+=1;loss_sum+=value*count;row_count+=count
    if steps%25==0:
     save(resume,epoch,cursor);(root/f'results/{name}.progress.json').write_text(json.dumps({'stage':a.stage,'condition':a.condition,'epoch':epoch+1,'frames_done':cursor,'frames_total':len(order),'steps':steps,'training_objective':value,'segment_rows_per_second':row_count/max(time.time()-start,1),'updated_utc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}));print('TRAIN',epoch+1,cursor,len(order),steps,value,flush=True)
-  metrics=evaluate(m,dv,cfg);metrics.update(epoch=epoch+1,training_objective_segment=loss_sum/max(row_count,1));report['epochs'].append(metrics)
+  metrics=evaluate(m,dv,cfg,dest/f'dev-cache-epoch-{epoch+1}');metrics.update(epoch=epoch+1,training_objective_segment=loss_sum/max(row_count,1));report['epochs'].append(metrics)
   previous=max([report['baseline']['triplet_crop_AP']]+[e['triplet_crop_AP'] for e in report['epochs'][:-1]])
   if metrics['triplet_crop_AP']>previous:report['selected']=f'epoch-{epoch+1}';save(dest/'best.pt',epoch+1,0)
   save(dest/f'epoch-{epoch+1}.pt',epoch+1,0);save(resume,epoch+1,0);(root/f'results/{name}.partial.json').write_text(json.dumps(report,indent=2));pos=0
