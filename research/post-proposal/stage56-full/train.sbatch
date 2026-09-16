@@ -7,7 +7,7 @@
 #SBATCH --qos=ncat_h200_hp
 #SBATCH --gres=gpu:h200:1
 #SBATCH --time=7-00:00:00
-#SBATCH --array=0-5%4
+#SBATCH --array=0-5%6
 set -euo pipefail
 export ROAD_FRAME_ROOT=/work/bbyrd1/stage56-full-20260914/frames
 export HF_HOME=/work/bbyrd1/road_crop/hf_cache
