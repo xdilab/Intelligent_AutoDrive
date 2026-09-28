@@ -1,0 +1,3 @@
+#!/bin/sh
+# Brandon, 2026-09-25: silence research desktop notifications; retain monitor logs.
+exit 0

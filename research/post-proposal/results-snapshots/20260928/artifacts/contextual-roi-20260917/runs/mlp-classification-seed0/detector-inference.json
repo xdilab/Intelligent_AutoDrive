@@ -1,0 +1,9 @@
+{
+  "signature": {
+    "checkpoint_sha256": "fb9abd9abe17b5268213c10b3ce54ae9255203fccf51a69bc93d96cdd2f88608",
+    "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+    "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+    "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+  },
+  "position": 6163968
+}

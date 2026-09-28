@@ -1,0 +1,5 @@
+[Unit]
+Description=Monitor contextual full-context concatenation study
+[Service]
+Type=oneshot
+ExecStart=/home/brandon/miniconda3/bin/python /data/repos/ROAD_Reason/research/post-proposal/contextual-roi-concat/monitor_local.py

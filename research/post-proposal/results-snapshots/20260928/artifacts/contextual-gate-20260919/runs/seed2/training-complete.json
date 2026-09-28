@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "signature": {
+    "protocol": "a3329e4f44191ceb0e0dae1fe337c486aa5551cc973733dbcc5955da1e43f48a",
+    "preparation": "da7b8e7d8b000f83acbbd3c4ebc8bd09b77dc10cfddc87da456879f7dc7f6ea1",
+    "cache": "b84b69c503b88512eaab5c788419383a399ae2c1709655197bee3c6ad14438b2",
+    "seed": 2,
+    "parents": [
+      "33e19d9113047343e92038dd3b2fd95ef4d42a29a4a0de0e76cfa1be53087c8d",
+      "673ca41d86d18897d083fdfb2c1f191e043ea2850cf3c046c0e24040ba045ffd"
+    ],
+    "expert_model": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+    "code": {
+      "common.py": "bc08898b9e0e54d4dcb9da5bb782a90e53185899bf942adbb297a9e86759a5a1",
+      "router.py": "ffc42961c99338e904584d595467f95ff529f8e243a09ada14849aa7a437dbe5",
+      "train_gate.py": "8e71416694ea5af44ca4d65141dbe548e844b4e2ce5577990486ccf73d6a010a",
+      "predict_gate.py": "da95658b9fff7dd85c2876fe3c89600f18bff0b2f0c41d462a6834f82da620a9"
+    }
+  },
+  "time": 1789838693.6275175
+}

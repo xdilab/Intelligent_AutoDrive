@@ -1,0 +1,24 @@
+{
+  "authorized": "User approved all184 contrastive retraining on September18",
+  "created": "2026-09-18T16:35:20.169927-04:00",
+  "cache_source": "/data/repos/wiki/artifacts/contextual-roi-20260917/data",
+  "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+  "preserve_original": true,
+  "original_condition": "86triplet-only contrastive",
+  "new_condition": "all184 multi-positive contrastive alignment to adapted text T; gradients into both visual and text adapters",
+  "fresh_initialization": true,
+  "num_new_runs": 6,
+  "no_new_encoder_extraction": true,
+  "adapted_text_refinement": {
+    "authorized": "2026-09-18T16:56:49.372411-04:00",
+    "status_at_change": "waiting; no run checkpoints or completed runs",
+    "superseded_configuration": "pre-adapted-text-refinement/",
+    "tests": "5 passed; both fusion variants receive contrastive gradients in visual and text MLPs, frozen caches/P unchanged, pre-fusion visual feature independent of text adaptation",
+    "code_sha256": {
+      "model.py": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+      "train_cached.py": "16e83cc02e486025f4a1fb6c3d99c918e64d97b69c58fc07cbb2f6584145fb06",
+      "test_model.py": "cc3f43aed3884da587bfd2a06e65a1b20405033922c8b0dd69d71a08c802c5bf",
+      "protocol.json": "132479554163198ae8f07349ddf3da107fbf962bce20f7a3fa5ce13fa2819325"
+    }
+  }
+}

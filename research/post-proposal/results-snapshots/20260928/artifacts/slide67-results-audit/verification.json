@@ -1,0 +1,285 @@
+{
+  "checked_utc": "2026-09-14T16:27:33.718594+00:00",
+  "slide_url": "https://docs.google.com/presentation/d/1_ywXj_hqlgdC0S68aH3kGAteT5UQ4oH3Q5-Pg6s_TeM/edit#slide=id.g3fa051c7877_0_34",
+  "deep_labels": [
+    "Ped-MovAway-Jun",
+    "Ped-MovTow-Jun",
+    "Ped-Mov-OutgoLane",
+    "Ped-Stop-OutgoLane",
+    "Ped-XingFmRht-xing",
+    "Ped-PushObj-LftPav",
+    "Ped-PushObj-RhtPav",
+    "Car-MovTow-VehLane",
+    "Car-IncatRht-IncomLane",
+    "Car-HazLit-IncomLane",
+    "Car-TurLft-VehLane",
+    "Car-MovLft-VehLane",
+    "Cyc-MovAway-OutgoCycLane",
+    "Cyc-MovAway-RhtPav",
+    "Cyc-MovTow-IncomLane",
+    "Cyc-MovTow-RhtPav",
+    "MedVeh-IncatLft-IncomLane",
+    "MedVeh-IncatRht-Jun",
+    "MedVeh-TurRht-Jun",
+    "MedVeh-XingFmRht-Jun",
+    "LarVeh-MovAway-VehLane",
+    "LarVeh-Stop-VehLane",
+    "LarVeh-Stop-Jun",
+    "Bus-MovAway-OutgoLane",
+    "Bus-Stop-VehLane",
+    "Bus-Stop-OutgoLane",
+    "Bus-Stop-IncomLane",
+    "Bus-HazLit-OutgoLane"
+  ],
+  "slide_rows": [
+    [
+      "Stage",
+      "Configuration",
+      "Agentness",
+      "Agent",
+      "Action",
+      "Location",
+      "Duplex",
+      "Triplet",
+      "Tail (z=-0.5, 28 rarest)"
+    ],
+    [
+      "0",
+      "3D-RetinaNet baseline",
+      "35.36",
+      "16.67",
+      "13.23",
+      "12.77",
+      "11.32",
+      "7.54",
+      "2.88"
+    ],
+    [
+      "1",
+      "YOLO boxes, score transfer by IoU",
+      "65.36",
+      "35.25",
+      "12.86",
+      "13.36",
+      "10.04",
+      "6.81",
+      "2.19"
+    ],
+    [
+      "2",
+      "RoIAlign on P3 + trained linear head",
+      "65.36",
+      "35.25",
+      "15.92",
+      "19.60",
+      "11.13",
+      "6.65",
+      "1.47"
+    ],
+    [
+      "3",
+      "+ stacked composition MLP",
+      "65.36",
+      "35.25",
+      "15.92",
+      "19.60",
+      "15.52",
+      "9.73",
+      "3.31"
+    ],
+    [
+      "4",
+      "Contrastive phrase head on InternVideo2 crops",
+      "65.36",
+      "35.25",
+      "18.09",
+      "19.38",
+      "15.16",
+      "8.94",
+      "4.63*"
+    ],
+    [
+      "5",
+      "Flat head + composition MLP on crops (record)",
+      "65.36",
+      "35.25",
+      "18.99",
+      "22.31",
+      "17.94",
+      "11.13",
+      "4.25"
+    ],
+    [
+      "6",
+      "Fusion: phrase evidence into the MLP",
+      "65.36",
+      "35.25",
+      "18.99",
+      "22.31",
+      "17.76",
+      "10.98",
+      "4.73"
+    ]
+  ],
+  "verified": [
+    {
+      "stage": "0",
+      "matches": [
+        {
+          "source": "/data/repos/ROAD_Reason/experiments/exp11_yolo/results_i3d_fullcand_baseline.json",
+          "sha256": "7ad14809ad44bf6e5e8f4bce990a1d9d731b8bad8e693ec142e77697954aaae8",
+          "n_frames": 36717,
+          "deep28_recomputed": 2.8768546950520983,
+          "summary": {
+            "agentness": 35.356868743896484,
+            "agent": 16.6728515625,
+            "action": 13.234652519226074,
+            "loc": 12.765129089355469,
+            "duplex": 11.324506759643555,
+            "triplet": 7.5382890701293945
+          }
+        }
+      ]
+    },
+    {
+      "stage": "1",
+      "matches": [
+        {
+          "source": "/data/repos/ROAD_Reason/experiments/exp11_yolo/results_hybrid_score_transfer.json",
+          "sha256": "e6e0a5d953ca270bb5af2a3ec0c8a9fd625c26f43b2200febbc294edae0367b3",
+          "n_frames": 36717,
+          "deep28_recomputed": 2.1891563259803326,
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602508544922,
+            "action": 12.855948448181152,
+            "loc": 13.364011764526367,
+            "duplex": 10.041579246520996,
+            "triplet": 6.807718753814697
+          }
+        }
+      ]
+    },
+    {
+      "stage": "2",
+      "matches": [
+        {
+          "source": "/data/repos/ROAD_Reason/experiments/exp11_yolo/results_roialign_junkneg_gated.json",
+          "sha256": "1061705494007b51d24eed0bbd4e353b160606699f181d6123cfc942c4536f2c",
+          "n_frames": 36717,
+          "deep28_recomputed": 1.4747640492149823,
+          "summary": {
+            "agentness": 65.36402893066406,
+            "agent": 35.245689392089844,
+            "action": 15.92370891571045,
+            "loc": 19.59772491455078,
+            "duplex": 11.128462791442871,
+            "triplet": 6.648052215576172
+          }
+        }
+      ]
+    },
+    {
+      "stage": "3",
+      "matches": [
+        {
+          "source": "/data/repos/ROAD_Reason/experiments/exp11_yolo/results_comp_mlp_sigfeat_gated.json",
+          "sha256": "30c50996540d73d054e1d21c829af0967ccc5d1e8006d785446e02ed83f63293",
+          "n_frames": 36717,
+          "deep28_recomputed": 3.3130513510930752,
+          "summary": {
+            "agentness": 65.36402893066406,
+            "agent": 35.245689392089844,
+            "action": 15.92370891571045,
+            "loc": 19.59772491455078,
+            "duplex": 15.519314765930176,
+            "triplet": 9.73138427734375
+          }
+        }
+      ]
+    },
+    {
+      "stage": "4",
+      "matches": [
+        {
+          "source": "/data/repos/ROAD_Reason/experiments/exp12_phrase_head/crop_full/results_crop_full_phrase.json",
+          "sha256": "0db35821b37b59b8cec80e5a156a176670d69130bfb02e77595c610285c5bada",
+          "n_frames": 36716,
+          "deep28_recomputed": 4.627903284121388,
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602508544922,
+            "action": 18.08621597290039,
+            "loc": 19.384971618652344,
+            "duplex": 15.157557487487793,
+            "triplet": 8.93935775756836
+          }
+        }
+      ]
+    },
+    {
+      "stage": "5",
+      "matches": [
+        {
+          "source": "/data/repos/ROAD_Reason/experiments/exp12_phrase_head/crop_full/results_crop_full_flat_mlp.json",
+          "sha256": "0a39e18373ecaeec5aec975a80a3daaf004bc6ebd079e90f4f8d95b5a615c724",
+          "n_frames": 36716,
+          "deep28_recomputed": 4.251427298457376,
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602508544922,
+            "action": 18.987825393676758,
+            "loc": 22.312009811401367,
+            "duplex": 17.937326431274414,
+            "triplet": 11.134839057922363
+          }
+        }
+      ]
+    },
+    {
+      "stage": "6",
+      "matches": [
+        {
+          "source": "/data/repos/ROAD_Reason/experiments/exp12_phrase_head/crop_full/results_crop_full_fusion_mlp.json",
+          "sha256": "56ae947608fa3cd4d8b27a4aae5e592911ee2ea9dac9c3107e95d9c29785726c",
+          "n_frames": 36716,
+          "deep28_recomputed": 4.727382467778506,
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602508544922,
+            "action": 18.987825393676758,
+            "loc": 22.312009811401367,
+            "duplex": 17.759422302246094,
+            "triplet": 10.980530738830566
+          }
+        }
+      ]
+    }
+  ],
+  "new_70_percent_study": {
+    "head-phrase": {
+      "per_seed": [
+        4.3572582092022945,
+        4.67131123486481,
+        4.579445331930308
+      ],
+      "mean": 4.53600492533247
+    },
+    "stage5": {
+      "per_seed": [
+        3.0881901190118373,
+        3.5960912161786114,
+        3.353489600659467
+      ],
+      "mean": 3.3459236452833054
+    },
+    "stage6": {
+      "per_seed": [
+        4.020138182000582,
+        2.6990170329380843,
+        4.616347348902801
+      ],
+      "mean": 3.7785008546138226
+    }
+  }
+}

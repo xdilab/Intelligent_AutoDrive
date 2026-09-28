@@ -1,0 +1,2866 @@
+[
+  {
+    "model_id": 88,
+    "slug": "01-mlp",
+    "title": "MLP contextual head",
+    "mode": "none",
+    "locked_geometry": {
+      "frame": {
+        "as": "geometry",
+        "x": "40",
+        "y": "190",
+        "width": "170",
+        "height": "75"
+      },
+      "yolo": {
+        "x": "280",
+        "y": "163",
+        "width": "190",
+        "height": "130",
+        "as": "geometry"
+      },
+      "candidates": {
+        "as": "geometry",
+        "x": "545",
+        "y": "190",
+        "width": "255",
+        "height": "75"
+      },
+      "clips": {
+        "as": "geometry",
+        "x": "40",
+        "y": "421",
+        "width": "180",
+        "height": "110"
+      },
+      "video": {
+        "x": "280",
+        "y": "415",
+        "width": "190",
+        "height": "125",
+        "as": "geometry"
+      },
+      "features": {
+        "as": "geometry",
+        "x": "540",
+        "y": "350",
+        "width": "260",
+        "height": "310"
+      },
+      "crop": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "55.0",
+        "width": "230",
+        "height": "31"
+      },
+      "roi": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "140.0",
+        "width": "230",
+        "height": "31"
+      },
+      "scene": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "226.0",
+        "width": "230",
+        "height": "44"
+      },
+      "geometry": {
+        "as": "geometry",
+        "x": "555",
+        "y": "675",
+        "width": "230",
+        "height": "55"
+      },
+      "phrases": {
+        "as": "geometry",
+        "x": "40",
+        "y": "800",
+        "width": "170",
+        "height": "85"
+      },
+      "text": {
+        "x": "280",
+        "y": "785",
+        "width": "190",
+        "height": "125",
+        "as": "geometry"
+      },
+      "bank": {
+        "as": "geometry",
+        "x": "555",
+        "y": "804",
+        "width": "230",
+        "height": "70"
+      },
+      "out": {
+        "as": "geometry",
+        "x": "1740",
+        "y": "442",
+        "width": "220",
+        "height": "110"
+      },
+      "registration_frame": {
+        "as": "geometry",
+        "x": "0",
+        "y": "0",
+        "width": "2000",
+        "height": "1080"
+      }
+    },
+    "routes": [
+      {
+        "id": "frame-yolo",
+        "points": [
+          [
+            210,
+            227
+          ],
+          [
+            280,
+            227
+          ]
+        ],
+        "source": "frame",
+        "target": "yolo"
+      },
+      {
+        "id": "yolo-boxes",
+        "points": [
+          [
+            470,
+            227
+          ],
+          [
+            545,
+            227
+          ]
+        ],
+        "source": "yolo",
+        "target": "candidates"
+      },
+      {
+        "id": "boxes-out",
+        "points": [
+          [
+            800,
+            227
+          ],
+          [
+            1850,
+            227
+          ],
+          [
+            1850,
+            442
+          ]
+        ],
+        "source": "candidates",
+        "target": "out"
+      },
+      {
+        "id": "clips-video",
+        "points": [
+          [
+            220,
+            475
+          ],
+          [
+            280,
+            475
+          ]
+        ],
+        "source": "clips",
+        "target": "video"
+      },
+      {
+        "id": "video-features",
+        "points": [
+          [
+            470,
+            475
+          ],
+          [
+            540,
+            475
+          ]
+        ],
+        "source": "video",
+        "target": "features"
+      },
+      {
+        "id": "phrases-text",
+        "points": [
+          [
+            210,
+            843
+          ],
+          [
+            280,
+            843
+          ]
+        ],
+        "source": "phrases",
+        "target": "text"
+      },
+      {
+        "id": "text-bank",
+        "points": [
+          [
+            470,
+            843
+          ],
+          [
+            555,
+            843
+          ]
+        ],
+        "source": "text",
+        "target": "bank"
+      },
+      {
+        "id": "joint-classifier",
+        "points": [
+          [
+            1517,
+            507
+          ],
+          [
+            1517,
+            571
+          ]
+        ],
+        "source": "joint",
+        "target": "classifier"
+      },
+      {
+        "id": "features-fusion",
+        "points": [
+          [
+            800,
+            476
+          ],
+          [
+            865,
+            476
+          ]
+        ],
+        "source": "features",
+        "target": "fusion"
+      },
+      {
+        "id": "geometry-fusion",
+        "points": [
+          [
+            785,
+            702
+          ],
+          [
+            970,
+            702
+          ],
+          [
+            970,
+            580
+          ]
+        ],
+        "source": "geometry",
+        "target": "fusion"
+      },
+      {
+        "id": "fusion-plus",
+        "points": [
+          [
+            1075,
+            482
+          ],
+          [
+            1100,
+            482
+          ]
+        ],
+        "source": "fusion",
+        "target": "visual-plus"
+      },
+      {
+        "id": "visual-skip",
+        "points": [
+          [
+            1025,
+            385
+          ],
+          [
+            1025,
+            345
+          ],
+          [
+            1115,
+            345
+          ],
+          [
+            1115,
+            467
+          ]
+        ],
+        "source": "fusion",
+        "target": "visual-plus"
+      },
+      {
+        "id": "plus-visual",
+        "points": [
+          [
+            1130,
+            482
+          ],
+          [
+            1160,
+            482
+          ]
+        ],
+        "source": "visual-plus",
+        "target": "visual"
+      },
+      {
+        "id": "visual-language",
+        "points": [
+          [
+            1310,
+            482
+          ],
+          [
+            1390,
+            482
+          ]
+        ],
+        "source": "visual",
+        "target": "decoder"
+      },
+      {
+        "id": "crop-bypass",
+        "points": [
+          [
+            970,
+            385
+          ],
+          [
+            970,
+            310
+          ],
+          [
+            1517,
+            310
+          ],
+          [
+            1517,
+            345
+          ]
+        ],
+        "source": "fusion",
+        "target": "decoder"
+      },
+      {
+        "id": "bank-adapter",
+        "points": [
+          [
+            785,
+            839
+          ],
+          [
+            865,
+            839
+          ]
+        ],
+        "source": "bank",
+        "target": "text-adapter"
+      },
+      {
+        "id": "adapter-plus",
+        "points": [
+          [
+            1055,
+            839
+          ],
+          [
+            1083,
+            839
+          ]
+        ],
+        "source": "text-adapter",
+        "target": "text-plus"
+      },
+      {
+        "id": "text-skip",
+        "points": [
+          [
+            670,
+            804
+          ],
+          [
+            670,
+            763
+          ],
+          [
+            1098,
+            763
+          ],
+          [
+            1098,
+            824
+          ]
+        ],
+        "source": "bank",
+        "target": "text-plus"
+      },
+      {
+        "id": "plus-adapted",
+        "points": [
+          [
+            1113,
+            839
+          ],
+          [
+            1140,
+            839
+          ]
+        ],
+        "source": "text-plus",
+        "target": "adapted"
+      },
+      {
+        "id": "text-language",
+        "points": [
+          [
+            1340,
+            839
+          ],
+          [
+            1690,
+            839
+          ],
+          [
+            1690,
+            650
+          ],
+          [
+            1645,
+            650
+          ]
+        ],
+        "source": "adapted",
+        "target": "decoder"
+      },
+      {
+        "id": "scores-out",
+        "points": [
+          [
+            1645,
+            590
+          ],
+          [
+            1690,
+            590
+          ],
+          [
+            1690,
+            515
+          ],
+          [
+            1740,
+            515
+          ]
+        ],
+        "source": "decoder",
+        "target": "out"
+      }
+    ],
+    "intentional_badge_overlaps": [
+      "legend-ice",
+      "legend-fire",
+      "yolo-badge",
+      "video-badge",
+      "text-badge",
+      "fusion-badge",
+      "decoder-badge",
+      "text-adapter-badge"
+    ]
+  },
+  {
+    "model_id": 89,
+    "slug": "02-attention",
+    "title": "Attention contextual head",
+    "mode": "none",
+    "locked_geometry": {
+      "frame": {
+        "as": "geometry",
+        "x": "40",
+        "y": "190",
+        "width": "170",
+        "height": "75"
+      },
+      "yolo": {
+        "x": "280",
+        "y": "163",
+        "width": "190",
+        "height": "130",
+        "as": "geometry"
+      },
+      "candidates": {
+        "as": "geometry",
+        "x": "545",
+        "y": "190",
+        "width": "255",
+        "height": "75"
+      },
+      "clips": {
+        "as": "geometry",
+        "x": "40",
+        "y": "421",
+        "width": "180",
+        "height": "110"
+      },
+      "video": {
+        "x": "280",
+        "y": "415",
+        "width": "190",
+        "height": "125",
+        "as": "geometry"
+      },
+      "features": {
+        "as": "geometry",
+        "x": "540",
+        "y": "350",
+        "width": "260",
+        "height": "310"
+      },
+      "crop": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "55.0",
+        "width": "230",
+        "height": "31"
+      },
+      "roi": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "140.0",
+        "width": "230",
+        "height": "31"
+      },
+      "scene": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "226.0",
+        "width": "230",
+        "height": "44"
+      },
+      "geometry": {
+        "as": "geometry",
+        "x": "555",
+        "y": "675",
+        "width": "230",
+        "height": "55"
+      },
+      "phrases": {
+        "as": "geometry",
+        "x": "40",
+        "y": "800",
+        "width": "170",
+        "height": "85"
+      },
+      "text": {
+        "x": "280",
+        "y": "785",
+        "width": "190",
+        "height": "125",
+        "as": "geometry"
+      },
+      "bank": {
+        "as": "geometry",
+        "x": "555",
+        "y": "804",
+        "width": "230",
+        "height": "70"
+      },
+      "out": {
+        "as": "geometry",
+        "x": "1740",
+        "y": "442",
+        "width": "220",
+        "height": "110"
+      },
+      "registration_frame": {
+        "as": "geometry",
+        "x": "0",
+        "y": "0",
+        "width": "2000",
+        "height": "1080"
+      }
+    },
+    "routes": [
+      {
+        "id": "frame-yolo",
+        "points": [
+          [
+            210,
+            227
+          ],
+          [
+            280,
+            227
+          ]
+        ],
+        "source": "frame",
+        "target": "yolo"
+      },
+      {
+        "id": "yolo-boxes",
+        "points": [
+          [
+            470,
+            227
+          ],
+          [
+            545,
+            227
+          ]
+        ],
+        "source": "yolo",
+        "target": "candidates"
+      },
+      {
+        "id": "boxes-out",
+        "points": [
+          [
+            800,
+            227
+          ],
+          [
+            1850,
+            227
+          ],
+          [
+            1850,
+            442
+          ]
+        ],
+        "source": "candidates",
+        "target": "out"
+      },
+      {
+        "id": "clips-video",
+        "points": [
+          [
+            220,
+            475
+          ],
+          [
+            280,
+            475
+          ]
+        ],
+        "source": "clips",
+        "target": "video"
+      },
+      {
+        "id": "video-features",
+        "points": [
+          [
+            470,
+            475
+          ],
+          [
+            540,
+            475
+          ]
+        ],
+        "source": "video",
+        "target": "features"
+      },
+      {
+        "id": "phrases-text",
+        "points": [
+          [
+            210,
+            843
+          ],
+          [
+            280,
+            843
+          ]
+        ],
+        "source": "phrases",
+        "target": "text"
+      },
+      {
+        "id": "text-bank",
+        "points": [
+          [
+            470,
+            843
+          ],
+          [
+            555,
+            843
+          ]
+        ],
+        "source": "text",
+        "target": "bank"
+      },
+      {
+        "id": "joint-classifier",
+        "points": [
+          [
+            1517,
+            507
+          ],
+          [
+            1517,
+            571
+          ]
+        ],
+        "source": "joint",
+        "target": "classifier"
+      },
+      {
+        "id": "features-fusion",
+        "points": [
+          [
+            800,
+            476
+          ],
+          [
+            865,
+            476
+          ]
+        ],
+        "source": "features",
+        "target": "fusion"
+      },
+      {
+        "id": "geometry-fusion",
+        "points": [
+          [
+            785,
+            702
+          ],
+          [
+            970,
+            702
+          ],
+          [
+            970,
+            580
+          ]
+        ],
+        "source": "geometry",
+        "target": "fusion"
+      },
+      {
+        "id": "fusion-plus",
+        "points": [
+          [
+            1075,
+            482
+          ],
+          [
+            1100,
+            482
+          ]
+        ],
+        "source": "fusion",
+        "target": "visual-plus"
+      },
+      {
+        "id": "visual-skip",
+        "points": [
+          [
+            1025,
+            385
+          ],
+          [
+            1025,
+            345
+          ],
+          [
+            1115,
+            345
+          ],
+          [
+            1115,
+            467
+          ]
+        ],
+        "source": "fusion",
+        "target": "visual-plus"
+      },
+      {
+        "id": "plus-visual",
+        "points": [
+          [
+            1130,
+            482
+          ],
+          [
+            1160,
+            482
+          ]
+        ],
+        "source": "visual-plus",
+        "target": "visual"
+      },
+      {
+        "id": "visual-language",
+        "points": [
+          [
+            1310,
+            482
+          ],
+          [
+            1390,
+            482
+          ]
+        ],
+        "source": "visual",
+        "target": "decoder"
+      },
+      {
+        "id": "crop-bypass",
+        "points": [
+          [
+            970,
+            385
+          ],
+          [
+            970,
+            310
+          ],
+          [
+            1517,
+            310
+          ],
+          [
+            1517,
+            345
+          ]
+        ],
+        "source": "fusion",
+        "target": "decoder"
+      },
+      {
+        "id": "bank-adapter",
+        "points": [
+          [
+            785,
+            839
+          ],
+          [
+            865,
+            839
+          ]
+        ],
+        "source": "bank",
+        "target": "text-adapter"
+      },
+      {
+        "id": "adapter-plus",
+        "points": [
+          [
+            1055,
+            839
+          ],
+          [
+            1083,
+            839
+          ]
+        ],
+        "source": "text-adapter",
+        "target": "text-plus"
+      },
+      {
+        "id": "text-skip",
+        "points": [
+          [
+            670,
+            804
+          ],
+          [
+            670,
+            763
+          ],
+          [
+            1098,
+            763
+          ],
+          [
+            1098,
+            824
+          ]
+        ],
+        "source": "bank",
+        "target": "text-plus"
+      },
+      {
+        "id": "plus-adapted",
+        "points": [
+          [
+            1113,
+            839
+          ],
+          [
+            1140,
+            839
+          ]
+        ],
+        "source": "text-plus",
+        "target": "adapted"
+      },
+      {
+        "id": "text-language",
+        "points": [
+          [
+            1340,
+            839
+          ],
+          [
+            1690,
+            839
+          ],
+          [
+            1690,
+            650
+          ],
+          [
+            1645,
+            650
+          ]
+        ],
+        "source": "adapted",
+        "target": "decoder"
+      },
+      {
+        "id": "scores-out",
+        "points": [
+          [
+            1645,
+            590
+          ],
+          [
+            1690,
+            590
+          ],
+          [
+            1690,
+            515
+          ],
+          [
+            1740,
+            515
+          ]
+        ],
+        "source": "decoder",
+        "target": "out"
+      }
+    ],
+    "intentional_badge_overlaps": [
+      "legend-ice",
+      "legend-fire",
+      "yolo-badge",
+      "video-badge",
+      "text-badge",
+      "fusion-badge",
+      "decoder-badge",
+      "text-adapter-badge"
+    ]
+  },
+  {
+    "model_id": 90,
+    "slug": "03-triplet-contrastive",
+    "title": "MLP + triplet contrastive learning",
+    "mode": "triplet",
+    "locked_geometry": {
+      "frame": {
+        "as": "geometry",
+        "x": "40",
+        "y": "190",
+        "width": "170",
+        "height": "75"
+      },
+      "yolo": {
+        "x": "280",
+        "y": "163",
+        "width": "190",
+        "height": "130",
+        "as": "geometry"
+      },
+      "candidates": {
+        "as": "geometry",
+        "x": "545",
+        "y": "190",
+        "width": "255",
+        "height": "75"
+      },
+      "clips": {
+        "as": "geometry",
+        "x": "40",
+        "y": "421",
+        "width": "180",
+        "height": "110"
+      },
+      "video": {
+        "x": "280",
+        "y": "415",
+        "width": "190",
+        "height": "125",
+        "as": "geometry"
+      },
+      "features": {
+        "as": "geometry",
+        "x": "540",
+        "y": "350",
+        "width": "260",
+        "height": "310"
+      },
+      "crop": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "55.0",
+        "width": "230",
+        "height": "31"
+      },
+      "roi": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "140.0",
+        "width": "230",
+        "height": "31"
+      },
+      "scene": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "226.0",
+        "width": "230",
+        "height": "44"
+      },
+      "geometry": {
+        "as": "geometry",
+        "x": "555",
+        "y": "675",
+        "width": "230",
+        "height": "55"
+      },
+      "phrases": {
+        "as": "geometry",
+        "x": "40",
+        "y": "800",
+        "width": "170",
+        "height": "85"
+      },
+      "text": {
+        "x": "280",
+        "y": "785",
+        "width": "190",
+        "height": "125",
+        "as": "geometry"
+      },
+      "bank": {
+        "as": "geometry",
+        "x": "555",
+        "y": "804",
+        "width": "230",
+        "height": "70"
+      },
+      "out": {
+        "as": "geometry",
+        "x": "1740",
+        "y": "442",
+        "width": "220",
+        "height": "110"
+      },
+      "registration_frame": {
+        "as": "geometry",
+        "x": "0",
+        "y": "0",
+        "width": "2000",
+        "height": "1080"
+      }
+    },
+    "routes": [
+      {
+        "id": "frame-yolo",
+        "points": [
+          [
+            210,
+            227
+          ],
+          [
+            280,
+            227
+          ]
+        ],
+        "source": "frame",
+        "target": "yolo"
+      },
+      {
+        "id": "yolo-boxes",
+        "points": [
+          [
+            470,
+            227
+          ],
+          [
+            545,
+            227
+          ]
+        ],
+        "source": "yolo",
+        "target": "candidates"
+      },
+      {
+        "id": "boxes-out",
+        "points": [
+          [
+            800,
+            227
+          ],
+          [
+            1850,
+            227
+          ],
+          [
+            1850,
+            442
+          ]
+        ],
+        "source": "candidates",
+        "target": "out"
+      },
+      {
+        "id": "clips-video",
+        "points": [
+          [
+            220,
+            475
+          ],
+          [
+            280,
+            475
+          ]
+        ],
+        "source": "clips",
+        "target": "video"
+      },
+      {
+        "id": "video-features",
+        "points": [
+          [
+            470,
+            475
+          ],
+          [
+            540,
+            475
+          ]
+        ],
+        "source": "video",
+        "target": "features"
+      },
+      {
+        "id": "phrases-text",
+        "points": [
+          [
+            210,
+            843
+          ],
+          [
+            280,
+            843
+          ]
+        ],
+        "source": "phrases",
+        "target": "text"
+      },
+      {
+        "id": "text-bank",
+        "points": [
+          [
+            470,
+            843
+          ],
+          [
+            555,
+            843
+          ]
+        ],
+        "source": "text",
+        "target": "bank"
+      },
+      {
+        "id": "joint-classifier",
+        "points": [
+          [
+            1517,
+            507
+          ],
+          [
+            1517,
+            571
+          ]
+        ],
+        "source": "joint",
+        "target": "classifier"
+      },
+      {
+        "id": "features-fusion",
+        "points": [
+          [
+            800,
+            476
+          ],
+          [
+            865,
+            476
+          ]
+        ],
+        "source": "features",
+        "target": "fusion"
+      },
+      {
+        "id": "geometry-fusion",
+        "points": [
+          [
+            785,
+            702
+          ],
+          [
+            970,
+            702
+          ],
+          [
+            970,
+            580
+          ]
+        ],
+        "source": "geometry",
+        "target": "fusion"
+      },
+      {
+        "id": "fusion-plus",
+        "points": [
+          [
+            1075,
+            482
+          ],
+          [
+            1100,
+            482
+          ]
+        ],
+        "source": "fusion",
+        "target": "visual-plus"
+      },
+      {
+        "id": "visual-skip",
+        "points": [
+          [
+            1025,
+            385
+          ],
+          [
+            1025,
+            345
+          ],
+          [
+            1115,
+            345
+          ],
+          [
+            1115,
+            467
+          ]
+        ],
+        "source": "fusion",
+        "target": "visual-plus"
+      },
+      {
+        "id": "plus-visual",
+        "points": [
+          [
+            1130,
+            482
+          ],
+          [
+            1160,
+            482
+          ]
+        ],
+        "source": "visual-plus",
+        "target": "visual"
+      },
+      {
+        "id": "visual-language",
+        "points": [
+          [
+            1310,
+            482
+          ],
+          [
+            1390,
+            482
+          ]
+        ],
+        "source": "visual",
+        "target": "decoder"
+      },
+      {
+        "id": "crop-bypass",
+        "points": [
+          [
+            970,
+            385
+          ],
+          [
+            970,
+            310
+          ],
+          [
+            1517,
+            310
+          ],
+          [
+            1517,
+            345
+          ]
+        ],
+        "source": "fusion",
+        "target": "decoder"
+      },
+      {
+        "id": "bank-adapter",
+        "points": [
+          [
+            785,
+            839
+          ],
+          [
+            865,
+            839
+          ]
+        ],
+        "source": "bank",
+        "target": "text-adapter"
+      },
+      {
+        "id": "adapter-plus",
+        "points": [
+          [
+            1055,
+            839
+          ],
+          [
+            1083,
+            839
+          ]
+        ],
+        "source": "text-adapter",
+        "target": "text-plus"
+      },
+      {
+        "id": "text-skip",
+        "points": [
+          [
+            670,
+            804
+          ],
+          [
+            670,
+            763
+          ],
+          [
+            1098,
+            763
+          ],
+          [
+            1098,
+            824
+          ]
+        ],
+        "source": "bank",
+        "target": "text-plus"
+      },
+      {
+        "id": "plus-adapted",
+        "points": [
+          [
+            1113,
+            839
+          ],
+          [
+            1140,
+            839
+          ]
+        ],
+        "source": "text-plus",
+        "target": "adapted"
+      },
+      {
+        "id": "text-language",
+        "points": [
+          [
+            1340,
+            839
+          ],
+          [
+            1690,
+            839
+          ],
+          [
+            1690,
+            650
+          ],
+          [
+            1645,
+            650
+          ]
+        ],
+        "source": "adapted",
+        "target": "decoder"
+      },
+      {
+        "id": "scores-out",
+        "points": [
+          [
+            1645,
+            590
+          ],
+          [
+            1690,
+            590
+          ],
+          [
+            1690,
+            515
+          ],
+          [
+            1740,
+            515
+          ]
+        ],
+        "source": "decoder",
+        "target": "out"
+      },
+      {
+        "id": "loss-alignment",
+        "points": [
+          [
+            975,
+            945
+          ],
+          [
+            1045,
+            945
+          ]
+        ],
+        "source": "loss-visual",
+        "target": "loss-phrase"
+      }
+    ],
+    "intentional_badge_overlaps": [
+      "legend-ice",
+      "legend-fire",
+      "yolo-badge",
+      "video-badge",
+      "text-badge",
+      "fusion-badge",
+      "decoder-badge",
+      "text-adapter-badge"
+    ]
+  },
+  {
+    "model_id": 92,
+    "slug": "04-all184-contrastive",
+    "title": "MLP + all-184 contrastive learning",
+    "mode": "all",
+    "locked_geometry": {
+      "frame": {
+        "as": "geometry",
+        "x": "40",
+        "y": "190",
+        "width": "170",
+        "height": "75"
+      },
+      "yolo": {
+        "x": "280",
+        "y": "163",
+        "width": "190",
+        "height": "130",
+        "as": "geometry"
+      },
+      "candidates": {
+        "as": "geometry",
+        "x": "545",
+        "y": "190",
+        "width": "255",
+        "height": "75"
+      },
+      "clips": {
+        "as": "geometry",
+        "x": "40",
+        "y": "421",
+        "width": "180",
+        "height": "110"
+      },
+      "video": {
+        "x": "280",
+        "y": "415",
+        "width": "190",
+        "height": "125",
+        "as": "geometry"
+      },
+      "features": {
+        "as": "geometry",
+        "x": "540",
+        "y": "350",
+        "width": "260",
+        "height": "310"
+      },
+      "crop": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "55.0",
+        "width": "230",
+        "height": "31"
+      },
+      "roi": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "140.0",
+        "width": "230",
+        "height": "31"
+      },
+      "scene": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "226.0",
+        "width": "230",
+        "height": "44"
+      },
+      "geometry": {
+        "as": "geometry",
+        "x": "555",
+        "y": "675",
+        "width": "230",
+        "height": "55"
+      },
+      "phrases": {
+        "as": "geometry",
+        "x": "40",
+        "y": "800",
+        "width": "170",
+        "height": "85"
+      },
+      "text": {
+        "x": "280",
+        "y": "785",
+        "width": "190",
+        "height": "125",
+        "as": "geometry"
+      },
+      "bank": {
+        "as": "geometry",
+        "x": "555",
+        "y": "804",
+        "width": "230",
+        "height": "70"
+      },
+      "out": {
+        "as": "geometry",
+        "x": "1740",
+        "y": "442",
+        "width": "220",
+        "height": "110"
+      },
+      "registration_frame": {
+        "as": "geometry",
+        "x": "0",
+        "y": "0",
+        "width": "2000",
+        "height": "1080"
+      }
+    },
+    "routes": [
+      {
+        "id": "frame-yolo",
+        "points": [
+          [
+            210,
+            227
+          ],
+          [
+            280,
+            227
+          ]
+        ],
+        "source": "frame",
+        "target": "yolo"
+      },
+      {
+        "id": "yolo-boxes",
+        "points": [
+          [
+            470,
+            227
+          ],
+          [
+            545,
+            227
+          ]
+        ],
+        "source": "yolo",
+        "target": "candidates"
+      },
+      {
+        "id": "boxes-out",
+        "points": [
+          [
+            800,
+            227
+          ],
+          [
+            1850,
+            227
+          ],
+          [
+            1850,
+            442
+          ]
+        ],
+        "source": "candidates",
+        "target": "out"
+      },
+      {
+        "id": "clips-video",
+        "points": [
+          [
+            220,
+            475
+          ],
+          [
+            280,
+            475
+          ]
+        ],
+        "source": "clips",
+        "target": "video"
+      },
+      {
+        "id": "video-features",
+        "points": [
+          [
+            470,
+            475
+          ],
+          [
+            540,
+            475
+          ]
+        ],
+        "source": "video",
+        "target": "features"
+      },
+      {
+        "id": "phrases-text",
+        "points": [
+          [
+            210,
+            843
+          ],
+          [
+            280,
+            843
+          ]
+        ],
+        "source": "phrases",
+        "target": "text"
+      },
+      {
+        "id": "text-bank",
+        "points": [
+          [
+            470,
+            843
+          ],
+          [
+            555,
+            843
+          ]
+        ],
+        "source": "text",
+        "target": "bank"
+      },
+      {
+        "id": "joint-classifier",
+        "points": [
+          [
+            1517,
+            507
+          ],
+          [
+            1517,
+            571
+          ]
+        ],
+        "source": "joint",
+        "target": "classifier"
+      },
+      {
+        "id": "features-fusion",
+        "points": [
+          [
+            800,
+            476
+          ],
+          [
+            865,
+            476
+          ]
+        ],
+        "source": "features",
+        "target": "fusion"
+      },
+      {
+        "id": "geometry-fusion",
+        "points": [
+          [
+            785,
+            702
+          ],
+          [
+            970,
+            702
+          ],
+          [
+            970,
+            580
+          ]
+        ],
+        "source": "geometry",
+        "target": "fusion"
+      },
+      {
+        "id": "fusion-plus",
+        "points": [
+          [
+            1075,
+            482
+          ],
+          [
+            1100,
+            482
+          ]
+        ],
+        "source": "fusion",
+        "target": "visual-plus"
+      },
+      {
+        "id": "visual-skip",
+        "points": [
+          [
+            1025,
+            385
+          ],
+          [
+            1025,
+            345
+          ],
+          [
+            1115,
+            345
+          ],
+          [
+            1115,
+            467
+          ]
+        ],
+        "source": "fusion",
+        "target": "visual-plus"
+      },
+      {
+        "id": "plus-visual",
+        "points": [
+          [
+            1130,
+            482
+          ],
+          [
+            1160,
+            482
+          ]
+        ],
+        "source": "visual-plus",
+        "target": "visual"
+      },
+      {
+        "id": "visual-language",
+        "points": [
+          [
+            1310,
+            482
+          ],
+          [
+            1390,
+            482
+          ]
+        ],
+        "source": "visual",
+        "target": "decoder"
+      },
+      {
+        "id": "crop-bypass",
+        "points": [
+          [
+            970,
+            385
+          ],
+          [
+            970,
+            310
+          ],
+          [
+            1517,
+            310
+          ],
+          [
+            1517,
+            345
+          ]
+        ],
+        "source": "fusion",
+        "target": "decoder"
+      },
+      {
+        "id": "bank-adapter",
+        "points": [
+          [
+            785,
+            839
+          ],
+          [
+            865,
+            839
+          ]
+        ],
+        "source": "bank",
+        "target": "text-adapter"
+      },
+      {
+        "id": "adapter-plus",
+        "points": [
+          [
+            1055,
+            839
+          ],
+          [
+            1083,
+            839
+          ]
+        ],
+        "source": "text-adapter",
+        "target": "text-plus"
+      },
+      {
+        "id": "text-skip",
+        "points": [
+          [
+            670,
+            804
+          ],
+          [
+            670,
+            763
+          ],
+          [
+            1098,
+            763
+          ],
+          [
+            1098,
+            824
+          ]
+        ],
+        "source": "bank",
+        "target": "text-plus"
+      },
+      {
+        "id": "plus-adapted",
+        "points": [
+          [
+            1113,
+            839
+          ],
+          [
+            1140,
+            839
+          ]
+        ],
+        "source": "text-plus",
+        "target": "adapted"
+      },
+      {
+        "id": "text-language",
+        "points": [
+          [
+            1340,
+            839
+          ],
+          [
+            1690,
+            839
+          ],
+          [
+            1690,
+            650
+          ],
+          [
+            1645,
+            650
+          ]
+        ],
+        "source": "adapted",
+        "target": "decoder"
+      },
+      {
+        "id": "scores-out",
+        "points": [
+          [
+            1645,
+            590
+          ],
+          [
+            1690,
+            590
+          ],
+          [
+            1690,
+            515
+          ],
+          [
+            1740,
+            515
+          ]
+        ],
+        "source": "decoder",
+        "target": "out"
+      },
+      {
+        "id": "loss-alignment",
+        "points": [
+          [
+            975,
+            945
+          ],
+          [
+            1045,
+            945
+          ]
+        ],
+        "source": "loss-visual",
+        "target": "loss-phrase"
+      }
+    ],
+    "intentional_badge_overlaps": [
+      "legend-ice",
+      "legend-fire",
+      "yolo-badge",
+      "video-badge",
+      "text-badge",
+      "fusion-badge",
+      "decoder-badge",
+      "text-adapter-badge"
+    ]
+  },
+  {
+    "model_id": 94,
+    "slug": "05-expert-blend",
+    "title": "Attention expert blend",
+    "mode": "blend",
+    "locked_geometry": {
+      "frame": {
+        "as": "geometry",
+        "x": "40",
+        "y": "190",
+        "width": "170",
+        "height": "75"
+      },
+      "yolo": {
+        "x": "280",
+        "y": "163",
+        "width": "190",
+        "height": "130",
+        "as": "geometry"
+      },
+      "candidates": {
+        "as": "geometry",
+        "x": "545",
+        "y": "190",
+        "width": "255",
+        "height": "75"
+      },
+      "clips": {
+        "as": "geometry",
+        "x": "40",
+        "y": "421",
+        "width": "180",
+        "height": "110"
+      },
+      "video": {
+        "x": "280",
+        "y": "415",
+        "width": "190",
+        "height": "125",
+        "as": "geometry"
+      },
+      "features": {
+        "as": "geometry",
+        "x": "540",
+        "y": "350",
+        "width": "260",
+        "height": "310"
+      },
+      "crop": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "55.0",
+        "width": "230",
+        "height": "31"
+      },
+      "roi": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "140.0",
+        "width": "230",
+        "height": "31"
+      },
+      "scene": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "226.0",
+        "width": "230",
+        "height": "44"
+      },
+      "geometry": {
+        "as": "geometry",
+        "x": "555",
+        "y": "675",
+        "width": "230",
+        "height": "55"
+      },
+      "phrases": {
+        "as": "geometry",
+        "x": "40",
+        "y": "800",
+        "width": "170",
+        "height": "85"
+      },
+      "text": {
+        "x": "280",
+        "y": "785",
+        "width": "190",
+        "height": "125",
+        "as": "geometry"
+      },
+      "bank": {
+        "as": "geometry",
+        "x": "555",
+        "y": "804",
+        "width": "230",
+        "height": "70"
+      },
+      "out": {
+        "as": "geometry",
+        "x": "1740",
+        "y": "442",
+        "width": "220",
+        "height": "110"
+      },
+      "registration_frame": {
+        "as": "geometry",
+        "x": "0",
+        "y": "0",
+        "width": "2000",
+        "height": "1080"
+      }
+    },
+    "routes": [
+      {
+        "id": "frame-yolo",
+        "points": [
+          [
+            210,
+            227
+          ],
+          [
+            280,
+            227
+          ]
+        ],
+        "source": "frame",
+        "target": "yolo"
+      },
+      {
+        "id": "yolo-boxes",
+        "points": [
+          [
+            470,
+            227
+          ],
+          [
+            545,
+            227
+          ]
+        ],
+        "source": "yolo",
+        "target": "candidates"
+      },
+      {
+        "id": "boxes-out",
+        "points": [
+          [
+            800,
+            227
+          ],
+          [
+            1850,
+            227
+          ],
+          [
+            1850,
+            442
+          ]
+        ],
+        "source": "candidates",
+        "target": "out"
+      },
+      {
+        "id": "clips-video",
+        "points": [
+          [
+            220,
+            475
+          ],
+          [
+            280,
+            475
+          ]
+        ],
+        "source": "clips",
+        "target": "video"
+      },
+      {
+        "id": "video-features",
+        "points": [
+          [
+            470,
+            475
+          ],
+          [
+            540,
+            475
+          ]
+        ],
+        "source": "video",
+        "target": "features"
+      },
+      {
+        "id": "phrases-text",
+        "points": [
+          [
+            210,
+            843
+          ],
+          [
+            280,
+            843
+          ]
+        ],
+        "source": "phrases",
+        "target": "text"
+      },
+      {
+        "id": "text-bank",
+        "points": [
+          [
+            470,
+            843
+          ],
+          [
+            555,
+            843
+          ]
+        ],
+        "source": "text",
+        "target": "bank"
+      },
+      {
+        "id": "expert-a-supervision",
+        "points": [
+          [
+            1097.5,
+            440
+          ],
+          [
+            1097.5,
+            465
+          ]
+        ],
+        "source": "expert-a-inference",
+        "target": "expert-a-classification"
+      },
+      {
+        "id": "expert-b-supervision",
+        "points": [
+          [
+            1097.5,
+            675
+          ],
+          [
+            1097.5,
+            700
+          ]
+        ],
+        "source": "expert-b-inference",
+        "target": "expert-b-classification"
+      },
+      {
+        "id": "expert-b-alignment",
+        "points": [
+          [
+            975,
+            815
+          ],
+          [
+            1040,
+            815
+          ]
+        ],
+        "source": "expert-b-visual",
+        "target": "expert-b-text"
+      },
+      {
+        "id": "features-experts",
+        "points": [
+          [
+            800,
+            475
+          ],
+          [
+            845,
+            475
+          ]
+        ],
+        "source": "features",
+        "target": "expert-pair"
+      },
+      {
+        "id": "geometry-experts",
+        "points": [
+          [
+            785,
+            702
+          ],
+          [
+            845,
+            702
+          ]
+        ],
+        "source": "geometry",
+        "target": "expert-pair"
+      },
+      {
+        "id": "phrases-experts",
+        "points": [
+          [
+            785,
+            839
+          ],
+          [
+            815,
+            839
+          ],
+          [
+            815,
+            810
+          ],
+          [
+            845,
+            810
+          ]
+        ],
+        "source": "bank",
+        "target": "expert-pair"
+      },
+      {
+        "id": "a-primitives",
+        "points": [
+          [
+            1330,
+            377
+          ],
+          [
+            1370,
+            377
+          ]
+        ],
+        "source": "expert-a",
+        "target": "primitives"
+      },
+      {
+        "id": "a-blend",
+        "points": [
+          [
+            1330,
+            473
+          ],
+          [
+            1350,
+            473
+          ],
+          [
+            1350,
+            594
+          ],
+          [
+            1370,
+            594
+          ]
+        ],
+        "source": "expert-a",
+        "target": "blend"
+      },
+      {
+        "id": "b-blend",
+        "points": [
+          [
+            1330,
+            650
+          ],
+          [
+            1370,
+            650
+          ]
+        ],
+        "source": "expert-b",
+        "target": "blend"
+      },
+      {
+        "id": "blend-assembly",
+        "points": [
+          [
+            1515,
+            695
+          ],
+          [
+            1515,
+            790
+          ],
+          [
+            1730,
+            790
+          ]
+        ],
+        "source": "blend",
+        "target": "assembly"
+      },
+      {
+        "id": "primitives-assembly",
+        "points": [
+          [
+            1660,
+            377
+          ],
+          [
+            1680,
+            377
+          ],
+          [
+            1680,
+            731
+          ],
+          [
+            1730,
+            731
+          ]
+        ],
+        "source": "primitives",
+        "target": "assembly"
+      },
+      {
+        "id": "assembly-out",
+        "points": [
+          [
+            1850,
+            675
+          ],
+          [
+            1850,
+            552
+          ]
+        ],
+        "source": "assembly",
+        "target": "out"
+      }
+    ],
+    "intentional_badge_overlaps": [
+      "legend-ice",
+      "legend-fire",
+      "yolo-badge",
+      "video-badge",
+      "text-badge",
+      "expert-a-badge",
+      "expert-b-badge"
+    ]
+  },
+  {
+    "model_id": 104,
+    "slug": "06-dcb-blend",
+    "title": "DCB attention expert blend",
+    "mode": "dcb",
+    "locked_geometry": {
+      "frame": {
+        "as": "geometry",
+        "x": "40",
+        "y": "190",
+        "width": "170",
+        "height": "75"
+      },
+      "yolo": {
+        "x": "280",
+        "y": "163",
+        "width": "190",
+        "height": "130",
+        "as": "geometry"
+      },
+      "candidates": {
+        "as": "geometry",
+        "x": "545",
+        "y": "190",
+        "width": "255",
+        "height": "75"
+      },
+      "clips": {
+        "as": "geometry",
+        "x": "40",
+        "y": "421",
+        "width": "180",
+        "height": "110"
+      },
+      "video": {
+        "x": "280",
+        "y": "415",
+        "width": "190",
+        "height": "125",
+        "as": "geometry"
+      },
+      "features": {
+        "as": "geometry",
+        "x": "540",
+        "y": "350",
+        "width": "260",
+        "height": "310"
+      },
+      "crop": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "55.0",
+        "width": "230",
+        "height": "31"
+      },
+      "roi": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "140.0",
+        "width": "230",
+        "height": "31"
+      },
+      "scene": {
+        "as": "geometry",
+        "x": "15.0",
+        "y": "226.0",
+        "width": "230",
+        "height": "44"
+      },
+      "geometry": {
+        "as": "geometry",
+        "x": "555",
+        "y": "675",
+        "width": "230",
+        "height": "55"
+      },
+      "phrases": {
+        "as": "geometry",
+        "x": "40",
+        "y": "800",
+        "width": "170",
+        "height": "85"
+      },
+      "text": {
+        "x": "280",
+        "y": "785",
+        "width": "190",
+        "height": "125",
+        "as": "geometry"
+      },
+      "bank": {
+        "as": "geometry",
+        "x": "555",
+        "y": "804",
+        "width": "230",
+        "height": "70"
+      },
+      "out": {
+        "as": "geometry",
+        "x": "1740",
+        "y": "442",
+        "width": "220",
+        "height": "110"
+      },
+      "registration_frame": {
+        "as": "geometry",
+        "x": "0",
+        "y": "0",
+        "width": "2000",
+        "height": "1080"
+      }
+    },
+    "routes": [
+      {
+        "id": "frame-yolo",
+        "points": [
+          [
+            210,
+            227
+          ],
+          [
+            280,
+            227
+          ]
+        ],
+        "source": "frame",
+        "target": "yolo"
+      },
+      {
+        "id": "yolo-boxes",
+        "points": [
+          [
+            470,
+            227
+          ],
+          [
+            545,
+            227
+          ]
+        ],
+        "source": "yolo",
+        "target": "candidates"
+      },
+      {
+        "id": "boxes-out",
+        "points": [
+          [
+            800,
+            227
+          ],
+          [
+            1850,
+            227
+          ],
+          [
+            1850,
+            442
+          ]
+        ],
+        "source": "candidates",
+        "target": "out"
+      },
+      {
+        "id": "clips-video",
+        "points": [
+          [
+            220,
+            475
+          ],
+          [
+            280,
+            475
+          ]
+        ],
+        "source": "clips",
+        "target": "video"
+      },
+      {
+        "id": "video-features",
+        "points": [
+          [
+            470,
+            475
+          ],
+          [
+            540,
+            475
+          ]
+        ],
+        "source": "video",
+        "target": "features"
+      },
+      {
+        "id": "phrases-text",
+        "points": [
+          [
+            210,
+            843
+          ],
+          [
+            280,
+            843
+          ]
+        ],
+        "source": "phrases",
+        "target": "text"
+      },
+      {
+        "id": "text-bank",
+        "points": [
+          [
+            470,
+            843
+          ],
+          [
+            555,
+            843
+          ]
+        ],
+        "source": "text",
+        "target": "bank"
+      },
+      {
+        "id": "expert-a-supervision",
+        "points": [
+          [
+            1097.5,
+            440
+          ],
+          [
+            1097.5,
+            465
+          ]
+        ],
+        "source": "expert-a-inference",
+        "target": "expert-a-classification"
+      },
+      {
+        "id": "expert-b-supervision",
+        "points": [
+          [
+            1097.5,
+            675
+          ],
+          [
+            1097.5,
+            700
+          ]
+        ],
+        "source": "expert-b-inference",
+        "target": "expert-b-classification"
+      },
+      {
+        "id": "expert-b-alignment",
+        "points": [
+          [
+            975,
+            815
+          ],
+          [
+            1040,
+            815
+          ]
+        ],
+        "source": "expert-b-visual",
+        "target": "expert-b-text"
+      },
+      {
+        "id": "features-experts",
+        "points": [
+          [
+            800,
+            475
+          ],
+          [
+            845,
+            475
+          ]
+        ],
+        "source": "features",
+        "target": "expert-pair"
+      },
+      {
+        "id": "geometry-experts",
+        "points": [
+          [
+            785,
+            702
+          ],
+          [
+            845,
+            702
+          ]
+        ],
+        "source": "geometry",
+        "target": "expert-pair"
+      },
+      {
+        "id": "phrases-experts",
+        "points": [
+          [
+            785,
+            839
+          ],
+          [
+            815,
+            839
+          ],
+          [
+            815,
+            810
+          ],
+          [
+            845,
+            810
+          ]
+        ],
+        "source": "bank",
+        "target": "expert-pair"
+      },
+      {
+        "id": "a-primitives",
+        "points": [
+          [
+            1330,
+            377
+          ],
+          [
+            1370,
+            377
+          ]
+        ],
+        "source": "expert-a",
+        "target": "primitives"
+      },
+      {
+        "id": "a-blend",
+        "points": [
+          [
+            1330,
+            473
+          ],
+          [
+            1350,
+            473
+          ],
+          [
+            1350,
+            594
+          ],
+          [
+            1370,
+            594
+          ]
+        ],
+        "source": "expert-a",
+        "target": "blend"
+      },
+      {
+        "id": "b-blend",
+        "points": [
+          [
+            1330,
+            650
+          ],
+          [
+            1370,
+            650
+          ]
+        ],
+        "source": "expert-b",
+        "target": "blend"
+      },
+      {
+        "id": "blend-assembly",
+        "points": [
+          [
+            1515,
+            695
+          ],
+          [
+            1515,
+            790
+          ],
+          [
+            1730,
+            790
+          ]
+        ],
+        "source": "blend",
+        "target": "assembly"
+      },
+      {
+        "id": "primitives-assembly",
+        "points": [
+          [
+            1660,
+            377
+          ],
+          [
+            1680,
+            377
+          ],
+          [
+            1680,
+            731
+          ],
+          [
+            1730,
+            731
+          ]
+        ],
+        "source": "primitives",
+        "target": "assembly"
+      },
+      {
+        "id": "assembly-out",
+        "points": [
+          [
+            1850,
+            675
+          ],
+          [
+            1850,
+            552
+          ]
+        ],
+        "source": "assembly",
+        "target": "out"
+      }
+    ],
+    "intentional_badge_overlaps": [
+      "legend-ice",
+      "legend-fire",
+      "yolo-badge",
+      "video-badge",
+      "text-badge",
+      "expert-a-badge",
+      "expert-b-badge"
+    ]
+  }
+]

@@ -33,6 +33,7 @@ _HEADS = ("agent", "action", "loc", "duplex", "triplet")
 ap = argparse.ArgumentParser()
 ap.add_argument("--split", required=True, choices=("train", "val"))
 ap.add_argument("--limit", type=int, default=0)
+ap.add_argument("--clips", action="store_true", help="true 8-frame centered window + keyframe-slice pooling (vs static x8 + T-mean)")
 args = ap.parse_args()
 rng = np.random.default_rng(42)
 
@@ -98,7 +99,7 @@ print(f"[cache] {args.split}: {len(keys):,} frames", flush=True)
 
 feats, targets, nb = {}, {}, {}
 t0 = time.time()
-CKPT = E12 / f"clip_feats_{args.split}.pkl"
+CKPT = E12 / (f"clip_feats_{args.split}_clips.pkl" if args.clips else f"clip_feats_{args.split}.pkl")
 for ki, stem in enumerate(keys):
     vname, fid = stem.rsplit("_", 1)
     if args.split == "val":
@@ -147,16 +148,29 @@ for ki, stem in enumerate(keys):
             tg[: gt.shape[0]] = np.stack(mh_rows).astype(np.float16)
     if bx.shape[0] == 0:
         continue
-    img = Image.open(FRAMES / vname / f"{int(fid):05d}.jpg").convert("RGB")
-    arr = np.asarray(img.resize((224, 224), Image.BILINEAR), dtype=np.float32) / 255.0
-    arr = (arr - MEAN) / STD
-    x = torch.from_numpy(arr).permute(2, 0, 1).unsqueeze(0).unsqueeze(0).repeat(1, 8, 1, 1, 1)
+    fid_i = int(fid)
+    if args.clips:
+        nf = d["db"][vname]["numf"]
+        fids = [min(max(fid_i - 3 + j, 1), nf) for j in range(8)]   # centered, clamped
+        frames_np = []
+        for fj in fids:
+            im = Image.open(FRAMES / vname / f"{fj:05d}.jpg").convert("RGB")
+            a = np.asarray(im.resize((224, 224), Image.BILINEAR), dtype=np.float32) / 255.0
+            frames_np.append((a - MEAN) / STD)
+        x = torch.from_numpy(np.stack(frames_np)).permute(0, 3, 1, 2).unsqueeze(0)  # [1,8,3,224,224]
+        key_t = fids.index(min(max(fid_i, 1), nf)) if min(max(fid_i,1),nf) in fids else 3
+    else:
+        img = Image.open(FRAMES / vname / f"{fid_i:05d}.jpg").convert("RGB")
+        arr = np.asarray(img.resize((224, 224), Image.BILINEAR), dtype=np.float32) / 255.0
+        arr = (arr - MEAN) / STD
+        x = torch.from_numpy(arr).permute(2, 0, 1).unsqueeze(0).unsqueeze(0).repeat(1, 8, 1, 1, 1)
     tokens.clear()
     with torch.no_grad():
         model.encode_vision(x.half().to(device))
     tok = tokens["post"]
     tok = tok[:, tok.shape[1] - 8 * 256:, :]
-    grid = tok.view(8, 16, 16, -1).float().mean(dim=0)
+    tv = tok.view(8, 16, 16, -1).float()
+    grid = tv[key_t] if args.clips else tv.mean(dim=0)   # keyframe slice: temporally contextualized AND box-aligned
     f = torch.stack([pool_roi(grid, torch.from_numpy(b)) for b in np.clip(bx, 0, 1)]).half().cpu().numpy()
     feats[stem] = f; nb[stem] = int(bx.shape[0])
     if tg is not None:
@@ -169,6 +183,6 @@ for ki, stem in enumerate(keys):
 
 with open(CKPT, "wb") as fh:
     pickle.dump({"feats": feats, "targets": targets or None, "n_boxes": nb,
-                 "meta": {"encoder": REPO, "split": args.split, "dim": 1024,
+                 "meta": {"encoder": REPO, "split": args.split, "dim": 1024, "clips": bool(args.clips),
                           "rows": "yolo_fullcand" if args.split == "val" else "gt+neg8+junk16"}}, fh)
 print(f"[cache] wrote {len(feats):,} frames -> {CKPT} ({time.time()-t0:.0f}s)", flush=True)

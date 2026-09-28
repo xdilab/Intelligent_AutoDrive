@@ -19,15 +19,9 @@ def main():
  if marker.exists():assert json.loads(marker.read_text())==provenance
  else:marker.write_text(json.dumps(provenance,indent=2))
  with torch.no_grad():
-  for i,s in enumerate(keys):
-   path=pred/f'{s}.npy'
-   if path.exists():continue
-   v,f=s.rsplit('_',1);fid=int(f);nf=ann['db'][v]['numf'];fids=[min(max(fid-3+j,1),nf) for j in range(8)];b=yolo[s]['boxes_xyxyn'];q=yolo[s]['conf'].astype(np.float32);row={'video':v,'fid':fid,'fids':fids,'key_t':fids.index(fid),'boxes':b.tolist(),'targets':np.zeros((len(b),184),np.float32),'frame_sha256':[base.sha(base.frame_root(cfg)/v/f'{fj:05d}.jpg') for fj in fids]};scores=[]
-   for part in parts(row,64):
-    x,_=base.crops(part,cfg)
-    with torch.autocast('cuda',dtype=torch.bfloat16):z,_,_=m(x,row['key_t'])
-    scores.append(z.float().sigmoid().cpu().numpy())
-   sig=np.concatenate(scores) if scores else np.empty((0,184),np.float32);sig*=q[:,None];sig[:,0]=q;temp=path.with_suffix('.tmp')
+  from eval_input import predictions
+  for i,s,sig in predictions(m,keys,yolo,ann,cfg,pred):
+   path=pred/f'{s}.npy';q=yolo[s]['conf'].astype(np.float32);sig*=q[:,None];sig[:,0]=q;temp=path.with_suffix('.tmp')
    with temp.open('wb') as file:np.save(file,sig)
    temp.replace(path)
    if i%100==0:print('INFERENCE',i,len(keys),flush=True)

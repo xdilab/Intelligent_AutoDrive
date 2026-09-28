@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "models": [
+    {
+      "model": 88,
+      "image_loaded": true,
+      "all_nine_metrics": true,
+      "no_page_overflow": true
+    },
+    {
+      "model": 89,
+      "image_loaded": true,
+      "all_nine_metrics": true,
+      "no_page_overflow": true
+    },
+    {
+      "model": 90,
+      "image_loaded": true,
+      "all_nine_metrics": true,
+      "no_page_overflow": true
+    },
+    {
+      "model": 92,
+      "image_loaded": true,
+      "all_nine_metrics": true,
+      "no_page_overflow": true
+    },
+    {
+      "model": 94,
+      "image_loaded": true,
+      "all_nine_metrics": true,
+      "no_page_overflow": true
+    },
+    {
+      "model": 104,
+      "image_loaded": true,
+      "all_nine_metrics": true,
+      "no_page_overflow": true
+    }
+  ],
+  "all_audited_models": 13,
+  "animation_one_packet": true,
+  "pause_clears_glow": true,
+  "enlarge_escape": true,
+  "mobile_no_overflow": true,
+  "javascript_errors": []
+}

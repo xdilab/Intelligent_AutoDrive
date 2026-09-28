@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "time": 1789823379.6179376,
+  "model_sha256": "b488946ce9e30e4e608b6173993dd873a8717447dd3b6347979a95fb3d7f4532",
+  "backbone_checks": [
+    {
+      "seed": 0,
+      "baseline": "/data/repos/wiki/artifacts/contextual-roi-20260917/runs/attention-classification-seed0",
+      "backbone_sha256": "c4e8fc660fdd873f9a1ce2bf3c3f7440532ffaa180e255cf7de4357cd6619c21",
+      "bit_identical": true
+    },
+    {
+      "seed": 0,
+      "baseline": "/data/repos/wiki/artifacts/contextual-roi-all184-20260918/runs/attention-contrastive-all184-seed0",
+      "backbone_sha256": "c4e8fc660fdd873f9a1ce2bf3c3f7440532ffaa180e255cf7de4357cd6619c21",
+      "bit_identical": true
+    },
+    {
+      "seed": 1,
+      "baseline": "/data/repos/wiki/artifacts/contextual-roi-20260917/runs/attention-classification-seed1",
+      "backbone_sha256": "2439a3d0cd9989574ee4128bfd351c2297ee77d454120eba3df98694736971b4",
+      "bit_identical": true
+    },
+    {
+      "seed": 1,
+      "baseline": "/data/repos/wiki/artifacts/contextual-roi-all184-20260918/runs/attention-contrastive-all184-seed1",
+      "backbone_sha256": "2439a3d0cd9989574ee4128bfd351c2297ee77d454120eba3df98694736971b4",
+      "bit_identical": true
+    },
+    {
+      "seed": 2,
+      "baseline": "/data/repos/wiki/artifacts/contextual-roi-20260917/runs/attention-classification-seed2",
+      "backbone_sha256": "edd70d8222d734941f01d56a4c41bc0ccf34aa7fdab780cdfc74aef4ae9ab1f6",
+      "bit_identical": true
+    },
+    {
+      "seed": 2,
+      "baseline": "/data/repos/wiki/artifacts/contextual-roi-all184-20260918/runs/attention-contrastive-all184-seed2",
+      "backbone_sha256": "edd70d8222d734941f01d56a4c41bc0ccf34aa7fdab780cdfc74aef4ae9ab1f6",
+      "bit_identical": true
+    }
+  ],
+  "frame_candidate_hashes": [
+    "733ce2ce4bbbb59966fe3d588c9749e4e123290c7083d4af9aa1273f32a758b9",
+    "fc84d73fdaa7b4f74ea2694aa54f3b4a1069f4b6d45276f2df5e9c5374378cb2"
+  ],
+  "train_rows_per_second_single_gpu": 11476.19416758112,
+  "inference_rows_per_second_single_gpu": 27570.389525125724,
+  "benchmark_steps": 60,
+  "benchmark_disposable": true,
+  "note": "Single-GPU short benchmark excludes full development AP, detector AP and two-lane contention; ETA must include historical end-to-end overhead."
+}

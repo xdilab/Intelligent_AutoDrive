@@ -1,0 +1,440 @@
+{
+  "source": "/data/datasets/ROAD_plusplus/road_waymo_trainval_v1.1.json",
+  "training_videos": 600,
+  "mean_log10": 3.8085004672697598,
+  "std_log10_population": 0.7256235808273424,
+  "geometric_mean": 6434.287572751862,
+  "tail_classes": 47,
+  "rows": [
+    {
+      "label": "Ped-MovAway-LftPav",
+      "train_boxes": 46094,
+      "z": 1.1784952319749642
+    },
+    {
+      "label": "Ped-MovAway-RhtPav",
+      "train_boxes": 64295,
+      "z": 1.3776795018796275
+    },
+    {
+      "label": "Ped-MovAway-Jun",
+      "train_boxes": 886,
+      "z": -1.1866576116516734
+    },
+    {
+      "label": "Ped-MovTow-LftPav",
+      "train_boxes": 43956,
+      "z": 1.150069704861174
+    },
+    {
+      "label": "Ped-MovTow-RhtPav",
+      "train_boxes": 51492,
+      "z": 1.2447766544200243
+    },
+    {
+      "label": "Ped-MovTow-Jun",
+      "train_boxes": 446,
+      "z": -1.59747510856243
+    },
+    {
+      "label": "Ped-Mov-OutgoLane",
+      "train_boxes": 607,
+      "z": -1.4130077953440559
+    },
+    {
+      "label": "Ped-Mov-Pav",
+      "train_boxes": 35028,
+      "z": 1.0141826881188227
+    },
+    {
+      "label": "Ped-Mov-RhtPav",
+      "train_boxes": 10456,
+      "z": 0.290598476778144
+    },
+    {
+      "label": "Ped-Stop-OutgoLane",
+      "train_boxes": 2514,
+      "z": -0.562461315623829
+    },
+    {
+      "label": "Ped-Stop-Pav",
+      "train_boxes": 15542,
+      "z": 0.5278307478895539
+    },
+    {
+      "label": "Ped-Stop-LftPav",
+      "train_boxes": 53510,
+      "z": 1.2677847137431824
+    },
+    {
+      "label": "Ped-Stop-RhtPav",
+      "train_boxes": 56241,
+      "z": 1.2975771346397433
+    },
+    {
+      "label": "Ped-Stop-BusStop",
+      "train_boxes": 6983,
+      "z": 0.048980732862530185
+    },
+    {
+      "label": "Ped-Wait2X-RhtPav",
+      "train_boxes": 3782,
+      "z": -0.31804223134205334
+    },
+    {
+      "label": "Ped-Wait2X-Jun",
+      "train_boxes": 28574,
+      "z": 0.8922953859717662
+    },
+    {
+      "label": "Ped-XingFmLft-Jun",
+      "train_boxes": 25990,
+      "z": 0.8355651997140925
+    },
+    {
+      "label": "Ped-XingFmRht-Jun",
+      "train_boxes": 26763,
+      "z": 0.853106683927599
+    },
+    {
+      "label": "Ped-XingFmRht-xing",
+      "train_boxes": 1091,
+      "z": -1.0620874748898155
+    },
+    {
+      "label": "Ped-Xing-Jun",
+      "train_boxes": 24065,
+      "z": 0.7895076922533641
+    },
+    {
+      "label": "Ped-PushObj-LftPav",
+      "train_boxes": 1222,
+      "z": -0.9942197034730658
+    },
+    {
+      "label": "Ped-PushObj-RhtPav",
+      "train_boxes": 1140,
+      "z": -1.0357927109760297
+    },
+    {
+      "label": "Car-MovAway-VehLane",
+      "train_boxes": 78780,
+      "z": 1.4992835651274485
+    },
+    {
+      "label": "Car-MovAway-OutgoLane",
+      "train_boxes": 225813,
+      "z": 2.129545557912711
+    },
+    {
+      "label": "Car-MovAway-Jun",
+      "train_boxes": 43115,
+      "z": 1.1385075471568298
+    },
+    {
+      "label": "Car-MovTow-VehLane",
+      "train_boxes": 619,
+      "z": -1.4012910345199838
+    },
+    {
+      "label": "Car-MovTow-IncomLane",
+      "train_boxes": 216225,
+      "z": 2.103577500568228
+    },
+    {
+      "label": "Car-MovTow-Jun",
+      "train_boxes": 34762,
+      "z": 1.0096202870470954
+    },
+    {
+      "label": "Car-Brake-VehLane",
+      "train_boxes": 39559,
+      "z": 1.0869889819401013
+    },
+    {
+      "label": "Car-Brake-OutgoLane",
+      "train_boxes": 73220,
+      "z": 1.4554781365726481
+    },
+    {
+      "label": "Car-Brake-Jun",
+      "train_boxes": 46637,
+      "z": 1.1855046630487729
+    },
+    {
+      "label": "Car-Stop-VehLane",
+      "train_boxes": 36354,
+      "z": 1.0364213009077496
+    },
+    {
+      "label": "Car-Stop-OutgoLane",
+      "train_boxes": 71305,
+      "z": 1.4396162756408097
+    },
+    {
+      "label": "Car-Stop-IncomLane",
+      "train_boxes": 73794,
+      "z": 1.4601518095861632
+    },
+    {
+      "label": "Car-Stop-Jun",
+      "train_boxes": 120894,
+      "z": 1.755599340539171
+    },
+    {
+      "label": "Car-Stop-parking",
+      "train_boxes": 40084,
+      "z": 1.0948797795181704
+    },
+    {
+      "label": "Car-IncatLft-VehLane",
+      "train_boxes": 2902,
+      "z": -0.4765598421894785
+    },
+    {
+      "label": "Car-IncatLft-OutgoLane",
+      "train_boxes": 4766,
+      "z": -0.17963367330304242
+    },
+    {
+      "label": "Car-IncatLft-IncomLane",
+      "train_boxes": 6427,
+      "z": -0.000678268143930054
+    },
+    {
+      "label": "Car-IncatLft-Jun",
+      "train_boxes": 9298,
+      "z": 0.22034713149069107
+    },
+    {
+      "label": "Car-IncatRht-VehLane",
+      "train_boxes": 3380,
+      "z": -0.38530137991564295
+    },
+    {
+      "label": "Car-IncatRht-OutgoLane",
+      "train_boxes": 5835,
+      "z": -0.05851464589940565
+    },
+    {
+      "label": "Car-IncatRht-IncomLane",
+      "train_boxes": 1552,
+      "z": -0.8511420613472954
+    },
+    {
+      "label": "Car-IncatRht-Jun",
+      "train_boxes": 7228,
+      "z": 0.06961967327679089
+    },
+    {
+      "label": "Car-HazLit-IncomLane",
+      "train_boxes": 540,
+      "z": -1.4830095601631834
+    },
+    {
+      "label": "Car-TurLft-VehLane",
+      "train_boxes": 1219,
+      "z": -0.9956908523116087
+    },
+    {
+      "label": "Car-TurLft-Jun",
+      "train_boxes": 10792,
+      "z": 0.30952890083588785
+    },
+    {
+      "label": "Car-TurRht-Jun",
+      "train_boxes": 12477,
+      "z": 0.3963621296415273
+    },
+    {
+      "label": "Car-MovRht-OutgoLane",
+      "train_boxes": 3682,
+      "z": -0.3340804922923881
+    },
+    {
+      "label": "Car-MovLft-VehLane",
+      "train_boxes": 1153,
+      "z": -1.0290061950904634
+    },
+    {
+      "label": "Car-MovLft-OutgoLane",
+      "train_boxes": 2854,
+      "z": -0.48654220703328643
+    },
+    {
+      "label": "Car-XingFmLft-Jun",
+      "train_boxes": 23513,
+      "z": 0.7756191935555059
+    },
+    {
+      "label": "Car-XingFmRht-Jun",
+      "train_boxes": 23052,
+      "z": 0.7637680999942984
+    },
+    {
+      "label": "Cyc-MovAway-OutgoCycLane",
+      "train_boxes": 1121,
+      "z": -1.0458519743935404
+    },
+    {
+      "label": "Cyc-MovAway-RhtPav",
+      "train_boxes": 768,
+      "z": -1.2722012784999375
+    },
+    {
+      "label": "Cyc-MovTow-IncomLane",
+      "train_boxes": 1046,
+      "z": -1.0872976066171072
+    },
+    {
+      "label": "Cyc-MovTow-RhtPav",
+      "train_boxes": 61,
+      "z": -2.7881820350328357
+    },
+    {
+      "label": "MedVeh-MovAway-VehLane",
+      "train_boxes": 6359,
+      "z": -0.007044482044420549
+    },
+    {
+      "label": "MedVeh-MovAway-OutgoLane",
+      "train_boxes": 20700,
+      "z": 0.6993569277455812
+    },
+    {
+      "label": "MedVeh-MovAway-Jun",
+      "train_boxes": 3686,
+      "z": -0.33343064197396066
+    },
+    {
+      "label": "MedVeh-MovTow-IncomLane",
+      "train_boxes": 21376,
+      "z": 0.7185901716853967
+    },
+    {
+      "label": "MedVeh-MovTow-Jun",
+      "train_boxes": 2831,
+      "z": -0.49138507530049286
+    },
+    {
+      "label": "MedVeh-Brake-VehLane",
+      "train_boxes": 4874,
+      "z": -0.16622246796821488
+    },
+    {
+      "label": "MedVeh-Brake-OutgoLane",
+      "train_boxes": 8466,
+      "z": 0.16424190174793823
+    },
+    {
+      "label": "MedVeh-Brake-Jun",
+      "train_boxes": 4228,
+      "z": -0.2513224396958563
+    },
+    {
+      "label": "MedVeh-Stop-VehLane",
+      "train_boxes": 5179,
+      "z": -0.12989456068172214
+    },
+    {
+      "label": "MedVeh-Stop-OutgoLane",
+      "train_boxes": 10205,
+      "z": 0.27605572238148235
+    },
+    {
+      "label": "MedVeh-Stop-IncomLane",
+      "train_boxes": 8228,
+      "z": 0.1471752277278012
+    },
+    {
+      "label": "MedVeh-Stop-Jun",
+      "train_boxes": 13340,
+      "z": 0.43639067235070517
+    },
+    {
+      "label": "MedVeh-Stop-parking",
+      "train_boxes": 4335,
+      "z": -0.23636410115279965
+    },
+    {
+      "label": "MedVeh-IncatLft-IncomLane",
+      "train_boxes": 511,
+      "z": -1.516047157509348
+    },
+    {
+      "label": "MedVeh-IncatRht-Jun",
+      "train_boxes": 882,
+      "z": -1.1893658157497131
+    },
+    {
+      "label": "MedVeh-TurRht-Jun",
+      "train_boxes": 1337,
+      "z": -0.9403898633362368
+    },
+    {
+      "label": "MedVeh-XingFmLft-Jun",
+      "train_boxes": 3124,
+      "z": -0.4324410760007552
+    },
+    {
+      "label": "MedVeh-XingFmRht-Jun",
+      "train_boxes": 2734,
+      "z": -0.5122517609118336
+    },
+    {
+      "label": "LarVeh-MovAway-VehLane",
+      "train_boxes": 2510,
+      "z": -0.563414360545705
+    },
+    {
+      "label": "LarVeh-MovTow-IncomLane",
+      "train_boxes": 4979,
+      "z": -0.1534657140928796
+    },
+    {
+      "label": "LarVeh-Stop-VehLane",
+      "train_boxes": 1285,
+      "z": -0.9641325862160911
+    },
+    {
+      "label": "LarVeh-Stop-Jun",
+      "train_boxes": 1895,
+      "z": -0.7316345099484731
+    },
+    {
+      "label": "Bus-MovAway-OutgoLane",
+      "train_boxes": 1894,
+      "z": -0.7319504308238322
+    },
+    {
+      "label": "Bus-MovTow-IncomLane",
+      "train_boxes": 2995,
+      "z": -0.45768033084835974
+    },
+    {
+      "label": "Bus-Stop-VehLane",
+      "train_boxes": 1511,
+      "z": -0.8671658688562621
+    },
+    {
+      "label": "Bus-Stop-OutgoLane",
+      "train_boxes": 2226,
+      "z": -0.6352815970306187
+    },
+    {
+      "label": "Bus-Stop-IncomLane",
+      "train_boxes": 1008,
+      "z": -1.1094456636075163
+    },
+    {
+      "label": "Bus-Stop-Jun",
+      "train_boxes": 4797,
+      "z": -0.17575331366499206
+    },
+    {
+      "label": "Bus-HazLit-OutgoLane",
+      "train_boxes": 525,
+      "z": -1.4998701704579345
+    }
+  ]
+}

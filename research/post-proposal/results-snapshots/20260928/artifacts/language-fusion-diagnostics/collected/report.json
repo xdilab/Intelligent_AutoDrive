@@ -1,0 +1,38 @@
+{
+  "classes": [
+    "MedVeh-Stop-VehLane",
+    "Bus-Stop-VehLane",
+    "LarVeh-Stop-Jun",
+    "Ped-XingFmRht-xing",
+    "Ped-MovTow-LftPav",
+    "Bus-MovAway-OutgoLane"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "n_frames": 36717,
+  "candidates": 6163968,
+  "candidate_sha256": "fc84d73fdaa7b4f74ea2694aa54f3b4a1069f4b6d45276f2df5e9c5374378cb2",
+  "frame_sha256": "733ce2ce4bbbb59966fe3d588c9749e4e123290c7083d4af9aa1273f32a758b9",
+  "checkpoint_sha256": {
+    "0/head-flat": "a9c52e64fbfddc77f50386f299c6ca2586a9528974bbd128486be9e75c13a52c",
+    "0/head-phrase": "f062b3abaa3fb872b316c7ed84a29697738c4e95a67dc735392a2e9fdc7220e5",
+    "0/stage5": "80d965305ba6ea879edbf2719452118300d10e7ad2db580768df8d4c5df04eda",
+    "0/stage6": "b5734f62c9af6e865356b191f454871d6c6bec007cc28c981287c2f97f1b3aea",
+    "1/head-flat": "cccfeefbedc06cc78f9a4bf29faeca16f873a2531c52717e16c71350244e93d2",
+    "1/head-phrase": "0171be7dc6177e70590ea00d94c61f235ff127b7df4cc36797f3fc62b6c23e78",
+    "1/stage5": "ec55e3b3290f52999baed35fc4bc8a21c4ec54e745a163ded834d930cb70314d",
+    "1/stage6": "649f6c1385b93c1b0a0374f31296eaa8bc29bbd1e6c7296c90a5f5a25957f02c",
+    "2/head-flat": "83fdf3378e246bf2e32e85d8d086571d3368d10373cb3e384b96814fb7139fc0",
+    "2/head-phrase": "f6121aa47c9d1de1272df9d4acc2e033d9e07a5dcffeadb04d2c62349a0326aa",
+    "2/stage5": "bd838d5ccd66f96d2ac5e345ffb8906ebbddd464d30281d2d4908cfbcecc979d",
+    "2/stage6": "04a9e04754be1385aa84077b05e7e4374aadc5ca8107268566b338142938f8eb"
+  },
+  "max_ap_error_pp": 0.002582625448631859,
+  "parity_tolerance_pp": 0.02,
+  "parity_pass": true,
+  "scope": "Six disclosed post-hoc classes; all evaluation frames/candidates; descriptive not a gate-training set. Budget proportional to evaluation GT counts, not deployable threshold. Per-GT ranks permit different winning boxes; same-candidate scores separately recorded.",
+  "completed_utc": "2026-09-14T11:07:41Z"
+}

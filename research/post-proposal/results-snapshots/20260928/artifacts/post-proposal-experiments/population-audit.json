@@ -1,0 +1,24 @@
+{
+  "yolo_frames": 37932,
+  "i3d_frames": 37968,
+  "shared_frames": 36717,
+  "crop_frames": 37931,
+  "crop_meta": {
+    "encoder": "OpenGVLab/InternVideo2_CLIP_S",
+    "split": "val",
+    "dim": 1024,
+    "mode": "crop",
+    "pad": 2.0,
+    "clips": true,
+    "rows": "yolo_fullcand"
+  },
+  "missing": [
+    {
+      "stem": "train_00653_00042",
+      "yolo_boxes": 0,
+      "gt_boxes": 0
+    }
+  ],
+  "mismatches": [],
+  "nonfinite_frames": []
+}

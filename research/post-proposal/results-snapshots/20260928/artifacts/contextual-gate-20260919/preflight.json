@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "time": 1789835687.804117,
+  "rows": 580250,
+  "parameters": {
+    "class": 135,
+    "generic": 2341,
+    "factorized": 2314
+  },
+  "training_smoke_100_steps_seconds": 0.24090313911437988,
+  "fit_videos": 45,
+  "selection_videos": 45,
+  "mapping": "derived from verified label strings; no childs arrays",
+  "frozen_experts": true
+}

@@ -1,0 +1,12 @@
+{
+  "verified_at": "2026-09-12T14:34:28.467509-04:00",
+  "remote_script": "/work/bbyrd1/adapted-road-20260911/code/cache-paired.py",
+  "sha256": "b3adf4bbed99e58552ddce018752aac5dbe92207bc62117eb1dd2d3cac884711",
+  "remote_matches_local": true,
+  "training": "GT positive boxes + up to 8 random negative boxes + up to 16 low-IoU YOLO junk boxes",
+  "validation": "YOLO full-candidate boxes",
+  "user_intended_training": "Cache features at YOLO candidate boxes, using GT for label assignment",
+  "deviation": "Inherited from original Stage 4/5 crop cache; not introduced specifically for Stage 6",
+  "jobs_changed": false,
+  "user_decision": "Keep current run active; investigate YOLO-candidate training as follow-up"
+}

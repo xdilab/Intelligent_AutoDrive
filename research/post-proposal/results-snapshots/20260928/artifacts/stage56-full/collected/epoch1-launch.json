@@ -1,0 +1,10 @@
+{
+  "submitted_utc": "2026-09-17T16:15:21.154637+00:00",
+  "stage5_adaptation": "733585",
+  "controls": "733586",
+  "stage6_checkpoint_gate": "733587",
+  "stage6_adaptation": "733588",
+  "selection": "fixed epoch1 regardless of development improvement",
+  "scope": "reporting only; no tuning; final three-epoch evaluation unchanged",
+  "max_concurrent_early_evaluation_gpus": 2
+}

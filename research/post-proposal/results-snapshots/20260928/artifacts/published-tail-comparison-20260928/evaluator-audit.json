@@ -1,0 +1,11 @@
+{
+  "ast_identical_functions": {
+    "voc_ap": true,
+    "evaluate_detections": true,
+    "compute_iou": true,
+    "get_gt_of_cls": true
+  },
+  "current_core": "/data/repos/ROAD_Reason/research/post-proposal/stage56-full/baseline-core.py",
+  "baseline_evaluation": "/data/repos/PedestrianIntent++/ROAD_plus_plus_Baseline/modules/evaluation.py",
+  "baseline_utils": "/data/repos/PedestrianIntent++/ROAD_plus_plus_Baseline/modules/utils.py"
+}

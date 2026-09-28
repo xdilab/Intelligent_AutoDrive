@@ -1,0 +1,92 @@
+{
+  "created_utc": "2026-09-17T19:04:50.415274+00:00",
+  "scope": "Recovered local snapshot; development crop AP percentages, not detector AP. Epoch0 is initialization. Missing-class convention inherited unchanged. No checkpoint selection changes.",
+  "label_manifest": "artifacts/post-proposal-experiments/shared-frames.json",
+  "counts_source": "artifacts/post-proposal-experiments/train-counts.json",
+  "source_sha256": {
+    "artifacts/stage56-full/collected/stage5-classification.partial.json": "40eef10838e29ca9a7ce022d28fd7faafb22f1aa7c5a319eae9c10e5be4f6a07",
+    "artifacts/stage56-full/collected/stage5-contrastive.partial.json": "b714185bca9e099231330842fec3aeb784e7c565234e1e9bd72f4bf032385da8",
+    "artifacts/stage56-full/collected/stage5-frozen.partial.json": "34ff6492d68980998cfb134be48aca008fef6bd34141cbe3a4bade188cdd72cc",
+    "artifacts/stage56-full/collected/stage6-frozen.partial.json": "eaf10e615fc968edf87d6932aa3837e0f57d0ac83c4127deb8896804ee00d4b3"
+  },
+  "group_sizes": {
+    "overall": 86,
+    "common": 39,
+    "tail": 47,
+    "deep_tail": 28
+  },
+  "rows": [
+    {
+      "stage": "stage5",
+      "condition": "classification",
+      "epoch": 0,
+      "overall": 12.237806024264067,
+      "common": 21.369844191123267,
+      "tail": 4.660157332614941,
+      "deep_tail": 3.804633137131161
+    },
+    {
+      "stage": "stage5",
+      "condition": "classification",
+      "epoch": 1,
+      "overall": 13.68756508868413,
+      "common": 23.398332482951407,
+      "tail": 5.629694272164479,
+      "deep_tail": 4.733780133404664
+    },
+    {
+      "stage": "stage5",
+      "condition": "contrastive",
+      "epoch": 0,
+      "overall": 12.237806024264067,
+      "common": 21.369844191123267,
+      "tail": 4.660157332614941,
+      "deep_tail": 3.804633137131161
+    },
+    {
+      "stage": "stage5",
+      "condition": "contrastive",
+      "epoch": 1,
+      "overall": 13.902645949695664,
+      "common": 23.649150093686146,
+      "tail": 5.8151212344695224,
+      "deep_tail": 4.577382763669276
+    },
+    {
+      "stage": "stage5",
+      "condition": "frozen",
+      "epoch": 0,
+      "overall": 12.237806024264067,
+      "common": 21.369844191123267,
+      "tail": 4.660157332614941,
+      "deep_tail": 3.804633137131161
+    },
+    {
+      "stage": "stage5",
+      "condition": "frozen",
+      "epoch": 1,
+      "overall": 13.489893006805103,
+      "common": 22.703575653409047,
+      "tail": 5.8444967681337445,
+      "deep_tail": 5.363812869189721
+    },
+    {
+      "stage": "stage6",
+      "condition": "frozen",
+      "epoch": 0,
+      "overall": 13.850310062272179,
+      "common": 22.435488199710623,
+      "tail": 6.726438841844531,
+      "deep_tail": 7.155714305407834
+    },
+    {
+      "stage": "stage6",
+      "condition": "frozen",
+      "epoch": 1,
+      "overall": 14.726142370829292,
+      "common": 23.620380054350772,
+      "tail": 7.345817484502956,
+      "deep_tail": 7.441349067997856
+    }
+  ]
+}

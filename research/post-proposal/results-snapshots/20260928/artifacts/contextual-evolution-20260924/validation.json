@@ -1,0 +1,32 @@
+{
+  "03-triplet-contrastive.drawio": {
+    "errors": 0,
+    "known_portable_badge_overlaps": 4,
+    "actionable_findings": []
+  },
+  "06-dcb-blend.drawio": {
+    "errors": 0,
+    "known_portable_badge_overlaps": 3,
+    "actionable_findings": []
+  },
+  "05-expert-blend.drawio": {
+    "errors": 0,
+    "known_portable_badge_overlaps": 3,
+    "actionable_findings": []
+  },
+  "04-all184-contrastive.drawio": {
+    "errors": 0,
+    "known_portable_badge_overlaps": 4,
+    "actionable_findings": []
+  },
+  "01-mlp.drawio": {
+    "errors": 0,
+    "known_portable_badge_overlaps": 4,
+    "actionable_findings": []
+  },
+  "02-attention.drawio": {
+    "errors": 0,
+    "known_portable_badge_overlaps": 4,
+    "actionable_findings": []
+  }
+}

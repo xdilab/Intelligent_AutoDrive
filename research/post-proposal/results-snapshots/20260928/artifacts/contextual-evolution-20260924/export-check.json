@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "native4x_failure": "renderer tile limit; all clipped outputs replaced by complete visually reviewed2x exports; lossless SVGs included",
+  "exports": [
+    {
+      "file": "artifacts/contextual-evolution-20260924/exports/01-mlp.png",
+      "size": [
+        4002,
+        2162
+      ],
+      "method": "native draw.io2x PNG; embedded diagram; full image personally inspected",
+      "mean_rgb_difference_to_reviewed_preview": [
+        3.7128769657724328,
+        3.8392604070305274,
+        4.1448829787234045
+      ],
+      "sha256": "6903efec078bdeed7c50d25992779cff54b8c76b5041211946ef2509e8ed0995"
+    },
+    {
+      "file": "artifacts/contextual-evolution-20260924/exports/02-attention.png",
+      "size": [
+        4002,
+        2162
+      ],
+      "method": "native draw.io2x PNG; embedded diagram; full image personally inspected",
+      "mean_rgb_difference_to_reviewed_preview": [
+        3.7506803885291395,
+        3.8740744680851065,
+        4.1453334875115635
+      ],
+      "sha256": "c0452caaa19a35e71e8d304cc66fdd16157ccfe6b54c756f0c4715ac0ac2a388"
+    },
+    {
+      "file": "artifacts/contextual-evolution-20260924/exports/03-triplet-contrastive.png",
+      "size": [
+        4002,
+        2162
+      ],
+      "method": "native draw.io2x PNG; embedded diagram; full image personally inspected",
+      "mean_rgb_difference_to_reviewed_preview": [
+        3.857539777983349,
+        3.9869579093432006,
+        4.273484273820537
+      ],
+      "sha256": "e477d2a3175cf9b2f7e3f9ed2e18af0a3173efbedd1a7078a7afa27194873491"
+    },
+    {
+      "file": "artifacts/contextual-evolution-20260924/exports/04-all184-contrastive.png",
+      "size": [
+        4002,
+        2162
+      ],
+      "method": "native draw.io2x PNG; embedded diagram; full image personally inspected",
+      "mean_rgb_difference_to_reviewed_preview": [
+        3.882191951896392,
+        4.0099532839963,
+        4.293651248843664
+      ],
+      "sha256": "82f62245562ec25207f23e23ae934184dc12cb9421e9d49eb88cddb02c980e0e"
+    },
+    {
+      "file": "artifacts/contextual-evolution-20260924/exports/05-expert-blend.png",
+      "size": [
+        4002,
+        2162
+      ],
+      "method": "native draw.io2x PNG; embedded diagram; full image personally inspected",
+      "mean_rgb_difference_to_reviewed_preview": [
+        5.32572802960222,
+        5.465505550416281,
+        5.749167437557817
+      ],
+      "sha256": "959b05f99b311d867a59a9971adcd4a2446cf45f1e38c7fb11bab5909add83d4"
+    },
+    {
+      "file": "artifacts/contextual-evolution-20260924/exports/06-dcb-blend.png",
+      "size": [
+        4002,
+        2162
+      ],
+      "method": "native draw.io2x PNG; embedded diagram; full image personally inspected",
+      "mean_rgb_difference_to_reviewed_preview": [
+        5.301334412580943,
+        5.438195189639223,
+        5.722801572617946
+      ],
+      "sha256": "40907bf60d61bf175398fccb69e40b814a64374211e9e200c589ea30533b7478"
+    }
+  ]
+}

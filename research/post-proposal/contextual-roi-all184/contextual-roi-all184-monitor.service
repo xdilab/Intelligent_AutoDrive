@@ -1,0 +1,5 @@
+[Unit]
+Description=Monitor all184 contextual study
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /data/repos/ROAD_Reason/research/post-proposal/contextual-roi-all184/monitor_local.py

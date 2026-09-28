@@ -1,0 +1,16 @@
+{
+  "verified_n_frames": 36717,
+  "exact_frame_order_equal": true,
+  "label_order_equal": true,
+  "frame_sha256": "733ce2ce4bbbb59966fe3d588c9749e4e123290c7083d4af9aa1273f32a758b9",
+  "native_retinanet_candidates": true,
+  "cache_meta": {
+    "split": "val",
+    "stride": 8,
+    "topk": 300,
+    "conf_thresh": 0.001,
+    "n_frames": 37968,
+    "protocol": "full-candidate full-coverage"
+  },
+  "seconds": 4.696150541305542
+}

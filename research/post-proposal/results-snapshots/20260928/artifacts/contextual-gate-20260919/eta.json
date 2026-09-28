@@ -1,0 +1,20 @@
+{
+  "time": 1789834037.4568143,
+  "cached_frames": 1277,
+  "total_frames": 17335,
+  "observed_frames_per_second": 10.00670070446939,
+  "remaining_extraction_minutes": 26.74541202314542,
+  "extraction_budget_minutes": [
+    30,
+    45
+  ],
+  "first_detector_result_budget_minutes_from_now": [
+    60,
+    120
+  ],
+  "all_gate_results_budget_minutes_from_now": [
+    120,
+    180
+  ],
+  "limitations": "Gate fit/evaluation throughput not yet measured; update after first fit/selection/inference; provisional not guaranteed"
+}

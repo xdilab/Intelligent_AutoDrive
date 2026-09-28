@@ -1,0 +1,5 @@
+Stage7 contextual residual refinement of matched Stage5 heads.
+
+Warm-start corrected mean-scene/MLP context backbone per seed, discard standalone classifier. Train contextual module and zero-final-layer 512->512 GELU->1024 bridge; x'=x+bridge(h). Frozen Stage5 flat primitive head and CompMLP both read x'; FP32 head evaluation retains gradients to x'. No direct phrase scores enter the Stage5 readout. Class-weighted focal184 + .001 all184 contrastive against adapted text. Frozen original encoders/cache. Three epochs on420 expert videos, select among original baseline and epochs1..3 using90 development videos. Three matched seeds. Official36717-frame detector AP only after selection, with freshly re-evaluated Stage5 controls.
+
+preflight.py verifies all source checkpoints and initial real-cache parity and benchmarks GPU throughput. pipeline.py runs two GPU lanes with checkpoint/progress monitoring. Existing studies are untouched. This is an exploratory follow-up to validation-informed architecture choice, not a new blind test.

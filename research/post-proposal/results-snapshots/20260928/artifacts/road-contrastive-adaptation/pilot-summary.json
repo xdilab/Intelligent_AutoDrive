@@ -1,0 +1,35 @@
+[
+  {
+    "condition": "frozen",
+    "baseline": 8.43528636478796,
+    "epoch_AP": [
+      5.919017216343052,
+      5.773535714523364,
+      6.770412082618098
+    ],
+    "selected": "baseline",
+    "completed_utc": "2026-09-14T17:54:45Z"
+  },
+  {
+    "condition": "classification",
+    "baseline": 8.43528636478796,
+    "epoch_AP": [
+      5.928223376799443,
+      5.736486437303816,
+      6.938226436453566
+    ],
+    "selected": "baseline",
+    "completed_utc": "2026-09-14T17:55:01Z"
+  },
+  {
+    "condition": "contrastive",
+    "baseline": 8.43528636478796,
+    "epoch_AP": [
+      5.938926236741423,
+      5.754188471491683,
+      6.777466287264352
+    ],
+    "selected": "baseline",
+    "completed_utc": "2026-09-14T17:59:54Z"
+  }
+]

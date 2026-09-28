@@ -1,0 +1,67 @@
+{
+  "seeds": {
+    "0": {
+      "initial_parity": [
+        {
+          "split": "train",
+          "max_abs_logit_error": 0.0
+        },
+        {
+          "split": "dev",
+          "max_abs_logit_error": 0.0
+        },
+        {
+          "split": "val",
+          "max_abs_logit_error": 0.0
+        }
+      ]
+    },
+    "1": {
+      "initial_parity": [
+        {
+          "split": "train",
+          "max_abs_logit_error": 0.0
+        },
+        {
+          "split": "dev",
+          "max_abs_logit_error": 0.0
+        },
+        {
+          "split": "val",
+          "max_abs_logit_error": 0.0
+        }
+      ]
+    },
+    "2": {
+      "initial_parity": [
+        {
+          "split": "train",
+          "max_abs_logit_error": 0.0
+        },
+        {
+          "split": "dev",
+          "max_abs_logit_error": 0.0
+        },
+        {
+          "split": "val",
+          "max_abs_logit_error": 0.0
+        }
+      ]
+    }
+  },
+  "cache_rows": {
+    "train": 2567474,
+    "dev": 595732,
+    "val": 6163968
+  },
+  "started": 1789777425.2591562,
+  "passed": true,
+  "benchmark_training_steps": 50,
+  "training_seconds": 1.0452005249680951,
+  "training_rows_per_second": 12246.45385668049,
+  "predict_rows_per_second": 30720.32636893819,
+  "trainable_parameters": 5192065,
+  "frozen_heads_unchanged": true,
+  "peak_gpu_gb": 0.437053952,
+  "completed": 1789777428.5134833
+}

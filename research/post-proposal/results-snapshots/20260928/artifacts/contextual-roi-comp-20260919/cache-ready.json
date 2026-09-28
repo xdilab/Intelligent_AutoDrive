@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "files": {
+    "dev-agent.npy": "04e7a347eb65fc938458035ffcccc9b22cdb4fb6958e9db4c3939a9ab600cc42",
+    "dev-boxes.npy": "c5517c197837aed873f247629191e755ba942cd47d3c1da26e1eb4ad29720adb",
+    "dev-context.npy": "c0cf6495d0dc901c81e023045b9adaf67247a66b2e59f8b18276ad8e8d8dcec6",
+    "dev-crop.npy": "fdecccba6f6fb1506674ef67140f3d1701070dfdfb10a21f4478f5e469f09a7b",
+    "dev-frame.npy": "617bb06e690e60523f984df1a89f04def00461f6dfa68f06880d65dd5076a6db",
+    "dev-q.npy": "3a4020f8b4214131761e0ae395e30e0b72769457eb7590a02c74abf3afdc6581",
+    "dev-scene.npy": "78cf5e6bbf0f9f3774971d34c968470867b091fd497c38b9f0ff1103cce2e47a",
+    "dev-targets.npy": "d5d17c8195fe2144891f7dddb0185ee09c29ac10e15ec7e179060a9d7b135f35",
+    "train-agent.npy": "7069ea7ce3c1fc5f98989c031ac2fcd69da10373d253f7dead7f7559a7ca6eb9",
+    "train-boxes.npy": "55d5c0db09a53902cf46f1014f40cb073e5cf446bce727ffb02e85bef6aab29d",
+    "train-context.npy": "084012913fa100565ef5bd90cb7922a9772c28eb2045469ee0104fc857f77cd3",
+    "train-crop.npy": "530b3f7ded28ece6fa46de517e01c76d3fde1c50bce27b7cfa06a687329db48c",
+    "train-frame.npy": "1725102420b29ce4a6052a9bcc7075caf2a10dac789b2f51f4234582a5738f6e",
+    "train-q.npy": "72a122e0c98d2ff1f5e790250422662eaf2da13f4f6a5e854aeff2d75e28c611",
+    "train-scene.npy": "1cc4a825240bf4095465285080b28d8a894c5a0f6f17a034d64f9558ed3aab47",
+    "train-targets.npy": "92afa73e3187dd3ba0f544ccd8a819efe61b2ac20619b54331d382308738e6b5",
+    "val-agent.npy": "53ee4045bd969f3c4ebecb17eae46cc105c3fd23e0b755b40e42bcc3c0602701",
+    "val-boxes.npy": "ae16d0f9afe0e504c9bc0d0a0087c6d22e7f87f7505f7c40e60a4fba82c30b9b",
+    "val-context.npy": "8f718d6a60436d4e764d0f2af85ed8b957a2c3701981339f37f1f3811e164d33",
+    "val-crop.npy": "64d1e6befd9be07c5a8a2999a8c5eed4a223ea5a5b26fe7becddd5449c17d6bd",
+    "val-frame.npy": "17dbe297e7bd5ff1dc27d7cbf0a79dab83f7acf1830474823af3235b3afbaed5",
+    "val-q.npy": "31edbb0b2adca79b9eafee1da22963b6eb26cc6913bea086d69bba3dec9e5533",
+    "val-scene.npy": "75ada76fc38ff7782829c693dd246ad7194475115c4b7f4e3c0010886364f3c5",
+    "val-targets.npy": "ecd201aeb861d946dad1a9ed70bcade98d27d515a785644dd7e8ad33ae356532"
+  },
+  "contract": {
+    "version": 1,
+    "model": "OpenGVLab/InternVideo2_CLIP_S",
+    "revision": "1f9fca1389fd883defc652634d95a21121c85a8c",
+    "resize": "full frame anisotropic bilinear224x224, align_corners=False; no center crop",
+    "normalization": "ImageNet mean/std before resize",
+    "feature": "last-block keyframe256x1024 tokens",
+    "roi": "un-padded normalized box;7x7 RoIAlign aligned=True then mean",
+    "scene": "4x4 adaptive average pooling;16x1024 shared tokens per frame key"
+  },
+  "preparation_sha256": "be7470a8f6410227b1dfee0d7989b4715a3e8ff3efdd8d42a5b9f0f239e447b5",
+  "time": 1789759964.95329
+}

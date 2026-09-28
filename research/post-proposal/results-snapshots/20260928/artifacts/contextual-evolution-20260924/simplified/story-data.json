@@ -1,0 +1,56 @@
+{
+  "88": {
+    "short": "MLP",
+    "parent": null,
+    "question": "Establish the contextual baseline",
+    "why": "Combine crop features, actor RoI features, entire-frame tokens and box position. Average the scene tokens, then learn visual fusion with an MLP. Both visual and text adapters learn from focal classification over all 184 labels.",
+    "read": "This baseline already uses language attention and phrase cosine scores. \u201cNo contrastive\u201d describes its training objective; it does not mean language is absent.",
+    "limit": "Use this as the matched baseline for adding scene attention or the original triplet contrastive term. The head is a single 184-output classifier; there is no Composition MLP.",
+    "next": "Does actor-query attention help the rare compositions that a scene average may dilute?"
+  },
+  "89": {
+    "short": "Attention",
+    "parent": 88,
+    "question": "Ask the actor which scene evidence matters",
+    "why": "Replace average scene pooling with attention: the projected crop plus position supplies the query; entire-frame tokens supply the keys and values. Keep the downstream residual MLP, language attention and classifier.",
+    "read": "Mean triplet, tail and deep-tail AP improve. Action, location, duplex and common-triplet AP decrease. This motivates attention for rare compositions, with a measured tradeoff.",
+    "limit": "The deep-tail gain is sensitive to seed variation. These are descriptive three-seed means, not proof that attention dominates every metric.",
+    "next": "Test explicit visual\u2013phrase alignment alongside classification, in both fusion variants."
+  },
+  "90": {
+    "short": "86-triplet contrastive",
+    "parent": 88,
+    "question": "Add direct visual\u2013phrase supervision",
+    "why": "Add a 0.001-weighted multi-positive contrastive objective on the pre-language visual RoI and the frozen original phrase bank, restricted to the 86 triplet phrases. Focal classification still trains all 184 outputs.",
+    "read": "The MLP variant has the higher mean triplet AP in this original contrastive study. Against matched MLP model 88, triplet, tail, deep-tail, common, action and location increase; duplex decreases.",
+    "limit": "This returns to the MLP branch. It is not attention model 89 with one component added. Attention model 89 still has better tail and deep-tail AP. Contrastive gradients here update the visual branch only; classification still trains the text adapter.",
+    "next": "Broaden the auxiliary targets and let the learned text features meet the visual features."
+  },
+  "92": {
+    "short": "All-184 contrastive",
+    "parent": 90,
+    "question": "Align both learned streams across all labels",
+    "why": "Use all 184 phrase targets and replace the frozen contrastive target with the adapted phrase matrix. Auxiliary gradients now reach the visual head and the residual text adapter, before language conditioning.",
+    "read": "The MLP representative has the best mean triplet AP within the corrected all-184 contrastive study. Triplet, duplex, tail and deep-tail improve against the original MLP contrastive model.",
+    "limit": "Two things changed: target scope and adapted-text gradients. This is not an isolated scope test. The paired aggregate study does not establish a statistically significant gain. All 184 contrastive channels are visual\u2013phrase similarities, not the classifier logits or joint RoI.",
+    "next": "Use complementary attention experts together. The actual blend uses model 89 plus attention model 93, not this MLP model 92."
+  },
+  "94": {
+    "short": "Expert blend",
+    "parent": 89,
+    "question": "Preserve strengths from two attention experts",
+    "why": "Train two complete attention heads separately: focal classification without the auxiliary term, and focal classification with corrected all-184 contrastive learning. Freeze them and select one global composition-probability blend weight using development AP.",
+    "read": "Against attention expert A (89), the blend improves duplex, triplet, tail, deep-tail and common-triplet AP. Action/location predictions stay exactly with A. The second parent is attention model 93.",
+    "limit": "This is probability blending, not a neural gate or a feature mixture. It is the simple blend ancestor of 104. Factorized gate 97 is numerically higher on triplet by only 0.010 points; generic gate 96 is highest on tail47 among these gate variants. There is no established extra value from the more elaborate gates.",
+    "next": "Keep the attention-expert topology and change how classification errors are weighted."
+  },
+  "104": {
+    "short": "DCB blend",
+    "parent": 94,
+    "question": "Reweight classification difficulty, then blend",
+    "why": "Retrain both attention experts with dynamic class balancing (DCB) in place of focal loss and alpha weights. Expert B retains the same all-184 contrastive auxiliary term. Reselect the global probability blend on the reserved development partition.",
+    "read": "Model 104 is the strongest completed contextual mean-triplet configuration in this verified set: 13.428%. Action, location, duplex and common-triplet AP all rise over focal blend 94.",
+    "limit": "Tail47 falls by 0.254 points and deep28 by 0.200 points versus focal blend 94. Compared with standalone DCB expert 102, the blend recovers tail by 0.391 and deep-tail by 0.464 points. It is the overall-triplet endpoint, not the rare-class winner.",
+    "next": "Choose the endpoint for the claim: 104 for overall triplet AP; retain the focal blend/gate results when discussing tail performance."
+  }
+}

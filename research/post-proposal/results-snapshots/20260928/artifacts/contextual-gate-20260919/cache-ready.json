@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "preparation_sha256": "da7b8e7d8b000f83acbbd3c4ebc8bd09b77dc10cfddc87da456879f7dc7f6ea1",
+  "files": {
+    "gate-targets.npy": "94bd124cd3765e15c974a0e77a496f33b3cf50dd17dbbeab591b4fab411f8c7e",
+    "gate-partition.npy": "1a61d329246896b6c3c278d414efe5fd067c3be834fa964fe8067a4f35ec3ebf",
+    "gate-frame.npy": "627c5108963e8e54e6ec3f4f5695f9d2dbd982802f7475141d46bd86f1583293",
+    "gate-scene.npy": "0dfcd3b629f531fe7abb3ecb9e7020d53835663ae6a0a7ad36853f17f7b7b8a0",
+    "gate-boxes.npy": "714d7caf399ae057b7dbbdb6ecba98d0e659c5a48aed8141c1b32bc806509cff",
+    "gate-context.npy": "10f245b44a94f54a5ae9e923b59b933f70afb0c2b6483a1bd5b3543963aac426",
+    "gate-crop.npy": "5466b072469b9b4a159cd267ec9aa68fbfe0489d893392c6c47c9069ab8e2828"
+  },
+  "time": 1789835683.7356434
+}

@@ -1,0 +1,31 @@
+{
+  "version": "stage7-stage5-residual-v1-20260918",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "epochs": 3,
+  "batch_size": 256,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.01,
+  "save_every": 100,
+  "contrastive_weight": 0.001,
+  "temperature": 0.07,
+  "context_source": "/data/repos/wiki/artifacts/contextual-roi-all184-20260918",
+  "context_initialization": "same-seed corrected MLP-context best.pt selected by development triplet AP; discard standalone classifier",
+  "stage5_source": "/work/bbyrd1/class-gate-study-20260914/runs/seed-{seed}; verified head-flat.pt + stage5.pt",
+  "stage5_heads": "frozen; FP32 forward; gradients retained through inputs",
+  "bridge": "512 -> 512 GELU -> 1024; final layer zero; refined crop x + bridge(joint RoI)",
+  "classification": "class-weighted focal gamma2 on184 assembled Stage5 logits; first49 flat +135 CompMLP",
+  "contrastive": "all184 normalized pre-language visual v versus normalized adapted text T; both adapters learn",
+  "phrase_scores": "no direct phrase-score input to Stage5 readout; language flows through contextual RoI",
+  "selection": "best development triplet crop AP among epoch0 baseline and epochs1..3; strict improvement required",
+  "split": "420 expert training videos /90 development /90 gate unused; same contextual cache",
+  "detector_protocol": "same36717 official validation frames and YOLO candidates; q weighted scores; YOLO agentness/agent class; fresh paired baseline evaluation",
+  "precision": "context/bridge bfloat16 autocast; residual sum and Stage5 heads FP32; TF32 disabled",
+  "primary_question": "Does contextual residual adaptation improve matched Stage5 detector AP? report all six label groups and common39/tail47/deep28",
+  "exposure": "Context fusion family chosen after prior official validation results; exploratory follow-up, not a fresh blind test. Two-sided supervision and language attention retained.",
+  "runs": "3 seed-matched refinements +3 frozen Stage5 baseline detector evaluations",
+  "monitor": "persistent2min local watchdog and bounded repair dispatcher; checkpoint every100steps"
+}

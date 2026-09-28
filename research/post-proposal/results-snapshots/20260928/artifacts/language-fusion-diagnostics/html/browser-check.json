@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "javascript_errors": [],
+  "desktop_width": 1440,
+  "mobile_width": 390,
+  "all_class_rows": 86,
+  "trace_rows": 6,
+  "ap_checks": 72,
+  "verified": [
+    "seed/budget controls",
+    "class search/comparator",
+    "case image switching",
+    "figure enlargement",
+    "embedded CSV download",
+    "no horizontal page overflow",
+    "offline file load"
+  ]
+}

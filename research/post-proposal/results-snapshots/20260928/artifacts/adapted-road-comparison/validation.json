@@ -1,0 +1,9 @@
+{
+  "evaluate-study.py": "69c957054673acbc4f05c3bfe9fc7e8dc7de0e472515e3877e93cff6500495a7",
+  "baseline-core.py": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9",
+  "shared-frames.json": "2ef7e3c370a54cd0d61b9aff46acdab2a0e7fa23f1e5f91dd081b67cc35174f1",
+  "train-counts.json": "8d8b168945a49d122af6de5b802fd46d80c80ea15cc9a08ec9ad9b121b12639f",
+  "synthetic_training": "PASS: seed0 flat/phrase full+OOF heads, Stage5 and Stage6",
+  "python_compile": "PASS",
+  "shell_syntax": "PASS"
+}

@@ -1,0 +1,182 @@
+{
+  "recorded_utc": "2026-09-19T01:55:00Z",
+  "question": "Does contextual residual adaptation improve matched Stage5 detector AP?",
+  "design": "3 seeds, paired. stage7-seed{s} (contextual residual refinement) vs stage5-baseline-seed{s} (frozen Stage5, epoch 0). Same 36717 official validation frames, same YOLO candidates, same contextual cache.",
+  "metric": "official validation detector AP@0.5",
+  "paired_test_n3": {
+    "critical_abs_t_p05": 4.303,
+    "common39": {
+      "mean": 2.71,
+      "sd": 0.15,
+      "t": 30.49,
+      "significant": true,
+      "deltas": [
+        2.56,
+        2.87,
+        2.69
+      ]
+    },
+    "loc": {
+      "mean": 5.1,
+      "sd": 0.77,
+      "t": 11.54,
+      "significant": true,
+      "deltas": [
+        4.34,
+        5.08,
+        5.87
+      ]
+    },
+    "triplet": {
+      "mean": 1.59,
+      "sd": 0.24,
+      "t": 11.42,
+      "significant": true,
+      "deltas": [
+        1.63,
+        1.81,
+        1.33
+      ]
+    },
+    "duplex": {
+      "mean": 1.2,
+      "sd": 0.26,
+      "t": 8.08,
+      "significant": true,
+      "deltas": [
+        1.01,
+        1.1,
+        1.5
+      ]
+    },
+    "action": {
+      "mean": 2.72,
+      "sd": 0.63,
+      "t": 7.49,
+      "significant": true,
+      "deltas": [
+        2.53,
+        3.43,
+        2.21
+      ]
+    },
+    "tail47": {
+      "mean": 0.67,
+      "sd": 0.4,
+      "t": 2.89,
+      "significant": false,
+      "deltas": [
+        0.86,
+        0.93,
+        0.21
+      ]
+    },
+    "deep28": {
+      "mean": 0.18,
+      "sd": 0.29,
+      "t": 1.09,
+      "significant": false,
+      "deltas": [
+        0.49,
+        0.15,
+        -0.09
+      ]
+    }
+  },
+  "headline": "Against frozen Stage 5, five of seven metrics improve significantly. Against its own context source, Stage 7 is worse on duplex/triplet/tail47/deep28 across all three seeds. See baseline_choice_correction.",
+  "interpretation_caution": "The gains concentrate in common and overall metrics. Long-tail composition, which is the thesis argument, is not significantly improved by this comparison. Do not present tail47/deep28 gains as established.",
+  "selected_epochs": {
+    "stage7-seed0": 1,
+    "stage7-seed1": 3,
+    "stage7-seed2": 2,
+    "baselines": 0
+  },
+  "protocol_caveats": [
+    "Baselines are frozen Stage5 at epoch 0, so this is a large architectural delta, not a controlled ablation.",
+    "Protocol records its own exposure risk: 'Context fusion family chosen after prior official validation results; exploratory follow-up, not a fresh blind test.'",
+    "Protocol specifies no direct phrase-score input to the Stage5 readout; language flows through the contextual RoI. This addresses the phrase-score double-route concern raised for the all184 head."
+  ],
+  "tracking_note": "This study ran untracked for about an hour on 2026-09-18 because session_status.py had its study list hardcoded. The script now discovers any artifact directory containing pipeline-progress.json.",
+  "workbook_status": "Not written to the results workbook. Pending user decision.",
+  "baseline_choice_correction": {
+    "issue": "The headline paired test compares Stage 7 against frozen Stage 5 (epoch 0), a weak comparator. Stage 7 is initialised from the same-seed mlp-contrastive-all184 checkpoint, so that contextual head is the correct comparator.",
+    "stage7_minus_context_source_n3": {
+      "duplex": {
+        "mean": -0.45,
+        "t": -4.01,
+        "deltas": [
+          -0.59,
+          -0.23,
+          -0.54
+        ]
+      },
+      "triplet": {
+        "mean": -0.42,
+        "t": -3.91,
+        "deltas": [
+          -0.21,
+          -0.57,
+          -0.48
+        ]
+      },
+      "tail47": {
+        "mean": -0.69,
+        "t": -3.85,
+        "deltas": [
+          -0.45,
+          -1.04,
+          -0.59
+        ]
+      },
+      "deep28": {
+        "mean": -0.41,
+        "t": -2.9,
+        "deltas": [
+          -0.19,
+          -0.67,
+          -0.37
+        ]
+      },
+      "action": {
+        "mean": -0.72,
+        "t": -1.09,
+        "deltas": [
+          -1.81,
+          0.46,
+          -0.8
+        ]
+      },
+      "loc": {
+        "mean": -0.04,
+        "t": -0.07,
+        "deltas": [
+          -0.79,
+          0.96,
+          -0.28
+        ]
+      },
+      "common39": {
+        "mean": -0.09,
+        "t": -0.7,
+        "deltas": [
+          0.07,
+          0.0,
+          -0.35
+        ]
+      }
+    },
+    "verdict": "Stage 7 is WORSE than its own context source on duplex, triplet, tail47 and deep28, negative on all three seeds for each. None clears |t|>4.303 at n=3, but sign consistency is total. Bridging contextual evidence into frozen Stage 5 subtracts value relative to letting the contextual head classify directly.",
+    "ranking_by_triplet": [
+      "mlp-contrastive-all184 12.17",
+      "attention-contrastive-all184 12.12",
+      "mlp-contrastive86 12.04",
+      "attention-classification 12.02",
+      "attention-contrastive86 11.93",
+      "stage7 11.75",
+      "mlp-classification 11.74",
+      "stage5-frozen 10.16"
+    ],
+    "reframing": "The defensible claim is that contextual evidence is worth a large amount (frozen Stage 5 10.16 -> contextual head 12.17). The Stage 7 bridge is not the source of that gain and costs roughly 0.42 triplet and 0.69 tail47 against the head it is built from.",
+    "best_long_tail": "attention-classification (classification-only contextual head, no contrastive, no Stage 5): tail47 6.19, deep28 4.48 - the best tail numbers in either study."
+  }
+}

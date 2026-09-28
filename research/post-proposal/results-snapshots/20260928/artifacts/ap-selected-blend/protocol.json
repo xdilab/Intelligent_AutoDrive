@@ -1,0 +1,30 @@
+{
+  "version": "development-ap-blend-v1",
+  "locked_utc": "2026-09-14T16:04:37.363397+00:00",
+  "source_study": "/work/bbyrd1/proposal-study-20260910",
+  "expert_study": "/work/bbyrd1/class-gate-study-20260914",
+  "root": "/work/bbyrd1/ap-selected-blend-20260914",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "final_variants": [
+    "ap-blend",
+    "ap-shuffled-blend"
+  ],
+  "selection_sha256": "2cf758e15b2ab6616bb753263a9e8e25d89780116ca8a8097cc3e88198d55445",
+  "training_report_sha256": {
+    "0": "88ee6d5e25c15b434683c394f964d28645607123d19b0d04f89b8de5346b6ac4",
+    "1": "082059fa2de38bde3a8830b6a7683dfe214634b075867e8813d5ed262178de80",
+    "2": "f8b81475bf2b26c4d9cd0ecad43a0294b935d9e88a214d95513bfd0036948be4"
+  },
+  "selection": "global scalar chosen from existing audit grid by internal-development triplet crop AP; exact ties favor lower language weight",
+  "final_evaluation": "same 36717 frames and YOLO candidates, AP@IoU0.5; q applied once after mixture",
+  "limitations": [
+    "same 70-percent-training-video experts and fixed partition as BCE gate study",
+    "previous final evaluation informed this follow-up; not a fresh blind test",
+    "selection uses cached-crop AP, not detector AP",
+    "no calibration or new gate training; selection-objective comparison only"
+  ]
+}

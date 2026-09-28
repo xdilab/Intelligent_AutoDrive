@@ -1,0 +1,12 @@
+[Unit]
+Description=Launch bounded Codex repair sessions for research incidents
+After=network-online.target
+Wants=network-online.target
+[Service]
+Type=oneshot
+WorkingDirectory=/data/repos/wiki
+ExecStart=/usr/bin/python3 /data/repos/ROAD_Reason/research/post-proposal/monitoring/repair_dispatch.py
+Environment=PATH=/home/brandon/.local/bin:/home/brandon/miniconda3/bin:/usr/local/bin:/usr/bin:/bin
+TimeoutStartSec=35min
+TimeoutStopSec=30s
+KillMode=control-group

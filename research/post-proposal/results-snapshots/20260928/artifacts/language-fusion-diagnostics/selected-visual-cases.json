@@ -1,0 +1,68 @@
+[
+  {
+    "seed": 0,
+    "class": "LarVeh-Stop-Jun",
+    "category": "phrase_help_lost",
+    "frame": "train_00797_00018",
+    "gt_local": 0,
+    "gt_box": [
+      0.4052702486515045,
+      0.4416195750236511,
+      0.45066574215888977,
+      0.5363580584526062
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.3964844048023224,
+      0.44062501192092896,
+      0.4613281488418579,
+      0.5337890982627869
+    ],
+    "candidate_iou": 0.6794846653938293,
+    "budget": 615,
+    "head-flat_gt_rank": 2465,
+    "head-phrase_gt_rank": 288,
+    "stage5_gt_rank": 81918,
+    "stage6_gt_rank": 4708,
+    "head-flat_score_same_candidate": 0.37300142645835876,
+    "head-phrase_score_same_candidate": 0.7307847738265991,
+    "stage5_score_same_candidate": 0.0708194300532341,
+    "stage6_score_same_candidate": 0.30869048833847046,
+    "image": "case-larveh-stop-jun-phrase_help_lost.png",
+    "source_frame": "/data/datasets/ROAD_plusplus/rgb-images/train_00797/00018.jpg",
+    "source_frame_sha256": "7794f689961002ed0c1ba500fa35f65a9316177cab638fbcdb0a15cca4284565"
+  },
+  {
+    "seed": 0,
+    "class": "Bus-Stop-VehLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00635_00186",
+    "gt_local": 0,
+    "gt_box": [
+      0.0942450687289238,
+      0.40658605098724365,
+      0.3136568069458008,
+      0.7608685493469238
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.0947265699505806,
+      0.4136718809604645,
+      0.3154297173023224,
+      0.762890636920929
+    ],
+    "candidate_iou": 0.9646716713905334,
+    "budget": 583,
+    "head-flat_gt_rank": 380,
+    "head-phrase_gt_rank": 101,
+    "stage5_gt_rank": 2878,
+    "stage6_gt_rank": 325,
+    "head-flat_score_same_candidate": 0.9004825353622437,
+    "head-phrase_score_same_candidate": 0.7650904059410095,
+    "stage5_score_same_candidate": 0.2835434377193451,
+    "stage6_score_same_candidate": 0.6121090054512024,
+    "image": "case-bus-stop-vehlane-phrase_help_preserved.png",
+    "source_frame": "/data/datasets/ROAD_plusplus/rgb-images/train_00635/00186.jpg",
+    "source_frame_sha256": "dae679d115db0c23f714c1fe57089288bcdc85c0177a0357e4fb507ac9bdda23"
+  }
+]

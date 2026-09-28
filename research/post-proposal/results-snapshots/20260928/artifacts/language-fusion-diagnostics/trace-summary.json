@@ -1,0 +1,356 @@
+[
+  {
+    "class": "MedVeh-Stop-VehLane",
+    "gt_count": 1655,
+    "budget": 1655,
+    "head-flat_tp_mean": 53.666666666666664,
+    "head-flat_tp_by_seed": [
+      88,
+      21,
+      52
+    ],
+    "head-phrase_tp_mean": 240,
+    "head-phrase_tp_by_seed": [
+      259,
+      229,
+      232
+    ],
+    "stage5_tp_mean": 323,
+    "stage5_tp_by_seed": [
+      112,
+      438,
+      419
+    ],
+    "stage6_tp_mean": 335.6666666666667,
+    "stage6_tp_by_seed": [
+      124,
+      488,
+      395
+    ],
+    "phrase_only_opportunities_mean": 100,
+    "phrase_only_opportunities_by_seed": [
+      222,
+      48,
+      30
+    ],
+    "preserved_by_stage6_mean": 41.333333333333336,
+    "preserved_by_stage6_by_seed": [
+      64,
+      48,
+      12
+    ],
+    "lost_by_stage6_mean": 58.666666666666664,
+    "lost_by_stage6_by_seed": [
+      158,
+      0,
+      18
+    ],
+    "stage5_hits_lost_mean": 61.666666666666664,
+    "stage5_hits_lost_by_seed": [
+      86,
+      31,
+      68
+    ],
+    "stage6_rescues_mean": 74.33333333333333,
+    "stage6_rescues_by_seed": [
+      98,
+      81,
+      44
+    ]
+  },
+  {
+    "class": "Bus-Stop-VehLane",
+    "gt_count": 583,
+    "budget": 583,
+    "head-flat_tp_mean": 77.33333333333333,
+    "head-flat_tp_by_seed": [
+      156,
+      3,
+      73
+    ],
+    "head-phrase_tp_mean": 120.33333333333333,
+    "head-phrase_tp_by_seed": [
+      118,
+      119,
+      124
+    ],
+    "stage5_tp_mean": 175,
+    "stage5_tp_by_seed": [
+      185,
+      191,
+      149
+    ],
+    "stage6_tp_mean": 248.66666666666666,
+    "stage6_tp_by_seed": [
+      268,
+      185,
+      293
+    ],
+    "phrase_only_opportunities_mean": 71,
+    "phrase_only_opportunities_by_seed": [
+      53,
+      65,
+      95
+    ],
+    "preserved_by_stage6_mean": 45.666666666666664,
+    "preserved_by_stage6_by_seed": [
+      6,
+      57,
+      74
+    ],
+    "lost_by_stage6_mean": 25.333333333333332,
+    "lost_by_stage6_by_seed": [
+      47,
+      8,
+      21
+    ],
+    "stage5_hits_lost_mean": 53.333333333333336,
+    "stage5_hits_lost_by_seed": [
+      21,
+      126,
+      13
+    ],
+    "stage6_rescues_mean": 127,
+    "stage6_rescues_by_seed": [
+      104,
+      120,
+      157
+    ]
+  },
+  {
+    "class": "LarVeh-Stop-Jun",
+    "gt_count": 615,
+    "budget": 615,
+    "head-flat_tp_mean": 257.6666666666667,
+    "head-flat_tp_by_seed": [
+      259,
+      246,
+      268
+    ],
+    "head-phrase_tp_mean": 261.3333333333333,
+    "head-phrase_tp_by_seed": [
+      264,
+      253,
+      267
+    ],
+    "stage5_tp_mean": 202.33333333333334,
+    "stage5_tp_by_seed": [
+      60,
+      295,
+      252
+    ],
+    "stage6_tp_mean": 101,
+    "stage6_tp_by_seed": [
+      158,
+      48,
+      97
+    ],
+    "phrase_only_opportunities_mean": 84,
+    "phrase_only_opportunities_by_seed": [
+      204,
+      9,
+      39
+    ],
+    "preserved_by_stage6_mean": 34.333333333333336,
+    "preserved_by_stage6_by_seed": [
+      103,
+      0,
+      0
+    ],
+    "lost_by_stage6_mean": 49.666666666666664,
+    "lost_by_stage6_by_seed": [
+      101,
+      9,
+      39
+    ],
+    "stage5_hits_lost_mean": 159.66666666666666,
+    "stage5_hits_lost_by_seed": [
+      54,
+      247,
+      178
+    ],
+    "stage6_rescues_mean": 58.333333333333336,
+    "stage6_rescues_by_seed": [
+      152,
+      0,
+      23
+    ]
+  },
+  {
+    "class": "Ped-XingFmRht-xing",
+    "gt_count": 660,
+    "budget": 660,
+    "head-flat_tp_mean": 31,
+    "head-flat_tp_by_seed": [
+      36,
+      15,
+      42
+    ],
+    "head-phrase_tp_mean": 68.33333333333333,
+    "head-phrase_tp_by_seed": [
+      60,
+      71,
+      74
+    ],
+    "stage5_tp_mean": 126.33333333333333,
+    "stage5_tp_by_seed": [
+      146,
+      112,
+      121
+    ],
+    "stage6_tp_mean": 73.66666666666667,
+    "stage6_tp_by_seed": [
+      68,
+      88,
+      65
+    ],
+    "phrase_only_opportunities_mean": 25,
+    "phrase_only_opportunities_by_seed": [
+      22,
+      35,
+      18
+    ],
+    "preserved_by_stage6_mean": 8.666666666666666,
+    "preserved_by_stage6_by_seed": [
+      10,
+      16,
+      0
+    ],
+    "lost_by_stage6_mean": 16.333333333333332,
+    "lost_by_stage6_by_seed": [
+      12,
+      19,
+      18
+    ],
+    "stage5_hits_lost_mean": 88.33333333333333,
+    "stage5_hits_lost_by_seed": [
+      97,
+      81,
+      87
+    ],
+    "stage6_rescues_mean": 35.666666666666664,
+    "stage6_rescues_by_seed": [
+      19,
+      57,
+      31
+    ]
+  },
+  {
+    "class": "Ped-MovTow-LftPav",
+    "gt_count": 18271,
+    "budget": 18271,
+    "head-flat_tp_mean": 5760.666666666667,
+    "head-flat_tp_by_seed": [
+      5931,
+      5675,
+      5676
+    ],
+    "head-phrase_tp_mean": 3594.3333333333335,
+    "head-phrase_tp_by_seed": [
+      3532,
+      3654,
+      3597
+    ],
+    "stage5_tp_mean": 6097.666666666667,
+    "stage5_tp_by_seed": [
+      5846,
+      6266,
+      6181
+    ],
+    "stage6_tp_mean": 6229.666666666667,
+    "stage6_tp_by_seed": [
+      6385,
+      6262,
+      6042
+    ],
+    "phrase_only_opportunities_mean": 331.6666666666667,
+    "phrase_only_opportunities_by_seed": [
+      297,
+      415,
+      283
+    ],
+    "preserved_by_stage6_mean": 184.33333333333334,
+    "preserved_by_stage6_by_seed": [
+      160,
+      268,
+      125
+    ],
+    "lost_by_stage6_mean": 147.33333333333334,
+    "lost_by_stage6_by_seed": [
+      137,
+      147,
+      158
+    ],
+    "stage5_hits_lost_mean": 677.3333333333334,
+    "stage5_hits_lost_by_seed": [
+      433,
+      805,
+      794
+    ],
+    "stage6_rescues_mean": 809.3333333333334,
+    "stage6_rescues_by_seed": [
+      972,
+      801,
+      655
+    ]
+  },
+  {
+    "class": "Bus-MovAway-OutgoLane",
+    "gt_count": 452,
+    "budget": 452,
+    "head-flat_tp_mean": 52.333333333333336,
+    "head-flat_tp_by_seed": [
+      55,
+      47,
+      55
+    ],
+    "head-phrase_tp_mean": 80,
+    "head-phrase_tp_by_seed": [
+      73,
+      80,
+      87
+    ],
+    "stage5_tp_mean": 75,
+    "stage5_tp_by_seed": [
+      87,
+      75,
+      63
+    ],
+    "stage6_tp_mean": 82.33333333333333,
+    "stage6_tp_by_seed": [
+      67,
+      89,
+      91
+    ],
+    "phrase_only_opportunities_mean": 32.333333333333336,
+    "phrase_only_opportunities_by_seed": [
+      29,
+      31,
+      37
+    ],
+    "preserved_by_stage6_mean": 17.333333333333332,
+    "preserved_by_stage6_by_seed": [
+      8,
+      18,
+      26
+    ],
+    "lost_by_stage6_mean": 15,
+    "lost_by_stage6_by_seed": [
+      21,
+      13,
+      11
+    ],
+    "stage5_hits_lost_mean": 19.666666666666668,
+    "stage5_hits_lost_by_seed": [
+      37,
+      8,
+      14
+    ],
+    "stage6_rescues_mean": 27,
+    "stage6_rescues_by_seed": [
+      17,
+      22,
+      42
+    ]
+  }
+]

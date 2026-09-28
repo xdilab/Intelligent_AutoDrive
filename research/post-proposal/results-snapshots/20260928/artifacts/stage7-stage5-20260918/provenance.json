@@ -1,0 +1,92 @@
+{
+  "created": "2026-09-18T20:26:50.279287-04:00",
+  "authorization": "User requested best contextual architecture applied to Stage5 as planned",
+  "baseline": "seed-matched420-expert-video Stage5 controls; not older600-video headline checkpoints",
+  "context_family": "corrected MLP mean-scene variant + language attention",
+  "sources": {
+    "/data/repos/ROAD_Reason/research/post-proposal/stage7-stage5/contextual.py": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+    "/data/repos/ROAD_Reason/research/post-proposal/stage7-stage5/pipeline.py": "d23fbe98159022ccf99effae1c5c33b477e27d76177b782cf8c920a9d5bb7a3b",
+    "/data/repos/ROAD_Reason/research/post-proposal/stage7-stage5/preflight.py": "19ea0b680fbcd93240e217c902dc58bb3b017cc89524a0811c6c5367e4526535",
+    "/data/repos/ROAD_Reason/research/post-proposal/stage7-stage5/model.py": "d0cfb9a94837a8edb96507b116a2417d07556c93841b33592e2c46944c402074",
+    "/data/repos/ROAD_Reason/research/post-proposal/stage7-stage5/monitor_local.py": "a386b159b1a92e5017e3f2b26769064c265d87724947d86a81505bfb58eaf95a",
+    "/data/repos/ROAD_Reason/research/post-proposal/stage7-stage5/test_model.py": "39dcacb3263069d22c1f718d50a54cf232547ca3bc185c45c3231f292f49c749",
+    "/data/repos/ROAD_Reason/research/post-proposal/stage7-stage5/evaluate_cached.py": "921d7c336639f3aafe4b2d58d1f004d4ba527406713f39c89003184108516d3e",
+    "/data/repos/ROAD_Reason/research/post-proposal/stage7-stage5/train_cached.py": "620047f5adb7bf917162d09b75fbfec8cefc279a8fa531986386fa0cba982186",
+    "artifacts/stage7-stage5-20260918/protocol.json": "8bfb5ddad8dd46d5b6a095c345282f06c6a7bcc149788f9249ab34b3f523b720"
+  },
+  "preflight": {
+    "seeds": {
+      "0": {
+        "initial_parity": [
+          {
+            "split": "train",
+            "max_abs_logit_error": 0.0
+          },
+          {
+            "split": "dev",
+            "max_abs_logit_error": 0.0
+          },
+          {
+            "split": "val",
+            "max_abs_logit_error": 0.0
+          }
+        ]
+      },
+      "1": {
+        "initial_parity": [
+          {
+            "split": "train",
+            "max_abs_logit_error": 0.0
+          },
+          {
+            "split": "dev",
+            "max_abs_logit_error": 0.0
+          },
+          {
+            "split": "val",
+            "max_abs_logit_error": 0.0
+          }
+        ]
+      },
+      "2": {
+        "initial_parity": [
+          {
+            "split": "train",
+            "max_abs_logit_error": 0.0
+          },
+          {
+            "split": "dev",
+            "max_abs_logit_error": 0.0
+          },
+          {
+            "split": "val",
+            "max_abs_logit_error": 0.0
+          }
+        ]
+      }
+    },
+    "cache_rows": {
+      "train": 2567474,
+      "dev": 595732,
+      "val": 6163968
+    },
+    "started": 1789777425.2591562,
+    "passed": true,
+    "benchmark_training_steps": 50,
+    "training_seconds": 1.0452005249680951,
+    "training_rows_per_second": 12246.45385668049,
+    "predict_rows_per_second": 30720.32636893819,
+    "trainable_parameters": 5192065,
+    "frozen_heads_unchanged": true,
+    "peak_gpu_gb": 0.437053952,
+    "completed": 1789777428.5134833
+  },
+  "eta": {
+    "basis": "12246 training rows/s;30720 inference rows/s singleGPU preflight. Prior paired detector evaluations approximately10\u201315min; additional baseline re-evaluation included. Two GPU lanes with seed2 following seed0.",
+    "first_stage7_detector_result": "2026-09-18 20:50\u201321:05 EDT",
+    "all_three_seeds_and_baselines": "2026-09-18 21:35\u201322:15 EDT",
+    "uncertainty": "GPU/CPU concurrency, development AP sorting and evaluation throughput; refresh at first completed evaluation"
+  },
+  "runtime": "systemd stage7-stage5-study.service +monitor.timer; existing bounded repair dispatcher registered",
+  "tests": "3 model contracts; all3seeds train/dev/val sampled exact initial parity; benchmark60optimizersteps with frozen heads unchanged; synthetic monitor failure/healthy tests; notification test"
+}

@@ -1,0 +1,47 @@
+{
+  "version": "class-gate-v1-20260914",
+  "source_study": "/work/bbyrd1/proposal-study-20260910",
+  "root": "/work/bbyrd1/class-gate-study-20260914",
+  "encoder": "original frozen InternVideo2-CLIP-S",
+  "split_rule": "sort video IDs by SHA256(class-gate-v1:VIDEO); first floor(0.70*N) expert, next floor(0.15*N) gate, remaining development",
+  "split_unit": "source video",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "expert_epochs": 10,
+  "expert_batch_size": 16384,
+  "expert_lr": 0.001,
+  "expert_loss": "original focal gamma=2 with original fixed class alphas, shared across matched baselines",
+  "gate_epochs": 25,
+  "gate_batch_size": 16384,
+  "gate_lr": 0.05,
+  "gate_loss": "mean binary cross entropy before YOLO confidence plus lambda*mean squared class-logit deviation from frozen global logit",
+  "lambdas": [
+    0.0,
+    0.0001,
+    0.001,
+    0.01,
+    0.1
+  ],
+  "selection_metric": "triplet mean AP on held-out development cached crop rows; all 86 classes, zero-positive classes AP=0; NOT detection f-mAP",
+  "selection_tie_break": "higher regularization strength",
+  "zero_positive_fallback": "global logit",
+  "final_variants": [
+    "head-flat",
+    "head-phrase",
+    "stage5",
+    "stage6",
+    "global-blend",
+    "class-gate",
+    "shuffled-global",
+    "shuffled-class-gate"
+  ],
+  "final_metric": "unchanged baseline frame-AP at IoU 0.5 on the 36717-frame manifest and identical YOLO candidates",
+  "no_final_eval_tuning": true,
+  "fitting_rows": "inherited GT-positive + random-background + YOLO-junk-negative cached training crops",
+  "fitting_limit": "gate fitting/development do not use full YOLO-positive candidate crops; final evaluation does",
+  "resources": "CPU preflight; 3 training seeds capped at 2 priority H200 jobs; 3 evaluation seeds capped at 2 CPU jobs; afterok dependencies",
+  "prior_validation_exposure": "Official validation previously informed the gate hypothesis through diagnostics; no final-evaluation tuning within this run and no claim of a fresh blind test."
+}

@@ -1,0 +1,1935 @@
+{
+  "selected_diagram_ids": [
+    88,
+    89,
+    90,
+    92,
+    94,
+    104
+  ],
+  "selection_note": "Condition means over all three seeds. #94 is the simple global-blend lineage ancestor of #104; #97 narrowly wins triplet among gates and must be disclosed. MLP contrastive representatives #90/#92 are not parents of attention blend #94.",
+  "workbook_sha256": "c1619363acdb57c18a348f89ce5933569b1b00cabc8b3ccf39cf4c290d1c8259",
+  "metrics": [
+    "agentness",
+    "agent",
+    "action",
+    "loc",
+    "duplex",
+    "triplet",
+    "tail47",
+    "deep28",
+    "common39"
+  ],
+  "models": {
+    "88": {
+      "id": 88,
+      "name": "Contextual Residual RoI Head \u2014 MLP, 184-Label Focal (No Contrastive)",
+      "condition": "mlp-classification",
+      "source": "/data/repos/wiki/artifacts/contextual-roi-20260917/all-results.json",
+      "source_sha256": "bf0fc6a4f38a653c6eeee18cbfd9c474b76c0387ebd31f047ecf08d9af30f688",
+      "n": 3,
+      "mean": {
+        "agentness": 65.3637466430664,
+        "agent": 35.24602649905719,
+        "action": 21.64128750607823,
+        "loc": 26.47899475336696,
+        "duplex": 18.72717682888009,
+        "triplet": 11.740187543709654,
+        "tail47": 5.473158771155653,
+        "deep28": 3.5848984194952727,
+        "common39": 19.292760679864475
+      },
+      "sample_sd": {
+        "agentness": 0.0,
+        "agent": 0.0,
+        "action": 0.4286588598750639,
+        "loc": 0.4352569263515261,
+        "duplex": 0.5293043987454331,
+        "triplet": 0.12538225720701568,
+        "tail47": 0.11653544380447328,
+        "deep28": 0.35879341570532736,
+        "common39": 0.4145106705516315
+      },
+      "runs": [
+        {
+          "run": "mlp-classification-seed0",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.582343569533393,
+            "loc": 26.163913334719837,
+            "duplex": 18.201767274093037,
+            "triplet": 11.596597808559403
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 18.824133166900047
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 5.599281234617167
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.976218276241395
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "fb9abd9abe17b5268213c10b3ce54ae9255203fccf51a69bc93d96cdd2f88608",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "mlp-classification-seed1",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 22.096368012103166,
+            "loc": 26.297431692946702,
+            "duplex": 19.260291935837998,
+            "triplet": 11.828019910838542
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.61139695155315
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 5.3694730047136545
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.2714068636165132
+            }
+          },
+          "selected_epoch": 2,
+          "signature": {
+            "checkpoint_sha256": "7185067e66fab085bf94c7b4a11fcd3ccc4680bb44f9a04000950e2ebfa51789",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "mlp-classification-seed2",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.245150936598126,
+            "loc": 26.975639232434332,
+            "duplex": 18.71947127670924,
+            "triplet": 11.795944911731016
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.442751921140232
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 5.450722074136138
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.5070701186279103
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "d1823af5f6f30f63dbfc68bce3d77b81e75554b14c7019f2adca3485be5f3c35",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        }
+      ]
+    },
+    "89": {
+      "id": 89,
+      "name": "Contextual Residual RoI Head \u2014 Attention, 184-Label Focal (No Contrastive)",
+      "condition": "attention-classification",
+      "source": "/data/repos/wiki/artifacts/contextual-roi-20260917/all-results.json",
+      "source_sha256": "bf0fc6a4f38a653c6eeee18cbfd9c474b76c0387ebd31f047ecf08d9af30f688",
+      "n": 3,
+      "mean": {
+        "agentness": 65.3637466430664,
+        "agent": 35.24602649905719,
+        "action": 21.5427714176476,
+        "loc": 26.156758748926222,
+        "duplex": 18.521731953021,
+        "triplet": 12.024246345645958,
+        "tail47": 6.189396082912406,
+        "deep28": 4.478454859095758,
+        "common39": 19.055988969965878
+      },
+      "sample_sd": {
+        "agentness": 0.0,
+        "agent": 0.0,
+        "action": 0.0898958822994572,
+        "loc": 0.13429228137592128,
+        "duplex": 0.2829178049431417,
+        "triplet": 0.41873645145734745,
+        "tail47": 0.5862373457613705,
+        "deep28": 1.1510720870421434,
+        "common39": 0.31258923466830263
+      },
+      "runs": [
+        {
+          "run": "attention-classification-seed0",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.643200516700745,
+            "loc": 26.12280107755214,
+            "duplex": 18.37850050172027,
+            "triplet": 12.4228250385901
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.16108487202571
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.831503049143531
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 5.804531034032282
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "86dfc8507c75b3cab6415a463e462b9a73d33591362b1240a5e04024bb56f9ef",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "attention-classification-seed1",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.469824364916846,
+            "loc": 26.04270486254245,
+            "duplex": 18.339072143331133,
+            "triplet": 11.587909567364774
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 18.704395590684353
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 5.68274031397193
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.7372603050566147
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "f0e8af3e9a93ba4a25816dd0d60ecbb7566087fd3dc02ca68a8e55db6b6d9ba6",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "attention-classification-seed2",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.51528937132521,
+            "loc": 26.304770306684077,
+            "duplex": 18.847623214011595,
+            "triplet": 12.062004430982999
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.30248644718757
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.053944885621759
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.893573238198379
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "33e19d9113047343e92038dd3b2fd95ef4d42a29a4a0de0e76cfa1be53087c8d",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        }
+      ]
+    },
+    "90": {
+      "id": 90,
+      "name": "Contextual Residual RoI Head \u2014 MLP, 184-Label Focal + 86-Triplet Contrastive",
+      "condition": "mlp-contrastive",
+      "source": "/data/repos/wiki/artifacts/contextual-roi-20260917/all-results.json",
+      "source_sha256": "bf0fc6a4f38a653c6eeee18cbfd9c474b76c0387ebd31f047ecf08d9af30f688",
+      "n": 3,
+      "mean": {
+        "agentness": 65.3637466430664,
+        "agent": 35.24602649905719,
+        "action": 21.831969425082207,
+        "loc": 26.60435095615685,
+        "duplex": 18.51200789756452,
+        "triplet": 12.0358610075209,
+        "tail47": 5.65868007555168,
+        "deep28": 3.687300215691461,
+        "common39": 19.72118161784278
+      },
+      "sample_sd": {
+        "agentness": 0.0,
+        "agent": 0.0,
+        "action": 1.0888706352573676,
+        "loc": 0.33742045672059834,
+        "duplex": 0.24897208201393783,
+        "triplet": 0.19589213349319048,
+        "tail47": 0.28373860508569043,
+        "deep28": 0.35227524650403463,
+        "common39": 0.13799148803897845
+      },
+      "runs": [
+        {
+          "run": "mlp-contrastive-seed0",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 22.328808970072053,
+            "loc": 26.85687697120011,
+            "duplex": 18.364711607511783,
+            "triplet": 12.017794930516894
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.817813063279175
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 5.545439458650319
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.612607780943758
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "e363e32cf3b624ce16e658aa506d609a0f3dc9eacac356383de6e7fcd6744b25",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "mlp-contrastive-seed1",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 22.583800676194105,
+            "loc": 26.22113362699747,
+            "duplex": 18.799466589161632,
+            "triplet": 11.849627713515792
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.56314614491585
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 5.449048589588084
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.378360959152425
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "f90171d176ce60f6fcf76f7ad42cc003ee42e406450b4c5e108b67099713eef8",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "mlp-contrastive-seed2",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 20.58329862898046,
+            "loc": 26.73504227027297,
+            "duplex": 18.371845496020146,
+            "triplet": 12.240160378530016
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.782585645333313
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 5.9815521784166386
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 4.070931906978201
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "7db13937c03ef65d619dccbc1b6ec7867319ea2ac72430da13eae833b2b6df82",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        }
+      ]
+    },
+    "91": {
+      "id": 91,
+      "name": "Contextual Residual RoI Head \u2014 Attention, 184-Label Focal + 86-Triplet Contrastive",
+      "condition": "attention-contrastive",
+      "source": "/data/repos/wiki/artifacts/contextual-roi-20260917/all-results.json",
+      "source_sha256": "bf0fc6a4f38a653c6eeee18cbfd9c474b76c0387ebd31f047ecf08d9af30f688",
+      "n": 3,
+      "mean": {
+        "agentness": 65.3637466430664,
+        "agent": 35.24602649905719,
+        "action": 21.792701450091872,
+        "loc": 26.4604656494533,
+        "duplex": 18.554213743734483,
+        "triplet": 11.928467722675968,
+        "tail47": 5.505980664681716,
+        "deep28": 4.134245037216239,
+        "common39": 19.66838802333571
+      },
+      "sample_sd": {
+        "agentness": 0.0,
+        "agent": 0.0,
+        "action": 0.2694399050847667,
+        "loc": 0.30795324449336187,
+        "duplex": 0.27170835231713464,
+        "triplet": 0.29199023582898753,
+        "tail47": 0.6403174598631494,
+        "deep28": 0.9386283975968395,
+        "common39": 0.2706312526675507
+      },
+      "runs": [
+        {
+          "run": "attention-contrastive-seed0",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.570540610362183,
+            "loc": 26.13607660587877,
+            "duplex": 18.847358199349625,
+            "triplet": 12.264457034531894
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.59695699276068
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.180042175576091
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 5.2180085512809455
+            }
+          },
+          "selected_epoch": 2,
+          "signature": {
+            "checkpoint_sha256": "1068aa4364db0f094d2384a022e8c7614425cff817de768af152f7b5f2f9d4e7",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "attention-contrastive-seed1",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.715151852674104,
+            "loc": 26.496509419754148,
+            "duplex": 18.310816029481096,
+            "triplet": 11.736148499775418
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.967569818863502
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 4.905820171170412
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.6031221352251515
+            }
+          },
+          "selected_epoch": 2,
+          "signature": {
+            "checkpoint_sha256": "ffdb8f9d364a33940b0ec802279be268234f9cb66c84c434c2d84bd5134c802e",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "attention-contrastive-seed2",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 22.092411887239326,
+            "loc": 26.74881092272699,
+            "duplex": 18.50446700237273,
+            "triplet": 11.784797633720594
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.440637258382942
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 5.432079647298645
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.581604425142619
+            }
+          },
+          "selected_epoch": 2,
+          "signature": {
+            "checkpoint_sha256": "14dc319f3ec4541a096cd7a0a174db4db72626d0e72bf556ba180a3718a5fe8e",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        }
+      ]
+    },
+    "92": {
+      "id": 92,
+      "name": "Contextual Residual RoI Head \u2014 MLP, 184-Label Focal + All-184 Contrastive",
+      "condition": "mlp-contrastive-all184",
+      "source": "/data/repos/wiki/artifacts/contextual-roi-all184-20260918/all-results.json",
+      "source_sha256": "37209535eb8040a3a387e28ce2391c9c3ab1dce77f82dabd979b5abe84333ec9",
+      "n": 3,
+      "mean": {
+        "agentness": 65.3637466430664,
+        "agent": 35.24602649905719,
+        "action": 21.773318098801557,
+        "loc": 26.675223524371784,
+        "duplex": 18.844563408738928,
+        "triplet": 12.174049259625491,
+        "tail47": 6.0429958282765135,
+        "deep28": 3.9389769428054846,
+        "common39": 19.562754676892208
+      },
+      "sample_sd": {
+        "agentness": 0.0,
+        "agent": 0.0,
+        "action": 0.34696602393148024,
+        "loc": 0.5469347988793796,
+        "duplex": 0.08641535428100286,
+        "triplet": 0.24294513707885146,
+        "tail47": 0.48136203578274145,
+        "deep28": 0.4221362162019698,
+        "common39": 0.30653377796098913
+      },
+      "runs": [
+        {
+          "run": "mlp-contrastive-all184-seed0",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 22.07305873524059,
+            "loc": 26.97641854174435,
+            "duplex": 18.92305210328718,
+            "triplet": 11.965637472804723
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.292420747952583
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 5.88596624449054
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.7638991857612774
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "f752b522309fd3ff8215d80699f74ddb92e8bbc7c77542b4509b6ef694e985b1",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "mlp-contrastive-all184-seed1",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.853669597343966,
+            "loc": 26.043898602947593,
+            "duplex": 18.75195936622022,
+            "triplet": 12.440876599856068
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.500051400600334
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.58326346732359
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 4.420482595650745
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "699b8261ba1ad202b96266d2681ac926951497a6886cb09399cb62c23c6e8809",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "mlp-contrastive-all184-seed2",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.39322596382011,
+            "loc": 27.005353428423405,
+            "duplex": 18.85867875670938,
+            "triplet": 12.115633706215682
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.895791882123703
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 5.659757773015411
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.6325490470044315
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "fb47d2446a5f3040b5b39e30e3532fb26401eca81d55cad50e1a280d58fcd407",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        }
+      ]
+    },
+    "93": {
+      "id": 93,
+      "name": "Contextual Residual RoI Head \u2014 Attention, 184-Label Focal + All-184 Contrastive",
+      "condition": "attention-contrastive-all184",
+      "source": "/data/repos/wiki/artifacts/contextual-roi-all184-20260918/all-results.json",
+      "source_sha256": "37209535eb8040a3a387e28ce2391c9c3ab1dce77f82dabd979b5abe84333ec9",
+      "n": 3,
+      "mean": {
+        "agentness": 65.3637466430664,
+        "agent": 35.24602649905719,
+        "action": 21.766539147293024,
+        "loc": 26.863962628878653,
+        "duplex": 18.831151222797477,
+        "triplet": 12.122931014513597,
+        "tail47": 5.792496285272485,
+        "deep28": 3.851110364615341,
+        "common39": 19.751916457445194
+      },
+      "sample_sd": {
+        "agentness": 0.0,
+        "agent": 0.0,
+        "action": 0.1772763746825697,
+        "loc": 0.3745624675562505,
+        "duplex": 0.3992200411689291,
+        "triplet": 0.3234272414783727,
+        "tail47": 0.31560584780328393,
+        "deep28": 0.33237682894530657,
+        "common39": 0.3369449172381867
+      },
+      "runs": [
+        {
+          "run": "attention-contrastive-all184-seed0",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.56543614376675,
+            "loc": 26.912109821103513,
+            "duplex": 18.469873081664648,
+            "triplet": 11.999378532756033
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.582422103637303
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 5.707065782450298
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 4.175513425775405
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "11ed2f8ccd3c8f06de2000a60dbfe6dc9e03337250a72214bccd389c65ea55d1",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "attention-contrastive-all184-seed1",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.900182936679233,
+            "loc": 26.467654660344124,
+            "duplex": 18.763828159509494,
+            "triplet": 11.879492136633543
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.53337231354836
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 5.528400074938273
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.8665217470011806
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "cd809d5b0577e450b48049bce7de5757dde4bde73df3dceb91e32d21276ee883",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "attention-contrastive-all184-seed2",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.833998361433093,
+            "loc": 27.212123405188322,
+            "duplex": 19.25975242721829,
+            "triplet": 12.489922374151213
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 20.13995495514992
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.142022998428883
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.5112959210694368
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "673ca41d86d18897d083fdfb2c1f191e043ea2850cf3c046c0e24040ba045ffd",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        }
+      ]
+    },
+    "94": {
+      "id": 94,
+      "name": "Contextual Expert Blend \u2014 184-Label Focal + All-184 Contrastive",
+      "condition": "global",
+      "source": "/data/repos/wiki/artifacts/contextual-gate-20260919/all-results.json",
+      "source_sha256": "1671a017743cb530532d81824bce3a84078a652c88ed446c13d146b146a3d11c",
+      "n": 3,
+      "mean": {
+        "agentness": 65.3637466430664,
+        "agent": 35.24602649905719,
+        "action": 21.5427714176476,
+        "loc": 26.156758748926222,
+        "duplex": 19.200735970378098,
+        "triplet": 12.583621412517445,
+        "tail47": 6.488115064221837,
+        "deep28": 4.7449391246607,
+        "common39": 19.929488037386513
+      },
+      "sample_sd": {
+        "agentness": 0.0,
+        "agent": 0.0,
+        "action": 0.0898958822994572,
+        "loc": 0.13429228137592128,
+        "duplex": 0.2845255589904789,
+        "triplet": 0.31235136118779694,
+        "tail47": 0.5177878866539936,
+        "deep28": 1.135667420731102,
+        "common39": 0.20387944558328108
+      },
+      "runs": [
+        {
+          "run": "global-seed0",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.643200516700745,
+            "loc": 26.12280107755214,
+            "duplex": 18.984542214292652,
+            "triplet": 12.8804066038723
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.89739905870878
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 7.057795843476073
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 6.0342634989647195
+            }
+          },
+          "selected_epoch": null,
+          "signature": {
+            "study": {
+              "protocol": "a3329e4f44191ceb0e0dae1fe337c486aa5551cc973733dbcc5955da1e43f48a",
+              "preparation": "da7b8e7d8b000f83acbbd3c4ebc8bd09b77dc10cfddc87da456879f7dc7f6ea1",
+              "cache": "b84b69c503b88512eaab5c788419383a399ae2c1709655197bee3c6ad14438b2",
+              "seed": 0,
+              "parents": [
+                "86dfc8507c75b3cab6415a463e462b9a73d33591362b1240a5e04024bb56f9ef",
+                "11ed2f8ccd3c8f06de2000a60dbfe6dc9e03337250a72214bccd389c65ea55d1"
+              ],
+              "expert_model": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+              "code": {
+                "common.py": "bc08898b9e0e54d4dcb9da5bb782a90e53185899bf942adbb297a9e86759a5a1",
+                "router.py": "ffc42961c99338e904584d595467f95ff529f8e243a09ada14849aa7a437dbe5",
+                "train_gate.py": "8e71416694ea5af44ca4d65141dbe548e844b4e2ce5577990486ccf73d6a010a",
+                "predict_gate.py": "da95658b9fff7dd85c2876fe3c89600f18bff0b2f0c41d462a6834f82da620a9"
+              }
+            },
+            "checkpoint": "75ca78f555e0fe946e90b560d5b53ab2d04dacc3be185501366e1c3d8f9a9f62",
+            "evaluator": "066564feb2f21c42f3c24775de53534c1c6e6761da5c77abaac0728f1f509dfd",
+            "metric": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "global-seed1",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.469824364916846,
+            "loc": 26.04270486254245,
+            "duplex": 19.094590022190644,
+            "triplet": 12.257739984852718
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.743555915661346
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.046105489075343
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 4.307574993165742
+            }
+          },
+          "selected_epoch": null,
+          "signature": {
+            "study": {
+              "protocol": "a3329e4f44191ceb0e0dae1fe337c486aa5551cc973733dbcc5955da1e43f48a",
+              "preparation": "da7b8e7d8b000f83acbbd3c4ebc8bd09b77dc10cfddc87da456879f7dc7f6ea1",
+              "cache": "b84b69c503b88512eaab5c788419383a399ae2c1709655197bee3c6ad14438b2",
+              "seed": 1,
+              "parents": [
+                "f0e8af3e9a93ba4a25816dd0d60ecbb7566087fd3dc02ca68a8e55db6b6d9ba6",
+                "cd809d5b0577e450b48049bce7de5757dde4bde73df3dceb91e32d21276ee883"
+              ],
+              "expert_model": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+              "code": {
+                "common.py": "bc08898b9e0e54d4dcb9da5bb782a90e53185899bf942adbb297a9e86759a5a1",
+                "router.py": "ffc42961c99338e904584d595467f95ff529f8e243a09ada14849aa7a437dbe5",
+                "train_gate.py": "8e71416694ea5af44ca4d65141dbe548e844b4e2ce5577990486ccf73d6a010a",
+                "predict_gate.py": "da95658b9fff7dd85c2876fe3c89600f18bff0b2f0c41d462a6834f82da620a9"
+              }
+            },
+            "checkpoint": "c165f1fb17eaf8c7413bb0202b8bc47f1f4feaca55e2ed3ebb9405a34604b812",
+            "evaluator": "066564feb2f21c42f3c24775de53534c1c6e6761da5c77abaac0728f1f509dfd",
+            "metric": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "global-seed2",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.51528937132521,
+            "loc": 26.304770306684077,
+            "duplex": 19.523075674651,
+            "triplet": 12.612717648827319
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 20.14750913778941
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.3604438601140965
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.892978881851637
+            }
+          },
+          "selected_epoch": null,
+          "signature": {
+            "study": {
+              "protocol": "a3329e4f44191ceb0e0dae1fe337c486aa5551cc973733dbcc5955da1e43f48a",
+              "preparation": "da7b8e7d8b000f83acbbd3c4ebc8bd09b77dc10cfddc87da456879f7dc7f6ea1",
+              "cache": "b84b69c503b88512eaab5c788419383a399ae2c1709655197bee3c6ad14438b2",
+              "seed": 2,
+              "parents": [
+                "33e19d9113047343e92038dd3b2fd95ef4d42a29a4a0de0e76cfa1be53087c8d",
+                "673ca41d86d18897d083fdfb2c1f191e043ea2850cf3c046c0e24040ba045ffd"
+              ],
+              "expert_model": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+              "code": {
+                "common.py": "bc08898b9e0e54d4dcb9da5bb782a90e53185899bf942adbb297a9e86759a5a1",
+                "router.py": "ffc42961c99338e904584d595467f95ff529f8e243a09ada14849aa7a437dbe5",
+                "train_gate.py": "8e71416694ea5af44ca4d65141dbe548e844b4e2ce5577990486ccf73d6a010a",
+                "predict_gate.py": "da95658b9fff7dd85c2876fe3c89600f18bff0b2f0c41d462a6834f82da620a9"
+              }
+            },
+            "checkpoint": "440697fd488dd3a1c27322314e3c9e85b30caaa49b3e0654d0b1bd0e02cb34c0",
+            "evaluator": "066564feb2f21c42f3c24775de53534c1c6e6761da5c77abaac0728f1f509dfd",
+            "metric": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        }
+      ]
+    },
+    "95": {
+      "id": 95,
+      "name": "Contextual Classwise Gate \u2014 184-Label Focal + All-184 Contrastive",
+      "condition": "class",
+      "source": "/data/repos/wiki/artifacts/contextual-gate-20260919/all-results.json",
+      "source_sha256": "1671a017743cb530532d81824bce3a84078a652c88ed446c13d146b146a3d11c",
+      "n": 3,
+      "mean": {
+        "agentness": 65.3637466430664,
+        "agent": 35.24602649905719,
+        "action": 21.5427714176476,
+        "loc": 26.156758748926222,
+        "duplex": 19.20328732668327,
+        "triplet": 12.590248203989796,
+        "tail47": 6.4995829390645925,
+        "deep28": 4.74673381936182,
+        "common39": 19.93028070274581
+      },
+      "sample_sd": {
+        "agentness": 0.0,
+        "agent": 0.0,
+        "action": 0.0898958822994572,
+        "loc": 0.13429228137592128,
+        "duplex": 0.2860834654084617,
+        "triplet": 0.3039941736306738,
+        "tail47": 0.5051754506067752,
+        "deep28": 1.1323627242680807,
+        "common39": 0.20697178058998944
+      },
+      "runs": [
+        {
+          "run": "class-seed0",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.643200516700745,
+            "loc": 26.12280107755214,
+            "duplex": 18.99106799202914,
+            "triplet": 12.880309035747073
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.895803824449196
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 7.058941019589993
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 6.0312634029458945
+            }
+          },
+          "selected_epoch": null,
+          "signature": {
+            "study": {
+              "protocol": "a3329e4f44191ceb0e0dae1fe337c486aa5551cc973733dbcc5955da1e43f48a",
+              "preparation": "da7b8e7d8b000f83acbbd3c4ebc8bd09b77dc10cfddc87da456879f7dc7f6ea1",
+              "cache": "b84b69c503b88512eaab5c788419383a399ae2c1709655197bee3c6ad14438b2",
+              "seed": 0,
+              "parents": [
+                "86dfc8507c75b3cab6415a463e462b9a73d33591362b1240a5e04024bb56f9ef",
+                "11ed2f8ccd3c8f06de2000a60dbfe6dc9e03337250a72214bccd389c65ea55d1"
+              ],
+              "expert_model": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+              "code": {
+                "common.py": "bc08898b9e0e54d4dcb9da5bb782a90e53185899bf942adbb297a9e86759a5a1",
+                "router.py": "ffc42961c99338e904584d595467f95ff529f8e243a09ada14849aa7a437dbe5",
+                "train_gate.py": "8e71416694ea5af44ca4d65141dbe548e844b4e2ce5577990486ccf73d6a010a",
+                "predict_gate.py": "da95658b9fff7dd85c2876fe3c89600f18bff0b2f0c41d462a6834f82da620a9"
+              }
+            },
+            "checkpoint": "1a9e2a71f098f156a6b040eeb5da214632f25556ea2c014731d4d5d6e4c6a4ce",
+            "evaluator": "066564feb2f21c42f3c24775de53534c1c6e6761da5c77abaac0728f1f509dfd",
+            "metric": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "class-seed1",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.469824364916846,
+            "loc": 26.04270486254245,
+            "duplex": 19.090157479598965,
+            "triplet": 12.274013252506508
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.74271233876546
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.076582095823548
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 4.31597115754682
+            }
+          },
+          "selected_epoch": null,
+          "signature": {
+            "study": {
+              "protocol": "a3329e4f44191ceb0e0dae1fe337c486aa5551cc973733dbcc5955da1e43f48a",
+              "preparation": "da7b8e7d8b000f83acbbd3c4ebc8bd09b77dc10cfddc87da456879f7dc7f6ea1",
+              "cache": "b84b69c503b88512eaab5c788419383a399ae2c1709655197bee3c6ad14438b2",
+              "seed": 1,
+              "parents": [
+                "f0e8af3e9a93ba4a25816dd0d60ecbb7566087fd3dc02ca68a8e55db6b6d9ba6",
+                "cd809d5b0577e450b48049bce7de5757dde4bde73df3dceb91e32d21276ee883"
+              ],
+              "expert_model": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+              "code": {
+                "common.py": "bc08898b9e0e54d4dcb9da5bb782a90e53185899bf942adbb297a9e86759a5a1",
+                "router.py": "ffc42961c99338e904584d595467f95ff529f8e243a09ada14849aa7a437dbe5",
+                "train_gate.py": "8e71416694ea5af44ca4d65141dbe548e844b4e2ce5577990486ccf73d6a010a",
+                "predict_gate.py": "da95658b9fff7dd85c2876fe3c89600f18bff0b2f0c41d462a6834f82da620a9"
+              }
+            },
+            "checkpoint": "f4a4d63c0d8f1d4847b88e9fd87efbcd31ffb385501f32c68d29282f172e1792",
+            "evaluator": "066564feb2f21c42f3c24775de53534c1c6e6761da5c77abaac0728f1f509dfd",
+            "metric": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "class-seed2",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.51528937132521,
+            "loc": 26.304770306684077,
+            "duplex": 19.528636508421705,
+            "triplet": 12.616422323715808
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 20.152325945022778
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.3632257017802365
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.8929668975927467
+            }
+          },
+          "selected_epoch": null,
+          "signature": {
+            "study": {
+              "protocol": "a3329e4f44191ceb0e0dae1fe337c486aa5551cc973733dbcc5955da1e43f48a",
+              "preparation": "da7b8e7d8b000f83acbbd3c4ebc8bd09b77dc10cfddc87da456879f7dc7f6ea1",
+              "cache": "b84b69c503b88512eaab5c788419383a399ae2c1709655197bee3c6ad14438b2",
+              "seed": 2,
+              "parents": [
+                "33e19d9113047343e92038dd3b2fd95ef4d42a29a4a0de0e76cfa1be53087c8d",
+                "673ca41d86d18897d083fdfb2c1f191e043ea2850cf3c046c0e24040ba045ffd"
+              ],
+              "expert_model": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+              "code": {
+                "common.py": "bc08898b9e0e54d4dcb9da5bb782a90e53185899bf942adbb297a9e86759a5a1",
+                "router.py": "ffc42961c99338e904584d595467f95ff529f8e243a09ada14849aa7a437dbe5",
+                "train_gate.py": "8e71416694ea5af44ca4d65141dbe548e844b4e2ce5577990486ccf73d6a010a",
+                "predict_gate.py": "da95658b9fff7dd85c2876fe3c89600f18bff0b2f0c41d462a6834f82da620a9"
+              }
+            },
+            "checkpoint": "8250ec1d927f446b57c13076ac04f0563ac5b92acbefbe72af297950c2132ac1",
+            "evaluator": "066564feb2f21c42f3c24775de53534c1c6e6761da5c77abaac0728f1f509dfd",
+            "metric": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        }
+      ]
+    },
+    "96": {
+      "id": 96,
+      "name": "Contextual Generic Gate \u2014 184-Label Focal + All-184 Contrastive",
+      "condition": "generic",
+      "source": "/data/repos/wiki/artifacts/contextual-gate-20260919/all-results.json",
+      "source_sha256": "1671a017743cb530532d81824bce3a84078a652c88ed446c13d146b146a3d11c",
+      "n": 3,
+      "mean": {
+        "agentness": 65.3637466430664,
+        "agent": 35.24602649905719,
+        "action": 21.5427714176476,
+        "loc": 26.156758748926222,
+        "duplex": 19.180031479250793,
+        "triplet": 12.587944531627361,
+        "tail47": 6.534273653168971,
+        "deep28": 4.728007524856366,
+        "common39": 19.883394051820805
+      },
+      "sample_sd": {
+        "agentness": 0.0,
+        "agent": 0.0,
+        "action": 0.0898958822994572,
+        "loc": 0.13429228137592128,
+        "duplex": 0.3458079619872159,
+        "triplet": 0.28543591681139524,
+        "tail47": 0.4477028406696125,
+        "deep28": 1.0582839011698635,
+        "common39": 0.3165757606035297
+      },
+      "runs": [
+        {
+          "run": "generic-seed0",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.643200516700745,
+            "loc": 26.12280107755214,
+            "duplex": 18.888524814831968,
+            "triplet": 12.814299928809538
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.784976488504654
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 7.030121506934867
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 5.889075184124522
+            }
+          },
+          "selected_epoch": null,
+          "signature": {
+            "study": {
+              "protocol": "a3329e4f44191ceb0e0dae1fe337c486aa5551cc973733dbcc5955da1e43f48a",
+              "preparation": "da7b8e7d8b000f83acbbd3c4ebc8bd09b77dc10cfddc87da456879f7dc7f6ea1",
+              "cache": "b84b69c503b88512eaab5c788419383a399ae2c1709655197bee3c6ad14438b2",
+              "seed": 0,
+              "parents": [
+                "86dfc8507c75b3cab6415a463e462b9a73d33591362b1240a5e04024bb56f9ef",
+                "11ed2f8ccd3c8f06de2000a60dbfe6dc9e03337250a72214bccd389c65ea55d1"
+              ],
+              "expert_model": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+              "code": {
+                "common.py": "bc08898b9e0e54d4dcb9da5bb782a90e53185899bf942adbb297a9e86759a5a1",
+                "router.py": "ffc42961c99338e904584d595467f95ff529f8e243a09ada14849aa7a437dbe5",
+                "train_gate.py": "8e71416694ea5af44ca4d65141dbe548e844b4e2ce5577990486ccf73d6a010a",
+                "predict_gate.py": "da95658b9fff7dd85c2876fe3c89600f18bff0b2f0c41d462a6834f82da620a9"
+              }
+            },
+            "checkpoint": "ae3e44242247593a2a7f162baea615ff44674f0f2f25a275e9bdfe8320a4c1cd",
+            "evaluator": "066564feb2f21c42f3c24775de53534c1c6e6761da5c77abaac0728f1f509dfd",
+            "metric": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "generic-seed1",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.469824364916846,
+            "loc": 26.04270486254245,
+            "duplex": 19.08945655453076,
+            "triplet": 12.267291320671955
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.627716461817425
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.1597045014235885
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 4.4774831396727155
+            }
+          },
+          "selected_epoch": null,
+          "signature": {
+            "study": {
+              "protocol": "a3329e4f44191ceb0e0dae1fe337c486aa5551cc973733dbcc5955da1e43f48a",
+              "preparation": "da7b8e7d8b000f83acbbd3c4ebc8bd09b77dc10cfddc87da456879f7dc7f6ea1",
+              "cache": "b84b69c503b88512eaab5c788419383a399ae2c1709655197bee3c6ad14438b2",
+              "seed": 1,
+              "parents": [
+                "f0e8af3e9a93ba4a25816dd0d60ecbb7566087fd3dc02ca68a8e55db6b6d9ba6",
+                "cd809d5b0577e450b48049bce7de5757dde4bde73df3dceb91e32d21276ee883"
+              ],
+              "expert_model": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+              "code": {
+                "common.py": "bc08898b9e0e54d4dcb9da5bb782a90e53185899bf942adbb297a9e86759a5a1",
+                "router.py": "ffc42961c99338e904584d595467f95ff529f8e243a09ada14849aa7a437dbe5",
+                "train_gate.py": "8e71416694ea5af44ca4d65141dbe548e844b4e2ce5577990486ccf73d6a010a",
+                "predict_gate.py": "da95658b9fff7dd85c2876fe3c89600f18bff0b2f0c41d462a6834f82da620a9"
+              }
+            },
+            "checkpoint": "417e7637aeca0096d5d243703ddd42473d9180c9cb46ea3d225d73ea465b0174",
+            "evaluator": "066564feb2f21c42f3c24775de53534c1c6e6761da5c77abaac0728f1f509dfd",
+            "metric": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "generic-seed2",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.51528937132521,
+            "loc": 26.304770306684077,
+            "duplex": 19.56211306838965,
+            "triplet": 12.682242345400589
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 20.237489205140335
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.412994951148458
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.817464250771861
+            }
+          },
+          "selected_epoch": null,
+          "signature": {
+            "study": {
+              "protocol": "a3329e4f44191ceb0e0dae1fe337c486aa5551cc973733dbcc5955da1e43f48a",
+              "preparation": "da7b8e7d8b000f83acbbd3c4ebc8bd09b77dc10cfddc87da456879f7dc7f6ea1",
+              "cache": "b84b69c503b88512eaab5c788419383a399ae2c1709655197bee3c6ad14438b2",
+              "seed": 2,
+              "parents": [
+                "33e19d9113047343e92038dd3b2fd95ef4d42a29a4a0de0e76cfa1be53087c8d",
+                "673ca41d86d18897d083fdfb2c1f191e043ea2850cf3c046c0e24040ba045ffd"
+              ],
+              "expert_model": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+              "code": {
+                "common.py": "bc08898b9e0e54d4dcb9da5bb782a90e53185899bf942adbb297a9e86759a5a1",
+                "router.py": "ffc42961c99338e904584d595467f95ff529f8e243a09ada14849aa7a437dbe5",
+                "train_gate.py": "8e71416694ea5af44ca4d65141dbe548e844b4e2ce5577990486ccf73d6a010a",
+                "predict_gate.py": "da95658b9fff7dd85c2876fe3c89600f18bff0b2f0c41d462a6834f82da620a9"
+              }
+            },
+            "checkpoint": "cbfb945d3919d0aacfc7d0fb16686d32541439e8fc4775de53b65d2866973149",
+            "evaluator": "066564feb2f21c42f3c24775de53534c1c6e6761da5c77abaac0728f1f509dfd",
+            "metric": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        }
+      ]
+    },
+    "97": {
+      "id": 97,
+      "name": "Contextual Factorized Gate \u2014 184-Label Focal + All-184 Contrastive",
+      "condition": "factorized",
+      "source": "/data/repos/wiki/artifacts/contextual-gate-20260919/all-results.json",
+      "source_sha256": "1671a017743cb530532d81824bce3a84078a652c88ed446c13d146b146a3d11c",
+      "n": 3,
+      "mean": {
+        "agentness": 65.3637466430664,
+        "agent": 35.24602649905719,
+        "action": 21.5427714176476,
+        "loc": 26.156758748926222,
+        "duplex": 19.156593922845587,
+        "triplet": 12.593321594093789,
+        "tail47": 6.524977683059951,
+        "deep28": 4.776718143711887,
+        "common39": 19.906453999698673
+      },
+      "sample_sd": {
+        "agentness": 0.0,
+        "agent": 0.0,
+        "action": 0.0898958822994572,
+        "loc": 0.13429228137592128,
+        "duplex": 0.368138308426557,
+        "triplet": 0.33418298618909065,
+        "tail47": 0.4852647630528878,
+        "deep28": 1.0917402944767722,
+        "common39": 0.32446310997936095
+      },
+      "runs": [
+        {
+          "run": "factorized-seed0",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.643200516700745,
+            "loc": 26.12280107755214,
+            "duplex": 18.84418356950794,
+            "triplet": 12.865111607998653
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.871262605373676
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 7.051496950602357
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 5.967485386961406
+            }
+          },
+          "selected_epoch": null,
+          "signature": {
+            "study": {
+              "protocol": "a3329e4f44191ceb0e0dae1fe337c486aa5551cc973733dbcc5955da1e43f48a",
+              "preparation": "da7b8e7d8b000f83acbbd3c4ebc8bd09b77dc10cfddc87da456879f7dc7f6ea1",
+              "cache": "b84b69c503b88512eaab5c788419383a399ae2c1709655197bee3c6ad14438b2",
+              "seed": 0,
+              "parents": [
+                "86dfc8507c75b3cab6415a463e462b9a73d33591362b1240a5e04024bb56f9ef",
+                "11ed2f8ccd3c8f06de2000a60dbfe6dc9e03337250a72214bccd389c65ea55d1"
+              ],
+              "expert_model": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+              "code": {
+                "common.py": "bc08898b9e0e54d4dcb9da5bb782a90e53185899bf942adbb297a9e86759a5a1",
+                "router.py": "ffc42961c99338e904584d595467f95ff529f8e243a09ada14849aa7a437dbe5",
+                "train_gate.py": "8e71416694ea5af44ca4d65141dbe548e844b4e2ce5577990486ccf73d6a010a",
+                "predict_gate.py": "da95658b9fff7dd85c2876fe3c89600f18bff0b2f0c41d462a6834f82da620a9"
+              }
+            },
+            "checkpoint": "14b885d4c5cb13d00e473dba747ae2a016f4132a33e190e8b93fa84e62b17a88",
+            "evaluator": "066564feb2f21c42f3c24775de53534c1c6e6761da5c77abaac0728f1f509dfd",
+            "metric": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "factorized-seed1",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.469824364916846,
+            "loc": 26.04270486254245,
+            "duplex": 19.063148058105106,
+            "triplet": 12.220201146864701
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 19.601021085029995
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.095690985408393
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 4.539736391344507
+            }
+          },
+          "selected_epoch": null,
+          "signature": {
+            "study": {
+              "protocol": "a3329e4f44191ceb0e0dae1fe337c486aa5551cc973733dbcc5955da1e43f48a",
+              "preparation": "da7b8e7d8b000f83acbbd3c4ebc8bd09b77dc10cfddc87da456879f7dc7f6ea1",
+              "cache": "b84b69c503b88512eaab5c788419383a399ae2c1709655197bee3c6ad14438b2",
+              "seed": 1,
+              "parents": [
+                "f0e8af3e9a93ba4a25816dd0d60ecbb7566087fd3dc02ca68a8e55db6b6d9ba6",
+                "cd809d5b0577e450b48049bce7de5757dde4bde73df3dceb91e32d21276ee883"
+              ],
+              "expert_model": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+              "code": {
+                "common.py": "bc08898b9e0e54d4dcb9da5bb782a90e53185899bf942adbb297a9e86759a5a1",
+                "router.py": "ffc42961c99338e904584d595467f95ff529f8e243a09ada14849aa7a437dbe5",
+                "train_gate.py": "8e71416694ea5af44ca4d65141dbe548e844b4e2ce5577990486ccf73d6a010a",
+                "predict_gate.py": "da95658b9fff7dd85c2876fe3c89600f18bff0b2f0c41d462a6834f82da620a9"
+              }
+            },
+            "checkpoint": "af8f5d15e9b02f9bf38f5e8c343af199cc7241ca65b210ba408ad470ed439d8c",
+            "evaluator": "066564feb2f21c42f3c24775de53534c1c6e6761da5c77abaac0728f1f509dfd",
+            "metric": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        },
+        {
+          "run": "factorized-seed2",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 21.51528937132521,
+            "loc": 26.304770306684077,
+            "duplex": 19.56245014092372,
+            "triplet": 12.694652027418014
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 20.247078308692345
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.427745113169101
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.822932652829747
+            }
+          },
+          "selected_epoch": null,
+          "signature": {
+            "study": {
+              "protocol": "a3329e4f44191ceb0e0dae1fe337c486aa5551cc973733dbcc5955da1e43f48a",
+              "preparation": "da7b8e7d8b000f83acbbd3c4ebc8bd09b77dc10cfddc87da456879f7dc7f6ea1",
+              "cache": "b84b69c503b88512eaab5c788419383a399ae2c1709655197bee3c6ad14438b2",
+              "seed": 2,
+              "parents": [
+                "33e19d9113047343e92038dd3b2fd95ef4d42a29a4a0de0e76cfa1be53087c8d",
+                "673ca41d86d18897d083fdfb2c1f191e043ea2850cf3c046c0e24040ba045ffd"
+              ],
+              "expert_model": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+              "code": {
+                "common.py": "bc08898b9e0e54d4dcb9da5bb782a90e53185899bf942adbb297a9e86759a5a1",
+                "router.py": "ffc42961c99338e904584d595467f95ff529f8e243a09ada14849aa7a437dbe5",
+                "train_gate.py": "8e71416694ea5af44ca4d65141dbe548e844b4e2ce5577990486ccf73d6a010a",
+                "predict_gate.py": "da95658b9fff7dd85c2876fe3c89600f18bff0b2f0c41d462a6834f82da620a9"
+              }
+            },
+            "checkpoint": "6f7d18969bcb3b213e3ef45246c1913b6cfb5da875c409d52ff219de007f601c",
+            "evaluator": "066564feb2f21c42f3c24775de53534c1c6e6761da5c77abaac0728f1f509dfd",
+            "metric": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+          }
+        }
+      ]
+    },
+    "102": {
+      "id": 102,
+      "name": "Contextual Residual RoI Head \u2014 DCB over 184 Labels (No Contrastive)",
+      "condition": "attention-classification-dcb",
+      "source": "/data/repos/wiki/artifacts/contextual-roi-dcb-20260921/all-results.json",
+      "source_sha256": "ec0d8d48f61c16e24d2c25c505ebb5efe3a98c7f364bb53b3c2a5fd0cfc6c55b",
+      "n": 3,
+      "mean": {
+        "agentness": 65.3637466430664,
+        "agent": 35.24602649905719,
+        "action": 24.769953529717345,
+        "loc": 28.789730629883707,
+        "duplex": 21.417646351490536,
+        "triplet": 12.900151528156806,
+        "tail47": 5.843481860312647,
+        "deep28": 4.080939612657641,
+        "common39": 21.404343179148487
+      },
+      "sample_sd": {
+        "agentness": 0.0,
+        "agent": 0.0,
+        "action": 0.4968559106958369,
+        "loc": 0.32029531283378615,
+        "duplex": 0.38659532153513226,
+        "triplet": 0.3728680243450077,
+        "tail47": 0.49068064715598886,
+        "deep28": 0.6311268123328682,
+        "common39": 0.2592525172215645
+      },
+      "runs": [
+        {
+          "run": "attention-classification-dcb-seed0",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 24.77606995471499,
+            "loc": 28.610141242854297,
+            "duplex": 21.498942770947682,
+            "triplet": 13.319688918040578
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 21.647787772692165
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.409138804606281
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 4.653104466298828
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "5506c850155b09b9ca50f57ca6699b221ae9501162eae9ab184a84062a4fbb6d",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9",
+            "evaluator_sha256": "631946eb63763cdc2dd348077e7f0fe5deb396cce6bedcfcdb467479b554fe84"
+          }
+        },
+        {
+          "run": "attention-classification-dcb-seed1",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 24.27006764286621,
+            "loc": 28.59952563326806,
+            "duplex": 20.99686775390743,
+            "triplet": 12.606586368814067
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 21.131747044049778
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 5.532516872341883
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.4039715395941
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "c70030dedab0eefb7434ed067290e538ead7a525a21adac978fb4f8f29450c77",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9",
+            "evaluator_sha256": "631946eb63763cdc2dd348077e7f0fe5deb396cce6bedcfcdb467479b554fe84"
+          }
+        },
+        {
+          "run": "attention-classification-dcb-seed2",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 25.26372299157083,
+            "loc": 29.159525013528764,
+            "duplex": 21.757128529616498,
+            "triplet": 12.774179297615774
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 21.433494720703518
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 5.588789903989775
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 4.185742832079995
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "6fc1faaccb319645f18fe6271a81dfa1c1c827504aa9a14dfcdaacd21ba478f6",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9",
+            "evaluator_sha256": "631946eb63763cdc2dd348077e7f0fe5deb396cce6bedcfcdb467479b554fe84"
+          }
+        }
+      ]
+    },
+    "103": {
+      "id": 103,
+      "name": "Contextual Residual RoI Head \u2014 DCB over 184 Labels + All-184 Contrastive",
+      "condition": "attention-contrastive-all184-dcb",
+      "source": "/data/repos/wiki/artifacts/contextual-roi-dcb-20260921/all-results.json",
+      "source_sha256": "ec0d8d48f61c16e24d2c25c505ebb5efe3a98c7f364bb53b3c2a5fd0cfc6c55b",
+      "n": 3,
+      "mean": {
+        "agentness": 65.3637466430664,
+        "agent": 35.24602649905719,
+        "action": 24.986526770884115,
+        "loc": 28.43890133081004,
+        "duplex": 21.325014834552782,
+        "triplet": 12.877972820538183,
+        "tail47": 5.808295972082196,
+        "deep28": 4.201243336919496,
+        "common39": 21.39783979175437
+      },
+      "sample_sd": {
+        "agentness": 0.0,
+        "agent": 0.0,
+        "action": 0.2386531089928385,
+        "loc": 0.10579078399492577,
+        "duplex": 0.658664740935458,
+        "triplet": 0.45161922208618316,
+        "tail47": 0.47005936302760226,
+        "deep28": 0.6006096181162428,
+        "common39": 0.4311520764006499
+      },
+      "runs": [
+        {
+          "run": "attention-contrastive-all184-dcb-seed0",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 24.773823646828532,
+            "loc": 28.497220711782575,
+            "duplex": 21.33372154424195,
+            "triplet": 13.31772382844911
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 21.834878738109882
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.250297414049744
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 4.8936711159102355
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "96078cbea72afb58a8b5aa23eb2d93d00e1ccbaeb6b243fa269e99dbd83ebfcf",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9",
+            "evaluator_sha256": "631946eb63763cdc2dd348077e7f0fe5deb396cce6bedcfcdb467479b554fe84"
+          }
+        },
+        {
+          "run": "attention-contrastive-all184-dcb-seed1",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 24.94114388660951,
+            "loc": 28.316785589791834,
+            "duplex": 20.662039899545228,
+            "triplet": 12.900840411311947
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 21.38581446500925
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 5.8601172603716325
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.8887895057061024
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "141972e3697f8f5b92c88409ec517a1a16273f9ae6b4db2caa99a02bd27a7557",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9",
+            "evaluator_sha256": "631946eb63763cdc2dd348077e7f0fe5deb396cce6bedcfcdb467479b554fe84"
+          }
+        },
+        {
+          "run": "attention-contrastive-all184-dcb-seed2",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 25.2446127792143,
+            "loc": 28.50269769085571,
+            "duplex": 21.979283059871165,
+            "triplet": 12.415354221853493
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 20.972826172143986
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 5.314473241825212
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.821269389142149
+            }
+          },
+          "selected_epoch": 1,
+          "signature": {
+            "checkpoint_sha256": "949a2511c48a5019c25fb4602755ee777b1494ba66204cac280926a71d012d7d",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9",
+            "evaluator_sha256": "631946eb63763cdc2dd348077e7f0fe5deb396cce6bedcfcdb467479b554fe84"
+          }
+        }
+      ]
+    },
+    "104": {
+      "id": 104,
+      "name": "Contextual Expert Blend \u2014 DCB over 184 Labels + All-184 Contrastive",
+      "condition": "attention-global-dcb",
+      "source": "/data/repos/wiki/artifacts/contextual-roi-dcb-20260921/all-results.json",
+      "source_sha256": "ec0d8d48f61c16e24d2c25c505ebb5efe3a98c7f364bb53b3c2a5fd0cfc6c55b",
+      "n": 3,
+      "mean": {
+        "agentness": 65.3637466430664,
+        "agent": 35.24602649905719,
+        "action": 24.769953529717345,
+        "loc": 28.789730629883707,
+        "duplex": 21.921661420720536,
+        "triplet": 13.42794924974261,
+        "tail47": 6.234424319669789,
+        "deep28": 4.544689190524098,
+        "common39": 22.097069037266266
+      },
+      "sample_sd": {
+        "agentness": 0.0,
+        "agent": 0.0,
+        "action": 0.4968559106958369,
+        "loc": 0.32029531283378615,
+        "duplex": 0.7395800010116259,
+        "triplet": 0.29855080836968284,
+        "tail47": 0.3571387325930757,
+        "deep28": 0.6324333929003814,
+        "common39": 0.22910894116695396
+      },
+      "runs": [
+        {
+          "run": "attention-global-dcb-seed0",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 24.77606995471499,
+            "loc": 28.610141242854297,
+            "duplex": 21.854717318187184,
+            "triplet": 13.77175959420856
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 22.358457687573555
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.646627133756757
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 5.201474848477768
+            }
+          },
+          "selected_epoch": [
+            1,
+            1
+          ],
+          "signature": {
+            "checkpoint_sha256": "2d07809394c35f49744c425f03083f171ef6f6c3ae5f1d9d7a30cc1c23769c18",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9",
+            "evaluator_sha256": "631946eb63763cdc2dd348077e7f0fe5deb396cce6bedcfcdb467479b554fe84"
+          }
+        },
+        {
+          "run": "attention-global-dcb-seed1",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 24.27006764286621,
+            "loc": 28.59952563326806,
+            "duplex": 21.2178292991736,
+            "triplet": 13.234171252889928
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 21.93104926745097
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.017612900381828
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 3.9398068570714844
+            }
+          },
+          "selected_epoch": [
+            1,
+            1
+          ],
+          "signature": {
+            "checkpoint_sha256": "95dc0dd94b0bb0c902ab2aefd38d73b5f1ccc938969a57a4267423d9af8d6f10",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9",
+            "evaluator_sha256": "631946eb63763cdc2dd348077e7f0fe5deb396cce6bedcfcdb467479b554fe84"
+          }
+        },
+        {
+          "run": "attention-global-dcb-seed2",
+          "summary": {
+            "agentness": 65.3637466430664,
+            "agent": 35.24602649905719,
+            "action": 25.26372299157083,
+            "loc": 29.159525013528764,
+            "duplex": 22.69243764480082,
+            "triplet": 13.277916902129343
+          },
+          "tail": {
+            "common39": {
+              "classes": 39,
+              "mAP": 22.001700156774277
+            },
+            "tail47": {
+              "classes": 47,
+              "mAP": 6.039032924870782
+            },
+            "deep28": {
+              "classes": 28,
+              "mAP": 4.492785866023041
+            }
+          },
+          "selected_epoch": [
+            1,
+            1
+          ],
+          "signature": {
+            "checkpoint_sha256": "3abf2e9c53dfc3b4d775f57c5aef5cdf9e6111bd41c0686aecffdfbb4b8d1495",
+            "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+            "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+            "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9",
+            "evaluator_sha256": "631946eb63763cdc2dd348077e7f0fe5deb396cce6bedcfcdb467479b554fe84"
+          }
+        }
+      ]
+    }
+  },
+  "sources": {
+    "/data/repos/ROAD_Reason/research/post-proposal/contextual-gate/common.py": "bc08898b9e0e54d4dcb9da5bb782a90e53185899bf942adbb297a9e86759a5a1",
+    "/data/repos/ROAD_Reason/research/post-proposal/contextual-gate/router.py": "ffc42961c99338e904584d595467f95ff529f8e243a09ada14849aa7a437dbe5",
+    "/data/repos/ROAD_Reason/research/post-proposal/contextual-gate/train_gate.py": "8e71416694ea5af44ca4d65141dbe548e844b4e2ce5577990486ccf73d6a010a",
+    "/data/repos/ROAD_Reason/research/post-proposal/contextual-roi/cache_context.py": "7919478981274b08ab85764301251a3a15839dc89290d6ad4c6070638eb2e050",
+    "/data/repos/ROAD_Reason/research/post-proposal/contextual-roi/evaluate_cached.py": "1e411ed9ef954882084c5861e73cff7242c095ad11d523e1c5cbca1792ce2ab3",
+    "/data/repos/ROAD_Reason/research/post-proposal/contextual-roi/model.py": "12ac3050a1c3a050e9f3e88e1fdb95b14cb99ae2b9460cc80fd87c8d21158680",
+    "/data/repos/ROAD_Reason/research/post-proposal/contextual-roi/train_cached.py": "aeafe97b327afa759068359b8b6638555e11b0d56863e432a6afea5089e2174e",
+    "/data/repos/ROAD_Reason/research/post-proposal/contextual-roi-all184/model.py": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+    "/data/repos/ROAD_Reason/research/post-proposal/contextual-roi-dcb/dcb.py": "3a3967897a1cdc87fbe285d624084792c5a10e3a028c7498e32d6bd92ffa307a",
+    "/data/repos/ROAD_Reason/research/post-proposal/contextual-roi-dcb/model.py": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+    "/data/repos/ROAD_Reason/research/post-proposal/contextual-roi-dcb/prepare_blend.py": "63f05c86272dd07dfd799d9b31e285d5740da17f3b4dc94af606efee9c439041",
+    "/data/repos/ROAD_Reason/research/post-proposal/contextual-roi-dcb/protocol.json": "758a2c0002d7f125faa8007da32b38f547045c12f431d06726347cff865f8d73",
+    "/data/repos/ROAD_Reason/research/post-proposal/stage56-full/metric.py": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+    "/data/repos/wiki/artifacts/contextual-gate-20260919/all-results.json": "1671a017743cb530532d81824bce3a84078a652c88ed446c13d146b146a3d11c",
+    "/data/repos/wiki/artifacts/contextual-gate-20260919/protocol.json": "a3329e4f44191ceb0e0dae1fe337c486aa5551cc973733dbcc5955da1e43f48a",
+    "/data/repos/wiki/artifacts/contextual-roi-20260917/all-results.json": "bf0fc6a4f38a653c6eeee18cbfd9c474b76c0387ebd31f047ecf08d9af30f688",
+    "/data/repos/wiki/artifacts/contextual-roi-20260917/protocol.json": "2074ea8077079b9365b5525cda531de0f46087f16200aebb6ac232f6f11dce86",
+    "/data/repos/wiki/artifacts/contextual-roi-all184-20260918/all-results.json": "37209535eb8040a3a387e28ce2391c9c3ab1dce77f82dabd979b5abe84333ec9",
+    "/data/repos/wiki/artifacts/contextual-roi-all184-20260918/protocol.json": "132479554163198ae8f07349ddf3da107fbf962bce20f7a3fa5ce13fa2819325",
+    "/data/repos/wiki/artifacts/contextual-roi-dcb-20260921/all-results.json": "ec0d8d48f61c16e24d2c25c505ebb5efe3a98c7f364bb53b3c2a5fd0cfc6c55b",
+    "/data/repos/wiki/artifacts/contextual-roi-dcb-20260921/protocol.json": "758a2c0002d7f125faa8007da32b38f547045c12f431d06726347cff865f8d73",
+    "/home/brandon/Downloads/ROAD-Waymo Results(1).xlsx": "c1619363acdb57c18a348f89ce5933569b1b00cabc8b3ccf39cf4c290d1c8259"
+  }
+}

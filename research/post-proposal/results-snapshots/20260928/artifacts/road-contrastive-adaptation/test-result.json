@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "unit_tests": [
+    "multiple-positive averaging",
+    "no-positive mask",
+    "prototype permutation",
+    "duplicate-crop invariance"
+  ],
+  "manifest_checks": [
+    "disjoint 32/8 video partitions",
+    "941/247 verified crop rows",
+    "decoded and hashed frame bytes"
+  ],
+  "gradient_smoke": "collected/smoke.json",
+  "pilot_not_final_detector_study": true
+}

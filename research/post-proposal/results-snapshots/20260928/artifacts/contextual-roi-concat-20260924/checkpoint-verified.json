@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "checkpoints": {
+    "/data/repos/wiki/artifacts/contextual-roi-concat-20260924/runs/attention-classification-dcb-seed2/resume.pt": {
+      "sha256": "8ca2eb75a608f2c842aff1700d9093dc84c47a119a1e9964fbbf6f6ae416b29c",
+      "epoch": 3,
+      "position": 0,
+      "bytes": 90210010,
+      "verified_at": 1790630807.912674
+    },
+    "/data/repos/wiki/artifacts/contextual-roi-concat-20260924/runs/attention-classification-dcb-seed1/resume.pt": {
+      "sha256": "a8f86d22c387f2dc8b0ae67cc02771a7daf6c32f441cd3330ccf63eaa6e44c30",
+      "epoch": 3,
+      "position": 0,
+      "bytes": 90210010,
+      "verified_at": 1790630808.0483475
+    },
+    "/data/repos/wiki/artifacts/contextual-roi-concat-20260924/runs/attention-contrastive-all184-dcb-seed1/resume.pt": {
+      "sha256": "172192531d45c0cc32f91d603e24af3769f2d01138dd6ea1c0f35aca39ffd4a8",
+      "epoch": 3,
+      "position": 0,
+      "bytes": 90210010,
+      "verified_at": 1790630808.1812084
+    },
+    "/data/repos/wiki/artifacts/contextual-roi-concat-20260924/runs/attention-contrastive-all184-dcb-seed2/resume.pt": {
+      "sha256": "6592820f7a3268265af7d34fff7b8da0f01508ed926982157dd60b8635bc0f11",
+      "epoch": 3,
+      "position": 0,
+      "bytes": 90210010,
+      "verified_at": 1790630808.3122466
+    },
+    "/data/repos/wiki/artifacts/contextual-roi-concat-20260924/runs/attention-contrastive-all184-dcb-seed0/resume.pt": {
+      "sha256": "7795b7ec6f66d8aedc3ce6500811d4d7c7b44e4ea46db480ce4f67f7f011ac0c",
+      "epoch": 3,
+      "position": 0,
+      "bytes": 90209946,
+      "verified_at": 1790630808.40874
+    },
+    "/data/repos/wiki/artifacts/contextual-roi-concat-20260924/runs/attention-classification-dcb-seed0/resume.pt": {
+      "sha256": "db643606a18f50c36ac81de2838aae66e3d7b491e2188b1acbc714d32b134e10",
+      "epoch": 3,
+      "position": 0,
+      "bytes": 90209946,
+      "verified_at": 1790630808.5047271
+    }
+  },
+  "failures": {},
+  "time": 1790630808.5047708
+}

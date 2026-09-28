@@ -1,0 +1,13 @@
+[Unit]
+Description=All184 contextual RoI contrastive study
+After=network-online.target
+[Service]
+Type=simple
+WorkingDirectory=/data/repos/ROAD_Reason/research/post-proposal/contextual-roi-all184
+ExecStart=/home/brandon/miniconda3/bin/python -u /data/repos/ROAD_Reason/research/post-proposal/contextual-roi-all184/pipeline.py
+StandardOutput=append:/data/repos/wiki/artifacts/contextual-roi-all184-20260918/pipeline.log
+StandardError=append:/data/repos/wiki/artifacts/contextual-roi-all184-20260918/pipeline.log
+TimeoutStopSec=30min
+KillMode=control-group
+[Install]
+WantedBy=default.target

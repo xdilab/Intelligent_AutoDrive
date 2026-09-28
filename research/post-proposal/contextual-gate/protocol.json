@@ -1,0 +1,67 @@
+{
+  "version": "contextual-composition-aware-gate-v1-20260919",
+  "authorized": "Brandon September19: go with composition-aware gate; DCB direction deferred",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "experts": [
+    "attention-classification",
+    "attention-contrastive-all184"
+  ],
+  "frozen_experts": true,
+  "gate_videos": 90,
+  "gate_split": "SHA256(contextual-gate-v1:VIDEO),first45 fit,last45 select",
+  "expert_checkpoint_selection": "existing90 development videos; not reused to fit/select gate",
+  "learned_variants": [
+    "class",
+    "generic",
+    "factorized"
+  ],
+  "global_grid": [
+    0,
+    0.125,
+    0.25,
+    0.375,
+    0.5,
+    0.625,
+    0.75,
+    0.875,
+    1.0
+  ],
+  "epochs": 5,
+  "steps_per_epoch": 500,
+  "classes_per_step": 16,
+  "pairs_per_class": 8,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "shrink_penalty": 0.01,
+  "support_shrink": "positive fit-video count/(count+5); zero-support gate fixed at clipped global anchor",
+  "selection": "mean135-column composition predictions restricted to86 triplet AP on45 selection videos, zero-positive classes=0; earliest epoch on exact tie",
+  "loss": "uniform supported-class sampling; all8x8 positive-negative within-class logit ranking softplus;0.01 mean squared gate deviation from global anchor; surrogate not exact AP",
+  "primary": "factorized minus generic detector tail47, paired seeds0\u20132",
+  "secondary": [
+    "global/class/expert comparisons",
+    "triplet",
+    "deep28",
+    "common39",
+    "action",
+    "loc",
+    "duplex"
+  ],
+  "scope": "route135 compositions, preserve49 source classification primitive/agentness outputs; q once",
+  "features": "frozen expert probabilities, candidate score disagreement, shared primitive probabilities,16 pooled crop/context descriptors; no label input in inference",
+  "factorized": "shared primitive embedding and reliability MLP + whole-composition interaction; generic same observable inputs and similar parameter count",
+  "mapping": "verified label strings only, never childs arrays",
+  "calibration": "none; same raw expert probabilities in all controls",
+  "storage": "gate export/features/predictions retained; final scores reconstructed in RAM, per-class metrics checkpointed; no new full validation score arrays",
+  "prior_validation_exposure": "exploratory follow-up motivated by previously seen validation results",
+  "limitations": [
+    "Both experts use language attention; no language-isolation claim",
+    "Fit uses inherited GT-positive/random/junk negatives, final evaluation uses YOLO candidates",
+    "No guaranteed Pareto improvement or novelty claim",
+    "n=3 uncertainty; secondary intervals unadjusted"
+  ],
+  "time": 1789833681.5274453
+}

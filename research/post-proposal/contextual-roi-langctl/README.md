@@ -1,0 +1,7 @@
+# Explicit language-branch controls, v3
+
+Six fresh attention-fusion runs, seeds0–2 × bypass/randbank, classification focal only (lambda0). Existing attention-classification is the real-bank baseline. Full module construction precedes interventions; bypass freezes language modules and zeroes language residual/phrase-score columns while preserving joint normalization and1208-wide classifier. Randbank uses unit Gaussian prototypes from dedicated generator10000+seed. No encoder extraction.
+
+`python -m unittest discover -s . -p 'test_*.py'`, then `python preflight.py`, then independent source-hash review clearance before `python pipeline.py`. Training checkpoints save optimizer and RNG every100steps. Evaluation reconstructs scores in RAM; interruption repeats inference but resumes completed class metrics. No4.3GiB detector-score files are written. Prototype bank is a checkpoint buffer and seed is recorded in checkpoint/epochs/protocol provenance.
+
+Primary bypass-minus-baseline triplet; separate conservative95% interval equivalence margins0.30triplet/0.40tail. Random-minus-real and random-minus-bypass have no equivalence margins. Meaningful phrase content and prototype geometry remain confounded; this study does not ablate visual encoder language pretraining. Nominal parameters match; bypass active capacity differs. Full protocol in protocol.json and wiki direction contextual-head-language-control.md.

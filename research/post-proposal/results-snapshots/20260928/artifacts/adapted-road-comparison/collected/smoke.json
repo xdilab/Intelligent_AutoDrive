@@ -1,0 +1,12 @@
+{
+  "train_00600_00001": {
+    "original_min_cosine": 0.9999999999999998,
+    "original_mae": 0.0,
+    "adaptation_mae": 0.3328845084750686
+  },
+  "train_00600_00005": {
+    "original_min_cosine": 0.9999999999999998,
+    "original_mae": 0.0,
+    "adaptation_mae": 0.37215250737489186
+  }
+}

@@ -1,0 +1,4859 @@
+[
+  {
+    "model_id": 88,
+    "slug": "01-mlp",
+    "title": "MLP contextual head",
+    "mode": "none",
+    "locked_geometry": {
+      "frame": {
+        "x": 40.0,
+        "y": 170.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "yolo": {
+        "x": 280.0,
+        "y": 163.0,
+        "width": 190.0,
+        "height": 130.0
+      },
+      "candidates": {
+        "x": 545.0,
+        "y": 170.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "clips": {
+        "x": 124.79205953125,
+        "y": 580.0,
+        "width": 98.4158809375,
+        "height": 113.1924903125
+      },
+      "video": {
+        "x": 300.0,
+        "y": 575.0,
+        "width": 190.0,
+        "height": 110.0
+      },
+      "features": {
+        "x": 860.0,
+        "y": 350.0,
+        "width": 260.0,
+        "height": 310.0
+      },
+      "crop": {
+        "x": 875.0,
+        "y": 620.0,
+        "width": 230.0,
+        "height": 31.0
+      },
+      "roi": {
+        "x": 875.0,
+        "y": 405.0,
+        "width": 230.0,
+        "height": 31.0
+      },
+      "scene": {
+        "x": 875.0,
+        "y": 500.0,
+        "width": 230.0,
+        "height": 44.0
+      },
+      "geometry": {
+        "x": 875.0,
+        "y": 675.0,
+        "width": 230.0,
+        "height": 55.0
+      },
+      "phrases": {
+        "x": 40.0,
+        "y": 800.0,
+        "width": 170.0,
+        "height": 85.0
+      },
+      "text": {
+        "x": 280.0,
+        "y": 785.0,
+        "width": 190.0,
+        "height": 125.0
+      },
+      "bank": {
+        "x": 910.0,
+        "y": 812.0,
+        "width": 160.0,
+        "height": 62.0
+      },
+      "out": {
+        "x": 2260.0,
+        "y": 442.0,
+        "width": 220.0,
+        "height": 110.0
+      },
+      "scene-video": {
+        "x": 300.0,
+        "y": 365.0,
+        "width": 190.0,
+        "height": 110.0
+      },
+      "spatial-map": {
+        "x": 520.0,
+        "y": 365.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "roi-align": {
+        "x": 730.0,
+        "y": 390.0,
+        "width": 125.0,
+        "height": 55.0
+      },
+      "feature-collector": {
+        "x": 1317.0,
+        "y": 405.0,
+        "width": 4.0,
+        "height": 246.0
+      },
+      "crop-pool": {
+        "x": 730.0,
+        "y": 610.0,
+        "width": 125.0,
+        "height": 50.0
+      },
+      "scene-pool": {
+        "x": 730.0,
+        "y": 495.0,
+        "width": 125.0,
+        "height": 50.0
+      },
+      "entire": {
+        "x": 80.0,
+        "y": 375.0,
+        "width": 188.0,
+        "height": 129.33333333333331
+      },
+      "registration_frame": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 2520.0,
+        "height": 1080.0
+      }
+    },
+    "routes": [
+      {
+        "id": "frame-yolo",
+        "points": [
+          [
+            210,
+            227
+          ],
+          [
+            280,
+            227
+          ]
+        ],
+        "source": "frame",
+        "target": "yolo"
+      },
+      {
+        "id": "yolo-boxes",
+        "points": [
+          [
+            470,
+            227
+          ],
+          [
+            545,
+            227
+          ]
+        ],
+        "source": "yolo",
+        "target": "candidates"
+      },
+      {
+        "id": "boxes-out",
+        "points": [
+          [
+            715,
+            227
+          ],
+          [
+            2370,
+            227
+          ],
+          [
+            2370,
+            442
+          ]
+        ],
+        "source": "candidates",
+        "target": "out"
+      },
+      {
+        "id": "phrases-text",
+        "points": [
+          [
+            210,
+            843
+          ],
+          [
+            280,
+            843
+          ]
+        ],
+        "source": "phrases",
+        "target": "text"
+      },
+      {
+        "id": "text-bank",
+        "points": [
+          [
+            470,
+            843
+          ],
+          [
+            910,
+            843
+          ]
+        ],
+        "source": "text",
+        "target": "bank"
+      },
+      {
+        "id": "features-fork",
+        "points": [
+          [
+            1321,
+            493
+          ],
+          [
+            1342,
+            493
+          ]
+        ],
+        "source": "feature-collector",
+        "target": "visual-fork"
+      },
+      {
+        "id": "features-merge",
+        "points": [
+          [
+            1348,
+            493
+          ],
+          [
+            1365,
+            493
+          ]
+        ],
+        "source": "visual-fork",
+        "target": "position-merge"
+      },
+      {
+        "id": "features-head",
+        "points": [
+          [
+            1395,
+            493
+          ],
+          [
+            1420,
+            493
+          ]
+        ],
+        "source": "position-merge",
+        "target": "fusion"
+      },
+      {
+        "id": "geometry-head",
+        "points": [
+          [
+            1105,
+            702
+          ],
+          [
+            1380,
+            702
+          ],
+          [
+            1380,
+            508
+          ]
+        ],
+        "source": "geometry",
+        "target": "position-merge"
+      },
+      {
+        "id": "fusion-plus",
+        "points": [
+          [
+            1615,
+            493
+          ],
+          [
+            1645,
+            493
+          ]
+        ],
+        "source": "fusion",
+        "target": "visual-plus"
+      },
+      {
+        "id": "visual-skip",
+        "points": [
+          [
+            1345,
+            490
+          ],
+          [
+            1345,
+            409
+          ],
+          [
+            1660,
+            409
+          ],
+          [
+            1660,
+            478
+          ]
+        ],
+        "source": "visual-fork",
+        "target": "visual-plus"
+      },
+      {
+        "id": "fusion-visual",
+        "points": [
+          [
+            1675,
+            493
+          ],
+          [
+            1700,
+            493
+          ]
+        ],
+        "source": "visual-plus",
+        "target": "visual"
+      },
+      {
+        "id": "visual-language",
+        "points": [
+          [
+            1860,
+            493
+          ],
+          [
+            1955,
+            493
+          ],
+          [
+            1955,
+            583
+          ]
+        ],
+        "source": "visual",
+        "target": "decoder"
+      },
+      {
+        "id": "attention-joint",
+        "points": [
+          [
+            2001.1,
+            668
+          ],
+          [
+            2070,
+            668
+          ]
+        ],
+        "source": "decoder",
+        "target": "joint"
+      },
+      {
+        "id": "joint-classifier",
+        "points": [
+          [
+            2230,
+            668
+          ],
+          [
+            2260,
+            668
+          ]
+        ],
+        "source": "joint",
+        "target": "classifier"
+      },
+      {
+        "id": "head-out",
+        "points": [
+          [
+            2340,
+            642
+          ],
+          [
+            2340,
+            552
+          ]
+        ],
+        "source": "classifier",
+        "target": "out"
+      },
+      {
+        "id": "bank-fork",
+        "points": [
+          [
+            1070,
+            843
+          ],
+          [
+            1342,
+            843
+          ]
+        ],
+        "source": "bank",
+        "target": "text-fork"
+      },
+      {
+        "id": "bank-adapter",
+        "points": [
+          [
+            1348,
+            843
+          ],
+          [
+            1420,
+            843
+          ]
+        ],
+        "source": "text-fork",
+        "target": "text-adapter"
+      },
+      {
+        "id": "adapter-plus",
+        "points": [
+          [
+            1615,
+            843
+          ],
+          [
+            1645,
+            843
+          ]
+        ],
+        "source": "text-adapter",
+        "target": "text-plus"
+      },
+      {
+        "id": "text-skip",
+        "points": [
+          [
+            1345,
+            840
+          ],
+          [
+            1345,
+            759
+          ],
+          [
+            1660,
+            759
+          ],
+          [
+            1660,
+            828
+          ]
+        ],
+        "source": "text-fork",
+        "target": "text-plus"
+      },
+      {
+        "id": "adapter-phrases",
+        "points": [
+          [
+            1675,
+            843
+          ],
+          [
+            1700,
+            843
+          ]
+        ],
+        "source": "text-plus",
+        "target": "adapted"
+      },
+      {
+        "id": "phrases-head",
+        "points": [
+          [
+            1860,
+            843
+          ],
+          [
+            1955,
+            843
+          ],
+          [
+            1955,
+            753
+          ]
+        ],
+        "source": "adapted",
+        "target": "decoder"
+      },
+      {
+        "id": "boxes-roialign",
+        "points": [
+          [
+            630,
+            283.3333333333333
+          ],
+          [
+            630,
+            315
+          ],
+          [
+            792,
+            315
+          ],
+          [
+            792,
+            390
+          ]
+        ],
+        "source": "candidates",
+        "target": "roi-align"
+      },
+      {
+        "id": "clip-entire",
+        "points": [
+          [
+            40,
+            227
+          ],
+          [
+            20,
+            227
+          ],
+          [
+            20,
+            420
+          ],
+          [
+            80,
+            420
+          ]
+        ],
+        "source": "frame",
+        "target": "entire"
+      },
+      {
+        "id": "entire-crops",
+        "points": [
+          [
+            174,
+            504.3333333333333
+          ],
+          [
+            174,
+            580
+          ]
+        ],
+        "source": "entire",
+        "target": "clips"
+      },
+      {
+        "id": "clips-video",
+        "points": [
+          [
+            223.20794046875,
+            635
+          ],
+          [
+            300,
+            635
+          ]
+        ],
+        "source": "clips",
+        "target": "video"
+      },
+      {
+        "id": "crop-encode-pool",
+        "points": [
+          [
+            490,
+            635
+          ],
+          [
+            730,
+            635
+          ]
+        ],
+        "source": "video",
+        "target": "crop-pool"
+      },
+      {
+        "id": "crop-pool-feature",
+        "points": [
+          [
+            855,
+            635
+          ],
+          [
+            875,
+            635
+          ]
+        ],
+        "source": "crop-pool",
+        "target": "crop"
+      },
+      {
+        "id": "entire-video",
+        "points": [
+          [
+            268,
+            420
+          ],
+          [
+            300,
+            420
+          ]
+        ],
+        "source": "entire",
+        "target": "scene-video"
+      },
+      {
+        "id": "scene-encode-map",
+        "points": [
+          [
+            490,
+            420
+          ],
+          [
+            520,
+            420
+          ]
+        ],
+        "source": "scene-video",
+        "target": "spatial-map"
+      },
+      {
+        "id": "map-roialign",
+        "points": [
+          [
+            690,
+            420
+          ],
+          [
+            730,
+            420
+          ]
+        ],
+        "source": "spatial-map",
+        "target": "roi-align"
+      },
+      {
+        "id": "roi-feature",
+        "points": [
+          [
+            855,
+            420
+          ],
+          [
+            875,
+            420
+          ]
+        ],
+        "source": "roi-align",
+        "target": "roi"
+      },
+      {
+        "id": "map-pool",
+        "points": [
+          [
+            605,
+            478.3333333333333
+          ],
+          [
+            605,
+            522
+          ],
+          [
+            730,
+            522
+          ]
+        ],
+        "source": "spatial-map",
+        "target": "scene-pool"
+      },
+      {
+        "id": "pool-scene",
+        "points": [
+          [
+            855,
+            522
+          ],
+          [
+            875,
+            522
+          ]
+        ],
+        "source": "scene-pool",
+        "target": "scene"
+      },
+      {
+        "id": "roi-collect",
+        "points": [
+          [
+            1105,
+            420
+          ],
+          [
+            1317,
+            420
+          ]
+        ],
+        "source": "roi",
+        "target": "feature-collector"
+      },
+      {
+        "id": "crop-collect",
+        "points": [
+          [
+            1105,
+            635
+          ],
+          [
+            1317,
+            635
+          ]
+        ],
+        "source": "crop",
+        "target": "feature-collector"
+      },
+      {
+        "id": "scene-summary-in",
+        "points": [
+          [
+            1105,
+            522
+          ],
+          [
+            1135,
+            522
+          ]
+        ],
+        "source": "scene",
+        "target": "scene-summary"
+      },
+      {
+        "id": "scene-summary-out",
+        "points": [
+          [
+            1295,
+            522
+          ],
+          [
+            1317,
+            522
+          ]
+        ],
+        "source": "scene-summary",
+        "target": "feature-collector"
+      }
+    ],
+    "flow_order": [
+      "frame-yolo",
+      "yolo-boxes",
+      "boxes-roialign",
+      "clip-entire",
+      "entire-video",
+      "scene-encode-map",
+      "map-roialign",
+      "roi-feature",
+      "map-pool",
+      "pool-scene",
+      "entire-crops",
+      "clips-video",
+      "crop-encode-pool",
+      "crop-pool-feature",
+      "roi-collect",
+      "scene-summary-in",
+      "scene-summary-out",
+      "crop-collect",
+      "phrases-text",
+      "text-bank",
+      "features-fork",
+      "features-merge",
+      "geometry-head",
+      "features-head",
+      "fusion-plus",
+      "visual-skip",
+      "fusion-visual",
+      "bank-fork",
+      "bank-adapter",
+      "adapter-plus",
+      "text-skip",
+      "adapter-phrases",
+      "visual-language",
+      "phrases-head",
+      "attention-joint",
+      "joint-classifier",
+      "boxes-out",
+      "head-out"
+    ],
+    "intentional_badge_overlaps": [
+      "legend-ice",
+      "legend-fire",
+      "yolo-badge",
+      "text-badge",
+      "fusion-badge",
+      "decoder-badge",
+      "classifier-badge",
+      "text-adapter-badge",
+      "video-badge",
+      "scene-video-badge"
+    ]
+  },
+  {
+    "model_id": 89,
+    "slug": "02-attention",
+    "title": "Attention contextual head",
+    "mode": "none",
+    "locked_geometry": {
+      "frame": {
+        "x": 40.0,
+        "y": 170.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "yolo": {
+        "x": 280.0,
+        "y": 163.0,
+        "width": 190.0,
+        "height": 130.0
+      },
+      "candidates": {
+        "x": 545.0,
+        "y": 170.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "clips": {
+        "x": 124.79205953125,
+        "y": 580.0,
+        "width": 98.4158809375,
+        "height": 113.1924903125
+      },
+      "video": {
+        "x": 300.0,
+        "y": 575.0,
+        "width": 190.0,
+        "height": 110.0
+      },
+      "features": {
+        "x": 860.0,
+        "y": 350.0,
+        "width": 260.0,
+        "height": 310.0
+      },
+      "crop": {
+        "x": 875.0,
+        "y": 620.0,
+        "width": 230.0,
+        "height": 31.0
+      },
+      "roi": {
+        "x": 875.0,
+        "y": 405.0,
+        "width": 230.0,
+        "height": 31.0
+      },
+      "scene": {
+        "x": 875.0,
+        "y": 500.0,
+        "width": 230.0,
+        "height": 44.0
+      },
+      "geometry": {
+        "x": 875.0,
+        "y": 675.0,
+        "width": 230.0,
+        "height": 55.0
+      },
+      "phrases": {
+        "x": 40.0,
+        "y": 800.0,
+        "width": 170.0,
+        "height": 85.0
+      },
+      "text": {
+        "x": 280.0,
+        "y": 785.0,
+        "width": 190.0,
+        "height": 125.0
+      },
+      "bank": {
+        "x": 910.0,
+        "y": 812.0,
+        "width": 160.0,
+        "height": 62.0
+      },
+      "out": {
+        "x": 2260.0,
+        "y": 442.0,
+        "width": 220.0,
+        "height": 110.0
+      },
+      "scene-video": {
+        "x": 300.0,
+        "y": 365.0,
+        "width": 190.0,
+        "height": 110.0
+      },
+      "spatial-map": {
+        "x": 520.0,
+        "y": 365.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "roi-align": {
+        "x": 730.0,
+        "y": 390.0,
+        "width": 125.0,
+        "height": 55.0
+      },
+      "feature-collector": {
+        "x": 1317.0,
+        "y": 405.0,
+        "width": 4.0,
+        "height": 246.0
+      },
+      "crop-pool": {
+        "x": 730.0,
+        "y": 610.0,
+        "width": 125.0,
+        "height": 50.0
+      },
+      "scene-pool": {
+        "x": 730.0,
+        "y": 495.0,
+        "width": 125.0,
+        "height": 50.0
+      },
+      "entire": {
+        "x": 80.0,
+        "y": 375.0,
+        "width": 188.0,
+        "height": 129.33333333333331
+      },
+      "registration_frame": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 2520.0,
+        "height": 1080.0
+      }
+    },
+    "routes": [
+      {
+        "id": "frame-yolo",
+        "points": [
+          [
+            210,
+            227
+          ],
+          [
+            280,
+            227
+          ]
+        ],
+        "source": "frame",
+        "target": "yolo"
+      },
+      {
+        "id": "yolo-boxes",
+        "points": [
+          [
+            470,
+            227
+          ],
+          [
+            545,
+            227
+          ]
+        ],
+        "source": "yolo",
+        "target": "candidates"
+      },
+      {
+        "id": "boxes-out",
+        "points": [
+          [
+            715,
+            227
+          ],
+          [
+            2370,
+            227
+          ],
+          [
+            2370,
+            442
+          ]
+        ],
+        "source": "candidates",
+        "target": "out"
+      },
+      {
+        "id": "phrases-text",
+        "points": [
+          [
+            210,
+            843
+          ],
+          [
+            280,
+            843
+          ]
+        ],
+        "source": "phrases",
+        "target": "text"
+      },
+      {
+        "id": "text-bank",
+        "points": [
+          [
+            470,
+            843
+          ],
+          [
+            910,
+            843
+          ]
+        ],
+        "source": "text",
+        "target": "bank"
+      },
+      {
+        "id": "features-fork",
+        "points": [
+          [
+            1321,
+            493
+          ],
+          [
+            1342,
+            493
+          ]
+        ],
+        "source": "feature-collector",
+        "target": "visual-fork"
+      },
+      {
+        "id": "features-merge",
+        "points": [
+          [
+            1348,
+            493
+          ],
+          [
+            1365,
+            493
+          ]
+        ],
+        "source": "visual-fork",
+        "target": "position-merge"
+      },
+      {
+        "id": "features-head",
+        "points": [
+          [
+            1395,
+            493
+          ],
+          [
+            1420,
+            493
+          ]
+        ],
+        "source": "position-merge",
+        "target": "fusion"
+      },
+      {
+        "id": "geometry-head",
+        "points": [
+          [
+            1105,
+            702
+          ],
+          [
+            1380,
+            702
+          ],
+          [
+            1380,
+            508
+          ]
+        ],
+        "source": "geometry",
+        "target": "position-merge"
+      },
+      {
+        "id": "fusion-plus",
+        "points": [
+          [
+            1615,
+            493
+          ],
+          [
+            1645,
+            493
+          ]
+        ],
+        "source": "fusion",
+        "target": "visual-plus"
+      },
+      {
+        "id": "visual-skip",
+        "points": [
+          [
+            1345,
+            490
+          ],
+          [
+            1345,
+            409
+          ],
+          [
+            1660,
+            409
+          ],
+          [
+            1660,
+            478
+          ]
+        ],
+        "source": "visual-fork",
+        "target": "visual-plus"
+      },
+      {
+        "id": "fusion-visual",
+        "points": [
+          [
+            1675,
+            493
+          ],
+          [
+            1700,
+            493
+          ]
+        ],
+        "source": "visual-plus",
+        "target": "visual"
+      },
+      {
+        "id": "visual-language",
+        "points": [
+          [
+            1860,
+            493
+          ],
+          [
+            1955,
+            493
+          ],
+          [
+            1955,
+            583
+          ]
+        ],
+        "source": "visual",
+        "target": "decoder"
+      },
+      {
+        "id": "attention-joint",
+        "points": [
+          [
+            2001.1,
+            668
+          ],
+          [
+            2070,
+            668
+          ]
+        ],
+        "source": "decoder",
+        "target": "joint"
+      },
+      {
+        "id": "joint-classifier",
+        "points": [
+          [
+            2230,
+            668
+          ],
+          [
+            2260,
+            668
+          ]
+        ],
+        "source": "joint",
+        "target": "classifier"
+      },
+      {
+        "id": "head-out",
+        "points": [
+          [
+            2340,
+            642
+          ],
+          [
+            2340,
+            552
+          ]
+        ],
+        "source": "classifier",
+        "target": "out"
+      },
+      {
+        "id": "bank-fork",
+        "points": [
+          [
+            1070,
+            843
+          ],
+          [
+            1342,
+            843
+          ]
+        ],
+        "source": "bank",
+        "target": "text-fork"
+      },
+      {
+        "id": "bank-adapter",
+        "points": [
+          [
+            1348,
+            843
+          ],
+          [
+            1420,
+            843
+          ]
+        ],
+        "source": "text-fork",
+        "target": "text-adapter"
+      },
+      {
+        "id": "adapter-plus",
+        "points": [
+          [
+            1615,
+            843
+          ],
+          [
+            1645,
+            843
+          ]
+        ],
+        "source": "text-adapter",
+        "target": "text-plus"
+      },
+      {
+        "id": "text-skip",
+        "points": [
+          [
+            1345,
+            840
+          ],
+          [
+            1345,
+            759
+          ],
+          [
+            1660,
+            759
+          ],
+          [
+            1660,
+            828
+          ]
+        ],
+        "source": "text-fork",
+        "target": "text-plus"
+      },
+      {
+        "id": "adapter-phrases",
+        "points": [
+          [
+            1675,
+            843
+          ],
+          [
+            1700,
+            843
+          ]
+        ],
+        "source": "text-plus",
+        "target": "adapted"
+      },
+      {
+        "id": "phrases-head",
+        "points": [
+          [
+            1860,
+            843
+          ],
+          [
+            1955,
+            843
+          ],
+          [
+            1955,
+            753
+          ]
+        ],
+        "source": "adapted",
+        "target": "decoder"
+      },
+      {
+        "id": "boxes-roialign",
+        "points": [
+          [
+            630,
+            283.3333333333333
+          ],
+          [
+            630,
+            315
+          ],
+          [
+            792,
+            315
+          ],
+          [
+            792,
+            390
+          ]
+        ],
+        "source": "candidates",
+        "target": "roi-align"
+      },
+      {
+        "id": "clip-entire",
+        "points": [
+          [
+            40,
+            227
+          ],
+          [
+            20,
+            227
+          ],
+          [
+            20,
+            420
+          ],
+          [
+            80,
+            420
+          ]
+        ],
+        "source": "frame",
+        "target": "entire"
+      },
+      {
+        "id": "entire-crops",
+        "points": [
+          [
+            174,
+            504.3333333333333
+          ],
+          [
+            174,
+            580
+          ]
+        ],
+        "source": "entire",
+        "target": "clips"
+      },
+      {
+        "id": "clips-video",
+        "points": [
+          [
+            223.20794046875,
+            635
+          ],
+          [
+            300,
+            635
+          ]
+        ],
+        "source": "clips",
+        "target": "video"
+      },
+      {
+        "id": "crop-encode-pool",
+        "points": [
+          [
+            490,
+            635
+          ],
+          [
+            730,
+            635
+          ]
+        ],
+        "source": "video",
+        "target": "crop-pool"
+      },
+      {
+        "id": "crop-pool-feature",
+        "points": [
+          [
+            855,
+            635
+          ],
+          [
+            875,
+            635
+          ]
+        ],
+        "source": "crop-pool",
+        "target": "crop"
+      },
+      {
+        "id": "entire-video",
+        "points": [
+          [
+            268,
+            420
+          ],
+          [
+            300,
+            420
+          ]
+        ],
+        "source": "entire",
+        "target": "scene-video"
+      },
+      {
+        "id": "scene-encode-map",
+        "points": [
+          [
+            490,
+            420
+          ],
+          [
+            520,
+            420
+          ]
+        ],
+        "source": "scene-video",
+        "target": "spatial-map"
+      },
+      {
+        "id": "map-roialign",
+        "points": [
+          [
+            690,
+            420
+          ],
+          [
+            730,
+            420
+          ]
+        ],
+        "source": "spatial-map",
+        "target": "roi-align"
+      },
+      {
+        "id": "roi-feature",
+        "points": [
+          [
+            855,
+            420
+          ],
+          [
+            875,
+            420
+          ]
+        ],
+        "source": "roi-align",
+        "target": "roi"
+      },
+      {
+        "id": "map-pool",
+        "points": [
+          [
+            605,
+            478.3333333333333
+          ],
+          [
+            605,
+            522
+          ],
+          [
+            730,
+            522
+          ]
+        ],
+        "source": "spatial-map",
+        "target": "scene-pool"
+      },
+      {
+        "id": "pool-scene",
+        "points": [
+          [
+            855,
+            522
+          ],
+          [
+            875,
+            522
+          ]
+        ],
+        "source": "scene-pool",
+        "target": "scene"
+      },
+      {
+        "id": "roi-collect",
+        "points": [
+          [
+            1105,
+            420
+          ],
+          [
+            1317,
+            420
+          ]
+        ],
+        "source": "roi",
+        "target": "feature-collector"
+      },
+      {
+        "id": "crop-collect",
+        "points": [
+          [
+            1105,
+            635
+          ],
+          [
+            1317,
+            635
+          ]
+        ],
+        "source": "crop",
+        "target": "feature-collector"
+      },
+      {
+        "id": "scene-summary-in",
+        "points": [
+          [
+            1105,
+            522
+          ],
+          [
+            1135,
+            522
+          ]
+        ],
+        "source": "scene",
+        "target": "scene-summary"
+      },
+      {
+        "id": "scene-summary-out",
+        "points": [
+          [
+            1295,
+            522
+          ],
+          [
+            1317,
+            522
+          ]
+        ],
+        "source": "scene-summary",
+        "target": "feature-collector"
+      }
+    ],
+    "flow_order": [
+      "frame-yolo",
+      "yolo-boxes",
+      "boxes-roialign",
+      "clip-entire",
+      "entire-video",
+      "scene-encode-map",
+      "map-roialign",
+      "roi-feature",
+      "map-pool",
+      "pool-scene",
+      "entire-crops",
+      "clips-video",
+      "crop-encode-pool",
+      "crop-pool-feature",
+      "roi-collect",
+      "scene-summary-in",
+      "scene-summary-out",
+      "crop-collect",
+      "phrases-text",
+      "text-bank",
+      "features-fork",
+      "features-merge",
+      "geometry-head",
+      "features-head",
+      "fusion-plus",
+      "visual-skip",
+      "fusion-visual",
+      "bank-fork",
+      "bank-adapter",
+      "adapter-plus",
+      "text-skip",
+      "adapter-phrases",
+      "visual-language",
+      "phrases-head",
+      "attention-joint",
+      "joint-classifier",
+      "boxes-out",
+      "head-out"
+    ],
+    "intentional_badge_overlaps": [
+      "legend-ice",
+      "legend-fire",
+      "yolo-badge",
+      "text-badge",
+      "fusion-badge",
+      "decoder-badge",
+      "classifier-badge",
+      "text-adapter-badge",
+      "video-badge",
+      "scene-video-badge",
+      "scene-summary-badge"
+    ]
+  },
+  {
+    "model_id": 90,
+    "slug": "03-triplet-contrastive",
+    "title": "MLP + triplet contrastive learning",
+    "mode": "triplet",
+    "locked_geometry": {
+      "frame": {
+        "x": 40.0,
+        "y": 170.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "yolo": {
+        "x": 280.0,
+        "y": 163.0,
+        "width": 190.0,
+        "height": 130.0
+      },
+      "candidates": {
+        "x": 545.0,
+        "y": 170.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "clips": {
+        "x": 124.79205953125,
+        "y": 580.0,
+        "width": 98.4158809375,
+        "height": 113.1924903125
+      },
+      "video": {
+        "x": 300.0,
+        "y": 575.0,
+        "width": 190.0,
+        "height": 110.0
+      },
+      "features": {
+        "x": 860.0,
+        "y": 350.0,
+        "width": 260.0,
+        "height": 310.0
+      },
+      "crop": {
+        "x": 875.0,
+        "y": 620.0,
+        "width": 230.0,
+        "height": 31.0
+      },
+      "roi": {
+        "x": 875.0,
+        "y": 405.0,
+        "width": 230.0,
+        "height": 31.0
+      },
+      "scene": {
+        "x": 875.0,
+        "y": 500.0,
+        "width": 230.0,
+        "height": 44.0
+      },
+      "geometry": {
+        "x": 875.0,
+        "y": 675.0,
+        "width": 230.0,
+        "height": 55.0
+      },
+      "phrases": {
+        "x": 40.0,
+        "y": 800.0,
+        "width": 170.0,
+        "height": 85.0
+      },
+      "text": {
+        "x": 280.0,
+        "y": 785.0,
+        "width": 190.0,
+        "height": 125.0
+      },
+      "bank": {
+        "x": 910.0,
+        "y": 812.0,
+        "width": 160.0,
+        "height": 62.0
+      },
+      "out": {
+        "x": 2260.0,
+        "y": 442.0,
+        "width": 220.0,
+        "height": 110.0
+      },
+      "scene-video": {
+        "x": 300.0,
+        "y": 365.0,
+        "width": 190.0,
+        "height": 110.0
+      },
+      "spatial-map": {
+        "x": 520.0,
+        "y": 365.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "roi-align": {
+        "x": 730.0,
+        "y": 390.0,
+        "width": 125.0,
+        "height": 55.0
+      },
+      "feature-collector": {
+        "x": 1317.0,
+        "y": 405.0,
+        "width": 4.0,
+        "height": 246.0
+      },
+      "crop-pool": {
+        "x": 730.0,
+        "y": 610.0,
+        "width": 125.0,
+        "height": 50.0
+      },
+      "scene-pool": {
+        "x": 730.0,
+        "y": 495.0,
+        "width": 125.0,
+        "height": 50.0
+      },
+      "entire": {
+        "x": 80.0,
+        "y": 375.0,
+        "width": 188.0,
+        "height": 129.33333333333331
+      },
+      "registration_frame": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 2520.0,
+        "height": 1080.0
+      }
+    },
+    "routes": [
+      {
+        "id": "frame-yolo",
+        "points": [
+          [
+            210,
+            227
+          ],
+          [
+            280,
+            227
+          ]
+        ],
+        "source": "frame",
+        "target": "yolo"
+      },
+      {
+        "id": "yolo-boxes",
+        "points": [
+          [
+            470,
+            227
+          ],
+          [
+            545,
+            227
+          ]
+        ],
+        "source": "yolo",
+        "target": "candidates"
+      },
+      {
+        "id": "boxes-out",
+        "points": [
+          [
+            715,
+            227
+          ],
+          [
+            2370,
+            227
+          ],
+          [
+            2370,
+            442
+          ]
+        ],
+        "source": "candidates",
+        "target": "out"
+      },
+      {
+        "id": "phrases-text",
+        "points": [
+          [
+            210,
+            843
+          ],
+          [
+            280,
+            843
+          ]
+        ],
+        "source": "phrases",
+        "target": "text"
+      },
+      {
+        "id": "text-bank",
+        "points": [
+          [
+            470,
+            843
+          ],
+          [
+            910,
+            843
+          ]
+        ],
+        "source": "text",
+        "target": "bank"
+      },
+      {
+        "id": "features-fork",
+        "points": [
+          [
+            1321,
+            493
+          ],
+          [
+            1342,
+            493
+          ]
+        ],
+        "source": "feature-collector",
+        "target": "visual-fork"
+      },
+      {
+        "id": "features-merge",
+        "points": [
+          [
+            1348,
+            493
+          ],
+          [
+            1365,
+            493
+          ]
+        ],
+        "source": "visual-fork",
+        "target": "position-merge"
+      },
+      {
+        "id": "features-head",
+        "points": [
+          [
+            1395,
+            493
+          ],
+          [
+            1420,
+            493
+          ]
+        ],
+        "source": "position-merge",
+        "target": "fusion"
+      },
+      {
+        "id": "geometry-head",
+        "points": [
+          [
+            1105,
+            702
+          ],
+          [
+            1380,
+            702
+          ],
+          [
+            1380,
+            508
+          ]
+        ],
+        "source": "geometry",
+        "target": "position-merge"
+      },
+      {
+        "id": "fusion-plus",
+        "points": [
+          [
+            1615,
+            493
+          ],
+          [
+            1645,
+            493
+          ]
+        ],
+        "source": "fusion",
+        "target": "visual-plus"
+      },
+      {
+        "id": "visual-skip",
+        "points": [
+          [
+            1345,
+            490
+          ],
+          [
+            1345,
+            409
+          ],
+          [
+            1660,
+            409
+          ],
+          [
+            1660,
+            478
+          ]
+        ],
+        "source": "visual-fork",
+        "target": "visual-plus"
+      },
+      {
+        "id": "fusion-visual",
+        "points": [
+          [
+            1675,
+            493
+          ],
+          [
+            1700,
+            493
+          ]
+        ],
+        "source": "visual-plus",
+        "target": "visual"
+      },
+      {
+        "id": "visual-language",
+        "points": [
+          [
+            1860,
+            493
+          ],
+          [
+            1955,
+            493
+          ],
+          [
+            1955,
+            583
+          ]
+        ],
+        "source": "visual",
+        "target": "decoder"
+      },
+      {
+        "id": "attention-joint",
+        "points": [
+          [
+            2001.1,
+            668
+          ],
+          [
+            2070,
+            668
+          ]
+        ],
+        "source": "decoder",
+        "target": "joint"
+      },
+      {
+        "id": "joint-classifier",
+        "points": [
+          [
+            2230,
+            668
+          ],
+          [
+            2260,
+            668
+          ]
+        ],
+        "source": "joint",
+        "target": "classifier"
+      },
+      {
+        "id": "head-out",
+        "points": [
+          [
+            2340,
+            642
+          ],
+          [
+            2340,
+            552
+          ]
+        ],
+        "source": "classifier",
+        "target": "out"
+      },
+      {
+        "id": "bank-fork",
+        "points": [
+          [
+            1070,
+            843
+          ],
+          [
+            1342,
+            843
+          ]
+        ],
+        "source": "bank",
+        "target": "text-fork"
+      },
+      {
+        "id": "bank-adapter",
+        "points": [
+          [
+            1348,
+            843
+          ],
+          [
+            1420,
+            843
+          ]
+        ],
+        "source": "text-fork",
+        "target": "text-adapter"
+      },
+      {
+        "id": "adapter-plus",
+        "points": [
+          [
+            1615,
+            843
+          ],
+          [
+            1645,
+            843
+          ]
+        ],
+        "source": "text-adapter",
+        "target": "text-plus"
+      },
+      {
+        "id": "text-skip",
+        "points": [
+          [
+            1345,
+            840
+          ],
+          [
+            1345,
+            759
+          ],
+          [
+            1660,
+            759
+          ],
+          [
+            1660,
+            828
+          ]
+        ],
+        "source": "text-fork",
+        "target": "text-plus"
+      },
+      {
+        "id": "adapter-phrases",
+        "points": [
+          [
+            1675,
+            843
+          ],
+          [
+            1700,
+            843
+          ]
+        ],
+        "source": "text-plus",
+        "target": "adapted"
+      },
+      {
+        "id": "phrases-head",
+        "points": [
+          [
+            1860,
+            843
+          ],
+          [
+            1955,
+            843
+          ],
+          [
+            1955,
+            753
+          ]
+        ],
+        "source": "adapted",
+        "target": "decoder"
+      },
+      {
+        "id": "contrastive-loss",
+        "points": [
+          [
+            1780,
+            524
+          ],
+          [
+            1780,
+            700
+          ]
+        ],
+        "source": "visual",
+        "target": "contrastive-target"
+      },
+      {
+        "id": "boxes-roialign",
+        "points": [
+          [
+            630,
+            283.3333333333333
+          ],
+          [
+            630,
+            315
+          ],
+          [
+            792,
+            315
+          ],
+          [
+            792,
+            390
+          ]
+        ],
+        "source": "candidates",
+        "target": "roi-align"
+      },
+      {
+        "id": "clip-entire",
+        "points": [
+          [
+            40,
+            227
+          ],
+          [
+            20,
+            227
+          ],
+          [
+            20,
+            420
+          ],
+          [
+            80,
+            420
+          ]
+        ],
+        "source": "frame",
+        "target": "entire"
+      },
+      {
+        "id": "entire-crops",
+        "points": [
+          [
+            174,
+            504.3333333333333
+          ],
+          [
+            174,
+            580
+          ]
+        ],
+        "source": "entire",
+        "target": "clips"
+      },
+      {
+        "id": "clips-video",
+        "points": [
+          [
+            223.20794046875,
+            635
+          ],
+          [
+            300,
+            635
+          ]
+        ],
+        "source": "clips",
+        "target": "video"
+      },
+      {
+        "id": "crop-encode-pool",
+        "points": [
+          [
+            490,
+            635
+          ],
+          [
+            730,
+            635
+          ]
+        ],
+        "source": "video",
+        "target": "crop-pool"
+      },
+      {
+        "id": "crop-pool-feature",
+        "points": [
+          [
+            855,
+            635
+          ],
+          [
+            875,
+            635
+          ]
+        ],
+        "source": "crop-pool",
+        "target": "crop"
+      },
+      {
+        "id": "entire-video",
+        "points": [
+          [
+            268,
+            420
+          ],
+          [
+            300,
+            420
+          ]
+        ],
+        "source": "entire",
+        "target": "scene-video"
+      },
+      {
+        "id": "scene-encode-map",
+        "points": [
+          [
+            490,
+            420
+          ],
+          [
+            520,
+            420
+          ]
+        ],
+        "source": "scene-video",
+        "target": "spatial-map"
+      },
+      {
+        "id": "map-roialign",
+        "points": [
+          [
+            690,
+            420
+          ],
+          [
+            730,
+            420
+          ]
+        ],
+        "source": "spatial-map",
+        "target": "roi-align"
+      },
+      {
+        "id": "roi-feature",
+        "points": [
+          [
+            855,
+            420
+          ],
+          [
+            875,
+            420
+          ]
+        ],
+        "source": "roi-align",
+        "target": "roi"
+      },
+      {
+        "id": "map-pool",
+        "points": [
+          [
+            605,
+            478.3333333333333
+          ],
+          [
+            605,
+            522
+          ],
+          [
+            730,
+            522
+          ]
+        ],
+        "source": "spatial-map",
+        "target": "scene-pool"
+      },
+      {
+        "id": "pool-scene",
+        "points": [
+          [
+            855,
+            522
+          ],
+          [
+            875,
+            522
+          ]
+        ],
+        "source": "scene-pool",
+        "target": "scene"
+      },
+      {
+        "id": "roi-collect",
+        "points": [
+          [
+            1105,
+            420
+          ],
+          [
+            1317,
+            420
+          ]
+        ],
+        "source": "roi",
+        "target": "feature-collector"
+      },
+      {
+        "id": "crop-collect",
+        "points": [
+          [
+            1105,
+            635
+          ],
+          [
+            1317,
+            635
+          ]
+        ],
+        "source": "crop",
+        "target": "feature-collector"
+      },
+      {
+        "id": "scene-summary-in",
+        "points": [
+          [
+            1105,
+            522
+          ],
+          [
+            1135,
+            522
+          ]
+        ],
+        "source": "scene",
+        "target": "scene-summary"
+      },
+      {
+        "id": "scene-summary-out",
+        "points": [
+          [
+            1295,
+            522
+          ],
+          [
+            1317,
+            522
+          ]
+        ],
+        "source": "scene-summary",
+        "target": "feature-collector"
+      }
+    ],
+    "flow_order": [
+      "frame-yolo",
+      "yolo-boxes",
+      "boxes-roialign",
+      "clip-entire",
+      "entire-video",
+      "scene-encode-map",
+      "map-roialign",
+      "roi-feature",
+      "map-pool",
+      "pool-scene",
+      "entire-crops",
+      "clips-video",
+      "crop-encode-pool",
+      "crop-pool-feature",
+      "roi-collect",
+      "scene-summary-in",
+      "scene-summary-out",
+      "crop-collect",
+      "phrases-text",
+      "text-bank",
+      "features-fork",
+      "features-merge",
+      "geometry-head",
+      "features-head",
+      "fusion-plus",
+      "visual-skip",
+      "fusion-visual",
+      "bank-fork",
+      "bank-adapter",
+      "adapter-plus",
+      "text-skip",
+      "adapter-phrases",
+      "visual-language",
+      "phrases-head",
+      "attention-joint",
+      "joint-classifier",
+      "boxes-out",
+      "head-out"
+    ],
+    "intentional_badge_overlaps": [
+      "legend-ice",
+      "legend-fire",
+      "yolo-badge",
+      "text-badge",
+      "fusion-badge",
+      "decoder-badge",
+      "classifier-badge",
+      "text-adapter-badge",
+      "video-badge",
+      "scene-video-badge"
+    ]
+  },
+  {
+    "model_id": 92,
+    "slug": "04-all184-contrastive",
+    "title": "MLP + all-184 contrastive learning",
+    "mode": "all",
+    "locked_geometry": {
+      "frame": {
+        "x": 40.0,
+        "y": 170.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "yolo": {
+        "x": 280.0,
+        "y": 163.0,
+        "width": 190.0,
+        "height": 130.0
+      },
+      "candidates": {
+        "x": 545.0,
+        "y": 170.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "clips": {
+        "x": 124.79205953125,
+        "y": 580.0,
+        "width": 98.4158809375,
+        "height": 113.1924903125
+      },
+      "video": {
+        "x": 300.0,
+        "y": 575.0,
+        "width": 190.0,
+        "height": 110.0
+      },
+      "features": {
+        "x": 860.0,
+        "y": 350.0,
+        "width": 260.0,
+        "height": 310.0
+      },
+      "crop": {
+        "x": 875.0,
+        "y": 620.0,
+        "width": 230.0,
+        "height": 31.0
+      },
+      "roi": {
+        "x": 875.0,
+        "y": 405.0,
+        "width": 230.0,
+        "height": 31.0
+      },
+      "scene": {
+        "x": 875.0,
+        "y": 500.0,
+        "width": 230.0,
+        "height": 44.0
+      },
+      "geometry": {
+        "x": 875.0,
+        "y": 675.0,
+        "width": 230.0,
+        "height": 55.0
+      },
+      "phrases": {
+        "x": 40.0,
+        "y": 800.0,
+        "width": 170.0,
+        "height": 85.0
+      },
+      "text": {
+        "x": 280.0,
+        "y": 785.0,
+        "width": 190.0,
+        "height": 125.0
+      },
+      "bank": {
+        "x": 910.0,
+        "y": 812.0,
+        "width": 160.0,
+        "height": 62.0
+      },
+      "out": {
+        "x": 2260.0,
+        "y": 442.0,
+        "width": 220.0,
+        "height": 110.0
+      },
+      "scene-video": {
+        "x": 300.0,
+        "y": 365.0,
+        "width": 190.0,
+        "height": 110.0
+      },
+      "spatial-map": {
+        "x": 520.0,
+        "y": 365.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "roi-align": {
+        "x": 730.0,
+        "y": 390.0,
+        "width": 125.0,
+        "height": 55.0
+      },
+      "feature-collector": {
+        "x": 1317.0,
+        "y": 405.0,
+        "width": 4.0,
+        "height": 246.0
+      },
+      "crop-pool": {
+        "x": 730.0,
+        "y": 610.0,
+        "width": 125.0,
+        "height": 50.0
+      },
+      "scene-pool": {
+        "x": 730.0,
+        "y": 495.0,
+        "width": 125.0,
+        "height": 50.0
+      },
+      "entire": {
+        "x": 80.0,
+        "y": 375.0,
+        "width": 188.0,
+        "height": 129.33333333333331
+      },
+      "registration_frame": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 2520.0,
+        "height": 1080.0
+      }
+    },
+    "routes": [
+      {
+        "id": "frame-yolo",
+        "points": [
+          [
+            210,
+            227
+          ],
+          [
+            280,
+            227
+          ]
+        ],
+        "source": "frame",
+        "target": "yolo"
+      },
+      {
+        "id": "yolo-boxes",
+        "points": [
+          [
+            470,
+            227
+          ],
+          [
+            545,
+            227
+          ]
+        ],
+        "source": "yolo",
+        "target": "candidates"
+      },
+      {
+        "id": "boxes-out",
+        "points": [
+          [
+            715,
+            227
+          ],
+          [
+            2370,
+            227
+          ],
+          [
+            2370,
+            442
+          ]
+        ],
+        "source": "candidates",
+        "target": "out"
+      },
+      {
+        "id": "phrases-text",
+        "points": [
+          [
+            210,
+            843
+          ],
+          [
+            280,
+            843
+          ]
+        ],
+        "source": "phrases",
+        "target": "text"
+      },
+      {
+        "id": "text-bank",
+        "points": [
+          [
+            470,
+            843
+          ],
+          [
+            910,
+            843
+          ]
+        ],
+        "source": "text",
+        "target": "bank"
+      },
+      {
+        "id": "features-fork",
+        "points": [
+          [
+            1321,
+            493
+          ],
+          [
+            1342,
+            493
+          ]
+        ],
+        "source": "feature-collector",
+        "target": "visual-fork"
+      },
+      {
+        "id": "features-merge",
+        "points": [
+          [
+            1348,
+            493
+          ],
+          [
+            1365,
+            493
+          ]
+        ],
+        "source": "visual-fork",
+        "target": "position-merge"
+      },
+      {
+        "id": "features-head",
+        "points": [
+          [
+            1395,
+            493
+          ],
+          [
+            1420,
+            493
+          ]
+        ],
+        "source": "position-merge",
+        "target": "fusion"
+      },
+      {
+        "id": "geometry-head",
+        "points": [
+          [
+            1105,
+            702
+          ],
+          [
+            1380,
+            702
+          ],
+          [
+            1380,
+            508
+          ]
+        ],
+        "source": "geometry",
+        "target": "position-merge"
+      },
+      {
+        "id": "fusion-plus",
+        "points": [
+          [
+            1615,
+            493
+          ],
+          [
+            1645,
+            493
+          ]
+        ],
+        "source": "fusion",
+        "target": "visual-plus"
+      },
+      {
+        "id": "visual-skip",
+        "points": [
+          [
+            1345,
+            490
+          ],
+          [
+            1345,
+            409
+          ],
+          [
+            1660,
+            409
+          ],
+          [
+            1660,
+            478
+          ]
+        ],
+        "source": "visual-fork",
+        "target": "visual-plus"
+      },
+      {
+        "id": "fusion-visual",
+        "points": [
+          [
+            1675,
+            493
+          ],
+          [
+            1700,
+            493
+          ]
+        ],
+        "source": "visual-plus",
+        "target": "visual"
+      },
+      {
+        "id": "visual-language",
+        "points": [
+          [
+            1860,
+            493
+          ],
+          [
+            1955,
+            493
+          ],
+          [
+            1955,
+            583
+          ]
+        ],
+        "source": "visual",
+        "target": "decoder"
+      },
+      {
+        "id": "attention-joint",
+        "points": [
+          [
+            2001.1,
+            668
+          ],
+          [
+            2070,
+            668
+          ]
+        ],
+        "source": "decoder",
+        "target": "joint"
+      },
+      {
+        "id": "joint-classifier",
+        "points": [
+          [
+            2230,
+            668
+          ],
+          [
+            2260,
+            668
+          ]
+        ],
+        "source": "joint",
+        "target": "classifier"
+      },
+      {
+        "id": "head-out",
+        "points": [
+          [
+            2340,
+            642
+          ],
+          [
+            2340,
+            552
+          ]
+        ],
+        "source": "classifier",
+        "target": "out"
+      },
+      {
+        "id": "bank-fork",
+        "points": [
+          [
+            1070,
+            843
+          ],
+          [
+            1342,
+            843
+          ]
+        ],
+        "source": "bank",
+        "target": "text-fork"
+      },
+      {
+        "id": "bank-adapter",
+        "points": [
+          [
+            1348,
+            843
+          ],
+          [
+            1420,
+            843
+          ]
+        ],
+        "source": "text-fork",
+        "target": "text-adapter"
+      },
+      {
+        "id": "adapter-plus",
+        "points": [
+          [
+            1615,
+            843
+          ],
+          [
+            1645,
+            843
+          ]
+        ],
+        "source": "text-adapter",
+        "target": "text-plus"
+      },
+      {
+        "id": "text-skip",
+        "points": [
+          [
+            1345,
+            840
+          ],
+          [
+            1345,
+            759
+          ],
+          [
+            1660,
+            759
+          ],
+          [
+            1660,
+            828
+          ]
+        ],
+        "source": "text-fork",
+        "target": "text-plus"
+      },
+      {
+        "id": "adapter-phrases",
+        "points": [
+          [
+            1675,
+            843
+          ],
+          [
+            1700,
+            843
+          ]
+        ],
+        "source": "text-plus",
+        "target": "adapted"
+      },
+      {
+        "id": "phrases-head",
+        "points": [
+          [
+            1860,
+            843
+          ],
+          [
+            1955,
+            843
+          ],
+          [
+            1955,
+            753
+          ]
+        ],
+        "source": "adapted",
+        "target": "decoder"
+      },
+      {
+        "id": "contrastive-loss",
+        "points": [
+          [
+            1780,
+            524
+          ],
+          [
+            1780,
+            812
+          ]
+        ],
+        "source": "visual",
+        "target": "adapted"
+      },
+      {
+        "id": "boxes-roialign",
+        "points": [
+          [
+            630,
+            283.3333333333333
+          ],
+          [
+            630,
+            315
+          ],
+          [
+            792,
+            315
+          ],
+          [
+            792,
+            390
+          ]
+        ],
+        "source": "candidates",
+        "target": "roi-align"
+      },
+      {
+        "id": "clip-entire",
+        "points": [
+          [
+            40,
+            227
+          ],
+          [
+            20,
+            227
+          ],
+          [
+            20,
+            420
+          ],
+          [
+            80,
+            420
+          ]
+        ],
+        "source": "frame",
+        "target": "entire"
+      },
+      {
+        "id": "entire-crops",
+        "points": [
+          [
+            174,
+            504.3333333333333
+          ],
+          [
+            174,
+            580
+          ]
+        ],
+        "source": "entire",
+        "target": "clips"
+      },
+      {
+        "id": "clips-video",
+        "points": [
+          [
+            223.20794046875,
+            635
+          ],
+          [
+            300,
+            635
+          ]
+        ],
+        "source": "clips",
+        "target": "video"
+      },
+      {
+        "id": "crop-encode-pool",
+        "points": [
+          [
+            490,
+            635
+          ],
+          [
+            730,
+            635
+          ]
+        ],
+        "source": "video",
+        "target": "crop-pool"
+      },
+      {
+        "id": "crop-pool-feature",
+        "points": [
+          [
+            855,
+            635
+          ],
+          [
+            875,
+            635
+          ]
+        ],
+        "source": "crop-pool",
+        "target": "crop"
+      },
+      {
+        "id": "entire-video",
+        "points": [
+          [
+            268,
+            420
+          ],
+          [
+            300,
+            420
+          ]
+        ],
+        "source": "entire",
+        "target": "scene-video"
+      },
+      {
+        "id": "scene-encode-map",
+        "points": [
+          [
+            490,
+            420
+          ],
+          [
+            520,
+            420
+          ]
+        ],
+        "source": "scene-video",
+        "target": "spatial-map"
+      },
+      {
+        "id": "map-roialign",
+        "points": [
+          [
+            690,
+            420
+          ],
+          [
+            730,
+            420
+          ]
+        ],
+        "source": "spatial-map",
+        "target": "roi-align"
+      },
+      {
+        "id": "roi-feature",
+        "points": [
+          [
+            855,
+            420
+          ],
+          [
+            875,
+            420
+          ]
+        ],
+        "source": "roi-align",
+        "target": "roi"
+      },
+      {
+        "id": "map-pool",
+        "points": [
+          [
+            605,
+            478.3333333333333
+          ],
+          [
+            605,
+            522
+          ],
+          [
+            730,
+            522
+          ]
+        ],
+        "source": "spatial-map",
+        "target": "scene-pool"
+      },
+      {
+        "id": "pool-scene",
+        "points": [
+          [
+            855,
+            522
+          ],
+          [
+            875,
+            522
+          ]
+        ],
+        "source": "scene-pool",
+        "target": "scene"
+      },
+      {
+        "id": "roi-collect",
+        "points": [
+          [
+            1105,
+            420
+          ],
+          [
+            1317,
+            420
+          ]
+        ],
+        "source": "roi",
+        "target": "feature-collector"
+      },
+      {
+        "id": "crop-collect",
+        "points": [
+          [
+            1105,
+            635
+          ],
+          [
+            1317,
+            635
+          ]
+        ],
+        "source": "crop",
+        "target": "feature-collector"
+      },
+      {
+        "id": "scene-summary-in",
+        "points": [
+          [
+            1105,
+            522
+          ],
+          [
+            1135,
+            522
+          ]
+        ],
+        "source": "scene",
+        "target": "scene-summary"
+      },
+      {
+        "id": "scene-summary-out",
+        "points": [
+          [
+            1295,
+            522
+          ],
+          [
+            1317,
+            522
+          ]
+        ],
+        "source": "scene-summary",
+        "target": "feature-collector"
+      }
+    ],
+    "flow_order": [
+      "frame-yolo",
+      "yolo-boxes",
+      "boxes-roialign",
+      "clip-entire",
+      "entire-video",
+      "scene-encode-map",
+      "map-roialign",
+      "roi-feature",
+      "map-pool",
+      "pool-scene",
+      "entire-crops",
+      "clips-video",
+      "crop-encode-pool",
+      "crop-pool-feature",
+      "roi-collect",
+      "scene-summary-in",
+      "scene-summary-out",
+      "crop-collect",
+      "phrases-text",
+      "text-bank",
+      "features-fork",
+      "features-merge",
+      "geometry-head",
+      "features-head",
+      "fusion-plus",
+      "visual-skip",
+      "fusion-visual",
+      "bank-fork",
+      "bank-adapter",
+      "adapter-plus",
+      "text-skip",
+      "adapter-phrases",
+      "visual-language",
+      "phrases-head",
+      "attention-joint",
+      "joint-classifier",
+      "boxes-out",
+      "head-out"
+    ],
+    "intentional_badge_overlaps": [
+      "legend-ice",
+      "legend-fire",
+      "yolo-badge",
+      "text-badge",
+      "fusion-badge",
+      "decoder-badge",
+      "classifier-badge",
+      "text-adapter-badge",
+      "video-badge",
+      "scene-video-badge"
+    ]
+  },
+  {
+    "model_id": 94,
+    "slug": "05-expert-blend",
+    "title": "Attention expert blend",
+    "mode": "blend",
+    "locked_geometry": {
+      "frame": {
+        "x": 40.0,
+        "y": 170.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "yolo": {
+        "x": 280.0,
+        "y": 163.0,
+        "width": 190.0,
+        "height": 130.0
+      },
+      "candidates": {
+        "x": 545.0,
+        "y": 170.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "clips": {
+        "x": 124.79205953125,
+        "y": 580.0,
+        "width": 98.4158809375,
+        "height": 113.1924903125
+      },
+      "video": {
+        "x": 300.0,
+        "y": 575.0,
+        "width": 190.0,
+        "height": 110.0
+      },
+      "features": {
+        "x": 860.0,
+        "y": 350.0,
+        "width": 260.0,
+        "height": 310.0
+      },
+      "crop": {
+        "x": 875.0,
+        "y": 620.0,
+        "width": 230.0,
+        "height": 31.0
+      },
+      "roi": {
+        "x": 875.0,
+        "y": 405.0,
+        "width": 230.0,
+        "height": 31.0
+      },
+      "scene": {
+        "x": 875.0,
+        "y": 500.0,
+        "width": 230.0,
+        "height": 44.0
+      },
+      "geometry": {
+        "x": 875.0,
+        "y": 675.0,
+        "width": 230.0,
+        "height": 55.0
+      },
+      "phrases": {
+        "x": 40.0,
+        "y": 800.0,
+        "width": 170.0,
+        "height": 85.0
+      },
+      "text": {
+        "x": 280.0,
+        "y": 785.0,
+        "width": 190.0,
+        "height": 125.0
+      },
+      "bank": {
+        "x": 910.0,
+        "y": 812.0,
+        "width": 160.0,
+        "height": 62.0
+      },
+      "out": {
+        "x": 2260.0,
+        "y": 442.0,
+        "width": 220.0,
+        "height": 110.0
+      },
+      "scene-video": {
+        "x": 300.0,
+        "y": 365.0,
+        "width": 190.0,
+        "height": 110.0
+      },
+      "spatial-map": {
+        "x": 520.0,
+        "y": 365.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "roi-align": {
+        "x": 730.0,
+        "y": 390.0,
+        "width": 125.0,
+        "height": 55.0
+      },
+      "feature-collector": {
+        "x": 1317.0,
+        "y": 405.0,
+        "width": 4.0,
+        "height": 246.0
+      },
+      "crop-pool": {
+        "x": 730.0,
+        "y": 610.0,
+        "width": 125.0,
+        "height": 50.0
+      },
+      "scene-pool": {
+        "x": 730.0,
+        "y": 495.0,
+        "width": 125.0,
+        "height": 50.0
+      },
+      "entire": {
+        "x": 80.0,
+        "y": 375.0,
+        "width": 188.0,
+        "height": 129.33333333333331
+      },
+      "registration_frame": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 2520.0,
+        "height": 1080.0
+      }
+    },
+    "routes": [
+      {
+        "id": "frame-yolo",
+        "points": [
+          [
+            210,
+            227
+          ],
+          [
+            280,
+            227
+          ]
+        ],
+        "source": "frame",
+        "target": "yolo"
+      },
+      {
+        "id": "yolo-boxes",
+        "points": [
+          [
+            470,
+            227
+          ],
+          [
+            545,
+            227
+          ]
+        ],
+        "source": "yolo",
+        "target": "candidates"
+      },
+      {
+        "id": "boxes-out",
+        "points": [
+          [
+            715,
+            227
+          ],
+          [
+            2370,
+            227
+          ],
+          [
+            2370,
+            442
+          ]
+        ],
+        "source": "candidates",
+        "target": "out"
+      },
+      {
+        "id": "phrases-text",
+        "points": [
+          [
+            210,
+            843
+          ],
+          [
+            280,
+            843
+          ]
+        ],
+        "source": "phrases",
+        "target": "text"
+      },
+      {
+        "id": "text-bank",
+        "points": [
+          [
+            470,
+            843
+          ],
+          [
+            910,
+            843
+          ]
+        ],
+        "source": "text",
+        "target": "bank"
+      },
+      {
+        "id": "expert-a-summary",
+        "points": [
+          [
+            1600,
+            468
+          ],
+          [
+            1630,
+            468
+          ]
+        ],
+        "source": "expert-a-scene",
+        "target": "expert-a-join"
+      },
+      {
+        "id": "expert-a-concat",
+        "points": [
+          [
+            1660,
+            468
+          ],
+          [
+            1690,
+            468
+          ]
+        ],
+        "source": "expert-a-join",
+        "target": "expert-a-mlp"
+      },
+      {
+        "id": "expert-b-summary",
+        "points": [
+          [
+            1600,
+            693
+          ],
+          [
+            1630,
+            693
+          ]
+        ],
+        "source": "expert-b-scene",
+        "target": "expert-b-join"
+      },
+      {
+        "id": "expert-b-concat",
+        "points": [
+          [
+            1660,
+            693
+          ],
+          [
+            1690,
+            693
+          ]
+        ],
+        "source": "expert-b-join",
+        "target": "expert-b-mlp"
+      },
+      {
+        "id": "extra-alignment",
+        "points": [
+          [
+            1575,
+            865
+          ],
+          [
+            1660,
+            865
+          ]
+        ],
+        "source": "expert-visual",
+        "target": "expert-text"
+      },
+      {
+        "id": "features-merge",
+        "points": [
+          [
+            1321,
+            475
+          ],
+          [
+            1337,
+            475
+          ]
+        ],
+        "source": "feature-collector",
+        "target": "position-merge"
+      },
+      {
+        "id": "features-head",
+        "points": [
+          [
+            1343,
+            475
+          ],
+          [
+            1380,
+            475
+          ]
+        ],
+        "source": "position-merge",
+        "target": "shared-inputs"
+      },
+      {
+        "id": "geometry-head",
+        "points": [
+          [
+            1105,
+            702
+          ],
+          [
+            1340,
+            702
+          ],
+          [
+            1340,
+            478
+          ]
+        ],
+        "source": "geometry",
+        "target": "position-merge"
+      },
+      {
+        "id": "phrases-head",
+        "points": [
+          [
+            1070,
+            843
+          ],
+          [
+            1345,
+            843
+          ],
+          [
+            1345,
+            830
+          ],
+          [
+            1380,
+            830
+          ]
+        ],
+        "source": "bank",
+        "target": "shared-inputs"
+      },
+      {
+        "id": "inputs-a",
+        "points": [
+          [
+            1384,
+            460
+          ],
+          [
+            1410,
+            460
+          ]
+        ],
+        "source": "shared-inputs",
+        "target": "expert-a"
+      },
+      {
+        "id": "inputs-b",
+        "points": [
+          [
+            1384,
+            700
+          ],
+          [
+            1410,
+            700
+          ]
+        ],
+        "source": "shared-inputs",
+        "target": "expert-b"
+      },
+      {
+        "id": "a-blend",
+        "points": [
+          [
+            1860,
+            505
+          ],
+          [
+            1960,
+            505
+          ]
+        ],
+        "source": "expert-a",
+        "target": "blend"
+      },
+      {
+        "id": "b-blend",
+        "points": [
+          [
+            1860,
+            675
+          ],
+          [
+            1920,
+            675
+          ],
+          [
+            1920,
+            585
+          ],
+          [
+            1960,
+            585
+          ]
+        ],
+        "source": "expert-b",
+        "target": "blend"
+      },
+      {
+        "id": "primitive-carry",
+        "points": [
+          [
+            1860,
+            430
+          ],
+          [
+            1915,
+            430
+          ],
+          [
+            1915,
+            335
+          ],
+          [
+            2230,
+            335
+          ],
+          [
+            2230,
+            475
+          ],
+          [
+            2260,
+            475
+          ]
+        ],
+        "source": "expert-a",
+        "target": "out"
+      },
+      {
+        "id": "blend-out",
+        "points": [
+          [
+            2190,
+            545
+          ],
+          [
+            2225,
+            545
+          ],
+          [
+            2225,
+            525
+          ],
+          [
+            2260,
+            525
+          ]
+        ],
+        "source": "blend",
+        "target": "out"
+      },
+      {
+        "id": "boxes-roialign",
+        "points": [
+          [
+            630,
+            283.3333333333333
+          ],
+          [
+            630,
+            315
+          ],
+          [
+            792,
+            315
+          ],
+          [
+            792,
+            390
+          ]
+        ],
+        "source": "candidates",
+        "target": "roi-align"
+      },
+      {
+        "id": "clip-entire",
+        "points": [
+          [
+            40,
+            227
+          ],
+          [
+            20,
+            227
+          ],
+          [
+            20,
+            420
+          ],
+          [
+            80,
+            420
+          ]
+        ],
+        "source": "frame",
+        "target": "entire"
+      },
+      {
+        "id": "entire-crops",
+        "points": [
+          [
+            174,
+            504.3333333333333
+          ],
+          [
+            174,
+            580
+          ]
+        ],
+        "source": "entire",
+        "target": "clips"
+      },
+      {
+        "id": "clips-video",
+        "points": [
+          [
+            223.20794046875,
+            635
+          ],
+          [
+            300,
+            635
+          ]
+        ],
+        "source": "clips",
+        "target": "video"
+      },
+      {
+        "id": "crop-encode-pool",
+        "points": [
+          [
+            490,
+            635
+          ],
+          [
+            730,
+            635
+          ]
+        ],
+        "source": "video",
+        "target": "crop-pool"
+      },
+      {
+        "id": "crop-pool-feature",
+        "points": [
+          [
+            855,
+            635
+          ],
+          [
+            875,
+            635
+          ]
+        ],
+        "source": "crop-pool",
+        "target": "crop"
+      },
+      {
+        "id": "entire-video",
+        "points": [
+          [
+            268,
+            420
+          ],
+          [
+            300,
+            420
+          ]
+        ],
+        "source": "entire",
+        "target": "scene-video"
+      },
+      {
+        "id": "scene-encode-map",
+        "points": [
+          [
+            490,
+            420
+          ],
+          [
+            520,
+            420
+          ]
+        ],
+        "source": "scene-video",
+        "target": "spatial-map"
+      },
+      {
+        "id": "map-roialign",
+        "points": [
+          [
+            690,
+            420
+          ],
+          [
+            730,
+            420
+          ]
+        ],
+        "source": "spatial-map",
+        "target": "roi-align"
+      },
+      {
+        "id": "roi-feature",
+        "points": [
+          [
+            855,
+            420
+          ],
+          [
+            875,
+            420
+          ]
+        ],
+        "source": "roi-align",
+        "target": "roi"
+      },
+      {
+        "id": "map-pool",
+        "points": [
+          [
+            605,
+            478.3333333333333
+          ],
+          [
+            605,
+            522
+          ],
+          [
+            730,
+            522
+          ]
+        ],
+        "source": "spatial-map",
+        "target": "scene-pool"
+      },
+      {
+        "id": "pool-scene",
+        "points": [
+          [
+            855,
+            522
+          ],
+          [
+            875,
+            522
+          ]
+        ],
+        "source": "scene-pool",
+        "target": "scene"
+      },
+      {
+        "id": "roi-collect",
+        "points": [
+          [
+            1105,
+            420
+          ],
+          [
+            1317,
+            420
+          ]
+        ],
+        "source": "roi",
+        "target": "feature-collector"
+      },
+      {
+        "id": "scene-collect",
+        "points": [
+          [
+            1105,
+            522
+          ],
+          [
+            1317,
+            522
+          ]
+        ],
+        "source": "scene",
+        "target": "feature-collector"
+      },
+      {
+        "id": "crop-collect",
+        "points": [
+          [
+            1105,
+            635
+          ],
+          [
+            1317,
+            635
+          ]
+        ],
+        "source": "crop",
+        "target": "feature-collector"
+      }
+    ],
+    "flow_order": [
+      "frame-yolo",
+      "yolo-boxes",
+      "boxes-roialign",
+      "clip-entire",
+      "entire-video",
+      "scene-encode-map",
+      "map-roialign",
+      "roi-feature",
+      "map-pool",
+      "pool-scene",
+      "entire-crops",
+      "clips-video",
+      "crop-encode-pool",
+      "crop-pool-feature",
+      "roi-collect",
+      "scene-collect",
+      "crop-collect",
+      "phrases-text",
+      "text-bank",
+      "features-merge",
+      "geometry-head",
+      "features-head",
+      "phrases-head",
+      "inputs-a",
+      "expert-a-summary",
+      "expert-a-concat",
+      "inputs-b",
+      "expert-b-summary",
+      "expert-b-concat",
+      "a-blend",
+      "b-blend",
+      "primitive-carry",
+      "boxes-out",
+      "blend-out"
+    ],
+    "intentional_badge_overlaps": [
+      "legend-ice",
+      "legend-fire",
+      "yolo-badge",
+      "text-badge",
+      "expert-a-badge",
+      "expert-b-badge",
+      "video-badge",
+      "scene-video-badge"
+    ]
+  },
+  {
+    "model_id": 104,
+    "slug": "06-dcb-blend",
+    "title": "DCB attention expert blend",
+    "mode": "dcb",
+    "locked_geometry": {
+      "frame": {
+        "x": 40.0,
+        "y": 170.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "yolo": {
+        "x": 280.0,
+        "y": 163.0,
+        "width": 190.0,
+        "height": 130.0
+      },
+      "candidates": {
+        "x": 545.0,
+        "y": 170.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "clips": {
+        "x": 124.79205953125,
+        "y": 580.0,
+        "width": 98.4158809375,
+        "height": 113.1924903125
+      },
+      "video": {
+        "x": 300.0,
+        "y": 575.0,
+        "width": 190.0,
+        "height": 110.0
+      },
+      "features": {
+        "x": 860.0,
+        "y": 350.0,
+        "width": 260.0,
+        "height": 310.0
+      },
+      "crop": {
+        "x": 875.0,
+        "y": 620.0,
+        "width": 230.0,
+        "height": 31.0
+      },
+      "roi": {
+        "x": 875.0,
+        "y": 405.0,
+        "width": 230.0,
+        "height": 31.0
+      },
+      "scene": {
+        "x": 875.0,
+        "y": 500.0,
+        "width": 230.0,
+        "height": 44.0
+      },
+      "geometry": {
+        "x": 875.0,
+        "y": 675.0,
+        "width": 230.0,
+        "height": 55.0
+      },
+      "phrases": {
+        "x": 40.0,
+        "y": 800.0,
+        "width": 170.0,
+        "height": 85.0
+      },
+      "text": {
+        "x": 280.0,
+        "y": 785.0,
+        "width": 190.0,
+        "height": 125.0
+      },
+      "bank": {
+        "x": 910.0,
+        "y": 812.0,
+        "width": 160.0,
+        "height": 62.0
+      },
+      "out": {
+        "x": 2260.0,
+        "y": 442.0,
+        "width": 220.0,
+        "height": 110.0
+      },
+      "scene-video": {
+        "x": 300.0,
+        "y": 365.0,
+        "width": 190.0,
+        "height": 110.0
+      },
+      "spatial-map": {
+        "x": 520.0,
+        "y": 365.0,
+        "width": 170.0,
+        "height": 113.33333333333333
+      },
+      "roi-align": {
+        "x": 730.0,
+        "y": 390.0,
+        "width": 125.0,
+        "height": 55.0
+      },
+      "feature-collector": {
+        "x": 1317.0,
+        "y": 405.0,
+        "width": 4.0,
+        "height": 246.0
+      },
+      "crop-pool": {
+        "x": 730.0,
+        "y": 610.0,
+        "width": 125.0,
+        "height": 50.0
+      },
+      "scene-pool": {
+        "x": 730.0,
+        "y": 495.0,
+        "width": 125.0,
+        "height": 50.0
+      },
+      "entire": {
+        "x": 80.0,
+        "y": 375.0,
+        "width": 188.0,
+        "height": 129.33333333333331
+      },
+      "registration_frame": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 2520.0,
+        "height": 1080.0
+      }
+    },
+    "routes": [
+      {
+        "id": "frame-yolo",
+        "points": [
+          [
+            210,
+            227
+          ],
+          [
+            280,
+            227
+          ]
+        ],
+        "source": "frame",
+        "target": "yolo"
+      },
+      {
+        "id": "yolo-boxes",
+        "points": [
+          [
+            470,
+            227
+          ],
+          [
+            545,
+            227
+          ]
+        ],
+        "source": "yolo",
+        "target": "candidates"
+      },
+      {
+        "id": "boxes-out",
+        "points": [
+          [
+            715,
+            227
+          ],
+          [
+            2370,
+            227
+          ],
+          [
+            2370,
+            442
+          ]
+        ],
+        "source": "candidates",
+        "target": "out"
+      },
+      {
+        "id": "phrases-text",
+        "points": [
+          [
+            210,
+            843
+          ],
+          [
+            280,
+            843
+          ]
+        ],
+        "source": "phrases",
+        "target": "text"
+      },
+      {
+        "id": "text-bank",
+        "points": [
+          [
+            470,
+            843
+          ],
+          [
+            910,
+            843
+          ]
+        ],
+        "source": "text",
+        "target": "bank"
+      },
+      {
+        "id": "expert-a-summary",
+        "points": [
+          [
+            1600,
+            468
+          ],
+          [
+            1630,
+            468
+          ]
+        ],
+        "source": "expert-a-scene",
+        "target": "expert-a-join"
+      },
+      {
+        "id": "expert-a-concat",
+        "points": [
+          [
+            1660,
+            468
+          ],
+          [
+            1690,
+            468
+          ]
+        ],
+        "source": "expert-a-join",
+        "target": "expert-a-mlp"
+      },
+      {
+        "id": "expert-b-summary",
+        "points": [
+          [
+            1600,
+            693
+          ],
+          [
+            1630,
+            693
+          ]
+        ],
+        "source": "expert-b-scene",
+        "target": "expert-b-join"
+      },
+      {
+        "id": "expert-b-concat",
+        "points": [
+          [
+            1660,
+            693
+          ],
+          [
+            1690,
+            693
+          ]
+        ],
+        "source": "expert-b-join",
+        "target": "expert-b-mlp"
+      },
+      {
+        "id": "extra-alignment",
+        "points": [
+          [
+            1575,
+            865
+          ],
+          [
+            1660,
+            865
+          ]
+        ],
+        "source": "expert-visual",
+        "target": "expert-text"
+      },
+      {
+        "id": "features-merge",
+        "points": [
+          [
+            1321,
+            475
+          ],
+          [
+            1337,
+            475
+          ]
+        ],
+        "source": "feature-collector",
+        "target": "position-merge"
+      },
+      {
+        "id": "features-head",
+        "points": [
+          [
+            1343,
+            475
+          ],
+          [
+            1380,
+            475
+          ]
+        ],
+        "source": "position-merge",
+        "target": "shared-inputs"
+      },
+      {
+        "id": "geometry-head",
+        "points": [
+          [
+            1105,
+            702
+          ],
+          [
+            1340,
+            702
+          ],
+          [
+            1340,
+            478
+          ]
+        ],
+        "source": "geometry",
+        "target": "position-merge"
+      },
+      {
+        "id": "phrases-head",
+        "points": [
+          [
+            1070,
+            843
+          ],
+          [
+            1345,
+            843
+          ],
+          [
+            1345,
+            830
+          ],
+          [
+            1380,
+            830
+          ]
+        ],
+        "source": "bank",
+        "target": "shared-inputs"
+      },
+      {
+        "id": "inputs-a",
+        "points": [
+          [
+            1384,
+            460
+          ],
+          [
+            1410,
+            460
+          ]
+        ],
+        "source": "shared-inputs",
+        "target": "expert-a"
+      },
+      {
+        "id": "inputs-b",
+        "points": [
+          [
+            1384,
+            700
+          ],
+          [
+            1410,
+            700
+          ]
+        ],
+        "source": "shared-inputs",
+        "target": "expert-b"
+      },
+      {
+        "id": "a-blend",
+        "points": [
+          [
+            1860,
+            505
+          ],
+          [
+            1960,
+            505
+          ]
+        ],
+        "source": "expert-a",
+        "target": "blend"
+      },
+      {
+        "id": "b-blend",
+        "points": [
+          [
+            1860,
+            675
+          ],
+          [
+            1920,
+            675
+          ],
+          [
+            1920,
+            585
+          ],
+          [
+            1960,
+            585
+          ]
+        ],
+        "source": "expert-b",
+        "target": "blend"
+      },
+      {
+        "id": "primitive-carry",
+        "points": [
+          [
+            1860,
+            430
+          ],
+          [
+            1915,
+            430
+          ],
+          [
+            1915,
+            335
+          ],
+          [
+            2230,
+            335
+          ],
+          [
+            2230,
+            475
+          ],
+          [
+            2260,
+            475
+          ]
+        ],
+        "source": "expert-a",
+        "target": "out"
+      },
+      {
+        "id": "blend-out",
+        "points": [
+          [
+            2190,
+            545
+          ],
+          [
+            2225,
+            545
+          ],
+          [
+            2225,
+            525
+          ],
+          [
+            2260,
+            525
+          ]
+        ],
+        "source": "blend",
+        "target": "out"
+      },
+      {
+        "id": "boxes-roialign",
+        "points": [
+          [
+            630,
+            283.3333333333333
+          ],
+          [
+            630,
+            315
+          ],
+          [
+            792,
+            315
+          ],
+          [
+            792,
+            390
+          ]
+        ],
+        "source": "candidates",
+        "target": "roi-align"
+      },
+      {
+        "id": "clip-entire",
+        "points": [
+          [
+            40,
+            227
+          ],
+          [
+            20,
+            227
+          ],
+          [
+            20,
+            420
+          ],
+          [
+            80,
+            420
+          ]
+        ],
+        "source": "frame",
+        "target": "entire"
+      },
+      {
+        "id": "entire-crops",
+        "points": [
+          [
+            174,
+            504.3333333333333
+          ],
+          [
+            174,
+            580
+          ]
+        ],
+        "source": "entire",
+        "target": "clips"
+      },
+      {
+        "id": "clips-video",
+        "points": [
+          [
+            223.20794046875,
+            635
+          ],
+          [
+            300,
+            635
+          ]
+        ],
+        "source": "clips",
+        "target": "video"
+      },
+      {
+        "id": "crop-encode-pool",
+        "points": [
+          [
+            490,
+            635
+          ],
+          [
+            730,
+            635
+          ]
+        ],
+        "source": "video",
+        "target": "crop-pool"
+      },
+      {
+        "id": "crop-pool-feature",
+        "points": [
+          [
+            855,
+            635
+          ],
+          [
+            875,
+            635
+          ]
+        ],
+        "source": "crop-pool",
+        "target": "crop"
+      },
+      {
+        "id": "entire-video",
+        "points": [
+          [
+            268,
+            420
+          ],
+          [
+            300,
+            420
+          ]
+        ],
+        "source": "entire",
+        "target": "scene-video"
+      },
+      {
+        "id": "scene-encode-map",
+        "points": [
+          [
+            490,
+            420
+          ],
+          [
+            520,
+            420
+          ]
+        ],
+        "source": "scene-video",
+        "target": "spatial-map"
+      },
+      {
+        "id": "map-roialign",
+        "points": [
+          [
+            690,
+            420
+          ],
+          [
+            730,
+            420
+          ]
+        ],
+        "source": "spatial-map",
+        "target": "roi-align"
+      },
+      {
+        "id": "roi-feature",
+        "points": [
+          [
+            855,
+            420
+          ],
+          [
+            875,
+            420
+          ]
+        ],
+        "source": "roi-align",
+        "target": "roi"
+      },
+      {
+        "id": "map-pool",
+        "points": [
+          [
+            605,
+            478.3333333333333
+          ],
+          [
+            605,
+            522
+          ],
+          [
+            730,
+            522
+          ]
+        ],
+        "source": "spatial-map",
+        "target": "scene-pool"
+      },
+      {
+        "id": "pool-scene",
+        "points": [
+          [
+            855,
+            522
+          ],
+          [
+            875,
+            522
+          ]
+        ],
+        "source": "scene-pool",
+        "target": "scene"
+      },
+      {
+        "id": "roi-collect",
+        "points": [
+          [
+            1105,
+            420
+          ],
+          [
+            1317,
+            420
+          ]
+        ],
+        "source": "roi",
+        "target": "feature-collector"
+      },
+      {
+        "id": "scene-collect",
+        "points": [
+          [
+            1105,
+            522
+          ],
+          [
+            1317,
+            522
+          ]
+        ],
+        "source": "scene",
+        "target": "feature-collector"
+      },
+      {
+        "id": "crop-collect",
+        "points": [
+          [
+            1105,
+            635
+          ],
+          [
+            1317,
+            635
+          ]
+        ],
+        "source": "crop",
+        "target": "feature-collector"
+      }
+    ],
+    "flow_order": [
+      "frame-yolo",
+      "yolo-boxes",
+      "boxes-roialign",
+      "clip-entire",
+      "entire-video",
+      "scene-encode-map",
+      "map-roialign",
+      "roi-feature",
+      "map-pool",
+      "pool-scene",
+      "entire-crops",
+      "clips-video",
+      "crop-encode-pool",
+      "crop-pool-feature",
+      "roi-collect",
+      "scene-collect",
+      "crop-collect",
+      "phrases-text",
+      "text-bank",
+      "features-merge",
+      "geometry-head",
+      "features-head",
+      "phrases-head",
+      "inputs-a",
+      "expert-a-summary",
+      "expert-a-concat",
+      "inputs-b",
+      "expert-b-summary",
+      "expert-b-concat",
+      "a-blend",
+      "b-blend",
+      "primitive-carry",
+      "boxes-out",
+      "blend-out"
+    ],
+    "intentional_badge_overlaps": [
+      "legend-ice",
+      "legend-fire",
+      "yolo-badge",
+      "text-badge",
+      "expert-a-badge",
+      "expert-b-badge",
+      "video-badge",
+      "scene-video-badge"
+    ]
+  }
+]

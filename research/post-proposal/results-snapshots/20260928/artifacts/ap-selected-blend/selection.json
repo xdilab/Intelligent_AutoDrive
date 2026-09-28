@@ -1,0 +1,377 @@
+{
+  "locked_utc": "2026-09-14T16:04:37.363397+00:00",
+  "metric": "internal-development mean AP over all 86 triplets",
+  "tie_break": "lower language weight on exact AP tie",
+  "scope": "one global weight shared across 135 composition classes; independently selected for each seed and phrase/shuffled expert",
+  "seeds": {
+    "0": {
+      "phrase": {
+        "selected_weight": 0.75,
+        "candidates": [
+          {
+            "weight": 0.0,
+            "dev_triplet_crop_AP": 13.158019843193712
+          },
+          {
+            "weight": 0.0003353501,
+            "dev_triplet_crop_AP": 13.160955705090656
+          },
+          {
+            "weight": 0.0015,
+            "dev_triplet_crop_AP": 13.166951682566037
+          },
+          {
+            "weight": 0.005,
+            "dev_triplet_crop_AP": 13.18459729761119
+          },
+          {
+            "weight": 0.01,
+            "dev_triplet_crop_AP": 13.211622601056037
+          },
+          {
+            "weight": 0.025,
+            "dev_triplet_crop_AP": 13.29246613952521
+          },
+          {
+            "weight": 0.05,
+            "dev_triplet_crop_AP": 13.434569061581506
+          },
+          {
+            "weight": 0.1,
+            "dev_triplet_crop_AP": 13.687913047166926
+          },
+          {
+            "weight": 0.2,
+            "dev_triplet_crop_AP": 14.229264108639779
+          },
+          {
+            "weight": 0.35,
+            "dev_triplet_crop_AP": 15.028171957154088
+          },
+          {
+            "weight": 0.5,
+            "dev_triplet_crop_AP": 15.642392058486386
+          },
+          {
+            "weight": 0.75,
+            "dev_triplet_crop_AP": 15.869038672857235
+          },
+          {
+            "weight": 1.0,
+            "dev_triplet_crop_AP": 13.329944703146875
+          }
+        ],
+        "source_report_sha256": "e69c9e679fcde151ac11e4f50d66ec199f467ae930ded634c2d21768782ca430"
+      },
+      "shuffled": {
+        "selected_weight": 0.35,
+        "candidates": [
+          {
+            "weight": 0.0,
+            "dev_triplet_crop_AP": 13.158019843193712
+          },
+          {
+            "weight": 0.0003353501,
+            "dev_triplet_crop_AP": 13.158890616423848
+          },
+          {
+            "weight": 0.0015,
+            "dev_triplet_crop_AP": 13.162978029421168
+          },
+          {
+            "weight": 0.005,
+            "dev_triplet_crop_AP": 13.17364300396404
+          },
+          {
+            "weight": 0.01,
+            "dev_triplet_crop_AP": 13.188108087621556
+          },
+          {
+            "weight": 0.025,
+            "dev_triplet_crop_AP": 13.237894926404389
+          },
+          {
+            "weight": 0.05,
+            "dev_triplet_crop_AP": 13.307881390457736
+          },
+          {
+            "weight": 0.1,
+            "dev_triplet_crop_AP": 13.446824965852558
+          },
+          {
+            "weight": 0.2,
+            "dev_triplet_crop_AP": 13.65971062894879
+          },
+          {
+            "weight": 0.35,
+            "dev_triplet_crop_AP": 13.898193941516675
+          },
+          {
+            "weight": 0.5,
+            "dev_triplet_crop_AP": 13.851495212813184
+          },
+          {
+            "weight": 0.75,
+            "dev_triplet_crop_AP": 12.092673644552791
+          },
+          {
+            "weight": 1.0,
+            "dev_triplet_crop_AP": 6.9039255999225375
+          }
+        ],
+        "source_report_sha256": "e69c9e679fcde151ac11e4f50d66ec199f467ae930ded634c2d21768782ca430"
+      }
+    },
+    "1": {
+      "phrase": {
+        "selected_weight": 0.5,
+        "candidates": [
+          {
+            "weight": 0.0,
+            "dev_triplet_crop_AP": 14.371163523638801
+          },
+          {
+            "weight": 0.0003353501,
+            "dev_triplet_crop_AP": 14.373227617977287
+          },
+          {
+            "weight": 0.0015,
+            "dev_triplet_crop_AP": 14.380569338590817
+          },
+          {
+            "weight": 0.005,
+            "dev_triplet_crop_AP": 14.401957493608842
+          },
+          {
+            "weight": 0.01,
+            "dev_triplet_crop_AP": 14.435377262882445
+          },
+          {
+            "weight": 0.025,
+            "dev_triplet_crop_AP": 14.530334488669306
+          },
+          {
+            "weight": 0.05,
+            "dev_triplet_crop_AP": 14.681440193851858
+          },
+          {
+            "weight": 0.1,
+            "dev_triplet_crop_AP": 14.982416349042708
+          },
+          {
+            "weight": 0.2,
+            "dev_triplet_crop_AP": 15.481149994396212
+          },
+          {
+            "weight": 0.35,
+            "dev_triplet_crop_AP": 16.09201404982766
+          },
+          {
+            "weight": 0.5,
+            "dev_triplet_crop_AP": 16.499721771539498
+          },
+          {
+            "weight": 0.75,
+            "dev_triplet_crop_AP": 16.270890482460192
+          },
+          {
+            "weight": 1.0,
+            "dev_triplet_crop_AP": 13.41377378954219
+          }
+        ],
+        "source_report_sha256": "07b775bcd81193f7ad6b9b2796c32d9c203c32ea210f224b44b797e14b6a076e"
+      },
+      "shuffled": {
+        "selected_weight": 0.35,
+        "candidates": [
+          {
+            "weight": 0.0,
+            "dev_triplet_crop_AP": 14.371163523638801
+          },
+          {
+            "weight": 0.0003353501,
+            "dev_triplet_crop_AP": 14.37248295309896
+          },
+          {
+            "weight": 0.0015,
+            "dev_triplet_crop_AP": 14.377020952699414
+          },
+          {
+            "weight": 0.005,
+            "dev_triplet_crop_AP": 14.389256066068533
+          },
+          {
+            "weight": 0.01,
+            "dev_triplet_crop_AP": 14.408618418650246
+          },
+          {
+            "weight": 0.025,
+            "dev_triplet_crop_AP": 14.463657475293704
+          },
+          {
+            "weight": 0.05,
+            "dev_triplet_crop_AP": 14.55227080714521
+          },
+          {
+            "weight": 0.1,
+            "dev_triplet_crop_AP": 14.698462415239588
+          },
+          {
+            "weight": 0.2,
+            "dev_triplet_crop_AP": 14.951301949554226
+          },
+          {
+            "weight": 0.35,
+            "dev_triplet_crop_AP": 15.115165024681957
+          },
+          {
+            "weight": 0.5,
+            "dev_triplet_crop_AP": 14.953949915016189
+          },
+          {
+            "weight": 0.75,
+            "dev_triplet_crop_AP": 12.33917682549693
+          },
+          {
+            "weight": 1.0,
+            "dev_triplet_crop_AP": 6.977514371829977
+          }
+        ],
+        "source_report_sha256": "07b775bcd81193f7ad6b9b2796c32d9c203c32ea210f224b44b797e14b6a076e"
+      }
+    },
+    "2": {
+      "phrase": {
+        "selected_weight": 0.75,
+        "candidates": [
+          {
+            "weight": 0.0,
+            "dev_triplet_crop_AP": 13.306542977406782
+          },
+          {
+            "weight": 0.0003353501,
+            "dev_triplet_crop_AP": 13.308115438877387
+          },
+          {
+            "weight": 0.0015,
+            "dev_triplet_crop_AP": 13.315522324773578
+          },
+          {
+            "weight": 0.005,
+            "dev_triplet_crop_AP": 13.333865697446209
+          },
+          {
+            "weight": 0.01,
+            "dev_triplet_crop_AP": 13.360385944346366
+          },
+          {
+            "weight": 0.025,
+            "dev_triplet_crop_AP": 13.446401665507517
+          },
+          {
+            "weight": 0.05,
+            "dev_triplet_crop_AP": 13.59158254544153
+          },
+          {
+            "weight": 0.1,
+            "dev_triplet_crop_AP": 13.863391565932917
+          },
+          {
+            "weight": 0.2,
+            "dev_triplet_crop_AP": 14.393978876116279
+          },
+          {
+            "weight": 0.35,
+            "dev_triplet_crop_AP": 15.114291527314442
+          },
+          {
+            "weight": 0.5,
+            "dev_triplet_crop_AP": 15.720538869708996
+          },
+          {
+            "weight": 0.75,
+            "dev_triplet_crop_AP": 15.99779735897777
+          },
+          {
+            "weight": 1.0,
+            "dev_triplet_crop_AP": 13.125018062466362
+          }
+        ],
+        "source_report_sha256": "7187ecaed4f9a77d8cf7c34444f405093eb71c9bdaf379ece71b4481e9173dcc"
+      },
+      "shuffled": {
+        "selected_weight": 0.35,
+        "candidates": [
+          {
+            "weight": 0.0,
+            "dev_triplet_crop_AP": 13.306542977406782
+          },
+          {
+            "weight": 0.0003353501,
+            "dev_triplet_crop_AP": 13.30716876419442
+          },
+          {
+            "weight": 0.0015,
+            "dev_triplet_crop_AP": 13.310712675803233
+          },
+          {
+            "weight": 0.005,
+            "dev_triplet_crop_AP": 13.318627262193159
+          },
+          {
+            "weight": 0.01,
+            "dev_triplet_crop_AP": 13.329500912739993
+          },
+          {
+            "weight": 0.025,
+            "dev_triplet_crop_AP": 13.365757957919406
+          },
+          {
+            "weight": 0.05,
+            "dev_triplet_crop_AP": 13.423195494450347
+          },
+          {
+            "weight": 0.1,
+            "dev_triplet_crop_AP": 13.52929917377172
+          },
+          {
+            "weight": 0.2,
+            "dev_triplet_crop_AP": 13.700221833421312
+          },
+          {
+            "weight": 0.35,
+            "dev_triplet_crop_AP": 13.798582231843056
+          },
+          {
+            "weight": 0.5,
+            "dev_triplet_crop_AP": 13.571973530795342
+          },
+          {
+            "weight": 0.75,
+            "dev_triplet_crop_AP": 11.507873065587368
+          },
+          {
+            "weight": 1.0,
+            "dev_triplet_crop_AP": 6.562399885329117
+          }
+        ],
+        "source_report_sha256": "7187ecaed4f9a77d8cf7c34444f405093eb71c9bdaf379ece71b4481e9173dcc"
+      }
+    }
+  },
+  "grid": [
+    0.0,
+    0.0003353501,
+    0.0015,
+    0.005,
+    0.01,
+    0.025,
+    0.05,
+    0.1,
+    0.2,
+    0.35,
+    0.5,
+    0.75,
+    1.0
+  ]
+}

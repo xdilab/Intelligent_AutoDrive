@@ -1,0 +1,20 @@
+{
+  "checked_unix": 1789823524.525591,
+  "passed": true,
+  "runs": [
+    {
+      "run": "attention-classification-comp-seed0",
+      "steps": 2000,
+      "epoch": 1,
+      "position": 512000,
+      "checkpoint_mtime": 1789823522.408611
+    },
+    {
+      "run": "attention-contrastive-all184-comp-seed0",
+      "steps": 2100,
+      "epoch": 1,
+      "position": 537600,
+      "checkpoint_mtime": 1789823524.4096456
+    }
+  ]
+}

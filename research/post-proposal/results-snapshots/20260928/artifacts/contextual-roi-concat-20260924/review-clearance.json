@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "reviewer": "independent dcb_review agent",
+  "time": 1790279127.2724087,
+  "protocol_sha256": "eed011ca7e4bd7512ad271b8af6b09b2fb977021b1874eeaa27068df4feaa0cf",
+  "code_sha256": {
+    "cache_context.py": "7919478981274b08ab85764301251a3a15839dc89290d6ad4c6070638eb2e050",
+    "compare.py": "b8f71df4ab9925aca80bd577aa7b80af94f6323ff68bbfe26ef79cac301103f3",
+    "dcb.py": "3a3967897a1cdc87fbe285d624084792c5a10e3a028c7498e32d6bd92ffa307a",
+    "evaluate_cached.py": "631946eb63763cdc2dd348077e7f0fe5deb396cce6bedcfcdb467479b554fe84",
+    "model.py": "2a578e3eede0ca4bef7ce922bfb0c27c196c9ec970d95e3dde475b830037c917",
+    "monitor_local.py": "d3568a9b1d9329077657023aaf649a584d28f70771ab3dbcd9c4f1c46996b90f",
+    "pipeline.py": "209b12ef0f7045ee2f2e4b3e246c2dcb2afc617252d616cb12636336e36278f4",
+    "preflight.py": "9bff2632f1bd53d8c02c65f60a49e77f1a3f73745c5fca12bc102cfbf3c46222",
+    "prepare_blend.py": "63f05c86272dd07dfd799d9b31e285d5740da17f3b4dc94af606efee9c439041",
+    "train_cached.py": "626e390b8ce862c1970bbfe243df4bc13bbb9c6e4691f7dbc9cf00f23609cfd2"
+  },
+  "preflight_sha256": "63bd8866fe4a928b38cdeda4d6fd8a3086c6523cb4fa902f80d9472a34443e43",
+  "checks": [
+    "shared model and RNG parity seeds0-2",
+    "FP32 baseline forward equivalence",
+    "1310720 added parameters",
+    "all five projection blocks receive gradients",
+    "actual model+optimizer+DCB next-step resume parity",
+    "healthy/failed/inactive/stalled/log-error/corrupt-checkpoint monitor fixtures",
+    "immutable loss/evaluator/selection review",
+    "final matched-protocol production GPU preflight passed"
+  ],
+  "limitations": [
+    "Connectivity and extra parameter capacity jointly changed",
+    "BF16 forward parity is tolerance-based",
+    "Parent agent must verify installed timers and actual alert delivery before launch"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "source": "/data/repos/wiki/artifacts/stage6-worked-example/provenance.json",
+  "example": {
+    "dataset": "ROAD-Waymo v1.1",
+    "video": "train_00552",
+    "frame": 58,
+    "tube": "810866e9-c236-474f-9fad-7005f4e38c04",
+    "box": [
+      0.0373361796875,
+      0.33923291015625,
+      0.3278017890625,
+      0.76802330859375
+    ],
+    "class": "Bus-MovAway-OutgoLane",
+    "phrase": "a bus moving away from the ego vehicle in the outgoing traffic lane",
+    "training_boxes": 1894,
+    "log_count_z": -0.7319504308238322,
+    "deep_tail_criterion": "z < -0.5",
+    "image_display": "2x padded annotated box crop, clipped to frame",
+    "annotation_source": "/data/datasets/road_waymo/road_waymo_trainval_v1.1.json",
+    "count_verified_directly": true
+  },
+  "frames": [
+    55,
+    58,
+    62
+  ],
+  "frame_sha256": {
+    "55": "6e263a1db3eef989cc09b7ffa1dbc5267be8106beb9d3eb7d7c66241dc489a53",
+    "58": "3fab189107d87c42e33ed3025f4eb99703ff17a64d55afed1cdb5f71a11f5d50",
+    "62": "8617b066b16ef794405f11f13aaad75d2781e2dad133d56e25568876ca7a5b63"
+  },
+  "image_tile_aspect_ratio": "Entire frames and map:170x113.333; crop tiles use the actual padded-window dimensions at the same display scale, preserving native proportions",
+  "scope": "Illustrative GT box, not a measured YOLO prediction; same fixed padded crop window. Feature map is schematic, not a measured activation."
+}

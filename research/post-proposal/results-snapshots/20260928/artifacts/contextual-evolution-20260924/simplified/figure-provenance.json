@@ -1,0 +1,8 @@
+{
+  "date": "2026-09-25",
+  "tier": "simplified presentation overview",
+  "parent_generator": "/data/repos/wiki/artifacts/contextual-evolution-20260924/build-diagrams.py",
+  "sha256": "b7a00de4d3d81f080317e436aea06f278eda1a655779cbcccbbcfe18e58b0597",
+  "technical_source": "/data/repos/wiki/artifacts/contextual-evolution-20260924/technical-evidence.md",
+  "exceptions": "Tensor dimensions and classifier concatenation are in companion details; crop-only/text residuals remain visible. Original architectures unchanged."
+}

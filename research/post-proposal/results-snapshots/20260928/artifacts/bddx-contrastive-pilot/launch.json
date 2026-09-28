@@ -1,0 +1,13 @@
+{
+  "smoke_job": 729086,
+  "pilot_job": 729087,
+  "pilot_dependency": "afterok:729086",
+  "pilot_initial_hold": "released automatically after archive checksum and manifest validation",
+  "cluster_root": "/work/bbyrd1/bddx-pilot-20260911",
+  "gpu_partition": "gpu-hp",
+  "qos": "ncat_h200_hp",
+  "smoke_start_estimate_utc": "2026-09-12T00:48:28",
+  "collector_pid": 4150815,
+  "status": "both jobs completed successfully",
+  "selected_checkpoint": "epoch-2.pt"
+}

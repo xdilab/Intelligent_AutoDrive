@@ -1,0 +1,28 @@
+{
+  "authorized_by": "Brandon September19,2026: go with composition-aware gate; separate DCB direction deferred",
+  "remote_export_job": "735058",
+  "remote_export_state": "COMPLETED",
+  "export_rows": 580250,
+  "code": "/data/repos/ROAD_Reason/research/post-proposal/contextual-gate",
+  "code_sha256": {
+    "router.py": "ffc42961c99338e904584d595467f95ff529f8e243a09ada14849aa7a437dbe5",
+    "prepare_local.py": "ed7c04858ea4cbf0c242ea52aaf0d4f6768834374adbce0bbf28d9f80f19724f",
+    "pipeline.py": "30de8d795bb9a29f7b8db4b3506c49de9db0c4f021552e874c0dd9a0ede9a824",
+    "preflight.py": "b6174d6ada2c91c995fc5f8f4d1e3734792db8283e809f426376333feeb6ae76",
+    "common.py": "bc08898b9e0e54d4dcb9da5bb782a90e53185899bf942adbb297a9e86759a5a1",
+    "test_router.py": "00cb97431c6d92003b9e603879d9088b2045ee6922996614cdb9c45f701f485d",
+    "evaluate_gate.py": "066564feb2f21c42f3c24775de53534c1c6e6761da5c77abaac0728f1f509dfd",
+    "monitor_local.py": "610996402267a60a42b9b46383e5e4fc49248870001796fc4761e7c4dff2092f",
+    "train_gate.py": "8e71416694ea5af44ca4d65141dbe548e844b4e2ce5577990486ccf73d6a010a",
+    "export_gate.py": "ab91229ce9769658faa71d03111d93cd06b246a2cb32ffdb85aba096c73f09b3",
+    "predict_gate.py": "da95658b9fff7dd85c2876fe3c89600f18bff0b2f0c41d462a6834f82da620a9"
+  },
+  "gate_training_launched": true,
+  "selection_influence": "45 selection videos choose global anchor that is used in fitting and regularization, as a validation-tuned hyperparameter;45 fit videos provide gradient examples. Same selection videos choose epochs. No official validation fitting or selection.",
+  "storage_budget": "estimated under10GiB incremental local gate data/predictions plus no persistent full-validation score arrays; no deletions",
+  "review": "review-clearance.json",
+  "completed_at": "2026-09-19T14:07:49-04:00",
+  "verified_at": "2026-09-19T19:04:39.293514-04:00",
+  "all_detector_results": 12,
+  "summary": "Blending improves matched experts; primary factorized-vs-generic tail contrast inconclusive and slightly negative."
+}

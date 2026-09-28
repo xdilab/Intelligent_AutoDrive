@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": [
+    "AP selection and deterministic lower-weight tie rule",
+    "matching routine AST parity with original",
+    "actual evaluator mixture endpoints recover Stage5/phrase composition AP",
+    "fixed candidate hash and selected-weight provenance"
+  ],
+  "synthetic_only": true
+}

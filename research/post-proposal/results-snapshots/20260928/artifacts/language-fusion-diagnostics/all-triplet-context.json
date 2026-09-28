@@ -1,0 +1,16 @@
+{
+  "classes": 86,
+  "phrase_over_flat_mean": 52,
+  "phrase_over_flat_all_seeds": 38,
+  "phrase_over_stage5_mean": 18,
+  "phrase_over_stage5_all_seeds": 8,
+  "phrase_over_stage5_but_stage6_below_stage5_mean": [
+    "Ped-PushObj-RhtPav",
+    "Car-IncatRht-OutgoLane",
+    "Car-HazLit-IncomLane",
+    "MedVeh-MovAway-VehLane",
+    "LarVeh-MovTow-IncomLane",
+    "LarVeh-Stop-Jun",
+    "Bus-Stop-IncomLane"
+  ]
+}

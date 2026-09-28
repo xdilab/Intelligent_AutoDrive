@@ -1,0 +1,77 @@
+{
+  "time": "2026-09-24T15:47:06-04:00",
+  "study_service": "contextual-roi-concat-study.service",
+  "main_pid": 3636729,
+  "gpu_workers": [
+    3636785,
+    3636786
+  ],
+  "monitor_timer": "contextual-roi-concat-monitor.timer",
+  "interval_seconds": 120,
+  "repair_registry": "ROAD_Reason/research/post-proposal/monitoring/repair_dispatch.py",
+  "progress": {
+    "attention-contrastive-all184-dcb-seed0": {
+      "run": "attention-contrastive-all184-dcb-seed0",
+      "phase": "train",
+      "epoch": 1,
+      "position": 870400,
+      "total": 2567474,
+      "steps": 3400,
+      "time": 1790279224.859398,
+      "loss": 0.04648880920153769,
+      "classification": 0.043865030601291974,
+      "contrastive": 2.6237784663368675,
+      "preclip_gradient_norm": 0.23878934979438782
+    },
+    "attention-classification-dcb-seed0": {
+      "run": "attention-classification-dcb-seed0",
+      "phase": "train",
+      "epoch": 1,
+      "position": 896000,
+      "total": 2567474,
+      "steps": 3500,
+      "time": 1790279226.0521848,
+      "loss": 0.04374894757568836,
+      "classification": 0.04374894757568836,
+      "contrastive": 5.221170671463013,
+      "preclip_gradient_norm": 0.2432151585817337
+    }
+  },
+  "monitor": {
+    "time": 1790279173.7641802,
+    "service": "active",
+    "pipeline": {
+      "phase": "train-and-evaluate",
+      "time": 1790279154.5912201,
+      "pid": 3636729
+    }
+  },
+  "checkpoint_verification": {
+    "passed": true,
+    "checkpoints": {
+      "/data/repos/wiki/artifacts/contextual-roi-concat-20260924/runs/attention-contrastive-all184-dcb-seed0/resume.pt": {
+        "sha256": "435eb05fc4b31e2ecdbf53fdfc6732e3f1359ae995d21f0f973239372a7c81c9",
+        "epoch": 0,
+        "position": 204800,
+        "bytes": 90188826,
+        "verified_at": 1790279173.8943217
+      },
+      "/data/repos/wiki/artifacts/contextual-roi-concat-20260924/runs/attention-classification-dcb-seed0/resume.pt": {
+        "sha256": "472c2b98b79669a5613f470416b570b1f33777f25c489657e453b111d1dfa0fb",
+        "epoch": 0,
+        "position": 204800,
+        "bytes": 90188826,
+        "verified_at": 1790279174.029398
+      }
+    },
+    "failures": {},
+    "time": 1790279174.0294259
+  },
+  "eta": {
+    "first_development": "2026-09-24 15:50\u201315:55 EDT",
+    "first_detector": "2026-09-24 16:15\u201316:30 EDT",
+    "full_study": "2026-09-24 17:45\u201318:45 EDT",
+    "basis": "Prior same-cache DCB experts ~10min training, ~15min detector evaluation; disposable new-head benchmark12.5\u201317.0k rows/s; two free GPUs; no queue",
+    "uncertainty": "Provisional until detector phase; AP sorting and shared-disk throughput vary"
+  }
+}

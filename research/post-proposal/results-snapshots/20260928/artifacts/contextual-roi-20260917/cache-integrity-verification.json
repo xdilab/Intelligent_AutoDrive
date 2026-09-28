@@ -1,0 +1,26 @@
+{
+  "verified_utc": "2026-09-18T22:05:00+00:00",
+  "question": "The 12-run study resumed a cache that was partly extracted before the September18 13:56 geometry fix. Are pre-fix cached rows consistent with post-fix code?",
+  "incident": {
+    "failed_utc": "2026-09-18T07:11:00+00:00",
+    "error": "ValueError: Invalid normalized boxes (cache_context.py)",
+    "broken_for_hours": 10.75,
+    "fix_applied_local": "2026-09-18 13:56 EDT",
+    "files_changed": ["cache_context.py", "model.py", "test_geometry.py (new regression test)"],
+    "fix_scope": "Zero-area boundary candidates (e.g. [.978125,1.,1.,1.]) previously tripped the validator and aborted extraction. They are now preserved and yield zero context features. Candidates are not dropped or reordered."
+  },
+  "cache_composition": {"pre_fix_files": 81174, "post_fix_files": 53810, "total_pt_files": 134984,
+                        "manifest_rows": {"dev": 17641, "train": 80626, "val": 36717}},
+  "evidence": [
+    "Each cached file stores fingerprint=sha256(CONTRACT,row); the resume path re-verifies and raises Cache mismatch otherwise. The resumed pass completed all 134984 rows, so every pre-fix fingerprint matched the post-fix CONTRACT.",
+    "Failure mode was fail-closed: the pre-fix code raised rather than writing incorrect features.",
+    "Zero-area boxes were found only in post-fix files and always carry zero RoI features, the expected signature of a degenerate-box-only change.",
+    "Direct recomputation: 4 randomly selected pre-fix frames were re-encoded on GPU with the current code and compared to cache. Bit-exact on RoI features, scene tokens and boxes (max abs difference 0.00000)."
+  ],
+  "recomputed_frames": ["train_00194_00133", "train_00005_00058", "train_00006_00074", "train_00021_00025"],
+  "verdict": "Pre-fix cached rows reproduce exactly under current code. The mixed cache is sound; the completed runs are not affected by the incident.",
+  "scope_limit": "Recomputation covered 4 frames, not all 81174 pre-fix files. Fingerprint verification covers all files for input/contract identity; recomputation confirms compute identity on a random sample.",
+  "run_provenance": "All 12 runs of contextual-roi-20260917 started 15:56 EDT or later, after the 15:30-15:32 cache completion. No run used pre-fix code.",
+  "downstream": "contextual-roi-all184-20260918 reuses this cache (no_new_encoder_extraction: true) and inherits this verified state.",
+  "actions_taken": "Read-only verification. Nothing in the study directories was modified; recomputation wrote only to a scratch process."
+}

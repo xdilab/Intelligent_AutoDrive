@@ -1,0 +1,35 @@
+{
+  "version": "contextual-residual-roi-all184-v2-20260918",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "epochs": 3,
+  "batch_size": 256,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.01,
+  "save_every": 100,
+  "contrastive_weight": 0.001,
+  "temperature": 0.07,
+  "conditions": [
+    "mlp-contrastive-all184",
+    "attention-contrastive-all184"
+  ],
+  "split": "same420 expert/90 development;90 gate reserved;36717 official validation frames",
+  "selection": "Unchanged: best development triplet crop AP across3 epochs; official validation never selects checkpoint",
+  "initialization": "new heads from seeded random initialization; residual adapters initially identity; original frozen encoders",
+  "comparison_scope": "matched new-head ablations; existing Stage5/6 warm-start adaptation is contextual comparison, not initialization-matched",
+  "contrastive": "Visual RoI aligned to all184 fixed original phrase prototypes; average negative log probability across ALL positive labels per crop; average across crops having >=1 positive. Includes agentness1/agent10/action22/location16/duplex49/triplet86; exclude all-zero background rows. Before text conditioning.",
+  "language": "full184 phrase bank available at inference; no ground-truth phrase input",
+  "classification": "class-weighted focal gamma2 over184 logits",
+  "evaluation": "same YOLO candidates/confidence multiplication, official AP@0.5, six heads and common39/tail47/deep28",
+  "scene": "frozen full-clip keyframe16x16 tokens;4x4 scene pool;7x7 actor RoIAlign mean",
+  "position": "trainable embedding of normalized xyxy,cx,cy,w,h, after encoder",
+  "encoder_revision": "1f9fca1389fd883defc652634d95a21121c85a8c",
+  "cache_protection": "manifest/frame/row hashes, exact boxes and targets, atomic per-frame writes",
+  "runtime": "Two local A6000 lanes after original12 runs complete; six fresh runs; immutable original caches reused",
+  "contrastive_scope": "all184",
+  "classification_controls": "/data/repos/wiki/artifacts/contextual-roi-20260917/runs",
+  "parent_study": "/data/repos/wiki/artifacts/contextual-roi-20260917"
+}

@@ -1,0 +1,16 @@
+{
+  "reviewed_revision": "2026-09-25 uniform internal concatenation symbols",
+  "scope": "Current generators and six editable diagrams; internal blend Concat labels replaced by gold C symbols; shared bundle remains black dot",
+  "verdict": "approved; symbol replacement preserves previously verified partial internal fusion path",
+  "report": "artifacts/contextual-evolution-20260924/simplified/technical-review.md",
+  "sha256": {
+    "build-simple.py": "b63518967afd6ba48f29496337d112ed3cc09f62388f6f71438664f05fd0d4b2",
+    "build-viewer.py": "f9580f06eaec079151398b98b0b507f14cf8da5b2f242a07d91f0b5599064e04",
+    "01-mlp.drawio": "62e790e1a72e0c7b2d3002edb259b93acd2e1fe06cec29b48e9e7d7ff0152616",
+    "02-attention.drawio": "8ffa2f086ff87dade87821466519e61dfa3f77b9d2528a890bdf9a938485effd",
+    "03-triplet-contrastive.drawio": "2e46f0e6ba3302c8847be8c0e74cc838d1041a69f8250359ba4a9f0f2cccf55c",
+    "04-all184-contrastive.drawio": "67b9c14c69135dfea67218ae0a9ebe06a12be8304f1ab84725fa22c81ec651a6",
+    "05-expert-blend.drawio": "5657c3b8f44892fccdbac2ed4bebc721775b7aa99d3431e1a7c4450e1a9df2e9",
+    "06-dcb-blend.drawio": "b143937dd0e6e1277797d0c2c10d4bb80d2a571e80996e396828a94a0608aa10"
+  }
+}

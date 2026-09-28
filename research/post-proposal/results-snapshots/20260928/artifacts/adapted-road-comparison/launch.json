@@ -1,0 +1,16 @@
+{
+  "cluster_root": "/work/bbyrd1/adapted-road-20260911",
+  "jobs": {
+    "smoke": 729475,
+    "cache": 729476,
+    "merge": 729477,
+    "train": 729478,
+    "eval": 729479
+  },
+  "dependencies": "afterok throughout; smoke held until verified staging",
+  "cache_max_gpus": 4,
+  "training_max_gpus": 2,
+  "evaluation_concurrency": 2,
+  "expected_evaluations": 12,
+  "status": "staging; no adapted ROAD-Waymo result yet"
+}

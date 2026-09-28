@@ -1,0 +1,10 @@
+[Unit]
+Description=Check every two minutes for research failures needing autonomous repair
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=2min
+Persistent=true
+AccuracySec=10s
+Unit=research-repair.service
+[Install]
+WantedBy=timers.target

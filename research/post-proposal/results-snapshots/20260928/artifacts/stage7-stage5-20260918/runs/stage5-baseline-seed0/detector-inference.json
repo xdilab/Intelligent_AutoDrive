@@ -1,0 +1,10 @@
+{
+  "signature": {
+    "checkpoint_sha256": "31a0577898149158e47fc117366b737f2909f26c716bdab7156009d27327aa0b",
+    "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+    "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+    "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9",
+    "evaluator_sha256": "921d7c336639f3aafe4b2d58d1f004d4ba527406713f39c89003184108516d3e"
+  },
+  "position": 6163968
+}

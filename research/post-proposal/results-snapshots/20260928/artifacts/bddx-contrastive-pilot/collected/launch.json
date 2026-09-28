@@ -1,0 +1,7 @@
+{
+  "smoke_job": 729086,
+  "pilot_job": 729087,
+  "dependency": "afterok:729086",
+  "data_verified": true,
+  "state": "released; awaiting successful smoke and GPU scheduling"
+}

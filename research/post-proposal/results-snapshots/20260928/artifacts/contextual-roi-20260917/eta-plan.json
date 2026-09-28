@@ -1,0 +1,18 @@
+{
+  "as_of": "2026-09-18T14:02:00-04:00",
+  "first_detector_result_hours": [
+    3,
+    5
+  ],
+  "full_12_run_study_hours": [
+    8,
+    16
+  ],
+  "first_detector_result_window_EDT": "September18 17:00\u201319:00",
+  "full_study_window_EDT": "September18 22:00 \u2013 September19 06:00",
+  "extraction_remaining_hours": 1.5,
+  "basis": "Observed ~5 scene clips/second per GPU, 2 A6000s; ~14900 dev and36717 val frames remaining; head benchmark ~0.0106/0.0121s per256-crop train step. ~5\u20136min three-epoch GPU computation per run excludes IO/checkpoints/dev AP.",
+  "uncertainty": "Planning range; compaction/disk IO and full detector metric stage not yet measured. Not a completion guarantee. Refresh at first completed full run.",
+  "runs": 12,
+  "parallel_workers": 2
+}

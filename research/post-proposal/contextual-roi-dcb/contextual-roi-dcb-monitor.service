@@ -1,0 +1,5 @@
+[Unit]
+Description=Monitor contextual DCB study
+[Service]
+Type=oneshot
+ExecStart=/home/brandon/miniconda3/bin/python /data/repos/ROAD_Reason/research/post-proposal/contextual-roi-dcb/monitor_local.py

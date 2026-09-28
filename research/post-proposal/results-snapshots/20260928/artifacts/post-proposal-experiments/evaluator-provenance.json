@@ -1,0 +1,11 @@
+{
+  "source": "/data/repos/ROAD_Reason/experiments/exp12_phrase_head/eval_comb.py",
+  "source_sha256": "a3155b7c033e10b4a43fc0fc05e512f46b594ed91315b7244cf307b18d3ad492",
+  "changes": [
+    "explicit fixed frame manifest",
+    "empty candidates get an empty feature matrix and retain GT/frame",
+    "missing nonempty features, mismatched rows, and nonfinite features fail instead of silently dropping frames",
+    "explicit source paths; original repository unchanged"
+  ],
+  "evaluator": "Original baseline modules.evaluation.evaluate at IoU 0.5; unchanged"
+}

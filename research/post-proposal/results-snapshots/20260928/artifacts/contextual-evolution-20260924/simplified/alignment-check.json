@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "locked_components": [
+    "frame",
+    "yolo",
+    "candidates",
+    "clips",
+    "video",
+    "features",
+    "crop",
+    "roi",
+    "scene",
+    "geometry",
+    "phrases",
+    "text",
+    "bank",
+    "out",
+    "scene-video",
+    "spatial-map",
+    "roi-align",
+    "feature-collector",
+    "crop-pool",
+    "scene-pool",
+    "entire",
+    "registration_frame"
+  ],
+  "maximum_coordinate_delta": 0,
+  "canvas": [
+    2520,
+    1080
+  ]
+}

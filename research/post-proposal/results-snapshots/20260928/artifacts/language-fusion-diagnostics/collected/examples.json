@@ -1,0 +1,4772 @@
+[
+  {
+    "seed": 0,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00714_00096",
+    "gt_local": 0,
+    "gt_box": [
+      0.37352630496025085,
+      0.4860282242298126,
+      0.5574110746383667,
+      0.6646497249603271
+    ],
+    "candidate_index": 3,
+    "candidate_box": [
+      0.37421876192092896,
+      0.4781250059604645,
+      0.5554687976837158,
+      0.663281261920929
+    ],
+    "candidate_iou": 0.9372454285621643,
+    "budget": 1655,
+    "head-flat_gt_rank": 142518,
+    "head-phrase_gt_rank": 95,
+    "stage5_gt_rank": 10283,
+    "stage6_gt_rank": 1144,
+    "head-flat_score_same_candidate": 0.0013241254491731524,
+    "head-phrase_score_same_candidate": 0.7036645412445068,
+    "stage5_score_same_candidate": 0.2872353196144104,
+    "stage6_score_same_candidate": 0.5474706888198853
+  },
+  {
+    "seed": 0,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00795_00138",
+    "gt_local": 0,
+    "gt_box": [
+      0.5190880298614502,
+      0.5394420027732849,
+      0.5980367660522461,
+      0.6319600939750671
+    ],
+    "candidate_index": 11,
+    "candidate_box": [
+      0.5203125476837158,
+      0.5390625,
+      0.5984375476837158,
+      0.634570300579071
+    ],
+    "candidate_iou": 0.9493135809898376,
+    "budget": 1655,
+    "head-flat_gt_rank": 2028,
+    "head-phrase_gt_rank": 1151,
+    "stage5_gt_rank": 2526,
+    "stage6_gt_rank": 941,
+    "head-flat_score_same_candidate": 0.5388094186782837,
+    "head-phrase_score_same_candidate": 0.6007511019706726,
+    "stage5_score_same_candidate": 0.45029670000076294,
+    "stage6_score_same_candidate": 0.5678907632827759
+  },
+  {
+    "seed": 0,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00714_00084",
+    "gt_local": 0,
+    "gt_box": [
+      0.37352630496025085,
+      0.48440709710121155,
+      0.5574110746383667,
+      0.6616190075874329
+    ],
+    "candidate_index": 4,
+    "candidate_box": [
+      0.37382814288139343,
+      0.47871094942092896,
+      0.556640625,
+      0.6626953482627869
+    ],
+    "candidate_iou": 0.9577787518501282,
+    "budget": 1655,
+    "head-flat_gt_rank": 130185,
+    "head-phrase_gt_rank": 247,
+    "stage5_gt_rank": 16443,
+    "stage6_gt_rank": 2720,
+    "head-flat_score_same_candidate": 0.0016376610146835446,
+    "head-phrase_score_same_candidate": 0.683820903301239,
+    "stage5_score_same_candidate": 0.22931408882141113,
+    "stage6_score_same_candidate": 0.448880672454834
+  },
+  {
+    "seed": 0,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00708_00103",
+    "gt_local": 0,
+    "gt_box": [
+      0.32418331503868103,
+      0.5190880298614502,
+      0.6416230797767639,
+      0.9612009525299072
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.3261719048023224,
+      0.521484375,
+      0.6441406607627869,
+      0.9644531607627869
+    ],
+    "candidate_iou": 0.9734974503517151,
+    "budget": 1655,
+    "head-flat_gt_rank": 2416,
+    "head-phrase_gt_rank": 1594,
+    "stage5_gt_rank": 10310,
+    "stage6_gt_rank": 23631,
+    "head-flat_score_same_candidate": 0.49950090050697327,
+    "head-phrase_score_same_candidate": 0.5817938446998596,
+    "stage5_score_same_candidate": 0.28686967492103577,
+    "stage6_score_same_candidate": 0.18633419275283813
+  },
+  {
+    "seed": 0,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00679_00090",
+    "gt_local": 1,
+    "gt_box": [
+      0.4539553225040436,
+      0.4788735508918762,
+      0.5302724242210388,
+      0.5810134410858154
+    ],
+    "candidate_index": 3,
+    "candidate_box": [
+      0.45429688692092896,
+      0.4775390625,
+      0.529296875,
+      0.5794922113418579
+    ],
+    "candidate_iou": 0.9558323621749878,
+    "budget": 1655,
+    "head-flat_gt_rank": 35214,
+    "head-phrase_gt_rank": 1322,
+    "stage5_gt_rank": 5948,
+    "stage6_gt_rank": 4681,
+    "head-flat_score_same_candidate": 0.02441278100013733,
+    "head-phrase_score_same_candidate": 0.5929111242294312,
+    "stage5_score_same_candidate": 0.35588422417640686,
+    "stage6_score_same_candidate": 0.3801770508289337
+  },
+  {
+    "seed": 0,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00714_00196",
+    "gt_local": 0,
+    "gt_box": [
+      0.37522587180137634,
+      0.486960232257843,
+      0.5554921627044678,
+      0.6587834358215332
+    ],
+    "candidate_index": 3,
+    "candidate_box": [
+      0.3750000298023224,
+      0.46757814288139343,
+      0.5562500357627869,
+      0.663281261920929
+    ],
+    "candidate_iou": 0.8732138872146606,
+    "budget": 1655,
+    "head-flat_gt_rank": 56651,
+    "head-phrase_gt_rank": 88,
+    "stage5_gt_rank": 1354,
+    "stage6_gt_rank": 1669,
+    "head-flat_score_same_candidate": 0.009927359409630299,
+    "head-phrase_score_same_candidate": 0.7051807641983032,
+    "stage5_score_same_candidate": 0.5040683150291443,
+    "stage6_score_same_candidate": 0.5053268074989319
+  },
+  {
+    "seed": 0,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00708_00066",
+    "gt_local": 0,
+    "gt_box": [
+      0.3342163860797882,
+      0.5178544521331787,
+      0.6355374455451965,
+      0.936776340007782
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.3335937559604645,
+      0.5191406607627869,
+      0.6375000476837158,
+      0.943359375
+    ],
+    "candidate_iou": 0.9731819033622742,
+    "budget": 1655,
+    "head-flat_gt_rank": 296,
+    "head-phrase_gt_rank": 420,
+    "stage5_gt_rank": 1368,
+    "stage6_gt_rank": 5215,
+    "head-flat_score_same_candidate": 0.7954294085502625,
+    "head-phrase_score_same_candidate": 0.6501404643058777,
+    "stage5_score_same_candidate": 0.5027530193328857,
+    "stage6_score_same_candidate": 0.36654800176620483
+  },
+  {
+    "seed": 0,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00795_00102",
+    "gt_local": 0,
+    "gt_box": [
+      0.5259960293769836,
+      0.5348777770996094,
+      0.5900760889053345,
+      0.6000104546546936
+    ],
+    "candidate_index": 6,
+    "candidate_box": [
+      0.5257812738418579,
+      0.533203125,
+      0.5898438096046448,
+      0.5982422232627869
+    ],
+    "candidate_iou": 0.9420396089553833,
+    "budget": 1655,
+    "head-flat_gt_rank": 75690,
+    "head-phrase_gt_rank": 878,
+    "stage5_gt_rank": 1390,
+    "stage6_gt_rank": 3578,
+    "head-flat_score_same_candidate": 0.005484475288540125,
+    "head-phrase_score_same_candidate": 0.6143019795417786,
+    "stage5_score_same_candidate": 0.5013935565948486,
+    "stage6_score_same_candidate": 0.4137687683105469
+  },
+  {
+    "seed": 0,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00679_00182",
+    "gt_local": 0,
+    "gt_box": [
+      0.486593097448349,
+      0.500326931476593,
+      0.5129380226135254,
+      0.5200856328010559
+    ],
+    "candidate_index": 22,
+    "candidate_box": [
+      0.4828125238418579,
+      0.49921876192092896,
+      0.515625,
+      0.5191406607627869
+    ],
+    "candidate_iou": 0.7304146885871887,
+    "budget": 1655,
+    "head-flat_gt_rank": 5973,
+    "head-phrase_gt_rank": 6629,
+    "stage5_gt_rank": 32097,
+    "stage6_gt_rank": 1027,
+    "head-flat_score_same_candidate": 0.27122166752815247,
+    "head-phrase_score_same_candidate": 0.4765841066837311,
+    "stage5_score_same_candidate": 0.15535522997379303,
+    "stage6_score_same_candidate": 0.5586430430412292
+  },
+  {
+    "seed": 0,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00714_00096",
+    "gt_local": 0,
+    "gt_box": [
+      0.37352630496025085,
+      0.4860282242298126,
+      0.5574110746383667,
+      0.6646497249603271
+    ],
+    "candidate_index": 3,
+    "candidate_box": [
+      0.37421876192092896,
+      0.4781250059604645,
+      0.5554687976837158,
+      0.663281261920929
+    ],
+    "candidate_iou": 0.9372454285621643,
+    "budget": 1655,
+    "head-flat_gt_rank": 142518,
+    "head-phrase_gt_rank": 95,
+    "stage5_gt_rank": 10283,
+    "stage6_gt_rank": 1144,
+    "head-flat_score_same_candidate": 0.0013241254491731524,
+    "head-phrase_score_same_candidate": 0.7036645412445068,
+    "stage5_score_same_candidate": 0.2872353196144104,
+    "stage6_score_same_candidate": 0.5474706888198853
+  },
+  {
+    "seed": 0,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00711_00059",
+    "gt_local": 0,
+    "gt_box": [
+      0.4896467328071594,
+      0.4998442530632019,
+      0.5603716373443604,
+      0.5847141742706299
+    ],
+    "candidate_index": 2,
+    "candidate_box": [
+      0.4921875298023224,
+      0.505664050579071,
+      0.5593750476837158,
+      0.584179699420929
+    ],
+    "candidate_iou": 0.8788577914237976,
+    "budget": 1655,
+    "head-flat_gt_rank": 36197,
+    "head-phrase_gt_rank": 2258,
+    "stage5_gt_rank": 10224,
+    "stage6_gt_rank": 675,
+    "head-flat_score_same_candidate": 0.02317817509174347,
+    "head-phrase_score_same_candidate": 0.5598480701446533,
+    "stage5_score_same_candidate": 0.2879406213760376,
+    "stage6_score_same_candidate": 0.5976647734642029
+  },
+  {
+    "seed": 1,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00708_00048",
+    "gt_local": 0,
+    "gt_box": [
+      0.3514864146709442,
+      0.5156340003013611,
+      0.6255043148994446,
+      0.8906405568122864
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.3509765863418579,
+      0.515625,
+      0.624218761920929,
+      0.897656261920929
+    ],
+    "candidate_iou": 0.975276529788971,
+    "budget": 1655,
+    "head-flat_gt_rank": 17134,
+    "head-phrase_gt_rank": 1377,
+    "stage5_gt_rank": 17461,
+    "stage6_gt_rank": 1385,
+    "head-flat_score_same_candidate": 0.2006314992904663,
+    "head-phrase_score_same_candidate": 0.5422551035881042,
+    "stage5_score_same_candidate": 0.21808667480945587,
+    "stage6_score_same_candidate": 0.6570445895195007
+  },
+  {
+    "seed": 1,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00714_00023",
+    "gt_local": 0,
+    "gt_box": [
+      0.3786250650882721,
+      0.4860282242298126,
+      0.554286003112793,
+      0.6557680368423462
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.37968751788139343,
+      0.4664062559604645,
+      0.5546875,
+      0.655078113079071
+    ],
+    "candidate_iou": 0.8858733177185059,
+    "budget": 1655,
+    "head-flat_gt_rank": 83249,
+    "head-phrase_gt_rank": 313,
+    "stage5_gt_rank": 4310,
+    "stage6_gt_rank": 408,
+    "head-flat_score_same_candidate": 0.01268701534718275,
+    "head-phrase_score_same_candidate": 0.6177557110786438,
+    "stage5_score_same_candidate": 0.3952159583568573,
+    "stage6_score_same_candidate": 0.7905279397964478
+  },
+  {
+    "seed": 1,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00795_00132",
+    "gt_local": 0,
+    "gt_box": [
+      0.5212262272834778,
+      0.5401204228401184,
+      0.5991881489753723,
+      0.6293079257011414
+    ],
+    "candidate_index": 12,
+    "candidate_box": [
+      0.5203125476837158,
+      0.5390625,
+      0.596875011920929,
+      0.6292968988418579
+    ],
+    "candidate_iou": 0.9480565786361694,
+    "budget": 1655,
+    "head-flat_gt_rank": 5395,
+    "head-phrase_gt_rank": 1492,
+    "stage5_gt_rank": 1740,
+    "stage6_gt_rank": 1209,
+    "head-flat_score_same_candidate": 0.4715200364589691,
+    "head-phrase_score_same_candidate": 0.537784218788147,
+    "stage5_score_same_candidate": 0.5046921968460083,
+    "stage6_score_same_candidate": 0.6675477027893066
+  },
+  {
+    "seed": 1,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00679_00090",
+    "gt_local": 1,
+    "gt_box": [
+      0.4539553225040436,
+      0.4788735508918762,
+      0.5302724242210388,
+      0.5810134410858154
+    ],
+    "candidate_index": 3,
+    "candidate_box": [
+      0.45429688692092896,
+      0.4775390625,
+      0.529296875,
+      0.5794922113418579
+    ],
+    "candidate_iou": 0.9558323621749878,
+    "budget": 1655,
+    "head-flat_gt_rank": 38763,
+    "head-phrase_gt_rank": 2064,
+    "stage5_gt_rank": 1639,
+    "stage6_gt_rank": 22358,
+    "head-flat_score_same_candidate": 0.06279691308736801,
+    "head-phrase_score_same_candidate": 0.5170072913169861,
+    "stage5_score_same_candidate": 0.5107718706130981,
+    "stage6_score_same_candidate": 0.2495616376399994
+  },
+  {
+    "seed": 1,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00795_00154",
+    "gt_local": 0,
+    "gt_box": [
+      0.5199103355407715,
+      0.5437593460083008,
+      0.5995169878005981,
+      0.6404716968536377
+    ],
+    "candidate_index": 18,
+    "candidate_box": [
+      0.5203125476837158,
+      0.5414062738418579,
+      0.5992187857627869,
+      0.6392578482627869
+    ],
+    "candidate_iou": 0.9557124376296997,
+    "budget": 1655,
+    "head-flat_gt_rank": 2638,
+    "head-phrase_gt_rank": 2537,
+    "stage5_gt_rank": 1333,
+    "stage6_gt_rank": 1704,
+    "head-flat_score_same_candidate": 0.6176686882972717,
+    "head-phrase_score_same_candidate": 0.5011550188064575,
+    "stage5_score_same_candidate": 0.5303837060928345,
+    "stage6_score_same_candidate": 0.6373541951179504
+  },
+  {
+    "seed": 1,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00608_00101",
+    "gt_local": 0,
+    "gt_box": [
+      0.5064233541488647,
+      0.4586428701877594,
+      0.6416230797767639,
+      0.6614425182342529
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.508984386920929,
+      0.45703125,
+      0.6425781846046448,
+      0.662109375
+    ],
+    "candidate_iou": 0.9635535478591919,
+    "budget": 1655,
+    "head-flat_gt_rank": 157146,
+    "head-phrase_gt_rank": 4877,
+    "stage5_gt_rank": 1214,
+    "stage6_gt_rank": 4145,
+    "head-flat_score_same_candidate": 0.002504057949408889,
+    "head-phrase_score_same_candidate": 0.4501296281814575,
+    "stage5_score_same_candidate": 0.5398643016815186,
+    "stage6_score_same_candidate": 0.500607430934906
+  },
+  {
+    "seed": 1,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00708_00048",
+    "gt_local": 0,
+    "gt_box": [
+      0.3514864146709442,
+      0.5156340003013611,
+      0.6255043148994446,
+      0.8906405568122864
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.3509765863418579,
+      0.515625,
+      0.624218761920929,
+      0.897656261920929
+    ],
+    "candidate_iou": 0.975276529788971,
+    "budget": 1655,
+    "head-flat_gt_rank": 17134,
+    "head-phrase_gt_rank": 1377,
+    "stage5_gt_rank": 17461,
+    "stage6_gt_rank": 1385,
+    "head-flat_score_same_candidate": 0.2006314992904663,
+    "head-phrase_score_same_candidate": 0.5422551035881042,
+    "stage5_score_same_candidate": 0.21808667480945587,
+    "stage6_score_same_candidate": 0.6570445895195007
+  },
+  {
+    "seed": 1,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00714_00023",
+    "gt_local": 0,
+    "gt_box": [
+      0.3786250650882721,
+      0.4860282242298126,
+      0.554286003112793,
+      0.6557680368423462
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.37968751788139343,
+      0.4664062559604645,
+      0.5546875,
+      0.655078113079071
+    ],
+    "candidate_iou": 0.8858733177185059,
+    "budget": 1655,
+    "head-flat_gt_rank": 83249,
+    "head-phrase_gt_rank": 313,
+    "stage5_gt_rank": 4310,
+    "stage6_gt_rank": 408,
+    "head-flat_score_same_candidate": 0.01268701534718275,
+    "head-phrase_score_same_candidate": 0.6177557110786438,
+    "stage5_score_same_candidate": 0.3952159583568573,
+    "stage6_score_same_candidate": 0.7905279397964478
+  },
+  {
+    "seed": 1,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00795_00106",
+    "gt_local": 0,
+    "gt_box": [
+      0.5259960293769836,
+      0.5353712439537048,
+      0.590602457523346,
+      0.6034646034240723
+    ],
+    "candidate_index": 10,
+    "candidate_box": [
+      0.5238281488418579,
+      0.532031238079071,
+      0.591015636920929,
+      0.599414050579071
+    ],
+    "candidate_iou": 0.8639798760414124,
+    "budget": 1655,
+    "head-flat_gt_rank": 36020,
+    "head-phrase_gt_rank": 1913,
+    "stage5_gt_rank": 3538,
+    "stage6_gt_rank": 824,
+    "head-flat_score_same_candidate": 0.07137589901685715,
+    "head-phrase_score_same_candidate": 0.5215809345245361,
+    "stage5_score_same_candidate": 0.42038455605506897,
+    "stage6_score_same_candidate": 0.7027936577796936
+  },
+  {
+    "seed": 2,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00795_00142",
+    "gt_local": 0,
+    "gt_box": [
+      0.5190880298614502,
+      0.5389485955238342,
+      0.5980367660522461,
+      0.6324535012245178
+    ],
+    "candidate_index": 14,
+    "candidate_box": [
+      0.51953125,
+      0.5384765863418579,
+      0.5992187857627869,
+      0.6351562738418579
+    ],
+    "candidate_iou": 0.9477177858352661,
+    "budget": 1655,
+    "head-flat_gt_rank": 6732,
+    "head-phrase_gt_rank": 1029,
+    "stage5_gt_rank": 3098,
+    "stage6_gt_rank": 783,
+    "head-flat_score_same_candidate": 0.32675331830978394,
+    "head-phrase_score_same_candidate": 0.5074317455291748,
+    "stage5_score_same_candidate": 0.5319936275482178,
+    "stage6_score_same_candidate": 0.6494877934455872
+  },
+  {
+    "seed": 2,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00708_00050",
+    "gt_local": 0,
+    "gt_box": [
+      0.34869006276130676,
+      0.5147953033447266,
+      0.6277742385864258,
+      0.8999669551849365
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.34882813692092896,
+      0.515917956829071,
+      0.6269531846046448,
+      0.907031238079071
+    ],
+    "candidate_iou": 0.9758228659629822,
+    "budget": 1655,
+    "head-flat_gt_rank": 70506,
+    "head-phrase_gt_rank": 1521,
+    "stage5_gt_rank": 7001,
+    "stage6_gt_rank": 31296,
+    "head-flat_score_same_candidate": 0.00976162776350975,
+    "head-phrase_score_same_candidate": 0.48631221055984497,
+    "stage5_score_same_candidate": 0.4012735188007355,
+    "stage6_score_same_candidate": 0.18928374350070953
+  },
+  {
+    "seed": 2,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00714_00006",
+    "gt_local": 0,
+    "gt_box": [
+      0.3902535140514374,
+      0.4889147877693176,
+      0.5496971011161804,
+      0.6473550796508789
+    ],
+    "candidate_index": 2,
+    "candidate_box": [
+      0.3892578184604645,
+      0.46875,
+      0.5484375357627869,
+      0.6451172232627869
+    ],
+    "candidate_iou": 0.8631072640419006,
+    "budget": 1655,
+    "head-flat_gt_rank": 332890,
+    "head-phrase_gt_rank": 317,
+    "stage5_gt_rank": 4662,
+    "stage6_gt_rank": 9239,
+    "head-flat_score_same_candidate": 9.69745815382339e-05,
+    "head-phrase_score_same_candidate": 0.578672468662262,
+    "stage5_score_same_candidate": 0.4648158848285675,
+    "stage6_score_same_candidate": 0.3428395390510559
+  },
+  {
+    "seed": 2,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00795_00099",
+    "gt_local": 0,
+    "gt_box": [
+      0.5273119807243347,
+      0.5338908433914185,
+      0.5891549587249756,
+      0.5965563654899597
+    ],
+    "candidate_index": 6,
+    "candidate_box": [
+      0.5261719226837158,
+      0.532031238079071,
+      0.5894531607627869,
+      0.595898449420929
+    ],
+    "candidate_iou": 0.9393601417541504,
+    "budget": 1655,
+    "head-flat_gt_rank": 56968,
+    "head-phrase_gt_rank": 1504,
+    "stage5_gt_rank": 2258,
+    "stage6_gt_rank": 1748,
+    "head-flat_score_same_candidate": 0.015963362529873848,
+    "head-phrase_score_same_candidate": 0.48699501156806946,
+    "stage5_score_same_candidate": 0.5854436755180359,
+    "stage6_score_same_candidate": 0.5624881386756897
+  },
+  {
+    "seed": 2,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00714_00178",
+    "gt_local": 0,
+    "gt_box": [
+      0.3746306300163269,
+      0.4882839024066925,
+      0.5548969507217407,
+      0.6653546690940857
+    ],
+    "candidate_index": 5,
+    "candidate_box": [
+      0.37382814288139343,
+      0.47578126192092896,
+      0.555859386920929,
+      0.663281261920929
+    ],
+    "candidate_iou": 0.9142581224441528,
+    "budget": 1655,
+    "head-flat_gt_rank": 190900,
+    "head-phrase_gt_rank": 142,
+    "stage5_gt_rank": 1412,
+    "stage6_gt_rank": 1662,
+    "head-flat_score_same_candidate": 0.0006751745822839439,
+    "head-phrase_score_same_candidate": 0.617708146572113,
+    "stage5_score_same_candidate": 0.6479007005691528,
+    "stage6_score_same_candidate": 0.5685407519340515
+  },
+  {
+    "seed": 2,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00708_00062",
+    "gt_local": 0,
+    "gt_box": [
+      0.338163822889328,
+      0.5178544521331787,
+      0.6335636973381042,
+      0.9308550953865051
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.33671876788139343,
+      0.518847644329071,
+      0.6351562738418579,
+      0.936328113079071
+    ],
+    "candidate_iou": 0.9745504856109619,
+    "budget": 1655,
+    "head-flat_gt_rank": 39933,
+    "head-phrase_gt_rank": 644,
+    "stage5_gt_rank": 1158,
+    "stage6_gt_rank": 5645,
+    "head-flat_score_same_candidate": 0.033788252621889114,
+    "head-phrase_score_same_candidate": 0.5317012667655945,
+    "stage5_score_same_candidate": 0.6704735159873962,
+    "stage6_score_same_candidate": 0.408113032579422
+  },
+  {
+    "seed": 2,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00679_00090",
+    "gt_local": 1,
+    "gt_box": [
+      0.4539553225040436,
+      0.4788735508918762,
+      0.5302724242210388,
+      0.5810134410858154
+    ],
+    "candidate_index": 3,
+    "candidate_box": [
+      0.45429688692092896,
+      0.4775390625,
+      0.529296875,
+      0.5794922113418579
+    ],
+    "candidate_iou": 0.9558323621749878,
+    "budget": 1655,
+    "head-flat_gt_rank": 20949,
+    "head-phrase_gt_rank": 2325,
+    "stage5_gt_rank": 1553,
+    "stage6_gt_rank": 13831,
+    "head-flat_score_same_candidate": 0.10137933492660522,
+    "head-phrase_score_same_candidate": 0.4586876630783081,
+    "stage5_score_same_candidate": 0.6375480890274048,
+    "stage6_score_same_candidate": 0.2888588607311249
+  },
+  {
+    "seed": 2,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00795_00086",
+    "gt_local": 0,
+    "gt_box": [
+      0.5304369330406189,
+      0.5311770439147949,
+      0.5866879224777222,
+      0.588908314704895
+    ],
+    "candidate_index": 7,
+    "candidate_box": [
+      0.5296875238418579,
+      0.531445324420929,
+      0.5859375596046448,
+      0.587695300579071
+    ],
+    "candidate_iou": 0.9490253329277039,
+    "budget": 1655,
+    "head-flat_gt_rank": 60264,
+    "head-phrase_gt_rank": 1762,
+    "stage5_gt_rank": 4416,
+    "stage6_gt_rank": 1097,
+    "head-flat_score_same_candidate": 0.014030307531356812,
+    "head-phrase_score_same_candidate": 0.4772968888282776,
+    "stage5_score_same_candidate": 0.47305959463119507,
+    "stage6_score_same_candidate": 0.6162358522415161
+  },
+  {
+    "seed": 2,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00708_00099",
+    "gt_local": 0,
+    "gt_box": [
+      0.3272534906864166,
+      0.5195814371109009,
+      0.6433774828910828,
+      0.9607076048851013
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.3261719048023224,
+      0.5208984613418579,
+      0.6441406607627869,
+      0.9638671875
+    ],
+    "candidate_iou": 0.9841976761817932,
+    "budget": 1655,
+    "head-flat_gt_rank": 11256,
+    "head-phrase_gt_rank": 2851,
+    "stage5_gt_rank": 3218,
+    "stage6_gt_rank": 1529,
+    "head-flat_score_same_candidate": 0.2139153629541397,
+    "head-phrase_score_same_candidate": 0.4446346163749695,
+    "stage5_score_same_candidate": 0.5255648493766785,
+    "stage6_score_same_candidate": 0.5784687399864197
+  },
+  {
+    "seed": 2,
+    "class": "MedVeh-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00608_00068",
+    "gt_local": 0,
+    "gt_box": [
+      0.8361988663673401,
+      0.45296844840049744,
+      0.9447533488273621,
+      0.622708261013031
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.8375000357627869,
+      0.45585939288139343,
+      0.9437500238418579,
+      0.62109375
+    ],
+    "candidate_iou": 0.9527912139892578,
+    "budget": 1655,
+    "head-flat_gt_rank": 54967,
+    "head-phrase_gt_rank": 9980,
+    "stage5_gt_rank": 2906,
+    "stage6_gt_rank": 1279,
+    "head-flat_score_same_candidate": 0.017224060371518135,
+    "head-phrase_score_same_candidate": 0.3483298420906067,
+    "stage5_score_same_candidate": 0.54397052526474,
+    "stage6_score_same_candidate": 0.600142240524292
+  },
+  {
+    "seed": 0,
+    "class": "Bus-Stop-VehLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00665_00103",
+    "gt_local": 0,
+    "gt_box": [
+      0.3501881957054138,
+      0.33221927285194397,
+      0.6721981167793274,
+      0.8406280875205994
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.3509765863418579,
+      0.3304687440395355,
+      0.671093761920929,
+      0.833789050579071
+    ],
+    "candidate_iou": 0.977403461933136,
+    "budget": 583,
+    "head-flat_gt_rank": 2651,
+    "head-phrase_gt_rank": 439,
+    "stage5_gt_rank": 17861,
+    "stage6_gt_rank": 399,
+    "head-flat_score_same_candidate": 0.5319862961769104,
+    "head-phrase_score_same_candidate": 0.6888213753700256,
+    "stage5_score_same_candidate": 0.08055917173624039,
+    "stage6_score_same_candidate": 0.5885167717933655
+  },
+  {
+    "seed": 0,
+    "class": "Bus-Stop-VehLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00635_00186",
+    "gt_local": 0,
+    "gt_box": [
+      0.0942450687289238,
+      0.40658605098724365,
+      0.3136568069458008,
+      0.7608685493469238
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.0947265699505806,
+      0.4136718809604645,
+      0.3154297173023224,
+      0.762890636920929
+    ],
+    "candidate_iou": 0.9646716713905334,
+    "budget": 583,
+    "head-flat_gt_rank": 380,
+    "head-phrase_gt_rank": 101,
+    "stage5_gt_rank": 2878,
+    "stage6_gt_rank": 325,
+    "head-flat_score_same_candidate": 0.9004825353622437,
+    "head-phrase_score_same_candidate": 0.7650904059410095,
+    "stage5_score_same_candidate": 0.2835434377193451,
+    "stage6_score_same_candidate": 0.6121090054512024
+  },
+  {
+    "seed": 0,
+    "class": "Bus-Stop-VehLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00665_00102",
+    "gt_local": 0,
+    "gt_box": [
+      0.35013532638549805,
+      0.3325364589691162,
+      0.6722510457038879,
+      0.840910017490387
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.3511718809604645,
+      0.3287109434604645,
+      0.673046886920929,
+      0.8314453363418579
+    ],
+    "candidate_iou": 0.9685925245285034,
+    "budget": 583,
+    "head-flat_gt_rank": 5963,
+    "head-phrase_gt_rank": 371,
+    "stage5_gt_rank": 25024,
+    "stage6_gt_rank": 626,
+    "head-flat_score_same_candidate": 0.19759002327919006,
+    "head-phrase_score_same_candidate": 0.7007598876953125,
+    "stage5_score_same_candidate": 0.06032830476760864,
+    "stage6_score_same_candidate": 0.5258565545082092
+  },
+  {
+    "seed": 0,
+    "class": "Bus-Stop-VehLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00635_00189",
+    "gt_local": 0,
+    "gt_box": [
+      0.0,
+      0.39795103669166565,
+      0.18552955985069275,
+      0.77838534116745
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.0,
+      0.3984375,
+      0.1821289211511612,
+      0.775195300579071
+    ],
+    "candidate_iou": 0.9721838235855103,
+    "budget": 583,
+    "head-flat_gt_rank": 138,
+    "head-phrase_gt_rank": 203,
+    "stage5_gt_rank": 8095,
+    "stage6_gt_rank": 1387,
+    "head-flat_score_same_candidate": 0.9333370923995972,
+    "head-phrase_score_same_candidate": 0.7378512024879456,
+    "stage5_score_same_candidate": 0.1490994691848755,
+    "stage6_score_same_candidate": 0.3891110122203827
+  },
+  {
+    "seed": 0,
+    "class": "Bus-Stop-VehLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00792_00025",
+    "gt_local": 0,
+    "gt_box": [
+      0.42323118448257446,
+      0.3201371431350708,
+      0.7087624669075012,
+      0.7494211196899414
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.4242187738418579,
+      0.3199218809604645,
+      0.710156261920929,
+      0.7494140863418579
+    ],
+    "candidate_iou": 0.9911888241767883,
+    "budget": 583,
+    "head-flat_gt_rank": 10838,
+    "head-phrase_gt_rank": 83,
+    "stage5_gt_rank": 2090,
+    "stage6_gt_rank": 2463,
+    "head-flat_score_same_candidate": 0.04517504945397377,
+    "head-phrase_score_same_candidate": 0.7694432735443115,
+    "stage5_score_same_candidate": 0.34042513370513916,
+    "stage6_score_same_candidate": 0.26626595854759216
+  },
+  {
+    "seed": 0,
+    "class": "Bus-Stop-VehLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00792_00019",
+    "gt_local": 0,
+    "gt_box": [
+      0.42961275577545166,
+      0.31283441185951233,
+      0.7164599299430847,
+      0.7638291716575623
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.43046876788139343,
+      0.31464844942092896,
+      0.7164062857627869,
+      0.76171875
+    ],
+    "candidate_iou": 0.9881545305252075,
+    "budget": 583,
+    "head-flat_gt_rank": 7090,
+    "head-phrase_gt_rank": 3,
+    "stage5_gt_rank": 462,
+    "stage6_gt_rank": 957,
+    "head-flat_score_same_candidate": 0.14279776811599731,
+    "head-phrase_score_same_candidate": 0.7989517450332642,
+    "stage5_score_same_candidate": 0.6352934837341309,
+    "stage6_score_same_candidate": 0.4585091173648834
+  },
+  {
+    "seed": 0,
+    "class": "Bus-Stop-VehLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00685_00178",
+    "gt_local": 0,
+    "gt_box": [
+      0.3167489171028137,
+      0.3068639039993286,
+      0.6768869161605835,
+      0.841149628162384
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.3164062798023224,
+      0.30351564288139343,
+      0.6757813096046448,
+      0.842578113079071
+    ],
+    "candidate_iou": 0.9871836304664612,
+    "budget": 583,
+    "head-flat_gt_rank": 605,
+    "head-phrase_gt_rank": 112,
+    "stage5_gt_rank": 235,
+    "stage6_gt_rank": 678,
+    "head-flat_score_same_candidate": 0.8770347833633423,
+    "head-phrase_score_same_candidate": 0.7608259916305542,
+    "stage5_score_same_candidate": 0.7347493767738342,
+    "stage6_score_same_candidate": 0.5141187906265259
+  },
+  {
+    "seed": 0,
+    "class": "Bus-Stop-VehLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00635_00121",
+    "gt_local": 0,
+    "gt_box": [
+      0.4036252200603485,
+      0.4196617901325226,
+      0.5931024551391602,
+      0.7231214046478271
+    ],
+    "candidate_index": 9,
+    "candidate_box": [
+      0.40195316076278687,
+      0.41777345538139343,
+      0.5933594107627869,
+      0.7142578363418579
+    ],
+    "candidate_iou": 0.9553442597389221,
+    "budget": 583,
+    "head-flat_gt_rank": 1041,
+    "head-phrase_gt_rank": 528,
+    "stage5_gt_rank": 548,
+    "stage6_gt_rank": 679,
+    "head-flat_score_same_candidate": 0.8151683807373047,
+    "head-phrase_score_same_candidate": 0.6761631369590759,
+    "stage5_score_same_candidate": 0.6034667491912842,
+    "stage6_score_same_candidate": 0.5137798190116882
+  },
+  {
+    "seed": 0,
+    "class": "Bus-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00665_00103",
+    "gt_local": 0,
+    "gt_box": [
+      0.3501881957054138,
+      0.33221927285194397,
+      0.6721981167793274,
+      0.8406280875205994
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.3509765863418579,
+      0.3304687440395355,
+      0.671093761920929,
+      0.833789050579071
+    ],
+    "candidate_iou": 0.977403461933136,
+    "budget": 583,
+    "head-flat_gt_rank": 2651,
+    "head-phrase_gt_rank": 439,
+    "stage5_gt_rank": 17861,
+    "stage6_gt_rank": 399,
+    "head-flat_score_same_candidate": 0.5319862961769104,
+    "head-phrase_score_same_candidate": 0.6888213753700256,
+    "stage5_score_same_candidate": 0.08055917173624039,
+    "stage6_score_same_candidate": 0.5885167717933655
+  },
+  {
+    "seed": 0,
+    "class": "Bus-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00679_00098",
+    "gt_local": 0,
+    "gt_box": [
+      0.47247064113616943,
+      0.43827134370803833,
+      0.49841076135635376,
+      0.4717545509338379
+    ],
+    "candidate_index": 6,
+    "candidate_box": [
+      0.47343751788139343,
+      0.43769532442092896,
+      0.5,
+      0.47636720538139343
+    ],
+    "candidate_iou": 0.7891544699668884,
+    "budget": 583,
+    "head-flat_gt_rank": 1148,
+    "head-phrase_gt_rank": 1436,
+    "stage5_gt_rank": 5157,
+    "stage6_gt_rank": 335,
+    "head-flat_score_same_candidate": 0.7984288334846497,
+    "head-phrase_score_same_candidate": 0.5677828192710876,
+    "stage5_score_same_candidate": 0.20074380934238434,
+    "stage6_score_same_candidate": 0.6069726943969727
+  },
+  {
+    "seed": 0,
+    "class": "Bus-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00635_00186",
+    "gt_local": 0,
+    "gt_box": [
+      0.0942450687289238,
+      0.40658605098724365,
+      0.3136568069458008,
+      0.7608685493469238
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.0947265699505806,
+      0.4136718809604645,
+      0.3154297173023224,
+      0.762890636920929
+    ],
+    "candidate_iou": 0.9646716713905334,
+    "budget": 583,
+    "head-flat_gt_rank": 380,
+    "head-phrase_gt_rank": 101,
+    "stage5_gt_rank": 2878,
+    "stage6_gt_rank": 325,
+    "head-flat_score_same_candidate": 0.9004825353622437,
+    "head-phrase_score_same_candidate": 0.7650904059410095,
+    "stage5_score_same_candidate": 0.2835434377193451,
+    "stage6_score_same_candidate": 0.6121090054512024
+  },
+  {
+    "seed": 1,
+    "class": "Bus-Stop-VehLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00635_00153",
+    "gt_local": 0,
+    "gt_box": [
+      0.4016517698764801,
+      0.41596123576164246,
+      0.5944182872772217,
+      0.7189270257949829
+    ],
+    "candidate_index": 7,
+    "candidate_box": [
+      0.4027343988418579,
+      0.41777345538139343,
+      0.5933594107627869,
+      0.7142578363418579
+    ],
+    "candidate_iou": 0.9677351713180542,
+    "budget": 583,
+    "head-flat_gt_rank": 1291,
+    "head-phrase_gt_rank": 582,
+    "stage5_gt_rank": 27485,
+    "stage6_gt_rank": 119,
+    "head-flat_score_same_candidate": 0.005041361320763826,
+    "head-phrase_score_same_candidate": 0.5708364248275757,
+    "stage5_score_same_candidate": 0.05290759354829788,
+    "stage6_score_same_candidate": 0.7070802450180054
+  },
+  {
+    "seed": 1,
+    "class": "Bus-Stop-VehLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00792_00017",
+    "gt_local": 0,
+    "gt_box": [
+      0.42854368686676025,
+      0.31141582131385803,
+      0.7170355916023254,
+      0.7652477622032166
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.42890626192092896,
+      0.3140625059604645,
+      0.717968761920929,
+      0.7652344107627869
+    ],
+    "candidate_iou": 0.9897066354751587,
+    "budget": 583,
+    "head-flat_gt_rank": 7017,
+    "head-phrase_gt_rank": 5,
+    "stage5_gt_rank": 3906,
+    "stage6_gt_rank": 23,
+    "head-flat_score_same_candidate": 6.106241198722273e-05,
+    "head-phrase_score_same_candidate": 0.7351598143577576,
+    "stage5_score_same_candidate": 0.1990833878517151,
+    "stage6_score_same_candidate": 0.8170315623283386
+  },
+  {
+    "seed": 1,
+    "class": "Bus-Stop-VehLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00635_00188",
+    "gt_local": 0,
+    "gt_box": [
+      0.00032895311596803367,
+      0.3957306146621704,
+      0.23191195726394653,
+      0.7746846079826355
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.0,
+      0.4019531309604645,
+      0.2294922024011612,
+      0.774609386920929
+    ],
+    "candidate_iou": 0.9717485904693604,
+    "budget": 583,
+    "head-flat_gt_rank": 3281,
+    "head-phrase_gt_rank": 1,
+    "stage5_gt_rank": 226259,
+    "stage6_gt_rank": 1626,
+    "head-flat_score_same_candidate": 0.0006354926736094058,
+    "head-phrase_score_same_candidate": 0.7638655304908752,
+    "stage5_score_same_candidate": 0.0061536384746432304,
+    "stage6_score_same_candidate": 0.30764761567115784
+  },
+  {
+    "seed": 1,
+    "class": "Bus-Stop-VehLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00679_00025",
+    "gt_local": 0,
+    "gt_box": [
+      0.49112701416015625,
+      0.4801071286201477,
+      0.511522114276886,
+      0.5077391266822815
+    ],
+    "candidate_index": 7,
+    "candidate_box": [
+      0.49179691076278687,
+      0.47929689288139343,
+      0.5113281607627869,
+      0.5068359375
+    ],
+    "candidate_iou": 0.9010407328605652,
+    "budget": 583,
+    "head-flat_gt_rank": 20460,
+    "head-phrase_gt_rank": 500,
+    "stage5_gt_rank": 103689,
+    "stage6_gt_rank": 1050,
+    "head-flat_score_same_candidate": 1.5330091400755919e-06,
+    "head-phrase_score_same_candidate": 0.5849032998085022,
+    "stage5_score_same_candidate": 0.01573287881910801,
+    "stage6_score_same_candidate": 0.3969782888889313
+  },
+  {
+    "seed": 1,
+    "class": "Bus-Stop-VehLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00665_00086",
+    "gt_local": 0,
+    "gt_box": [
+      0.3492894768714905,
+      0.3376116454601288,
+      0.6730968952178955,
+      0.8454212546348572
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.35234376788139343,
+      0.3345703184604645,
+      0.6726562976837158,
+      0.830273449420929
+    ],
+    "candidate_iou": 0.9540470242500305,
+    "budget": 583,
+    "head-flat_gt_rank": 1116,
+    "head-phrase_gt_rank": 446,
+    "stage5_gt_rank": 135,
+    "stage6_gt_rank": 640,
+    "head-flat_score_same_candidate": 0.006515474058687687,
+    "head-phrase_score_same_candidate": 0.5980453491210938,
+    "stage5_score_same_candidate": 0.731674075126648,
+    "stage6_score_same_candidate": 0.5012404322624207
+  },
+  {
+    "seed": 1,
+    "class": "Bus-Stop-VehLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00795_00141",
+    "gt_local": 0,
+    "gt_box": [
+      0.4889889061450958,
+      0.47276729345321655,
+      0.5684310793876648,
+      0.5752773880958557
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.4882812798023224,
+      0.4716796875,
+      0.565625011920929,
+      0.575976550579071
+    ],
+    "candidate_iou": 0.9403443932533264,
+    "budget": 583,
+    "head-flat_gt_rank": 4237,
+    "head-phrase_gt_rank": 732,
+    "stage5_gt_rank": 383,
+    "stage6_gt_rank": 615,
+    "head-flat_score_same_candidate": 0.0003081623581238091,
+    "head-phrase_score_same_candidate": 0.5452473163604736,
+    "stage5_score_same_candidate": 0.6222595572471619,
+    "stage6_score_same_candidate": 0.5078193545341492
+  },
+  {
+    "seed": 1,
+    "class": "Bus-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00635_00153",
+    "gt_local": 0,
+    "gt_box": [
+      0.4016517698764801,
+      0.41596123576164246,
+      0.5944182872772217,
+      0.7189270257949829
+    ],
+    "candidate_index": 7,
+    "candidate_box": [
+      0.4027343988418579,
+      0.41777345538139343,
+      0.5933594107627869,
+      0.7142578363418579
+    ],
+    "candidate_iou": 0.9677351713180542,
+    "budget": 583,
+    "head-flat_gt_rank": 1291,
+    "head-phrase_gt_rank": 582,
+    "stage5_gt_rank": 27485,
+    "stage6_gt_rank": 119,
+    "head-flat_score_same_candidate": 0.005041361320763826,
+    "head-phrase_score_same_candidate": 0.5708364248275757,
+    "stage5_score_same_candidate": 0.05290759354829788,
+    "stage6_score_same_candidate": 0.7070802450180054
+  },
+  {
+    "seed": 1,
+    "class": "Bus-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00792_00017",
+    "gt_local": 0,
+    "gt_box": [
+      0.42854368686676025,
+      0.31141582131385803,
+      0.7170355916023254,
+      0.7652477622032166
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.42890626192092896,
+      0.3140625059604645,
+      0.717968761920929,
+      0.7652344107627869
+    ],
+    "candidate_iou": 0.9897066354751587,
+    "budget": 583,
+    "head-flat_gt_rank": 7017,
+    "head-phrase_gt_rank": 5,
+    "stage5_gt_rank": 3906,
+    "stage6_gt_rank": 23,
+    "head-flat_score_same_candidate": 6.106241198722273e-05,
+    "head-phrase_score_same_candidate": 0.7351598143577576,
+    "stage5_score_same_candidate": 0.1990833878517151,
+    "stage6_score_same_candidate": 0.8170315623283386
+  },
+  {
+    "seed": 1,
+    "class": "Bus-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00665_00110",
+    "gt_local": 0,
+    "gt_box": [
+      0.3505582809448242,
+      0.32999876141548157,
+      0.671828031539917,
+      0.8386542797088623
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.3531250059604645,
+      0.328125,
+      0.6687500476837158,
+      0.837890625
+    ],
+    "candidate_iou": 0.9774178862571716,
+    "budget": 583,
+    "head-flat_gt_rank": 5147,
+    "head-phrase_gt_rank": 1046,
+    "stage5_gt_rank": 762,
+    "stage6_gt_rank": 475,
+    "head-flat_score_same_candidate": 0.00017150811618193984,
+    "head-phrase_score_same_candidate": 0.5031087398529053,
+    "stage5_score_same_candidate": 0.5016070008277893,
+    "stage6_score_same_candidate": 0.5457115173339844
+  },
+  {
+    "seed": 2,
+    "class": "Bus-Stop-VehLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00685_00174",
+    "gt_local": 0,
+    "gt_box": [
+      0.31924888491630554,
+      0.30864018201828003,
+      0.6725448369979858,
+      0.8366102576255798
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.31953126192092896,
+      0.3082031309604645,
+      0.6734375357627869,
+      0.8373047113418579
+    ],
+    "candidate_iou": 0.9945526123046875,
+    "budget": 583,
+    "head-flat_gt_rank": 1849,
+    "head-phrase_gt_rank": 4,
+    "stage5_gt_rank": 8554,
+    "stage6_gt_rank": 505,
+    "head-flat_score_same_candidate": 0.0023711626417934895,
+    "head-phrase_score_same_candidate": 0.7463662624359131,
+    "stage5_score_same_candidate": 0.1671937108039856,
+    "stage6_score_same_candidate": 0.5398672223091125
+  },
+  {
+    "seed": 2,
+    "class": "Bus-Stop-VehLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00635_00112",
+    "gt_local": 0,
+    "gt_box": [
+      0.40592801570892334,
+      0.42027875781059265,
+      0.5940890908241272,
+      0.7116489410400391
+    ],
+    "candidate_index": 9,
+    "candidate_box": [
+      0.4023437798023224,
+      0.41777345538139343,
+      0.592968761920929,
+      0.7125000357627869
+    ],
+    "candidate_iou": 0.9644197821617126,
+    "budget": 583,
+    "head-flat_gt_rank": 175,
+    "head-phrase_gt_rank": 402,
+    "stage5_gt_rank": 8792,
+    "stage6_gt_rank": 236,
+    "head-flat_score_same_candidate": 0.14851297438144684,
+    "head-phrase_score_same_candidate": 0.6276082396507263,
+    "stage5_score_same_candidate": 0.16383254528045654,
+    "stage6_score_same_candidate": 0.6600776314735413
+  },
+  {
+    "seed": 2,
+    "class": "Bus-Stop-VehLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00792_00020",
+    "gt_local": 0,
+    "gt_box": [
+      0.4297772943973541,
+      0.3153025507926941,
+      0.7153081297874451,
+      0.7613610029220581
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.4296875298023224,
+      0.31640625,
+      0.7156250476837158,
+      0.7593750357627869
+    ],
+    "candidate_iou": 0.9916708469390869,
+    "budget": 583,
+    "head-flat_gt_rank": 3783,
+    "head-phrase_gt_rank": 29,
+    "stage5_gt_rank": 1032,
+    "stage6_gt_rank": 126,
+    "head-flat_score_same_candidate": 0.00043766613816842437,
+    "head-phrase_score_same_candidate": 0.725021481513977,
+    "stage5_score_same_candidate": 0.5404366850852966,
+    "stage6_score_same_candidate": 0.7118971943855286
+  },
+  {
+    "seed": 2,
+    "class": "Bus-Stop-VehLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00685_00167",
+    "gt_local": 0,
+    "gt_box": [
+      0.3246438503265381,
+      0.31322917342185974,
+      0.6657682061195374,
+      0.8267908096313477
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.3257812559604645,
+      0.3140625059604645,
+      0.6679688096046448,
+      0.8226562738418579
+    ],
+    "candidate_iou": 0.9807589650154114,
+    "budget": 583,
+    "head-flat_gt_rank": 8697,
+    "head-phrase_gt_rank": 182,
+    "stage5_gt_rank": 7620,
+    "stage6_gt_rank": 1612,
+    "head-flat_score_same_candidate": 3.3463082218077034e-05,
+    "head-phrase_score_same_candidate": 0.6854925751686096,
+    "stage5_score_same_candidate": 0.1812259703874588,
+    "stage6_score_same_candidate": 0.3200516402721405
+  },
+  {
+    "seed": 2,
+    "class": "Bus-Stop-VehLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00635_00188",
+    "gt_local": 0,
+    "gt_box": [
+      0.00032895311596803367,
+      0.3957306146621704,
+      0.23191195726394653,
+      0.7746846079826355
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.0,
+      0.4019531309604645,
+      0.2294922024011612,
+      0.774609386920929
+    ],
+    "candidate_iou": 0.9717485904693604,
+    "budget": 583,
+    "head-flat_gt_rank": 135,
+    "head-phrase_gt_rank": 1,
+    "stage5_gt_rank": 3705,
+    "stage6_gt_rank": 2381,
+    "head-flat_score_same_candidate": 0.18823838233947754,
+    "head-phrase_score_same_candidate": 0.7923151850700378,
+    "stage5_score_same_candidate": 0.27935945987701416,
+    "stage6_score_same_candidate": 0.26273950934410095
+  },
+  {
+    "seed": 2,
+    "class": "Bus-Stop-VehLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00679_00025",
+    "gt_local": 0,
+    "gt_box": [
+      0.49112701416015625,
+      0.4801071286201477,
+      0.511522114276886,
+      0.5077391266822815
+    ],
+    "candidate_index": 7,
+    "candidate_box": [
+      0.49179691076278687,
+      0.47929689288139343,
+      0.5113281607627869,
+      0.5068359375
+    ],
+    "candidate_iou": 0.9010407328605652,
+    "budget": 583,
+    "head-flat_gt_rank": 20523,
+    "head-phrase_gt_rank": 528,
+    "stage5_gt_rank": 1959,
+    "stage6_gt_rank": 3150,
+    "head-flat_score_same_candidate": 1.609315177120152e-06,
+    "head-phrase_score_same_candidate": 0.5990080833435059,
+    "stage5_score_same_candidate": 0.39270827174186707,
+    "stage6_score_same_candidate": 0.22552402317523956
+  },
+  {
+    "seed": 2,
+    "class": "Bus-Stop-VehLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00665_00102",
+    "gt_local": 0,
+    "gt_box": [
+      0.35013532638549805,
+      0.3325364589691162,
+      0.6722510457038879,
+      0.840910017490387
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.3511718809604645,
+      0.3287109434604645,
+      0.673046886920929,
+      0.8314453363418579
+    ],
+    "candidate_iou": 0.9685925245285034,
+    "budget": 583,
+    "head-flat_gt_rank": 2259,
+    "head-phrase_gt_rank": 454,
+    "stage5_gt_rank": 568,
+    "stage6_gt_rank": 1559,
+    "head-flat_score_same_candidate": 0.0014918281231075525,
+    "head-phrase_score_same_candidate": 0.6167636513710022,
+    "stage5_score_same_candidate": 0.6655989289283752,
+    "stage6_score_same_candidate": 0.3242868185043335
+  },
+  {
+    "seed": 2,
+    "class": "Bus-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00635_00098",
+    "gt_local": 0,
+    "gt_box": [
+      0.4143562316894531,
+      0.425950825214386,
+      0.5950332880020142,
+      0.7111532092094421
+    ],
+    "candidate_index": 14,
+    "candidate_box": [
+      0.41093751788139343,
+      0.42656251788139343,
+      0.5953125357627869,
+      0.707812488079071
+    ],
+    "candidate_iou": 0.9666317105293274,
+    "budget": 583,
+    "head-flat_gt_rank": 7980,
+    "head-phrase_gt_rank": 2254,
+    "stage5_gt_rank": 19111,
+    "stage6_gt_rank": 571,
+    "head-flat_score_same_candidate": 4.489214188652113e-05,
+    "head-phrase_score_same_candidate": 0.4175540506839752,
+    "stage5_score_same_candidate": 0.09370563924312592,
+    "stage6_score_same_candidate": 0.5186196565628052
+  },
+  {
+    "seed": 2,
+    "class": "Bus-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00685_00174",
+    "gt_local": 0,
+    "gt_box": [
+      0.31924888491630554,
+      0.30864018201828003,
+      0.6725448369979858,
+      0.8366102576255798
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.31953126192092896,
+      0.3082031309604645,
+      0.6734375357627869,
+      0.8373047113418579
+    ],
+    "candidate_iou": 0.9945526123046875,
+    "budget": 583,
+    "head-flat_gt_rank": 1849,
+    "head-phrase_gt_rank": 4,
+    "stage5_gt_rank": 8554,
+    "stage6_gt_rank": 505,
+    "head-flat_score_same_candidate": 0.0023711626417934895,
+    "head-phrase_score_same_candidate": 0.7463662624359131,
+    "stage5_score_same_candidate": 0.1671937108039856,
+    "stage6_score_same_candidate": 0.5398672223091125
+  },
+  {
+    "seed": 2,
+    "class": "Bus-Stop-VehLane",
+    "category": "stage6_rescue",
+    "frame": "train_00795_00019",
+    "gt_local": 0,
+    "gt_box": [
+      0.5853720903396606,
+      0.4880019724369049,
+      0.6225438714027405,
+      0.5373449325561523
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.5835937857627869,
+      0.4901367127895355,
+      0.6226562857627869,
+      0.5381836295127869
+    ],
+    "candidate_iou": 0.8970592617988586,
+    "budget": 583,
+    "head-flat_gt_rank": 17069,
+    "head-phrase_gt_rank": 1359,
+    "stage5_gt_rank": 6258,
+    "stage6_gt_rank": 581,
+    "head-flat_score_same_candidate": 3.1593885978509206e-06,
+    "head-phrase_score_same_candidate": 0.49832725524902344,
+    "stage5_score_same_candidate": 0.20524795353412628,
+    "stage6_score_same_candidate": 0.5138857364654541
+  },
+  {
+    "seed": 0,
+    "class": "LarVeh-Stop-Jun",
+    "category": "phrase_help_preserved",
+    "frame": "train_00605_00093",
+    "gt_local": 0,
+    "gt_box": [
+      0.1316634863615036,
+      0.47961366176605225,
+      0.26373815536499023,
+      0.6434323191642761
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.13007813692092896,
+      0.4828124940395355,
+      0.26347658038139343,
+      0.643359363079071
+    ],
+    "candidate_iou": 0.9667149782180786,
+    "budget": 615,
+    "head-flat_gt_rank": 244,
+    "head-phrase_gt_rank": 607,
+    "stage5_gt_rank": 144362,
+    "stage6_gt_rank": 6,
+    "head-flat_score_same_candidate": 0.9236971139907837,
+    "head-phrase_score_same_candidate": 0.6491755843162537,
+    "stage5_score_same_candidate": 0.04652689769864082,
+    "stage6_score_same_candidate": 0.8110585808753967
+  },
+  {
+    "seed": 0,
+    "class": "LarVeh-Stop-Jun",
+    "category": "phrase_help_preserved",
+    "frame": "train_00797_00046",
+    "gt_local": 0,
+    "gt_box": [
+      0.3598747253417969,
+      0.4369320273399353,
+      0.42763906717300415,
+      0.5588091015815735
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.36054688692092896,
+      0.4365234375,
+      0.4300781488418579,
+      0.558398425579071
+    ],
+    "candidate_iou": 0.9494206309318542,
+    "budget": 615,
+    "head-flat_gt_rank": 193,
+    "head-phrase_gt_rank": 112,
+    "stage5_gt_rank": 8543,
+    "stage6_gt_rank": 369,
+    "head-flat_score_same_candidate": 0.9375234246253967,
+    "head-phrase_score_same_candidate": 0.7999880313873291,
+    "stage5_score_same_candidate": 0.26397597789764404,
+    "stage6_score_same_candidate": 0.6041371822357178
+  },
+  {
+    "seed": 0,
+    "class": "LarVeh-Stop-Jun",
+    "category": "phrase_help_lost",
+    "frame": "train_00797_00018",
+    "gt_local": 0,
+    "gt_box": [
+      0.4052702486515045,
+      0.4416195750236511,
+      0.45066574215888977,
+      0.5363580584526062
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.3964844048023224,
+      0.44062501192092896,
+      0.4613281488418579,
+      0.5337890982627869
+    ],
+    "candidate_iou": 0.6794846653938293,
+    "budget": 615,
+    "head-flat_gt_rank": 2465,
+    "head-phrase_gt_rank": 288,
+    "stage5_gt_rank": 81918,
+    "stage6_gt_rank": 4708,
+    "head-flat_score_same_candidate": 0.37300142645835876,
+    "head-phrase_score_same_candidate": 0.7307847738265991,
+    "stage5_score_same_candidate": 0.0708194300532341,
+    "stage6_score_same_candidate": 0.30869048833847046
+  },
+  {
+    "seed": 0,
+    "class": "LarVeh-Stop-Jun",
+    "category": "stage5_hit_lost",
+    "frame": "train_00797_00186",
+    "gt_local": 0,
+    "gt_box": [
+      0.3186850845813751,
+      0.4224815368652344,
+      0.4053877294063568,
+      0.5693121552467346
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.3207031488418579,
+      0.4180664122104645,
+      0.40546876192092896,
+      0.56689453125
+    ],
+    "candidate_iou": 0.9323753118515015,
+    "budget": 615,
+    "head-flat_gt_rank": 110,
+    "head-phrase_gt_rank": 63,
+    "stage5_gt_rank": 591,
+    "stage6_gt_rank": 2180,
+    "head-flat_score_same_candidate": 0.952182412147522,
+    "head-phrase_score_same_candidate": 0.8220122456550598,
+    "stage5_score_same_candidate": 0.6294640898704529,
+    "stage6_score_same_candidate": 0.418032705783844
+  },
+  {
+    "seed": 0,
+    "class": "LarVeh-Stop-Jun",
+    "category": "stage6_rescue",
+    "frame": "train_00689_00038",
+    "gt_local": 0,
+    "gt_box": [
+      0.5802733302116394,
+      0.48356109857559204,
+      0.6131685972213745,
+      0.5477069616317749
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.5820313096046448,
+      0.4810546934604645,
+      0.616406261920929,
+      0.5419921875
+    ],
+    "candidate_iou": 0.7627065181732178,
+    "budget": 615,
+    "head-flat_gt_rank": 39631,
+    "head-phrase_gt_rank": 1892,
+    "stage5_gt_rank": 514226,
+    "stage6_gt_rank": 479,
+    "head-flat_score_same_candidate": 0.0021768230944871902,
+    "head-phrase_score_same_candidate": 0.5372024178504944,
+    "stage5_score_same_candidate": 0.01310669630765915,
+    "stage6_score_same_candidate": 0.5812034010887146
+  },
+  {
+    "seed": 0,
+    "class": "LarVeh-Stop-Jun",
+    "category": "stage6_rescue",
+    "frame": "train_00605_00055",
+    "gt_local": 0,
+    "gt_box": [
+      0.13531361520290375,
+      0.4840734899044037,
+      0.26697075366973877,
+      0.6400352120399475
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.13496094942092896,
+      0.48222658038139343,
+      0.26582032442092896,
+      0.6421875357627869
+    ],
+    "candidate_iou": 0.9641072154045105,
+    "budget": 615,
+    "head-flat_gt_rank": 855,
+    "head-phrase_gt_rank": 994,
+    "stage5_gt_rank": 306132,
+    "stage6_gt_rank": 128,
+    "head-flat_score_same_candidate": 0.7322243452072144,
+    "head-phrase_score_same_candidate": 0.5912576913833618,
+    "stage5_score_same_candidate": 0.023867236450314522,
+    "stage6_score_same_candidate": 0.6831010580062866
+  },
+  {
+    "seed": 0,
+    "class": "LarVeh-Stop-Jun",
+    "category": "stage6_rescue",
+    "frame": "train_00797_00046",
+    "gt_local": 0,
+    "gt_box": [
+      0.3598747253417969,
+      0.4369320273399353,
+      0.42763906717300415,
+      0.5588091015815735
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.36054688692092896,
+      0.4365234375,
+      0.4300781488418579,
+      0.558398425579071
+    ],
+    "candidate_iou": 0.9494206309318542,
+    "budget": 615,
+    "head-flat_gt_rank": 193,
+    "head-phrase_gt_rank": 112,
+    "stage5_gt_rank": 8543,
+    "stage6_gt_rank": 369,
+    "head-flat_score_same_candidate": 0.9375234246253967,
+    "head-phrase_score_same_candidate": 0.7999880313873291,
+    "stage5_score_same_candidate": 0.26397597789764404,
+    "stage6_score_same_candidate": 0.6041371822357178
+  },
+  {
+    "seed": 1,
+    "class": "LarVeh-Stop-Jun",
+    "category": "phrase_help_lost",
+    "frame": "train_00797_00018",
+    "gt_local": 0,
+    "gt_box": [
+      0.4052702486515045,
+      0.4416195750236511,
+      0.45066574215888977,
+      0.5363580584526062
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.3964844048023224,
+      0.44062501192092896,
+      0.4613281488418579,
+      0.5337890982627869
+    ],
+    "candidate_iou": 0.6794846653938293,
+    "budget": 615,
+    "head-flat_gt_rank": 2733,
+    "head-phrase_gt_rank": 413,
+    "stage5_gt_rank": 2860,
+    "stage6_gt_rank": 3151,
+    "head-flat_score_same_candidate": 0.154817596077919,
+    "head-phrase_score_same_candidate": 0.6645874381065369,
+    "stage5_score_same_candidate": 0.41518646478652954,
+    "stage6_score_same_candidate": 0.241938978433609
+  },
+  {
+    "seed": 1,
+    "class": "LarVeh-Stop-Jun",
+    "category": "stage5_hit_lost",
+    "frame": "train_00797_00028",
+    "gt_local": 0,
+    "gt_box": [
+      0.38915154337882996,
+      0.43767210841178894,
+      0.446389377117157,
+      0.540305495262146
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.3906250298023224,
+      0.4365234375,
+      0.44687503576278687,
+      0.5396484732627869
+    ],
+    "candidate_iou": 0.94957035779953,
+    "budget": 615,
+    "head-flat_gt_rank": 2253,
+    "head-phrase_gt_rank": 120,
+    "stage5_gt_rank": 562,
+    "stage6_gt_rank": 8747,
+    "head-flat_score_same_candidate": 0.21469031274318695,
+    "head-phrase_score_same_candidate": 0.7749934196472168,
+    "stage5_score_same_candidate": 0.7376001477241516,
+    "stage6_score_same_candidate": 0.14850519597530365
+  },
+  {
+    "seed": 1,
+    "class": "LarVeh-Stop-Jun",
+    "category": "stage5_hit_lost",
+    "frame": "train_00605_00171",
+    "gt_local": 0,
+    "gt_box": [
+      0.13067662715911865,
+      0.48343774676322937,
+      0.2647250294685364,
+      0.6396082043647766
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.13027344644069672,
+      0.48222658038139343,
+      0.2630859613418579,
+      0.642773449420929
+    ],
+    "candidate_iou": 0.9582837224006653,
+    "budget": 615,
+    "head-flat_gt_rank": 176,
+    "head-phrase_gt_rank": 215,
+    "stage5_gt_rank": 123,
+    "stage6_gt_rank": 1274,
+    "head-flat_score_same_candidate": 0.9325912594795227,
+    "head-phrase_score_same_candidate": 0.7172526717185974,
+    "stage5_score_same_candidate": 0.8981135487556458,
+    "stage6_score_same_candidate": 0.3508877754211426
+  },
+  {
+    "seed": 1,
+    "class": "LarVeh-Stop-Jun",
+    "category": "stage5_hit_lost",
+    "frame": "train_00689_00018",
+    "gt_local": 0,
+    "gt_box": [
+      0.56843101978302,
+      0.4665377736091614,
+      0.5954051613807678,
+      0.5193347334861755
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.568359375,
+      0.4681640565395355,
+      0.5964844226837158,
+      0.519726574420929
+    ],
+    "candidate_iou": 0.9238449931144714,
+    "budget": 615,
+    "head-flat_gt_rank": 10582,
+    "head-phrase_gt_rank": 705,
+    "stage5_gt_rank": 603,
+    "stage6_gt_rank": 3608,
+    "head-flat_score_same_candidate": 0.008588150143623352,
+    "head-phrase_score_same_candidate": 0.5815133452415466,
+    "stage5_score_same_candidate": 0.7256693243980408,
+    "stage6_score_same_candidate": 0.2288026511669159
+  },
+  {
+    "seed": 2,
+    "class": "LarVeh-Stop-Jun",
+    "category": "phrase_help_lost",
+    "frame": "train_00797_00123",
+    "gt_local": 0,
+    "gt_box": [
+      0.31859108805656433,
+      0.4201553761959076,
+      0.4051057696342468,
+      0.5676908493041992
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.3207031488418579,
+      0.4180664122104645,
+      0.40507814288139343,
+      0.56689453125
+    ],
+    "candidate_iou": 0.9567916393280029,
+    "budget": 615,
+    "head-flat_gt_rank": 61566,
+    "head-phrase_gt_rank": 460,
+    "stage5_gt_rank": 3193,
+    "stage6_gt_rank": 8234,
+    "head-flat_score_same_candidate": 0.0036399743985384703,
+    "head-phrase_score_same_candidate": 0.6666524410247803,
+    "stage5_score_same_candidate": 0.3184601366519928,
+    "stage6_score_same_candidate": 0.2582307457923889
+  },
+  {
+    "seed": 2,
+    "class": "LarVeh-Stop-Jun",
+    "category": "stage5_hit_lost",
+    "frame": "train_00797_00142",
+    "gt_local": 0,
+    "gt_box": [
+      0.31877779960632324,
+      0.42026206851005554,
+      0.4059503972530365,
+      0.5675841569900513
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.3207031488418579,
+      0.4183593690395355,
+      0.40507814288139343,
+      0.567187488079071
+    ],
+    "candidate_iou": 0.9533831477165222,
+    "budget": 615,
+    "head-flat_gt_rank": 202,
+    "head-phrase_gt_rank": 35,
+    "stage5_gt_rank": 601,
+    "stage6_gt_rank": 1235,
+    "head-flat_score_same_candidate": 0.9452778100967407,
+    "head-phrase_score_same_candidate": 0.811863899230957,
+    "stage5_score_same_candidate": 0.6623799204826355,
+    "stage6_score_same_candidate": 0.5337868928909302
+  },
+  {
+    "seed": 2,
+    "class": "LarVeh-Stop-Jun",
+    "category": "stage5_hit_lost",
+    "frame": "train_00605_00078",
+    "gt_local": 0,
+    "gt_box": [
+      0.1309233456850052,
+      0.48306769132614136,
+      0.2651362121105194,
+      0.6291228532791138
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.130859375,
+      0.48222658038139343,
+      0.2652343809604645,
+      0.6322265863418579
+    ],
+    "candidate_iou": 0.9725260734558105,
+    "budget": 615,
+    "head-flat_gt_rank": 339,
+    "head-phrase_gt_rank": 681,
+    "stage5_gt_rank": 531,
+    "stage6_gt_rank": 710,
+    "head-flat_score_same_candidate": 0.9212126731872559,
+    "head-phrase_score_same_candidate": 0.5975478291511536,
+    "stage5_score_same_candidate": 0.6856641173362732,
+    "stage6_score_same_candidate": 0.6065884232521057
+  },
+  {
+    "seed": 2,
+    "class": "LarVeh-Stop-Jun",
+    "category": "stage6_rescue",
+    "frame": "train_00689_00055",
+    "gt_local": 0,
+    "gt_box": [
+      0.4819163382053375,
+      0.4739392101764679,
+      0.518101155757904,
+      0.5484470725059509
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.48125001788139343,
+      0.47490236163139343,
+      0.51953125,
+      0.5458008050918579
+    ],
+    "candidate_iou": 0.9018385410308838,
+    "budget": 615,
+    "head-flat_gt_rank": 235999,
+    "head-phrase_gt_rank": 4721,
+    "stage5_gt_rank": 124103,
+    "stage6_gt_rank": 540,
+    "head-flat_score_same_candidate": 0.00011409838043618947,
+    "head-phrase_score_same_candidate": 0.40217792987823486,
+    "stage5_score_same_candidate": 0.04430149123072624,
+    "stage6_score_same_candidate": 0.6402504444122314
+  },
+  {
+    "seed": 2,
+    "class": "LarVeh-Stop-Jun",
+    "category": "stage6_rescue",
+    "frame": "train_00605_00083",
+    "gt_local": 0,
+    "gt_box": [
+      0.13262295722961426,
+      0.48051828145980835,
+      0.26277869939804077,
+      0.6372647285461426
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.13046875596046448,
+      0.4828124940395355,
+      0.26542970538139343,
+      0.643359363079071
+    ],
+    "candidate_iou": 0.9151731729507446,
+    "budget": 615,
+    "head-flat_gt_rank": 485,
+    "head-phrase_gt_rank": 735,
+    "stage5_gt_rank": 798,
+    "stage6_gt_rank": 421,
+    "head-flat_score_same_candidate": 0.8927406072616577,
+    "head-phrase_score_same_candidate": 0.5832865238189697,
+    "stage5_score_same_candidate": 0.5950055718421936,
+    "stage6_score_same_candidate": 0.6682793498039246
+  },
+  {
+    "seed": 0,
+    "class": "Ped-XingFmRht-xing",
+    "category": "phrase_help_preserved",
+    "frame": "train_00786_00120",
+    "gt_local": 2,
+    "gt_box": [
+      0.9042921662330627,
+      0.6303564310073853,
+      0.9483718872070312,
+      0.8272348642349243
+    ],
+    "candidate_index": 3,
+    "candidate_box": [
+      0.9039062857627869,
+      0.6292968988418579,
+      0.9492188096046448,
+      0.833203136920929
+    ],
+    "candidate_iou": 0.9392650723457336,
+    "budget": 660,
+    "head-flat_gt_rank": 30311,
+    "head-phrase_gt_rank": 378,
+    "stage5_gt_rank": 50404,
+    "stage6_gt_rank": 50,
+    "head-flat_score_same_candidate": 0.019020365551114082,
+    "head-phrase_score_same_candidate": 0.5790829658508301,
+    "stage5_score_same_candidate": 0.053195707499980927,
+    "stage6_score_same_candidate": 0.6404382586479187
+  },
+  {
+    "seed": 0,
+    "class": "Ped-XingFmRht-xing",
+    "category": "phrase_help_lost",
+    "frame": "train_00786_00159",
+    "gt_local": 3,
+    "gt_box": [
+      0.936365008354187,
+      0.6022309064865112,
+      1.0,
+      0.9589806199073792
+    ],
+    "candidate_index": 7,
+    "candidate_box": [
+      0.9375000596046448,
+      0.598828136920929,
+      1.0,
+      0.984375
+    ],
+    "candidate_iou": 0.9100160598754883,
+    "budget": 660,
+    "head-flat_gt_rank": 207,
+    "head-phrase_gt_rank": 292,
+    "stage5_gt_rank": 565337,
+    "stage6_gt_rank": 6506,
+    "head-flat_score_same_candidate": 0.7556377649307251,
+    "head-phrase_score_same_candidate": 0.5922727584838867,
+    "stage5_score_same_candidate": 0.005440989043563604,
+    "stage6_score_same_candidate": 0.21352925896644592
+  },
+  {
+    "seed": 0,
+    "class": "Ped-XingFmRht-xing",
+    "category": "stage5_hit_lost",
+    "frame": "train_00786_00141",
+    "gt_local": 2,
+    "gt_box": [
+      0.6047803163528442,
+      0.6404717564582825,
+      0.6939266324043274,
+      0.8368567228317261
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.604687511920929,
+      0.637499988079071,
+      0.6937500238418579,
+      0.836718738079071
+    ],
+    "candidate_iou": 0.981458842754364,
+    "budget": 660,
+    "head-flat_gt_rank": 7781,
+    "head-phrase_gt_rank": 55,
+    "stage5_gt_rank": 543,
+    "stage6_gt_rank": 6942,
+    "head-flat_score_same_candidate": 0.090824656188488,
+    "head-phrase_score_same_candidate": 0.6644182801246643,
+    "stage5_score_same_candidate": 0.37146615982055664,
+    "stage6_score_same_candidate": 0.20679648220539093
+  },
+  {
+    "seed": 0,
+    "class": "Ped-XingFmRht-xing",
+    "category": "stage5_hit_lost",
+    "frame": "train_00692_00080",
+    "gt_local": 0,
+    "gt_box": [
+      0.49293628334999084,
+      0.46555089950561523,
+      0.502475917339325,
+      0.49959757924079895
+    ],
+    "candidate_index": 10,
+    "candidate_box": [
+      0.49375003576278687,
+      0.4716796875,
+      0.503125011920929,
+      0.4986328184604645
+    ],
+    "candidate_iou": 0.6871109008789062,
+    "budget": 660,
+    "head-flat_gt_rank": 247229,
+    "head-phrase_gt_rank": 2435,
+    "stage5_gt_rank": 298,
+    "stage6_gt_rank": 1035,
+    "head-flat_score_same_candidate": 0.00017251414828933775,
+    "head-phrase_score_same_candidate": 0.4730670154094696,
+    "stage5_score_same_candidate": 0.43363475799560547,
+    "stage6_score_same_candidate": 0.40696537494659424
+  },
+  {
+    "seed": 0,
+    "class": "Ped-XingFmRht-xing",
+    "category": "stage5_hit_lost",
+    "frame": "train_00761_00074",
+    "gt_local": 0,
+    "gt_box": [
+      0.2863537073135376,
+      0.548693835735321,
+      0.3195779621601105,
+      0.6690906286239624
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.2867187559604645,
+      0.556347668170929,
+      0.31953126192092896,
+      0.666796863079071
+    ],
+    "candidate_iou": 0.9060074687004089,
+    "budget": 660,
+    "head-flat_gt_rank": 1508,
+    "head-phrase_gt_rank": 2709,
+    "stage5_gt_rank": 31,
+    "stage6_gt_rank": 1679,
+    "head-flat_score_same_candidate": 0.32886043190956116,
+    "head-phrase_score_same_candidate": 0.46531763672828674,
+    "stage5_score_same_candidate": 0.7301982045173645,
+    "stage6_score_same_candidate": 0.3604521155357361
+  },
+  {
+    "seed": 0,
+    "class": "Ped-XingFmRht-xing",
+    "category": "stage6_rescue",
+    "frame": "train_00786_00120",
+    "gt_local": 2,
+    "gt_box": [
+      0.9042921662330627,
+      0.6303564310073853,
+      0.9483718872070312,
+      0.8272348642349243
+    ],
+    "candidate_index": 3,
+    "candidate_box": [
+      0.9039062857627869,
+      0.6292968988418579,
+      0.9492188096046448,
+      0.833203136920929
+    ],
+    "candidate_iou": 0.9392650723457336,
+    "budget": 660,
+    "head-flat_gt_rank": 30311,
+    "head-phrase_gt_rank": 378,
+    "stage5_gt_rank": 50404,
+    "stage6_gt_rank": 50,
+    "head-flat_score_same_candidate": 0.019020365551114082,
+    "head-phrase_score_same_candidate": 0.5790829658508301,
+    "stage5_score_same_candidate": 0.053195707499980927,
+    "stage6_score_same_candidate": 0.6404382586479187
+  },
+  {
+    "seed": 0,
+    "class": "Ped-XingFmRht-xing",
+    "category": "stage6_rescue",
+    "frame": "train_00761_00065",
+    "gt_local": 1,
+    "gt_box": [
+      0.30296581983566284,
+      0.559302568435669,
+      0.3345453143119812,
+      0.6555213332176208
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.30546876788139343,
+      0.5601562857627869,
+      0.3335937559604645,
+      0.6527343988418579
+    ],
+    "candidate_iou": 0.8569109439849854,
+    "budget": 660,
+    "head-flat_gt_rank": 623087,
+    "head-phrase_gt_rank": 94011,
+    "stage5_gt_rank": 1402,
+    "stage6_gt_rank": 384,
+    "head-flat_score_same_candidate": 2.784647449516342e-06,
+    "head-phrase_score_same_candidate": 0.09929294884204865,
+    "stage5_score_same_candidate": 0.28377795219421387,
+    "stage6_score_same_candidate": 0.49806684255599976
+  },
+  {
+    "seed": 1,
+    "class": "Ped-XingFmRht-xing",
+    "category": "phrase_help_preserved",
+    "frame": "train_00786_00174",
+    "gt_local": 0,
+    "gt_box": [
+      0.18750326335430145,
+      0.6688439249992371,
+      0.28947874903678894,
+      0.9091441631317139
+    ],
+    "candidate_index": 2,
+    "candidate_box": [
+      0.18710938096046448,
+      0.6644531488418579,
+      0.28828126192092896,
+      0.907031238079071
+    ],
+    "candidate_iou": 0.9585216045379639,
+    "budget": 660,
+    "head-flat_gt_rank": 5668,
+    "head-phrase_gt_rank": 272,
+    "stage5_gt_rank": 61702,
+    "stage6_gt_rank": 110,
+    "head-flat_score_same_candidate": 0.016816791146993637,
+    "head-phrase_score_same_candidate": 0.5896835923194885,
+    "stage5_score_same_candidate": 0.063465416431427,
+    "stage6_score_same_candidate": 0.6118994355201721
+  },
+  {
+    "seed": 1,
+    "class": "Ped-XingFmRht-xing",
+    "category": "phrase_help_lost",
+    "frame": "train_00786_00146",
+    "gt_local": 2,
+    "gt_box": [
+      0.542937159538269,
+      0.6426921486854553,
+      0.6287938952445984,
+      0.8395706415176392
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.541015625,
+      0.6392578482627869,
+      0.6269531846046448,
+      0.841992199420929
+    ],
+    "candidate_iou": 0.9300562739372253,
+    "budget": 660,
+    "head-flat_gt_rank": 763,
+    "head-phrase_gt_rank": 20,
+    "stage5_gt_rank": 107199,
+    "stage6_gt_rank": 79405,
+    "head-flat_score_same_candidate": 0.1339477151632309,
+    "head-phrase_score_same_candidate": 0.6885696649551392,
+    "stage5_score_same_candidate": 0.04410261660814285,
+    "stage6_score_same_candidate": 0.042437516152858734
+  },
+  {
+    "seed": 1,
+    "class": "Ped-XingFmRht-xing",
+    "category": "stage5_hit_lost",
+    "frame": "train_00786_00124",
+    "gt_local": 2,
+    "gt_box": [
+      0.8460674285888672,
+      0.6352907419204712,
+      0.9138318300247192,
+      0.8282217383384705
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.8476563096046448,
+      0.6322265863418579,
+      0.9148437976837158,
+      0.830273449420929
+    ],
+    "candidate_iou": 0.9378889203071594,
+    "budget": 660,
+    "head-flat_gt_rank": 23262,
+    "head-phrase_gt_rank": 84,
+    "stage5_gt_rank": 605,
+    "stage6_gt_rank": 2400,
+    "head-flat_score_same_candidate": 0.0020239921286702156,
+    "head-phrase_score_same_candidate": 0.6435292959213257,
+    "stage5_score_same_candidate": 0.48959964513778687,
+    "stage6_score_same_candidate": 0.2634557783603668
+  },
+  {
+    "seed": 1,
+    "class": "Ped-XingFmRht-xing",
+    "category": "stage5_hit_lost",
+    "frame": "train_00761_00064",
+    "gt_local": 0,
+    "gt_box": [
+      0.20411542057991028,
+      0.5491872429847717,
+      0.23010271787643433,
+      0.6528074741363525
+    ],
+    "candidate_index": 2,
+    "candidate_box": [
+      0.20429688692092896,
+      0.549609363079071,
+      0.23007813096046448,
+      0.651562511920929
+    ],
+    "candidate_iou": 0.9761102199554443,
+    "budget": 660,
+    "head-flat_gt_rank": 115442,
+    "head-phrase_gt_rank": 16103,
+    "stage5_gt_rank": 503,
+    "stage6_gt_rank": 6220,
+    "head-flat_score_same_candidate": 6.806206511100754e-05,
+    "head-phrase_score_same_candidate": 0.2835911214351654,
+    "stage5_score_same_candidate": 0.5096134543418884,
+    "stage6_score_same_candidate": 0.17669914662837982
+  },
+  {
+    "seed": 1,
+    "class": "Ped-XingFmRht-xing",
+    "category": "stage6_rescue",
+    "frame": "train_00786_00168",
+    "gt_local": 1,
+    "gt_box": [
+      0.2712218463420868,
+      0.6493534445762634,
+      0.3597102463245392,
+      0.8783048391342163
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.27226564288139343,
+      0.649218738079071,
+      0.3539062738418579,
+      0.8765625357627869
+    ],
+    "candidate_iou": 0.9150961637496948,
+    "budget": 660,
+    "head-flat_gt_rank": 3507,
+    "head-phrase_gt_rank": 1019,
+    "stage5_gt_rank": 157749,
+    "stage6_gt_rank": 31,
+    "head-flat_score_same_candidate": 0.029611505568027496,
+    "head-phrase_score_same_candidate": 0.5225783586502075,
+    "stage5_score_same_candidate": 0.033028632402420044,
+    "stage6_score_same_candidate": 0.7182902097702026
+  },
+  {
+    "seed": 1,
+    "class": "Ped-XingFmRht-xing",
+    "category": "stage6_rescue",
+    "frame": "train_00692_00100",
+    "gt_local": 0,
+    "gt_box": [
+      0.4713898301124573,
+      0.4625903367996216,
+      0.4819163382053375,
+      0.49367639422416687
+    ],
+    "candidate_index": 10,
+    "candidate_box": [
+      0.4726562798023224,
+      0.46611329913139343,
+      0.4804687798023224,
+      0.4930664002895355
+    ],
+    "candidate_iou": 0.6435003876686096,
+    "budget": 660,
+    "head-flat_gt_rank": 516,
+    "head-phrase_gt_rank": 3018,
+    "stage5_gt_rank": 1489,
+    "stage6_gt_rank": 547,
+    "head-flat_score_same_candidate": 0.1824263036251068,
+    "head-phrase_score_same_candidate": 0.45253199338912964,
+    "stage5_score_same_candidate": 0.38364502787590027,
+    "stage6_score_same_candidate": 0.42538103461265564
+  },
+  {
+    "seed": 1,
+    "class": "Ped-XingFmRht-xing",
+    "category": "stage6_rescue",
+    "frame": "train_00761_00057",
+    "gt_local": 0,
+    "gt_box": [
+      0.0004934296594001353,
+      0.5605361461639404,
+      0.010690975934267044,
+      0.6444191932678223
+    ],
+    "candidate_index": 3,
+    "candidate_box": [
+      0.0,
+      0.5654296875,
+      0.01023559644818306,
+      0.646289050579071
+    ],
+    "candidate_iou": 0.8423814177513123,
+    "budget": 660,
+    "head-flat_gt_rank": 769169,
+    "head-phrase_gt_rank": 19977,
+    "stage5_gt_rank": 16188,
+    "stage6_gt_rank": 447,
+    "head-flat_score_same_candidate": 7.11921828155937e-08,
+    "head-phrase_score_same_candidate": 0.2560420334339142,
+    "stage5_score_same_candidate": 0.13682307302951813,
+    "stage6_score_same_candidate": 0.4502263367176056
+  },
+  {
+    "seed": 2,
+    "class": "Ped-XingFmRht-xing",
+    "category": "phrase_help_lost",
+    "frame": "train_00786_00150",
+    "gt_local": 2,
+    "gt_box": [
+      0.4942520558834076,
+      0.6397315859794617,
+      0.577477216720581,
+      0.843518078327179
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.4945312738418579,
+      0.6363281607627869,
+      0.577343761920929,
+      0.842578113079071
+    ],
+    "candidate_iou": 0.9742615222930908,
+    "budget": 660,
+    "head-flat_gt_rank": 44737,
+    "head-phrase_gt_rank": 108,
+    "stage5_gt_rank": 126138,
+    "stage6_gt_rank": 623788,
+    "head-flat_score_same_candidate": 0.00040586997056379914,
+    "head-phrase_score_same_candidate": 0.6218918561935425,
+    "stage5_score_same_candidate": 0.04391627386212349,
+    "stage6_score_same_candidate": 0.009914092719554901
+  },
+  {
+    "seed": 2,
+    "class": "Ped-XingFmRht-xing",
+    "category": "stage5_hit_lost",
+    "frame": "train_00786_00158",
+    "gt_local": 2,
+    "gt_box": [
+      0.40642160177230835,
+      0.6404717564582825,
+      0.46333047747612,
+      0.8556070923805237
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.41171878576278687,
+      0.637499988079071,
+      0.46171876788139343,
+      0.850781261920929
+    ],
+    "candidate_iou": 0.848590075969696,
+    "budget": 660,
+    "head-flat_gt_rank": 5011,
+    "head-phrase_gt_rank": 104,
+    "stage5_gt_rank": 464,
+    "stage6_gt_rank": 24217,
+    "head-flat_score_same_candidate": 0.01953529566526413,
+    "head-phrase_score_same_candidate": 0.6247462630271912,
+    "stage5_score_same_candidate": 0.5193701982498169,
+    "stage6_score_same_candidate": 0.13123664259910583
+  },
+  {
+    "seed": 2,
+    "class": "Ped-XingFmRht-xing",
+    "category": "stage5_hit_lost",
+    "frame": "train_00692_00076",
+    "gt_local": 0,
+    "gt_box": [
+      0.49635735154151917,
+      0.4741367697715759,
+      0.5074759125709534,
+      0.5042359232902527
+    ],
+    "candidate_index": 12,
+    "candidate_box": [
+      0.49687501788139343,
+      0.4769531190395355,
+      0.5062500238418579,
+      0.505664050579071
+    ],
+    "candidate_iou": 0.7348885536193848,
+    "budget": 660,
+    "head-flat_gt_rank": 36524,
+    "head-phrase_gt_rank": 5572,
+    "stage5_gt_rank": 584,
+    "stage6_gt_rank": 661,
+    "head-flat_score_same_candidate": 0.0006179161719046533,
+    "head-phrase_score_same_candidate": 0.38599446415901184,
+    "stage5_score_same_candidate": 0.49674707651138306,
+    "stage6_score_same_candidate": 0.42615973949432373
+  },
+  {
+    "seed": 2,
+    "class": "Ped-XingFmRht-xing",
+    "category": "stage5_hit_lost",
+    "frame": "train_00761_00105",
+    "gt_local": 0,
+    "gt_box": [
+      0.0,
+      0.6407184600830078,
+      0.07023148983716965,
+      0.8790450096130371
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.0,
+      0.6392578482627869,
+      0.07138672471046448,
+      0.880664050579071
+    ],
+    "candidate_iou": 0.9712665677070618,
+    "budget": 660,
+    "head-flat_gt_rank": 24205,
+    "head-phrase_gt_rank": 6606,
+    "stage5_gt_rank": 511,
+    "stage6_gt_rank": 9750,
+    "head-flat_score_same_candidate": 0.0013896203599870205,
+    "head-phrase_score_same_candidate": 0.37042784690856934,
+    "stage5_score_same_candidate": 0.5088803768157959,
+    "stage6_score_same_candidate": 0.194902241230011
+  },
+  {
+    "seed": 2,
+    "class": "Ped-XingFmRht-xing",
+    "category": "stage6_rescue",
+    "frame": "train_00761_00089",
+    "gt_local": 1,
+    "gt_box": [
+      0.2903011441230774,
+      0.5768193006515503,
+      0.3287886381149292,
+      0.7337299585342407
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.2900390923023224,
+      0.5777344107627869,
+      0.32636719942092896,
+      0.727734386920929
+    ],
+    "candidate_iou": 0.8900208473205566,
+    "budget": 660,
+    "head-flat_gt_rank": 29865,
+    "head-phrase_gt_rank": 1442,
+    "stage5_gt_rank": 16246,
+    "stage6_gt_rank": 420,
+    "head-flat_score_same_candidate": 0.0009305014973506331,
+    "head-phrase_score_same_candidate": 0.48772647976875305,
+    "stage5_score_same_candidate": 0.1533343642950058,
+    "stage6_score_same_candidate": 0.4599982500076294
+  },
+  {
+    "seed": 2,
+    "class": "Ped-XingFmRht-xing",
+    "category": "stage6_rescue",
+    "frame": "train_00786_00124",
+    "gt_local": 1,
+    "gt_box": [
+      0.7644870281219482,
+      0.6831533908843994,
+      0.8460674285888672,
+      0.8869398832321167
+    ],
+    "candidate_index": 15,
+    "candidate_box": [
+      0.7789062857627869,
+      0.6826171875,
+      0.8476563096046448,
+      0.8900390863418579
+    ],
+    "candidate_iou": 0.7957884073257446,
+    "budget": 660,
+    "head-flat_gt_rank": 1094,
+    "head-phrase_gt_rank": 1206,
+    "stage5_gt_rank": 1225,
+    "stage6_gt_rank": 197,
+    "head-flat_score_same_candidate": 0.13703197240829468,
+    "head-phrase_score_same_candidate": 0.49837443232536316,
+    "stage5_score_same_candidate": 0.42021098732948303,
+    "stage6_score_same_candidate": 0.5109774470329285
+  },
+  {
+    "seed": 2,
+    "class": "Ped-XingFmRht-xing",
+    "category": "stage6_rescue",
+    "frame": "train_00692_00080",
+    "gt_local": 0,
+    "gt_box": [
+      0.49293628334999084,
+      0.46555089950561523,
+      0.502475917339325,
+      0.49959757924079895
+    ],
+    "candidate_index": 10,
+    "candidate_box": [
+      0.49375003576278687,
+      0.4716796875,
+      0.503125011920929,
+      0.4986328184604645
+    ],
+    "candidate_iou": 0.6871109008789062,
+    "budget": 660,
+    "head-flat_gt_rank": 222051,
+    "head-phrase_gt_rank": 2375,
+    "stage5_gt_rank": 814,
+    "stage6_gt_rank": 624,
+    "head-flat_score_same_candidate": 9.45129431784153e-06,
+    "head-phrase_score_same_candidate": 0.4534953236579895,
+    "stage5_score_same_candidate": 0.46247297525405884,
+    "stage6_score_same_candidate": 0.43111586570739746
+  },
+  {
+    "seed": 0,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_preserved",
+    "frame": "train_00777_00041",
+    "gt_local": 1,
+    "gt_box": [
+      0.11538348346948624,
+      0.5553547739982605,
+      0.1326533406972885,
+      0.632329523563385
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.11455078423023224,
+      0.5537109375,
+      0.13154298067092896,
+      0.6322265863418579
+    ],
+    "candidate_iou": 0.8740037083625793,
+    "budget": 18271,
+    "head-flat_gt_rank": 62824,
+    "head-phrase_gt_rank": 11558,
+    "stage5_gt_rank": 85755,
+    "stage6_gt_rank": 16721,
+    "head-flat_score_same_candidate": 0.2529331147670746,
+    "head-phrase_score_same_candidate": 0.5576143860816956,
+    "stage5_score_same_candidate": 0.19746744632720947,
+    "stage6_score_same_candidate": 0.4490277171134949
+  },
+  {
+    "seed": 0,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_preserved",
+    "frame": "train_00646_00191",
+    "gt_local": 0,
+    "gt_box": [
+      0.19188933074474335,
+      0.4819163382053375,
+      0.221495121717453,
+      0.5967209935188293
+    ],
+    "candidate_index": 11,
+    "candidate_box": [
+      0.19306641817092896,
+      0.4869140684604645,
+      0.22031250596046448,
+      0.5923828482627869
+    ],
+    "candidate_iou": 0.8454577326774597,
+    "budget": 18271,
+    "head-flat_gt_rank": 13570,
+    "head-phrase_gt_rank": 8583,
+    "stage5_gt_rank": 71078,
+    "stage6_gt_rank": 4967,
+    "head-flat_score_same_candidate": 0.5403677821159363,
+    "head-phrase_score_same_candidate": 0.5736655592918396,
+    "stage5_score_same_candidate": 0.23286153376102448,
+    "stage6_score_same_candidate": 0.5924738049507141
+  },
+  {
+    "seed": 0,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_preserved",
+    "frame": "train_00784_00043",
+    "gt_local": 1,
+    "gt_box": [
+      0.08519885689020157,
+      0.4761596620082855,
+      0.12204161286354065,
+      0.5866879224777222
+    ],
+    "candidate_index": 6,
+    "candidate_box": [
+      0.0839843824505806,
+      0.4781250059604645,
+      0.12070313096046448,
+      0.584765613079071
+    ],
+    "candidate_iou": 0.9011155366897583,
+    "budget": 18271,
+    "head-flat_gt_rank": 62623,
+    "head-phrase_gt_rank": 13938,
+    "stage5_gt_rank": 63058,
+    "stage6_gt_rank": 15401,
+    "head-flat_score_same_candidate": 0.25352609157562256,
+    "head-phrase_score_same_candidate": 0.5457749366760254,
+    "stage5_score_same_candidate": 0.2560131847858429,
+    "stage6_score_same_candidate": 0.4610591232776642
+  },
+  {
+    "seed": 0,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_lost",
+    "frame": "train_00777_00040",
+    "gt_local": 1,
+    "gt_box": [
+      0.1283472329378128,
+      0.5538747310638428,
+      0.1449045091867447,
+      0.6296983957290649
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.12666016817092896,
+      0.5513672232627869,
+      0.14521485567092896,
+      0.6275390982627869
+    ],
+    "candidate_iou": 0.8416833877563477,
+    "budget": 18271,
+    "head-flat_gt_rank": 60828,
+    "head-phrase_gt_rank": 10765,
+    "stage5_gt_rank": 96812,
+    "stage6_gt_rank": 31401,
+    "head-flat_score_same_candidate": 0.25938406586647034,
+    "head-phrase_score_same_candidate": 0.5616133809089661,
+    "stage5_score_same_candidate": 0.17646540701389313,
+    "stage6_score_same_candidate": 0.34986090660095215
+  },
+  {
+    "seed": 0,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_lost",
+    "frame": "train_00796_00047",
+    "gt_local": 0,
+    "gt_box": [
+      0.10213994234800339,
+      0.5040384531021118,
+      0.15444348752498627,
+      0.6604556441307068
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.10332031548023224,
+      0.50390625,
+      0.14394532144069672,
+      0.660351574420929
+    ],
+    "candidate_iou": 0.7756901979446411,
+    "budget": 18271,
+    "head-flat_gt_rank": 16836,
+    "head-phrase_gt_rank": 5841,
+    "stage5_gt_rank": 73357,
+    "stage6_gt_rank": 43539,
+    "head-flat_score_same_candidate": 0.5081149935722351,
+    "head-phrase_score_same_candidate": 0.5914828777313232,
+    "stage5_score_same_candidate": 0.22677573561668396,
+    "stage6_score_same_candidate": 0.29205209016799927
+  },
+  {
+    "seed": 0,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_lost",
+    "frame": "train_00642_00091",
+    "gt_local": 4,
+    "gt_box": [
+      0.15066052973270416,
+      0.49811726808547974,
+      0.16776609420776367,
+      0.526242733001709
+    ],
+    "candidate_index": 9,
+    "candidate_box": [
+      0.14931641519069672,
+      0.498046875,
+      0.1655273586511612,
+      0.528515636920929
+    ],
+    "candidate_iou": 0.7508383393287659,
+    "budget": 18271,
+    "head-flat_gt_rank": 4618,
+    "head-phrase_gt_rank": 16925,
+    "stage5_gt_rank": 69848,
+    "stage6_gt_rank": 19227,
+    "head-flat_score_same_candidate": 0.6545755863189697,
+    "head-phrase_score_same_candidate": 0.53238445520401,
+    "stage5_score_same_candidate": 0.23612484335899353,
+    "stage6_score_same_candidate": 0.4291304051876068
+  },
+  {
+    "seed": 0,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage5_hit_lost",
+    "frame": "train_00614_00144",
+    "gt_local": 0,
+    "gt_box": [
+      0.07977113127708435,
+      0.49811726808547974,
+      0.10641633719205856,
+      0.5637434124946594
+    ],
+    "candidate_index": 10,
+    "candidate_box": [
+      0.08125000447034836,
+      0.49775391817092896,
+      0.10507813096046448,
+      0.5645508170127869
+    ],
+    "candidate_iou": 0.8802315592765808,
+    "budget": 18271,
+    "head-flat_gt_rank": 12271,
+    "head-phrase_gt_rank": 4088,
+    "stage5_gt_rank": 18014,
+    "stage6_gt_rank": 22720,
+    "head-flat_score_same_candidate": 0.5543104410171509,
+    "head-phrase_score_same_candidate": 0.6051666736602783,
+    "stage5_score_same_candidate": 0.4737277925014496,
+    "stage6_score_same_candidate": 0.40357646346092224
+  },
+  {
+    "seed": 0,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage5_hit_lost",
+    "frame": "train_00710_00105",
+    "gt_local": 1,
+    "gt_box": [
+      0.19260205328464508,
+      0.537838339805603,
+      0.21661564707756042,
+      0.6128396987915039
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.19511719048023224,
+      0.537890613079071,
+      0.21699219942092896,
+      0.6117187738418579
+    ],
+    "candidate_iou": 0.8678620457649231,
+    "budget": 18271,
+    "head-flat_gt_rank": 17414,
+    "head-phrase_gt_rank": 3587,
+    "stage5_gt_rank": 17236,
+    "stage6_gt_rank": 56988,
+    "head-flat_score_same_candidate": 0.5029770731925964,
+    "head-phrase_score_same_candidate": 0.6097594499588013,
+    "stage5_score_same_candidate": 0.4802660048007965,
+    "stage6_score_same_candidate": 0.24355155229568481
+  },
+  {
+    "seed": 0,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage5_hit_lost",
+    "frame": "train_00711_00067",
+    "gt_local": 2,
+    "gt_box": [
+      0.0,
+      0.5474602580070496,
+      0.026809679344296455,
+      0.6545344591140747
+    ],
+    "candidate_index": 2,
+    "candidate_box": [
+      0.0,
+      0.5458008050918579,
+      0.02661132998764515,
+      0.65625
+    ],
+    "candidate_iou": 0.9624883532524109,
+    "budget": 18271,
+    "head-flat_gt_rank": 15268,
+    "head-phrase_gt_rank": 3111,
+    "stage5_gt_rank": 16570,
+    "stage6_gt_rank": 35240,
+    "head-flat_score_same_candidate": 0.5230651497840881,
+    "head-phrase_score_same_candidate": 0.6147385835647583,
+    "stage5_score_same_candidate": 0.48575276136398315,
+    "stage6_score_same_candidate": 0.32938137650489807
+  },
+  {
+    "seed": 0,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage6_rescue",
+    "frame": "train_00786_00013",
+    "gt_local": 0,
+    "gt_box": [
+      0.018914803862571716,
+      0.5570821166038513,
+      0.047533731907606125,
+      0.6123462319374084
+    ],
+    "candidate_index": 14,
+    "candidate_box": [
+      0.02124023623764515,
+      0.5589843988418579,
+      0.04936523735523224,
+      0.6421875357627869
+    ],
+    "candidate_iou": 0.5570787787437439,
+    "budget": 18271,
+    "head-flat_gt_rank": 17387,
+    "head-phrase_gt_rank": 47076,
+    "stage5_gt_rank": 147214,
+    "stage6_gt_rank": 17910,
+    "head-flat_score_same_candidate": 0.5031862854957581,
+    "head-phrase_score_same_candidate": 0.42367225885391235,
+    "stage5_score_same_candidate": 0.11633876711130142,
+    "stage6_score_same_candidate": 0.4397490918636322
+  },
+  {
+    "seed": 0,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage6_rescue",
+    "frame": "train_00777_00041",
+    "gt_local": 1,
+    "gt_box": [
+      0.11538348346948624,
+      0.5553547739982605,
+      0.1326533406972885,
+      0.632329523563385
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.11455078423023224,
+      0.5537109375,
+      0.13154298067092896,
+      0.6322265863418579
+    ],
+    "candidate_iou": 0.8740037083625793,
+    "budget": 18271,
+    "head-flat_gt_rank": 62824,
+    "head-phrase_gt_rank": 11558,
+    "stage5_gt_rank": 85755,
+    "stage6_gt_rank": 16721,
+    "head-flat_score_same_candidate": 0.2529331147670746,
+    "head-phrase_score_same_candidate": 0.5576143860816956,
+    "stage5_score_same_candidate": 0.19746744632720947,
+    "stage6_score_same_candidate": 0.4490277171134949
+  },
+  {
+    "seed": 0,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage6_rescue",
+    "frame": "train_00646_00191",
+    "gt_local": 0,
+    "gt_box": [
+      0.19188933074474335,
+      0.4819163382053375,
+      0.221495121717453,
+      0.5967209935188293
+    ],
+    "candidate_index": 11,
+    "candidate_box": [
+      0.19306641817092896,
+      0.4869140684604645,
+      0.22031250596046448,
+      0.5923828482627869
+    ],
+    "candidate_iou": 0.8454577326774597,
+    "budget": 18271,
+    "head-flat_gt_rank": 13570,
+    "head-phrase_gt_rank": 8583,
+    "stage5_gt_rank": 71078,
+    "stage6_gt_rank": 4967,
+    "head-flat_score_same_candidate": 0.5403677821159363,
+    "head-phrase_score_same_candidate": 0.5736655592918396,
+    "stage5_score_same_candidate": 0.23286153376102448,
+    "stage6_score_same_candidate": 0.5924738049507141
+  },
+  {
+    "seed": 1,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_preserved",
+    "frame": "train_00710_00106",
+    "gt_local": 1,
+    "gt_box": [
+      0.18108868598937988,
+      0.5383318066596985,
+      0.2057601809501648,
+      0.6123462319374084
+    ],
+    "candidate_index": 4,
+    "candidate_box": [
+      0.1835937649011612,
+      0.537890613079071,
+      0.2060547024011612,
+      0.615234375
+    ],
+    "candidate_iou": 0.8533302545547485,
+    "budget": 18271,
+    "head-flat_gt_rank": 41959,
+    "head-phrase_gt_rank": 10423,
+    "stage5_gt_rank": 93157,
+    "stage6_gt_rank": 3267,
+    "head-flat_score_same_candidate": 0.23332573473453522,
+    "head-phrase_score_same_candidate": 0.5466592311859131,
+    "stage5_score_same_candidate": 0.15906257927417755,
+    "stage6_score_same_candidate": 0.6063492298126221
+  },
+  {
+    "seed": 1,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_preserved",
+    "frame": "train_00781_00184",
+    "gt_local": 0,
+    "gt_box": [
+      0.10033071041107178,
+      0.5301901698112488,
+      0.1746741086244583,
+      0.8997690081596375
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.10019531846046448,
+      0.527050793170929,
+      0.17636719346046448,
+      0.897656261920929
+    ],
+    "candidate_iou": 0.9623733162879944,
+    "budget": 18271,
+    "head-flat_gt_rank": 26030,
+    "head-phrase_gt_rank": 15838,
+    "stage5_gt_rank": 86349,
+    "stage6_gt_rank": 2239,
+    "head-flat_score_same_candidate": 0.3265593647956848,
+    "head-phrase_score_same_candidate": 0.5187978744506836,
+    "stage5_score_same_candidate": 0.1705177128314972,
+    "stage6_score_same_candidate": 0.6309657096862793
+  },
+  {
+    "seed": 1,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_preserved",
+    "frame": "train_00678_00155",
+    "gt_local": 1,
+    "gt_box": [
+      0.03404664993286133,
+      0.503298282623291,
+      0.05608650669455528,
+      0.5822470188140869
+    ],
+    "candidate_index": 12,
+    "candidate_box": [
+      0.03525390848517418,
+      0.5033203363418579,
+      0.0581054724752903,
+      0.581835925579071
+    ],
+    "candidate_iou": 0.8615485429763794,
+    "budget": 18271,
+    "head-flat_gt_rank": 1537,
+    "head-phrase_gt_rank": 5551,
+    "stage5_gt_rank": 61387,
+    "stage6_gt_rank": 17072,
+    "head-flat_score_same_candidate": 0.678214430809021,
+    "head-phrase_score_same_candidate": 0.5792165994644165,
+    "stage5_score_same_candidate": 0.22619113326072693,
+    "stage6_score_same_candidate": 0.440391480922699
+  },
+  {
+    "seed": 1,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_lost",
+    "frame": "train_00784_00048",
+    "gt_local": 1,
+    "gt_box": [
+      0.057566795498132706,
+      0.4739392101764679,
+      0.08980420231819153,
+      0.5820003151893616
+    ],
+    "candidate_index": 10,
+    "candidate_box": [
+      0.05703125149011612,
+      0.474609375,
+      0.0898437574505806,
+      0.5824218988418579
+    ],
+    "candidate_iou": 0.9726911187171936,
+    "budget": 18271,
+    "head-flat_gt_rank": 30727,
+    "head-phrase_gt_rank": 7301,
+    "stage5_gt_rank": 122732,
+    "stage6_gt_rank": 185740,
+    "head-flat_score_same_candidate": 0.29356223344802856,
+    "head-phrase_score_same_candidate": 0.5658594369888306,
+    "stage5_score_same_candidate": 0.12111324071884155,
+    "stage6_score_same_candidate": 0.07939597964286804
+  },
+  {
+    "seed": 1,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_lost",
+    "frame": "train_00678_00171",
+    "gt_local": 1,
+    "gt_box": [
+      0.05098773539066315,
+      0.5060121417045593,
+      0.07138282805681229,
+      0.5874280333518982
+    ],
+    "candidate_index": 13,
+    "candidate_box": [
+      0.04804687574505806,
+      0.506542980670929,
+      0.07197266072034836,
+      0.5879883170127869
+    ],
+    "candidate_iou": 0.8418899774551392,
+    "budget": 18271,
+    "head-flat_gt_rank": 3746,
+    "head-phrase_gt_rank": 12728,
+    "stage5_gt_rank": 113406,
+    "stage6_gt_rank": 112551,
+    "head-flat_score_same_candidate": 0.609282910823822,
+    "head-phrase_score_same_candidate": 0.5341838002204895,
+    "stage5_score_same_candidate": 0.13125765323638916,
+    "stage6_score_same_candidate": 0.13661405444145203
+  },
+  {
+    "seed": 1,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_lost",
+    "frame": "train_00781_00162",
+    "gt_local": 0,
+    "gt_box": [
+      0.804783821105957,
+      0.5343843698501587,
+      0.8498504161834717,
+      0.7228744626045227
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.8039063215255737,
+      0.529980480670929,
+      0.8507813215255737,
+      0.719531238079071
+    ],
+    "candidate_iou": 0.923425018787384,
+    "budget": 18271,
+    "head-flat_gt_rank": 25682,
+    "head-phrase_gt_rank": 5082,
+    "stage5_gt_rank": 84510,
+    "stage6_gt_rank": 42765,
+    "head-flat_score_same_candidate": 0.3291853964328766,
+    "head-phrase_score_same_candidate": 0.583246111869812,
+    "stage5_score_same_candidate": 0.17376098036766052,
+    "stage6_score_same_candidate": 0.2999109625816345
+  },
+  {
+    "seed": 1,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage5_hit_lost",
+    "frame": "train_00781_00090",
+    "gt_local": 0,
+    "gt_box": [
+      0.2090446949005127,
+      0.4602912366390228,
+      0.23437410593032837,
+      0.5479579567909241
+    ],
+    "candidate_index": 9,
+    "candidate_box": [
+      0.2119140774011612,
+      0.4634765684604645,
+      0.23378907144069672,
+      0.5455078482627869
+    ],
+    "candidate_iou": 0.8081046342849731,
+    "budget": 18271,
+    "head-flat_gt_rank": 5080,
+    "head-phrase_gt_rank": 1078,
+    "stage5_gt_rank": 14622,
+    "stage6_gt_rank": 31027,
+    "head-flat_score_same_candidate": 0.5785191655158997,
+    "head-phrase_score_same_candidate": 0.6377453207969666,
+    "stage5_score_same_candidate": 0.4507477283477783,
+    "stage6_score_same_candidate": 0.35330072045326233
+  },
+  {
+    "seed": 1,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage5_hit_lost",
+    "frame": "train_00692_00077",
+    "gt_local": 0,
+    "gt_box": [
+      0.10213994234800339,
+      0.4625903367996216,
+      0.11825864762067795,
+      0.5282164812088013
+    ],
+    "candidate_index": 9,
+    "candidate_box": [
+      0.10332031548023224,
+      0.46171876788139343,
+      0.11855469644069672,
+      0.526171863079071
+    ],
+    "candidate_iou": 0.8714501857757568,
+    "budget": 18271,
+    "head-flat_gt_rank": 7580,
+    "head-phrase_gt_rank": 2049,
+    "stage5_gt_rank": 15227,
+    "stage6_gt_rank": 18583,
+    "head-flat_score_same_candidate": 0.5314415097236633,
+    "head-phrase_score_same_candidate": 0.6186363697052002,
+    "stage5_score_same_candidate": 0.4454401135444641,
+    "stage6_score_same_candidate": 0.42951732873916626
+  },
+  {
+    "seed": 1,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage5_hit_lost",
+    "frame": "train_00777_00048",
+    "gt_local": 0,
+    "gt_box": [
+      0.07985462993383408,
+      0.5443761944770813,
+      0.09679561108350754,
+      0.6003803014755249
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.08046875149011612,
+      0.5425781607627869,
+      0.09628906846046448,
+      0.5941406488418579
+    ],
+    "candidate_iou": 0.8056503534317017,
+    "budget": 18271,
+    "head-flat_gt_rank": 30913,
+    "head-phrase_gt_rank": 3296,
+    "stage5_gt_rank": 16314,
+    "stage6_gt_rank": 34716,
+    "head-flat_score_same_candidate": 0.2922842502593994,
+    "head-phrase_score_same_candidate": 0.6008118987083435,
+    "stage5_score_same_candidate": 0.43648943305015564,
+    "stage6_score_same_candidate": 0.33520248532295227
+  },
+  {
+    "seed": 1,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage6_rescue",
+    "frame": "train_00781_00185",
+    "gt_local": 0,
+    "gt_box": [
+      0.034704554826021194,
+      0.5284631848335266,
+      0.11398226767778397,
+      0.924193799495697
+    ],
+    "candidate_index": 7,
+    "candidate_box": [
+      0.03620605543255806,
+      0.52880859375,
+      0.11591797322034836,
+      0.9222656488418579
+    ],
+    "candidate_iou": 0.9523051977157593,
+    "budget": 18271,
+    "head-flat_gt_rank": 44493,
+    "head-phrase_gt_rank": 30025,
+    "stage5_gt_rank": 124281,
+    "stage6_gt_rank": 15171,
+    "head-flat_score_same_candidate": 0.2222210168838501,
+    "head-phrase_score_same_candidate": 0.4610959589481354,
+    "stage5_score_same_candidate": 0.11961067467927933,
+    "stage6_score_same_candidate": 0.4562317430973053
+  },
+  {
+    "seed": 1,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage6_rescue",
+    "frame": "train_00710_00106",
+    "gt_local": 1,
+    "gt_box": [
+      0.18108868598937988,
+      0.5383318066596985,
+      0.2057601809501648,
+      0.6123462319374084
+    ],
+    "candidate_index": 4,
+    "candidate_box": [
+      0.1835937649011612,
+      0.537890613079071,
+      0.2060547024011612,
+      0.615234375
+    ],
+    "candidate_iou": 0.8533302545547485,
+    "budget": 18271,
+    "head-flat_gt_rank": 41959,
+    "head-phrase_gt_rank": 10423,
+    "stage5_gt_rank": 93157,
+    "stage6_gt_rank": 3267,
+    "head-flat_score_same_candidate": 0.23332573473453522,
+    "head-phrase_score_same_candidate": 0.5466592311859131,
+    "stage5_score_same_candidate": 0.15906257927417755,
+    "stage6_score_same_candidate": 0.6063492298126221
+  },
+  {
+    "seed": 1,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage6_rescue",
+    "frame": "train_00641_00140",
+    "gt_local": 0,
+    "gt_box": [
+      0.26842576265335083,
+      0.4744326174259186,
+      0.28421550989151,
+      0.5410456657409668
+    ],
+    "candidate_index": 14,
+    "candidate_box": [
+      0.26875001192092896,
+      0.4716796875,
+      0.2875000238418579,
+      0.5390625
+    ],
+    "candidate_iou": 0.7596979737281799,
+    "budget": 18271,
+    "head-flat_gt_rank": 30684,
+    "head-phrase_gt_rank": 21878,
+    "stage5_gt_rank": 79582,
+    "stage6_gt_rank": 13645,
+    "head-flat_score_same_candidate": 0.29384028911590576,
+    "head-phrase_score_same_candidate": 0.4926270842552185,
+    "stage5_score_same_candidate": 0.18314118683338165,
+    "stage6_score_same_candidate": 0.4690588712692261
+  },
+  {
+    "seed": 2,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_preserved",
+    "frame": "train_00710_00103",
+    "gt_local": 5,
+    "gt_box": [
+      0.32056480646133423,
+      0.5220485925674438,
+      0.3301044702529907,
+      0.5694178342819214
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.3187500238418579,
+      0.5238281488418579,
+      0.3304687738418579,
+      0.569531261920929
+    ],
+    "candidate_iou": 0.7870827913284302,
+    "budget": 18271,
+    "head-flat_gt_rank": 8553,
+    "head-phrase_gt_rank": 9511,
+    "stage5_gt_rank": 53724,
+    "stage6_gt_rank": 9023,
+    "head-flat_score_same_candidate": 0.6084534525871277,
+    "head-phrase_score_same_candidate": 0.5301917791366577,
+    "stage5_score_same_candidate": 0.27518388628959656,
+    "stage6_score_same_candidate": 0.534814178943634
+  },
+  {
+    "seed": 2,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_preserved",
+    "frame": "train_00714_00116",
+    "gt_local": 0,
+    "gt_box": [
+      0.007401445414870977,
+      0.4884953796863556,
+      0.05838917940855026,
+      0.6868541240692139
+    ],
+    "candidate_index": 5,
+    "candidate_box": [
+      0.00800781324505806,
+      0.4898437559604645,
+      0.05937500298023224,
+      0.6861328482627869
+    ],
+    "candidate_iou": 0.9594408869743347,
+    "budget": 18271,
+    "head-flat_gt_rank": 136484,
+    "head-phrase_gt_rank": 5861,
+    "stage5_gt_rank": 47256,
+    "stage6_gt_rank": 12574,
+    "head-flat_score_same_candidate": 0.09776994585990906,
+    "head-phrase_score_same_candidate": 0.5546642541885376,
+    "stage5_score_same_candidate": 0.2973690330982208,
+    "stage6_score_same_candidate": 0.4987982213497162
+  },
+  {
+    "seed": 2,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_preserved",
+    "frame": "train_00796_00048",
+    "gt_local": 0,
+    "gt_box": [
+      0.06069185212254524,
+      0.4852880835533142,
+      0.11957445740699768,
+      0.6505870223045349
+    ],
+    "candidate_index": 6,
+    "candidate_box": [
+      0.0634765625,
+      0.4886718690395355,
+      0.1044921949505806,
+      0.650390625
+    ],
+    "candidate_iou": 0.6814794540405273,
+    "budget": 18271,
+    "head-flat_gt_rank": 50609,
+    "head-phrase_gt_rank": 13690,
+    "stage5_gt_rank": 47972,
+    "stage6_gt_rank": 2627,
+    "head-flat_score_same_candidate": 0.27491888403892517,
+    "head-phrase_score_same_candidate": 0.5077270269393921,
+    "stage5_score_same_candidate": 0.29457005858421326,
+    "stage6_score_same_candidate": 0.6345474123954773
+  },
+  {
+    "seed": 2,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_lost",
+    "frame": "train_00714_00110",
+    "gt_local": 0,
+    "gt_box": [
+      0.03980332612991333,
+      0.4894822835922241,
+      0.08783047646284103,
+      0.6750118136405945
+    ],
+    "candidate_index": 6,
+    "candidate_box": [
+      0.03964843973517418,
+      0.4898437559604645,
+      0.08857422322034836,
+      0.6744140982627869
+    ],
+    "candidate_iou": 0.9766504168510437,
+    "budget": 18271,
+    "head-flat_gt_rank": 212384,
+    "head-phrase_gt_rank": 5775,
+    "stage5_gt_rank": 91426,
+    "stage6_gt_rank": 44256,
+    "head-flat_score_same_candidate": 0.0557669922709465,
+    "head-phrase_score_same_candidate": 0.5553872585296631,
+    "stage5_score_same_candidate": 0.18189404904842377,
+    "stage6_score_same_candidate": 0.31606239080429077
+  },
+  {
+    "seed": 2,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_lost",
+    "frame": "train_00608_00069",
+    "gt_local": 0,
+    "gt_box": [
+      0.37763822078704834,
+      0.4880019724369049,
+      0.3993490934371948,
+      0.5837273001670837
+    ],
+    "candidate_index": 14,
+    "candidate_box": [
+      0.37773439288139343,
+      0.486328125,
+      0.39960938692092896,
+      0.5835937857627869
+    ],
+    "candidate_iou": 0.9656088948249817,
+    "budget": 18271,
+    "head-flat_gt_rank": 94916,
+    "head-phrase_gt_rank": 10012,
+    "stage5_gt_rank": 58469,
+    "stage6_gt_rank": 29762,
+    "head-flat_score_same_candidate": 0.0664789006114006,
+    "head-phrase_score_same_candidate": 0.5272140502929688,
+    "stage5_score_same_candidate": 0.2597900927066803,
+    "stage6_score_same_candidate": 0.38214609026908875
+  },
+  {
+    "seed": 2,
+    "class": "Ped-MovTow-LftPav",
+    "category": "phrase_help_lost",
+    "frame": "train_00796_00013",
+    "gt_local": 0,
+    "gt_box": [
+      0.7250126600265503,
+      0.4894822835922241,
+      0.7467235922813416,
+      0.5664572715759277
+    ],
+    "candidate_index": 5,
+    "candidate_box": [
+      0.7269531488418579,
+      0.49042969942092896,
+      0.7457031607627869,
+      0.564257800579071
+    ],
+    "candidate_iou": 0.8283143043518066,
+    "budget": 18271,
+    "head-flat_gt_rank": 35054,
+    "head-phrase_gt_rank": 17412,
+    "stage5_gt_rank": 63225,
+    "stage6_gt_rank": 54353,
+    "head-flat_score_same_candidate": 0.3609730303287506,
+    "head-phrase_score_same_candidate": 0.49013280868530273,
+    "stage5_score_same_candidate": 0.24558869004249573,
+    "stage6_score_same_candidate": 0.2798815667629242
+  },
+  {
+    "seed": 2,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage5_hit_lost",
+    "frame": "train_00660_00170",
+    "gt_local": 0,
+    "gt_box": [
+      0.3301044702529907,
+      0.46036988496780396,
+      0.34885478019714355,
+      0.5166208744049072
+    ],
+    "candidate_index": 16,
+    "candidate_box": [
+      0.33125001192092896,
+      0.4634765684604645,
+      0.34453126788139343,
+      0.516796886920929
+    ],
+    "candidate_iou": 0.6677221655845642,
+    "budget": 18271,
+    "head-flat_gt_rank": 53605,
+    "head-phrase_gt_rank": 4147,
+    "stage5_gt_rank": 17742,
+    "stage6_gt_rank": 29617,
+    "head-flat_score_same_candidate": 0.2618153393268585,
+    "head-phrase_score_same_candidate": 0.5688077211380005,
+    "stage5_score_same_candidate": 0.44913122057914734,
+    "stage6_score_same_candidate": 0.38300397992134094
+  },
+  {
+    "seed": 2,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage5_hit_lost",
+    "frame": "train_00794_00040",
+    "gt_local": 13,
+    "gt_box": [
+      0.0013158124638721347,
+      0.5412923693656921,
+      0.022368812933564186,
+      0.650833785533905
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      6.103515625e-05,
+      0.5361328125,
+      0.02366943471133709,
+      0.6480469107627869
+    ],
+    "candidate_iou": 0.832166850566864,
+    "budget": 18271,
+    "head-flat_gt_rank": 53095,
+    "head-phrase_gt_rank": 1081,
+    "stage5_gt_rank": 14084,
+    "stage6_gt_rank": 50254,
+    "head-flat_score_same_candidate": 0.26398998498916626,
+    "head-phrase_score_same_candidate": 0.6139109134674072,
+    "stage5_score_same_candidate": 0.47836247086524963,
+    "stage6_score_same_candidate": 0.2935701012611389
+  },
+  {
+    "seed": 2,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage5_hit_lost",
+    "frame": "train_00714_00076",
+    "gt_local": 0,
+    "gt_box": [
+      0.1579747200012207,
+      0.48763158917427063,
+      0.19399620592594147,
+      0.5821239948272705
+    ],
+    "candidate_index": 12,
+    "candidate_box": [
+      0.16132813692092896,
+      0.48457032442092896,
+      0.1953125149011612,
+      0.5806640982627869
+    ],
+    "candidate_iou": 0.8371850848197937,
+    "budget": 18271,
+    "head-flat_gt_rank": 93492,
+    "head-phrase_gt_rank": 5029,
+    "stage5_gt_rank": 16794,
+    "stage6_gt_rank": 19515,
+    "head-flat_score_same_candidate": 0.15153320133686066,
+    "head-phrase_score_same_candidate": 0.561264157295227,
+    "stage5_score_same_candidate": 0.45660650730133057,
+    "stage6_score_same_candidate": 0.44381919503211975
+  },
+  {
+    "seed": 2,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage6_rescue",
+    "frame": "train_00786_00018",
+    "gt_local": 0,
+    "gt_box": [
+      0.006579062435775995,
+      0.5563419461250305,
+      0.036842748522758484,
+      0.6377578973770142
+    ],
+    "candidate_index": 12,
+    "candidate_box": [
+      0.0087890625,
+      0.556640625,
+      0.03688964992761612,
+      0.643359363079071
+    ],
+    "candidate_iou": 0.8668584227561951,
+    "budget": 18271,
+    "head-flat_gt_rank": 32885,
+    "head-phrase_gt_rank": 25756,
+    "stage5_gt_rank": 136422,
+    "stage6_gt_rank": 13129,
+    "head-flat_score_same_candidate": 0.37540555000305176,
+    "head-phrase_score_same_candidate": 0.4564170241355896,
+    "stage5_score_same_candidate": 0.12368135899305344,
+    "stage6_score_same_candidate": 0.4936094880104065
+  },
+  {
+    "seed": 2,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage6_rescue",
+    "frame": "train_00794_00032",
+    "gt_local": 13,
+    "gt_box": [
+      0.0,
+      0.5477069616317749,
+      0.025493867695331573,
+      0.6444191932678223
+    ],
+    "candidate_index": 6,
+    "candidate_box": [
+      0.0,
+      0.5484375357627869,
+      0.02435302920639515,
+      0.645703136920929
+    ],
+    "candidate_iou": 0.936161994934082,
+    "budget": 18271,
+    "head-flat_gt_rank": 37157,
+    "head-phrase_gt_rank": 38822,
+    "stage5_gt_rank": 138905,
+    "stage6_gt_rank": 17098,
+    "head-flat_score_same_candidate": 0.3476039171218872,
+    "head-phrase_score_same_candidate": 0.410343736410141,
+    "stage5_score_same_candidate": 0.12138611078262329,
+    "stage6_score_same_candidate": 0.46151548624038696
+  },
+  {
+    "seed": 2,
+    "class": "Ped-MovTow-LftPav",
+    "category": "stage6_rescue",
+    "frame": "train_00730_00175",
+    "gt_local": 0,
+    "gt_box": [
+      0.01567975990474224,
+      0.44828078150749207,
+      0.040899258106946945,
+      0.5359467267990112
+    ],
+    "candidate_index": 3,
+    "candidate_box": [
+      0.012780762277543545,
+      0.45000001788139343,
+      0.04277344048023224,
+      0.5355468988418579
+    ],
+    "candidate_iou": 0.8236987590789795,
+    "budget": 18271,
+    "head-flat_gt_rank": 76120,
+    "head-phrase_gt_rank": 42562,
+    "stage5_gt_rank": 87998,
+    "stage6_gt_rank": 4470,
+    "head-flat_score_same_candidate": 0.1879987120628357,
+    "head-phrase_score_same_candidate": 0.3980872631072998,
+    "stage5_score_same_candidate": 0.18823464214801788,
+    "stage6_score_same_candidate": 0.5963931083679199
+  },
+  {
+    "seed": 0,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00792_00183",
+    "gt_local": 0,
+    "gt_box": [
+      0.1884901374578476,
+      0.45518890023231506,
+      0.2687546908855438,
+      0.5602893829345703
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.19023437798023224,
+      0.44941407442092896,
+      0.2679687738418579,
+      0.5595703125
+    ],
+    "candidate_iou": 0.9132536053657532,
+    "budget": 452,
+    "head-flat_gt_rank": 113,
+    "head-phrase_gt_rank": 224,
+    "stage5_gt_rank": 929,
+    "stage6_gt_rank": 28,
+    "head-flat_score_same_candidate": 0.9035444855690002,
+    "head-phrase_score_same_candidate": 0.6986075043678284,
+    "stage5_score_same_candidate": 0.5089902281761169,
+    "stage6_score_same_candidate": 0.7876333594322205
+  },
+  {
+    "seed": 0,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00704_00142",
+    "gt_local": 0,
+    "gt_box": [
+      0.8343896269798279,
+      0.38339486718177795,
+      1.0,
+      0.6646497845649719
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.8343750238418579,
+      0.38671875,
+      1.0,
+      0.6644531488418579
+    ],
+    "candidate_iou": 0.9873968362808228,
+    "budget": 452,
+    "head-flat_gt_rank": 29612,
+    "head-phrase_gt_rank": 350,
+    "stage5_gt_rank": 578,
+    "stage6_gt_rank": 3,
+    "head-flat_score_same_candidate": 0.005635860376060009,
+    "head-phrase_score_same_candidate": 0.6736240386962891,
+    "stage5_score_same_candidate": 0.5760924816131592,
+    "stage6_score_same_candidate": 0.8538458347320557
+  },
+  {
+    "seed": 0,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00621_00167",
+    "gt_local": 0,
+    "gt_box": [
+      0.525502622127533,
+      0.4608633518218994,
+      0.582411527633667,
+      0.5131669044494629
+    ],
+    "candidate_index": 7,
+    "candidate_box": [
+      0.5250000357627869,
+      0.4593749940395355,
+      0.5796875357627869,
+      0.513867199420929
+    ],
+    "candidate_iou": 0.9076215028762817,
+    "budget": 452,
+    "head-flat_gt_rank": 1768,
+    "head-phrase_gt_rank": 411,
+    "stage5_gt_rank": 1570,
+    "stage6_gt_rank": 2391,
+    "head-flat_score_same_candidate": 0.28357723355293274,
+    "head-phrase_score_same_candidate": 0.6651309728622437,
+    "stage5_score_same_candidate": 0.4097784161567688,
+    "stage6_score_same_candidate": 0.2972872257232666
+  },
+  {
+    "seed": 0,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00704_00152",
+    "gt_local": 0,
+    "gt_box": [
+      0.5253381133079529,
+      0.3565029501914978,
+      0.7424471974372864,
+      0.6639096736907959
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.5230469107627869,
+      0.3603515625,
+      0.7425781488418579,
+      0.666796863079071
+    ],
+    "candidate_iou": 0.9676306843757629,
+    "budget": 452,
+    "head-flat_gt_rank": 63798,
+    "head-phrase_gt_rank": 210,
+    "stage5_gt_rank": 536,
+    "stage6_gt_rank": 557,
+    "head-flat_score_same_candidate": 0.0014437278732657433,
+    "head-phrase_score_same_candidate": 0.7010811567306519,
+    "stage5_score_same_candidate": 0.5860198140144348,
+    "stage6_score_same_candidate": 0.49017608165740967
+  },
+  {
+    "seed": 0,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00704_00157",
+    "gt_local": 0,
+    "gt_box": [
+      0.4881654679775238,
+      0.3558845520019531,
+      0.7319208979606628,
+      0.6842640042304993
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.48789066076278687,
+      0.35566407442092896,
+      0.7292969226837158,
+      0.6796875
+    ],
+    "candidate_iou": 0.9737186431884766,
+    "budget": 452,
+    "head-flat_gt_rank": 64171,
+    "head-phrase_gt_rank": 95,
+    "stage5_gt_rank": 360,
+    "stage6_gt_rank": 515,
+    "head-flat_score_same_candidate": 0.001427983632311225,
+    "head-phrase_score_same_candidate": 0.7330184578895569,
+    "stage5_score_same_candidate": 0.630190908908844,
+    "stage6_score_same_candidate": 0.505497395992279
+  },
+  {
+    "seed": 0,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00621_00177",
+    "gt_local": 0,
+    "gt_box": [
+      0.5266539454460144,
+      0.45173487067222595,
+      0.577312707901001,
+      0.4946632981300354
+    ],
+    "candidate_index": 8,
+    "candidate_box": [
+      0.544140636920929,
+      0.4535156190395355,
+      0.5761719346046448,
+      0.49101564288139343
+    ],
+    "candidate_iou": 0.552340030670166,
+    "budget": 452,
+    "head-flat_gt_rank": 410,
+    "head-phrase_gt_rank": 563,
+    "stage5_gt_rank": 381,
+    "stage6_gt_rank": 537,
+    "head-flat_score_same_candidate": 0.748141884803772,
+    "head-phrase_score_same_candidate": 0.6444572806358337,
+    "stage5_score_same_candidate": 0.6253175735473633,
+    "stage6_score_same_candidate": 0.49737709760665894
+  },
+  {
+    "seed": 0,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00792_00148",
+    "gt_local": 0,
+    "gt_box": [
+      0.30744752287864685,
+      0.4005419909954071,
+      0.42858386039733887,
+      0.5996395349502563
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.30742189288139343,
+      0.4019531309604645,
+      0.42695313692092896,
+      0.6005859375
+    ],
+    "candidate_iou": 0.9747689962387085,
+    "budget": 452,
+    "head-flat_gt_rank": 606,
+    "head-phrase_gt_rank": 292,
+    "stage5_gt_rank": 74,
+    "stage6_gt_rank": 654,
+    "head-flat_score_same_candidate": 0.6326676607131958,
+    "head-phrase_score_same_candidate": 0.6839448809623718,
+    "stage5_score_same_candidate": 0.75099116563797,
+    "stage6_score_same_candidate": 0.4667035937309265
+  },
+  {
+    "seed": 0,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "stage6_rescue",
+    "frame": "train_00792_00183",
+    "gt_local": 0,
+    "gt_box": [
+      0.1884901374578476,
+      0.45518890023231506,
+      0.2687546908855438,
+      0.5602893829345703
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.19023437798023224,
+      0.44941407442092896,
+      0.2679687738418579,
+      0.5595703125
+    ],
+    "candidate_iou": 0.9132536053657532,
+    "budget": 452,
+    "head-flat_gt_rank": 113,
+    "head-phrase_gt_rank": 224,
+    "stage5_gt_rank": 929,
+    "stage6_gt_rank": 28,
+    "head-flat_score_same_candidate": 0.9035444855690002,
+    "head-phrase_score_same_candidate": 0.6986075043678284,
+    "stage5_score_same_candidate": 0.5089902281761169,
+    "stage6_score_same_candidate": 0.7876333594322205
+  },
+  {
+    "seed": 0,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "stage6_rescue",
+    "frame": "train_00704_00143",
+    "gt_local": 0,
+    "gt_box": [
+      0.7851996421813965,
+      0.38166746497154236,
+      0.9664555788040161,
+      0.667857825756073
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.7855468988418579,
+      0.3873046934604645,
+      0.9734375476837158,
+      0.666210949420929
+    ],
+    "candidate_iou": 0.9374880194664001,
+    "budget": 452,
+    "head-flat_gt_rank": 116918,
+    "head-phrase_gt_rank": 1042,
+    "stage5_gt_rank": 1618,
+    "stage6_gt_rank": 177,
+    "head-flat_score_same_candidate": 0.0004179702664259821,
+    "head-phrase_score_same_candidate": 0.595788836479187,
+    "stage5_score_same_candidate": 0.40472835302352905,
+    "stage6_score_same_candidate": 0.6506699919700623
+  },
+  {
+    "seed": 0,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "stage6_rescue",
+    "frame": "train_00621_00178",
+    "gt_local": 0,
+    "gt_box": [
+      0.5261605381965637,
+      0.4487743079662323,
+      0.5778061747550964,
+      0.491702675819397
+    ],
+    "candidate_index": 8,
+    "candidate_box": [
+      0.5242187976837158,
+      0.45000001788139343,
+      0.5757812857627869,
+      0.49335938692092896
+    ],
+    "candidate_iou": 0.8681977391242981,
+    "budget": 452,
+    "head-flat_gt_rank": 368,
+    "head-phrase_gt_rank": 542,
+    "stage5_gt_rank": 643,
+    "stage6_gt_rank": 229,
+    "head-flat_score_same_candidate": 0.769946813583374,
+    "head-phrase_score_same_candidate": 0.6472219228744507,
+    "stage5_score_same_candidate": 0.5630737543106079,
+    "stage6_score_same_candidate": 0.6212124228477478
+  },
+  {
+    "seed": 1,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00621_00162",
+    "gt_local": 0,
+    "gt_box": [
+      0.5271474123001099,
+      0.46357718110084534,
+      0.5860300064086914,
+      0.5242690443992615
+    ],
+    "candidate_index": 10,
+    "candidate_box": [
+      0.5281250476837158,
+      0.462890625,
+      0.5828125476837158,
+      0.5191406607627869
+    ],
+    "candidate_iou": 0.8414360284805298,
+    "budget": 452,
+    "head-flat_gt_rank": 1659,
+    "head-phrase_gt_rank": 325,
+    "stage5_gt_rank": 1493,
+    "stage6_gt_rank": 261,
+    "head-flat_score_same_candidate": 0.17267848551273346,
+    "head-phrase_score_same_candidate": 0.6033669114112854,
+    "stage5_score_same_candidate": 0.4339154362678528,
+    "stage6_score_same_candidate": 0.6648881435394287
+  },
+  {
+    "seed": 1,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00704_00161",
+    "gt_local": 0,
+    "gt_box": [
+      0.4825741946697235,
+      0.34531843662261963,
+      0.7387192249298096,
+      0.688910186290741
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.4828125238418579,
+      0.3451171815395355,
+      0.737500011920929,
+      0.6849609613418579
+    ],
+    "candidate_iou": 0.9823089241981506,
+    "budget": 452,
+    "head-flat_gt_rank": 6494,
+    "head-phrase_gt_rank": 396,
+    "stage5_gt_rank": 1827,
+    "stage6_gt_rank": 5074,
+    "head-flat_score_same_candidate": 0.031117279082536697,
+    "head-phrase_score_same_candidate": 0.5913092494010925,
+    "stage5_score_same_candidate": 0.3971555233001709,
+    "stage6_score_same_candidate": 0.2567045986652374
+  },
+  {
+    "seed": 1,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00704_00150",
+    "gt_local": 0,
+    "gt_box": [
+      0.5610746741294861,
+      0.3619292080402374,
+      0.7702910900115967,
+      0.6584833860397339
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.55859375,
+      0.3626953065395355,
+      0.7679687738418579,
+      0.660351574420929
+    ],
+    "candidate_iou": 0.9687793254852295,
+    "budget": 452,
+    "head-flat_gt_rank": 12195,
+    "head-phrase_gt_rank": 532,
+    "stage5_gt_rank": 405,
+    "stage6_gt_rank": 814,
+    "head-flat_score_same_candidate": 0.012123002670705318,
+    "head-phrase_score_same_candidate": 0.5705170035362244,
+    "stage5_score_same_candidate": 0.6197051405906677,
+    "stage6_score_same_candidate": 0.524764895439148
+  },
+  {
+    "seed": 1,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00792_00143",
+    "gt_local": 0,
+    "gt_box": [
+      0.31266987323760986,
+      0.3949905037879944,
+      0.4443606436252594,
+      0.6148954033851624
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.31367188692092896,
+      0.3949218690395355,
+      0.4433594048023224,
+      0.6128906607627869
+    ],
+    "candidate_iou": 0.9755107164382935,
+    "budget": 452,
+    "head-flat_gt_rank": 5852,
+    "head-phrase_gt_rank": 841,
+    "stage5_gt_rank": 268,
+    "stage6_gt_rank": 538,
+    "head-flat_score_same_candidate": 0.03607609122991562,
+    "head-phrase_score_same_candidate": 0.5361741781234741,
+    "stage5_score_same_candidate": 0.6657387614250183,
+    "stage6_score_same_candidate": 0.5881378054618835
+  },
+  {
+    "seed": 1,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "stage6_rescue",
+    "frame": "train_00621_00162",
+    "gt_local": 0,
+    "gt_box": [
+      0.5271474123001099,
+      0.46357718110084534,
+      0.5860300064086914,
+      0.5242690443992615
+    ],
+    "candidate_index": 10,
+    "candidate_box": [
+      0.5281250476837158,
+      0.462890625,
+      0.5828125476837158,
+      0.5191406607627869
+    ],
+    "candidate_iou": 0.8414360284805298,
+    "budget": 452,
+    "head-flat_gt_rank": 1659,
+    "head-phrase_gt_rank": 325,
+    "stage5_gt_rank": 1493,
+    "stage6_gt_rank": 261,
+    "head-flat_score_same_candidate": 0.17267848551273346,
+    "head-phrase_score_same_candidate": 0.6033669114112854,
+    "stage5_score_same_candidate": 0.4339154362678528,
+    "stage6_score_same_candidate": 0.6648881435394287
+  },
+  {
+    "seed": 1,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "stage6_rescue",
+    "frame": "train_00704_00174",
+    "gt_local": 0,
+    "gt_box": [
+      0.4513242542743683,
+      0.3349149525165558,
+      0.732086181640625,
+      0.6919116377830505
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.4492187798023224,
+      0.3310546875,
+      0.7273437976837158,
+      0.681445300579071
+    ],
+    "candidate_iou": 0.9374212622642517,
+    "budget": 452,
+    "head-flat_gt_rank": 1077,
+    "head-phrase_gt_rank": 732,
+    "stage5_gt_rank": 1447,
+    "stage6_gt_rank": 420,
+    "head-flat_score_same_candidate": 0.2771114408969879,
+    "head-phrase_score_same_candidate": 0.5474460124969482,
+    "stage5_score_same_candidate": 0.43888959288597107,
+    "stage6_score_same_candidate": 0.6137859225273132
+  },
+  {
+    "seed": 2,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00621_00185",
+    "gt_local": 0,
+    "gt_box": [
+      0.523857831954956,
+      0.4665377736091614,
+      0.570898175239563,
+      0.5242690443992615
+    ],
+    "candidate_index": 4,
+    "candidate_box": [
+      0.5218750238418579,
+      0.4649414122104645,
+      0.5718750357627869,
+      0.524707019329071
+    ],
+    "candidate_iou": 0.9087828993797302,
+    "budget": 452,
+    "head-flat_gt_rank": 3602,
+    "head-phrase_gt_rank": 396,
+    "stage5_gt_rank": 2902,
+    "stage6_gt_rank": 387,
+    "head-flat_score_same_candidate": 0.0697963684797287,
+    "head-phrase_score_same_candidate": 0.5861744284629822,
+    "stage5_score_same_candidate": 0.3051554560661316,
+    "stage6_score_same_candidate": 0.6171683669090271
+  },
+  {
+    "seed": 2,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00792_00149",
+    "gt_local": 0,
+    "gt_box": [
+      0.30658429861068726,
+      0.40189847350120544,
+      0.42566534876823425,
+      0.5968031883239746
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.3062500059604645,
+      0.4019531309604645,
+      0.42343753576278687,
+      0.5982422232627869
+    ],
+    "candidate_iou": 0.9712339043617249,
+    "budget": 452,
+    "head-flat_gt_rank": 155,
+    "head-phrase_gt_rank": 322,
+    "stage5_gt_rank": 1526,
+    "stage6_gt_rank": 211,
+    "head-flat_score_same_candidate": 0.8876550197601318,
+    "head-phrase_score_same_candidate": 0.5995790362358093,
+    "stage5_score_same_candidate": 0.39023837447166443,
+    "stage6_score_same_candidate": 0.6631309986114502
+  },
+  {
+    "seed": 2,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "phrase_help_preserved",
+    "frame": "train_00704_00142",
+    "gt_local": 0,
+    "gt_box": [
+      0.8343896269798279,
+      0.38339486718177795,
+      1.0,
+      0.6646497845649719
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.8343750238418579,
+      0.38671875,
+      1.0,
+      0.6644531488418579
+    ],
+    "candidate_iou": 0.9873968362808228,
+    "budget": 452,
+    "head-flat_gt_rank": 1868,
+    "head-phrase_gt_rank": 209,
+    "stage5_gt_rank": 555,
+    "stage6_gt_rank": 3,
+    "head-flat_score_same_candidate": 0.22848650813102722,
+    "head-phrase_score_same_candidate": 0.6225510835647583,
+    "stage5_score_same_candidate": 0.5378519892692566,
+    "stage6_score_same_candidate": 0.824295699596405
+  },
+  {
+    "seed": 2,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00704_00185",
+    "gt_local": 0,
+    "gt_box": [
+      0.41920948028564453,
+      0.35286420583724976,
+      0.6803157329559326,
+      0.6877793073654175
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.41953128576278687,
+      0.3539062440395355,
+      0.6742187738418579,
+      0.6832031607627869
+    ],
+    "candidate_iou": 0.9590544104576111,
+    "budget": 452,
+    "head-flat_gt_rank": 2454,
+    "head-phrase_gt_rank": 393,
+    "stage5_gt_rank": 14986,
+    "stage6_gt_rank": 5348,
+    "head-flat_score_same_candidate": 0.1644258052110672,
+    "head-phrase_score_same_candidate": 0.5864223837852478,
+    "stage5_score_same_candidate": 0.14535526931285858,
+    "stage6_score_same_candidate": 0.2530266046524048
+  },
+  {
+    "seed": 2,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "phrase_help_lost",
+    "frame": "train_00621_00189",
+    "gt_local": 0,
+    "gt_box": [
+      0.523857831954956,
+      0.45888960361480713,
+      0.570898175239563,
+      0.518101155757904
+    ],
+    "candidate_index": 4,
+    "candidate_box": [
+      0.5218750238418579,
+      0.4593749940395355,
+      0.5703125,
+      0.519726574420929
+    ],
+    "candidate_iou": 0.9153160452842712,
+    "budget": 452,
+    "head-flat_gt_rank": 364,
+    "head-phrase_gt_rank": 245,
+    "stage5_gt_rank": 3032,
+    "stage6_gt_rank": 468,
+    "head-flat_score_same_candidate": 0.7846127152442932,
+    "head-phrase_score_same_candidate": 0.6159062385559082,
+    "stage5_score_same_candidate": 0.2994581460952759,
+    "stage6_score_same_candidate": 0.5990171432495117
+  },
+  {
+    "seed": 2,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00704_00157",
+    "gt_local": 0,
+    "gt_box": [
+      0.4881654679775238,
+      0.3558845520019531,
+      0.7319208979606628,
+      0.6842640042304993
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.48789066076278687,
+      0.35566407442092896,
+      0.7292969226837158,
+      0.6796875
+    ],
+    "candidate_iou": 0.9737186431884766,
+    "budget": 452,
+    "head-flat_gt_rank": 3116,
+    "head-phrase_gt_rank": 29,
+    "stage5_gt_rank": 442,
+    "stage6_gt_rank": 3727,
+    "head-flat_score_same_candidate": 0.11953692138195038,
+    "head-phrase_score_same_candidate": 0.6977997422218323,
+    "stage5_score_same_candidate": 0.5701033473014832,
+    "stage6_score_same_candidate": 0.29532697796821594
+  },
+  {
+    "seed": 2,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "stage5_hit_lost",
+    "frame": "train_00792_00159",
+    "gt_local": 0,
+    "gt_box": [
+      0.2854841351509094,
+      0.4088064730167389,
+      0.39309874176979065,
+      0.5743871927261353
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.28593751788139343,
+      0.41132813692092896,
+      0.39531251788139343,
+      0.575390636920929
+    ],
+    "candidate_iou": 0.9553831815719604,
+    "budget": 452,
+    "head-flat_gt_rank": 201,
+    "head-phrase_gt_rank": 981,
+    "stage5_gt_rank": 226,
+    "stage6_gt_rank": 476,
+    "head-flat_score_same_candidate": 0.8719962239265442,
+    "head-phrase_score_same_candidate": 0.5217309594154358,
+    "stage5_score_same_candidate": 0.6439726948738098,
+    "stage6_score_same_candidate": 0.5971335768699646
+  },
+  {
+    "seed": 2,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "stage6_rescue",
+    "frame": "train_00621_00185",
+    "gt_local": 0,
+    "gt_box": [
+      0.523857831954956,
+      0.4665377736091614,
+      0.570898175239563,
+      0.5242690443992615
+    ],
+    "candidate_index": 4,
+    "candidate_box": [
+      0.5218750238418579,
+      0.4649414122104645,
+      0.5718750357627869,
+      0.524707019329071
+    ],
+    "candidate_iou": 0.9087828993797302,
+    "budget": 452,
+    "head-flat_gt_rank": 3602,
+    "head-phrase_gt_rank": 396,
+    "stage5_gt_rank": 2902,
+    "stage6_gt_rank": 387,
+    "head-flat_score_same_candidate": 0.0697963684797287,
+    "head-phrase_score_same_candidate": 0.5861744284629822,
+    "stage5_score_same_candidate": 0.3051554560661316,
+    "stage6_score_same_candidate": 0.6171683669090271
+  },
+  {
+    "seed": 2,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "stage6_rescue",
+    "frame": "train_00792_00149",
+    "gt_local": 0,
+    "gt_box": [
+      0.30658429861068726,
+      0.40189847350120544,
+      0.42566534876823425,
+      0.5968031883239746
+    ],
+    "candidate_index": 1,
+    "candidate_box": [
+      0.3062500059604645,
+      0.4019531309604645,
+      0.42343753576278687,
+      0.5982422232627869
+    ],
+    "candidate_iou": 0.9712339043617249,
+    "budget": 452,
+    "head-flat_gt_rank": 155,
+    "head-phrase_gt_rank": 322,
+    "stage5_gt_rank": 1526,
+    "stage6_gt_rank": 211,
+    "head-flat_score_same_candidate": 0.8876550197601318,
+    "head-phrase_score_same_candidate": 0.5995790362358093,
+    "stage5_score_same_candidate": 0.39023837447166443,
+    "stage6_score_same_candidate": 0.6631309986114502
+  },
+  {
+    "seed": 2,
+    "class": "Bus-MovAway-OutgoLane",
+    "category": "stage6_rescue",
+    "frame": "train_00704_00143",
+    "gt_local": 0,
+    "gt_box": [
+      0.7851996421813965,
+      0.38166746497154236,
+      0.9664555788040161,
+      0.667857825756073
+    ],
+    "candidate_index": 0,
+    "candidate_box": [
+      0.7855468988418579,
+      0.3873046934604645,
+      0.9734375476837158,
+      0.666210949420929
+    ],
+    "candidate_iou": 0.9374880194664001,
+    "budget": 452,
+    "head-flat_gt_rank": 7643,
+    "head-phrase_gt_rank": 755,
+    "stage5_gt_rank": 1709,
+    "stage6_gt_rank": 158,
+    "head-flat_score_same_candidate": 0.027760719880461693,
+    "head-phrase_score_same_candidate": 0.5446880459785461,
+    "stage5_score_same_candidate": 0.3741316497325897,
+    "stage6_score_same_candidate": 0.679575502872467
+  }
+]

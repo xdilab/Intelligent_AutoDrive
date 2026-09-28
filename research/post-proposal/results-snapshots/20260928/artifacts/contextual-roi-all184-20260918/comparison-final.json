@@ -1,0 +1,35 @@
+{
+  "recorded_utc": "2026-09-18T23:50:00+00:00",
+  "question": "Does broadening the auxiliary contrastive alignment from 86 triplet prototypes to all 184 phrase prototypes improve detector AP?",
+  "design": "Paired by seed. 3 seeds x 2 fusions (mlp, attention), contrastive condition only. Same immutable cache, same YOLO candidates, same official validation protocol (36717 frames, AP@0.5). Fresh head initialization in both studies.",
+  "metric": "official validation detector AP@0.5",
+  "paired_deltas_all184_minus_86triplet": {
+    "mlp-seed0": {"triplet": -0.05, "tail47": 0.34, "deep28": 0.15},
+    "mlp-seed1": {"triplet": 0.59, "tail47": 1.13, "deep28": 1.04},
+    "mlp-seed2": {"triplet": -0.12, "tail47": -0.32, "deep28": -0.44},
+    "attention-seed0": {"triplet": -0.27, "tail47": -0.47, "deep28": -1.04},
+    "attention-seed1": {"triplet": 0.14, "tail47": 0.62, "deep28": 0.26},
+    "attention-seed2": {"triplet": 0.71, "tail47": 0.71, "deep28": -0.07}
+  },
+  "paired_test_n6": {
+    "critical_abs_t_p05": 2.571,
+    "triplet": {"mean": 0.166, "sd": 0.397, "t": 1.03, "ci95": [-0.25, 0.58], "significant": false},
+    "duplex": {"mean": 0.305, "sd": 0.427, "t": 1.75, "ci95": [-0.14, 0.75], "significant": false},
+    "common39": {"mean": -0.037, "sd": 0.439, "t": -0.21, "ci95": [-0.50, 0.42], "significant": false},
+    "tail47": {"mean": 0.335, "sd": 0.624, "t": 1.32, "ci95": [-0.32, 0.99], "significant": false},
+    "deep28": {"mean": -0.016, "sd": 0.702, "t": -0.05, "ci95": [-0.75, 0.72], "significant": false}
+  },
+  "condition_means": {
+    "86-triplet contrastive (n=6)": {"action": 21.81, "loc": 26.53, "duplex": 18.53, "triplet": 11.98, "common39": 19.69, "tail47": 5.58, "deep28": 3.91},
+    "all184 contrastive (n=6)": {"action": 21.77, "loc": 26.77, "duplex": 18.84, "triplet": 12.15, "common39": 19.66, "tail47": 5.92, "deep28": 3.90}
+  },
+  "verdict": "No significant effect on any metric at n=6 paired seeds. Every 95 percent confidence interval contains zero. Direction is consistently positive for triplet, duplex and tail47 and flat for common39 and deep28, but the effect is smaller than seed-to-seed variance. Not evidence that all184 contrastive helps; not evidence that it hurts.",
+  "incidental_findings": [
+    "attention-contrastive-all184-seed2 reaches triplet 12.49, the best single-run triplet across both studies (parent best was 12.42).",
+    "All six all184 runs selected epoch 1. Across both studies, 18 of 18 runs never selected epoch 3 and 14 of 18 selected epoch 1. The 3-epoch budget is not binding.",
+    "Interim reporting at n=2 suggested a roughly 2-sd MLP tail47 gain. That did not survive the third seed and was a single-seed artifact; the n=3 MLP tail47 gain is +0.38 and not significant."
+  ],
+  "implementation_note": "The phrase-similarity matrix (normalized visual_roi against normalized text_adapter(phrase_bank)) is used twice in model.py: as phrase_scores concatenated into the classifier input (line 73-74) and, with temperature 0.07, as the contrastive target (line 76). The contrastive target is adapted text, not the frozen bank ('contrastive_target': 'adapted_text'). The two losses are therefore coupled more tightly than an auxiliary-loss framing implies. Not reviewed with the user.",
+  "provenance": {"parent_study": "artifacts/contextual-roi-20260917", "cache_integrity": "artifacts/contextual-roi-20260917/cache-integrity-verification.json"},
+  "workbook_status": "Not written to the results workbook. Pending user decision."
+}

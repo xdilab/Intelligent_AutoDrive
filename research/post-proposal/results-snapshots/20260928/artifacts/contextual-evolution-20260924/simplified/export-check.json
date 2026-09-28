@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "method": "Native draw.io2x; embedded editableXML; compared against reviewedpreview",
+  "exports": [
+    {
+      "file": "01-mlp.png",
+      "size": [
+        5042,
+        2162
+      ],
+      "mean_render_difference": [
+        2.587530287994301,
+        2.599368441265844,
+        2.7435381947549184
+      ],
+      "sha256": "d39571fff1c69ae5de4e5eea24c468356c3e2a7027c287a314756cbe760a9cc6"
+    },
+    {
+      "file": "02-attention.png",
+      "size": [
+        5042,
+        2162
+      ],
+      "mean_render_difference": [
+        2.616699477133572,
+        2.6253182713012735,
+        2.759455057966787
+      ],
+      "sha256": "c142ed36e2107363fea47be3350e210ad1cf20a60ffad7a7828c341f8fb2c71e"
+    },
+    {
+      "file": "03-triplet-contrastive.png",
+      "size": [
+        5042,
+        2162
+      ],
+      "mean_render_difference": [
+        2.8209944723036173,
+        2.842651945687561,
+        2.8065038749576736
+      ],
+      "sha256": "fec540c1d4d50945d6919458f5c86edc0a0b6594433e46cf434e1d642d0a062b"
+    },
+    {
+      "file": "04-all184-contrastive.png",
+      "size": [
+        5042,
+        2162
+      ],
+      "mean_render_difference": [
+        2.7997481680619054,
+        2.817710982540336,
+        2.7823321132628065
+      ],
+      "sha256": "41ebb505299cb8c84391ab687f4465cec66fc59d4df7c8360fae5945950a5246"
+    },
+    {
+      "file": "05-expert-blend.png",
+      "size": [
+        5042,
+        2162
+      ],
+      "mean_render_difference": [
+        3.1560848635519445,
+        3.0995102616384322,
+        3.0878117299740104
+      ],
+      "sha256": "00668dd577084c01ba70a7b7ecce4c6a446d713eb7e28b1d12419565ac8f4ad7"
+    },
+    {
+      "file": "06-dcb-blend.png",
+      "size": [
+        5042,
+        2162
+      ],
+      "mean_render_difference": [
+        3.146226332122058,
+        3.091139561507532,
+        3.080122280676809
+      ],
+      "sha256": "6ccf77411443eaa11d77bf764270aa3d82dba689f7e2bdba28222abf2f87de8b"
+    }
+  ]
+}

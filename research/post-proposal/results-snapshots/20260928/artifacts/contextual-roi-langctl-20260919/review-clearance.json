@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "time": 1789860558.787287,
+  "reviewer": "language_control_review",
+  "code_sha256": {
+    "cache_context.py": "7919478981274b08ab85764301251a3a15839dc89290d6ad4c6070638eb2e050",
+    "pipeline.py": "83b2623cc881576365d715a37a7a0cc699279ac8c63162c3d850dd5f651b52ef",
+    "preflight.py": "10d5d6d394bc00f340a8e1ca32f8da94668955325b7abf62ca20b0122edae4b6",
+    "test_controls.py": "de99a3f88c45bd0a5450942e79a46787d98f4b869e17953077d3cd9ce737fb5f",
+    "model.py": "9ba3c55a17b46b70bb2d443b8b0b9c6eba0fd436f1cdf16c77f9cf70de58a077",
+    "monitor_local.py": "b7a6615ede792dc6786e4d0bb4735a22f6ed4cae7394dd7d782e21839a063d80",
+    "evaluate_cached.py": "d91fc2286ccb9d79927f912a8ec4a118c121fbe6a5ae2cd9baf029784985a7bb",
+    "train_cached.py": "71f703b90c8518ccedd88158c9cf51f8847f1fdffecf8c97b3391b143a9eec1c",
+    "compare.py": "af273613dcb968b2627ce3b20e4dd5d011d1134b6b75ce84273dd8358f2874f4"
+  },
+  "review": "Independent5tests and3seed CPU parity checks passed; model/train/eval/pipeline/stats/preflight clear; production GPU preflight subsequently passed"
+}

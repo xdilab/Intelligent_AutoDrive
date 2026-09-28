@@ -1,0 +1,52 @@
+{
+  "version": "contextual-language-control-v3-20260919",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "epochs": 3,
+  "batch_size": 256,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.01,
+  "save_every": 100,
+  "contrastive_weight": 0.0,
+  "temperature": 0.07,
+  "conditions": [
+    "attention-bypass",
+    "attention-randbank"
+  ],
+  "split": "same420 expert/90 development;90 gate reserved;36717 official validation frames",
+  "selection": "best development triplet crop AP among3 epochs; no final-validation tuning",
+  "initialization": "full original construction then variant; dedicated bank generator10000+seed",
+  "comparison_scope": "matched new-head ablations; existing Stage5/6 warm-start adaptation is contextual comparison, not initialization-matched",
+  "contrastive": "All184 tensor computed for objective compatibility; coefficient exactly0 in every new arm",
+  "language": "bypass frozen/inactive explicit language paths; randbank fully active with184 seeded random unit vectors",
+  "classification": "class-weighted focal gamma2 over184 logits",
+  "evaluation": "same YOLO candidates/confidence multiplication, official AP@0.5, six heads and common39/tail47/deep28",
+  "scene": "frozen full-clip keyframe16x16 tokens;4x4 scene pool;7x7 actor RoIAlign mean",
+  "position": "trainable embedding of normalized xyxy,cx,cy,w,h, after encoder",
+  "encoder_revision": "1f9fca1389fd883defc652634d95a21121c85a8c",
+  "cache_protection": "manifest/frame/row hashes, exact boxes and targets, atomic per-frame writes",
+  "runtime": "two local A6000 lanes, one per arm; three seeds each; shared immutable caches",
+  "primary": "paired triplet bypass minus baseline; separate equivalence for triplet and tail47",
+  "equivalence_margins": {
+    "bypass_minus_baseline": {
+      "triplet": 0.3,
+      "tail47": 0.4
+    }
+  },
+  "secondary": [
+    "randbank_minus_baseline",
+    "randbank_minus_bypass"
+  ],
+  "inference_storage": "RAM only; per-class metrics checkpointed; inference recomputed on restart",
+  "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+  "baseline_runs": [
+    "/data/repos/wiki/artifacts/contextual-roi-20260917/runs/attention-classification-seed0",
+    "/data/repos/wiki/artifacts/contextual-roi-20260917/runs/attention-classification-seed1",
+    "/data/repos/wiki/artifacts/contextual-roi-20260917/runs/attention-classification-seed2"
+  ],
+  "interpretation": "explicit downstream branch only, not pretraining; random-bank content and geometry confounded; secondary equivalence not declared",
+  "authorization": "Brandon September19: implement v3, code review before launch"
+}

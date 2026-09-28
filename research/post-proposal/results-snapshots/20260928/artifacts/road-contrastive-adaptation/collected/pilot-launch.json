@@ -1,0 +1,10 @@
+{
+  "job": "731626",
+  "submitted_utc": "2026-09-14T17:47:22.949877+00:00",
+  "smoke_sha256": "15619342b5c5b4037f185d84dfe77c42b6d5bce6d6cbe06010715f2935f2a66f",
+  "conditions": [
+    "frozen",
+    "classification",
+    "contrastive"
+  ]
+}

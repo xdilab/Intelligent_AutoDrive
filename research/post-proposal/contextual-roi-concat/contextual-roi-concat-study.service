@@ -1,0 +1,12 @@
+[Unit]
+Description=Matched contextual full-context concatenation experts and global blend
+[Service]
+Type=simple
+WorkingDirectory=/data/repos/ROAD_Reason/research/post-proposal/contextual-roi-concat
+ExecStart=/home/brandon/miniconda3/bin/python -u /data/repos/ROAD_Reason/research/post-proposal/contextual-roi-concat/pipeline.py
+StandardOutput=append:/data/repos/wiki/artifacts/contextual-roi-concat-20260924/pipeline.log
+StandardError=append:/data/repos/wiki/artifacts/contextual-roi-concat-20260924/pipeline.log
+TimeoutStopSec=30min
+KillMode=control-group
+[Install]
+WantedBy=default.target

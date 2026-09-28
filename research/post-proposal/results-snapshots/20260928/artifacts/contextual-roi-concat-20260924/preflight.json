@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "time": 1790279056.7259984,
+  "protocol_sha256": "eed011ca7e4bd7512ad271b8af6b09b2fb977021b1874eeaa27068df4feaa0cf",
+  "checks": [
+    {
+      "seed": 0,
+      "common_parameters_bit_identical": true,
+      "RNG_identical": true,
+      "initial_outputs_equivalent_fp32_bf16": true,
+      "added_parameters": 1310720
+    },
+    {
+      "seed": 1,
+      "common_parameters_bit_identical": true,
+      "RNG_identical": true,
+      "initial_outputs_equivalent_fp32_bf16": true,
+      "added_parameters": 1310720
+    },
+    {
+      "seed": 2,
+      "common_parameters_bit_identical": true,
+      "RNG_identical": true,
+      "initial_outputs_equivalent_fp32_bf16": true,
+      "added_parameters": 1310720
+    }
+  ],
+  "benchmark": {
+    "0.0": {
+      "train_rows_per_second": 12473.232352381201,
+      "steps": 100,
+      "finite_loss": 0.06847763061523438,
+      "all_five_concat_blocks_receive_gradients": true,
+      "checkpoint_roundtrip": true
+    },
+    "0.001": {
+      "train_rows_per_second": 17002.56107349911,
+      "steps": 100,
+      "finite_loss": 0.07120319455862045,
+      "all_five_concat_blocks_receive_gradients": true,
+      "checkpoint_roundtrip": true
+    }
+  },
+  "rows": {
+    "train": 2567474,
+    "dev": 595732,
+    "val": 6163968
+  },
+  "no_real_study_checkpoint_modified": true
+}

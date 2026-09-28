@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "synthetic_root": "/tmp/class-gate-test-r_8zsd69",
+  "evaluations": 8,
+  "checks": [
+    "deterministic disjoint video partitions",
+    "gate endpoints and YOLO scaling once",
+    "zero-positive global fallback",
+    "learning preference for accurate expert",
+    "crop AP/VOC AP equivalence",
+    "end-to-end expert OOF training, gate selection and baseline detector AP",
+    "frame/candidate hash enforcement"
+  ],
+  "smoke_only": true
+}

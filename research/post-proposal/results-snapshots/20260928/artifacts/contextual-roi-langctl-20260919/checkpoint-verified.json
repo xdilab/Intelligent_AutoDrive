@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checked_unix": 1789860629.3098404,
+  "runs": [
+    {
+      "run": "attention-bypass-seed0",
+      "steps": 3200,
+      "position": 819200,
+      "epoch": 1,
+      "mtime": 1789860627.3593524
+    },
+    {
+      "run": "attention-randbank-seed0",
+      "steps": 3000,
+      "position": 768000,
+      "epoch": 1,
+      "mtime": 1789860628.103365
+    }
+  ]
+}

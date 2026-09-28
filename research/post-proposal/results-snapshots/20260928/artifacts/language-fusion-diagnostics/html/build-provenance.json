@@ -1,0 +1,307 @@
+{
+  "built": "September 14, 2026 \u00b7 07:26 AM EDT",
+  "output": "/data/repos/wiki/artifacts/language-fusion-diagnostics/language-fusion-analysis.html",
+  "output_sha256": "ccdc5f70116a609e6bfd1927e39ae035026a5f31b1827d1f9ca3c99f893c6337",
+  "embedded_case_count": 68,
+  "embedded_source_frames": 58,
+  "source_frame_hashes": [
+    {
+      "frame": "train_00714_00096",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00714/00096.jpg",
+      "sha256": "b5944d48f2f112aeeb8b4185bc9c52e70bcda5742d81637eace56d142f46e00e"
+    },
+    {
+      "frame": "train_00714_00084",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00714/00084.jpg",
+      "sha256": "18b207f1266ed986104cdc95fa64cebeb62ab409c6be934d8e338c62e964769f"
+    },
+    {
+      "frame": "train_00714_00196",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00714/00196.jpg",
+      "sha256": "48b6cb0da2ccddca82630378d352ef055380507bb90ced73fa174ecc19ccb26a"
+    },
+    {
+      "frame": "train_00679_00182",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00679/00182.jpg",
+      "sha256": "77260920ec3adbd7ab2d789550b2002856c8ba5fc9fda38d3241d9c32c18ffe0"
+    },
+    {
+      "frame": "train_00708_00048",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00708/00048.jpg",
+      "sha256": "01a43b2e0d111b382807f52171c3b3e192bfc952d7d0089afb4d88ed9400e43e"
+    },
+    {
+      "frame": "train_00679_00090",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00679/00090.jpg",
+      "sha256": "dc81df7b38a997f9ab46a42fbf77f3a2cafdb86001efb7484194db0ddf182f98"
+    },
+    {
+      "frame": "train_00795_00142",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00795/00142.jpg",
+      "sha256": "c66f2e3bd0d93d88a040d775dbadfd90abb8f469c6f32a87900bda5d2b950638"
+    },
+    {
+      "frame": "train_00708_00050",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00708/00050.jpg",
+      "sha256": "8162508f84f1cb9292a3a391b45177545d20b79a692827c680fa57a5e44e0297"
+    },
+    {
+      "frame": "train_00714_00178",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00714/00178.jpg",
+      "sha256": "d4bf299628b2686f62dbb97384cf51d239ec6a5e9679166931afda379b43258d"
+    },
+    {
+      "frame": "train_00795_00086",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00795/00086.jpg",
+      "sha256": "23104ee6f35372c059967505cbc41a06c0c2475bd6298c23d52fcaa05070bead"
+    },
+    {
+      "frame": "train_00665_00103",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00665/00103.jpg",
+      "sha256": "09f367dc2541e3cdcbc150564be47ac649b3b1ca2ceaaeb744f94867db2ab192"
+    },
+    {
+      "frame": "train_00665_00102",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00665/00102.jpg",
+      "sha256": "6be0ac1ab75d6abad7ddb7ef1470943dcb4f76a98764fa9d5a168e3b1de62819"
+    },
+    {
+      "frame": "train_00792_00019",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00792/00019.jpg",
+      "sha256": "9ffdd9b199a0df81437138cf24e628f0c26dfd3b9cb601693fba719dab2b5d1a"
+    },
+    {
+      "frame": "train_00635_00153",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00635/00153.jpg",
+      "sha256": "7b1f6149ba415580884f77b3deb7ca08c17ac654235ad82bc22208e4ce8ee782"
+    },
+    {
+      "frame": "train_00635_00188",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00635/00188.jpg",
+      "sha256": "2e359c6f46a7bbeb962b949df4b5a4fe2f36beee30a7e3c47b180e9ee642dcb7"
+    },
+    {
+      "frame": "train_00665_00086",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00665/00086.jpg",
+      "sha256": "cba8dd095dbd3b0222a9ce01d5de988def121a633c2063a4d32e22cbd6227406"
+    },
+    {
+      "frame": "train_00685_00174",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00685/00174.jpg",
+      "sha256": "69f277db482cc9da9a5443f0c53e644acbb0f9086e89e00dc6b68e7cf0f227fb"
+    },
+    {
+      "frame": "train_00685_00167",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00685/00167.jpg",
+      "sha256": "de74ddce04cd3ac29a536fcd579ba94a7accef54c974db8bedce233b0ffed21f"
+    },
+    {
+      "frame": "train_00635_00098",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00635/00098.jpg",
+      "sha256": "3386f6c26f879dce2b1c19da47503960d88929cb98c408386cbcb3dda517d936"
+    },
+    {
+      "frame": "train_00605_00093",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00605/00093.jpg",
+      "sha256": "d554839e5d22ccffe08eeac16a2163388dde47d8108f871429deef67e86aa3e2"
+    },
+    {
+      "frame": "train_00797_00018",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00797/00018.jpg",
+      "sha256": "7794f689961002ed0c1ba500fa35f65a9316177cab638fbcdb0a15cca4284565"
+    },
+    {
+      "frame": "train_00797_00186",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00797/00186.jpg",
+      "sha256": "7f8439b64e9e29c4886c6c554b338a65f96cc9ed519540fcb9c67ebd96a90329"
+    },
+    {
+      "frame": "train_00689_00038",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00689/00038.jpg",
+      "sha256": "ca2dd99530f413ca40257e3d64640aa0657bb025336b2af7a03e9c487eae39b8"
+    },
+    {
+      "frame": "train_00797_00028",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00797/00028.jpg",
+      "sha256": "2f227aa33b2d58e9bc867366dd7b7667c08438feb4c1d7e0a39e1345da4963a8"
+    },
+    {
+      "frame": "train_00797_00123",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00797/00123.jpg",
+      "sha256": "ca9892127c9a52f2d3fb47c220bef4a2451918278058b46be48b7a9cc80009fd"
+    },
+    {
+      "frame": "train_00797_00142",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00797/00142.jpg",
+      "sha256": "a46720fb3cb603ac0f6f31c9af88f2fc0db446fca0982607608361f249a54a6d"
+    },
+    {
+      "frame": "train_00689_00055",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00689/00055.jpg",
+      "sha256": "850feb9ca43a7fd78b5bdf488db75cbfaab2c2ab8e844cbdee4fbb0b08b8c216"
+    },
+    {
+      "frame": "train_00786_00120",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00786/00120.jpg",
+      "sha256": "e7ad87560eed422710cc078b9cc818f9936e8de4f267a772e3d5089c5661343f"
+    },
+    {
+      "frame": "train_00786_00159",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00786/00159.jpg",
+      "sha256": "9b3fa762ce2e69559cef94e221261d94579102cdccb8e8a9b16a65030dbaba80"
+    },
+    {
+      "frame": "train_00786_00141",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00786/00141.jpg",
+      "sha256": "7010da79783d194d54685722c15999303b1b500c3620e24e4cabc3b740a498d1"
+    },
+    {
+      "frame": "train_00786_00174",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00786/00174.jpg",
+      "sha256": "acd8e51157bbdf793bc9c2ec8f19811d3f1687b1072dcc98e13fee9747d7538e"
+    },
+    {
+      "frame": "train_00786_00146",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00786/00146.jpg",
+      "sha256": "479759a3dedf28b9ca6a9559d45a01f83859bb67c1941235694d51f8ff242070"
+    },
+    {
+      "frame": "train_00786_00124",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00786/00124.jpg",
+      "sha256": "bb87d055c3d594190eea6dff2539a37b52b0c8796909356b34764f74369d461b"
+    },
+    {
+      "frame": "train_00786_00168",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00786/00168.jpg",
+      "sha256": "d05b85cb25fb9dc19b2bd25f5875729454f992121287df50e553f502639c2311"
+    },
+    {
+      "frame": "train_00786_00150",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00786/00150.jpg",
+      "sha256": "28b0f3c8eed9ff5be4741babb5828389c268a4fb8441d8e5a7aadb4bb2bdfd60"
+    },
+    {
+      "frame": "train_00786_00158",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00786/00158.jpg",
+      "sha256": "95be006fc0fe3bd808c7b00abd5b5cf2d1b5cc4bba1c0ce40dd1ba56ad21abe9"
+    },
+    {
+      "frame": "train_00761_00089",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00761/00089.jpg",
+      "sha256": "403dbe993eaa95bd97532825786a8a2f67a2e416214b9a1dd5689585a0e184cf"
+    },
+    {
+      "frame": "train_00777_00041",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00777/00041.jpg",
+      "sha256": "8e45f6c02bb72694feba9baab47836de28bf490397e9aa142b905cb9ec4c7d7e"
+    },
+    {
+      "frame": "train_00777_00040",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00777/00040.jpg",
+      "sha256": "a8b90cecd87a1d3f97388aa56a294ba96f0764cd6c20c13c8952dfd637602f4c"
+    },
+    {
+      "frame": "train_00614_00144",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00614/00144.jpg",
+      "sha256": "9eb0e8656eb6465b21150937434b8ceb07524273d28a9e92001f22abf4e1d43a"
+    },
+    {
+      "frame": "train_00786_00013",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00786/00013.jpg",
+      "sha256": "368418464a1a5dd648cd35f235723a5d100ca2cfb06abce1ba813f24ffc0e276"
+    },
+    {
+      "frame": "train_00710_00106",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00710/00106.jpg",
+      "sha256": "f8dfd15fb96d38d3f5bdf20bd59313cf179c7ca1a60ecc5e3ee3d7df25cf0b7a"
+    },
+    {
+      "frame": "train_00784_00048",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00784/00048.jpg",
+      "sha256": "c5e86fae65983b09d296e283d26fbba914eaaadd287cbe9b41f8242901049e5e"
+    },
+    {
+      "frame": "train_00781_00090",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00781/00090.jpg",
+      "sha256": "9b45e8e6a7e7adb5a811c0ed5db75682162da604dd98233bb388f3916db9603d"
+    },
+    {
+      "frame": "train_00781_00185",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00781/00185.jpg",
+      "sha256": "a3bab133a1238ca0da39ffa58e0bef8ad0148a7447dac9862d1065a45e5b0a3e"
+    },
+    {
+      "frame": "train_00710_00103",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00710/00103.jpg",
+      "sha256": "62d6c2968a5e3d2539091e9262e026c2e6161b6a6cde64ca63b1d261bf602f7e"
+    },
+    {
+      "frame": "train_00714_00110",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00714/00110.jpg",
+      "sha256": "6bba2e5c558c97c32f338bddcec8ad7f279712e44184ad2b08edebca5b4c1945"
+    },
+    {
+      "frame": "train_00660_00170",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00660/00170.jpg",
+      "sha256": "c234612034606cd57ee963a5082d12ab6c21213dbe1bc6630d3eba51ee4062e7"
+    },
+    {
+      "frame": "train_00786_00018",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00786/00018.jpg",
+      "sha256": "26f653dd4f471dc969b404eb84d4c8ced3c4a0ba3f58cb0a6ef2e3bd5f2b73b9"
+    },
+    {
+      "frame": "train_00792_00183",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00792/00183.jpg",
+      "sha256": "236f58542d22907363e3ee5b72ec273a6cf2396052305de713e7855b796710a6"
+    },
+    {
+      "frame": "train_00621_00167",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00621/00167.jpg",
+      "sha256": "cba11884a55ea866f74d953b6277b702a172924a5b3c35cc8694bf27b7bff1d8"
+    },
+    {
+      "frame": "train_00704_00157",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00704/00157.jpg",
+      "sha256": "7511310fe46fcf5b099c3f1eda1803bd5e405d07b7205819e91a37ed7837b61a"
+    },
+    {
+      "frame": "train_00621_00162",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00621/00162.jpg",
+      "sha256": "1980a6d6b3cf559016678146b0c9678a698cbefa88eef0a4f6b0c2023b33a462"
+    },
+    {
+      "frame": "train_00704_00161",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00704/00161.jpg",
+      "sha256": "7a9f102428d0ffd5247bf6e6456d62c01abb316b45da30eb08f19ce73fb61f04"
+    },
+    {
+      "frame": "train_00704_00150",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00704/00150.jpg",
+      "sha256": "7facdfb04e224fd240908d2aecad8ef69afea22a32d4e0dcce2fbbc7891b6f5e"
+    },
+    {
+      "frame": "train_00621_00185",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00621/00185.jpg",
+      "sha256": "fee3ba65935e9c237bc2f76b9345136dabbedcda2a71ed644b6dacc0b618a29e"
+    },
+    {
+      "frame": "train_00704_00185",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00704/00185.jpg",
+      "sha256": "d7e540726dc9f841a81aa3b51e8efb3f3d3f900b50e9e44c73d151f0e6b56851"
+    },
+    {
+      "frame": "train_00635_00186",
+      "path": "/data/datasets/ROAD_plusplus/rgb-images/train_00635/00186.jpg",
+      "sha256": "dae679d115db0c23f714c1fe57089288bcdc85c0177a0357e4fb507ac9bdda23"
+    }
+  ],
+  "sources": {
+    "collected/report.json": "e1c2b52d57680bea9e69aa494f8324b395383fd2852b11e396d0931077ba8eeb",
+    "collected/budget-summary.csv": "d6816ef639d28d2be66556804baa34ac8b1114fea9b6261f6b83a46ad017a1e2",
+    "collected/examples.json": "798277d35ebcdef649b58635eff17dbd207da40b5a732d50b4ac96d22f1fb3b0",
+    "collected/ap-parity.csv": "10f7ff7b94132c1b0d17f51ee01d4eff2d759dc55a77441166956a3b149f3b57",
+    "all-triplet-context.csv": "ab62e853d2cd7b5fa369505f4cbd6943f9a5d67964611be2c3e85f480c27a370",
+    "html/template.html": "bcbfd44be2ea66ab1ecb555e66e47962b0b3d2a8a70a2997bfeb0026e8a26446"
+  }
+}

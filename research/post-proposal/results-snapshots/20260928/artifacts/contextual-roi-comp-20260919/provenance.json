@@ -1,0 +1,53 @@
+{
+  "authorized_by": "Brandon, September19,2026; implementation and independent pre-launch review",
+  "fresh_initialization": true,
+  "parent_study": "/data/repos/wiki/artifacts/contextual-roi-20260917",
+  "baseline_runs": {
+    "classification": [
+      "/data/repos/wiki/artifacts/contextual-roi-20260917/runs/attention-classification-seed0",
+      "/data/repos/wiki/artifacts/contextual-roi-20260917/runs/attention-classification-seed1",
+      "/data/repos/wiki/artifacts/contextual-roi-20260917/runs/attention-classification-seed2"
+    ],
+    "contrastive": [
+      "/data/repos/wiki/artifacts/contextual-roi-all184-20260918/runs/attention-contrastive-all184-seed0",
+      "/data/repos/wiki/artifacts/contextual-roi-all184-20260918/runs/attention-contrastive-all184-seed1",
+      "/data/repos/wiki/artifacts/contextual-roi-all184-20260918/runs/attention-contrastive-all184-seed2"
+    ]
+  },
+  "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+  "code": "/data/repos/ROAD_Reason/research/post-proposal/contextual-roi-comp",
+  "review": "code-review.md",
+  "preflight": "preflight.json",
+  "initial_eta_minutes": {
+    "first": [
+      30,
+      40
+    ],
+    "all_six": [
+      90,
+      120
+    ]
+  },
+  "eta_basis": "11476 train rows/s and 27570 inference rows/s short single-GPU benchmark; historical full-run overhead and two-lane contention included",
+  "prediction_storage": "/home/brandon/.local/share/road-reason/contextual-roi-comp-20260919",
+  "storage_reason": "Data partition30GiB free insufficient margin for six approximately4.54GB detector score arrays plus dev scores/checkpoints. Separate system disk56GiB free; persistent paths linked into runs, no existing results removed.",
+  "code_sha256": {
+    "README.md": "13998ae9d3ddea1f2b4bedbfe1f4bdc797712b03cff05296ebf5a8d4ca45d8cb",
+    "cache_context.py": "7919478981274b08ab85764301251a3a15839dc89290d6ad4c6070638eb2e050",
+    "compare.py": "125ed792d06dc63a4b5664bd987b5788966f4eac52f1cba49ba8acd89ce2df4d",
+    "evaluate_cached.py": "99b57d435cdf093ab5169e4b663f73072ac90516369e57e07394e02a9c5c135e",
+    "model.py": "b488946ce9e30e4e608b6173993dd873a8717447dd3b6347979a95fb3d7f4532",
+    "monitor_local.py": "727b0fc01896dfde94cb346487ac1201e60b75ed7f82564661263df7d873eb09",
+    "pipeline.py": "ca3160b939a26d760bd39343d851627ae8909f7cda8847af13b3b940910a1caa",
+    "preflight.py": "702e55b7733d12964b6a3aca5af25322dd5c37167b3bae93063a5cad731194dc",
+    "protocol.json": "e62eac1226256f3be656a20b9efd5af64dcb8eda8d5124d17a63d1de23a391aa",
+    "test_all184.py": "fe7447e77b766924ab0060abd01ad43a06c9153ba2695addbf6ce6c5e51af3b9",
+    "test_compare.py": "156b3bda7765380f8ffe794cc288eefa1b263f767bfc262be0c977370246e5cf",
+    "test_model.py": "f286bafa8cb67eda9da20c59b110e65edc0508f66261b02e0fc14133296027ba",
+    "train_cached.py": "bd8631661c7980a3a0895f36e20b394167b10e91117b78515dde9134602467eb"
+  },
+  "launched_at": "2026-09-19T09:11:17-04:00",
+  "verified_at": "2026-09-19T09:12:57.419451-04:00",
+  "unit_tests_passed": 10,
+  "monitor": "contextual-roi-comp-monitor.timer, every2 minutes; repair_dispatch --inspect clean"
+}

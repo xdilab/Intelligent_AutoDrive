@@ -1,0 +1,42 @@
+{
+  "authorized_by": "Brandon: implement now, code review before launch, September19",
+  "code": "/data/repos/ROAD_Reason/research/post-proposal/contextual-roi-langctl",
+  "code_sha256": {
+    "cache_context.py": "7919478981274b08ab85764301251a3a15839dc89290d6ad4c6070638eb2e050",
+    "pipeline.py": "83b2623cc881576365d715a37a7a0cc699279ac8c63162c3d850dd5f651b52ef",
+    "preflight.py": "10d5d6d394bc00f340a8e1ca32f8da94668955325b7abf62ca20b0122edae4b6",
+    "test_controls.py": "de99a3f88c45bd0a5450942e79a46787d98f4b869e17953077d3cd9ce737fb5f",
+    "model.py": "9ba3c55a17b46b70bb2d443b8b0b9c6eba0fd436f1cdf16c77f9cf70de58a077",
+    "monitor_local.py": "b7a6615ede792dc6786e4d0bb4735a22f6ed4cae7394dd7d782e21839a063d80",
+    "evaluate_cached.py": "d91fc2286ccb9d79927f912a8ec4a118c121fbe6a5ae2cd9baf029784985a7bb",
+    "train_cached.py": "71f703b90c8518ccedd88158c9cf51f8847f1fdffecf8c97b3391b143a9eec1c",
+    "compare.py": "af273613dcb968b2627ce3b20e4dd5d011d1134b6b75ce84273dd8358f2874f4"
+  },
+  "baseline_runs": [
+    "/data/repos/wiki/artifacts/contextual-roi-20260917/runs/attention-classification-seed0",
+    "/data/repos/wiki/artifacts/contextual-roi-20260917/runs/attention-classification-seed1",
+    "/data/repos/wiki/artifacts/contextual-roi-20260917/runs/attention-classification-seed2"
+  ],
+  "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+  "fresh_initialization": true,
+  "random_bank_seeds": [
+    10000,
+    10001,
+    10002
+  ],
+  "preflight": "preflight.json",
+  "review": "review-clearance.json",
+  "storage": "about3GiB dev/checkpoints; detector scores RAM-only, existing caches preserved",
+  "eta_minutes": {
+    "first": [
+      30,
+      40
+    ],
+    "all": [
+      90,
+      120
+    ]
+  },
+  "equivalence_scope": "v3 bypass-baseline only; later conversational example did not amend random-real margins",
+  "launched_at": "2026-09-19T19:29:26.844551-04:00"
+}

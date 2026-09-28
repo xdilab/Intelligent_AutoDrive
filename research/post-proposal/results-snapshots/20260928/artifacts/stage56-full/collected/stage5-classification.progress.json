@@ -1,0 +1,1 @@
+{"stage": "stage5", "condition": "classification", "epoch": 3, "frames_done": 66591, "frames_total": 80626, "steps": 26275, "training_objective": 0.0017464534753348637, "segment_rows_per_second": 14.848398924256191, "updated_utc": "2026-09-21T13:59:21Z"}

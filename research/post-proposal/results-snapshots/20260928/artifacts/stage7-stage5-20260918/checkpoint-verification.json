@@ -1,0 +1,22 @@
+{
+  "checked": 1789777643.2950785,
+  "passed": true,
+  "runs": [
+    {
+      "seed": 0,
+      "steps": 4600,
+      "epoch_index": 0,
+      "position": 1177600,
+      "mtime": 1789777642.6470654,
+      "optimizer_present": true
+    },
+    {
+      "seed": 1,
+      "steps": 3700,
+      "epoch_index": 0,
+      "position": 947200,
+      "mtime": 1789777642.1190557,
+      "optimizer_present": true
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "frame_verification_job": "732169",
+  "training_array": "732170",
+  "evaluation_array": "732171",
+  "submitted_utc": "2026-09-15T04:01:37.828189+00:00",
+  "supersedes_training": "731843",
+  "supersedes_evaluation": "731844",
+  "code_sha256": {
+    "submit.py": "ea233f92d54c21fadf5ae645c32e46dab6f68e36713b03098d61b0ab5eed3bff",
+    "verify-frames.sbatch": "6a488e6e76524dc71eb3c1f359546872aa1f2cb8ecf467f3f790ff8468696b63",
+    "train.py": "7e69e76ca942e81f915ec99e50ebd1927789cd2c67821e29c31d40c717270d47",
+    "heads.py": "15355f47c2faba35b2afba9cffd9bed8ebab874288dc9078a1edd90048e0ad4e",
+    "test-eval-resume.py": "f94b63e0ede6ea615fac1647d5c3137fdc61df75e39b42358eb9f82f7543af16",
+    "README.md": "dce8eda9f01177f40bbd927001e56dacca34f8089f7c75fa7843587826deb21b",
+    "collect.py": "ac0e319e5adbc4e6c0b1f87acd2d6d26abc9d3e0df58073de3042aa0dea24e6c",
+    "train.sbatch": "364890eda72887aaee49ba5716a955eda5dc8596168975e4b6209766732d0558",
+    "recover-submit.py": "dc2204fa33260f667b3bac1ad48ec58a29e4bca4de6349f52b7348b0f8c7b2e9",
+    "protocol.json": "a6cbbb6898448b1986440856c7d57ca9932acb435b3896379a4c5261a1fd4dd0",
+    "evaluate.py": "59a8b7f1015a51bf4bcb56dec1293d5f94a27e19654282b7166c5a0196835930",
+    "baseline-core.py": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9",
+    "guard.py": "1685e88af4348fa233cf8a472fac2a1c9fdd8e7c98c72f5b99292fe1932f05ee",
+    "frame-inventory.json": "1450ce0d606072f3742806ccc7cbb8b7ca08d5d70511e8d515f2a8a9aa010888",
+    "prepare.py": "54fb0414839e4602eba4f4991f0c0e93c74d1843a648bf7a6347b0fda714b239",
+    "verify-frames.py": "23ec1db407feca56af2e65e06e8e3469770722233ef9d8cf133ce0bdfbd54cff",
+    "prepare.sbatch": "6e2e8131715e8391305d41434f38304bad110e4f8d33984694cc75ab4f1bc285",
+    "evaluate.sbatch": "32e115fa39cd1634c23435174eb3d22d04886692195c6564e85447ca21785743",
+    "base.py": "9013c7a9e50e8203e1ddc680708d85be04d40e7bb3aa56356926474013dc19ee",
+    "architecture.py": "566a571454ed69208de40b8c389ec628715b43163af34b82058ad41bd27d7529",
+    "metric.py": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "checked": "2026-09-18T15:57:05.661352-04:00",
+  "runs": {
+    "mlp-classification-seed0": {
+      "progress.json": {
+        "phase": "complete",
+        "time": 1789761379.008266
+      },
+      "detector-results.json": {
+        "metric": "official validation detector AP@0.5",
+        "n_frames": 36717,
+        "signature": {
+          "checkpoint_sha256": "fb9abd9abe17b5268213c10b3ce54ae9255203fccf51a69bc93d96cdd2f88608",
+          "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+          "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+          "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+        },
+        "candidate_sha256": "fc84d73fdaa7b4f74ea2694aa54f3b4a1069f4b6d45276f2df5e9c5374378cb2",
+        "frame_sha256": "733ce2ce4bbbb59966fe3d588c9749e4e123290c7083d4af9aa1273f32a758b9",
+        "selected_epoch": 1,
+        "run": "mlp-classification-seed0",
+        "summary": {
+          "agentness": 65.3637466430664,
+          "agent": 35.24602649905719,
+          "action": 21.582343569533393,
+          "loc": 26.163913334719837,
+          "duplex": 18.201767274093037,
+          "triplet": 11.596597808559403
+        },
+        "tail": {
+          "common39": {
+            "classes": 39,
+            "mAP": 18.824133166900047
+          },
+          "tail47": {
+            "classes": 47,
+            "mAP": 5.599281234617167
+          },
+          "deep28": {
+            "classes": 28,
+            "mAP": 3.976218276241395
+          }
+        },
+        "time": 1789761379.0079792
+      },
+      "best_development": {
+        "metric": "development crop AP (not detector AP)",
+        "all_heads": {
+          "agentness": 98.278563214615,
+          "agent": 51.77011919066132,
+          "action": 31.273589699504928,
+          "loc": 46.26665881850609,
+          "duplex": 26.643830745309312,
+          "triplet": 16.919086858174516
+        },
+        "tail": {
+          "common39": {
+            "classes": 39,
+            "mAP": 28.01995217415024
+          },
+          "tail47": {
+            "classes": 47,
+            "mAP": 7.707730532152104
+          },
+          "deep28": {
+            "classes": 28,
+            "mAP": 5.29309276005496
+          }
+        },
+        "epoch": 1,
+        "training_segment_mean": [
+          0.0019590477169227245,
+          0.0019590477169227245,
+          4.468390358451874
+        ]
+      }
+    },
+    "attention-classification-seed0": {
+      "progress.json": {
+        "phase": "detector-metrics",
+        "classes_done": 174,
+        "time": 1789761423.8904848
+      },
+      "best_development": {
+        "metric": "development crop AP (not detector AP)",
+        "all_heads": {
+          "agentness": 98.312939554421,
+          "agent": 52.04168336673651,
+          "action": 31.25516845736398,
+          "loc": 45.76266020941492,
+          "duplex": 26.89204690515294,
+          "triplet": 18.32624379081765
+        },
+        "tail": {
+          "common39": {
+            "classes": 39,
+            "mAP": 28.02815615028126
+          },
+          "tail47": {
+            "classes": 47,
+            "mAP": 10.275720769135079
+          },
+          "deep28": {
+            "classes": 28,
+            "mAP": 8.626787676052462
+          }
+        },
+        "epoch": 1,
+        "training_segment_mean": [
+          0.0019948675601006985,
+          0.0019948675601006985,
+          4.513633497147418
+        ]
+      }
+    },
+    "mlp-contrastive-seed0": {
+      "progress.json": {
+        "run": "mlp-contrastive-seed0",
+        "phase": "train",
+        "epoch": 1,
+        "position": 512000,
+        "total": 2567474,
+        "steps": 2000,
+        "time": 1789761424.079106,
+        "loss": 0.005683531544404105,
+        "classification": 0.0030565264231408947,
+        "contrastive": 2.6270049991607665
+      }
+    }
+  }
+}

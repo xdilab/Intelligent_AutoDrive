@@ -25,3 +25,21 @@ User authorized using two spare GPUs for early reporting while all six training 
 `submit-epoch1.py` is idempotent through saved job IDs. Two-task arrays run sequentially: Stage5 classification/contrastive, frozen controls, Stage6 classification/contrastive. The last pair also depends on a CPU-only checkpoint gate, so GPUs are not reserved while awaiting epoch1. `afterany` between pairs allows remaining evaluations to proceed if an earlier pair fails; the watchdog records failures. Every job name starts full56- and its ID is registered in results/*-job.txt. The two-GPU bound applies to this early-evaluation chain; the account QoS enforces8 total GPUs alongside training/final evaluation.
 
 Before submission, check every temporal image required by shared-frames.json and preserve results/epoch1-input-check.json. Syntax checked and inference/metric body diff-reviewed against existing evaluator. Actual successful inference validates checkpoint loading at runtime; do not claim completed evaluation until result JSON exists.
+
+### Evaluation input reuse (2026-09-18)
+
+`eval_input.py` is shared by epoch-1 and final detector evaluation. It decodes
+source JPEGs once into a bounded 24-frame LRU cache, prepares the next clip on
+one CPU thread, normalizes each clip once on GPU, and reuses it across unchanged
+64-candidate RoIAlign batches. Encoder execution, BF16 precision, candidate
+ordering, confidence weighting, AP definitions and checkpoint provenance remain
+unchanged. Atomic per-frame `.npy` caches still resume by skipping completed
+frames. Source images are treated as immutable; decoded bytes are SHA-256 hashed
+on read. This optimization does not alter `base.py` or running training.
+
+Validation: `test_input_resume.py` checks skip/empty-frame/order/batch boundaries.
+`benchmark_input.py` checks full-frame crop equality and same-checkpoint logit
+parity on the cluster. The recorded run had zero crop error for 247 candidates
+across three frames and zero logit error on eight candidates. Its preprocessing
+timings are not end-to-end throughput measurements. Operational evidence is in
+`wiki/artifacts/eval-input-optimization/` and the remote results directory.

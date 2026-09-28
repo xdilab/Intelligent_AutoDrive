@@ -75,3 +75,8 @@ experiments/exp12_phrase_head/*.pkl.partial
 experiments/exp12_phrase_head/*.pt
 experiments/exp12_phrase_head/*.log
 experiments/exp11_yolo/*.pkl.partial
+
+# Nested crop feature caches and live logs stay local.
+experiments/exp12_phrase_head/crop_full/*.pkl
+experiments/exp12_phrase_head/crop_full/*.pkl.partial
+experiments/exp12_phrase_head/crop_full/*.log

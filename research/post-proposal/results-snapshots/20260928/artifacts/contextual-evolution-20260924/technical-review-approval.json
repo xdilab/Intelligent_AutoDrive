@@ -1,0 +1,52 @@
+{
+  "review": "technical round2",
+  "status": "approved",
+  "reviewed_on": "2026-09-24",
+  "files": {
+    "artifacts/contextual-evolution-20260924/01-mlp.drawio": "c7c97555fe38298315d942188af979686bc74b0f76fb5ce7f2f6af184496a59e",
+    "artifacts/contextual-evolution-20260924/01-mlp.png": "218172033d90ea8fa7720c7992e430547b84099fa6f3ad18b5ae270012141e4a",
+    "artifacts/contextual-evolution-20260924/02-attention.drawio": "6ae017f6d734ec7530cb4b70d61b8d9f3cd10522c8106f20a21f47f3829c4d27",
+    "artifacts/contextual-evolution-20260924/02-attention.png": "a73ea801d9f95ba59364e2ba1e4b3d41a78454bd41c84a146a910f91a8e32ab0",
+    "artifacts/contextual-evolution-20260924/03-triplet-contrastive.drawio": "a775392d88ee88005a30b4bd09f3eaa58147ee36b545ce69f43238d37df100f6",
+    "artifacts/contextual-evolution-20260924/03-triplet-contrastive.png": "e853f00af4f15b7cdfcd93833c438183bc74964a37bd989ab749d5f751cb023c",
+    "artifacts/contextual-evolution-20260924/04-all184-contrastive.drawio": "1a090a65baeeb62aa2fab4ca6769fe53e2040ab5b38b20de598eca94de493b57",
+    "artifacts/contextual-evolution-20260924/04-all184-contrastive.png": "3ec8ad3f28900fe934c95a7022b81c744b288c66729052744900f71fddd40155",
+    "artifacts/contextual-evolution-20260924/05-expert-blend.drawio": "b1e187f9520823148d16b3edbfe0d022b82a910a67a24f5b8d0f1d28623ef32c",
+    "artifacts/contextual-evolution-20260924/05-expert-blend.png": "0b9e3b3a2140b2f08c87ee3e8bb00d55cfe7f5ae59118df7a6c6e5c65363bfaa",
+    "artifacts/contextual-evolution-20260924/06-dcb-blend.drawio": "508440f712eebcab7af979cfacfee496d9ad1df15aea2aeec640a7859a5f8634",
+    "artifacts/contextual-evolution-20260924/06-dcb-blend.png": "02c9c69e0828d37e9a1d8a9df693d5cf01f1ca1bc086827cd033e9cd31216e2e",
+    "artifacts/contextual-evolution-20260924/build-viewer.py": "04b9c336c2fecc645622969ae5032d15b0ebcbee5fa6a9c8b19dc9dc899d4367",
+    "artifacts/contextual-evolution-20260924/selection.json": "fab965d274a094aeff239fb534b7ef5032585b983479eba95b19424519c9cf7f"
+  },
+  "focal_weights": [
+    0.375,
+    0.625,
+    0.375
+  ],
+  "dcb_weights": [
+    0.75,
+    0.75,
+    0.5
+  ],
+  "frequency_groups": {
+    "triplet": 86,
+    "tail_z_lt_0": 47,
+    "deep_z_lt_minus_point5": 28,
+    "common_z_ge_0": 39
+  },
+  "expert_revision": {
+    "timestamp": "2026-09-24T15:34:39-04:00",
+    "approved": "Independent source review verified expert A/B loss difference. Required caption corrected to pre-language visual v; reviewed rendered figures."
+  },
+  "followup_expert_distinction": {
+    "reviewed_on": "2026-09-25",
+    "status": "approved",
+    "caption": "pre-language visual v",
+    "files": {
+      "artifacts/contextual-evolution-20260924/05-expert-blend.drawio": "b1e187f9520823148d16b3edbfe0d022b82a910a67a24f5b8d0f1d28623ef32c",
+      "artifacts/contextual-evolution-20260924/05-expert-blend.png": "0b9e3b3a2140b2f08c87ee3e8bb00d55cfe7f5ae59118df7a6c6e5c65363bfaa",
+      "artifacts/contextual-evolution-20260924/06-dcb-blend.drawio": "508440f712eebcab7af979cfacfee496d9ad1df15aea2aeec640a7859a5f8634",
+      "artifacts/contextual-evolution-20260924/06-dcb-blend.png": "02c9c69e0828d37e9a1d8a9df693d5cf01f1ca1bc086827cd033e9cd31216e2e"
+    }
+  }
+}

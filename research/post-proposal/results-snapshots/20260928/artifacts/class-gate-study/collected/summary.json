@@ -1,0 +1,300 @@
+{
+  "completed_utc": "2026-09-14T14:26:23Z",
+  "n_evaluations": 24,
+  "protocol": {
+    "version": "class-gate-v1-20260914",
+    "source_study": "/work/bbyrd1/proposal-study-20260910",
+    "root": "/work/bbyrd1/class-gate-study-20260914",
+    "encoder": "original frozen InternVideo2-CLIP-S",
+    "split_rule": "sort video IDs by SHA256(class-gate-v1:VIDEO); first floor(0.70*N) expert, next floor(0.15*N) gate, remaining development",
+    "split_unit": "source video",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "expert_epochs": 10,
+    "expert_batch_size": 16384,
+    "expert_lr": 0.001,
+    "expert_loss": "original focal gamma=2 with original fixed class alphas, shared across matched baselines",
+    "gate_epochs": 25,
+    "gate_batch_size": 16384,
+    "gate_lr": 0.05,
+    "gate_loss": "mean binary cross entropy before YOLO confidence plus lambda*mean squared class-logit deviation from frozen global logit",
+    "lambdas": [
+      0.0,
+      0.0001,
+      0.001,
+      0.01,
+      0.1
+    ],
+    "selection_metric": "triplet mean AP on held-out development cached crop rows; all 86 classes, zero-positive classes AP=0; NOT detection f-mAP",
+    "selection_tie_break": "higher regularization strength",
+    "zero_positive_fallback": "global logit",
+    "final_variants": [
+      "head-flat",
+      "head-phrase",
+      "stage5",
+      "stage6",
+      "global-blend",
+      "class-gate",
+      "shuffled-global",
+      "shuffled-class-gate"
+    ],
+    "final_metric": "unchanged baseline frame-AP at IoU 0.5 on the 36717-frame manifest and identical YOLO candidates",
+    "no_final_eval_tuning": true,
+    "fitting_rows": "inherited GT-positive + random-background + YOLO-junk-negative cached training crops",
+    "fitting_limit": "gate fitting/development do not use full YOLO-positive candidate crops; final evaluation does",
+    "resources": "CPU preflight; 3 training seeds capped at 2 priority H200 jobs; 3 evaluation seeds capped at 2 CPU jobs; afterok dependencies",
+    "prior_validation_exposure": "Official validation previously informed the gate hypothesis through diagnostics; no final-evaluation tuning within this run and no claim of a fresh blind test."
+  },
+  "means": [
+    {
+      "variant": "head-flat",
+      "triplet_mean": 7.6875631014506025,
+      "triplet_sd": 0.15950785908240434,
+      "duplex_mean": 14.796013832092285,
+      "duplex_sd": 0.4845025391682928,
+      "tail47_mean": 2.9030427937565126,
+      "tail47_sd": 0.079118623617196,
+      "deep28_mean": 2.240254034078264,
+      "deep28_sd": 0.4463368605285513,
+      "common39_mean": 13.453523013326857,
+      "common39_sd": 0.32440516611467035
+    },
+    {
+      "variant": "head-phrase",
+      "triplet_mean": 8.79843775431315,
+      "triplet_sd": 0.1584409550249839,
+      "duplex_mean": 14.95603116353353,
+      "duplex_sd": 0.13336917351128333,
+      "tail47_mean": 5.665932478079347,
+      "tail47_sd": 0.1775115519628324,
+      "deep28_mean": 4.536004882971091,
+      "deep28_sd": 0.16147015981604027,
+      "common39_mean": 12.573507426131485,
+      "common39_sd": 0.13726378681135612
+    },
+    {
+      "variant": "stage5",
+      "triplet_mean": 10.161249478658041,
+      "triplet_sd": 0.12764408100279806,
+      "duplex_mean": 17.18791961669922,
+      "duplex_sd": 0.32324013979372507,
+      "tail47_mean": 4.682326285422826,
+      "tail47_sd": 0.16091173574748543,
+      "deep28_mean": 3.3459236620581665,
+      "deep28_sd": 0.25403504395338194,
+      "common39_mean": 16.764054677425285,
+      "common39_sd": 0.11760736760539835
+    },
+    {
+      "variant": "stage6",
+      "triplet_mean": 10.258279800415039,
+      "triplet_sd": 0.2870249808478761,
+      "duplex_mean": 17.149647394816082,
+      "duplex_sd": 0.06423521470233365,
+      "tail47_mean": 5.223629986540355,
+      "tail47_sd": 0.44697537800437825,
+      "deep28_mean": 3.778500876483685,
+      "deep28_sd": 0.981239218055415,
+      "common39_mean": 16.325677204335857,
+      "common39_sd": 0.1863786294927045
+    },
+    {
+      "variant": "global-blend",
+      "triplet_mean": 10.165003458658854,
+      "triplet_sd": 0.1295326878358472,
+      "duplex_mean": 17.191694895426433,
+      "duplex_sd": 0.3233748579576944,
+      "tail47_mean": 4.687898822179963,
+      "tail47_sd": 0.16435850228768215,
+      "deep28_mean": 3.3524036858025714,
+      "deep28_sd": 0.2556925560020691,
+      "common39_mean": 16.765616391459083,
+      "common39_sd": 0.11782701883531262
+    },
+    {
+      "variant": "class-gate",
+      "triplet_mean": 10.16500155131022,
+      "triplet_sd": 0.1295326878358472,
+      "duplex_mean": 17.191692352294922,
+      "duplex_sd": 0.32337625979164697,
+      "tail47_mean": 4.687896944078822,
+      "tail47_sd": 0.16435665711414332,
+      "deep28_mean": 3.352403705182951,
+      "deep28_sd": 0.2556929003834431,
+      "common39_mean": 16.765615915640808,
+      "common39_sd": 0.11782786707041171
+    },
+    {
+      "variant": "shuffled-global",
+      "triplet_mean": 10.161763191223145,
+      "triplet_sd": 0.12864214077484182,
+      "duplex_mean": 17.188653310139973,
+      "duplex_sd": 0.3234261616180132,
+      "tail47_mean": 4.683404722345947,
+      "tail47_sd": 0.16280610939469628,
+      "deep28_mean": 3.3478953428940645,
+      "deep28_sd": 0.25444661887802555,
+      "common39_mean": 16.763888378428597,
+      "common39_sd": 0.11750153379586604
+    },
+    {
+      "variant": "shuffled-class-gate",
+      "triplet_mean": 10.161761283874512,
+      "triplet_sd": 0.1286437685555114,
+      "duplex_mean": 17.18865394592285,
+      "duplex_sd": 0.3234253896083479,
+      "tail47_mean": 4.683404082098004,
+      "tail47_sd": 0.1628060644072636,
+      "deep28_mean": 3.347894837451999,
+      "deep28_sd": 0.2544469641409865,
+      "common39_mean": 16.763883518357563,
+      "common39_sd": 0.11750193596638409
+    }
+  ],
+  "paired_deltas_vs_stage5": {
+    "stage6": {
+      "triplet": [
+        0.29752445220947266,
+        -0.13245487213134766,
+        0.1260213851928711
+      ],
+      "duplex": [
+        -0.10252952575683594,
+        -0.2802410125732422,
+        0.26795387268066406
+      ],
+      "tail47": [
+        1.0114920376973382,
+        0.11833883100684606,
+        0.49408023464840234
+      ],
+      "deep28": [
+        0.9319480122524375,
+        -0.8970741721402322,
+        1.2628578031643496
+      ],
+      "common39": [
+        -0.5628972909389383,
+        -0.43469724594018544,
+        -0.3175378823891677
+      ]
+    },
+    "global-blend": {
+      "triplet": [
+        0.0018453598022460938,
+        0.0032291412353515625,
+        0.00618743896484375
+      ],
+      "duplex": [
+        0.003742218017578125,
+        0.0039463043212890625,
+        0.0036373138427734375
+      ],
+      "tail47": [
+        0.0025897599469395516,
+        0.004676652230084066,
+        0.009451198094386548
+      ],
+      "deep28": [
+        0.001999580093459574,
+        0.004942069345685862,
+        0.012498421794069792
+      ],
+      "common39": [
+        0.0009493522154997436,
+        0.0014797112880593488,
+        0.0022560785978278375
+      ]
+    },
+    "class-gate": {
+      "triplet": [
+        0.0018434524536132812,
+        0.00322723388671875,
+        0.0061855316162109375
+      ],
+      "duplex": [
+        0.0037384033203125,
+        0.0039463043212890625,
+        0.0036334991455078125
+      ],
+      "tail47": [
+        0.002588460969916717,
+        0.004676399108498153,
+        0.009447115889572366
+      ],
+      "deep28": [
+        0.00199950844814456,
+        0.004942731183421145,
+        0.012497889742787649
+      ],
+      "common39": [
+        0.0009484596741522466,
+        0.001478451948898396,
+        0.0022568030235099457
+      ]
+    },
+    "shuffled-global": {
+      "triplet": [
+        -0.0002574920654296875,
+        5.53131103515625e-05,
+        0.001743316650390625
+      ],
+      "duplex": [
+        0.0010318756103515625,
+        0.0006866455078125,
+        0.0004825592041015625
+      ],
+      "tail47": [
+        -0.00012771338917971775,
+        9.949355723026798e-05,
+        0.0032635306013117926
+      ],
+      "deep28": [
+        6.574156993455205e-05,
+        0.0007187757541289308,
+        0.005130525183631107
+      ],
+      "common39": [
+        -0.0004111406130675732,
+        2.714303821704789e-06,
+        -9.047068082423948e-05
+      ]
+    },
+    "shuffled-class-gate": {
+      "triplet": [
+        -0.00026416778564453125,
+        5.53131103515625e-05,
+        0.0017442703247070312
+      ],
+      "duplex": [
+        0.00102996826171875,
+        0.0006885528564453125,
+        0.000484466552734375
+      ],
+      "tail47": [
+        -0.0001285509057744605,
+        9.912962807234749e-05,
+        0.0032628113032382444
+      ],
+      "deep28": [
+        6.50259815819787e-05,
+        0.0007187694344401585,
+        0.00512973076547496
+      ],
+      "common39": [
+        -0.00042610902052686583,
+        -1.4366247924613162e-07,
+        -8.72245201684052e-05
+      ]
+    }
+  },
+  "interpretation_limits": [
+    "matched 70-percent-training-video experts, not full-data historical models",
+    "one fixed video partition; head seed variation only",
+    "internal selection uses cached-crop AP, not final detector AP",
+    "official validation previously informed the hypothesis; no claim of a fresh blind test"
+  ]
+}

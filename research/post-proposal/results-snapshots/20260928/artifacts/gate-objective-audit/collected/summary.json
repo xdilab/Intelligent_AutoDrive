@@ -1,0 +1,73 @@
+{
+  "collected_utc": "2026-09-14T15:58:04.275604+00:00",
+  "completed_seeds": 3,
+  "results": [
+    {
+      "seed": 0,
+      "expert": "phrase",
+      "global_optimum": 0.0,
+      "trained_global": 0.0015269186114892364,
+      "supported_classes": 129,
+      "supported_zero_optima": 127,
+      "max_supported_optimum": 0.0008342006040038541,
+      "mean_BCE_trained": 0.12090284829381086,
+      "mean_BCE_direct": 0.1208248315014053
+    },
+    {
+      "seed": 0,
+      "expert": "shuffled",
+      "global_optimum": 0.0,
+      "trained_global": 0.0015175649896264076,
+      "supported_classes": 129,
+      "supported_zero_optima": 128,
+      "max_supported_optimum": 5.868637526873499e-05,
+      "mean_BCE_trained": 0.1210215076361705,
+      "mean_BCE_direct": 0.12082508755276172
+    },
+    {
+      "seed": 1,
+      "expert": "phrase",
+      "global_optimum": 0.0,
+      "trained_global": 0.0015067820204421878,
+      "supported_classes": 129,
+      "supported_zero_optima": 127,
+      "max_supported_optimum": 0.0002533348015276715,
+      "mean_BCE_trained": 0.10984893674025575,
+      "mean_BCE_direct": 0.10976231215376465
+    },
+    {
+      "seed": 1,
+      "expert": "shuffled",
+      "global_optimum": 0.0,
+      "trained_global": 0.0015115047572180629,
+      "supported_classes": 129,
+      "supported_zero_optima": 129,
+      "max_supported_optimum": 0.0,
+      "mean_BCE_trained": 0.10996708824374697,
+      "mean_BCE_direct": 0.10976236629269315
+    },
+    {
+      "seed": 2,
+      "expert": "phrase",
+      "global_optimum": 0.0,
+      "trained_global": 0.0014908377779647708,
+      "supported_classes": 129,
+      "supported_zero_optima": 129,
+      "max_supported_optimum": 0.0,
+      "mean_BCE_trained": 0.10753320492560635,
+      "mean_BCE_direct": 0.10743753667071548
+    },
+    {
+      "seed": 2,
+      "expert": "shuffled",
+      "global_optimum": 0.0,
+      "trained_global": 0.0015035133110359311,
+      "supported_classes": 129,
+      "supported_zero_optima": 129,
+      "max_supported_optimum": 0.0,
+      "mean_BCE_trained": 0.10768473508347179,
+      "mean_BCE_direct": 0.10743753667071548
+    }
+  ],
+  "limits": "Internal cached-crop AP only; same fixed video split; endpoint clipping for convex numerical audit; no final detection tuning"
+}

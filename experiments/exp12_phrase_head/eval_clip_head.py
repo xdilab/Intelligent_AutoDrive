@@ -27,6 +27,7 @@ ap.add_argument("--ckpt", required=True)
 ap.add_argument("--out", required=True)
 ap.add_argument("--feat-cache", default=str(E12 / "clip_feats_val.pkl"))
 ap.add_argument("--key-style", default="stem", choices=("stem", "slash"))
+ap.add_argument("--restrict", default=None, help="pkl whose feats keys define the frame subset")
 args = ap.parse_args()
 
 ck = torch.load(args.ckpt, weights_only=False)
@@ -50,6 +51,9 @@ head.load_state_dict(ck["state"]); head.eval()
 
 print("[eval] loading caches ...", flush=True)
 feats = pickle.load(open(args.feat_cache, "rb"))["feats"]
+RESTRICT = None
+if args.restrict:
+    RESTRICT = set(pickle.load(open(args.restrict, "rb"))["feats"].keys())
 yolo = pickle.load(open(E11 / "dets_v8x_best_val_fullcand.pkl", "rb"))["records"]
 i3d_payload = pickle.load(open(E11 / "dets_i3d_val_fullcand.pkl", "rb"))
 i3d = i3d_payload["records"]; labels = i3d_payload["labels"]
@@ -66,6 +70,8 @@ with torch.no_grad():
         key = stem.rsplit("_", 1)[0] + "/" + str(int(stem.rsplit("_", 1)[1]))
         fkey = key if args.key_style == "slash" else stem
         if key not in i3d or fkey not in feats:
+            continue
+        if RESTRICT is not None and stem not in RESTRICT:
             continue
         yrec = yolo[stem]
         yb = yrec["boxes_xyxyn"].astype(np.float32)

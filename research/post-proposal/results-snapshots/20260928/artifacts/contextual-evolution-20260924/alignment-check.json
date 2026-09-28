@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "canvas": [
+    0,
+    0,
+    2000,
+    1080
+  ],
+  "locked_components": [
+    "frame",
+    "yolo",
+    "candidates",
+    "clips",
+    "video",
+    "features",
+    "crop",
+    "roi",
+    "scene",
+    "geometry",
+    "phrases",
+    "text",
+    "bank",
+    "out",
+    "registration_frame"
+  ],
+  "maximum_coordinate_delta": 0,
+  "note": "Expanded contextual canvas; identical common stations across this six-figure set. Shapes/styles/badges cloned from approved proposal-derived ancestor; no independent cropping."
+}

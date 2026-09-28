@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "reviewer": "/root/dcb_review",
+  "time": 1790012838.546502,
+  "code_sha256": {
+    "dcb.py": "3a3967897a1cdc87fbe285d624084792c5a10e3a028c7498e32d6bd92ffa307a",
+    "train_cached.py": "626e390b8ce862c1970bbfe243df4bc13bbb9c6e4691f7dbc9cf00f23609cfd2",
+    "prepare_blend.py": "63f05c86272dd07dfd799d9b31e285d5740da17f3b4dc94af606efee9c439041",
+    "evaluate_cached.py": "631946eb63763cdc2dd348077e7f0fe5deb396cce6bedcfcdb467479b554fe84",
+    "pipeline.py": "ea7f514c736e84b3bbb8ad6253b8602bca8a4fab3b866912da1a91b3a06052cb",
+    "compare.py": "b846096e9c4ede55a45cf2ca755b510ba904fca52c866204a217c2dfecb9f830",
+    "monitor_local.py": "1dfdd64fe39e37b65adb91e25f93fcd3c6392c98c6c67a27ce54c746c48df1a5",
+    "protocol.json": "758a2c0002d7f125faa8007da32b38f547045c12f431d06726347cff865f8d73"
+  },
+  "tests": "4 unit tests + healthy/failed/inactive/stalled monitor fixtures; actual historical 200step replay passed",
+  "monitor_alert_test": "notify-send exit0; two-minute timer enabled"
+}

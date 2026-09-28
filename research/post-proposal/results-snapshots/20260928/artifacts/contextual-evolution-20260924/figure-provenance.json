@@ -1,0 +1,29 @@
+{
+  "created": "2026-09-24",
+  "ancestors": [
+    {
+      "path": "/data/repos/wiki/artifacts/defense-30min/alignment/stage5.drawio",
+      "sha256": "6478cf6c38c50c8169144d10155dd9d30c2e0d52be1eeb58e5ee230d6fa9fe3c"
+    },
+    {
+      "path": "/data/repos/wiki/artifacts/defense-30min/alignment/stage6.drawio",
+      "sha256": "d1959257ffd0c0a8c7f3abfb060191e30243080d2bc4a98cbfc14b4d79b5ef1c"
+    }
+  ],
+  "template": "1_ywXj_hqlgdC0S68aH3kGAteT5UQ4oH3Q5-Pg6s_TeM",
+  "reference_slides": [
+    "g3f9e8a5a4d7_0_75",
+    "g3f9e8a5a4d7_0_65",
+    "byrd_transition_23"
+  ],
+  "reference_export_note": "Full live template saved/parsed. PDF materialization failed in connector and jq absent; actual reference slide thumbnails downloaded and visually inspected.",
+  "scientific_evidence": "selection.json; technical-evidence.md",
+  "model_ids": [
+    88,
+    89,
+    90,
+    92,
+    94,
+    104
+  ]
+}

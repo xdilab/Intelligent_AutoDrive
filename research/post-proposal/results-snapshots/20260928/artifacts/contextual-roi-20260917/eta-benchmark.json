@@ -1,0 +1,16 @@
+{
+  "mlp": {
+    "train_batch_seconds": 0.010624355461914092,
+    "infer_batch_seconds": 0.006161751966768255,
+    "three_epoch_compute_hours": 0.08880190440249862,
+    "val_forward_hours": 0.0412135626688369
+  },
+  "attention": {
+    "train_batch_seconds": 0.012069409480318427,
+    "infer_batch_seconds": 0.007316868534932534,
+    "three_epoch_compute_hours": 0.10088014757299485,
+    "val_forward_hours": 0.04893968818128902
+  },
+  "time": 1789754445.5087821,
+  "scope": "Synthetic tensors with real shapes, copies and head/loss/optimizer; concurrent scene extraction. Excludes disk IO, checkpoints, AP and startup. Compute component only."
+}

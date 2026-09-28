@@ -1,0 +1,78 @@
+{
+  "version": "contextual-full-context-concat-dcb-20260924",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "epochs": 3,
+  "batch_size": 256,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.01,
+  "save_every": 100,
+  "temperature": 0.07,
+  "conditions": [
+    "attention-classification-dcb",
+    "attention-contrastive-all184-dcb"
+  ],
+  "split": "same420 expert/90 development;90 gate reserved;36717 official validation frames",
+  "selection": "best development triplet crop AP among3 epochs; no final-validation tuning",
+  "comparison_scope": "matched new-head ablations; existing Stage5/6 warm-start adaptation is contextual comparison, not initialization-matched",
+  "contrastive": "corrected all184/adapted-text, lambda0 or .001",
+  "classification": "DCB replaces focal+alpha; detached weights .5+positive residual+past-batch mean residual; all184 labels; mean over entries; whole-run float64 state",
+  "evaluation": "same YOLO candidates/confidence multiplication, official AP@0.5, six heads and common39/tail47/deep28",
+  "scene": "frozen full-clip keyframe16x16 tokens;4x4 scene pool;7x7 actor RoIAlign mean",
+  "position": "trainable embedding of normalized xyxy,cx,cy,w,h, after encoder",
+  "encoder_revision": "1f9fca1389fd883defc652634d95a21121c85a8c",
+  "cache_protection": "manifest/frame/row hashes, exact boxes and targets, atomic per-frame writes",
+  "runtime": "Two localA6000s, six experts and three blend evaluations; frozen cached encoders",
+  "primary": "paired global-blend detector triplet AP delta vs crop-residual DCB104; report all heads and tail groups",
+  "secondary": [
+    "paired classification-expert concat minus original crop residual",
+    "paired contrastive-expert concat minus original crop residual",
+    "concat-by-contrastive interaction",
+    "all agentness/agent/action/location/duplex/triplet metrics and common39/tail47/deep28"
+  ],
+  "inference_storage": "RAM only; per-class metrics checkpointed; inference recomputed on restart",
+  "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+  "authorization": "Brandon September24: quick experiment retaining whole context concatenated with MLP output",
+  "global_grid": [
+    0,
+    0.125,
+    0.25,
+    0.375,
+    0.5,
+    0.625,
+    0.75,
+    0.875,
+    1.0
+  ],
+  "blend_selection": "Exact existing gate partition==1 (45videos); max triplet crop AP, ties smaller contrastive weight; primitive49 from classification",
+  "dcb": {
+    "W0": 0.5,
+    "history": "past batches only, whole run",
+    "zero_positive": 0,
+    "detach": true,
+    "batch_unit": "256 cached boxes",
+    "reduction": "mean box-class entries, differs from published mean boxes/sum classes"
+  },
+  "storage": "Checkpoint/development outputs on home disk; detector scores RAM only",
+  "contrastive_weights": [
+    0,
+    0.001
+  ],
+  "gate_inputs_sha256": {
+    "data/gate-partition.npy": "1a61d329246896b6c3c278d414efe5fd067c3be834fa964fe8067a4f35ec3ebf",
+    "preparation.json": "da7b8e7d8b000f83acbbd3c4ebc8bd09b77dc10cfddc87da456879f7dc7f6ea1",
+    "protocol.json": "a3329e4f44191ceb0e0dae1fe337c486aa5551cc973733dbcc5955da1e43f48a"
+  },
+  "architecture": {
+    "context": "x=concat(c,r,scene_summary,g):2048",
+    "evidence": "e=MLP(x):512",
+    "visual": "v=LN(W concat(x,e)):512",
+    "initialization": "W=[I,0,0,0,I], no bias; exact shared parameter and RNG parity with original; added trainable weights1310720",
+    "scope": "same scene-attention summary; not concatenating all16 raw scene tokens",
+    "confound": "additional projection capacity; does not isolate connectivity from parameter count"
+  },
+  "baseline_root": "/data/repos/wiki/artifacts/contextual-roi-dcb-20260921"
+}

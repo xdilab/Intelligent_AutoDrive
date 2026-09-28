@@ -1,0 +1,32 @@
+{
+  "prepared_job": "731841",
+  "training_array": "731843",
+  "evaluation_array": "731844",
+  "submitted_utc": "2026-09-14T19:42:40.729014+00:00",
+  "code_sha256": {
+    "submit.py": "ea233f92d54c21fadf5ae645c32e46dab6f68e36713b03098d61b0ab5eed3bff",
+    "train.py": "fc8ca36dac0e3f13ac6fca3285b317146a1f082190a5878033ace657d4027ece",
+    "heads.py": "15355f47c2faba35b2afba9cffd9bed8ebab874288dc9078a1edd90048e0ad4e",
+    "README.md": "16b07c84211f85b71170b6b5931dc865968a8fcf7f070f6d9c64194704104601",
+    "train.sbatch": "94438772543405a9d7150d78e86db2b04335250be0c8b3bceaabd745ba7ee932",
+    "protocol.json": "a6cbbb6898448b1986440856c7d57ca9932acb435b3896379a4c5261a1fd4dd0",
+    "evaluate.py": "0b22fb33f92382e89cb4558ec854546e19b68161fdc23d6a7ea8e687c869698d",
+    "baseline-core.py": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9",
+    "guard.py": "936ef9eaa4132d693703ee56ed19c826bbe681e7fb391a57d9dbdd190c6fac89",
+    "prepare.py": "54fb0414839e4602eba4f4991f0c0e93c74d1843a648bf7a6347b0fda714b239",
+    "prepare.sbatch": "6e2e8131715e8391305d41434f38304bad110e4f8d33984694cc75ab4f1bc285",
+    "evaluate.sbatch": "faf454a3d470466ec0fdcce0fb83aea71003e8a24a7ff5f8f8857af5eb10749e",
+    "base.py": "674e76adb79d4ee976a36c40aa4725180d19bf3adfdc1f4c7d3367cc2ba86b4f",
+    "architecture.py": "566a571454ed69208de40b8c389ec628715b43163af34b82058ad41bd27d7529",
+    "metric.py": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c"
+  },
+  "stages": [
+    "stage5",
+    "stage6"
+  ],
+  "conditions": [
+    "frozen",
+    "classification",
+    "contrastive"
+  ]
+}

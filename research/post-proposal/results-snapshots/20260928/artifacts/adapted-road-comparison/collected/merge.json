@@ -1,0 +1,24 @@
+{
+  "train": {
+    "frames": 115602,
+    "row_hashes": {
+      "crop_feats_train.shard0of8.pkl": "63d327e138895eee8ae1cbcdcf4134273de26da6f33be808ff4b9cbc3a2df3f5",
+      "crop_feats_train.shard1of8.pkl": "d5da4c30c3139c353529a0305ba963e8f86eee95e6486b0fc3d39e35b155e165",
+      "crop_feats_train.shard2of8.pkl": "54e284dbab2667347595ae9a594000e617b7414fe67a4ade1ee4730280745ac5",
+      "crop_feats_train.shard3of8.pkl": "3ae7772c8e0d53c95ac60aa0692769b40011f997126ece3ceef54aa8bef75144",
+      "crop_feats_train.shard4of8.pkl": "a37b7e7fcaa753332b6dfd502d72662b44129973e6f810c851c6166803a48fa6",
+      "crop_feats_train.shard5of8.pkl": "d51797bdaee75d04574921093377a82985d10b4533050dce23628c2e64969f0b",
+      "crop_feats_train.shard6of8.pkl": "381cd1623bb4774eea35c1cf43bb6447556fbfb6cf6866bcb0b0a921452dc92d",
+      "crop_feats_train.shard7of8.pkl": "06230b7fc2ee5fa9d9741681437ec8fa876915c41090a5b68e69962083aa8eaf"
+    }
+  },
+  "val": {
+    "frames": 37932,
+    "row_hashes": {
+      "crop_feats_val.shard0of4.pkl": "85949b7ec0bc46eabd4ecd891a2bba6fdab57e81eaa94acd6364444573eef773",
+      "crop_feats_val.shard1of4.pkl": "114f409eec76190db746bdd584e455c25acfe78b6e5123eb0f24e2ec25890e37",
+      "crop_feats_val.shard2of4.pkl": "f66e1a1ed40e87888d556926840c4bcc64df548126f551aa8a557e1747bed1e0",
+      "crop_feats_val.shard3of4.pkl": "baf1625a09d09b93014d0c245a9c4a06b974fe9597de089f8a02698d4e262c47"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "signature": {
+    "protocol_sha256": "8bfb5ddad8dd46d5b6a095c345282f06c6a7bcc149788f9249ab34b3f523b720",
+    "cache_marker_sha256": "854a2c9ac2690ec6367875cf0bcbfce0fa83bb95c322a05ebd51100fea329007",
+    "run": {
+      "seed": 0,
+      "architecture": "stage7-stage5-residual",
+      "contrastive_scope": "all184",
+      "contrastive_target": "adapted_text"
+    },
+    "source_sha256": {
+      "context": "f752b522309fd3ff8215d80699f74ddb92e8bbc7c77542b4509b6ef694e985b1",
+      "head-flat.pt": "83fed51178653a1f423a74423af8f0e9c7896ab8a28ffb24c53898797818d7aa",
+      "stage5.pt": "1462b101d09f9a082eb440eef5a5d5a3c4793eb594621c93668823569711f5b8"
+    },
+    "code_sha256": {
+      "model.py": "d0cfb9a94837a8edb96507b116a2417d07556c93841b33592e2c46944c402074",
+      "contextual.py": "261a41d91bae95c3b3d1483bd68171957b6e5d1d553826f0e046c4d3a6d3ef96",
+      "train_cached.py": "620047f5adb7bf917162d09b75fbfec8cefc279a8fa531986386fa0cba982186"
+    }
+  },
+  "baseline": true
+}
