@@ -3,12 +3,13 @@
 Uses the author's tokenizer/config and explicit frozen LoRA branches so every
 stored tensor is accounted for. Does not accept missing pretrained parameters.
 """
-import argparse, hashlib, json, time
+import argparse, hashlib, json, time, tempfile, shutil, os
 from pathlib import Path
 import torch
 from torch import nn
 from torch.nn import functional as F
 from transformers import LlamaConfig, LlamaModel, LlamaTokenizer
+from legacy_rotary import LegacyRotaryEmbedding
 
 
 def sha(path):
@@ -42,7 +43,25 @@ def main():
     assert assets['passed']
     by_kind = {r['kind']: r for r in assets['files']}
     text_path = Path(by_kind['text']['path'])
-    assert sha(text_path) == by_kind['text']['sha256']
+    # Hash while staging once to node-local scratch; avoid repeated25GB NFS
+    # scans for verification followed by mmap page faults during model loading.
+    scratch_base = os.environ.get('SLURM_TMPDIR', '/tmp')
+    scratch = None
+    if shutil.disk_usage(scratch_base).free > text_path.stat().st_size + (4 << 30):
+        scratch = tempfile.TemporaryDirectory(prefix='road-1b-text-', dir=scratch_base)
+        local_path = Path(scratch.name)/text_path.name
+        h = hashlib.sha256(); copied = 0; report_at = time.monotonic()
+        with text_path.open('rb') as source, local_path.open('wb') as target:
+            for chunk in iter(lambda: source.read(8 << 20), b''):
+                target.write(chunk); h.update(chunk); copied += len(chunk)
+                if time.monotonic()-report_at > 30:
+                    print('TEXT_STAGE_PROGRESS', copied, by_kind['text']['bytes'], flush=True)
+                    report_at = time.monotonic()
+        assert copied == by_kind['text']['bytes'] and h.hexdigest() == by_kind['text']['sha256']
+        text_path = local_path
+        print('TEXT_CHECKPOINT_STAGED_AND_VERIFIED', copied, flush=True)
+    else:
+        assert sha(text_path) == by_kind['text']['sha256']
     tokenizer_path = root/'assets/tokenizer'
     for entry in json.loads((tokenizer_path/'provenance.json').read_text()):
         assert sha(tokenizer_path/entry['file']) == entry['sha256']
@@ -61,6 +80,12 @@ def main():
         if key.startswith('text_encoder.'):
             assert key.endswith('.rotary_emb.inv_freq'), key
             state[key[len('text_encoder.transformer.'):]] = value
+    rotary_keys = {f'layers.{i}.self_attn.rotary_emb.inv_freq' for i in range(32)}
+    assert {k for k in state if k.endswith('.rotary_emb.inv_freq')} == rotary_keys
+    for key in rotary_keys:
+        value = state[key]
+        assert value.shape == (64,) and torch.isfinite(value).all() and (value > 0).all(), key
+        assert torch.equal(value, weights['transformer.' + key]), 'Base/delta rotary mismatch: ' + key
     lora = {}
     for key in list(state):
         if '.lora_A.' in key or '.lora_B.' in key:
@@ -68,14 +93,14 @@ def main():
             side, end = suffix.split('.', 1)
             assert end in ('weight', 'default.weight'), key
             lora.setdefault(module, {})[side] = state.pop(key)
-        elif key.endswith('.rotary_emb.inv_freq'):
-            value = state.pop(key).float()
-            expected = 1 / (10000 ** (torch.arange(0, 128, 2).float() / 128))
-            assert torch.allclose(value, expected, atol=1e-7, rtol=1e-5), key
     expected_modules = {f'layers.{i}.self_attn.{q}' for i in range(32) for q in ('q_proj', 'v_proj')}
     assert set(lora) == expected_modules, sorted(lora)
     with torch.device('meta'):
         model = LlamaModel(cfg)
+    # Real CPU buffers reproduce the publisher-pinned4.28 initialization/load
+    # order and avoid leaving nonpersistent caches on the meta device.
+    for layer in model.layers:
+        layer.self_attn.rotary_emb = LegacyRotaryEmbedding(128, cfg.max_position_embeddings)
     # Copy-on-map tensors retain official checkpoint precision without allocating
     # another randomly initialized 7B model. Strict loading covers every weight.
     model.load_state_dict(state, strict=True, assign=True)
@@ -119,6 +144,7 @@ def main():
     tmp.replace(dest)
     result = {'passed': True, 'time': time.time(), 'phrases': 184, 'width': 768,
               'weights_strict': True, 'frozen_lora_modules': len(lora),
+              'rotary_semantics': 'transformers4.28.1 init-before-load cache; all32 checkpoint buffers preserved',
               'seconds_encoding': time.monotonic()-start, 'phrase_bank_sha256': sha(dest),
               'source_phrase_order_sha256': hashlib.sha256(json.dumps(original['order']).encode()).hexdigest(),
               'peak_allocated_gib': torch.cuda.max_memory_allocated()/1024**3}

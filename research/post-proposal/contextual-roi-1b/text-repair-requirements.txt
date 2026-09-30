@@ -1,0 +1,6 @@
+# Missing dependencies added to the isolated text-packages target, 2026-09-30.
+# Existing transformers/tokenizers/model assets are unchanged.
+requests==2.32.5
+urllib3==2.5.0
+charset-normalizer==3.4.3
+protobuf==4.25.8

@@ -12,4 +12,5 @@ export HF_HOME=/work/bbyrd1/road_crop/hf_cache
 export HF_HUB_OFFLINE=1
 export PYTHONPATH=/work/bbyrd1/bddx-pilot-20260911/packages
 export OMP_NUM_THREADS=8
+export ROAD_FRAME_ROOT=/work/bbyrd1/stage56-full-20260914/frames
 /work/bbyrd1/road_crop/py311/bin/python -u /work/bbyrd1/contextual-roi-1b-20260930/code/benchmark_vision.py --root /work/bbyrd1/contextual-roi-1b-20260930
