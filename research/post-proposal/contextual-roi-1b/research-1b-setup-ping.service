@@ -1,0 +1,7 @@
+[Unit]
+Description=Single requested completion ping for InternVideo2-1B setup
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /data/repos/ROAD_Reason/research/post-proposal/contextual-roi-1b/completion_ping.py --state /data/repos/wiki/artifacts/contextual-roi-1b-20260930
+TimeoutStartSec=70

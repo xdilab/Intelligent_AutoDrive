@@ -1,0 +1,26 @@
+[
+  {
+    "file": "config.json",
+    "sha256": "f2099c1c10bab12afd314b99d6c6f9992cf14613d2521a7391853b16a259d1b1",
+    "bytes": 538,
+    "url": "https://raw.githubusercontent.com/OpenGVLab/InternVL/2410d1dbf208f0e799459aff9376e5747dbf41a2/clip_benchmark/clip_benchmark/models/internvl_c_pytorch/chinese_alpaca_lora_7b/config.json"
+  },
+  {
+    "file": "special_tokens_map.json",
+    "sha256": "e9f51460cefd9c0211c0f0f346682595d02936f05b2ebd409d9fc05c78e481d5",
+    "bytes": 96,
+    "url": "https://raw.githubusercontent.com/OpenGVLab/InternVL/2410d1dbf208f0e799459aff9376e5747dbf41a2/clip_benchmark/clip_benchmark/models/internvl_c_pytorch/chinese_alpaca_lora_7b/special_tokens_map.json"
+  },
+  {
+    "file": "tokenizer.model",
+    "sha256": "2d967e855b1213a439df6c8ce2791f869c84b4f3b6cfacf22b86440b8192a2f8",
+    "bytes": 757972,
+    "url": "https://raw.githubusercontent.com/OpenGVLab/InternVL/2410d1dbf208f0e799459aff9376e5747dbf41a2/clip_benchmark/clip_benchmark/models/internvl_c_pytorch/chinese_alpaca_lora_7b/tokenizer.model"
+  },
+  {
+    "file": "tokenizer_config.json",
+    "sha256": "fda34b0354a0e7ca22928cd47698084559dace7d04324960b08697c53ebbc2f1",
+    "bytes": 806,
+    "url": "https://raw.githubusercontent.com/OpenGVLab/InternVL/2410d1dbf208f0e799459aff9376e5747dbf41a2/clip_benchmark/clip_benchmark/models/internvl_c_pytorch/chinese_alpaca_lora_7b/tokenizer_config.json"
+  }
+]

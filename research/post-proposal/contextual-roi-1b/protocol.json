@@ -1,0 +1,84 @@
+{
+  "version": "contextual-roi-1b-dcb-20260930",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "epochs": 3,
+  "batch_size": 256,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.01,
+  "save_every": 100,
+  "temperature": 0.07,
+  "conditions": [
+    "attention-classification-dcb",
+    "attention-contrastive-all184-dcb"
+  ],
+  "split": "same420 expert/90 development;90 gate reserved;36717 official validation frames",
+  "selection": "best development triplet crop AP among3 epochs; no final-validation tuning",
+  "comparison_scope": "matched new-head ablations; existing Stage5/6 warm-start adaptation is contextual comparison, not initialization-matched",
+  "contrastive": "corrected all184/adapted-text, lambda0 or .001",
+  "classification": "DCB replaces focal+alpha; detached weights .5+positive residual+past-batch mean residual; all184 labels; mean over entries; whole-run float64 state",
+  "evaluation": "same YOLO candidates/confidence multiplication, official AP@0.5, six heads and common39/tail47/deep28",
+  "scene": "frozen full-clip keyframe16x16 tokens;4x4 scene pool;7x7 actor RoIAlign mean",
+  "position": "trainable embedding of normalized xyxy,cx,cy,w,h, after encoder",
+  "cache_protection": "manifest/frame/row hashes, exact boxes and targets, atomic per-frame writes",
+  "runtime": "NCShare H200; benchmark first; full extraction concurrency chosen from measured memory/throughput and free allocation.",
+  "primary": "1B DCB expert blend versus existing model104 on locked detector protocol; report all heads, triplet, tail47 and deep28",
+  "secondary": [
+    "DCB classification versus DCB+all184 contrastive at the new encoder size, paired seeds",
+    "AP-selected blend versus each new expert, paired seeds"
+  ],
+  "authorization": "Brandon September30: queue larger encoder on NCShare using model104 DCB expert blend",
+  "global_grid": [
+    0,
+    0.125,
+    0.25,
+    0.375,
+    0.5,
+    0.625,
+    0.75,
+    0.875,
+    1.0
+  ],
+  "blend_selection": "Exact existing gate partition==1 (45videos); max triplet crop AP, ties smaller contrastive weight; primitive49 from classification",
+  "dcb": {
+    "W0": 0.5,
+    "history": "past batches only, whole run",
+    "zero_positive": 0,
+    "detach": true,
+    "batch_unit": "256 cached boxes",
+    "reduction": "mean box-class entries, differs from published mean boxes/sum classes"
+  },
+  "storage": "Large weights and per-frame resumable feature shards remain on NCShare; collect compact metrics and head checkpoints locally.",
+  "contrastive_weights": [
+    0,
+    0.001
+  ],
+  "status": "asset-download-running-visual-benchmark-queued",
+  "parent_architecture": "model104: attention DCB classification expert102 + attention DCB all184 contrastive expert103, AP-selected global blend",
+  "encoder": {
+    "clip_repo": "OpenGVLab/InternVideo2-CLIP-1B-224p-f8",
+    "clip_revision": "b8f9edd6cacdbede471fd2fa58439e0b97a6dc1b",
+    "clip_file": "1B_clip.pth",
+    "base_repo": "OpenGVLab/InternVideo2-Stage2_1B-224p-f4",
+    "base_revision": "4362e1f88a992e7edbfd7696f7f78b7f79426dfd",
+    "base_file": "InternVideo2-stage2_1b-224p-f4.pt",
+    "text_repo": "OpenGVLab/InternVL",
+    "text_revision": "851fb933056db175ce98036baec2dd6826cd2c26",
+    "text_file": "internvl_c_13b_224px.pth",
+    "frozen": true,
+    "frames": 8,
+    "resolution": 224,
+    "visual_width": 1408,
+    "visual_layers": 40,
+    "projected_text_width": 768,
+    "tokenizer_provenance": "tokenizer-provenance.json; publisher-linked InternVL repository at2410d1dbf208f0e799459aff9376e5747dbf41a2"
+  },
+  "root": "/work/bbyrd1/contextual-roi-1b-20260930",
+  "encoder_scaling_caveat": "Video and text checkpoints change; not a pure parameter-count ablation.",
+  "head_interface": "Preserve512-dimensional contextual head. A trainable768-to512 text input projection is required and must be documented/tested; visual projections accept1408 inputs. Do not reuse old expert weights.",
+  "selection_contract": "Preserve exact420/90/90 partitions and the same45-video gate-selection subset. Never select on official val.",
+  "benchmark_scope": "Compatibility/runtime only, no training or model selection; must pass before full extraction submission."
+}
