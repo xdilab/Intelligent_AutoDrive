@@ -24,7 +24,7 @@
   "scene": "frozen full-clip keyframe16x16 tokens;4x4 scene pool;7x7 actor RoIAlign mean",
   "position": "trainable embedding of normalized xyxy,cx,cy,w,h, after encoder",
   "cache_protection": "manifest/frame/row hashes, exact boxes and targets, atomic per-frame writes",
-  "runtime": "NCShare H200; benchmark first; full extraction concurrency chosen from measured memory/throughput and free allocation.",
+  "runtime": "Eight H200 extraction workers, six matched head runs, three selected blends, nine detector evaluations; dependency gated and resumable.",
   "primary": "1B DCB expert blend versus existing model104 on locked detector protocol; report all heads, triplet, tail47 and deep28",
   "secondary": [
     "DCB classification versus DCB+all184 contrastive at the new encoder size, paired seeds",
@@ -56,7 +56,7 @@
     0,
     0.001
   ],
-  "status": "asset-download-running-visual-benchmark-queued",
+  "status": "full-study-prepared",
   "parent_architecture": "model104: attention DCB classification expert102 + attention DCB all184 contrastive expert103, AP-selected global blend",
   "encoder": {
     "clip_repo": "OpenGVLab/InternVideo2-CLIP-1B-224p-f8",
@@ -80,5 +80,14 @@
   "encoder_scaling_caveat": "Video and text checkpoints change; not a pure parameter-count ablation.",
   "head_interface": "Preserve512-dimensional contextual head. A trainable768-to512 text input projection is required and must be documented/tested; visual projections accept1408 inputs. Do not reuse old expert weights.",
   "selection_contract": "Preserve exact420/90/90 partitions and the same45-video gate-selection subset. Never select on official val.",
-  "benchmark_scope": "Compatibility/runtime only, no training or model selection; must pass before full extraction submission."
+  "benchmark_scope": "Compatibility/runtime only, no training or model selection; must pass before full extraction submission.",
+  "extraction_batch_size": 32,
+  "extraction_shards": 8,
+  "frames": "/work/bbyrd1/contextual-roi-1b-20260930/frames",
+  "precision": "New shared caches: float32 ImageNet normalization and RoIAlign, bf16 frozen encoder, float32 keyframe pooling, storedfloat16. Parent crop cache used fp16 preprocessing/encoder; this numerical-path change is disclosed with checkpoint scaling, not isolated parameter scaling.",
+  "gate_inputs_sha256": {
+    "preparation.json": "da7b8e7d8b000f83acbbd3c4ebc8bd09b77dc10cfddc87da456879f7dc7f6ea1",
+    "protocol.json": "a3329e4f44191ceb0e0dae1fe337c486aa5551cc973733dbcc5955da1e43f48a",
+    "gate-partition.npy": "1a61d329246896b6c3c278d414efe5fd067c3be834fa964fe8067a4f35ec3ebf"
+  }
 }

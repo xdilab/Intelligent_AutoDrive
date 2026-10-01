@@ -1,5 +1,17 @@
 # InternVideo2-1B contextual DCB scale-up
 
+## Current status — October1,2026
+
+Full study is now submitted. Historical setup-only statements below describe September30.
+Jobs:745916 preparation →745917 eight cache shards →745918 compaction →745919 real-cache preflight →745920 six head runs →745921 three blends →745922 nine detector evaluations →745923 summary. GPU tasks use priority H200. All dependencies require success. Frozen new encoders, exact original manifests,3seeds and3epochs; protocol.json records numerical/checkpoint-scaling caveats. Synthetic initialization/gradient/DCB checkpoint-replay tests passed before submission.
+
+`stage_inputs.py` verifies original frame hashes and restores153,841required images with fresh destination mtimes into this study's frames directory. `prepare_full.py` verifies transferred bytes and exact metadata before GPUs. `cache_full.py` produces atomic resumable per-frame features; `compact_full.py` validates fingerprints/boxes before exposing arrays. `train_cached.py` saves optimizer/RNG/DCB state every100steps. `prepare_blend.py` uses only the existing45-video selector. `evaluate_cached.py` resumes per-class detector metrics; `summarize_full.py` requires all nine reports.
+
+`research-1b-full-monitor.timer` checks scheduler/logs every2minutes. `monitor_full.py` keeps hourly atomic head snapshots off-cluster in `/home/brandon/.local/share/road-reason/contextual-roi-1b-20260930/`, checks finite model weights and required resume state, and records hashes. Large reproducible caches stay remote. Initial backup check was empty because no training checkpoint existed. Completion gets a single desktop notification, no repeated alerts. Monitoring is not automatic repair; automatic approval review rejected extending the persistent repair prompt and that prompt was not changed.
+
+Provisional first development result16–30hours, full detector study24–48hours plus queue, from12:11EDT October1. Basis:~50GPUhours encoder-only for9.9Mrows at55crops/s, eight workers, plus input/scene/I/O/compaction/head/evaluation allowances; replace with measured phase throughput.
+
+
 Authorized September30,2026. Target is model104 with both attention contextual DCB experts and their AP-selected global blend. See protocol.json. Preserve YOLOv8x boxes,184 labels, crop/RoI/entire-frame inputs, geometry, all184 pre-fusion visual-RoI versus adapted-text contrastive loss, and all three seeds.
 
 ## Prelaunch dependencies

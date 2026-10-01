@@ -1,0 +1,6 @@
+[Unit]
+Description=Monitor and back up authorized InternVideo2-1B study
+[Service]
+Type=oneshot
+ExecStart=/home/brandon/miniconda3/bin/python3 /data/repos/ROAD_Reason/research/post-proposal/contextual-roi-1b/monitor_full.py
+TimeoutStartSec=2400

@@ -1,0 +1,8 @@
+[Unit]
+Description=Check InternVideo2-1B progress every two minutes
+[Timer]
+OnBootSec=2min
+OnUnitInactiveSec=2min
+Unit=research-1b-full-monitor.service
+[Install]
+WantedBy=timers.target
