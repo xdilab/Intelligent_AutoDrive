@@ -1,0 +1,8 @@
+[Unit]
+Description=Check ROAD-adapted contextual transfer every two minutes
+[Timer]
+OnBootSec=2min
+OnUnitInactiveSec=2min
+Unit=research-road-transfer-monitor.service
+[Install]
+WantedBy=timers.target
