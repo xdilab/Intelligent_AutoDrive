@@ -1,5 +1,9 @@
 # Intelligent_AutoDrive — Compositional Road-Event Detection
 
+[![CSEB recorded inference — agent, action and location predictions](docs/assets/cseb-inference-hero.gif)](docs/assets/cseb-prototype.mp4)
+
+*Recorded CSEB inference · [Watch the video](docs/assets/cseb-prototype.mp4) · [Explore the demo](research/post-proposal/demo/README.md)*
+
 Master's thesis research by **Brandon L. Byrd**, supervised by **Dr. Hamidreza Moradi** at **North Carolina A&T State University**.
 
 This repository studies how object appearance, scene context, and language representations can support **agent–action–location detection on ROAD-Waymo**, including rare combinations. The work progresses from RoI classifiers and semantic crop models to **CSEB: Contextual Scene-Attention Expert Blend**, the headline architecture. The thesis has been successfully defended; the journal extension is in progress.
