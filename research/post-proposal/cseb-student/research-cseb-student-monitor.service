@@ -1,0 +1,8 @@
+[Unit]
+Description=Silent CSEB student logs and checkpoint monitor
+
+[Service]
+Type=oneshot
+Environment=PYTHONPATH=/home/brandon/.local/share/road-reason/cseb-demo-runtime/packages
+ExecStart=/home/brandon/miniconda3/envs/road_reason/bin/python /data/repos/ROAD_Reason/research/post-proposal/cseb-student/monitor_expanded.py --root /home/brandon/.local/share/road-reason/cseb-student-expanded-20261019 --evidence /data/repos/wiki/artifacts/cseb-student-expanded-20261019/monitor
+TimeoutStartSec=90

@@ -1,0 +1,286 @@
+{
+  "date": "2026-10-19",
+  "architecture": "Frozen ResNet50 through layer3 + shared RoI features + causal scene GRU256 + score head",
+  "groups": {
+    "train": [
+      "train_00169",
+      "train_00254",
+      "train_00532",
+      "train_00587",
+      "train_00315",
+      "train_00272",
+      "train_00365",
+      "train_00002"
+    ],
+    "selection": [
+      "train_00307",
+      "train_00334",
+      "train_00363"
+    ],
+    "heldout": [
+      "train_00507",
+      "train_00468",
+      "train_00082"
+    ]
+  },
+  "frames": 112,
+  "proposals": 2842,
+  "metrics": {
+    "supervised": {
+      "proposals": 550,
+      "matched": 415,
+      "teacher_mae": 0.020463548600673676,
+      "triplet_top1_agreement": 0.02181818181818182,
+      "action": {
+        "supported_classes": 11,
+        "total_classes": 22,
+        "proposal_mAP": 0.17132076841939414
+      },
+      "loc": {
+        "supported_classes": 9,
+        "total_classes": 16,
+        "proposal_mAP": 0.24050511751636064
+      },
+      "duplex": {
+        "supported_classes": 17,
+        "total_classes": 49,
+        "proposal_mAP": 0.17622333116049502
+      },
+      "triplet": {
+        "supported_classes": 17,
+        "total_classes": 86,
+        "proposal_mAP": 0.11586282867656411
+      },
+      "bce": 0.07249743491411209,
+      "selected_epoch": 7,
+      "trainable_parameters": 1108568
+    },
+    "distilled": {
+      "proposals": 550,
+      "matched": 415,
+      "teacher_mae": 0.015854617580771446,
+      "triplet_top1_agreement": 0.21272727272727274,
+      "action": {
+        "supported_classes": 11,
+        "total_classes": 22,
+        "proposal_mAP": 0.30845413772579977
+      },
+      "loc": {
+        "supported_classes": 9,
+        "total_classes": 16,
+        "proposal_mAP": 0.41163104177449283
+      },
+      "duplex": {
+        "supported_classes": 17,
+        "total_classes": 49,
+        "proposal_mAP": 0.2872759509378389
+      },
+      "triplet": {
+        "supported_classes": 17,
+        "total_classes": 86,
+        "proposal_mAP": 0.2411682093348082
+      },
+      "bce": 0.05716706067323685,
+      "selected_epoch": 26,
+      "trainable_parameters": 1108568
+    },
+    "teacher": {
+      "proposals": 550,
+      "matched": 415,
+      "teacher_mae": 0.0,
+      "triplet_top1_agreement": 1.0,
+      "action": {
+        "supported_classes": 11,
+        "total_classes": 22,
+        "proposal_mAP": 0.6569774067427884
+      },
+      "loc": {
+        "supported_classes": 9,
+        "total_classes": 16,
+        "proposal_mAP": 0.552187271335816
+      },
+      "duplex": {
+        "supported_classes": 17,
+        "total_classes": 49,
+        "proposal_mAP": 0.6227173199047386
+      },
+      "triplet": {
+        "supported_classes": 17,
+        "total_classes": 86,
+        "proposal_mAP": 0.5788424951675998
+      }
+    },
+    "training_teacher_mean": {
+      "proposals": 550,
+      "matched": 415,
+      "teacher_mae": 0.02763333171606064,
+      "triplet_top1_agreement": 0.0,
+      "action": {
+        "supported_classes": 11,
+        "total_classes": 22,
+        "proposal_mAP": 0.19660827407938505
+      },
+      "loc": {
+        "supported_classes": 9,
+        "total_classes": 16,
+        "proposal_mAP": 0.1644294164286112
+      },
+      "duplex": {
+        "supported_classes": 17,
+        "total_classes": 49,
+        "proposal_mAP": 0.15216577436735007
+      },
+      "triplet": {
+        "supported_classes": 17,
+        "total_classes": 86,
+        "proposal_mAP": 0.12067847245100075
+      }
+    },
+    "training_seconds": 7.5560124148614705
+  },
+  "latency": {
+    "records": [
+      {
+        "video": "train_00507",
+        "fid": 40,
+        "proposals": 6,
+        "teacher_seconds": 1.2822317676618695,
+        "student_seconds": 0.07390398718416691,
+        "warmup": true
+      },
+      {
+        "video": "train_00507",
+        "fid": 41,
+        "proposals": 6,
+        "teacher_seconds": 0.6512755453586578,
+        "student_seconds": 0.03730792226269841,
+        "warmup": false
+      },
+      {
+        "video": "train_00507",
+        "fid": 42,
+        "proposals": 6,
+        "teacher_seconds": 0.6539268149062991,
+        "student_seconds": 0.038832131307572126,
+        "warmup": false
+      },
+      {
+        "video": "train_00507",
+        "fid": 43,
+        "proposals": 5,
+        "teacher_seconds": 0.5733903651125729,
+        "student_seconds": 0.03808460896834731,
+        "warmup": false
+      },
+      {
+        "video": "train_00468",
+        "fid": 40,
+        "proposals": 44,
+        "teacher_seconds": 3.822930368129164,
+        "student_seconds": 0.03934196522459388,
+        "warmup": true
+      },
+      {
+        "video": "train_00468",
+        "fid": 41,
+        "proposals": 45,
+        "teacher_seconds": 3.913007323164493,
+        "student_seconds": 0.038951397873461246,
+        "warmup": false
+      },
+      {
+        "video": "train_00468",
+        "fid": 42,
+        "proposals": 47,
+        "teacher_seconds": 4.083156045991927,
+        "student_seconds": 0.03966417582705617,
+        "warmup": false
+      },
+      {
+        "video": "train_00468",
+        "fid": 43,
+        "proposals": 47,
+        "teacher_seconds": 4.092017671093345,
+        "student_seconds": 0.0384078910574317,
+        "warmup": false
+      },
+      {
+        "video": "train_00082",
+        "fid": 40,
+        "proposals": 17,
+        "teacher_seconds": 1.5961189358495176,
+        "student_seconds": 0.03911035927012563,
+        "warmup": true
+      },
+      {
+        "video": "train_00082",
+        "fid": 41,
+        "proposals": 18,
+        "teacher_seconds": 1.6828580391593277,
+        "student_seconds": 0.038341575767844915,
+        "warmup": false
+      },
+      {
+        "video": "train_00082",
+        "fid": 42,
+        "proposals": 21,
+        "teacher_seconds": 1.9297927250154316,
+        "student_seconds": 0.039130867924541235,
+        "warmup": false
+      },
+      {
+        "video": "train_00082",
+        "fid": 43,
+        "proposals": 18,
+        "teacher_seconds": 1.6849698536098003,
+        "student_seconds": 0.03829066129401326,
+        "warmup": false
+      }
+    ],
+    "teacher_median_seconds": 1.6849698536098003,
+    "student_median_seconds": 0.0384078910574317,
+    "student_backbone_parameters": 8543296,
+    "student_head_parameters": 1108568,
+    "scope": "Paired GPU pipeline with YOLO and CPU score export; excludes disk decode/loading; first frame per video excluded as warmup;12 frames.",
+    "median_speedup": 43.870408065109544
+  },
+  "runtime_verification": {
+    "passed": true,
+    "video": "train_00507",
+    "frames": 8,
+    "max_abs_score_error": 0.0,
+    "frame_seconds": [
+      0.7229904010891914,
+      0.03786122892051935,
+      0.03698409302160144,
+      0.036672674119472504,
+      0.036899161990731955,
+      0.036799343302845955,
+      0.037103969138115644,
+      0.03741783229634166
+    ],
+    "scope": "fresh detector/backbone/causal state vs stored heldout features; one8-frame segment"
+  },
+  "checkpoints": {
+    "supervised": {
+      "path": "/home/brandon/.local/share/road-reason/cseb-student-20261019/supervised-best.pt",
+      "sha256": "f7850a40430c6143e0c9aff8688c5d052518574aa67a44c4ee4262902411398d",
+      "backup": "/home/brandon/.local/share/road-reason/cseb-student-20261019/verified-checkpoint-backup/supervised-best.pt",
+      "verified_at": 1792433829.3474889
+    },
+    "distilled": {
+      "path": "/home/brandon/.local/share/road-reason/cseb-student-20261019/distilled-best.pt",
+      "sha256": "afb94c6f6e852ea86df250eda1b57935f258fe0b70a6777d8dcaf8255685161d",
+      "backup": "/home/brandon/.local/share/road-reason/cseb-student-20261019/verified-checkpoint-backup/distilled-best.pt",
+      "verified_at": 1792433829.3854141
+    }
+  },
+  "source_sha256": {
+    "test_student.py": "3698ff0653a3a653909fe99caba7b674e17c0d4084d6532a834b5acb2f3248f3",
+    "inference.py": "c16fa78b3a9141874b8d4c5c6c38ed7bc5f19a41d8f95a6bb4bf0e4b3ab58a00",
+    "model.py": "5808624cc0432a4626f86bd69b83ddc398742b86862eeea0fd62fbd5a2deb7a9",
+    "verify_runtime.py": "9cfa2fff5b692207261e43637afcdbfc6754c276a495f20e6947870962ee09c7",
+    "pilot.py": "c2da7f5eb8b2d536b76d25a6afc64e4ada07b503f43bc10e972558bdc3af6305"
+  },
+  "scope": "One-seed14-video feasibility pilot; heldout student data are3 development videos/24frames. AP is proposal AP over supported classes, not official detector AP. Frozen backbone; no object tracking; future context removed. No promotion."
+}

@@ -1,0 +1,8 @@
+# Install matching CUDA PyTorch wheels for the target GPU first.
+# Verified workstation versions; no teacher encoder/Hugging Face assets required.
+torch==2.4.1
+torchvision==0.19.1
+numpy==2.4.3
+opencv-python==4.13.0.92
+ultralytics==8.3.226
+Pillow==12.1.1

@@ -1,0 +1,14 @@
+[Unit]
+Description=CSEB student expanded-data candidate (bounded)
+
+[Service]
+Type=simple
+WorkingDirectory=/data/repos/ROAD_Reason/research/post-proposal/cseb-student
+Environment=PYTHONPATH=/home/brandon/.local/share/road-reason/cseb-demo-runtime/packages
+Environment=CUDA_VISIBLE_DEVICES=0
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/brandon/miniconda3/envs/road_reason/bin/python /data/repos/ROAD_Reason/research/post-proposal/cseb-student/run_expanded.py --root /home/brandon/.local/share/road-reason/cseb-student-expanded-20261019 --base /home/brandon/.local/share/road-reason/cseb-student-20261019
+RuntimeMaxSec=7200
+TimeoutStopSec=30
+KillMode=control-group
+Restart=no

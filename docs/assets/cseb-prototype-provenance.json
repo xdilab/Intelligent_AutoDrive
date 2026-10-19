@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-19",
+  "style": "dark minimal brutalist blueprint",
+  "files": [
+    {
+      "file": "cseb-prototype.png",
+      "source": "wiki/artifacts/cseb-prototype-20261019/brutalist/final/preview.png",
+      "sha256": "d9da7a53ee530d8cc6365a0cbefedcd077d1ec7995e564ecee6cebbedb383dc2"
+    },
+    {
+      "file": "cseb-prototype.mp4",
+      "source": "wiki/artifacts/cseb-prototype-20261019/brutalist/final/cseb-prototype.mp4",
+      "sha256": "6f31a075b2439e49915658e7336ecf53094f145d6a94da9d935d03397b0708a9"
+    },
+    {
+      "file": "cseb-demo.html",
+      "source": "wiki/artifacts/cseb-prototype-20261019/viewport/verified/index.html",
+      "sha256": "22c6f5bcc82c13613ebf9ab0429cbfbe2dc1ce36787e00362fe7eddb04e95595",
+      "source_sha256": "a0df886d86aa61c38bd49d2e0546c079e0dbcb8a52f6a49b27c7b7946feddc1d",
+      "packaging_change": "Removed whitespace from one empty line; embedded data and behavior unchanged."
+    }
+  ],
+  "checkpoint_sha256": "968aefaf7d9f896dd360baf1ab39fb75777693dbcdbd9a2663fb6696ae6c5567",
+  "manifest_sha256": "bf8182ff98c55d3fd64beec5a8ffe3f41bd2eadbfb2d1bfb790d6ad11c996cd7",
+  "prediction_sha256": "e419885f38b2de8cafecbc8aebeb6ea359c3b2169d418dd8919026d54cbcbbc7",
+  "frames": 120,
+  "fps": 10,
+  "verification": "wiki/artifacts/cseb-prototype-20261019/brutalist/verification.json",
+  "viewer_verification": "wiki/artifacts/cseb-prototype-20261019/viewport/browser-validation.json"
+}

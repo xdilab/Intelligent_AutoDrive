@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "frames": 120,
+  "loading_seconds": 0.905617967247963,
+  "video_decode_inference_export_seconds": 5.638010803144425,
+  "median_processing_seconds_excluding_first": 0.038856356870383024,
+  "input_video": "/data/datasets/road_waymo/videos/train_00507.mp4",
+  "display": false,
+  "camera_hardware_tested": false,
+  "bundle_manifest_sha256": "db88e26896af8654551f6754d751130044792b6ff4e15505edb743fdd080f22f",
+  "scope": "Fresh video decode, YOLO, student recurrent inference and JSONL export; no pacing/display;120frames at10Hz sampling."
+}

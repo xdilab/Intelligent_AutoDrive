@@ -1,0 +1,85 @@
+{
+  "collected": "2026-10-19",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "protocol_sha256": "7e96bfece24e798154437db061cad32a93e4d8c5c62695b79b406486afd93945",
+  "files": [
+    {
+      "source": "wiki/artifacts/contextual-roi-1b-20260930/results-verified-20261005/attention-classification-dcb-seed0-detector-results.json",
+      "source_sha256": "e806ed86029af73375e5fa1266a1acf7e679b690815570862c81ad21ef632511",
+      "file": "scaled-cseb/runs/attention-classification-dcb-seed0/detector-results.json",
+      "sha256": "3360f37bea0ab5dbd95716d4e8eedd59c7ca694051a89191c3ebca5355e1951d",
+      "source_trailing_newline_removed": true
+    },
+    {
+      "source": "wiki/artifacts/contextual-roi-1b-20260930/results-verified-20261005/attention-classification-dcb-seed1-detector-results.json",
+      "source_sha256": "ed5669972af60ac287a22551bd7e9994ecab3d196eec3c1b0fd92d2c3aa16d32",
+      "file": "scaled-cseb/runs/attention-classification-dcb-seed1/detector-results.json",
+      "sha256": "066bc18162c5c29792f7fa90aa62390bc0a3d4c886767a35a0cfd24d7b5123a6",
+      "source_trailing_newline_removed": true
+    },
+    {
+      "source": "wiki/artifacts/contextual-roi-1b-20260930/results-verified-20261005/attention-classification-dcb-seed2-detector-results.json",
+      "source_sha256": "3bff638fadef90a162cc0e9c42d8c853eb060a0623554b2753fc2d99a0a34300",
+      "file": "scaled-cseb/runs/attention-classification-dcb-seed2/detector-results.json",
+      "sha256": "846c4c0fc7062dc86684b3456f09d5e91313206989d2b9b803a4ca3feeae338a",
+      "source_trailing_newline_removed": true
+    },
+    {
+      "source": "wiki/artifacts/contextual-roi-1b-20260930/results-verified-20261005/attention-contrastive-all184-dcb-seed0-detector-results.json",
+      "source_sha256": "5eb6d5fcda571d9a7ce88a1a477f6867fc41c12d03a34b76c84740f937341fbd",
+      "file": "scaled-cseb/runs/attention-contrastive-all184-dcb-seed0/detector-results.json",
+      "sha256": "2036be93b49251a0ba93d12ffb7dea2a713c4ed76f45276692f42f96ad830a1a",
+      "source_trailing_newline_removed": true
+    },
+    {
+      "source": "wiki/artifacts/contextual-roi-1b-20260930/results-verified-20261005/attention-contrastive-all184-dcb-seed1-detector-results.json",
+      "source_sha256": "21abf53126b1566dca1ada7d72c375bf114679eca8417223f31bc65611d48103",
+      "file": "scaled-cseb/runs/attention-contrastive-all184-dcb-seed1/detector-results.json",
+      "sha256": "8ebaea4bb0ba9cbb02bf7d493cd2bf4adc2edc0284dcac45979ad76455775ae7",
+      "source_trailing_newline_removed": true
+    },
+    {
+      "source": "wiki/artifacts/contextual-roi-1b-20260930/results-verified-20261005/attention-contrastive-all184-dcb-seed2-detector-results.json",
+      "source_sha256": "d5b692f96ce8400fd4f992916919727e71e7c91af5266f7f92e0481cf794472e",
+      "file": "scaled-cseb/runs/attention-contrastive-all184-dcb-seed2/detector-results.json",
+      "sha256": "9c1449e7da26085a025b015245aa34643a7f427789c340460cfe88769bac0b7e",
+      "source_trailing_newline_removed": true
+    },
+    {
+      "source": "wiki/artifacts/contextual-roi-1b-20260930/results-verified-20261005/attention-global-dcb-seed0-detector-results.json",
+      "source_sha256": "8acbaaf71a3f158727be5f53b0527e77c278b0f6ea7fa4954a858849fe754176",
+      "file": "scaled-cseb/runs/attention-global-dcb-seed0/detector-results.json",
+      "sha256": "36e5e36d277382a925933c1d6689cbb5829877e98a25133145c8a0d07b30bcba",
+      "source_trailing_newline_removed": true
+    },
+    {
+      "source": "wiki/artifacts/contextual-roi-1b-20260930/results-verified-20261005/attention-global-dcb-seed1-detector-results.json",
+      "source_sha256": "562770ab8c5cfdd1eb76542150497bfead7533da159b38e9d04484f342753f11",
+      "file": "scaled-cseb/runs/attention-global-dcb-seed1/detector-results.json",
+      "sha256": "c7bf3273b2c6ad5ed6b6e744cf511d59b753dd6c8164462cc563c6a384c10714",
+      "source_trailing_newline_removed": true
+    },
+    {
+      "source": "wiki/artifacts/contextual-roi-1b-20260930/results-verified-20261005/attention-global-dcb-seed2-detector-results.json",
+      "source_sha256": "e9addf1e5b23949b183dca75f7b8f32f05bad094c01f02c996385fd6b2fa1c92",
+      "file": "scaled-cseb/runs/attention-global-dcb-seed2/detector-results.json",
+      "sha256": "8afdcbfec657612326ae6056068e1c56396ad5e8f5962670db21e1c833b8e06b",
+      "source_trailing_newline_removed": true
+    },
+    {
+      "source": "wiki/artifacts/contextual-roi-1b-20260930/results-verified-20261005/full-summary.json",
+      "file": "scaled-cseb/full-summary.json",
+      "sha256": "dc2b40e73f1c29806676cfd02b2801888194105c3d85aea7a97a8d85a0fd69a5"
+    },
+    {
+      "source": "wiki/artifacts/cseb-prototype-20261019/end-to-end-verification.json",
+      "file": "demo-verification.json",
+      "sha256": "7e485be986b14a54b67b44354978ba321011caa041c799eb51390252f1f692b2"
+    }
+  ],
+  "verification": "All9 raw detector hashes match source summary; each has36717 frames; means and sample SD recomputed."
+}

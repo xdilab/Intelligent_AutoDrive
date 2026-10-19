@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-19",
+  "gpu": "NVIDIA RTX A6000",
+  "torch": "2.4.1+cu124",
+  "cuda": "12.4",
+  "selected_backend": "eager GPU-resident, crop batch8",
+  "attention_operators": [
+    {
+      "name": "aten::scaled_dot_product_attention",
+      "count": 80
+    },
+    {
+      "name": "aten::_scaled_dot_product_flash_attention",
+      "count": 40
+    },
+    {
+      "name": "aten::_flash_attention_forward",
+      "count": 40
+    }
+  ],
+  "paired_three_frame_comparison": [
+    {
+      "name": "reference",
+      "batch": 8,
+      "total_seconds": 8.35824071103707,
+      "median_seconds": 2.781736860051751,
+      "passed": true,
+      "speedup": 1.0,
+      "peak_allocated_gib": 4.96978235244751
+    },
+    {
+      "name": "resident",
+      "batch": 8,
+      "total_seconds": 8.373625868931413,
+      "median_seconds": 2.7850455748848617,
+      "passed": true,
+      "speedup": 0.9981626647601457,
+      "peak_allocated_gib": 4.969841003417969
+    },
+    {
+      "name": "resident",
+      "batch": 16,
+      "total_seconds": 8.25604470865801,
+      "median_seconds": 2.7440285379998386,
+      "passed": true,
+      "speedup": 1.0123783247287759,
+      "peak_allocated_gib": 5.638830184936523
+    }
+  ],
+  "compiled_candidate": {
+    "accepted": false,
+    "warmup_seconds": 90.156633595936,
+    "frame_seconds": [
+      2.0801328038796782,
+      33.43782505393028,
+      1.9516450478695333
+    ],
+    "max_abs_score_error": 0.021671563386917114,
+    "triplet_top1_equal": false,
+    "note": "New batch shape compilation occurs in the measured second frame; these are not all steady-state timings."
+  },
+  "full120": {
+    "frames": 120,
+    "candidates": 3634,
+    "total_wall_seconds": 345.88556189183146,
+    "load_seconds": 13.889703172724694,
+    "frame_wall_seconds": 331.94845332670957,
+    "encoder_seconds": 324.530174871441,
+    "heads_seconds": 0.9112859517335892,
+    "yolo_seconds": 4.370083024259657,
+    "median_frame_seconds": 2.7380847465246916,
+    "fps_excluding_load": 0.3615019103038081,
+    "peak_allocated_gib": 4.990133285522461,
+    "scores_exact": true,
+    "checked_score_values": 2005968,
+    "max_abs_score_error": 0.0
+  },
+  "conclusion": "Inference packaging and parity achieved; no substantial validated encoder speedup. No distillation or new detector AP evaluation.",
+  "evidence": "wiki/artifacts/cseb-deployment-20261019/",
+  "original_demo_comparison_note": "Original358.93s run included caches, head subprocess and rendering; full-run wall times are not a controlled accelerator comparison. Use paired timings for speed conclusions."
+}

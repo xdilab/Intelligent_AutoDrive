@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-19",
+  "scope": "Unmodified existing approved diagram sources and exports; captions explicitly identify shared-parent figures for later code variants.",
+  "reference": "wiki/tools/defense-diagram-reference.md",
+  "files": [
+    {
+      "file": "assets/stage0.png",
+      "source": "wiki/artifacts/defense-30min/alignment/stage0.png",
+      "sha256": "6deea329d2aa3e1033d8253527fa28232a19a949eac4627932d32571efaafcd9",
+      "bytes": 69728
+    },
+    {
+      "file": "assets/stage0.drawio",
+      "source": "wiki/artifacts/defense-30min/alignment/stage0.drawio",
+      "sha256": "af3b2ebf2a4b2f6ffa41466aad39c987ea0e49fa83d46b54a2dfcdb3b8a6ab38",
+      "bytes": 10197
+    },
+    {
+      "file": "assets/stage1.png",
+      "source": "wiki/artifacts/defense-30min/alignment/stage1.png",
+      "sha256": "ea8dbd6042c1c1df12f4b4e2a8ff424996c560e956e75be3a1ef11afcdffe285",
+      "bytes": 161874
+    },
+    {
+      "file": "assets/stage1.drawio",
+      "source": "wiki/artifacts/defense-30min/alignment/stage1.drawio",
+      "sha256": "8ceccd3bfc5d810a646b968d53a23abf2cce90c576058db9ff736fd435b7fef4",
+      "bytes": 19188
+    },
+    {
+      "file": "assets/stage2.png",
+      "source": "wiki/artifacts/defense-30min/alignment/stage2.png",
+      "sha256": "59349db9e7732db0322ca6eb8bff9e1accbb64fc0d0f37ac4da2aa5d7be54718",
+      "bytes": 144582
+    },
+    {
+      "file": "assets/stage2.drawio",
+      "source": "wiki/artifacts/defense-30min/alignment/stage2.drawio",
+      "sha256": "7dc0fdddb063ec8e974c9c469553734b09fe86bd43b2b69851076c8fd37d9731",
+      "bytes": 27549
+    },
+    {
+      "file": "assets/stage3.png",
+      "source": "wiki/artifacts/defense-30min/alignment/stage3.png",
+      "sha256": "68618f7e50c6a5c89d2a4f9c5c3b26a51514c4416d71e9e1f0b390eaf8806773",
+      "bytes": 189093
+    },
+    {
+      "file": "assets/stage3.drawio",
+      "source": "wiki/artifacts/defense-30min/alignment/stage3.drawio",
+      "sha256": "73f05d929579c018d64e030bb817c497c9772b9fedddc5bd31184841d6cda5e4",
+      "bytes": 31637
+    },
+    {
+      "file": "assets/stage4.png",
+      "source": "wiki/artifacts/diagram-crop-arrow-20261011/stage4.png",
+      "sha256": "edad7890fd4b922cac85f798976cd67dbf6978e5b15932c5e70b9dd6fb3a2e6c",
+      "bytes": 642435
+    },
+    {
+      "file": "assets/stage4.drawio",
+      "source": "wiki/artifacts/diagram-crop-arrow-20261011/stage4.drawio",
+      "sha256": "ed771e10c041f92b1f88f056ee527bfb201a231bae8c34925cebbf907c4166bc",
+      "bytes": 3261983
+    },
+    {
+      "file": "assets/stage5.png",
+      "source": "wiki/artifacts/diagram-crop-arrow-20261011/stage5.png",
+      "sha256": "9b24cc07c1675d9e5d21269209e29b579777ae3c9b71d332d6c08fda6c657535",
+      "bytes": 606815
+    },
+    {
+      "file": "assets/stage5.drawio",
+      "source": "wiki/artifacts/diagram-crop-arrow-20261011/stage5.drawio",
+      "sha256": "0abcc2f78efcb04edd0301224092e83ceaf6a7fa97b7fad91c309e1b95a91535",
+      "bytes": 3254784
+    },
+    {
+      "file": "assets/stage6.png",
+      "source": "wiki/artifacts/diagram-crop-arrow-20261011/stage6.png",
+      "sha256": "e67d94c94806c61f4d388a7fe02f5cf6bd5327468497f34bec285616a10a8587",
+      "bytes": 728812
+    },
+    {
+      "file": "assets/stage6.drawio",
+      "source": "wiki/artifacts/diagram-crop-arrow-20261011/stage6.drawio",
+      "sha256": "7429b8f3da6a2fb8b82be1eed8624b16191c75350c013cf2cb58b78b1eb94632",
+      "bytes": 3271677
+    },
+    {
+      "file": "assets/context-mean.png",
+      "source": "wiki/artifacts/diagram-phrases-label-20261011/01-mlp.png",
+      "sha256": "ebcdc791211ecaa5dd70e2a1115183435f9b88dcaf3a192d2b60f7017700ef06",
+      "bytes": 739120
+    },
+    {
+      "file": "assets/context-mean.drawio",
+      "source": "wiki/artifacts/diagram-phrases-label-20261011/01-mlp.drawio",
+      "sha256": "6db4bf111f79b1b1e5eda911bbe998fe8bc05316bf6f67a1d380a38cc30bdc69",
+      "bytes": 3308010
+    },
+    {
+      "file": "assets/context-attention.png",
+      "source": "wiki/artifacts/scene-attention-fire-20261012/02-attention.png",
+      "sha256": "82b495c1883b0c057dc63d08e1872dd3e2b9c32f5272e8d32351066e4d82c2d2",
+      "bytes": 762085
+    },
+    {
+      "file": "assets/context-attention.drawio",
+      "source": "wiki/artifacts/scene-attention-fire-20261012/02-attention.drawio",
+      "sha256": "854126bbcd83c948c804cd2f703a30a8a85c92bb95ea1e2dcff08e38d84377d3",
+      "bytes": 3309660
+    },
+    {
+      "file": "assets/context-triplet.png",
+      "source": "wiki/artifacts/contextual-evolution-20260924/simplified/03-triplet-contrastive.png",
+      "sha256": "013763a271907511e8031a7c388203a2e839707ff0a077a5290d2a9622bcf22a",
+      "bytes": 346671
+    },
+    {
+      "file": "assets/context-triplet.drawio",
+      "source": "wiki/artifacts/contextual-evolution-20260924/simplified/03-triplet-contrastive.drawio",
+      "sha256": "2e46f0e6ba3302c8847be8c0e74cc838d1041a69f8250359ba4a9f0f2cccf55c",
+      "bytes": 3327880
+    },
+    {
+      "file": "assets/context-all184.png",
+      "source": "wiki/artifacts/diagram-phrases-label-20261011/04-all184-contrastive.png",
+      "sha256": "92106e15332de633f8492f7b8f37cb2ce34fb008b93e83cbe76dceb28b574dbf",
+      "bytes": 751333
+    },
+    {
+      "file": "assets/context-all184.drawio",
+      "source": "wiki/artifacts/diagram-phrases-label-20261011/04-all184-contrastive.drawio",
+      "sha256": "b991de613b45405a9faa5b494d7db97ac4b9b397e2cff5bb62c2339b26778c98",
+      "bytes": 3308863
+    },
+    {
+      "file": "assets/context-attention-all184.png",
+      "source": "wiki/artifacts/scene-attention-fire-20261012/scene-attention-contrastive.png",
+      "sha256": "99199ed1ad57023873de69be6957d3feb71338a516271b9cb07611b3eca42f07",
+      "bytes": 774222
+    },
+    {
+      "file": "assets/context-attention-all184.drawio",
+      "source": "wiki/artifacts/scene-attention-fire-20261012/scene-attention-contrastive.drawio",
+      "sha256": "93072a08a01ea119ad0bd9ba3e12862bdf15d804cdb1a3fb2015e80c79a9a720",
+      "bytes": 3310498
+    },
+    {
+      "file": "assets/context-blend.png",
+      "source": "wiki/artifacts/expert-names-20261012/scene-attention-focal-blend.png",
+      "sha256": "e175f9b12d7e496f159f154b284262b7cde491f65cf4320836a301729e4af000",
+      "bytes": 825063
+    },
+    {
+      "file": "assets/context-blend.drawio",
+      "source": "wiki/artifacts/expert-names-20261012/scene-attention-focal-blend.drawio",
+      "sha256": "66d09e039dbd56e71bf820950519be8707a3845620e4473c531cbbc1fd23b355",
+      "bytes": 3290045
+    },
+    {
+      "file": "assets/context-dcb.png",
+      "source": "wiki/artifacts/expert-names-20261012/06-dcb-blend.png",
+      "sha256": "93e74cc737edbd79e5faf5e748b430550cd83aecdb2890d41d9927533e5196c3",
+      "bytes": 824520
+    },
+    {
+      "file": "assets/context-dcb.drawio",
+      "source": "wiki/artifacts/expert-names-20261012/06-dcb-blend.drawio",
+      "sha256": "2734c735ad6394a17c4de55f7aba8b863f71da7a1ad5aeef8fc0441173e466fd",
+      "bytes": 3290041
+    },
+    {
+      "file": "assets/cseb-scaled.png",
+      "source": "wiki/artifacts/encoder-name-short-20261012/scaled-dcb-blend.png",
+      "sha256": "94825a93193cabdbe5358a640e1ae560a336c0da5e60526242129944dd815d72",
+      "bytes": 823780
+    },
+    {
+      "file": "assets/cseb-scaled.drawio",
+      "source": "wiki/artifacts/encoder-name-short-20261012/scaled-dcb-blend.drawio",
+      "sha256": "9ee7deec5e869bec8b8cfaf3ab0df27b83ca16a49b254041f26a43d7059c2977",
+      "bytes": 3290044
+    },
+    {
+      "file": "assets/stage7.png",
+      "source": "wiki/artifacts/stage7-contextual/stage7-aligned.png",
+      "sha256": "64f74d8d777fe089179d2b0b584a31c5d4115b87219b523f0e3e710b76c97435",
+      "bytes": 592615
+    },
+    {
+      "file": "assets/stage7.drawio",
+      "source": "wiki/artifacts/stage7-contextual/stage7-aligned.drawio",
+      "sha256": "a2de9bc24d155ff376b5b431309438a2e7ae381e17c8ec114aa461eabdf86d15",
+      "bytes": 31637
+    }
+  ]
+}

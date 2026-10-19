@@ -1,0 +1,7 @@
+# Install into an isolated environment with compatible torch/torchvision CUDA builds.
+# Versions matched to the current 1B visual runtime and original YOLO inference.
+timm==1.0.29
+einops==0.8.2
+ultralytics==8.3.226
+# The tested local research environment supplies torch2.4.1, transformers5.4.0,
+# NumPy, OpenCV and Pillow. FlashAttention is not used by this inference path.

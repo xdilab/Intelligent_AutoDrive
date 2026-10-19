@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CSEB · Scene explorer</title>
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #060f1e;
+  --ink: #e7edf5;
+  --muted: #9baac0;
+  --rule: #39495e;
+  --gold: #f0d39a;
+  --teal: #a4d7f4;
+  font-family: "DejaVu Sans Mono", "Liberation Mono", Consolas, monospace;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 13px/1.6 "DejaVu Sans Mono", "Liberation Mono", Consolas, monospace; }
+button, input, select { font: inherit; }
+button, select { min-height: 44px; border: 1px solid var(--rule); border-radius: 0; background: var(--bg); color: var(--ink); padding: 8px 10px; }
+button { cursor: pointer; text-transform: uppercase; font-weight: 700; }
+button:hover, select:hover { border-color: var(--ink); }
+button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+input[type=range] { accent-color: var(--ink); min-width: 0; min-height: 44px; cursor: pointer; margin: 0; }
+button.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); min-width: 84px; }
+p { margin: 0; }
+small, .muted { color: var(--muted); }
+small { font-size: 11px; }
+main { max-width: 1640px; margin: 0 auto; padding: 28px 32px; }
+.masthead { display: flex; align-items: end; justify-content: space-between; gap: 24px; padding-bottom: 22px; margin-bottom: 24px; border-bottom: 3px solid var(--ink); }
+.identity { display: flex; align-items: end; gap: 28px; }
+h1 { margin: 0; font-size: clamp(44px, 6vw, 78px); line-height: .9; letter-spacing: -.08em; font-weight: 700; }
+.identity p { max-width: 34ch; font-size: 13px; line-height: 1.5; }
+.status { text-align: right; font-size: 11px; color: var(--muted); white-space: nowrap; }
+.status span { display: block; }
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 32px; align-items: start; }
+.viewer { min-width: 0; }
+.panel-heading { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 12px; }
+.panel-heading strong { text-transform: uppercase; font-weight: 700; }
+.legend { display: flex; gap: 14px; font-size: 10px; color: var(--muted); }
+.legend span { display: flex; align-items: center; gap: 6px; }
+.legend i { width: 7px; height: 7px; border: 1px solid var(--teal); }
+.legend span:first-child i { border-color: var(--gold); }
+.stage { background: #030913; }
+#scene { display: block; width: 100%; cursor: crosshair; }
+.playback { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.scrub { flex: 1; width: 100%; }
+#counter { min-width: 76px; text-align: right; font-size: 12px; font-variant-numeric: tabular-nums; }
+.settings { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr) minmax(0, .85fr); gap: 20px; padding: 16px 0; }
+.setting { display: flex; flex-direction: column; justify-content: space-between; gap: 8px; min-width: 0; font-size: 11px; color: var(--muted); }
+.setting select { width: 100%; font-size: 12px; }
+.setting input { width: 100%; }
+.label-line { display: flex; justify-content: space-between; gap: 8px; }
+output { color: var(--ink); }
+.meta { display: flex; justify-content: space-between; gap: 16px; font-size: 10px; color: var(--muted); }
+.hint { white-space: nowrap; }
+.rail { min-width: 0; padding-left: 24px; border-left: 1px solid var(--rule); }
+.card + .card { border-top: 2px solid var(--ink); margin-top: 28px; padding-top: 18px; }
+h2 { margin: 0 0 14px; font-size: 19px; line-height: 1.35; font-weight: 400; }
+.crop-wrap { background: #030913; }
+.crop { display: block; width: 100%; height: 112px; object-fit: contain; }
+#confidence { font-size: 11px; margin: 8px 0 22px; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 20px 0 7px; }
+h3 { margin: 0; color: var(--muted); font-size: 11px; font-weight: 400; }
+.section-heading small { font-size: 10px; }
+.score-row { font-size: 12px; padding: 8px 0; border-bottom: 1px solid var(--rule); }
+.score-row .line { display: flex; justify-content: space-between; gap: 12px; }
+.score-row .line > span:first-child { overflow-wrap: anywhere; }
+.score-row .line > span:last-child { flex-shrink: 0; font-variant-numeric: tabular-nums; }
+.bar { display: none; }
+#chosenLabel { font-size: 11px; overflow-wrap: anywhere; }
+.experts { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+.expert small { font-size: 10px; }
+.expert strong { display: block; font-size: 32px; font-weight: 400; margin-top: 3px; font-variant-numeric: tabular-nums; }
+#formula { padding-top: 16px; font-size: 10px; overflow-wrap: anywhere; color: var(--muted); }
+details { margin-top: 28px; border-top: 1px solid var(--rule); font-size: 11px; color: var(--muted); }
+summary { cursor: pointer; color: var(--ink); padding: 14px 0; min-height: 44px; }
+.detail-body { max-width: 1100px; padding-bottom: 12px; }
+details p { margin: 10px 0; overflow-wrap: anywhere; }
+footer { margin-top: 8px; color: var(--muted); font-size: 10px; }
+/* The scene uses the space left after the controls, rather than sizing the page. */
+main { height: 100vh; height: 100dvh; max-width: 1640px; margin: 0 auto; padding: 16px 24px; display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto; gap: 12px; }
+.masthead { margin: 0; padding-bottom: 12px; gap: 20px; }
+h1 { font-size: clamp(38px, 5vh, 60px); }
+.identity { gap: 20px; }
+.identity p { font-size: 11px; }
+.grid { min-height: 0; grid-template-columns: minmax(0, 1fr) 320px; gap: 24px; align-items: stretch; }
+.viewer { min-height: 0; display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto auto; }
+.panel-heading { margin-bottom: 8px; }
+.stage { min-height: 0; position: relative; display: grid; place-items: center; overflow: hidden; }
+#scene { position: absolute; width: auto; height: auto; }
+.playback { padding: 8px 0; gap: 12px; }
+.settings { padding: 8px 0; gap: 14px; }
+.setting { gap: 3px; }
+.meta { font-size: 9px; gap: 8px; }
+details.inspector { margin: 0; border: 0; min-height: 0; overflow: auto; color: var(--ink); }
+.inspector > summary { display: none; }
+.rail { padding-left: 18px; }
+.card + .card { margin-top: 16px; padding-top: 12px; }
+h2 { font-size: 17px; margin-bottom: 10px; }
+.crop { height: clamp(48px, 10vh, 112px); }
+#confidence { margin: 6px 0 12px; }
+.section-heading { margin: 12px 0 4px; }
+.score-row { padding: 5px 0; font-size: 11px; }
+.experts { margin-top: 12px; gap: 12px; }
+.expert strong { font-size: 28px; }
+#formula { padding-top: 10px; }
+.run-notes { margin: 0; max-height: 35dvh; overflow: auto; }
+.run-notes > summary { padding: 6px 0; min-height: 32px; }
+footer { margin: 0; font-size: 9px; }
+@media(min-width:1500px) {
+  .grid { grid-template-columns: minmax(0, 1fr) 360px; }
+}
+@media(max-width:1100px) {
+  main { padding: 12px 18px; gap: 10px; }
+  .grid { grid-template-columns: minmax(0, 1fr) 290px; gap: 18px; }
+  .rail { padding-left: 14px; }
+  .settings { grid-template-columns: 1fr 1fr; gap: 6px 14px; }
+  .setting:first-child { grid-column: 1 / -1; }
+  .meta { flex-direction: column; gap: 0; }
+}
+@media(max-width:850px) {
+  .grid { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; gap: 8px; }
+  details.inspector { border-top: 1px solid var(--rule); }
+  details.inspector, .run-notes { max-height: clamp(50px, calc((100dvh - 430px) / 2), 34dvh); }
+  .inspector > summary { display: list-item; padding: 8px 0; min-height: 36px; color: var(--ink); }
+  .rail { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 10px 0; border: 0; }
+  .card + .card { margin: 0; padding: 0; border: 0; }
+  .settings { grid-template-columns: 1.15fr 1fr .85fr; gap: 14px; }
+  .setting:first-child { grid-column: auto; }
+  .meta { flex-direction: row; }
+  .status { font-size: 10px; }
+}
+@media(max-width:600px) {
+  main { padding: 10px 12px; gap: 8px; }
+  .masthead { align-items: start; gap: 10px; padding-bottom: 10px; }
+  .identity { display: flex; align-items: center; gap: 12px; }
+  h1 { font-size: 34px; }
+  .identity p { font-size: 9px; max-width: 20ch; }
+  .status { font-size: 8px; }
+  .settings { grid-template-columns: 1fr 1fr; gap: 5px 12px; }
+  .setting:first-child { grid-column: 1 / -1; }
+  .setting select { font-size: 11px; }
+  .setting { font-size: 10px; }
+  .playback { gap: 10px; }
+  .meta { flex-direction: column; }
+  .hint { display: none; }
+  .rail { grid-template-columns: 1fr; }
+  .card + .card { border-top: 1px solid var(--rule); padding-top: 12px; }
+  .panel-heading { font-size: 11px; }
+  .legend { font-size: 9px; }
+}
+@media(max-height:600px) and (min-width:601px) {
+  main { padding: 8px 16px; gap: 6px; }
+  .masthead { padding-bottom: 6px; }
+  h1 { font-size: 32px; }
+  .identity p { font-size: 9px; }
+  .settings { grid-template-columns: 1.15fr 1fr .85fr; }
+  .setting:first-child { grid-column: auto; }
+  .playback, .settings { padding: 4px 0; }
+  .meta { flex-direction: row; }
+  footer { display: none; }
+  main { grid-template-rows: auto minmax(0, 1fr) auto; }
+}
+</style>
+</head>
+<body>
+<main>
+  <header class="masthead">
+    <div class="identity"><h1>CSEB</h1><p>Contextual Scene-Attention<br>Expert Blend</p></div>
+    <div class="status"><span>Recorded demo</span><span>1B visual encoder</span></div>
+  </header>
+  <div class="grid">
+    <section class="viewer" aria-label="Scene playback and controls">
+      <div class="panel-heading"><strong>Scene</strong><div class="legend"><span><i></i>Selected</span><span><i></i>Detection</span></div></div>
+      <div class="stage"><canvas id="scene" width="1280" height="960" aria-label="Driving video with clickable detection boxes"></canvas></div>
+      <div class="playback"><button id="play" class="primary">Play</button><input class="scrub" id="timeline" type="range" min="0" value="0" aria-label="Frame"><span id="counter"></span></div>
+      <div class="settings">
+        <label class="setting">Prediction source<select id="mode"><option value="score">Expert blend</option><option value="classification">Classification expert</option><option value="contrastive">Contrastive expert</option></select></label>
+        <label class="setting"><span class="label-line"><span>YOLO confidence ≥</span><output id="thresholdLabel">0.30</output></span><input id="threshold" type="range" min="0.10" max="0.90" step="0.05" value="0.30"></label>
+        <label class="setting">Playback speed<select id="speed"><option value="5">5 frames/s</option><option value="10" selected>10 frames/s</option><option value="20">20 frames/s</option></select></label>
+      </div>
+      <div class="meta"><span id="frameMeta"></span><span class="hint">Click a box to inspect</span></div>
+    </section>
+    <details class="inspector" open><summary>Detection / expert scores</summary>
+    <aside class="rail" aria-label="Selected detection and expert scores">
+      <section class="card"><div class="panel-heading"><strong>Detection</strong></div><div class="card-body">
+        <h2 id="actor">Select a detection</h2><div class="crop-wrap"><canvas id="crop" class="crop" width="320" height="128" aria-label="Selected detection crop"></canvas></div><p class="muted" id="confidence"></p>
+        <div class="section-heading"><h3>Action & location</h3></div><div id="primitive"></div>
+        <div class="section-heading"><h3>Agent + action + location</h3><small>Top 3</small></div><div id="triplets"></div>
+      </div></section>
+      <section class="card"><div class="panel-heading"><strong>Expert blend</strong></div><div class="card-body">
+        <p class="muted" id="chosenLabel"></p><div class="experts"><div class="expert"><small>Classification expert</small><strong id="expertA">—</strong></div><div class="expert"><small>Contrastive expert</small><strong id="expertB">—</strong></div></div><p id="formula"></p>
+
+      </div></section>
+    </aside></details>
+  </div>
+  <details class="run-notes"><summary>Run notes / provenance</summary><div class="detail-body"><p class="explain">Both experts use DCB training; the second adds all-184 contrastive learning. Primitive scores carry from the classification expert.</p><p id="modeNote"></p><p id="provenance"></p><p>Scores are sigmoid outputs multiplied by YOLO confidence, not calibrated probabilities. Shown labels are independent multilabel predictions; no ground-truth labels enter inference. This qualitative sequence is not a measure of dataset AP.</p></div></details>
+  <footer>Playback speed is not inference speed.</footer>
+</main>
+<script>
+const DATA=__DEMO_DATA__;
+const $=id=>document.getElementById(id), canvas=$('scene'), ctx=canvas.getContext('2d');
+const pictures=DATA.frames.map(f=>{const i=new Image();i.src=f.image;return i;});
+const tripletAgents=new Set(DATA.labels.triplet.map(label=>label.split('-')[0]));
+const stage=canvas.parentElement;
+function fitScene(){
+  const ratio=canvas.width/canvas.height;
+  const width=Math.min(stage.clientWidth,stage.clientHeight*ratio);
+  canvas.style.width=`${width}px`;
+  canvas.style.height=`${width/ratio}px`;
+}
+new ResizeObserver(fitScene).observe(stage);
+const inspector=document.querySelector('.inspector');
+const narrow=matchMedia('(max-width:850px)');
+function arrangeInspector(){inspector.open=!narrow.matches;}
+narrow.addEventListener('change',arrangeInspector);
+arrangeInspector();
+
+let pos=0, selected=null, playing=false, last=0;
+$('timeline').max=DATA.frames.length-1;
+$('threshold').min=DATA.display_floor;
+const fmt=x=>Number(x).toFixed(3);
+function visible(){return DATA.frames[pos].detections.filter(d=>d.confidence>=Number($('threshold').value));}
+function best(items, mode){return [...items].sort((a,b)=>b[mode]-a[mode]).slice(0,3);}
+function rows(id,items,mode){const el=$(id);el.replaceChildren();for(const r of items){const line=document.createElement('div');line.className='score-row';const top=document.createElement('div');top.className='line';const label=document.createElement('span');label.textContent=r.label;const score=document.createElement('span');score.textContent=fmt(r[mode]);top.append(label,score);const bar=document.createElement('div');bar.className='bar';const fill=document.createElement('span');fill.style.width=`${100*r[mode]}%`;bar.append(fill);line.append(top,bar);el.append(line);}}
+function draw(){const frame=DATA.frames[pos],img=pictures[pos],ds=visible(),mode=$('mode').value;
+if(!img.complete||!img.naturalWidth){img.onload=draw;return;}
+canvas.width=img.naturalWidth;canvas.height=img.naturalHeight;fitScene();ctx.drawImage(img,0,0);const W=canvas.width,H=canvas.height,occupied=[];
+if(!ds.some(d=>d.candidate===selected))selected=ds[0]?.candidate??null;
+for(const d of [...ds].reverse()){let [x,y,x2,y2]=d.box; x*=W;y*=H;x2*=W;y2*=H;const active=d.candidate===selected;ctx.strokeStyle=active?'#f0d39a':'#a4d7f4';ctx.lineWidth=active?4:2;ctx.strokeRect(x,y,x2-x,y2-y);if(active||ds.indexOf(d)<6){const triplet=best(d.heads.triplet,mode)[0];const label=tripletAgents.has(d.agent)?triplet.label.replaceAll('-', ' · '):`${d.agent} · triplet N/A`;ctx.font=`${Math.max(14,W/75)}px monospace`;const tw=ctx.measureText(label).width+12,tx=Math.max(0,Math.min(x,W-tw));let top=Math.max(0,y-25);while(top>=28&&occupied.some(r=>tx<r[0]+r[2]+3&&tx+tw+3>r[0]&&top<r[1]+28&&top+28>r[1]))top-=28;occupied.push([tx,top,tw]);if(top<y-28){ctx.beginPath();ctx.moveTo(Math.min(x+8,tx+tw),top+25);ctx.lineTo(x+8,y);ctx.stroke();}ctx.fillStyle=active?'#f0d39a':'#060f1ef2';ctx.fillRect(tx,top,tw,25);ctx.fillStyle=active?'#13202b':'#ecfffd';ctx.fillText(label,tx+6,top+18);}}
+$('counter').textContent=`${pos+1} / ${DATA.frames.length}`;$('timeline').value=pos;$('frameMeta').textContent=`${frame.video} · frame ${frame.fid} · ${ds.length} displayed / ${frame.candidate_count} candidates`;
+const d=ds.find(x=>x.candidate===selected);const crop=$('crop').getContext('2d');crop.clearRect(0,0,320,128);
+if(!d){$('actor').textContent='No detections above threshold';$('confidence').textContent='';$('primitive').replaceChildren();$('triplets').replaceChildren();$('chosenLabel').textContent='';$('expertA').textContent='—';$('expertB').textContent='—';$('formula').textContent='';return;}
+$('actor').textContent=`${d.agent} · candidate ${d.candidate+1}`;$('confidence').textContent=`YOLO confidence ${fmt(d.confidence)}`;
+const [x,y,x2,y2]=d.box,sw=(x2-x)*W,sh=(y2-y)*H,s=Math.min(320/sw,128/sh);crop.drawImage(img,x*W,y*H,sw,sh,(320-sw*s)/2,(128-sh*s)/2,sw*s,sh*s);
+rows('primitive',[best(d.heads.action,mode)[0],best(d.heads.loc,mode)[0]],mode);const trip=best(d.heads.triplet,mode);rows('triplets',trip,mode);const t=trip[0];$('chosenLabel').textContent=t.label;$('expertA').textContent=fmt(t.classification);$('expertB').textContent=fmt(t.contrastive);$('formula').textContent=`${(1-DATA.weight).toFixed(2)} × ${fmt(t.classification)} + ${DATA.weight.toFixed(2)} × ${fmt(t.contrastive)} = ${fmt(t.score)}`;}
+canvas.onclick=e=>{const r=canvas.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;const candidates=visible().filter(d=>x>=d.box[0]&&x<=d.box[2]&&y>=d.box[1]&&y<=d.box[3]);candidates.sort((a,b)=>(a.box[2]-a.box[0])*(a.box[3]-a.box[1])-(b.box[2]-b.box[0])*(b.box[3]-b.box[1]));if(candidates.length){selected=candidates[0].candidate;draw();}};
+$('play').onclick=()=>{playing=!playing;$('play').textContent=playing?'Pause':'Play';last=performance.now();};
+$('timeline').oninput=()=>{pos=Number($('timeline').value);selected=null;draw();};
+$('mode').onchange=draw;$('threshold').oninput=()=>{$('thresholdLabel').textContent=Number($('threshold').value).toFixed(2);draw();};
+function tick(t){if(playing&&t-last>=1000/Number($('speed').value)){pos=(pos+1)%DATA.frames.length;selected=null;last=t;draw();}requestAnimationFrame(tick);}requestAnimationFrame(tick);
+$('modeNote').textContent=`${DATA.mode}. Both trained experts were executed for this demo. Display filtering does not change stored predictions. Candidate numbers are per-frame, not tracking IDs. This is recorded output, not live camera inference.`;
+$('provenance').textContent=`${DATA.run}. ${DATA.source_split}. ${DATA.selection}. ${DATA.device}, ${DATA.precision}. Head inference: ${DATA.inference_seconds.toFixed(1)} s for ${DATA.frames.length} frames (excludes frozen encoder extraction). Detector settings: ${JSON.stringify(DATA.detector_settings??'locked validation proposals')}. Checkpoint SHA-256: ${DATA.checkpoint_sha256}.`;
+draw();
+</script>
+</body>
+</html>

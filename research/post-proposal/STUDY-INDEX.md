@@ -1,5 +1,7 @@
 # Research code and evidence index
 
+Current thesis entrypoints: [main README](../../README.md), [architecture catalog](../../docs/architectures/README.md), [headline results](results-snapshots/20261019-headline/README.md), and [end-to-end demo](demo/README.md).
+
 Snapshot: September 28, 2026. Canonical experiment development belongs here.
 
 ## Code
@@ -40,3 +42,11 @@ Data, large caches and checkpoints are deliberately outside the Git synchronizat
 - Other study data/output paths are recorded in each study's `protocol.json`, `pipeline.py`, and result signatures; do not substitute paths or label orders silently.
 
 This synchronization does not redeploy code into running NCShare jobs, restart training, or certify remote checkpoint backup freshness. Git synchronization protects code and compact evidence, not the large external assets.
+
+## Architecture map (October19,2026)
+
+The [illustrated architecture catalog](../../docs/architectures/README.md) maps this study history to stable model names. Newer code also includes `contextual-roi-1b/`, `contextual-roi-1b-langctl/`, `contextual-roi-scene-skip/`, and `contextual-road-transfer/`; consult their protocols rather than the dated September28 status snapshot above.
+
+## Causal student pilot (October 19, 2026)
+
+The [CSEB student pilot](cseb-student/README.md) contains a shared frozen frame encoder, causal scene-memory head, supervised/distilled controls, checkpoint verification and fresh inference. See its supported-class proposal metrics and paired latency before considering a larger study; it is not a replacement headline detector.

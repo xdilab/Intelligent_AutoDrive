@@ -1,0 +1,11 @@
+[Unit]
+Description=Check CSEB student training every two minutes
+
+[Timer]
+OnBootSec=30
+OnUnitActiveSec=120
+AccuracySec=1
+Unit=research-cseb-student-monitor.service
+
+[Install]
+WantedBy=timers.target

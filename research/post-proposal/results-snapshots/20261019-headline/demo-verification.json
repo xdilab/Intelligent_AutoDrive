@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "frames": 120,
+  "candidates": 3634,
+  "outputs": "all184 finite, primitives unchanged, composition blend verified",
+  "total_wall_seconds": 358.92826898302883,
+  "head_seconds": 2.16423182701692,
+  "load_seconds": 13.509333536028862,
+  "decode_yolo_seconds": 5.3802262200042605,
+  "visual_encoder_seconds": 325.26145872380584,
+  "detector_settings": {
+    "confidence": 0.25,
+    "imgsz": 1280,
+    "iou": 0.7,
+    "max_det": 300
+  },
+  "checkpoint_sha256": "968aefaf7d9f896dd360baf1ab39fb75777693dbcdbd9a2663fb6696ae6c5567",
+  "video_sha256": "73f3642fd5dd8c51a30a31ec535989526239cfb516652a087a51c71b062da484"
+}
