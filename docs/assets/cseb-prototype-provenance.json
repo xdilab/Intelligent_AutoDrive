@@ -23,16 +23,41 @@
       "file": "cseb-inference-hero.gif",
       "source": "ROAD_Reason/docs/assets/cseb-prototype.mp4",
       "source_sha256": "6f31a075b2439e49915658e7336ecf53094f145d6a94da9d935d03397b0708a9",
-      "sha256": "69b472e3608299347575f65d36b582994855b5268c21d43c16bd44252947b552",
-      "purpose": "Root README looping hero, derived from recorded teacher inference",
-      "width": 960,
-      "height": 600,
+      "sha256": "1243798389f42ea659500a7b69b4888ec43970ba5ef320a1d89767c29dd88141",
+      "purpose": "README hero: moving road footage and prediction overlays only, cropped directly from inference MP4",
+      "width": 800,
+      "height": 533,
       "frames": 96,
       "duration_ms": 12010,
       "nominal_fps": 8,
       "loop": 0,
-      "size_bytes": 7030726,
-      "encoding": "FFmpeg: fps=8, scale=960:-1:flags=lanczos, palettegen=max_colors=128:stats_mode=diff, paletteuse=dither=none:diff_mode=rectangle; loop=0. GIF delay quantization adds 10 ms to the 12-second source."
+      "size_bytes": 9579162,
+      "encoding": "FFmpeg directly from cseb-prototype.mp4: crop=1100:733:36:165:exact=1,fps=8,scale=800:-1:flags=lanczos; palettegen=max_colors=128:stats_mode=diff; paletteuse=dither=none:diff_mode=rectangle; loop=0. GIF timing rounds to12.01s.",
+      "crop": {
+        "x": 36,
+        "y": 165,
+        "width": 1100,
+        "height": 733
+      }
+    },
+    {
+      "file": "cseb-inference-video.mp4",
+      "source": "ROAD_Reason/docs/assets/cseb-prototype.mp4",
+      "source_sha256": "6f31a075b2439e49915658e7336ecf53094f145d6a94da9d935d03397b0708a9",
+      "sha256": "956fecd9db52fe1c6a2b4b32ae0ee2ba9d37eba0378705ba732529846c85c82c",
+      "purpose": "Video-only playback target for README hero",
+      "crop": {
+        "x": 36,
+        "y": 165,
+        "width": 1100,
+        "height": 733
+      },
+      "width": 960,
+      "height": 640,
+      "frames": 120,
+      "fps": 10,
+      "duration_ms": 12000,
+      "encoding": "FFmpeg crop=1100:733:36:165:exact=1,scale=960:-2:flags=lanczos; libx264 CRF18, yuv420p, faststart."
     }
   ],
   "checkpoint_sha256": "968aefaf7d9f896dd360baf1ab39fb75777693dbcdbd9a2663fb6696ae6c5567",
