@@ -20,7 +20,7 @@
       "packaging_change": "Removed whitespace from one empty line; embedded data and behavior unchanged."
     },
     {
-      "file": "cseb-inference-hero.gif",
+      "file": "cseb-road-inference.gif",
       "source": "ROAD_Reason/docs/assets/cseb-prototype.mp4",
       "source_sha256": "6f31a075b2439e49915658e7336ecf53094f145d6a94da9d935d03397b0708a9",
       "sha256": "1243798389f42ea659500a7b69b4888ec43970ba5ef320a1d89767c29dd88141",
@@ -38,7 +38,9 @@
         "y": 165,
         "width": 1100,
         "height": 733
-      }
+      },
+      "previous_filename": "cseb-inference-hero.gif",
+      "packaging_change": "Renamed video-only GIF to a fresh URL to avoid cached dashboard hero; image bytes unchanged."
     },
     {
       "file": "cseb-inference-video.mp4",

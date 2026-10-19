@@ -1,6 +1,6 @@
 # Intelligent_AutoDrive — Compositional Road-Event Detection
 
-[![CSEB recorded inference — agent, action and location predictions](docs/assets/cseb-inference-hero.gif)](docs/assets/cseb-inference-video.mp4)
+[![CSEB recorded inference — agent, action and location predictions](docs/assets/cseb-road-inference.gif)](docs/assets/cseb-inference-video.mp4)
 
 *Recorded CSEB inference · [Watch the video](docs/assets/cseb-inference-video.mp4) · [Explore the demo](research/post-proposal/demo/README.md)*
 
