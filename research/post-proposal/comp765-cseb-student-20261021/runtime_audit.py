@@ -14,8 +14,10 @@ def main():
    subprocess.run([sys.executable,str(bundle/'run.py'),'--bundle',str(bundle),'--video',str(p.ROOT/'videos'/f'{video}.mp4'),'--output',str(dest),'--verify-isolation'],check=True)
   report=read(dest/'report.json');assert report['causal_source_indices_verified'] and report['external_assets_blocked'] and report['frames']>32
   allocated=[r['gpu_allocated'] for r in report['records'][32:]];reserved=[r['gpu_reserved'] for r in report['records'][32:]]
+  rss=[r['cpu_rss_bytes'] for r in report['records'][32:]]
+  assert max(rss)-min(rss)<256*1024**2,'Unexpected retained CPU-memory growth after warmup'
   assert max(allocated)-min(allocated)<128*1024**2,'Unexpected retained GPU-memory growth after warmup'
-  reports.append(dict(memory_bound_passed=True,memory_bound_bytes=128*1024**2,video=video,frames=report['frames'],report=str(dest/'report.json'),post_warmup_allocated_range_bytes=[min(allocated),max(allocated)],post_warmup_reserved_range_bytes=[min(reserved),max(reserved)],tail_allocated_bytes=allocated[-1],processing_seconds=report['processing_seconds'],load_seconds=report['load_seconds']))
+  reports.append(dict(cpu_memory_bound_passed=True,cpu_memory_bound_bytes=256*1024**2,post_warmup_cpu_rss_range_bytes=[min(rss),max(rss)],memory_bound_passed=True,memory_bound_bytes=128*1024**2,video=video,frames=report['frames'],report=str(dest/'report.json'),post_warmup_allocated_range_bytes=[min(allocated),max(allocated)],post_warmup_reserved_range_bytes=[min(reserved),max(reserved)],tail_allocated_bytes=allocated[-1],processing_seconds=report['processing_seconds'],load_seconds=report['load_seconds']))
  # Production packaged output equals instrumented student scores on the same raw input.
  video=read(ROOT/'split-manifest.json')['groups']['train'][0];prod=(ROOT/'runtime'/f'continuous-{video}'/'predictions.jsonl').open();bench=(ROOT/'runtime/student/predictions.jsonl').open();diff=0.
  for x,y in zip(prod,bench):

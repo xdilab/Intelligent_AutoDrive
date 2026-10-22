@@ -25,6 +25,6 @@ Existing expanded study completed:96frames/12student-heldout development videos,
 
 Persistent silent monitor: `research-comp765-student-monitor.timer`; service: `research-comp765-student.service`. It checks actual logs/progress, service status, disk space and checkpoint readability/hash-matched backups every2minutes. Desktop notifications remain disabled. It does not promise automatic conversational wakeup or arbitrary unattended repair.
 
-The final standalone export includes `run.py` and the unchanged `model.py`, with all asset hashes. `--verify-isolation` blocks model/cache files outside the bundle. Complete-video tests bound retained GPU-allocation variation after32warmup frames to128MiB; detailed traces remain available.
+The final standalone export includes `run.py` and the unchanged `model.py`, with all asset hashes. `--verify-isolation` blocks model/cache files outside the bundle. Complete-video tests bound retained GPU-allocation variation after32warmup frames to128MiB and CPU-RSS variation to256MiB; detailed traces remain available.
 
 The commands above also support foreground reproduction. For persistent monitored runs, use the supplied systemd service; the watchdog checks that service identity. No remote publication is performed automatically.

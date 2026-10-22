@@ -46,7 +46,7 @@ def main():
     ok,image=cap.read();assert ok;next_index+=1
    assert next_index-1==index # Never decode a future source frame.
    rgb=cv2.cvtColor(image,cv2.COLOR_BGR2RGB);result=runner.predict_frame(rgb);torch.cuda.synchronize();out.write(json.dumps(dict(fid=fid,source_index=index,**{k:v.tolist() for k,v in result.items()}),separators=(',',':'))+'\n');out.flush()
-   records.append(dict(fid=fid,source_index=index,candidates=len(result['boxes']),seconds=time.perf_counter()-t,gpu_allocated=torch.cuda.memory_allocated(),gpu_reserved=torch.cuda.memory_reserved()))
+   records.append(dict(fid=fid,source_index=index,candidates=len(result['boxes']),seconds=time.perf_counter()-t,gpu_allocated=torch.cuda.memory_allocated(),gpu_reserved=torch.cuda.memory_reserved(),cpu_rss_bytes=int(Path('/proc/self/statm').read_text().split()[1])*os.sysconf('SC_PAGE_SIZE')))
  cap.release();report=dict(frames=limit,source_video=str(a.video),source_sha256=sha(a.video),fps=fps,sampling_hz=10,load_seconds=load,processing_seconds=time.perf_counter()-start,records=records,causal_source_indices_verified=True,external_assets_blocked=a.verify_isolation,opened_model_assets=sorted(set(opened)),peak_gpu_gib=torch.cuda.max_memory_allocated()/1024**3,bundle_sha256=sha(a.bundle/'bundle.json'),labels=runner.labels)
  (a.output/'report.json').write_text(json.dumps(report,indent=2));print(json.dumps({k:v for k,v in report.items() if k not in ['records','labels']}),flush=True)
 if __name__=='__main__':main()
