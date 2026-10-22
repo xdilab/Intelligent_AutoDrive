@@ -7,7 +7,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 def stats(x):return dict(mean=float(np.mean(x)),sample_sd=float(np.std(x,ddof=1)))
 def main():
- verify();out=ROOT/'results';out.mkdir(exist_ok=True);data={c:[read(ROOT/'runs'/f'{c}-seed{s}'/'detector-results.json') for s in [0,1,2]] for c in ['supervised','distilled']};teacher=read(ROOT/'teacher-comparator.json')['result'];runtime=read(ROOT/'runtime-summary.json');labels=read(INPUTS['frames'])['labels'];ix=groups(labels['triplet']);tcrit=.95*math.sqrt(2/(1-.95**2))
+ verify();out=ROOT/'results';out.mkdir(exist_ok=True);data={c:[read(ROOT/'runs'/f'{c}-seed{s}'/'detector-results.json') for s in [0,1,2]] for c in ['supervised','distilled']};data_audit=read(ROOT/'data-audit.json');teacher=read(ROOT/'teacher-comparator.json')['result'];runtime=read(ROOT/'runtime-summary.json');labels=read(INPUTS['frames'])['labels'];ix=groups(labels['triplet']);tcrit=.95*math.sqrt(2/(1-.95**2))
  endpoints=HEADS+['tail47','deep28','common39'];summary={};rows=[]
  for key in endpoints:
   get=lambda r:r['summary'][key] if key in HEADS else r['tail'][key]['mAP']
@@ -54,7 +54,9 @@ Distillation produced **{abs(r['paired_delta']['mean']):.3f} percentage points {
 
 ## Controlled comparison
 
-Frozen shared ImageNet ResNet50 through layer 3, 3×3 RoIAlign, a 256-unit scene GRU, geometry and agent embeddings, and 184 outputs. There are 9,651,864 semantic parameters, including 1,108,568 trainable parameters; YOLO is additional. Training uses 64 videos and selection uses 12, with 32 contiguous frames per video, 30 epochs, and paired seeds 0/1/2. AdamW uses learning rate 0.001, weight decay 0.01, and gradient clipping at 5. Only the distillation weight changes from 0 to 1. Both losses use independent Bernoulli BCE over 183 semantic outputs; slot 0 is excluded. Teacher targets are detached, confidence removed, and generated only for annotated training inputs. Unannotated frames update state without loss.
+Frozen shared ImageNet ResNet50 through layer 3, 3×3 RoIAlign, a 256-unit scene GRU, geometry and agent embeddings, and 184 outputs. There are 9,651,864 semantic parameters, including 1,108,568 trainable parameters; YOLO is additional. Training uses 64 videos and selection uses 12, with 32 contiguous frames per video, 30 epochs, and paired seeds 0/1/2. AdamW uses learning rate 0.001, weight decay 0.01, and gradient clipping at 5. Only the distillation weight changes from 0 to 1. Both losses use independent Bernoulli BCE over 183 semantic outputs; slot 0 is excluded. Teacher targets are detached, confidence removed, and generated only for annotated training inputs. Unannotated frames update state without loss. The complete data audit counts {data_audit['counts']['train']['annotated']} annotated training frames and {data_audit['counts']['selection']['annotated']} annotated selection frames.
+
+The speed reduction comes from the smaller student architecture. Distillation changes its training objective, not its inference cost; the matched comparison tests whether it improves accuracy at that fixed cost.
 
 Final evaluation uses 36,717 scored frames from 198 official validation videos, 6,163,968 fixed detector candidates, and IoU 0.5. The student processes 38,663 current/past frames from video starts and resets only at video boundaries. Selection is minimum supervised development BCE. Official validation is disjoint from teacher/student training and selection, but had prior thesis research use. The student selection pool belongs to teacher historical development. This is not a pristine unseen teacher test.
 

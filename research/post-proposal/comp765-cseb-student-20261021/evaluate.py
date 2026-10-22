@@ -34,7 +34,7 @@ def step(models,states,backbone,image,box,agents,q):
   scores=p.detector_scores(z.sigmoid(),q);assert torch.isfinite(scores).all();out[run]=scores.cpu().numpy()
  return out
 @torch.inference_mode()
-def infer(official,yr,offset,index):
+def infer(official,yr,offset,index,max_videos=None):
  splits=read(ROOT/'split-manifest.json');SCRATCH.mkdir(exist_ok=True);models={};arrays={};sig=evaluation_signature();cache_intact=True
  for seed in [0,1,2]:
   for condition in ['supervised','distilled']:
@@ -50,7 +50,7 @@ def infer(official,yr,offset,index):
  receipt=SCRATCH/'inference.json';old=read(receipt) if receipt.exists() else {'signature':sig,'videos':[]};assert old['signature']==sig
  # Every completed video is committed only after all six score arrays are flushed.
  if not cache_intact:old['videos']=[]
- complete=set(old['videos']);backbone=SharedBackbone(p.WEIGHTS).cuda();started=time.perf_counter();steps=0
+ complete=set(old['videos']);backbone=SharedBackbone(p.WEIGHTS).cuda();started=time.perf_counter();steps=0;videos_this_session=0
  for video in splits['groups']['final']:
   if video in complete:continue
   states={run:None for run in models};hashes={};tvideo=time.perf_counter();last=splits['final_last_frame'][video]
@@ -68,6 +68,12 @@ def infer(official,yr,offset,index):
   save(ROOT/'evaluation-inputs'/f'{video}.json',dict(video=video,images_sha256=hashes,reset_at=1,processed_frames=last,seconds=time.perf_counter()-tvideo))
   complete.add(video);save(receipt,dict(signature=sig,videos=sorted(complete),time=time.time()))
   progress('official-video-complete',video=video,completed_videos=len(complete),total_videos=198,steps_this_session=steps,elapsed=time.perf_counter()-started)
+  videos_this_session+=1
+  if max_videos and videos_this_session>=max_videos:break
+ if len(complete)<198:
+  elapsed=time.perf_counter()-started
+  save(ROOT/'inference-benchmark.json',dict(signature=sig,processed_frames=steps,videos=videos_this_session,completed_videos=len(complete),seconds=elapsed,frames_per_second=steps/elapsed,scope='All six selected heads share fresh current-image ResNet features; complete video prefixes, no AP computed',time=time.time()))
+  return
  save(ROOT/'inference-complete.json',dict(signature=sig,processed_frames=38663,scored_frames=36717,candidates=int(offset[-1]),seconds_this_session=time.perf_counter()-started,zero_reset_at_every_video=True,continuous_prefix=True,time=time.time(),scratch=str(SCRATCH)))
  del arrays,models,backbone;torch.cuda.empty_cache()
 def metrics(official,offset,workers):
@@ -90,8 +96,10 @@ def metrics(official,offset,workers):
    save(dest/'detector-results.json',dict(metric='official detector AP@0.5 (%)',signature=sig,seed=seed,condition=condition,run=run,selected_epoch=done['selected_epoch'],n_frames=36717,processed_frames=38663,n_candidates=int(offset[-1]),candidate_sha256=official['candidate_sha256'],frame_sha256=official['frame_sha256'],summary={h:float(np.mean(v)) for h,v in values.items()},tail=tail,per_class_AP=values,per_class_details=details,gt_counts=coverage,seconds=time.perf_counter()-started,time=time.time()))
    metric.SCORES=None;del scores;progress('official-run-complete',run=run,triplet=float(np.mean(triplet)))
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--workers',type=int,default=8);a=ap.parse_args();setup();verify()
+ ap=argparse.ArgumentParser();ap.add_argument('--workers',type=int,default=8);ap.add_argument('--benchmark-videos',type=int);a=ap.parse_args();setup();verify()
  assert read(ROOT/'evaluation-preflight.json')['passed']
  official,yr,offset,index=load_official();verify_teacher(official);progress('official-assets-loaded',frames=36717,candidates=int(offset[-1]))
- infer(official,yr,offset,index);del yr,index;metrics(official,offset,a.workers);progress('official-evaluation-complete',runs=6)
+ infer(official,yr,offset,index,a.benchmark_videos)
+ if a.benchmark_videos:return
+ del yr,index;metrics(official,offset,a.workers);progress('official-evaluation-complete',runs=6)
 if __name__=='__main__':main()
