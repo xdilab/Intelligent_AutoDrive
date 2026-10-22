@@ -1,0 +1,37 @@
+# COMP 765: Multiple Class Descriptions for Long-Tail Road-Event Recognition
+
+Protocol written October 21, 2026, before new evaluation. Machine-readable settings are in `protocol.json`; the launch freeze hashes both files, descriptions, prototypes, source code and input provenance.
+
+This is new coursework separate from the completed master's thesis. The intervention is five independently encoded descriptions averaged into **one** normalized prototype per class, compared with the canonical description encoded through the same K=1 path. Both conditions are retrained. Earlier work compared real/bypass/random banks and original/single-template vocabulary; neither tested this intervention. No final contextual blend, extra outputs, model ensemble or prediction averaging is used.
+
+## Novelty and asset inspection
+
+Server searches on October 21 covered wiki concepts/findings/directions/tools and JSON/Python evidence, repository experiments/research/docs and available logs/configurations, local study directories under `~/.local/share/road-reason`, and Git commit subjects. Terms included prompt ensembling, multiple/multi descriptions, text ensembling, and prototype averaging. The only explicit match was `wiki/concepts/text-encoder-choice-phrase-head.md`: prompt ensembling is a proposed extension. Inspected actual `gen_phrases.py`, `embed_phrases.py`, `train_clip_head.py`, crop-full chain logs, repeated-seed trainer/evaluator, and contextual language-control protocols. These implement one text per class or bank replacement, not multiple-description averaging. No completed exact study was found in accessible server records. This is a local-record novelty finding, not a claim of novelty to the literature or proof about unrecorded remote work.
+
+## Fixed experiment
+
+Use the complete standalone crop phrase head from the established repeated-seed implementation. Frozen eight-frame InternVideo2 CLIP_S crop features have width1024; the learned512-dimensional projection is normalized and scored against frozen text prototypes, with learned temperature and class biases. Use the **paired text tower from the exact cached CLIP_S checkpoint** and its publisher tokenizer, EOT pooling and half-precision encoding. Do not use an unrelated text encoder. Record actual dependency versions and file hashes.
+
+Rows are `[agentness1, agent10, action22, location16, duplex49, triplet86]`. Row0 keeps the identical canonical agentness prototype in both conditions. There is no extra background class. The remaining183 classes each have exactly five distinct strings, including the canonical string verbatim, in the multi condition. Save all916 strings and token checks. Normalize each embedding, average within class, normalize the mean. K=1 follows this same path; compare against the saved original bank with maximum absolute error<.001 and cosine>.99999. Preserve original normalization, pooling, logit scaling and initialization rather than redefining the baseline.
+
+Descriptions come from a versioned explicit glossary and four fixed templates plus canonical text. Added text describes observed classes only. Preserve ego-relative locations, stationary events and traffic-light signal states. The inherited canonical Brake wording mentions brake lights, and LftParking/rightParking say parked; these cannot be removed without violating the exact-baseline requirement. The added glossary describes the annotated action/location without adding those attributes. Disclose this inherited discrepancy; do not silently repair canonical strings. This is a practical multi-description comparison, not a clean isolation of averaging versus wording quality.
+
+Fresh paired seeds0,1,2; ten epochs; batch16384; Adam lr.001/default betas/eps, no weight decay or schedule; original gamma2 focal loss and saved per-class alphas; all184 supervised outputs. All existing training rows remain fixed, sorted by frame key. A dedicated CPU RNG controls order, and head initialization is seeded immediately before model creation, after prototype generation. Check equality of trainable initialization and order within each pair. Final epoch10 is the selected checkpoint; there is no development selection. Atomic resumable checkpoints save model, optimizer, RNG and current permutation/position; interrupted batches are replayed from a complete checkpoint.
+
+## Evaluation and statistical analysis
+
+Six complete detector evaluations use the existing36717-frame shared manifest, YOLO candidates and stored ground truth at IoU.5, unchanged published AP implementation. The older crop-full historical code reported36716 frames because it skipped an empty candidate/GT frame; this study retains that frame and matches the corrected repeated-seed protocol. Candidate/label hashes and exact row alignment are checked. Agentness and agent scores come from YOLO; action/location/duplex/triplet scores are learned sigmoid times YOLO confidence. No new NMS/thresholds. Do not report crop classification AP as detector AP.
+
+Primary endpoint is paired multi−single **Tail47 detector triplet mAP**, in percentage points. Tail membership comes only from the authoritative training-count manifest: population-standardized log10 counts over86 triplets; z<0 defines47 tail classes, z<−.5 defines28 deep-tail classes, and z≥0 defines39 common classes. Verify the stored membership and ordering. Secondary endpoints: overall86, Deep28, Common39, all per-class triplet AP and other standard evaluator outputs.
+
+Report every seed, arm mean and sample SD, paired deltas/mean, and a95% paired-t interval with df2. Count improved/declined/tied tail classes by the sign of the mean paired per-class difference; export all86 classes and all per-seed differences. Three seeds characterize only limited optimization variability; neither broad data uncertainty nor equivalence is established by a nonsignificant result. Secondary class comparisons are descriptive and unadjusted.
+
+Before training, save prototype norms, full pairwise cosine matrices, canonical-to-aggregate similarity, duplicate/near-identical pairs(cos≥.999), token lengths and truncation checks. These explain outcomes and must not be used to tune phrases on validation AP. Freeze wording, seeds, settings and artifacts before primary training/evaluation. No unplanned controls are added automatically. Averaging alters prototype geometry, so this does not isolate linguistic semantics.
+
+## Resources and monitoring
+
+Initial read-only check: GPU0 RTX A600048GB idle; GPU1 hosts desktop applications;223GiB RAM available. `/data` has446MiB free and `/home` about13GiB. Read caches in place and put new outputs under the dedicated home study root. Estimated checkpoint/prototype/log output below300MiB; detector scores stay in RAM. Verify actual peak RAM/GPU use in benchmark. No dependency upgrades, cache deletion or visual recaching.
+
+Before launch report measured representative training/inference/evaluator throughput, first detector-pair and full-study ETAs with startup/uncertainty, and verified smoke/resume/score parity. Use a silent systemd monitor with heartbeat, repeated log/stall alerts and checkpoint hash backups. Inspect real logs at phase transitions and at least every10min during an active session. Persistent monitoring detects problems; no unattended agent repair is promised for a new study without verified integration. Desktop banners stay disabled.
+
+All outputs belong to this new study. Do not edit the thesis, its abstract, slides, workbook, historical checkpoints or historical result files.
