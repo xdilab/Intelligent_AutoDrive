@@ -59,7 +59,7 @@ def main():
 
 COMP 765, Brandon L. Byrd, NC A&T, Dr. Jung Hee Kim. Study started October 21, 2026 after the thesis defense. No thesis or defense slides were modified.
 
-Distillation produced **{abs(r['paired_delta']['mean']):.3f} percentage points {direction} mean official detector triplet AP** than the identical label-only student. {ci} The mean distilled student remains {r['teacher']-r['distilled']['mean']:.3f} points below the fixed Contextual Scene-Attention Expert Blend (CSEB) teacher. This gap is descriptive: the teacher has much larger training coverage and a future temporal window.
+Distillation produced **{abs(r['paired_delta']['mean']):.3f} percentage points {direction} mean official detector triplet AP** than the identical label-only student. {ci} The mean distilled student remains {r['teacher']-r['distilled']['mean']:.3f} points below the fixed Contextual Scene-Attention Expert Blend (CSEB) teacher. This gap is descriptive: the teacher has much larger training coverage and a future temporal window. The teacher AP is a historical result with matching checkpoint, frame/candidate manifests and evaluator source hashes. Exact numerical replay across environments is not established: fixed detector-only agentness differs by 0.000626 AP points and agent mAP by 0.000891 points. All new student comparisons use one environment/evaluator; the teacher gap is historical context, not a fresh matched teacher run.
 
 ## Controlled comparison
 
