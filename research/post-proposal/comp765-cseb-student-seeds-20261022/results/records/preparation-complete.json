@@ -1,0 +1,11 @@
+{
+  "signature": {
+    "protocol_sha256": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+    "freeze_sha256": "669a55417023c4edad031e0d0a7ca38cf40b7170cfa0929656d0a57263b708ef"
+  },
+  "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+  "time": 1792637961.1144683,
+  "seconds": 3081.208465164993,
+  "frames": 2432,
+  "teacher_targets_only_train": true
+}

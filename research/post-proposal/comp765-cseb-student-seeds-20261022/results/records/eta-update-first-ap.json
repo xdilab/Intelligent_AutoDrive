@@ -1,0 +1,12 @@
+{
+  "time": 1792688370.4357495,
+  "phase": "official detector AP",
+  "completed_runs": 1,
+  "total_runs": 14,
+  "measured_first_run_seconds": 168.22902645682916,
+  "workers": 16,
+  "first_new_pair_ETA_EDT": "2026-10-22 13:00\u201313:10",
+  "all_detector_results_ETA_EDT": "2026-10-22 approximately13:35",
+  "complete_verified_report_ETA_EDT": "2026-10-22 13:40\u201313:45",
+  "uncertainty": "Other class score rankings and system load may change remaining run times; no stopping based on metrics."
+}

@@ -1,0 +1,24 @@
+{
+  "time": 1792686095.8723438,
+  "training_one_epoch_per_condition": [
+    {
+      "condition": "supervised",
+      "sequences": 64,
+      "seconds": 1.806659082416445
+    },
+    {
+      "condition": "distilled",
+      "sequences": 64,
+      "seconds": 1.8022494059987366
+    }
+  ],
+  "training_14_runs_compute_seconds": 757.8707825671881,
+  "inference_frames": 565,
+  "inference_seconds": 12.356893476564437,
+  "inference_joint_frames_per_second": 45.723466101860886,
+  "inference_heads": 14,
+  "full_inference_compute_seconds": 845.5833141317006,
+  "full_agentness_metric_seconds": 152.3938213591464,
+  "gpu_peak_gib": 0.37136030197143555,
+  "scope": "Training-only cache benchmark with disposable seed999 models; inference benchmark uses random fourteen heads on first three locked official videos and computes no semantic AP. Fixed detector-only agentness replays the existing result. Full AP ETA uses prior measured same-evaluator runs, with 16-worker scaling provisional."
+}

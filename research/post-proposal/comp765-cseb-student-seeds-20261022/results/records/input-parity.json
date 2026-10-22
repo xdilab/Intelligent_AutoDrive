@@ -1,0 +1,11 @@
+{
+  "time": 1792686531.0415366,
+  "passed": true,
+  "videos": 198,
+  "images": 38663,
+  "seconds": 6.72113099694252,
+  "original_input_records": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/evaluation-inputs",
+  "backbone_sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+  "detector_sha256": "3ad32910bacaf1fa74174503c5c29f94cfbbd83de51e5e5c301e6fc7f13e8684",
+  "teacher_sha256": "968aefaf7d9f896dd360baf1ab39fb75777693dbcdbd9a2663fb6696ae6c5567"
+}

@@ -1,0 +1,21 @@
+{
+  "original_root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021",
+  "original_code": "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021",
+  "original_protocol_sha256": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+  "original_freeze_sha256": "669a55417023c4edad031e0d0a7ca38cf40b7170cfa0929656d0a57263b708ef",
+  "original_summary_sha256": "abfbc321a6d607544e5349d0e6e4b2854350f71d4b7544c9778e5193b1deb96e",
+  "original_results": {
+    "supervised-seed0": "05c8cbd826c25d1a161f509038dbf86d03eddfbc208caa613b45474351cf94a2",
+    "distilled-seed0": "6f1adeeaa2b40e7aeab50bcca4e773b5073871f9847a0287ef4025501d18b8ea",
+    "supervised-seed1": "ce291e418aa03239d05b08b25b0692d8506722273f00c443ad8dc0b1862ba83a",
+    "distilled-seed1": "e5d391fb1136f7da2aec61b187528c260d271f429de8d23799e938eb8bcc3f3b",
+    "supervised-seed2": "ec385fd15e6568e12d1120119a9047c4ed2a5384f1c8590e60a339642b9a6982",
+    "distilled-seed2": "ad09c5791660d7c5180ce57e3d1c82225cb0ba23ca4794f656c0ba427cb663d2"
+  },
+  "copied_metadata": {
+    "split-manifest.json": "a66487119d3b993ff8837befe566aaf6fac118d078dae5745aac74d578f75623",
+    "data-manifest.json": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+    "preparation-complete.json": "4f48659d6eb3e816f35c06f7d1485caca7a3c9f2509d19870880c23f2efd8f94"
+  },
+  "time": 1792685768.6884553
+}

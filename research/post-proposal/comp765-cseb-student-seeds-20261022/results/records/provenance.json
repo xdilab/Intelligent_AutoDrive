@@ -1,0 +1,117 @@
+{
+  "inputs": {
+    "frames": {
+      "path": "/data/repos/wiki/artifacts/post-proposal-experiments/shared-frames.json",
+      "sha256": "2ef7e3c370a54cd0d61b9aff46acdab2a0e7fa23f1e5f91dd081b67cc35174f1",
+      "bytes": 922460
+    },
+    "counts": {
+      "path": "/data/repos/wiki/artifacts/proposal-tail/train-counts.json",
+      "sha256": "8d8b168945a49d122af6de5b802fd46d80c80ea15cc9a08ec9ad9b121b12639f",
+      "bytes": 9544
+    },
+    "yolo": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/dets_v8x_best_val_fullcand.pkl",
+      "sha256": "447e28f0c071bb7910b5cc9ac37420c7da3bfa3827ad12b5eb3b61e7e5f64811",
+      "bytes": 183339278
+    },
+    "gt": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/dets_i3d_val_fullcand.pkl",
+      "sha256": "c792b324fa6f2cec88d2cafb48ee6dbf8682d62c89ff69f3025044bb1f82d68f",
+      "bytes": 5000961817
+    },
+    "teacher_result": {
+      "path": "/data/repos/wiki/artifacts/contextual-roi-1b-20260930/results-verified-20261005/attention-global-dcb-seed0-detector-results.json",
+      "sha256": "8acbaaf71a3f158727be5f53b0527e77c278b0f6ea7fa4954a858849fe754176",
+      "bytes": 6137
+    },
+    "backbone": {
+      "path": "/home/brandon/.cache/torch/hub/checkpoints/resnet50-11ad3fa6.pth",
+      "sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+      "bytes": 102540417
+    },
+    "detector": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/runs/v8x_agent_1280_eccv/weights/best.pt",
+      "sha256": "3ad32910bacaf1fa74174503c5c29f94cfbbd83de51e5e5c301e6fc7f13e8684",
+      "bytes": 136824954
+    },
+    "teacher": {
+      "path": "/home/brandon/.local/share/road-reason/contextual-roi-1b-20260930/attention-global-dcb-seed0/best.pt",
+      "sha256": "968aefaf7d9f896dd360baf1ab39fb75777693dbcdbd9a2663fb6696ae6c5567",
+      "bytes": 59165858
+    },
+    "annotation": {
+      "path": "/data/datasets/road_waymo/road_waymo_trainval_v1.1.json",
+      "sha256": "628b39bb9aabd917c6631144e319ecba25c1de3a10502c2360439af7e4f4586a",
+      "bytes": 1149647915
+    },
+    "expanded_manifest": {
+      "path": "/home/brandon/.local/share/road-reason/cseb-student-expanded-20261019/manifest.json",
+      "sha256": "900a233821e5748cf42684b1c493d3989a89ab14d5d61858a9a7b5926871ddf6",
+      "bytes": 146428
+    },
+    "teacher_partition": {
+      "path": "/data/repos/wiki/artifacts/stage56-full/collected/preparation.json",
+      "sha256": "f8704095dd068af74abbd0e42ad4c82d4421bd9edd9527d48b375d77d646b338",
+      "bytes": 16517
+    }
+  },
+  "environment": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "numpy": "2.4.3",
+    "opencv-python": "4.13.0.92",
+    "ultralytics": "8.3.226",
+    "Pillow": "12.1.1",
+    "matplotlib": "3.10.8"
+  },
+  "python": "3.11.15 (main, Mar 11 2026, 17:20:07) [GCC 14.3.0]",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "protocol_sha256": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+  "split_manifest_sha256": "a66487119d3b993ff8837befe566aaf6fac118d078dae5745aac74d578f75623",
+  "freeze_sha256": "669a55417023c4edad031e0d0a7ca38cf40b7170cfa0929656d0a57263b708ef",
+  "historical_teacher_and_cache_identity_verified": true,
+  "launch_worktree_base_revision": "36f9830d80bac6fbca8ea2d9251f4795d4a18504",
+  "first_implementation_commit": "2dca85d",
+  "training_freeze_note": "Implementation committed after preparation launched; frozen training/preparation source bytes are unchanged and recorded by hash.",
+  "detector_history_audit_sha256": "d25b63cfdc191039c05356d08803f4b7289d3b3a1d66330fb9b7a843a9d87fc2",
+  "provenance_addendum_sha256": "6cf0a2ba9ea9e72117db2b357322c4e3719ca70281a36603b9030b058d22e624",
+  "independence": "Final validation disjoint from semantic-head/student train/select, but overlaps shared-detector validation/selection for all198videos. Reused benchmark, not independent system test.",
+  "evaluation_code_revision": "0cc90ed804d8eb39bac38fe875bd7f09777b1e80",
+  "evaluation_code_sha256": "f3b5ef27efc6c756563ad786638aed5c3dcd02e099089942da11e3fd919af85c",
+  "teacher_encoder_assets": {
+    "passed": true,
+    "files": [
+      {
+        "kind": "base",
+        "repo": "OpenGVLab/InternVideo2-Stage2_1B-224p-f4",
+        "revision": "4362e1f88a992e7edbfd7696f7f78b7f79426dfd",
+        "filename": "InternVideo2-stage2_1b-224p-f4.pt",
+        "bytes": 2820610931,
+        "sha256": "df8cdbe9c3c9f65fbba777afc9ee6fbf58e6d68c4aec2827cac8e2a98d0a8446",
+        "path": "/home/brandon/.local/share/road-reason/cseb-demo-runtime/assets/InternVideo2-stage2_1b-224p-f4.pt"
+      },
+      {
+        "kind": "clip",
+        "repo": "OpenGVLab/InternVideo2-CLIP-1B-224p-f8",
+        "revision": "b8f9edd6cacdbede471fd2fa58439e0b97a6dc1b",
+        "filename": "1B_clip.pth",
+        "bytes": 14226595,
+        "sha256": "e60e0a6e05daec48285254b17b0b91c7d814b3ac74e538b2c62201553eeec6b1",
+        "path": "/home/brandon/.local/share/road-reason/cseb-demo-runtime/assets/1B_clip.pth"
+      }
+    ],
+    "time": 1790790723.3318188
+  },
+  "teacher_encoder_asset_manifest_sha256": "8fff30e4be554e4885fbe920d23e9fa667203fafd871227cdb46da550a2d3e93",
+  "shared_implementation_sha256": {
+    "/data/repos/ROAD_Reason/research/post-proposal/demo/deployment.py": "0558566659087e872e5841481a568d018cb4f15c2b6b461a8f06d060c54fd04e",
+    "/data/repos/ROAD_Reason/research/post-proposal/demo/runtime.py": "1f434e15ab24809f09ccdc084334eb7025f57bfe3174f1d4af65b57117dcc7a1",
+    "/data/repos/ROAD_Reason/research/post-proposal/demo/predict.py": "ff66376eee90c42780cd3a233f218cb7a15fe8a8feac89f60f2f63c9e4915e79",
+    "/data/repos/ROAD_Reason/research/post-proposal/demo/infer_video.py": "c14aba0bcd3ee4f226b447d2d115fe3cb5055b0bf21320ca02f303319433818c",
+    "/data/repos/ROAD_Reason/research/post-proposal/demo/export_sample.py": "badff5a69a8ed18b135de053be85fa15048f35a443aa58c9bed709a580af3f90",
+    "/data/repos/ROAD_Reason/research/post-proposal/contextual-roi-1b/benchmark_vision.py": "2fed0bbec18bc67eaba034533bf411c6b701e6bcdda6eb5ab1cc5f5d63d4bb5f",
+    "/data/repos/ROAD_Reason/research/post-proposal/contextual-roi-1b/model.py": "a196955f50cc1a1cf4c7f0f839bb8a68ad3b09c102b4323534df6d49d0353a6a",
+    "/data/repos/ROAD_Reason/research/post-proposal/cseb-student/inference.py": "4fa11c4f91205c37fc3d460a9e5a8ac5e4185fab76425707c4a95e6e02f5593b"
+  }
+}

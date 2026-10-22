@@ -1,0 +1,25 @@
+{
+  "time": 1792685898.4889493,
+  "files": {
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-seeds-20261022/protocol.json": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-seeds-20261022/common.py": "10dae825b21eb5f15d0018dd59e5ec775c46a0fda4c928c3e2b34b92b02e9906",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-seeds-20261022/train.py": "d323616042f60e09891b9ba38c1797a2a2c06c5295ff87d50a0755374d410146",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-seeds-20261022/evaluate.py": "0b1fe5770408f6d9c9b8d15e1c3ad643b9057e8c5772460accbffb478b7b1cc6",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-seeds-20261022/preflight.py": "a42d9f2fb42a1a9eaea200157532041c6d50fd530c561a679e303d8d87087181",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-seeds-20261022/extension_preflight.py": "a1a102de287bafd701d0903cd0493a6c38ed61852b0ae0ddba6620e8ebe91c21",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-seeds-20261022/PROVENANCE-ADDENDUM.md": "6cf0a2ba9ea9e72117db2b357322c4e3719ca70281a36603b9030b058d22e624",
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/split-manifest.json": "a66487119d3b993ff8837befe566aaf6fac118d078dae5745aac74d578f75623",
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/data-manifest.json": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/original-record.json": "3972b0f45cbc58f51a9ebc65e0b68b579511e524a6e2409d97b33e606c5465d6",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021/protocol.json": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021/common.py": "19ae095075486fc3b2a97ed23a5990352ae31ab7d6cf693f7c935ac5fa6e4242",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021/prepare.py": "2edcec0b4786b0514faa62fa2df292736ada43067dabcf0e97ede34014eabe5f",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021/train.py": "f0e381ed62737c4e704600faaf3874f5543b56532996cd97561f781e16765d28",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021/preflight.py": "a42d9f2fb42a1a9eaea200157532041c6d50fd530c561a679e303d8d87087181",
+    "/data/repos/ROAD_Reason/research/post-proposal/cseb-student/model.py": "5808624cc0432a4626f86bd69b83ddc398742b86862eeea0fd62fbd5a2deb7a9",
+    "/data/repos/ROAD_Reason/research/post-proposal/cseb-student/pilot.py": "c2da7f5eb8b2d536b76d25a6afc64e4ada07b503f43bc10e972558bdc3af6305",
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/split-manifest.json": "a66487119d3b993ff8837befe566aaf6fac118d078dae5745aac74d578f75623",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021/evaluate.py": "f3b5ef27efc6c756563ad786638aed5c3dcd02e099089942da11e3fd919af85c"
+  },
+  "scope": "Seven additional paired seeds fixed before new training/evaluation; original study frozen and immutable. Same caches/data and numerical functions."
+}

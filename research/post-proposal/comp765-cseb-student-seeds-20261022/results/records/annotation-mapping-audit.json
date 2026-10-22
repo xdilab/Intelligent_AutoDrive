@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "time": 1792637668.7655737,
+  "frames": 594,
+  "boxes": 11848,
+  "max_pixel_box_error": 0.0,
+  "label_mismatches": [],
+  "method": "Independent annotation IDs -> master label strings -> curated output rows; compare to stored official GT; three fixed positions/video, no AP",
+  "sources_sha256": {
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021/annotation_audit.py": "9647a183de90576fc99a67b151f673a6d0634bf5af9a25c3a5c11c6de5b6c2d2",
+    "/data/repos/ROAD_Reason/experiments/exp4_retinamoon/dataloader.py": "b2f484d15e1d3216832e98c00c6648310bdc051db297de31ab39b5ad3390bad4",
+    "/data/repos/ROAD_Reason/experiments/exp1_road_r/dataset.py": "9dde9ce7539559a36efd95758cc484efd0c2a6c4ecd8fbb47f430e9b9ef7b778"
+  }
+}

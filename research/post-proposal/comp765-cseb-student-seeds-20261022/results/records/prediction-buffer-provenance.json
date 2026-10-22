@@ -1,0 +1,80 @@
+{
+  "time": 1792690630.0003946,
+  "scope": "Only extension-owned temporary full-candidate prediction buffers; metrics, inputs, checkpoints and cached features preserved.",
+  "final_audit_sha256": "2b5a6f64a8be06e64638778e65206116beea1b1fa02a0a35a3fecebb738e50d9",
+  "files": [
+    {
+      "path": "/dev/shm/comp765-cseb-student-seeds-20261022/distilled-seed3.npy",
+      "bytes": 4536680576,
+      "sha256": "5247041d8a8d0097e4080f69a390a7e30a9bea93c0100f39acd989a2fe6c5e67"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-seeds-20261022/distilled-seed4.npy",
+      "bytes": 4536680576,
+      "sha256": "72a5dc1c339e48dd80e6af2044d9e745ff397af510b297ae70f5e467be82aa3b"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-seeds-20261022/distilled-seed5.npy",
+      "bytes": 4536680576,
+      "sha256": "dabc14d6ca3e3be892813e355607d2684b56d18e409f74a6044419317df1d4b4"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-seeds-20261022/distilled-seed6.npy",
+      "bytes": 4536680576,
+      "sha256": "e4737e69e7ff219731e8d11401a823adae27dbf838fcdef0e8504572e03593f8"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-seeds-20261022/distilled-seed7.npy",
+      "bytes": 4536680576,
+      "sha256": "3851d22f9a550633204617fa372c3756ab726499af26598cfdd6c85bb4430b2a"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-seeds-20261022/distilled-seed8.npy",
+      "bytes": 4536680576,
+      "sha256": "7ab96f37309ca95ff60e4292bc15d386cf12f8403981fbc04c94115b938910a2"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-seeds-20261022/distilled-seed9.npy",
+      "bytes": 4536680576,
+      "sha256": "03f21385624767d914b120d04ef33b122803c8484ffaf90b53d76d97794cc763"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-seeds-20261022/supervised-seed3.npy",
+      "bytes": 4536680576,
+      "sha256": "193ced656d811d40408b612b28a199f7d2ff6b1804ccc5abd5a29eb2080b9d77"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-seeds-20261022/supervised-seed4.npy",
+      "bytes": 4536680576,
+      "sha256": "089ddeac03ff59eb24175ae65f21da945bfa10d88c6cc034894e53c44e2d9770"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-seeds-20261022/supervised-seed5.npy",
+      "bytes": 4536680576,
+      "sha256": "b2072a163b6c8a41518bb7c3b32478691d821b36505599955fdf1209caab5a2f"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-seeds-20261022/supervised-seed6.npy",
+      "bytes": 4536680576,
+      "sha256": "63428b414de28b98053581347134516e8d834185d446b0bcce0d47683493241a"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-seeds-20261022/supervised-seed7.npy",
+      "bytes": 4536680576,
+      "sha256": "6083c5923d6dc5eb7d9517c9eb2fccd096041c46a28b8265ded05e60c27535fd"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-seeds-20261022/supervised-seed8.npy",
+      "bytes": 4536680576,
+      "sha256": "ed861f01154bcc7bb696882770c2d91ccbc293b9ed194a9d931504c838a34831"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-seeds-20261022/supervised-seed9.npy",
+      "bytes": 4536680576,
+      "sha256": "424f7f5243c258526debfadf1580d6d8478c71e313f7bda6d5c1a75cc1dae5aa"
+    }
+  ],
+  "total_bytes": 63513528064,
+  "removed": true,
+  "removed_time": 1792690638.647942
+}

@@ -1,0 +1,18 @@
+{
+  "time": 1792688437.7146602,
+  "python": "3.11.15 (main, Mar 11 2026, 17:20:07) [GCC 14.3.0]",
+  "executable": "/home/brandon/miniconda3/envs/road_reason/bin/python",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "numpy": "2.4.3",
+    "opencv-python": "4.13.0.92",
+    "ultralytics": "8.3.226",
+    "Pillow": "12.1.1",
+    "matplotlib": "3.10.8"
+  },
+  "PYTHONPATH": "/home/brandon/.local/share/road-reason/cseb-demo-runtime/packages",
+  "matches_original_versions": true,
+  "note": "The shared vendor directory supplies third-party dependencies such as Ultralytics; seed training/evaluation does not load teacher weights."
+}

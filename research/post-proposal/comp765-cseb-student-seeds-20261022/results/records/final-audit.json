@@ -1,0 +1,13 @@
+{
+  "time": 1792690540.7579496,
+  "passed": true,
+  "total_pairs": 10,
+  "new_pairs": 7,
+  "new_checkpoints_verified": 28,
+  "original_results_unchanged": true,
+  "independent_mean_sd_interval": true,
+  "critical_t_quantiles_numerically_verified": true,
+  "all_per_class_results": true,
+  "paired_initialization_order": true,
+  "cross_validation_launched": false
+}

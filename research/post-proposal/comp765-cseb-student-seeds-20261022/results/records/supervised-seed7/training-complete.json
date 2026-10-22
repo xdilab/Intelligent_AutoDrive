@@ -1,0 +1,18 @@
+{
+  "signature": {
+    "protocol_sha256": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+    "freeze_sha256": "38f7756ede7b4462d2712da7194ac6b11d9864687ecc60d93e1018438a37085e",
+    "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+    "seed": 7,
+    "condition": "supervised",
+    "order_sha256": "97302fd660c43680971e7522430f702918679f00fd2ce7574ff2fe208f3865f2"
+  },
+  "initialization_sha256": "a414e2d9b7b7a3952715faa2c0792c3ffb2e7babb9ecdc798c28b3c9bc9563cd",
+  "order_sha256": "97302fd660c43680971e7522430f702918679f00fd2ce7574ff2fe208f3865f2",
+  "checkpoint_sha256": "0f94f63264de8c85d4e03e1459e04a895e73422e6066ad60b93c474d49339701",
+  "selected_epoch": 8,
+  "best_selection_bce": 0.051344335079193115,
+  "time": 1792686864.3239293,
+  "seconds": 63.578365043736994,
+  "trainable_parameters": 1108568
+}

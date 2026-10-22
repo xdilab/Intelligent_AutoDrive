@@ -1,0 +1,577 @@
+{
+  "time": 1792690517.8333302,
+  "code_revision": "fad57c3d950bf52284e2fbaadb8dd77b579aa596",
+  "code_sha256": {
+    "train.py": "d323616042f60e09891b9ba38c1797a2a2c06c5295ff87d50a0755374d410146",
+    "final_audit.py": "ddd3db084facc3b1d0184c6f6d288e63a8b6d72403c887c2182799f9be1d95bc",
+    "pipeline.py": "14e20244cd5154ca03227cfe1f6d3b87cc4ca3ca389176fafc13f88d7304c685",
+    "preflight.py": "a42d9f2fb42a1a9eaea200157532041c6d50fd530c561a679e303d8d87087181",
+    "common.py": "10dae825b21eb5f15d0018dd59e5ec775c46a0fda4c928c3e2b34b92b02e9906",
+    "evaluate.py": "0b1fe5770408f6d9c9b8d15e1c3ad643b9057e8c5772460accbffb478b7b1cc6",
+    "verify_inputs.py": "71d2c42dd901914adbba82795f65ee4666cb529da3c5a8ab896fa7bb34ab98a4",
+    "analyze.py": "53dfc3aee3b9fd50be1d272dec3cded98ffee83a00b295bc7468f0020e718816",
+    "archive_record.py": "15f83bf1a77e4c75dbca8529cdd08b62a2fd1b3531d0eee0df75c2130fa538ce",
+    "monitor.py": "b3c2155fecefc3ea4cffa3ce56542626794a2d99a8f18bc70052560b4d0ae81c",
+    "extension_preflight.py": "a1a102de287bafd701d0903cd0493a6c38ed61852b0ae0ddba6620e8ebe91c21"
+  },
+  "protocol_sha256": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+  "freeze_sha256": "38f7756ede7b4462d2712da7194ac6b11d9864687ecc60d93e1018438a37085e",
+  "original_record": {
+    "original_root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021",
+    "original_code": "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021",
+    "original_protocol_sha256": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+    "original_freeze_sha256": "669a55417023c4edad031e0d0a7ca38cf40b7170cfa0929656d0a57263b708ef",
+    "original_summary_sha256": "abfbc321a6d607544e5349d0e6e4b2854350f71d4b7544c9778e5193b1deb96e",
+    "original_results": {
+      "supervised-seed0": "05c8cbd826c25d1a161f509038dbf86d03eddfbc208caa613b45474351cf94a2",
+      "distilled-seed0": "6f1adeeaa2b40e7aeab50bcca4e773b5073871f9847a0287ef4025501d18b8ea",
+      "supervised-seed1": "ce291e418aa03239d05b08b25b0692d8506722273f00c443ad8dc0b1862ba83a",
+      "distilled-seed1": "e5d391fb1136f7da2aec61b187528c260d271f429de8d23799e938eb8bcc3f3b",
+      "supervised-seed2": "ec385fd15e6568e12d1120119a9047c4ed2a5384f1c8590e60a339642b9a6982",
+      "distilled-seed2": "ad09c5791660d7c5180ce57e3d1c82225cb0ba23ca4794f656c0ba427cb663d2"
+    },
+    "copied_metadata": {
+      "split-manifest.json": "a66487119d3b993ff8837befe566aaf6fac118d078dae5745aac74d578f75623",
+      "data-manifest.json": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+      "preparation-complete.json": "4f48659d6eb3e816f35c06f7d1485caca7a3c9f2509d19870880c23f2efd8f94"
+    },
+    "time": 1792685768.6884553
+  },
+  "original_environment": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "numpy": "2.4.3",
+    "opencv-python": "4.13.0.92",
+    "ultralytics": "8.3.226",
+    "Pillow": "12.1.1",
+    "matplotlib": "3.10.8"
+  },
+  "current_environment": {
+    "time": 1792688437.7146602,
+    "python": "3.11.15 (main, Mar 11 2026, 17:20:07) [GCC 14.3.0]",
+    "executable": "/home/brandon/miniconda3/envs/road_reason/bin/python",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "packages": {
+      "torch": "2.4.1+cu124",
+      "torchvision": "0.19.1+cu124",
+      "numpy": "2.4.3",
+      "opencv-python": "4.13.0.92",
+      "ultralytics": "8.3.226",
+      "Pillow": "12.1.1",
+      "matplotlib": "3.10.8"
+    },
+    "PYTHONPATH": "/home/brandon/.local/share/road-reason/cseb-demo-runtime/packages",
+    "matches_original_versions": true,
+    "note": "The shared vendor directory supplies third-party dependencies such as Ultralytics; seed training/evaluation does not load teacher weights."
+  },
+  "runs": {
+    "supervised-seed0": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/supervised-seed0",
+      "result_sha256": "05c8cbd826c25d1a161f509038dbf86d03eddfbc208caa613b45474351cf94a2",
+      "training": {
+        "signature": {
+          "protocol_sha256": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+          "freeze_sha256": "669a55417023c4edad031e0d0a7ca38cf40b7170cfa0929656d0a57263b708ef",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 0,
+          "condition": "supervised",
+          "order_sha256": "bbb2a04fd3ef8d5ca7079a4d7dda72f34456b805c2e326c88ad957cb1c66640e"
+        },
+        "initialization_sha256": "f7adcab1b2aff695661dd40a3c729282ece8677f9a9addee6b4bca44e4fb2ab4",
+        "order_sha256": "bbb2a04fd3ef8d5ca7079a4d7dda72f34456b805c2e326c88ad957cb1c66640e",
+        "checkpoint_sha256": "525b672354b629afb9ad7fc0e972d8fc53bfeca2090ea7dd960004e893437e8e",
+        "selected_epoch": 6,
+        "best_selection_bce": 0.05323415994644165,
+        "time": 1792638030.2438004,
+        "seconds": 64.4986581960693,
+        "trainable_parameters": 1108568
+      }
+    },
+    "distilled-seed0": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed0",
+      "result_sha256": "6f1adeeaa2b40e7aeab50bcca4e773b5073871f9847a0287ef4025501d18b8ea",
+      "training": {
+        "signature": {
+          "protocol_sha256": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+          "freeze_sha256": "669a55417023c4edad031e0d0a7ca38cf40b7170cfa0929656d0a57263b708ef",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 0,
+          "condition": "distilled",
+          "order_sha256": "bbb2a04fd3ef8d5ca7079a4d7dda72f34456b805c2e326c88ad957cb1c66640e"
+        },
+        "initialization_sha256": "f7adcab1b2aff695661dd40a3c729282ece8677f9a9addee6b4bca44e4fb2ab4",
+        "order_sha256": "bbb2a04fd3ef8d5ca7079a4d7dda72f34456b805c2e326c88ad957cb1c66640e",
+        "checkpoint_sha256": "55a20fafb9dfbdf682559444e9673bc68f0a6b229c65d1bf00ddfead25902c26",
+        "selected_epoch": 17,
+        "best_selection_bce": 0.04953480884432793,
+        "time": 1792638092.8127654,
+        "seconds": 62.556829270906746,
+        "trainable_parameters": 1108568
+      }
+    },
+    "supervised-seed1": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/supervised-seed1",
+      "result_sha256": "ce291e418aa03239d05b08b25b0692d8506722273f00c443ad8dc0b1862ba83a",
+      "training": {
+        "signature": {
+          "protocol_sha256": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+          "freeze_sha256": "669a55417023c4edad031e0d0a7ca38cf40b7170cfa0929656d0a57263b708ef",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 1,
+          "condition": "supervised",
+          "order_sha256": "a8eb5ae1abc2ba6a027bdf4119af84df458250f353c043b47fced25d4bbf62aa"
+        },
+        "initialization_sha256": "45a8aa8e832a4a4732bb5c2aa6df301a8d5c1a983348d5b2f82e90935b4167ac",
+        "order_sha256": "a8eb5ae1abc2ba6a027bdf4119af84df458250f353c043b47fced25d4bbf62aa",
+        "checkpoint_sha256": "77c2e43369a4fe6dc3a73e9b60e60be91f18df491e504d948eda89559987ffc8",
+        "selected_epoch": 10,
+        "best_selection_bce": 0.05122283101081848,
+        "time": 1792638154.8127527,
+        "seconds": 61.98867907002568,
+        "trainable_parameters": 1108568
+      }
+    },
+    "distilled-seed1": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed1",
+      "result_sha256": "e5d391fb1136f7da2aec61b187528c260d271f429de8d23799e938eb8bcc3f3b",
+      "training": {
+        "signature": {
+          "protocol_sha256": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+          "freeze_sha256": "669a55417023c4edad031e0d0a7ca38cf40b7170cfa0929656d0a57263b708ef",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 1,
+          "condition": "distilled",
+          "order_sha256": "a8eb5ae1abc2ba6a027bdf4119af84df458250f353c043b47fced25d4bbf62aa"
+        },
+        "initialization_sha256": "45a8aa8e832a4a4732bb5c2aa6df301a8d5c1a983348d5b2f82e90935b4167ac",
+        "order_sha256": "a8eb5ae1abc2ba6a027bdf4119af84df458250f353c043b47fced25d4bbf62aa",
+        "checkpoint_sha256": "21219772e3d82ea9b8b66437a0268d5e8694175bdf8d87d347bc5a01cf3ac834",
+        "selected_epoch": 13,
+        "best_selection_bce": 0.04873818904161453,
+        "time": 1792638218.2495918,
+        "seconds": 63.424174236133695,
+        "trainable_parameters": 1108568
+      }
+    },
+    "supervised-seed2": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/supervised-seed2",
+      "result_sha256": "ec385fd15e6568e12d1120119a9047c4ed2a5384f1c8590e60a339642b9a6982",
+      "training": {
+        "signature": {
+          "protocol_sha256": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+          "freeze_sha256": "669a55417023c4edad031e0d0a7ca38cf40b7170cfa0929656d0a57263b708ef",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 2,
+          "condition": "supervised",
+          "order_sha256": "b1dad494a20bca318fd44ddf515d22c7381e623404ae383ed01f40c49aed7e84"
+        },
+        "initialization_sha256": "a1ee7fedff47361a2cb0b79a0fc840cafdfa2a1c5568539779fde486b1029c4f",
+        "order_sha256": "b1dad494a20bca318fd44ddf515d22c7381e623404ae383ed01f40c49aed7e84",
+        "checkpoint_sha256": "bda616564fcc842134ee9b4d9f643988cfee1fb73855d4b3c3cbb4c70c782b36",
+        "selected_epoch": 11,
+        "best_selection_bce": 0.0531122125685215,
+        "time": 1792638280.8958862,
+        "seconds": 62.634604645427316,
+        "trainable_parameters": 1108568
+      }
+    },
+    "distilled-seed2": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed2",
+      "result_sha256": "ad09c5791660d7c5180ce57e3d1c82225cb0ba23ca4794f656c0ba427cb663d2",
+      "training": {
+        "signature": {
+          "protocol_sha256": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+          "freeze_sha256": "669a55417023c4edad031e0d0a7ca38cf40b7170cfa0929656d0a57263b708ef",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 2,
+          "condition": "distilled",
+          "order_sha256": "b1dad494a20bca318fd44ddf515d22c7381e623404ae383ed01f40c49aed7e84"
+        },
+        "initialization_sha256": "a1ee7fedff47361a2cb0b79a0fc840cafdfa2a1c5568539779fde486b1029c4f",
+        "order_sha256": "b1dad494a20bca318fd44ddf515d22c7381e623404ae383ed01f40c49aed7e84",
+        "checkpoint_sha256": "ec0cfd20b86726f7a494cb9a19657ab2a3d4248ab2478056d097b08532a0cafe",
+        "selected_epoch": 22,
+        "best_selection_bce": 0.049487434327602386,
+        "time": 1792638343.8262973,
+        "seconds": 62.91901624714956,
+        "trainable_parameters": 1108568
+      }
+    },
+    "supervised-seed3": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/supervised-seed3",
+      "result_sha256": "44e22bad6c44b2243a21fe9b615542781d98687778865677a6b3f770aa284aea",
+      "training": {
+        "signature": {
+          "protocol_sha256": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+          "freeze_sha256": "38f7756ede7b4462d2712da7194ac6b11d9864687ecc60d93e1018438a37085e",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 3,
+          "condition": "supervised",
+          "order_sha256": "754856657e5b1b8c512ff4b914bd95cc44a28e461703c31798070b934afde75a"
+        },
+        "initialization_sha256": "5bdce689c20251abb8cf05b1d0df6a074d6a167c0a41057e0286cf500a21ff71",
+        "order_sha256": "754856657e5b1b8c512ff4b914bd95cc44a28e461703c31798070b934afde75a",
+        "checkpoint_sha256": "50a729fa2c75dd9a6bffbc6fb40a7f3f55ee17cc23c6cdebb7d74ad7ee8453dc",
+        "selected_epoch": 10,
+        "best_selection_bce": 0.05051305890083313,
+        "time": 1792686363.009733,
+        "seconds": 62.42593017639592,
+        "trainable_parameters": 1108568
+      }
+    },
+    "distilled-seed3": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed3",
+      "result_sha256": "b9697c9fadfc00489b48289a74be296b6442fc2766b58a3f56d13c9fa1db74e1",
+      "training": {
+        "signature": {
+          "protocol_sha256": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+          "freeze_sha256": "38f7756ede7b4462d2712da7194ac6b11d9864687ecc60d93e1018438a37085e",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 3,
+          "condition": "distilled",
+          "order_sha256": "754856657e5b1b8c512ff4b914bd95cc44a28e461703c31798070b934afde75a"
+        },
+        "initialization_sha256": "5bdce689c20251abb8cf05b1d0df6a074d6a167c0a41057e0286cf500a21ff71",
+        "order_sha256": "754856657e5b1b8c512ff4b914bd95cc44a28e461703c31798070b934afde75a",
+        "checkpoint_sha256": "19287e0205b252acb2316831f79e81b7192805e7bd00183eaa36135d3db97b02",
+        "selected_epoch": 10,
+        "best_selection_bce": 0.04921921342611313,
+        "time": 1792686424.6150503,
+        "seconds": 61.59301014104858,
+        "trainable_parameters": 1108568
+      }
+    },
+    "supervised-seed4": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/supervised-seed4",
+      "result_sha256": "1760c52eb376f42e82b4764d1e805e7c94073d50d41245bdaaa37e941ddb9ba0",
+      "training": {
+        "signature": {
+          "protocol_sha256": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+          "freeze_sha256": "38f7756ede7b4462d2712da7194ac6b11d9864687ecc60d93e1018438a37085e",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 4,
+          "condition": "supervised",
+          "order_sha256": "fc26dcb05dd8c2fdedf3c518d5558308e10d170fe1d950a629b7c916869da3c6"
+        },
+        "initialization_sha256": "98a5bbda6b48f1c06690fb60be97d1385d5c8e5cf450c90a25cd34a4bd75b4e7",
+        "order_sha256": "fc26dcb05dd8c2fdedf3c518d5558308e10d170fe1d950a629b7c916869da3c6",
+        "checkpoint_sha256": "b5608d381815f142d80c9c2d430565d0e15d231d9ce38e6aab22fd2a32a817d5",
+        "selected_epoch": 12,
+        "best_selection_bce": 0.05278359353542328,
+        "time": 1792686486.2982075,
+        "seconds": 61.671960968058556,
+        "trainable_parameters": 1108568
+      }
+    },
+    "distilled-seed4": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed4",
+      "result_sha256": "ac2543fba7d945162cad7e2340ddadddbcd62445990574e75e8c0e78f83c093d",
+      "training": {
+        "signature": {
+          "protocol_sha256": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+          "freeze_sha256": "38f7756ede7b4462d2712da7194ac6b11d9864687ecc60d93e1018438a37085e",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 4,
+          "condition": "distilled",
+          "order_sha256": "fc26dcb05dd8c2fdedf3c518d5558308e10d170fe1d950a629b7c916869da3c6"
+        },
+        "initialization_sha256": "98a5bbda6b48f1c06690fb60be97d1385d5c8e5cf450c90a25cd34a4bd75b4e7",
+        "order_sha256": "fc26dcb05dd8c2fdedf3c518d5558308e10d170fe1d950a629b7c916869da3c6",
+        "checkpoint_sha256": "c4e1701a91de59e260dfabe38a842a4326826d2642738b2871b343f67bc0b577",
+        "selected_epoch": 17,
+        "best_selection_bce": 0.05024739354848862,
+        "time": 1792686548.429023,
+        "seconds": 62.11918911896646,
+        "trainable_parameters": 1108568
+      }
+    },
+    "supervised-seed5": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/supervised-seed5",
+      "result_sha256": "73a7be682f22cd240cd12cc1db44c6ec8a67a18b8f569030720b081994544a11",
+      "training": {
+        "signature": {
+          "protocol_sha256": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+          "freeze_sha256": "38f7756ede7b4462d2712da7194ac6b11d9864687ecc60d93e1018438a37085e",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 5,
+          "condition": "supervised",
+          "order_sha256": "e890ac2efabebceeb89ba11af55013ac1e788e63f4658b3b2fc9aae32fc0e54b"
+        },
+        "initialization_sha256": "0b8f0a241dbf3ce595d811e33b4a97c5acdb3b01281dfe0532886f23a72a4f52",
+        "order_sha256": "e890ac2efabebceeb89ba11af55013ac1e788e63f4658b3b2fc9aae32fc0e54b",
+        "checkpoint_sha256": "5e3bbeb28ff92c3c319c8466a84fb77234c844ea3134c9c595cac019e68f59fa",
+        "selected_epoch": 13,
+        "best_selection_bce": 0.05243247374892235,
+        "time": 1792686611.8847334,
+        "seconds": 63.4412825810723,
+        "trainable_parameters": 1108568
+      }
+    },
+    "distilled-seed5": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed5",
+      "result_sha256": "68b799668520dee4640cacddf31e5faf796ec44e1edf379088d08a47df16c51d",
+      "training": {
+        "signature": {
+          "protocol_sha256": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+          "freeze_sha256": "38f7756ede7b4462d2712da7194ac6b11d9864687ecc60d93e1018438a37085e",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 5,
+          "condition": "distilled",
+          "order_sha256": "e890ac2efabebceeb89ba11af55013ac1e788e63f4658b3b2fc9aae32fc0e54b"
+        },
+        "initialization_sha256": "0b8f0a241dbf3ce595d811e33b4a97c5acdb3b01281dfe0532886f23a72a4f52",
+        "order_sha256": "e890ac2efabebceeb89ba11af55013ac1e788e63f4658b3b2fc9aae32fc0e54b",
+        "checkpoint_sha256": "d5fbfed13513e2e334c7724164322e3dcbd613af5d4aae570c2fdd571965e4ad",
+        "selected_epoch": 12,
+        "best_selection_bce": 0.050281822681427,
+        "time": 1792686674.5438752,
+        "seconds": 62.64516512490809,
+        "trainable_parameters": 1108568
+      }
+    },
+    "supervised-seed6": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/supervised-seed6",
+      "result_sha256": "ec826a91649f64b33e676ce2f81d145c193ec57e9db57a2d61cc5857e1c824b4",
+      "training": {
+        "signature": {
+          "protocol_sha256": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+          "freeze_sha256": "38f7756ede7b4462d2712da7194ac6b11d9864687ecc60d93e1018438a37085e",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 6,
+          "condition": "supervised",
+          "order_sha256": "3beec8c370cb9013d5126e2a9af5f7d0d87bab7cace984626aadd4b7f8427f03"
+        },
+        "initialization_sha256": "4e490987389c2e568f815d6b23c4e959502331c3427c0ff97a5b9417fe1261d6",
+        "order_sha256": "3beec8c370cb9013d5126e2a9af5f7d0d87bab7cace984626aadd4b7f8427f03",
+        "checkpoint_sha256": "d5feacca843e61fd9cbd9a698238ec91d6c1f1a85160e0017005d515079ba40c",
+        "selected_epoch": 9,
+        "best_selection_bce": 0.05184122547507286,
+        "time": 1792686737.0896063,
+        "seconds": 62.53424500674009,
+        "trainable_parameters": 1108568
+      }
+    },
+    "distilled-seed6": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed6",
+      "result_sha256": "e76eadd22c7dad27e35d1b7d3e353dda7cb7b361261afddd07b6c4e3ddd4114e",
+      "training": {
+        "signature": {
+          "protocol_sha256": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+          "freeze_sha256": "38f7756ede7b4462d2712da7194ac6b11d9864687ecc60d93e1018438a37085e",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 6,
+          "condition": "distilled",
+          "order_sha256": "3beec8c370cb9013d5126e2a9af5f7d0d87bab7cace984626aadd4b7f8427f03"
+        },
+        "initialization_sha256": "4e490987389c2e568f815d6b23c4e959502331c3427c0ff97a5b9417fe1261d6",
+        "order_sha256": "3beec8c370cb9013d5126e2a9af5f7d0d87bab7cace984626aadd4b7f8427f03",
+        "checkpoint_sha256": "1029d67c5b4321388936b44b5f4722e5175736aa16363e5cecbbe2b5e0adae40",
+        "selected_epoch": 9,
+        "best_selection_bce": 0.05062025412917137,
+        "time": 1792686800.7336922,
+        "seconds": 63.6338324281387,
+        "trainable_parameters": 1108568
+      }
+    },
+    "supervised-seed7": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/supervised-seed7",
+      "result_sha256": "527ab85f4192dfdaa021f4781773890247009cc73240e4326bbd89fe5841e006",
+      "training": {
+        "signature": {
+          "protocol_sha256": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+          "freeze_sha256": "38f7756ede7b4462d2712da7194ac6b11d9864687ecc60d93e1018438a37085e",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 7,
+          "condition": "supervised",
+          "order_sha256": "97302fd660c43680971e7522430f702918679f00fd2ce7574ff2fe208f3865f2"
+        },
+        "initialization_sha256": "a414e2d9b7b7a3952715faa2c0792c3ffb2e7babb9ecdc798c28b3c9bc9563cd",
+        "order_sha256": "97302fd660c43680971e7522430f702918679f00fd2ce7574ff2fe208f3865f2",
+        "checkpoint_sha256": "0f94f63264de8c85d4e03e1459e04a895e73422e6066ad60b93c474d49339701",
+        "selected_epoch": 8,
+        "best_selection_bce": 0.051344335079193115,
+        "time": 1792686864.3239293,
+        "seconds": 63.578365043736994,
+        "trainable_parameters": 1108568
+      }
+    },
+    "distilled-seed7": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed7",
+      "result_sha256": "5efa1cc343e969184fa09556f0a6eb8328cd9acc9028402c414c3ca445f3d5d3",
+      "training": {
+        "signature": {
+          "protocol_sha256": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+          "freeze_sha256": "38f7756ede7b4462d2712da7194ac6b11d9864687ecc60d93e1018438a37085e",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 7,
+          "condition": "distilled",
+          "order_sha256": "97302fd660c43680971e7522430f702918679f00fd2ce7574ff2fe208f3865f2"
+        },
+        "initialization_sha256": "a414e2d9b7b7a3952715faa2c0792c3ffb2e7babb9ecdc798c28b3c9bc9563cd",
+        "order_sha256": "97302fd660c43680971e7522430f702918679f00fd2ce7574ff2fe208f3865f2",
+        "checkpoint_sha256": "eb92df5f4a5762cc503b70c360c93cc22c4fa92b58a27c0f563cc47144a37951",
+        "selected_epoch": 19,
+        "best_selection_bce": 0.050764769315719604,
+        "time": 1792686927.0166535,
+        "seconds": 62.68240173300728,
+        "trainable_parameters": 1108568
+      }
+    },
+    "supervised-seed8": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/supervised-seed8",
+      "result_sha256": "76ddea2c59db1cb612201913e82e76494d4550c55bdfd95f0cf17815981bce52",
+      "training": {
+        "signature": {
+          "protocol_sha256": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+          "freeze_sha256": "38f7756ede7b4462d2712da7194ac6b11d9864687ecc60d93e1018438a37085e",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 8,
+          "condition": "supervised",
+          "order_sha256": "73b317902212416eb2dfaf86accdf9b51b554f8d1ad0311befaa96827803e059"
+        },
+        "initialization_sha256": "f5dc1982e3ff9edc9255e679fe75c1decac211b3d3c145cbb9fe887aefbba072",
+        "order_sha256": "73b317902212416eb2dfaf86accdf9b51b554f8d1ad0311befaa96827803e059",
+        "checkpoint_sha256": "0eee7201f2a7380df3e7c20ef84bedfced4e85e93a72f8f7ca3bf8cba5e005ad",
+        "selected_epoch": 9,
+        "best_selection_bce": 0.05271215736865997,
+        "time": 1792686988.5786097,
+        "seconds": 61.55036026611924,
+        "trainable_parameters": 1108568
+      }
+    },
+    "distilled-seed8": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed8",
+      "result_sha256": "b171efe567490ffdabc803af7d40bac6b521933feb02e0031cf76bef66b40211",
+      "training": {
+        "signature": {
+          "protocol_sha256": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+          "freeze_sha256": "38f7756ede7b4462d2712da7194ac6b11d9864687ecc60d93e1018438a37085e",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 8,
+          "condition": "distilled",
+          "order_sha256": "73b317902212416eb2dfaf86accdf9b51b554f8d1ad0311befaa96827803e059"
+        },
+        "initialization_sha256": "f5dc1982e3ff9edc9255e679fe75c1decac211b3d3c145cbb9fe887aefbba072",
+        "order_sha256": "73b317902212416eb2dfaf86accdf9b51b554f8d1ad0311befaa96827803e059",
+        "checkpoint_sha256": "a3412899e13cd3534440fdb8f50947cc6c7fdd448fc659f160e7048f9e63a32c",
+        "selected_epoch": 18,
+        "best_selection_bce": 0.04806744307279587,
+        "time": 1792687050.6432652,
+        "seconds": 62.054408537689596,
+        "trainable_parameters": 1108568
+      }
+    },
+    "supervised-seed9": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/supervised-seed9",
+      "result_sha256": "7a981f475f0c31e385d136d4b984f3dc8a36d17a57ee72212e7a195adf4cd38b",
+      "training": {
+        "signature": {
+          "protocol_sha256": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+          "freeze_sha256": "38f7756ede7b4462d2712da7194ac6b11d9864687ecc60d93e1018438a37085e",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 9,
+          "condition": "supervised",
+          "order_sha256": "ba91b04381e11cfb526746019f1efb5aa4494f2f1a553f03e18633fc487abd2a"
+        },
+        "initialization_sha256": "40f3ab4bae00942b1df494bf1371de79578663199901f0fff9ac6293a313a1c8",
+        "order_sha256": "ba91b04381e11cfb526746019f1efb5aa4494f2f1a553f03e18633fc487abd2a",
+        "checkpoint_sha256": "278ca81897123e4017d991046ec70ec752ed897de910d49716a205cfafb19c10",
+        "selected_epoch": 10,
+        "best_selection_bce": 0.05196469649672508,
+        "time": 1792687111.8794768,
+        "seconds": 61.2246864088811,
+        "trainable_parameters": 1108568
+      }
+    },
+    "distilled-seed9": {
+      "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed9",
+      "result_sha256": "98930f7eb998c44ad8673d72d1b60626f970a5ac8ef6990a37ab3df1e9461ec2",
+      "training": {
+        "signature": {
+          "protocol_sha256": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+          "freeze_sha256": "38f7756ede7b4462d2712da7194ac6b11d9864687ecc60d93e1018438a37085e",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 9,
+          "condition": "distilled",
+          "order_sha256": "ba91b04381e11cfb526746019f1efb5aa4494f2f1a553f03e18633fc487abd2a"
+        },
+        "initialization_sha256": "40f3ab4bae00942b1df494bf1371de79578663199901f0fff9ac6293a313a1c8",
+        "order_sha256": "ba91b04381e11cfb526746019f1efb5aa4494f2f1a553f03e18633fc487abd2a",
+        "checkpoint_sha256": "3d8a77e84011a1c53ec1d07372dad9fd9cd442d1ed4739fbc1b59ce22c61c03f",
+        "selected_epoch": 17,
+        "best_selection_bce": 0.04883874952793121,
+        "time": 1792687175.6060615,
+        "seconds": 63.716163706965744,
+        "trainable_parameters": 1108568
+      }
+    }
+  },
+  "benchmark": {
+    "time": 1792686095.8723438,
+    "training_one_epoch_per_condition": [
+      {
+        "condition": "supervised",
+        "sequences": 64,
+        "seconds": 1.806659082416445
+      },
+      {
+        "condition": "distilled",
+        "sequences": 64,
+        "seconds": 1.8022494059987366
+      }
+    ],
+    "training_14_runs_compute_seconds": 757.8707825671881,
+    "inference_frames": 565,
+    "inference_seconds": 12.356893476564437,
+    "inference_joint_frames_per_second": 45.723466101860886,
+    "inference_heads": 14,
+    "full_inference_compute_seconds": 845.5833141317006,
+    "full_agentness_metric_seconds": 152.3938213591464,
+    "gpu_peak_gib": 0.37136030197143555,
+    "scope": "Training-only cache benchmark with disposable seed999 models; inference benchmark uses random fourteen heads on first three locked official videos and computes no semantic AP. Fixed detector-only agentness replays the existing result. Full AP ETA uses prior measured same-evaluator runs, with 16-worker scaling provisional."
+  },
+  "input_parity": {
+    "time": 1792686531.0415366,
+    "passed": true,
+    "videos": 198,
+    "images": 38663,
+    "seconds": 6.72113099694252,
+    "original_input_records": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/evaluation-inputs",
+    "backbone_sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+    "detector_sha256": "3ad32910bacaf1fa74174503c5c29f94cfbbd83de51e5e5c301e6fc7f13e8684",
+    "teacher_sha256": "968aefaf7d9f896dd360baf1ab39fb75777693dbcdbd9a2663fb6696ae6c5567"
+  },
+  "evaluation_preflight": {
+    "passed": true,
+    "time": 1792686095.872564,
+    "checks": {
+      "training_and_score_functions_identical_AST": true,
+      "all_new_seeds_paired_initialization": true,
+      "cached_to_fresh_original_checkpoint_max_abs": 0.0,
+      "full_official_detector_agentness_exact": 65.36385345458984,
+      "AP_fixtures": true
+    },
+    "evaluation_signature": {
+      "protocol_sha256": "6aded73517bb7d5a32e68597e4a174cdb5f1a47d4622308702ae2ffad965a420",
+      "freeze_sha256": "38f7756ede7b4462d2712da7194ac6b11d9864687ecc60d93e1018438a37085e",
+      "provenance_addendum_sha256": "6cf0a2ba9ea9e72117db2b357322c4e3719ca70281a36603b9030b058d22e624",
+      "evaluator_sha256": "0b1fe5770408f6d9c9b8d15e1c3ad643b9057e8c5772460accbffb478b7b1cc6",
+      "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+      "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+    }
+  },
+  "results_sha256": {
+    "paired-intervals.pdf": "c6e76de070222bb0b38b71364e5e7c508c21250aca4c74c6d4fc9e7097cbc7bc",
+    "paired-seeds.png": "29fb902ea2d919722e2aeb92731b3f778fb87bc8791e70ce3c2007d873328372",
+    "selection-curves.png": "940f341828f1ff38574178f119a8691578f6e7bed0db8a4555d9103502da21cd",
+    "selection-curves.pdf": "90c5fd60c07bfc54ab747804642ecca9aef82cf32226b2ceb1143ae5183a2765",
+    "paired-intervals.png": "77cae9227fc467ce618670d8d0f978cf55c37390ca792958a9a910dfc20e527e",
+    "summary.json": "413fd9abd58f12efae8dc0408c28953b78cde5fa665e7ab5e9740b992eb38aca",
+    "FINDINGS.md": "989453306d7427d25d2bfcef017ea4abef7e2472e3263307ced0264358dcb950",
+    "training-curves.pdf": "2c750cd866c5bf4e6d44a7d09e1e45151164a375fe8c94b58ae5fcffd3c071ef",
+    "paired-seeds.pdf": "5e98e0324e006745a7ec0f35c7cd2236b78f4ef7209a41a4a0753704c9346faf",
+    "per-class.csv": "d6e47ab64e91597e7a020694bd962e56f81095dc1d00b837f43d1dc2e3afb7fa",
+    "training-curves.png": "37809485cc855341ed5e8203b3bc610f26e34b846c70a896ababbf876c8fea6b",
+    "per-seed.csv": "aecf723ab52c39f982d0f2fe5a060e8cf81e03e2860deaa4618e9678c84bc0da"
+  }
+}
