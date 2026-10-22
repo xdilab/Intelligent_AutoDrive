@@ -2,7 +2,7 @@
 
 New COMP 765 study started October21,2026, after the thesis defense. The fixed thesis CSEB checkpoint supplies training targets; the causal student and its matched supervised control are the study. This directory does not replace the working realtime-v1 bundle or historical pilot/expanded results.
 
-Scientific protocol: [protocol.json](protocol.json). Student implementation is reused unchanged from `../cseb-student/model.py`. Student: frozen shared ResNet50 through layer3, RoI features, geometry and agent embedding, 256-unit scene GRU,184 outputs. Trainable parameters:1,108,568; frozen semantic encoder:8,543,296; detector additional.
+Scientific protocol: [protocol.json](protocol.json). Target mapping and output/state conventions: [TARGETS.md](TARGETS.md). Student implementation is reused unchanged from `../cseb-student/model.py`. Student: frozen shared ResNet50 through layer3, RoI features, geometry and agent embedding, 256-unit scene GRU,184 outputs. Trainable parameters:1,108,568; frozen semantic encoder:8,543,296; detector additional.
 
 Outputs: `/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/`. Exact video lists and overlap audit: `split-manifest.json`, `audit.json`. Three paired seeds0/1/2,64train and12selection videos,32 contiguous frames each; six30-epoch AdamW runs. Teacher targets only on annotated training frames; unannotated frames only update state. Final official validation is disjoint from training/selection but has prior thesis use. Inference processes complete prefixes from frame1, resets only at video boundaries, and never reads a future student image.
 
@@ -26,3 +26,5 @@ Existing expanded study completed:96frames/12student-heldout development videos,
 Persistent silent monitor: `research-comp765-student-monitor.timer`; service: `research-comp765-student.service`. It checks actual logs/progress, service status, disk space and checkpoint readability/hash-matched backups every2minutes. Desktop notifications remain disabled. It does not promise automatic conversational wakeup or arbitrary unattended repair.
 
 The final standalone export includes `run.py` and the unchanged `model.py`, with all asset hashes. `--verify-isolation` blocks model/cache files outside the bundle. Complete-video tests bound retained GPU-allocation variation after32warmup frames to128MiB; detailed traces remain available.
+
+The commands above also support foreground reproduction. For persistent monitored runs, use the supplied systemd service; the watchdog checks that service identity. No remote publication is performed automatically.

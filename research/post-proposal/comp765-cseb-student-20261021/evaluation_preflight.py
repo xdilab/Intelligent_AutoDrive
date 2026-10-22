@@ -11,7 +11,8 @@ def export(seed=0):
  save(dest/'bundle.json',dict(format=1,architecture='shared-resnet50-layer3-scene-gru256',sampling_hz=10,labels=read(EXPANDED/'manifest.json')['labels'],model_sha256=sha(OLD/'model.py'),files_sha256={n:sha(dest/n) for n in ['student.pt','backbone.pth','yolo.pt','model.py','run.py']},student_checkpoint_sha256=sha(ckpath),teacher_checkpoint_sha256=sha(p.TEACHER),training_manifest_sha256=sha(ROOT/'data-manifest.json'),condition='distilled',epoch=ck['epoch'],study='COMP765 causal distillation20261021',seed=0,selection='Prespecified seed0, no finalAP-based selection'))
  return dest
 def main():
- setup();verify();checks={};official=read(INPUTS['frames']);verify_teacher(official);checks['teacher_comparator_exact_identity']=True
+ setup();verify();from data_audit import main as audit_data
+ audit_data();assert read(ROOT/'data-audit.json')['complete'];checks={};official=read(INPUTS['frames']);verify_teacher(official);checks['teacher_comparator_exact_identity']=True
  # Shared official function: missing GT is FN, higher-ranked false detection is FP.
  gt=[np.array([[0,0,1,1,0]],np.float32)];good=np.array([[0,0,1,1,.9]],np.float32);bad=np.array([[2,2,3,3,.95],[0,0,1,1,.9]],np.float32)
  _,a,_=metric.core['evaluate_detections'](gt,[[good]],['event'],iou_thresh=.5)
