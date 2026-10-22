@@ -25,7 +25,7 @@ def verify_teacher(official):
  assert t['signature']['metric_sha256']==sha(PARENT/'stage56-full/metric.py') and t['signature']['core_sha256']==sha(PARENT/'stage56-full/baseline-core.py')
  save(ROOT/'teacher-comparator.json',dict(result=t,source=str(INPUTS['teacher_result']),source_sha256=sha(INPUTS['teacher_result']),verified_exact_checkpoint_candidates_frames_evaluator=True,temporal_caveat='Teacher sees future4frames; historical frozen result reused, not rerun.'))
 def evaluation_signature():
- return dict(signature(),evaluator_sha256=sha(HERE/'evaluate.py'),metric_sha256=sha(PARENT/'stage56-full/metric.py'),core_sha256=sha(PARENT/'stage56-full/baseline-core.py'))
+ return dict(signature(),provenance_addendum_sha256=sha(HERE/'PROVENANCE-ADDENDUM.md'),evaluator_sha256=sha(HERE/'evaluate.py'),metric_sha256=sha(PARENT/'stage56-full/metric.py'),core_sha256=sha(PARENT/'stage56-full/baseline-core.py'))
 @torch.inference_mode()
 def step(models,states,backbone,image,box,agents,q):
  roi,scene=backbone(image,box);roi=roi.half().float();scene=scene.half().float();out={}
