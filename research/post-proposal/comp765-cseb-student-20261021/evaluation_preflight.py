@@ -12,7 +12,7 @@ def export(seed=0):
  return dest
 def main():
  setup();verify();from data_audit import main as audit_data
- audit_data();assert read(ROOT/'data-audit.json')['complete'];checks={};official=read(INPUTS['frames']);verify_teacher(official);checks['teacher_comparator_exact_identity']=True
+ audit_data();assert read(ROOT/'data-audit.json')['complete'];assert read(ROOT/'annotation-mapping-audit.json')['passed'];checks={};official=read(INPUTS['frames']);verify_teacher(official);checks['teacher_comparator_exact_identity']=True
  # Shared official function: missing GT is FN, higher-ranked false detection is FP.
  gt=[np.array([[0,0,1,1,0]],np.float32)];good=np.array([[0,0,1,1,.9]],np.float32);bad=np.array([[2,2,3,3,.95],[0,0,1,1,.9]],np.float32)
  _,a,_=metric.core['evaluate_detections'](gt,[[good]],['event'],iou_thresh=.5)
