@@ -59,6 +59,14 @@ def main():
  for j,(cohort,seeds) in enumerate(COHORTS.items()):
   r=summary[cohort]['triplet'];mean=r['paired_delta']['mean'];lo,hi=r['paired_t95'];ax.errorbar(mean,j,xerr=[[mean-lo],[hi-mean]],fmt='o',capsize=5,color='#18658b')
  ax.axvline(0,color='#777777',linestyle=':');ax.set_yticks(range(3),['Original 3 seeds','New 7 seeds','Combined 10 seeds']);ax.set_xlabel('Paired triplet AP change and nominal 95% t interval (points)');ax.set_title('Seed uncertainty on the fixed reused validation benchmark');fig.text(.03,.015,'Extension chosen after original results; combined interval is exploratory. These cohorts overlap,\nso their intervals are not independent. No uncertainty over unseen videos is estimated.',fontsize=8);fig.tight_layout(rect=[0,.12,1,1]);fig.savefig(out/'paired-intervals.png');fig.savefig(out/'paired-intervals.pdf');plt.close(fig)
+ # All twenty histories, with comparable selection BCE separated from training objectives.
+ for field,label,filename in [('selection_bce','Development supervised BCE','selection-curves'),('loss','Training objective (different losses)','training-curves')]:
+  fig,axes=plt.subplots(2,5,figsize=(15,6),sharex=True)
+  for seed,ax in enumerate(axes.flat):
+   for condition,color in [('supervised','#555555'),('distilled','#18658b')]:
+    hist=read((ORIGINAL_ROOT if seed<3 else ROOT)/'runs'/f'{condition}-seed{seed}'/'history.json');ax.plot([r['epoch'] for r in hist],[r[field] for r in hist],color=color,label=condition)
+   ax.set_title(f'Seed {seed}'+(' (original)' if seed<3 else ''));ax.set_xlabel('Epoch')
+  axes[0,0].set_ylabel(label);axes[1,0].set_ylabel(label);axes[0,0].legend(frameon=False,fontsize=8);fig.suptitle(label+' across all ten paired seeds');fig.tight_layout();fig.savefig(out/(filename+'.png'));fig.savefig(out/(filename+'.pdf'));plt.close(fig)
  table=['| Cohort | Pairs | Supervised mean ± SD | Distilled mean ± SD | Paired change | 95% paired-t interval |','|---|---:|---:|---:|---:|---:|']
  for cohort,seeds in COHORTS.items():
   r=summary[cohort]['triplet'];table.append(f"| {cohort} | {len(seeds)} | {r['supervised']['mean']:.3f} ± {r['supervised']['sample_sd']:.3f} | {r['distilled']['mean']:.3f} ± {r['distilled']['sample_sd']:.3f} | {r['paired_delta']['mean']:+.3f} | [{r['paired_t95'][0]:+.3f}, {r['paired_t95'][1]:+.3f}] |")
@@ -90,7 +98,7 @@ Cross-validation was not launched. The user clarified that five folds are not re
 
 ## Records
 
-Original study: `{ORIGINAL_ROOT}`. Extension: `{ROOT}`. Code/protocol: `{HERE}`. [Paired-seed plot](paired-seeds.png), [interval plot](paired-intervals.png), and [reproducibility](reproducibility.json). The full original architecture/runtime report remains under the original study; this extension changes only the number of paired seeds. Student t critical values use df2/6/9, consistent with [NIST](https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm).
+Original study: `{ORIGINAL_ROOT}`. Extension: `{ROOT}`. Code/protocol: `{HERE}`. [Paired-seed plot](paired-seeds.png), [interval plot](paired-intervals.png), [selection curves](selection-curves.png), [training curves](training-curves.png), and [reproducibility](reproducibility.json). The full original architecture/runtime report remains under the original study; this extension changes only the number of paired seeds. Student t critical values use df2/6/9, consistent with [NIST](https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm).
 '''
  (out/'FINDINGS.md').write_text(report)
  save(out/'reproducibility.json',dict(time=time.time(),code_revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=HERE,text=True).strip(),code_sha256={x.name:sha(x) for x in HERE.glob('*.py')},protocol_sha256=sha(HERE/'protocol.json'),freeze_sha256=sha(ROOT/'freeze.json'),original_record=original,original_environment=read(ROOT/'provenance.json')['environment'],runs=receipts,benchmark=read(ROOT/'benchmark.json'),evaluation_preflight=read(ROOT/'evaluation-preflight.json'),results_sha256={x.name:sha(x) for x in out.iterdir() if x.is_file() and x.name!='reproducibility.json'}))
