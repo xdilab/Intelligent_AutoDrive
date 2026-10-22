@@ -5,7 +5,7 @@ def main():
  assert read(ROOT/'final-audit.json')['passed'];dest=HERE/'results';dest.mkdir(exist_ok=True);records=dest/'records';records.mkdir(exist_ok=True)
  for source in (ROOT/'results').iterdir():
   if source.is_file():shutil.copy2(source,dest/source.name)
- names=['freeze.json','original-record.json','split-manifest.json','data-manifest.json','preparation-complete.json','data-audit.json','official-assets-audit.json','annotation-mapping-audit.json','detector-history-audit.json','provenance.json','launch-estimate.json','benchmark.json','preflight.json','evaluation-preflight.json','input-parity.json','training-complete.json','inference-complete.json','study-complete.json','final-audit.json']
+ names=['freeze.json','original-record.json','split-manifest.json','data-manifest.json','preparation-complete.json','data-audit.json','official-assets-audit.json','annotation-mapping-audit.json','detector-history-audit.json','provenance.json','launch-estimate.json','benchmark.json','preflight.json','evaluation-preflight.json','input-parity.json','training-complete.json','inference-complete.json','study-complete.json','final-audit.json','environment.json','eta-update-first-ap.json']
  for name in names:shutil.copy2(ROOT/name,records/name)
  for name in ['prediction-buffer-provenance.json','scratch-inference-receipt.json']:
   if (ROOT/name).exists():shutil.copy2(ROOT/name,records/name)
