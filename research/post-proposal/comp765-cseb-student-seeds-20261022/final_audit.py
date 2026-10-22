@@ -30,5 +30,7 @@ def main():
  for ck in backups['checkpoints']:assert sha(ck['path'])==ck['sha256']==sha(ck['backup'])
  assert sha(ORIGINAL_ROOT/'results/summary.json')==old['original_summary_sha256'];assert sha(ORIGINAL_ROOT/'freeze.json')==old['original_freeze_sha256']
  for n,h in read(out/'reproducibility.json')['results_sha256'].items():assert sha(out/n)==h
+ assert read(ROOT/'input-parity.json')['passed']
+ for video in read(ROOT/'split-manifest.json')['groups']['final']:assert read(ROOT/'evaluation-inputs'/f'{video}.json')['images_sha256']==read(ORIGINAL_ROOT/'evaluation-inputs'/f'{video}.json')['images_sha256']
  save(ROOT/'final-audit.json',dict(time=time.time(),passed=True,total_pairs=10,new_pairs=7,new_checkpoints_verified=28,original_results_unchanged=True,independent_mean_sd_interval=True,critical_t_quantiles_numerically_verified=True,all_per_class_results=True,paired_initialization_order=True,cross_validation_launched=False));print('FINAL AUDIT PASSED')
 if __name__=='__main__':main()
