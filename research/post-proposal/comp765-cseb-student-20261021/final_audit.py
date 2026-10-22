@@ -16,6 +16,11 @@ def main():
    hist=read(folder/'history.json');assert len(hist)==30
    best=min(hist,key=lambda x:x['selection_bce']);assert best['epoch']==done['selected_epoch']
    assert result['n_frames']==36717 and result['n_candidates']==6163968
+   official=read(INPUTS['frames'])
+   assert result['frame_sha256']==official['frame_sha256'] and result['candidate_sha256']==official['candidate_sha256']
+   assert result['signature']['evaluator_sha256']==sha(HERE/'evaluate.py')
+   for group,values in result['per_class_AP'].items():assert math.isclose(statistics.mean(values),result['summary'][group],abs_tol=1e-10)
+   for group,indices in groups(official['labels']['triplet']).items():assert math.isclose(statistics.mean(result['per_class_AP']['triplet'][i] for i in indices),result['tail'][group]['mAP'],abs_tol=1e-10)
    assert sum(x>0 for x in result['gt_counts']['triplet'])==85
    for values in result['per_class_AP'].values():assert all(math.isfinite(v) and 0<=v<=100 for v in values)
    results[condition,seed]=result;pair.append(done)

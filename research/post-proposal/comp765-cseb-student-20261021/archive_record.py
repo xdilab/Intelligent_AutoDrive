@@ -8,7 +8,8 @@ def main():
  for source in (ROOT/'results').iterdir():
   if source.is_file():shutil.copy2(source,dest/source.name)
  records=dest/'records';records.mkdir(exist_ok=True)
- names=['freeze.json','split-manifest.json','audit.json','provenance.json','data-manifest.json','data-audit.json','detector-history-audit.json','annotation-mapping-audit.json','official-assets-audit.json','preflight.json','evaluation-preflight.json','teacher-comparator.json','teacher-numerical-parity-audit.json','preparation-complete.json','training-complete.json','inference-complete.json','inference-benchmark.json','evaluation-launch-estimate.json','runtime-launch.json','study-complete.json','final-audit.json','benchmark.json']
+ shutil.copy2(INPUTS['frames'],records/'official-frames.json');shutil.copy2(INPUTS['counts'],records/'train-counts.json')
+ names=['freeze.json','split-manifest.json','audit.json','provenance.json','data-manifest.json','data-audit.json','detector-history-audit.json','annotation-mapping-audit.json','official-assets-audit.json','preflight.json','evaluation-preflight.json','teacher-comparator.json','teacher-numerical-parity-audit.json','preparation-complete.json','training-complete.json','inference-complete.json','inference-benchmark.json','evaluation-launch-estimate.json','runtime-launch.json','study-complete.json','final-audit.json','benchmark.json','realtime-v1-preservation.json','environment-freeze.txt']
  for name in names:
   source=ROOT/name;assert source.exists(),source;shutil.copy2(source,records/name)
  for seed in [0,1,2]:
