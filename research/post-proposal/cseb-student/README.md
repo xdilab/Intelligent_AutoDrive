@@ -1,6 +1,6 @@
 # CSEB causal student
 
-**[Run real-time inference](REALTIME.md)** · **[Expanded-data study](EXPANSION.md)**
+**[Run real-time inference](REALTIME.md)** · **[Expanded-data study](EXPANSION.md)** · **[COMP 765 controlled study](../comp765-cseb-student-20261021/README.md)**
 
 The distilled pilot checkpoint is the current real-time v1 model. The original pilot protocol and measured results follow.
 

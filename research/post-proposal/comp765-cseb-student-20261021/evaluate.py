@@ -72,6 +72,8 @@ def infer(official,yr,offset,index):
  del arrays,models,backbone;torch.cuda.empty_cache()
 def metrics(official,offset,workers):
  labels=official['labels'];classes=[['agentness']]+[labels[h] for h in HEADS[1:]]
+ coverage={h:np.bincount(np.concatenate([g[:,-1] for g in metric.GTS[j]]).astype(int),minlength=len(classes[j])).tolist() for j,h in enumerate(HEADS)}
+ assert coverage==read(ROOT/'official-assets-audit.json')['gt_counts']
  for seed in [0,1,2]:
   for condition in ['supervised','distilled']:
    run=f'{condition}-seed{seed}';dest=ROOT/'runs'/run;sig=dict(evaluation_signature(),checkpoint_sha256=sha(dest/'best.pt'))
@@ -85,7 +87,6 @@ def metrics(official,offset,workers):
     for g,c,ap,string,seconds in pool.imap_unordered(one_class,tasks):
      values[HEADS[g]][c]=ap;details[HEADS[g]][c]=string;timings.append(dict(group=HEADS[g],class_id=c,seconds=seconds));save(partial,dict(signature=sig,values=values,details=details,timings=timings));progress('official-metrics',run=run,classes_done=sum(v is not None for vv in values.values() for v in vv),total=184,elapsed=time.perf_counter()-started)
    triplet=values['triplet'];tail={k:dict(classes=len(ix),mAP=float(np.mean([triplet[i] for i in ix]))) for k,ix in groups(labels['triplet']).items()};done=read(dest/'training-complete.json')
-   coverage={h:[int(sum(np.sum(g[:,-1]==c) for g in metric.GTS[j])) for c in range(len(classes[j]))] for j,h in enumerate(HEADS)}
    save(dest/'detector-results.json',dict(metric='official detector AP@0.5 (%)',signature=sig,seed=seed,condition=condition,run=run,selected_epoch=done['selected_epoch'],n_frames=36717,processed_frames=38663,n_candidates=int(offset[-1]),candidate_sha256=official['candidate_sha256'],frame_sha256=official['frame_sha256'],summary={h:float(np.mean(v)) for h,v in values.items()},tail=tail,per_class_AP=values,per_class_details=details,gt_counts=coverage,seconds=time.perf_counter()-started,time=time.time()))
    metric.SCORES=None;del scores;progress('official-run-complete',run=run,triplet=float(np.mean(triplet)))
 def main():
