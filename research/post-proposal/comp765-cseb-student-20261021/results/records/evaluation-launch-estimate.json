@@ -1,0 +1,29 @@
+{
+  "time": 1792638872.1540675,
+  "joint_six_model_fps": 50.195387314250354,
+  "benchmark_frames": 565,
+  "remaining_processed_frames": 38098,
+  "inference_minutes_estimate": 12.649900730747047,
+  "AP_minutes_per_run_provisional": [
+    5,
+    7
+  ],
+  "AP_basis": "Previously measured identical official frame/candidate/evaluator workload; refresh after first current run",
+  "first_paired_detector_minutes": [
+    25,
+    35
+  ],
+  "full_results_runtime_analysis_minutes": [
+    50,
+    70
+  ],
+  "queue_seconds": 0,
+  "gpu": 0,
+  "metric_workers": 8,
+  "prediction_ram_gib": 25.350677490234375,
+  "total_ram_gib_estimate": [
+    40,
+    70
+  ],
+  "persistent_storage_gib_upper": 2
+}

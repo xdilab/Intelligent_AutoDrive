@@ -1,0 +1,15 @@
+{
+  "time": 1792641416.2762723,
+  "sha256": {
+    "supervised-seed0.npy": "42919871becd475e9f817358f2ba6675fe687ec983306ddc7ebcd8391d0adcf5",
+    "supervised-seed1.npy": "6ea1a7119946abe2e6c6a4f95a46562143a4cbe2dc386504a88de4a51572f385",
+    "supervised-seed2.npy": "319e39e1d133bf6b91bf5f12aa015756597f27541315c8f595f798f8a225ca6b",
+    "distilled-seed0.npy": "bc23c51364a97667b2525e792ce98bf45da62ce92c2e5fd06ea64e9e5991d81d",
+    "distilled-seed1.npy": "f45e8b9fb74b69a3489f12d7b21158b812632927561b04fc97cf04e54c0fa3b3",
+    "distilled-seed2.npy": "a20d81bb31a798120da7d23c9f8cdb31cac89f2e681e47fdd07f43b9c59ec05c"
+  },
+  "bytes": 27220083456,
+  "temporary_directory": "/dev/shm/comp765-cseb-student-20261021",
+  "removal_authorized_after_final_audit": true,
+  "reproduce": "evaluate.py inference from retained six best checkpoints and frozen input manifests"
+}

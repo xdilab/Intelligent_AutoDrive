@@ -1,0 +1,13 @@
+{
+  "time": 1792640458.194948,
+  "bundle": "/home/brandon/.local/share/road-reason/cseb-student-realtime-v1",
+  "passed": true,
+  "files_sha256": {
+    "student.pt": "171c9008948d703a25db0dbb27d26489b72de372a1d4e0d51bcc7e669ddbbe74",
+    "backbone.pth": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+    "yolo.pt": "3ad32910bacaf1fa74174503c5c29f94cfbbd83de51e5e5c301e6fc7f13e8684"
+  },
+  "historical_checkpoint_sha256": "afb94c6f6e852ea86df250eda1b57935f258fe0b70a6777d8dcaf8255685161d",
+  "historical_epoch": 26,
+  "new_bundle_is_separate": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/bundle-seed0"
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "time": 1792641374.710782,
+  "six_results": true,
+  "paired_initialization_and_order": true,
+  "selection_rule": true,
+  "independent_mean_sd_paired_interval": true,
+  "all184_perclass": true,
+  "fixed_detector_heads_identical": true,
+  "bundle_hashes": true,
+  "runtime_replay": true,
+  "verified_backups": 12,
+  "protocol_frozen": true
+}

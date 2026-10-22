@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "time": 1792638440.9509768,
+  "checks": {
+    "teacher_comparator_exact_identity": true,
+    "official_AP_fixture": [
+      100.0,
+      50.0
+    ],
+    "training_cache_to_fresh_inference_max_abs": 0.0,
+    "checkpoint_bundle_evaluator_replay": {
+      "video": "train_00169",
+      "frames": 32,
+      "proposals": 1502,
+      "max_abs": 0.0
+    },
+    "no_teacher_in_bundle": true,
+    "standalone_runner_exact_replay": true
+  },
+  "evaluation_signature": {
+    "protocol_sha256": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+    "freeze_sha256": "669a55417023c4edad031e0d0a7ca38cf40b7170cfa0929656d0a57263b708ef",
+    "provenance_addendum_sha256": "6cf0a2ba9ea9e72117db2b357322c4e3719ca70281a36603b9030b058d22e624",
+    "evaluator_sha256": "f3b5ef27efc6c756563ad786638aed5c3dcd02e099089942da11e3fd919af85c",
+    "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+    "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+  },
+  "bundle": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/bundle-seed0"
+}

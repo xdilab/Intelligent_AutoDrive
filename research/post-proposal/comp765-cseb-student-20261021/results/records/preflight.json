@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "time": 1792634766.0602686,
+  "checks": {
+    "legacy_suite": 5,
+    "paired_initialization": true,
+    "finite_32frame_smoke_losses": [
+      0.6937705874443054,
+      1.3876659870147705
+    ],
+    "optimizer_rng_resume_exact": true,
+    "causal_prefix_and_reset_exact": true,
+    "detector_confidence_once": true,
+    "multilabel_and_agentness_mask": true,
+    "parameter_count": 1108568
+  },
+  "code_sha256": {
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021/train.py": "f0e381ed62737c4e704600faaf3874f5543b56532996cd97561f781e16765d28",
+    "/data/repos/ROAD_Reason/research/post-proposal/cseb-student/model.py": "5808624cc0432a4626f86bd69b83ddc398742b86862eeea0fd62fbd5a2deb7a9",
+    "/data/repos/ROAD_Reason/research/post-proposal/cseb-student/pilot.py": "c2da7f5eb8b2d536b76d25a6afc64e4ada07b503f43bc10e972558bdc3af6305"
+  }
+}

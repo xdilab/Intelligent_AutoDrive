@@ -1,0 +1,14 @@
+{
+  "time": 1792634852.681831,
+  "files": {
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021/protocol.json": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021/common.py": "19ae095075486fc3b2a97ed23a5990352ae31ab7d6cf693f7c935ac5fa6e4242",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021/prepare.py": "2edcec0b4786b0514faa62fa2df292736ada43067dabcf0e97ede34014eabe5f",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021/train.py": "f0e381ed62737c4e704600faaf3874f5543b56532996cd97561f781e16765d28",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021/preflight.py": "a42d9f2fb42a1a9eaea200157532041c6d50fd530c561a679e303d8d87087181",
+    "/data/repos/ROAD_Reason/research/post-proposal/cseb-student/model.py": "5808624cc0432a4626f86bd69b83ddc398742b86862eeea0fd62fbd5a2deb7a9",
+    "/data/repos/ROAD_Reason/research/post-proposal/cseb-student/pilot.py": "c2da7f5eb8b2d536b76d25a6afc64e4ada07b503f43bc10e972558bdc3af6305",
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/split-manifest.json": "a66487119d3b993ff8837befe566aaf6fac118d078dae5745aac74d578f75623"
+  },
+  "scope": "Scientific protocol, split, preparation/training implementations fixed before training. Evaluation/runtime implementation separately hashed before primary evaluation."
+}

@@ -1,0 +1,20 @@
+{
+  "time": 1792640281.7603264,
+  "parallel_to": "CPU-only official AP; GPU0 idle",
+  "command": "runtime_audit.py",
+  "log": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/logs/runtime_audit.log",
+  "eta_minutes": [
+    3,
+    5
+  ],
+  "basis": "3.039 measured seconds/frame preparation and14.16 seconds load,36 paired timing frames plus3 complete student clips",
+  "gpu": "RTX A6000 GPU0",
+  "estimated_peak_gpu_gib": [
+    5,
+    7
+  ],
+  "expected_additional_disk_mb": 200,
+  "queue_seconds": 0,
+  "uncertainty": "Raw-video decode and concurrent CPU evaluation can alter timing; same background workload for both models",
+  "monitor": "existing silent student monitor and active session"
+}
