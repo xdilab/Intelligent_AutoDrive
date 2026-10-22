@@ -1,6 +1,6 @@
 # Teacher–Student Distillation for Efficient Road-Event Recognition
 
-New COMP 765 study started October21,2026, after the thesis defense. The fixed thesis CSEB checkpoint supplies training targets; the causal student and its matched supervised control are the study. This directory does not replace the working realtime-v1 bundle or historical pilot/expanded results.
+New COMP 765 study started October21,2026, after the thesis defense. The fixed thesis Contextual Scene-Attention Expert Blend (CSEB) checkpoint supplies training targets; the causal student and its matched supervised control are the study. This directory does not replace the working realtime-v1 bundle or historical pilot/expanded results.
 
 Scientific protocol: [protocol.json](protocol.json), with the mandatory [pre-evaluation provenance correction](PROVENANCE-ADDENDUM.md). Target mapping and output/state conventions: [TARGETS.md](TARGETS.md). Student implementation is reused unchanged from `../cseb-student/model.py`. Student: frozen shared ResNet50 through layer3, RoI features, geometry and agent embedding, 256-unit scene GRU,184 outputs. Trainable parameters:1,108,568; frozen semantic encoder:8,543,296; detector additional.
 

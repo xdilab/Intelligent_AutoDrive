@@ -8,7 +8,7 @@ Environment=PYTHONDONTWRITEBYTECODE=1
 Environment=PYTHONUNBUFFERED=1
 Environment=PYTHONPATH=/home/brandon/.local/share/road-reason/cseb-demo-runtime/packages
 Environment=PATH=/data/repos/ROAD_Reason/research/post-proposal/monitoring/silent-bin:/usr/local/bin:/usr/bin:/bin
-ExecStart=/home/brandon/miniconda3/envs/road_reason/bin/python /data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021/pipeline.py prepare train
+ExecStart=/home/brandon/miniconda3/envs/road_reason/bin/python /data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021/pipeline.py evaluate runtime_audit analyze
 RuntimeMaxSec=14400
 KillMode=control-group
 Restart=no
