@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "signature": {
+    "protocol": "c4496ea1cf95e9a94302f535f05af6abec8ff47fa137a724622ea8894483f23f",
+    "freeze": "feee21f6b9f0eb15fdff60857c5ef89df654bf8031e418d7eaf5188786c178ec",
+    "condition": "single",
+    "seed": 0,
+    "prototype_sha256": "2f5b5c3897142f762f368886efd4d6b9dc2f3987268f73f0bc34f7cbe3018041",
+    "rows": 3743456
+  },
+  "selected_epoch": 10,
+  "checkpoint_sha256": "cb3b7af88c02d586e43b61f0bac3ad4c5f94adb3a9bea635d442eb9781755bc5",
+  "seconds": 33.684152009896934
+}

@@ -1,0 +1,90 @@
+{
+  "time": 1792633287.6446953,
+  "passed": true,
+  "checkpoints": [
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/runs/single-seed2/last.pt",
+      "sha256": "ed0d439d60b187cda4f06566d274081d2c167ca71d3e12753fac110917921530",
+      "epoch": 10,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/verified-checkpoint-backup/single-seed2/last.pt",
+      "verified_at": 1792633287.6446953
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/runs/single-seed2/final.pt",
+      "sha256": "8eaa026121e86d5568faba258608e731686ac880e5ae69bb919d0351e1285596",
+      "epoch": 10,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/verified-checkpoint-backup/single-seed2/final.pt",
+      "verified_at": 1792633287.6446953
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/runs/multi-seed0/last.pt",
+      "sha256": "48bc1573a96a79d941f7a720a5f4f48a3c1d3620a25749dcee20ba443c7665f9",
+      "epoch": 10,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/verified-checkpoint-backup/multi-seed0/last.pt",
+      "verified_at": 1792633287.6446953
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/runs/multi-seed0/final.pt",
+      "sha256": "4f356bdb8cd78794e899cd15ba612d3c88ff90e67af8b4200d36358dff90dfe6",
+      "epoch": 10,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/verified-checkpoint-backup/multi-seed0/final.pt",
+      "verified_at": 1792633287.6446953
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/runs/multi-seed1/last.pt",
+      "sha256": "6d1c34e5e57ca4ead1b7bb252986e3c0677f1a931838ccb9d1de944dd843c39c",
+      "epoch": 10,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/verified-checkpoint-backup/multi-seed1/last.pt",
+      "verified_at": 1792633287.6446953
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/runs/multi-seed1/final.pt",
+      "sha256": "ac2590ce9defb282c64322fa665a658cece637c703a5aaf42f0193103c8bdb1b",
+      "epoch": 10,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/verified-checkpoint-backup/multi-seed1/final.pt",
+      "verified_at": 1792633287.6446953
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/runs/single-seed0/last.pt",
+      "sha256": "bca785e6aa8cd40b81117aba065ed729d6e2595da4d44a377c62f92a768a1ff2",
+      "epoch": 10,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/verified-checkpoint-backup/single-seed0/last.pt",
+      "verified_at": 1792633287.6446953
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/runs/single-seed0/final.pt",
+      "sha256": "cb3b7af88c02d586e43b61f0bac3ad4c5f94adb3a9bea635d442eb9781755bc5",
+      "epoch": 10,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/verified-checkpoint-backup/single-seed0/final.pt",
+      "verified_at": 1792633287.6446953
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/runs/multi-seed2/last.pt",
+      "sha256": "9ba705c388c04b80aceb383d1467b1e05b96de0eb843de5169fb50294615db38",
+      "epoch": 10,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/verified-checkpoint-backup/multi-seed2/last.pt",
+      "verified_at": 1792633287.6446953
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/runs/multi-seed2/final.pt",
+      "sha256": "86ac7985ead566f51127c36406a9310e2bf88bbbc3fa10d1854ba133b3f51e19",
+      "epoch": 10,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/verified-checkpoint-backup/multi-seed2/final.pt",
+      "verified_at": 1792633287.6446953
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/runs/single-seed1/last.pt",
+      "sha256": "65736044ccce96f2f2dbefe4f8132eff03c5dab2ff60ce20d5a41184d59cb1ed",
+      "epoch": 10,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/verified-checkpoint-backup/single-seed1/last.pt",
+      "verified_at": 1792633287.6446953
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/runs/single-seed1/final.pt",
+      "sha256": "c1f785ef9c5ba680ee438ba6652916e5c803c8803d28a7a66132606072ce1225",
+      "epoch": 10,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/verified-checkpoint-backup/single-seed1/final.pt",
+      "verified_at": 1792633287.6446953
+    }
+  ]
+}

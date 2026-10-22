@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "fixture": "/tmp/comp765-analysis-test-g5p65ugu",
+  "known_paired_deltas": [
+    0,
+    1,
+    2
+  ],
+  "expected_ci95": [
+    -1.4841377117195456,
+    3.4841377117195456
+  ],
+  "all86_classes_exported": true
+}

@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "time": 1792630970.5086212,
+  "paired_initializations": [
+    {
+      "seed": 0,
+      "initial_hash": "726b73618b0a3d80f0e6dbd796c21347838c63978bbafceeeed86f4afee6aeef",
+      "parameters": 524985
+    },
+    {
+      "seed": 1,
+      "initial_hash": "d0a1e6f14f16a0eb7c3a8e5c6475caa364c3b8e4cb73fb95f24d1034d50eb68b",
+      "parameters": 524985
+    },
+    {
+      "seed": 2,
+      "initial_hash": "ee1ac3b08fc2779edd9c131696496ceab22489ce708769bdf05e4b230e849fdf",
+      "parameters": 524985
+    }
+  ],
+  "resume_exact": true,
+  "resume_mid_epoch": true,
+  "both_conditions_finite_loss_predictions": true,
+  "score_assembly_exact": true,
+  "ap_source_ast_equal": [
+    "voc_ap",
+    "get_gt_of_cls",
+    "compute_iou",
+    "evaluate_detections",
+    "evaluate",
+    "get_individual_labels"
+  ],
+  "synthetic_missed_gt_duplicate_ap": 50.0,
+  "shapes": [
+    184,
+    512
+  ],
+  "smoke_path": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/validation-2kwt5zgh"
+}

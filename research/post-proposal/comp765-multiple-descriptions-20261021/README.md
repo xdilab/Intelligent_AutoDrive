@@ -42,3 +42,9 @@ Training commands: `python train.py --root OUTPUT`; evaluation: `python evaluate
 Detector AP is measured on the exact corrected36,717-frame shared manifest at IoU.5. This is not proposal classification AP or development crop AP. Report negative/inconclusive outcomes, all per-class differences, and the limitations of a three-seed paired-t interval. Prototype geometry and added wording quality remain confounded with the practical averaging intervention.
 
 No thesis, slide, existing result or workbook is edited by these commands. Large assets and checkpoints stay outside Git.
+
+## Completed October21,2026
+
+All six full detector evaluations completed and passed the independent final audit. Tail47: single5.7952±0.1040 versus multi5.6608±0.0883; paired change−0.1344percentage points,95%paired-t interval[−0.5006,+0.2317]. All three observed deltas are negative, but this small study does not establish a reliable decline or equivalence. See [full results](results/RESULTS.md), [all phrases](results/descriptions.json), [all per-class differences](results/per-class-triplet.csv), and [reproducibility record](results/reproducibility.json).
+
+Primary run code revision: `3f1a43a`; full SHA and frozen source hashes are in `results/freeze.json`. The result-audit helper was added after completion; it verifies the original frozen files without changing them. Recheck a completed run with `python verify_results.py --root OUTPUT`. The study-specific monitor timer was disabled after successful completion; its final heartbeat, alerts and12 verified checkpoint backups are preserved. Install it for an authorized resumed run with `python install_monitor.py --root OUTPUT`.

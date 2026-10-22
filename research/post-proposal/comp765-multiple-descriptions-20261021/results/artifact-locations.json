@@ -1,0 +1,21 @@
+{
+  "study_root": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021",
+  "prototype_caches": {
+    "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/prototypes-single.pt": {
+      "sha256": "2f5b5c3897142f762f368886efd4d6b9dc2f3987268f73f0bc34f7cbe3018041",
+      "bytes": 383535
+    },
+    "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/description-embeddings.pt": {
+      "sha256": "1844a17c035ee56c626eef04879ab7eb7bac002f5a3ecb0bd5a8c5403bad1648",
+      "bytes": 1891026
+    },
+    "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/prototypes-multi.pt": {
+      "sha256": "674c931dc9075764bfabb77edd28f8a64d0263c18f33775a7e0461cbd0977ce6",
+      "bytes": 383528
+    }
+  },
+  "checkpoint_root": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/runs",
+  "verified_backups": "/home/brandon/.local/share/road-reason/comp765-multiple-descriptions-20261021/verified-checkpoint-backup",
+  "training_code_revision": "3f1a43a07f0224a7c56dfddcbe2fb263d9f745c8",
+  "notes": "Large immutable source caches and study checkpoints remain on server. Compact records copied only after successful final audit. No remote publication performed."
+}

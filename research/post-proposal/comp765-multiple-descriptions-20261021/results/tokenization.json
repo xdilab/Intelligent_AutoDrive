@@ -1,0 +1,5503 @@
+{
+  "context_length": 77,
+  "descriptions": [
+    {
+      "id": "agentness",
+      "text": "an object of interest in the road scene",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "agent:Ped",
+      "text": "a pedestrian",
+      "tokens_including_special": 4,
+      "truncated": false
+    },
+    {
+      "id": "agent:Ped",
+      "text": "The road agent is a pedestrian.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "agent:Ped",
+      "text": "There is a pedestrian.",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "agent:Ped",
+      "text": "This is a pedestrian.",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "agent:Ped",
+      "text": "The scene contains a pedestrian.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "agent:Car",
+      "text": "a car",
+      "tokens_including_special": 4,
+      "truncated": false
+    },
+    {
+      "id": "agent:Car",
+      "text": "The road agent is a car.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "agent:Car",
+      "text": "There is a car.",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "agent:Car",
+      "text": "This is a car.",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "agent:Car",
+      "text": "The scene contains a car.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "agent:Cyc",
+      "text": "a cyclist",
+      "tokens_including_special": 4,
+      "truncated": false
+    },
+    {
+      "id": "agent:Cyc",
+      "text": "The road agent is a cyclist.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "agent:Cyc",
+      "text": "There is a cyclist.",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "agent:Cyc",
+      "text": "This is a cyclist.",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "agent:Cyc",
+      "text": "The scene contains a cyclist.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "agent:Mobike",
+      "text": "a motorcyclist",
+      "tokens_including_special": 5,
+      "truncated": false
+    },
+    {
+      "id": "agent:Mobike",
+      "text": "The road agent is a motorcyclist.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "agent:Mobike",
+      "text": "There is a motorcyclist.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "agent:Mobike",
+      "text": "This is a motorcyclist.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "agent:Mobike",
+      "text": "The scene contains a motorcyclist.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "agent:SmalVeh",
+      "text": "a small vehicle",
+      "tokens_including_special": 5,
+      "truncated": false
+    },
+    {
+      "id": "agent:SmalVeh",
+      "text": "The road agent is a small vehicle.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "agent:SmalVeh",
+      "text": "There is a small vehicle.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "agent:SmalVeh",
+      "text": "This is a small vehicle.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "agent:SmalVeh",
+      "text": "The scene contains a small vehicle.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "agent:MedVeh",
+      "text": "a medium-sized vehicle",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "agent:MedVeh",
+      "text": "The road agent is a medium-sized vehicle.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "agent:MedVeh",
+      "text": "There is a medium-sized vehicle.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "agent:MedVeh",
+      "text": "This is a medium-sized vehicle.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "agent:MedVeh",
+      "text": "The scene contains a medium-sized vehicle.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "agent:LarVeh",
+      "text": "a large vehicle",
+      "tokens_including_special": 5,
+      "truncated": false
+    },
+    {
+      "id": "agent:LarVeh",
+      "text": "The road agent is a large vehicle.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "agent:LarVeh",
+      "text": "There is a large vehicle.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "agent:LarVeh",
+      "text": "This is a large vehicle.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "agent:LarVeh",
+      "text": "The scene contains a large vehicle.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "agent:Bus",
+      "text": "a bus",
+      "tokens_including_special": 4,
+      "truncated": false
+    },
+    {
+      "id": "agent:Bus",
+      "text": "The road agent is a bus.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "agent:Bus",
+      "text": "There is a bus.",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "agent:Bus",
+      "text": "This is a bus.",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "agent:Bus",
+      "text": "The scene contains a bus.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "agent:EmVeh",
+      "text": "an emergency vehicle",
+      "tokens_including_special": 5,
+      "truncated": false
+    },
+    {
+      "id": "agent:EmVeh",
+      "text": "The road agent is an emergency vehicle.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "agent:EmVeh",
+      "text": "There is an emergency vehicle.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "agent:EmVeh",
+      "text": "This is an emergency vehicle.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "agent:EmVeh",
+      "text": "The scene contains an emergency vehicle.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "agent:TL",
+      "text": "a traffic light",
+      "tokens_including_special": 5,
+      "truncated": false
+    },
+    {
+      "id": "agent:TL",
+      "text": "The road agent is a traffic light.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "agent:TL",
+      "text": "There is a traffic light.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "agent:TL",
+      "text": "This is a traffic light.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "agent:TL",
+      "text": "The scene contains a traffic light.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "action:Red",
+      "text": "showing a red light",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "action:Red",
+      "text": "A traffic light is showing a red light.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:Red",
+      "text": "The observed state is showing a red light.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:Red",
+      "text": "The scene shows an agent showing a red light.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "action:Red",
+      "text": "This road event involves an agent showing a red light.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "action:Amber",
+      "text": "showing an amber light",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "action:Amber",
+      "text": "A traffic light is showing an amber light.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:Amber",
+      "text": "The observed state is showing an amber light.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:Amber",
+      "text": "The scene shows an agent showing an amber light.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "action:Amber",
+      "text": "This road event involves an agent showing an amber light.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "action:Green",
+      "text": "showing a green light",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "action:Green",
+      "text": "A traffic light is showing a green light.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:Green",
+      "text": "The observed state is showing a green light.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:Green",
+      "text": "The scene shows an agent showing a green light.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "action:Green",
+      "text": "This road event involves an agent showing a green light.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "action:MovAway",
+      "text": "moving away from the ego vehicle",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "action:MovAway",
+      "text": "An agent is moving away from the ego vehicle.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "action:MovAway",
+      "text": "The observed state is moving away from the ego vehicle.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "action:MovAway",
+      "text": "The scene shows an agent moving away from the ego vehicle.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "action:MovAway",
+      "text": "This road event involves an agent moving away from the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "action:MovTow",
+      "text": "moving toward the ego vehicle",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "action:MovTow",
+      "text": "An agent is moving toward the ego vehicle.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:MovTow",
+      "text": "The observed state is moving toward the ego vehicle.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "action:MovTow",
+      "text": "The scene shows an agent moving toward the ego vehicle.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "action:MovTow",
+      "text": "This road event involves an agent moving toward the ego vehicle.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "action:Mov",
+      "text": "moving",
+      "tokens_including_special": 3,
+      "truncated": false
+    },
+    {
+      "id": "action:Mov",
+      "text": "An agent is moving.",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "action:Mov",
+      "text": "The observed state is moving.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "action:Mov",
+      "text": "The scene shows an agent moving.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "action:Mov",
+      "text": "This road event involves an agent moving.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "action:Rev",
+      "text": "reversing",
+      "tokens_including_special": 4,
+      "truncated": false
+    },
+    {
+      "id": "action:Rev",
+      "text": "An agent is reversing.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "action:Rev",
+      "text": "The observed state is reversing.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "action:Rev",
+      "text": "The scene shows an agent reversing.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "action:Rev",
+      "text": "This road event involves an agent reversing.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:Brake",
+      "text": "braking with its brake lights on",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "action:Brake",
+      "text": "An agent is braking.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "action:Brake",
+      "text": "The observed state is braking.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "action:Brake",
+      "text": "The scene shows an agent braking.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "action:Brake",
+      "text": "This road event involves an agent braking.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:Stop",
+      "text": "stopped",
+      "tokens_including_special": 3,
+      "truncated": false
+    },
+    {
+      "id": "action:Stop",
+      "text": "An agent is stopped.",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "action:Stop",
+      "text": "The observed state is stopped.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "action:Stop",
+      "text": "The scene shows an agent stopped.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "action:Stop",
+      "text": "This road event involves an agent stopped.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "action:IncatLft",
+      "text": "indicating a left turn",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "action:IncatLft",
+      "text": "An agent is indicating a left turn.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:IncatLft",
+      "text": "The observed state is indicating a left turn.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "action:IncatLft",
+      "text": "The scene shows an agent indicating a left turn.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "action:IncatLft",
+      "text": "This road event involves an agent indicating a left turn.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "action:IncatRht",
+      "text": "indicating a right turn",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "action:IncatRht",
+      "text": "An agent is indicating a right turn.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:IncatRht",
+      "text": "The observed state is indicating a right turn.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "action:IncatRht",
+      "text": "The scene shows an agent indicating a right turn.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "action:IncatRht",
+      "text": "This road event involves an agent indicating a right turn.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "action:HazLit",
+      "text": "with hazard lights on",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "action:HazLit",
+      "text": "An agent is showing hazard lights.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "action:HazLit",
+      "text": "The observed state is showing hazard lights.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "action:HazLit",
+      "text": "The scene shows an agent showing hazard lights.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:HazLit",
+      "text": "This road event involves an agent showing hazard lights.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "action:TurLft",
+      "text": "turning left",
+      "tokens_including_special": 4,
+      "truncated": false
+    },
+    {
+      "id": "action:TurLft",
+      "text": "An agent is turning left.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "action:TurLft",
+      "text": "The observed state is turning left.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "action:TurLft",
+      "text": "The scene shows an agent turning left.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "action:TurLft",
+      "text": "This road event involves an agent turning left.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:TurRht",
+      "text": "turning right",
+      "tokens_including_special": 4,
+      "truncated": false
+    },
+    {
+      "id": "action:TurRht",
+      "text": "An agent is turning right.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "action:TurRht",
+      "text": "The observed state is turning right.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "action:TurRht",
+      "text": "The scene shows an agent turning right.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "action:TurRht",
+      "text": "This road event involves an agent turning right.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:MovRht",
+      "text": "moving to the right",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "action:MovRht",
+      "text": "An agent is moving to the right relative to the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "action:MovRht",
+      "text": "The observed state is moving to the right relative to the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "action:MovRht",
+      "text": "The scene shows an agent moving to the right relative to the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "action:MovRht",
+      "text": "This road event involves an agent moving to the right relative to the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "action:MovLft",
+      "text": "moving to the left",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "action:MovLft",
+      "text": "An agent is moving to the left relative to the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "action:MovLft",
+      "text": "The observed state is moving to the left relative to the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "action:MovLft",
+      "text": "The scene shows an agent moving to the left relative to the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "action:MovLft",
+      "text": "This road event involves an agent moving to the left relative to the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "action:Ovtak",
+      "text": "overtaking another vehicle",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "action:Ovtak",
+      "text": "An agent is overtaking.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "action:Ovtak",
+      "text": "The observed state is overtaking.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "action:Ovtak",
+      "text": "The scene shows an agent overtaking.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "action:Ovtak",
+      "text": "This road event involves an agent overtaking.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:Wait2X",
+      "text": "waiting to cross the road",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "action:Wait2X",
+      "text": "An agent is waiting to cross the road.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:Wait2X",
+      "text": "The observed state is waiting to cross the road.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "action:Wait2X",
+      "text": "The scene shows an agent waiting to cross the road.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "action:Wait2X",
+      "text": "This road event involves an agent waiting to cross the road.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "action:XingFmLft",
+      "text": "crossing from the left",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "action:XingFmLft",
+      "text": "An agent is crossing from the left relative to the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "action:XingFmLft",
+      "text": "The observed state is crossing from the left relative to the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "action:XingFmLft",
+      "text": "The scene shows an agent crossing from the left relative to the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "action:XingFmLft",
+      "text": "This road event involves an agent crossing from the left relative to the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "action:XingFmRht",
+      "text": "crossing from the right",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "action:XingFmRht",
+      "text": "An agent is crossing from the right relative to the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "action:XingFmRht",
+      "text": "The observed state is crossing from the right relative to the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "action:XingFmRht",
+      "text": "The scene shows an agent crossing from the right relative to the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "action:XingFmRht",
+      "text": "This road event involves an agent crossing from the right relative to the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "action:Xing",
+      "text": "crossing the road",
+      "tokens_including_special": 5,
+      "truncated": false
+    },
+    {
+      "id": "action:Xing",
+      "text": "An agent is crossing the road.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "action:Xing",
+      "text": "The observed state is crossing the road.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "action:Xing",
+      "text": "The scene shows an agent crossing the road.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:Xing",
+      "text": "This road event involves an agent crossing the road.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "action:PushObj",
+      "text": "pushing an object",
+      "tokens_including_special": 5,
+      "truncated": false
+    },
+    {
+      "id": "action:PushObj",
+      "text": "An agent is pushing an object.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "action:PushObj",
+      "text": "The observed state is pushing an object.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "action:PushObj",
+      "text": "The scene shows an agent pushing an object.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "action:PushObj",
+      "text": "This road event involves an agent pushing an object.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "loc:VehLane",
+      "text": "in the ego vehicle's lane",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "loc:VehLane",
+      "text": "An agent is in the ego vehicle's lane.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "loc:VehLane",
+      "text": "The agent is located in the ego vehicle's lane.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "loc:VehLane",
+      "text": "The scene contains an agent in the ego vehicle's lane.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "loc:VehLane",
+      "text": "This road event involves an agent in the ego vehicle's lane.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "loc:OutgoLane",
+      "text": "in the outgoing traffic lane",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "loc:OutgoLane",
+      "text": "An agent is in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "loc:OutgoLane",
+      "text": "The agent is located in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "loc:OutgoLane",
+      "text": "The scene contains an agent in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "loc:OutgoLane",
+      "text": "This road event involves an agent in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "loc:OutgoCycLane",
+      "text": "in the outgoing cycle lane",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "loc:OutgoCycLane",
+      "text": "An agent is in a cycle lane going in the ego vehicle's direction.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "loc:OutgoCycLane",
+      "text": "The agent is located in a cycle lane going in the ego vehicle's direction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "loc:OutgoCycLane",
+      "text": "The scene contains an agent in a cycle lane going in the ego vehicle's direction.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "loc:OutgoCycLane",
+      "text": "This road event involves an agent in a cycle lane going in the ego vehicle's direction.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "loc:OutgoBusLane",
+      "text": "in the outgoing bus lane",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "loc:OutgoBusLane",
+      "text": "An agent is in a bus lane going in the ego vehicle's direction.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "loc:OutgoBusLane",
+      "text": "The agent is located in a bus lane going in the ego vehicle's direction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "loc:OutgoBusLane",
+      "text": "The scene contains an agent in a bus lane going in the ego vehicle's direction.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "loc:OutgoBusLane",
+      "text": "This road event involves an agent in a bus lane going in the ego vehicle's direction.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "loc:IncomLane",
+      "text": "in the incoming traffic lane",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "loc:IncomLane",
+      "text": "An agent is in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "loc:IncomLane",
+      "text": "The agent is located in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "loc:IncomLane",
+      "text": "The scene contains an agent in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "loc:IncomLane",
+      "text": "This road event involves an agent in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "loc:IncomCycLane",
+      "text": "in the incoming cycle lane",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "loc:IncomCycLane",
+      "text": "An agent is in a cycle lane coming toward the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "loc:IncomCycLane",
+      "text": "The agent is located in a cycle lane coming toward the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "loc:IncomCycLane",
+      "text": "The scene contains an agent in a cycle lane coming toward the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "loc:IncomCycLane",
+      "text": "This road event involves an agent in a cycle lane coming toward the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "loc:IncomBusLane",
+      "text": "in the incoming bus lane",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "loc:IncomBusLane",
+      "text": "An agent is in a bus lane coming toward the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "loc:IncomBusLane",
+      "text": "The agent is located in a bus lane coming toward the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "loc:IncomBusLane",
+      "text": "The scene contains an agent in a bus lane coming toward the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "loc:IncomBusLane",
+      "text": "This road event involves an agent in a bus lane coming toward the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "loc:Pav",
+      "text": "on the pavement",
+      "tokens_including_special": 5,
+      "truncated": false
+    },
+    {
+      "id": "loc:Pav",
+      "text": "An agent is on the pavement.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "loc:Pav",
+      "text": "The agent is located on the pavement.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "loc:Pav",
+      "text": "The scene contains an agent on the pavement.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "loc:Pav",
+      "text": "This road event involves an agent on the pavement.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "loc:LftPav",
+      "text": "on the left pavement",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "loc:LftPav",
+      "text": "An agent is on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "loc:LftPav",
+      "text": "The agent is located on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "loc:LftPav",
+      "text": "The scene contains an agent on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "loc:LftPav",
+      "text": "This road event involves an agent on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "loc:RhtPav",
+      "text": "on the right pavement",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "loc:RhtPav",
+      "text": "An agent is on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "loc:RhtPav",
+      "text": "The agent is located on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "loc:RhtPav",
+      "text": "The scene contains an agent on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "loc:RhtPav",
+      "text": "This road event involves an agent on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "loc:Jun",
+      "text": "at a road junction",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "loc:Jun",
+      "text": "An agent is at a road junction.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "loc:Jun",
+      "text": "The agent is located at a road junction.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "loc:Jun",
+      "text": "The scene contains an agent at a road junction.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "loc:Jun",
+      "text": "This road event involves an agent at a road junction.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "loc:xing",
+      "text": "at a pedestrian crossing",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "loc:xing",
+      "text": "An agent is at a pedestrian crossing.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "loc:xing",
+      "text": "The agent is located at a pedestrian crossing.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "loc:xing",
+      "text": "The scene contains an agent at a pedestrian crossing.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "loc:xing",
+      "text": "This road event involves an agent at a pedestrian crossing.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "loc:BusStop",
+      "text": "at a bus stop",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "loc:BusStop",
+      "text": "An agent is at a bus stop.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "loc:BusStop",
+      "text": "The agent is located at a bus stop.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "loc:BusStop",
+      "text": "The scene contains an agent at a bus stop.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "loc:BusStop",
+      "text": "This road event involves an agent at a bus stop.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "loc:parking",
+      "text": "in a parking area",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "loc:parking",
+      "text": "An agent is in a parking area.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "loc:parking",
+      "text": "The agent is located in a parking area.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "loc:parking",
+      "text": "The scene contains an agent in a parking area.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "loc:parking",
+      "text": "This road event involves an agent in a parking area.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "loc:LftParking",
+      "text": "parked on the left side of the road",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "loc:LftParking",
+      "text": "An agent is in the parking area on the left of the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "loc:LftParking",
+      "text": "The agent is located in the parking area on the left of the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "loc:LftParking",
+      "text": "The scene contains an agent in the parking area on the left of the ego vehicle.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "loc:LftParking",
+      "text": "This road event involves an agent in the parking area on the left of the ego vehicle.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "loc:rightParking",
+      "text": "parked on the right side of the road",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "loc:rightParking",
+      "text": "An agent is in the parking area on the right of the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "loc:rightParking",
+      "text": "The agent is located in the parking area on the right of the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "loc:rightParking",
+      "text": "The scene contains an agent in the parking area on the right of the ego vehicle.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "loc:rightParking",
+      "text": "This road event involves an agent in the parking area on the right of the ego vehicle.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-MovAway",
+      "text": "a pedestrian moving away from the ego vehicle",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-MovAway",
+      "text": "A pedestrian is moving away from the ego vehicle.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-MovAway",
+      "text": "The scene shows a pedestrian moving away from the ego vehicle.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-MovAway",
+      "text": "This road event involves a pedestrian moving away from the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-MovAway",
+      "text": "There is a pedestrian moving away from the ego vehicle.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-MovTow",
+      "text": "a pedestrian moving toward the ego vehicle",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-MovTow",
+      "text": "A pedestrian is moving toward the ego vehicle.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-MovTow",
+      "text": "The scene shows a pedestrian moving toward the ego vehicle.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-MovTow",
+      "text": "This road event involves a pedestrian moving toward the ego vehicle.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-MovTow",
+      "text": "There is a pedestrian moving toward the ego vehicle.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Mov",
+      "text": "a pedestrian moving",
+      "tokens_including_special": 5,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Mov",
+      "text": "A pedestrian is moving.",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Mov",
+      "text": "The scene shows a pedestrian moving.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Mov",
+      "text": "This road event involves a pedestrian moving.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Mov",
+      "text": "There is a pedestrian moving.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Stop",
+      "text": "a pedestrian stopped",
+      "tokens_including_special": 5,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Stop",
+      "text": "A pedestrian is stopped.",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Stop",
+      "text": "The scene shows a pedestrian stopped.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Stop",
+      "text": "This road event involves a pedestrian stopped.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Stop",
+      "text": "There is a pedestrian stopped.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Wait2X",
+      "text": "a pedestrian waiting to cross the road",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Wait2X",
+      "text": "A pedestrian is waiting to cross the road.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Wait2X",
+      "text": "The scene shows a pedestrian waiting to cross the road.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Wait2X",
+      "text": "This road event involves a pedestrian waiting to cross the road.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Wait2X",
+      "text": "There is a pedestrian waiting to cross the road.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-XingFmLft",
+      "text": "a pedestrian crossing from the left",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-XingFmLft",
+      "text": "A pedestrian is crossing from the left relative to the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-XingFmLft",
+      "text": "The scene shows a pedestrian crossing from the left relative to the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-XingFmLft",
+      "text": "This road event involves a pedestrian crossing from the left relative to the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-XingFmLft",
+      "text": "There is a pedestrian crossing from the left relative to the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-XingFmRht",
+      "text": "a pedestrian crossing from the right",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-XingFmRht",
+      "text": "A pedestrian is crossing from the right relative to the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-XingFmRht",
+      "text": "The scene shows a pedestrian crossing from the right relative to the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-XingFmRht",
+      "text": "This road event involves a pedestrian crossing from the right relative to the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-XingFmRht",
+      "text": "There is a pedestrian crossing from the right relative to the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Xing",
+      "text": "a pedestrian crossing the road",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Xing",
+      "text": "A pedestrian is crossing the road.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Xing",
+      "text": "The scene shows a pedestrian crossing the road.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Xing",
+      "text": "This road event involves a pedestrian crossing the road.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-Xing",
+      "text": "There is a pedestrian crossing the road.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-PushObj",
+      "text": "a pedestrian pushing an object",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-PushObj",
+      "text": "A pedestrian is pushing an object.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-PushObj",
+      "text": "The scene shows a pedestrian pushing an object.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-PushObj",
+      "text": "This road event involves a pedestrian pushing an object.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Ped-PushObj",
+      "text": "There is a pedestrian pushing an object.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovAway",
+      "text": "a car moving away from the ego vehicle",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovAway",
+      "text": "A car is moving away from the ego vehicle.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovAway",
+      "text": "The scene shows a car moving away from the ego vehicle.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovAway",
+      "text": "This road event involves a car moving away from the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovAway",
+      "text": "There is a car moving away from the ego vehicle.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovTow",
+      "text": "a car moving toward the ego vehicle",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovTow",
+      "text": "A car is moving toward the ego vehicle.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovTow",
+      "text": "The scene shows a car moving toward the ego vehicle.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovTow",
+      "text": "This road event involves a car moving toward the ego vehicle.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovTow",
+      "text": "There is a car moving toward the ego vehicle.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-Brake",
+      "text": "a car braking with its brake lights on",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-Brake",
+      "text": "A car is braking.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-Brake",
+      "text": "The scene shows a car braking.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-Brake",
+      "text": "This road event involves a car braking.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-Brake",
+      "text": "There is a car braking.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-Stop",
+      "text": "a car stopped",
+      "tokens_including_special": 5,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-Stop",
+      "text": "A car is stopped.",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-Stop",
+      "text": "The scene shows a car stopped.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-Stop",
+      "text": "This road event involves a car stopped.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-Stop",
+      "text": "There is a car stopped.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-IncatLft",
+      "text": "a car indicating a left turn",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-IncatLft",
+      "text": "A car is indicating a left turn.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-IncatLft",
+      "text": "The scene shows a car indicating a left turn.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-IncatLft",
+      "text": "This road event involves a car indicating a left turn.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-IncatLft",
+      "text": "There is a car indicating a left turn.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-IncatRht",
+      "text": "a car indicating a right turn",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-IncatRht",
+      "text": "A car is indicating a right turn.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-IncatRht",
+      "text": "The scene shows a car indicating a right turn.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-IncatRht",
+      "text": "This road event involves a car indicating a right turn.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-IncatRht",
+      "text": "There is a car indicating a right turn.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-HazLit",
+      "text": "a car with hazard lights on",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-HazLit",
+      "text": "A car is showing hazard lights.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-HazLit",
+      "text": "The scene shows a car showing hazard lights.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-HazLit",
+      "text": "This road event involves a car showing hazard lights.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-HazLit",
+      "text": "There is a car showing hazard lights.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-TurLft",
+      "text": "a car turning left",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-TurLft",
+      "text": "A car is turning left.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-TurLft",
+      "text": "The scene shows a car turning left.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-TurLft",
+      "text": "This road event involves a car turning left.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-TurLft",
+      "text": "There is a car turning left.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-TurRht",
+      "text": "a car turning right",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-TurRht",
+      "text": "A car is turning right.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-TurRht",
+      "text": "The scene shows a car turning right.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-TurRht",
+      "text": "This road event involves a car turning right.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-TurRht",
+      "text": "There is a car turning right.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovRht",
+      "text": "a car moving to the right",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovRht",
+      "text": "A car is moving to the right relative to the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovRht",
+      "text": "The scene shows a car moving to the right relative to the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovRht",
+      "text": "This road event involves a car moving to the right relative to the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovRht",
+      "text": "There is a car moving to the right relative to the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovLft",
+      "text": "a car moving to the left",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovLft",
+      "text": "A car is moving to the left relative to the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovLft",
+      "text": "The scene shows a car moving to the left relative to the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovLft",
+      "text": "This road event involves a car moving to the left relative to the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-MovLft",
+      "text": "There is a car moving to the left relative to the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-XingFmLft",
+      "text": "a car crossing from the left",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-XingFmLft",
+      "text": "A car is crossing from the left relative to the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-XingFmLft",
+      "text": "The scene shows a car crossing from the left relative to the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-XingFmLft",
+      "text": "This road event involves a car crossing from the left relative to the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-XingFmLft",
+      "text": "There is a car crossing from the left relative to the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-XingFmRht",
+      "text": "a car crossing from the right",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-XingFmRht",
+      "text": "A car is crossing from the right relative to the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-XingFmRht",
+      "text": "The scene shows a car crossing from the right relative to the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-XingFmRht",
+      "text": "This road event involves a car crossing from the right relative to the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Car-XingFmRht",
+      "text": "There is a car crossing from the right relative to the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Cyc-MovAway",
+      "text": "a cyclist moving away from the ego vehicle",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Cyc-MovAway",
+      "text": "A cyclist is moving away from the ego vehicle.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Cyc-MovAway",
+      "text": "The scene shows a cyclist moving away from the ego vehicle.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Cyc-MovAway",
+      "text": "This road event involves a cyclist moving away from the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Cyc-MovAway",
+      "text": "There is a cyclist moving away from the ego vehicle.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Cyc-MovTow",
+      "text": "a cyclist moving toward the ego vehicle",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Cyc-MovTow",
+      "text": "A cyclist is moving toward the ego vehicle.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Cyc-MovTow",
+      "text": "The scene shows a cyclist moving toward the ego vehicle.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Cyc-MovTow",
+      "text": "This road event involves a cyclist moving toward the ego vehicle.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Cyc-MovTow",
+      "text": "There is a cyclist moving toward the ego vehicle.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Cyc-Stop",
+      "text": "a cyclist stopped",
+      "tokens_including_special": 5,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Cyc-Stop",
+      "text": "A cyclist is stopped.",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Cyc-Stop",
+      "text": "The scene shows a cyclist stopped.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Cyc-Stop",
+      "text": "This road event involves a cyclist stopped.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Cyc-Stop",
+      "text": "There is a cyclist stopped.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Mobike-Stop",
+      "text": "a motorcyclist stopped",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Mobike-Stop",
+      "text": "A motorcyclist is stopped.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Mobike-Stop",
+      "text": "The scene shows a motorcyclist stopped.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Mobike-Stop",
+      "text": "This road event involves a motorcyclist stopped.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Mobike-Stop",
+      "text": "There is a motorcyclist stopped.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-MovAway",
+      "text": "a medium-sized vehicle moving away from the ego vehicle",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-MovAway",
+      "text": "A medium-sized vehicle is moving away from the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-MovAway",
+      "text": "The scene shows a medium-sized vehicle moving away from the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-MovAway",
+      "text": "This road event involves a medium-sized vehicle moving away from the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-MovAway",
+      "text": "There is a medium-sized vehicle moving away from the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-MovTow",
+      "text": "a medium-sized vehicle moving toward the ego vehicle",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-MovTow",
+      "text": "A medium-sized vehicle is moving toward the ego vehicle.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-MovTow",
+      "text": "The scene shows a medium-sized vehicle moving toward the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-MovTow",
+      "text": "This road event involves a medium-sized vehicle moving toward the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-MovTow",
+      "text": "There is a medium-sized vehicle moving toward the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-Brake",
+      "text": "a medium-sized vehicle braking with its brake lights on",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-Brake",
+      "text": "A medium-sized vehicle is braking.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-Brake",
+      "text": "The scene shows a medium-sized vehicle braking.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-Brake",
+      "text": "This road event involves a medium-sized vehicle braking.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-Brake",
+      "text": "There is a medium-sized vehicle braking.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-Stop",
+      "text": "a medium-sized vehicle stopped",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-Stop",
+      "text": "A medium-sized vehicle is stopped.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-Stop",
+      "text": "The scene shows a medium-sized vehicle stopped.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-Stop",
+      "text": "This road event involves a medium-sized vehicle stopped.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-Stop",
+      "text": "There is a medium-sized vehicle stopped.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-IncatLft",
+      "text": "a medium-sized vehicle indicating a left turn",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-IncatLft",
+      "text": "A medium-sized vehicle is indicating a left turn.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-IncatLft",
+      "text": "The scene shows a medium-sized vehicle indicating a left turn.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-IncatLft",
+      "text": "This road event involves a medium-sized vehicle indicating a left turn.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-IncatLft",
+      "text": "There is a medium-sized vehicle indicating a left turn.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-IncatRht",
+      "text": "a medium-sized vehicle indicating a right turn",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-IncatRht",
+      "text": "A medium-sized vehicle is indicating a right turn.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-IncatRht",
+      "text": "The scene shows a medium-sized vehicle indicating a right turn.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-IncatRht",
+      "text": "This road event involves a medium-sized vehicle indicating a right turn.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-IncatRht",
+      "text": "There is a medium-sized vehicle indicating a right turn.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-HazLit",
+      "text": "a medium-sized vehicle with hazard lights on",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-HazLit",
+      "text": "A medium-sized vehicle is showing hazard lights.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-HazLit",
+      "text": "The scene shows a medium-sized vehicle showing hazard lights.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-HazLit",
+      "text": "This road event involves a medium-sized vehicle showing hazard lights.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-HazLit",
+      "text": "There is a medium-sized vehicle showing hazard lights.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-TurRht",
+      "text": "a medium-sized vehicle turning right",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-TurRht",
+      "text": "A medium-sized vehicle is turning right.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-TurRht",
+      "text": "The scene shows a medium-sized vehicle turning right.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-TurRht",
+      "text": "This road event involves a medium-sized vehicle turning right.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-TurRht",
+      "text": "There is a medium-sized vehicle turning right.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-XingFmLft",
+      "text": "a medium-sized vehicle crossing from the left",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-XingFmLft",
+      "text": "A medium-sized vehicle is crossing from the left relative to the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-XingFmLft",
+      "text": "The scene shows a medium-sized vehicle crossing from the left relative to the ego vehicle.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-XingFmLft",
+      "text": "This road event involves a medium-sized vehicle crossing from the left relative to the ego vehicle.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-XingFmLft",
+      "text": "There is a medium-sized vehicle crossing from the left relative to the ego vehicle.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-XingFmRht",
+      "text": "a medium-sized vehicle crossing from the right",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-XingFmRht",
+      "text": "A medium-sized vehicle is crossing from the right relative to the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-XingFmRht",
+      "text": "The scene shows a medium-sized vehicle crossing from the right relative to the ego vehicle.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-XingFmRht",
+      "text": "This road event involves a medium-sized vehicle crossing from the right relative to the ego vehicle.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "duplex:MedVeh-XingFmRht",
+      "text": "There is a medium-sized vehicle crossing from the right relative to the ego vehicle.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-MovAway",
+      "text": "a large vehicle moving away from the ego vehicle",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-MovAway",
+      "text": "A large vehicle is moving away from the ego vehicle.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-MovAway",
+      "text": "The scene shows a large vehicle moving away from the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-MovAway",
+      "text": "This road event involves a large vehicle moving away from the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-MovAway",
+      "text": "There is a large vehicle moving away from the ego vehicle.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-MovTow",
+      "text": "a large vehicle moving toward the ego vehicle",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-MovTow",
+      "text": "A large vehicle is moving toward the ego vehicle.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-MovTow",
+      "text": "The scene shows a large vehicle moving toward the ego vehicle.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-MovTow",
+      "text": "This road event involves a large vehicle moving toward the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-MovTow",
+      "text": "There is a large vehicle moving toward the ego vehicle.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-Stop",
+      "text": "a large vehicle stopped",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-Stop",
+      "text": "A large vehicle is stopped.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-Stop",
+      "text": "The scene shows a large vehicle stopped.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-Stop",
+      "text": "This road event involves a large vehicle stopped.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-Stop",
+      "text": "There is a large vehicle stopped.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-HazLit",
+      "text": "a large vehicle with hazard lights on",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-HazLit",
+      "text": "A large vehicle is showing hazard lights.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-HazLit",
+      "text": "The scene shows a large vehicle showing hazard lights.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-HazLit",
+      "text": "This road event involves a large vehicle showing hazard lights.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:LarVeh-HazLit",
+      "text": "There is a large vehicle showing hazard lights.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-MovAway",
+      "text": "a bus moving away from the ego vehicle",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-MovAway",
+      "text": "A bus is moving away from the ego vehicle.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-MovAway",
+      "text": "The scene shows a bus moving away from the ego vehicle.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-MovAway",
+      "text": "This road event involves a bus moving away from the ego vehicle.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-MovAway",
+      "text": "There is a bus moving away from the ego vehicle.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-MovTow",
+      "text": "a bus moving toward the ego vehicle",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-MovTow",
+      "text": "A bus is moving toward the ego vehicle.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-MovTow",
+      "text": "The scene shows a bus moving toward the ego vehicle.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-MovTow",
+      "text": "This road event involves a bus moving toward the ego vehicle.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-MovTow",
+      "text": "There is a bus moving toward the ego vehicle.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-Brake",
+      "text": "a bus braking with its brake lights on",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-Brake",
+      "text": "A bus is braking.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-Brake",
+      "text": "The scene shows a bus braking.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-Brake",
+      "text": "This road event involves a bus braking.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-Brake",
+      "text": "There is a bus braking.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-Stop",
+      "text": "a bus stopped",
+      "tokens_including_special": 5,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-Stop",
+      "text": "A bus is stopped.",
+      "tokens_including_special": 7,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-Stop",
+      "text": "The scene shows a bus stopped.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-Stop",
+      "text": "This road event involves a bus stopped.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-Stop",
+      "text": "There is a bus stopped.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-HazLit",
+      "text": "a bus with hazard lights on",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-HazLit",
+      "text": "A bus is showing hazard lights.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-HazLit",
+      "text": "The scene shows a bus showing hazard lights.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-HazLit",
+      "text": "This road event involves a bus showing hazard lights.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:Bus-HazLit",
+      "text": "There is a bus showing hazard lights.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:EmVeh-Stop",
+      "text": "an emergency vehicle stopped",
+      "tokens_including_special": 6,
+      "truncated": false
+    },
+    {
+      "id": "duplex:EmVeh-Stop",
+      "text": "An emergency vehicle is stopped.",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "duplex:EmVeh-Stop",
+      "text": "The scene shows an emergency vehicle stopped.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "duplex:EmVeh-Stop",
+      "text": "This road event involves an emergency vehicle stopped.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:EmVeh-Stop",
+      "text": "There is an emergency vehicle stopped.",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:TL-Red",
+      "text": "a traffic light showing a red light",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:TL-Red",
+      "text": "A traffic light is showing a red light.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:TL-Red",
+      "text": "The scene shows a traffic light showing a red light.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:TL-Red",
+      "text": "This road event involves a traffic light showing a red light.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:TL-Red",
+      "text": "There is a traffic light showing a red light.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:TL-Amber",
+      "text": "a traffic light showing an amber light",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:TL-Amber",
+      "text": "A traffic light is showing an amber light.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:TL-Amber",
+      "text": "The scene shows a traffic light showing an amber light.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:TL-Amber",
+      "text": "This road event involves a traffic light showing an amber light.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:TL-Amber",
+      "text": "There is a traffic light showing an amber light.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "duplex:TL-Green",
+      "text": "a traffic light showing a green light",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "duplex:TL-Green",
+      "text": "A traffic light is showing a green light.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "duplex:TL-Green",
+      "text": "The scene shows a traffic light showing a green light.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "duplex:TL-Green",
+      "text": "This road event involves a traffic light showing a green light.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "duplex:TL-Green",
+      "text": "There is a traffic light showing a green light.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovAway-LftPav",
+      "text": "a pedestrian moving away from the ego vehicle on the left pavement",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovAway-LftPav",
+      "text": "A pedestrian is moving away from the ego vehicle on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovAway-LftPav",
+      "text": "The scene shows a pedestrian moving away from the ego vehicle on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovAway-LftPav",
+      "text": "This road event involves a pedestrian moving away from the ego vehicle on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 25,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovAway-LftPav",
+      "text": "There is a pedestrian moving away from the ego vehicle on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovAway-RhtPav",
+      "text": "a pedestrian moving away from the ego vehicle on the right pavement",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovAway-RhtPav",
+      "text": "A pedestrian is moving away from the ego vehicle on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovAway-RhtPav",
+      "text": "The scene shows a pedestrian moving away from the ego vehicle on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovAway-RhtPav",
+      "text": "This road event involves a pedestrian moving away from the ego vehicle on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 25,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovAway-RhtPav",
+      "text": "There is a pedestrian moving away from the ego vehicle on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovAway-Jun",
+      "text": "a pedestrian moving away from the ego vehicle at a road junction",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovAway-Jun",
+      "text": "A pedestrian is moving away from the ego vehicle at a road junction.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovAway-Jun",
+      "text": "The scene shows a pedestrian moving away from the ego vehicle at a road junction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovAway-Jun",
+      "text": "This road event involves a pedestrian moving away from the ego vehicle at a road junction.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovAway-Jun",
+      "text": "There is a pedestrian moving away from the ego vehicle at a road junction.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovTow-LftPav",
+      "text": "a pedestrian moving toward the ego vehicle on the left pavement",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovTow-LftPav",
+      "text": "A pedestrian is moving toward the ego vehicle on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovTow-LftPav",
+      "text": "The scene shows a pedestrian moving toward the ego vehicle on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovTow-LftPav",
+      "text": "This road event involves a pedestrian moving toward the ego vehicle on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovTow-LftPav",
+      "text": "There is a pedestrian moving toward the ego vehicle on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovTow-RhtPav",
+      "text": "a pedestrian moving toward the ego vehicle on the right pavement",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovTow-RhtPav",
+      "text": "A pedestrian is moving toward the ego vehicle on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovTow-RhtPav",
+      "text": "The scene shows a pedestrian moving toward the ego vehicle on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovTow-RhtPav",
+      "text": "This road event involves a pedestrian moving toward the ego vehicle on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovTow-RhtPav",
+      "text": "There is a pedestrian moving toward the ego vehicle on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovTow-Jun",
+      "text": "a pedestrian moving toward the ego vehicle at a road junction",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovTow-Jun",
+      "text": "A pedestrian is moving toward the ego vehicle at a road junction.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovTow-Jun",
+      "text": "The scene shows a pedestrian moving toward the ego vehicle at a road junction.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovTow-Jun",
+      "text": "This road event involves a pedestrian moving toward the ego vehicle at a road junction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-MovTow-Jun",
+      "text": "There is a pedestrian moving toward the ego vehicle at a road junction.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Mov-OutgoLane",
+      "text": "a pedestrian moving in the outgoing traffic lane",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Mov-OutgoLane",
+      "text": "A pedestrian is moving in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Mov-OutgoLane",
+      "text": "The scene shows a pedestrian moving in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Mov-OutgoLane",
+      "text": "This road event involves a pedestrian moving in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Mov-OutgoLane",
+      "text": "There is a pedestrian moving in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Mov-Pav",
+      "text": "a pedestrian moving on the pavement",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Mov-Pav",
+      "text": "A pedestrian is moving on the pavement.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Mov-Pav",
+      "text": "The scene shows a pedestrian moving on the pavement.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Mov-Pav",
+      "text": "This road event involves a pedestrian moving on the pavement.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Mov-Pav",
+      "text": "There is a pedestrian moving on the pavement.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Mov-RhtPav",
+      "text": "a pedestrian moving on the right pavement",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Mov-RhtPav",
+      "text": "A pedestrian is moving on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Mov-RhtPav",
+      "text": "The scene shows a pedestrian moving on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Mov-RhtPav",
+      "text": "This road event involves a pedestrian moving on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Mov-RhtPav",
+      "text": "There is a pedestrian moving on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-OutgoLane",
+      "text": "a pedestrian stopped in the outgoing traffic lane",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-OutgoLane",
+      "text": "A pedestrian is stopped in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-OutgoLane",
+      "text": "The scene shows a pedestrian stopped in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-OutgoLane",
+      "text": "This road event involves a pedestrian stopped in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-OutgoLane",
+      "text": "There is a pedestrian stopped in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-Pav",
+      "text": "a pedestrian stopped on the pavement",
+      "tokens_including_special": 8,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-Pav",
+      "text": "A pedestrian is stopped on the pavement.",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-Pav",
+      "text": "The scene shows a pedestrian stopped on the pavement.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-Pav",
+      "text": "This road event involves a pedestrian stopped on the pavement.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-Pav",
+      "text": "There is a pedestrian stopped on the pavement.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-LftPav",
+      "text": "a pedestrian stopped on the left pavement",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-LftPav",
+      "text": "A pedestrian is stopped on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-LftPav",
+      "text": "The scene shows a pedestrian stopped on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-LftPav",
+      "text": "This road event involves a pedestrian stopped on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-LftPav",
+      "text": "There is a pedestrian stopped on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-RhtPav",
+      "text": "a pedestrian stopped on the right pavement",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-RhtPav",
+      "text": "A pedestrian is stopped on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-RhtPav",
+      "text": "The scene shows a pedestrian stopped on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-RhtPav",
+      "text": "This road event involves a pedestrian stopped on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-RhtPav",
+      "text": "There is a pedestrian stopped on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-BusStop",
+      "text": "a pedestrian stopped at a bus stop",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-BusStop",
+      "text": "A pedestrian is stopped at a bus stop.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-BusStop",
+      "text": "The scene shows a pedestrian stopped at a bus stop.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-BusStop",
+      "text": "This road event involves a pedestrian stopped at a bus stop.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Stop-BusStop",
+      "text": "There is a pedestrian stopped at a bus stop.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Wait2X-RhtPav",
+      "text": "a pedestrian waiting to cross the road on the right pavement",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Wait2X-RhtPav",
+      "text": "A pedestrian is waiting to cross the road on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Wait2X-RhtPav",
+      "text": "The scene shows a pedestrian waiting to cross the road on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Wait2X-RhtPav",
+      "text": "This road event involves a pedestrian waiting to cross the road on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Wait2X-RhtPav",
+      "text": "There is a pedestrian waiting to cross the road on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Wait2X-Jun",
+      "text": "a pedestrian waiting to cross the road at a road junction",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Wait2X-Jun",
+      "text": "A pedestrian is waiting to cross the road at a road junction.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Wait2X-Jun",
+      "text": "The scene shows a pedestrian waiting to cross the road at a road junction.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Wait2X-Jun",
+      "text": "This road event involves a pedestrian waiting to cross the road at a road junction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Wait2X-Jun",
+      "text": "There is a pedestrian waiting to cross the road at a road junction.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-XingFmLft-Jun",
+      "text": "a pedestrian crossing from the left at a road junction",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-XingFmLft-Jun",
+      "text": "A pedestrian is crossing from the left relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-XingFmLft-Jun",
+      "text": "The scene shows a pedestrian crossing from the left relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-XingFmLft-Jun",
+      "text": "This road event involves a pedestrian crossing from the left relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-XingFmLft-Jun",
+      "text": "There is a pedestrian crossing from the left relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-XingFmRht-Jun",
+      "text": "a pedestrian crossing from the right at a road junction",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-XingFmRht-Jun",
+      "text": "A pedestrian is crossing from the right relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-XingFmRht-Jun",
+      "text": "The scene shows a pedestrian crossing from the right relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-XingFmRht-Jun",
+      "text": "This road event involves a pedestrian crossing from the right relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-XingFmRht-Jun",
+      "text": "There is a pedestrian crossing from the right relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-XingFmRht-xing",
+      "text": "a pedestrian crossing from the right at a pedestrian crossing",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-XingFmRht-xing",
+      "text": "A pedestrian is crossing from the right relative to the ego vehicle at a pedestrian crossing.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-XingFmRht-xing",
+      "text": "The scene shows a pedestrian crossing from the right relative to the ego vehicle at a pedestrian crossing.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-XingFmRht-xing",
+      "text": "This road event involves a pedestrian crossing from the right relative to the ego vehicle at a pedestrian crossing.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-XingFmRht-xing",
+      "text": "There is a pedestrian crossing from the right relative to the ego vehicle at a pedestrian crossing.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Xing-Jun",
+      "text": "a pedestrian crossing the road at a road junction",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Xing-Jun",
+      "text": "A pedestrian is crossing the road at a road junction.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Xing-Jun",
+      "text": "The scene shows a pedestrian crossing the road at a road junction.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Xing-Jun",
+      "text": "This road event involves a pedestrian crossing the road at a road junction.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-Xing-Jun",
+      "text": "There is a pedestrian crossing the road at a road junction.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-PushObj-LftPav",
+      "text": "a pedestrian pushing an object on the left pavement",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-PushObj-LftPav",
+      "text": "A pedestrian is pushing an object on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-PushObj-LftPav",
+      "text": "The scene shows a pedestrian pushing an object on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-PushObj-LftPav",
+      "text": "This road event involves a pedestrian pushing an object on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-PushObj-LftPav",
+      "text": "There is a pedestrian pushing an object on the pavement on the left of the ego vehicle.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-PushObj-RhtPav",
+      "text": "a pedestrian pushing an object on the right pavement",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-PushObj-RhtPav",
+      "text": "A pedestrian is pushing an object on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-PushObj-RhtPav",
+      "text": "The scene shows a pedestrian pushing an object on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-PushObj-RhtPav",
+      "text": "This road event involves a pedestrian pushing an object on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Ped-PushObj-RhtPav",
+      "text": "There is a pedestrian pushing an object on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovAway-VehLane",
+      "text": "a car moving away from the ego vehicle in the ego vehicle's lane",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovAway-VehLane",
+      "text": "A car is moving away from the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovAway-VehLane",
+      "text": "The scene shows a car moving away from the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovAway-VehLane",
+      "text": "This road event involves a car moving away from the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovAway-VehLane",
+      "text": "There is a car moving away from the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovAway-OutgoLane",
+      "text": "a car moving away from the ego vehicle in the outgoing traffic lane",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovAway-OutgoLane",
+      "text": "A car is moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovAway-OutgoLane",
+      "text": "The scene shows a car moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 25,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovAway-OutgoLane",
+      "text": "This road event involves a car moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 26,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovAway-OutgoLane",
+      "text": "There is a car moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovAway-Jun",
+      "text": "a car moving away from the ego vehicle at a road junction",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovAway-Jun",
+      "text": "A car is moving away from the ego vehicle at a road junction.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovAway-Jun",
+      "text": "The scene shows a car moving away from the ego vehicle at a road junction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovAway-Jun",
+      "text": "This road event involves a car moving away from the ego vehicle at a road junction.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovAway-Jun",
+      "text": "There is a car moving away from the ego vehicle at a road junction.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovTow-VehLane",
+      "text": "a car moving toward the ego vehicle in the ego vehicle's lane",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovTow-VehLane",
+      "text": "A car is moving toward the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovTow-VehLane",
+      "text": "The scene shows a car moving toward the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovTow-VehLane",
+      "text": "This road event involves a car moving toward the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovTow-VehLane",
+      "text": "There is a car moving toward the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovTow-IncomLane",
+      "text": "a car moving toward the ego vehicle in the incoming traffic lane",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovTow-IncomLane",
+      "text": "A car is moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovTow-IncomLane",
+      "text": "The scene shows a car moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovTow-IncomLane",
+      "text": "This road event involves a car moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovTow-IncomLane",
+      "text": "There is a car moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovTow-Jun",
+      "text": "a car moving toward the ego vehicle at a road junction",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovTow-Jun",
+      "text": "A car is moving toward the ego vehicle at a road junction.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovTow-Jun",
+      "text": "The scene shows a car moving toward the ego vehicle at a road junction.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovTow-Jun",
+      "text": "This road event involves a car moving toward the ego vehicle at a road junction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovTow-Jun",
+      "text": "There is a car moving toward the ego vehicle at a road junction.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Brake-VehLane",
+      "text": "a car braking with its brake lights on in the ego vehicle's lane",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Brake-VehLane",
+      "text": "A car is braking in the ego vehicle's lane.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Brake-VehLane",
+      "text": "The scene shows a car braking in the ego vehicle's lane.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Brake-VehLane",
+      "text": "This road event involves a car braking in the ego vehicle's lane.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Brake-VehLane",
+      "text": "There is a car braking in the ego vehicle's lane.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Brake-OutgoLane",
+      "text": "a car braking with its brake lights on in the outgoing traffic lane",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Brake-OutgoLane",
+      "text": "A car is braking in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Brake-OutgoLane",
+      "text": "The scene shows a car braking in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Brake-OutgoLane",
+      "text": "This road event involves a car braking in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Brake-OutgoLane",
+      "text": "There is a car braking in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Brake-Jun",
+      "text": "a car braking with its brake lights on at a road junction",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Brake-Jun",
+      "text": "A car is braking at a road junction.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Brake-Jun",
+      "text": "The scene shows a car braking at a road junction.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Brake-Jun",
+      "text": "This road event involves a car braking at a road junction.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Brake-Jun",
+      "text": "There is a car braking at a road junction.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-VehLane",
+      "text": "a car stopped in the ego vehicle's lane",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-VehLane",
+      "text": "A car is stopped in the ego vehicle's lane.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-VehLane",
+      "text": "The scene shows a car stopped in the ego vehicle's lane.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-VehLane",
+      "text": "This road event involves a car stopped in the ego vehicle's lane.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-VehLane",
+      "text": "There is a car stopped in the ego vehicle's lane.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-OutgoLane",
+      "text": "a car stopped in the outgoing traffic lane",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-OutgoLane",
+      "text": "A car is stopped in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-OutgoLane",
+      "text": "The scene shows a car stopped in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-OutgoLane",
+      "text": "This road event involves a car stopped in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-OutgoLane",
+      "text": "There is a car stopped in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-IncomLane",
+      "text": "a car stopped in the incoming traffic lane",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-IncomLane",
+      "text": "A car is stopped in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-IncomLane",
+      "text": "The scene shows a car stopped in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-IncomLane",
+      "text": "This road event involves a car stopped in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-IncomLane",
+      "text": "There is a car stopped in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-Jun",
+      "text": "a car stopped at a road junction",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-Jun",
+      "text": "A car is stopped at a road junction.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-Jun",
+      "text": "The scene shows a car stopped at a road junction.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-Jun",
+      "text": "This road event involves a car stopped at a road junction.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-Jun",
+      "text": "There is a car stopped at a road junction.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-parking",
+      "text": "a car stopped in a parking area",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-parking",
+      "text": "A car is stopped in a parking area.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-parking",
+      "text": "The scene shows a car stopped in a parking area.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-parking",
+      "text": "This road event involves a car stopped in a parking area.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-Stop-parking",
+      "text": "There is a car stopped in a parking area.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-VehLane",
+      "text": "a car indicating a left turn in the ego vehicle's lane",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-VehLane",
+      "text": "A car is indicating a left turn in the ego vehicle's lane.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-VehLane",
+      "text": "The scene shows a car indicating a left turn in the ego vehicle's lane.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-VehLane",
+      "text": "This road event involves a car indicating a left turn in the ego vehicle's lane.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-VehLane",
+      "text": "There is a car indicating a left turn in the ego vehicle's lane.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-OutgoLane",
+      "text": "a car indicating a left turn in the outgoing traffic lane",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-OutgoLane",
+      "text": "A car is indicating a left turn in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-OutgoLane",
+      "text": "The scene shows a car indicating a left turn in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-OutgoLane",
+      "text": "This road event involves a car indicating a left turn in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 25,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-OutgoLane",
+      "text": "There is a car indicating a left turn in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-IncomLane",
+      "text": "a car indicating a left turn in the incoming traffic lane",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-IncomLane",
+      "text": "A car is indicating a left turn in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-IncomLane",
+      "text": "The scene shows a car indicating a left turn in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-IncomLane",
+      "text": "This road event involves a car indicating a left turn in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-IncomLane",
+      "text": "There is a car indicating a left turn in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-Jun",
+      "text": "a car indicating a left turn at a road junction",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-Jun",
+      "text": "A car is indicating a left turn at a road junction.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-Jun",
+      "text": "The scene shows a car indicating a left turn at a road junction.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-Jun",
+      "text": "This road event involves a car indicating a left turn at a road junction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatLft-Jun",
+      "text": "There is a car indicating a left turn at a road junction.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-VehLane",
+      "text": "a car indicating a right turn in the ego vehicle's lane",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-VehLane",
+      "text": "A car is indicating a right turn in the ego vehicle's lane.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-VehLane",
+      "text": "The scene shows a car indicating a right turn in the ego vehicle's lane.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-VehLane",
+      "text": "This road event involves a car indicating a right turn in the ego vehicle's lane.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-VehLane",
+      "text": "There is a car indicating a right turn in the ego vehicle's lane.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-OutgoLane",
+      "text": "a car indicating a right turn in the outgoing traffic lane",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-OutgoLane",
+      "text": "A car is indicating a right turn in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-OutgoLane",
+      "text": "The scene shows a car indicating a right turn in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-OutgoLane",
+      "text": "This road event involves a car indicating a right turn in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 25,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-OutgoLane",
+      "text": "There is a car indicating a right turn in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-IncomLane",
+      "text": "a car indicating a right turn in the incoming traffic lane",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-IncomLane",
+      "text": "A car is indicating a right turn in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-IncomLane",
+      "text": "The scene shows a car indicating a right turn in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-IncomLane",
+      "text": "This road event involves a car indicating a right turn in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-IncomLane",
+      "text": "There is a car indicating a right turn in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-Jun",
+      "text": "a car indicating a right turn at a road junction",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-Jun",
+      "text": "A car is indicating a right turn at a road junction.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-Jun",
+      "text": "The scene shows a car indicating a right turn at a road junction.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-Jun",
+      "text": "This road event involves a car indicating a right turn at a road junction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-IncatRht-Jun",
+      "text": "There is a car indicating a right turn at a road junction.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-HazLit-IncomLane",
+      "text": "a car with hazard lights on in the incoming traffic lane",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-HazLit-IncomLane",
+      "text": "A car is showing hazard lights in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-HazLit-IncomLane",
+      "text": "The scene shows a car showing hazard lights in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-HazLit-IncomLane",
+      "text": "This road event involves a car showing hazard lights in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-HazLit-IncomLane",
+      "text": "There is a car showing hazard lights in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-TurLft-VehLane",
+      "text": "a car turning left in the ego vehicle's lane",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-TurLft-VehLane",
+      "text": "A car is turning left in the ego vehicle's lane.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-TurLft-VehLane",
+      "text": "The scene shows a car turning left in the ego vehicle's lane.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-TurLft-VehLane",
+      "text": "This road event involves a car turning left in the ego vehicle's lane.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-TurLft-VehLane",
+      "text": "There is a car turning left in the ego vehicle's lane.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-TurLft-Jun",
+      "text": "a car turning left at a road junction",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-TurLft-Jun",
+      "text": "A car is turning left at a road junction.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-TurLft-Jun",
+      "text": "The scene shows a car turning left at a road junction.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-TurLft-Jun",
+      "text": "This road event involves a car turning left at a road junction.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-TurLft-Jun",
+      "text": "There is a car turning left at a road junction.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-TurRht-Jun",
+      "text": "a car turning right at a road junction",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-TurRht-Jun",
+      "text": "A car is turning right at a road junction.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-TurRht-Jun",
+      "text": "The scene shows a car turning right at a road junction.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-TurRht-Jun",
+      "text": "This road event involves a car turning right at a road junction.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-TurRht-Jun",
+      "text": "There is a car turning right at a road junction.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovRht-OutgoLane",
+      "text": "a car moving to the right in the outgoing traffic lane",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovRht-OutgoLane",
+      "text": "A car is moving to the right relative to the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 26,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovRht-OutgoLane",
+      "text": "The scene shows a car moving to the right relative to the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 28,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovRht-OutgoLane",
+      "text": "This road event involves a car moving to the right relative to the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 29,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovRht-OutgoLane",
+      "text": "There is a car moving to the right relative to the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 27,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovLft-VehLane",
+      "text": "a car moving to the left in the ego vehicle's lane",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovLft-VehLane",
+      "text": "A car is moving to the left relative to the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovLft-VehLane",
+      "text": "The scene shows a car moving to the left relative to the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovLft-VehLane",
+      "text": "This road event involves a car moving to the left relative to the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovLft-VehLane",
+      "text": "There is a car moving to the left relative to the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovLft-OutgoLane",
+      "text": "a car moving to the left in the outgoing traffic lane",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovLft-OutgoLane",
+      "text": "A car is moving to the left relative to the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 26,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovLft-OutgoLane",
+      "text": "The scene shows a car moving to the left relative to the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 28,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovLft-OutgoLane",
+      "text": "This road event involves a car moving to the left relative to the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 29,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-MovLft-OutgoLane",
+      "text": "There is a car moving to the left relative to the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 27,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-XingFmLft-Jun",
+      "text": "a car crossing from the left at a road junction",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-XingFmLft-Jun",
+      "text": "A car is crossing from the left relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-XingFmLft-Jun",
+      "text": "The scene shows a car crossing from the left relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-XingFmLft-Jun",
+      "text": "This road event involves a car crossing from the left relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-XingFmLft-Jun",
+      "text": "There is a car crossing from the left relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-XingFmRht-Jun",
+      "text": "a car crossing from the right at a road junction",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-XingFmRht-Jun",
+      "text": "A car is crossing from the right relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-XingFmRht-Jun",
+      "text": "The scene shows a car crossing from the right relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-XingFmRht-Jun",
+      "text": "This road event involves a car crossing from the right relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Car-XingFmRht-Jun",
+      "text": "There is a car crossing from the right relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovAway-OutgoCycLane",
+      "text": "a cyclist moving away from the ego vehicle in the outgoing cycle lane",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovAway-OutgoCycLane",
+      "text": "A cyclist is moving away from the ego vehicle in a cycle lane going in the ego vehicle's direction.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovAway-OutgoCycLane",
+      "text": "The scene shows a cyclist moving away from the ego vehicle in a cycle lane going in the ego vehicle's direction.",
+      "tokens_including_special": 25,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovAway-OutgoCycLane",
+      "text": "This road event involves a cyclist moving away from the ego vehicle in a cycle lane going in the ego vehicle's direction.",
+      "tokens_including_special": 26,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovAway-OutgoCycLane",
+      "text": "There is a cyclist moving away from the ego vehicle in a cycle lane going in the ego vehicle's direction.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovAway-RhtPav",
+      "text": "a cyclist moving away from the ego vehicle on the right pavement",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovAway-RhtPav",
+      "text": "A cyclist is moving away from the ego vehicle on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovAway-RhtPav",
+      "text": "The scene shows a cyclist moving away from the ego vehicle on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovAway-RhtPav",
+      "text": "This road event involves a cyclist moving away from the ego vehicle on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 25,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovAway-RhtPav",
+      "text": "There is a cyclist moving away from the ego vehicle on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovTow-IncomLane",
+      "text": "a cyclist moving toward the ego vehicle in the incoming traffic lane",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovTow-IncomLane",
+      "text": "A cyclist is moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovTow-IncomLane",
+      "text": "The scene shows a cyclist moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovTow-IncomLane",
+      "text": "This road event involves a cyclist moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovTow-IncomLane",
+      "text": "There is a cyclist moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovTow-RhtPav",
+      "text": "a cyclist moving toward the ego vehicle on the right pavement",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovTow-RhtPav",
+      "text": "A cyclist is moving toward the ego vehicle on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovTow-RhtPav",
+      "text": "The scene shows a cyclist moving toward the ego vehicle on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovTow-RhtPav",
+      "text": "This road event involves a cyclist moving toward the ego vehicle on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Cyc-MovTow-RhtPav",
+      "text": "There is a cyclist moving toward the ego vehicle on the pavement on the right of the ego vehicle.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-VehLane",
+      "text": "a medium-sized vehicle moving away from the ego vehicle in the ego vehicle's lane",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-VehLane",
+      "text": "A medium-sized vehicle is moving away from the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-VehLane",
+      "text": "The scene shows a medium-sized vehicle moving away from the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-VehLane",
+      "text": "This road event involves a medium-sized vehicle moving away from the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-VehLane",
+      "text": "There is a medium-sized vehicle moving away from the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-OutgoLane",
+      "text": "a medium-sized vehicle moving away from the ego vehicle in the outgoing traffic lane",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-OutgoLane",
+      "text": "A medium-sized vehicle is moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 26,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-OutgoLane",
+      "text": "The scene shows a medium-sized vehicle moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 28,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-OutgoLane",
+      "text": "This road event involves a medium-sized vehicle moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 29,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-OutgoLane",
+      "text": "There is a medium-sized vehicle moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 27,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-Jun",
+      "text": "a medium-sized vehicle moving away from the ego vehicle at a road junction",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-Jun",
+      "text": "A medium-sized vehicle is moving away from the ego vehicle at a road junction.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-Jun",
+      "text": "The scene shows a medium-sized vehicle moving away from the ego vehicle at a road junction.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-Jun",
+      "text": "This road event involves a medium-sized vehicle moving away from the ego vehicle at a road junction.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-Jun",
+      "text": "There is a medium-sized vehicle moving away from the ego vehicle at a road junction.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovTow-IncomLane",
+      "text": "a medium-sized vehicle moving toward the ego vehicle in the incoming traffic lane",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovTow-IncomLane",
+      "text": "A medium-sized vehicle is moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovTow-IncomLane",
+      "text": "The scene shows a medium-sized vehicle moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 25,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovTow-IncomLane",
+      "text": "This road event involves a medium-sized vehicle moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 26,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovTow-IncomLane",
+      "text": "There is a medium-sized vehicle moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovTow-Jun",
+      "text": "a medium-sized vehicle moving toward the ego vehicle at a road junction",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovTow-Jun",
+      "text": "A medium-sized vehicle is moving toward the ego vehicle at a road junction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovTow-Jun",
+      "text": "The scene shows a medium-sized vehicle moving toward the ego vehicle at a road junction.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovTow-Jun",
+      "text": "This road event involves a medium-sized vehicle moving toward the ego vehicle at a road junction.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-MovTow-Jun",
+      "text": "There is a medium-sized vehicle moving toward the ego vehicle at a road junction.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Brake-VehLane",
+      "text": "a medium-sized vehicle braking with its brake lights on in the ego vehicle's lane",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Brake-VehLane",
+      "text": "A medium-sized vehicle is braking in the ego vehicle's lane.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Brake-VehLane",
+      "text": "The scene shows a medium-sized vehicle braking in the ego vehicle's lane.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Brake-VehLane",
+      "text": "This road event involves a medium-sized vehicle braking in the ego vehicle's lane.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Brake-VehLane",
+      "text": "There is a medium-sized vehicle braking in the ego vehicle's lane.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Brake-OutgoLane",
+      "text": "a medium-sized vehicle braking with its brake lights on in the outgoing traffic lane",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Brake-OutgoLane",
+      "text": "A medium-sized vehicle is braking in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Brake-OutgoLane",
+      "text": "The scene shows a medium-sized vehicle braking in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Brake-OutgoLane",
+      "text": "This road event involves a medium-sized vehicle braking in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 25,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Brake-OutgoLane",
+      "text": "There is a medium-sized vehicle braking in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Brake-Jun",
+      "text": "a medium-sized vehicle braking with its brake lights on at a road junction",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Brake-Jun",
+      "text": "A medium-sized vehicle is braking at a road junction.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Brake-Jun",
+      "text": "The scene shows a medium-sized vehicle braking at a road junction.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Brake-Jun",
+      "text": "This road event involves a medium-sized vehicle braking at a road junction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Brake-Jun",
+      "text": "There is a medium-sized vehicle braking at a road junction.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-VehLane",
+      "text": "a medium-sized vehicle stopped in the ego vehicle's lane",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-VehLane",
+      "text": "A medium-sized vehicle is stopped in the ego vehicle's lane.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-VehLane",
+      "text": "The scene shows a medium-sized vehicle stopped in the ego vehicle's lane.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-VehLane",
+      "text": "This road event involves a medium-sized vehicle stopped in the ego vehicle's lane.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-VehLane",
+      "text": "There is a medium-sized vehicle stopped in the ego vehicle's lane.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-OutgoLane",
+      "text": "a medium-sized vehicle stopped in the outgoing traffic lane",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-OutgoLane",
+      "text": "A medium-sized vehicle is stopped in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-OutgoLane",
+      "text": "The scene shows a medium-sized vehicle stopped in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-OutgoLane",
+      "text": "This road event involves a medium-sized vehicle stopped in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-OutgoLane",
+      "text": "There is a medium-sized vehicle stopped in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-IncomLane",
+      "text": "a medium-sized vehicle stopped in the incoming traffic lane",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-IncomLane",
+      "text": "A medium-sized vehicle is stopped in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-IncomLane",
+      "text": "The scene shows a medium-sized vehicle stopped in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-IncomLane",
+      "text": "This road event involves a medium-sized vehicle stopped in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-IncomLane",
+      "text": "There is a medium-sized vehicle stopped in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-Jun",
+      "text": "a medium-sized vehicle stopped at a road junction",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-Jun",
+      "text": "A medium-sized vehicle is stopped at a road junction.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-Jun",
+      "text": "The scene shows a medium-sized vehicle stopped at a road junction.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-Jun",
+      "text": "This road event involves a medium-sized vehicle stopped at a road junction.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-Jun",
+      "text": "There is a medium-sized vehicle stopped at a road junction.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-parking",
+      "text": "a medium-sized vehicle stopped in a parking area",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-parking",
+      "text": "A medium-sized vehicle is stopped in a parking area.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-parking",
+      "text": "The scene shows a medium-sized vehicle stopped in a parking area.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-parking",
+      "text": "This road event involves a medium-sized vehicle stopped in a parking area.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-Stop-parking",
+      "text": "There is a medium-sized vehicle stopped in a parking area.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-IncatLft-IncomLane",
+      "text": "a medium-sized vehicle indicating a left turn in the incoming traffic lane",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-IncatLft-IncomLane",
+      "text": "A medium-sized vehicle is indicating a left turn in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-IncatLft-IncomLane",
+      "text": "The scene shows a medium-sized vehicle indicating a left turn in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 25,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-IncatLft-IncomLane",
+      "text": "This road event involves a medium-sized vehicle indicating a left turn in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 26,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-IncatLft-IncomLane",
+      "text": "There is a medium-sized vehicle indicating a left turn in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-IncatRht-Jun",
+      "text": "a medium-sized vehicle indicating a right turn at a road junction",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-IncatRht-Jun",
+      "text": "A medium-sized vehicle is indicating a right turn at a road junction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-IncatRht-Jun",
+      "text": "The scene shows a medium-sized vehicle indicating a right turn at a road junction.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-IncatRht-Jun",
+      "text": "This road event involves a medium-sized vehicle indicating a right turn at a road junction.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-IncatRht-Jun",
+      "text": "There is a medium-sized vehicle indicating a right turn at a road junction.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-TurRht-Jun",
+      "text": "a medium-sized vehicle turning right at a road junction",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-TurRht-Jun",
+      "text": "A medium-sized vehicle is turning right at a road junction.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-TurRht-Jun",
+      "text": "The scene shows a medium-sized vehicle turning right at a road junction.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-TurRht-Jun",
+      "text": "This road event involves a medium-sized vehicle turning right at a road junction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-TurRht-Jun",
+      "text": "There is a medium-sized vehicle turning right at a road junction.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-XingFmLft-Jun",
+      "text": "a medium-sized vehicle crossing from the left at a road junction",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-XingFmLft-Jun",
+      "text": "A medium-sized vehicle is crossing from the left relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-XingFmLft-Jun",
+      "text": "The scene shows a medium-sized vehicle crossing from the left relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-XingFmLft-Jun",
+      "text": "This road event involves a medium-sized vehicle crossing from the left relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 25,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-XingFmLft-Jun",
+      "text": "There is a medium-sized vehicle crossing from the left relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-XingFmRht-Jun",
+      "text": "a medium-sized vehicle crossing from the right at a road junction",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-XingFmRht-Jun",
+      "text": "A medium-sized vehicle is crossing from the right relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-XingFmRht-Jun",
+      "text": "The scene shows a medium-sized vehicle crossing from the right relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-XingFmRht-Jun",
+      "text": "This road event involves a medium-sized vehicle crossing from the right relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 25,
+      "truncated": false
+    },
+    {
+      "id": "triplet:MedVeh-XingFmRht-Jun",
+      "text": "There is a medium-sized vehicle crossing from the right relative to the ego vehicle at a road junction.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-MovAway-VehLane",
+      "text": "a large vehicle moving away from the ego vehicle in the ego vehicle's lane",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-MovAway-VehLane",
+      "text": "A large vehicle is moving away from the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-MovAway-VehLane",
+      "text": "The scene shows a large vehicle moving away from the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-MovAway-VehLane",
+      "text": "This road event involves a large vehicle moving away from the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-MovAway-VehLane",
+      "text": "There is a large vehicle moving away from the ego vehicle in the ego vehicle's lane.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-MovTow-IncomLane",
+      "text": "a large vehicle moving toward the ego vehicle in the incoming traffic lane",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-MovTow-IncomLane",
+      "text": "A large vehicle is moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-MovTow-IncomLane",
+      "text": "The scene shows a large vehicle moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-MovTow-IncomLane",
+      "text": "This road event involves a large vehicle moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-MovTow-IncomLane",
+      "text": "There is a large vehicle moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-Stop-VehLane",
+      "text": "a large vehicle stopped in the ego vehicle's lane",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-Stop-VehLane",
+      "text": "A large vehicle is stopped in the ego vehicle's lane.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-Stop-VehLane",
+      "text": "The scene shows a large vehicle stopped in the ego vehicle's lane.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-Stop-VehLane",
+      "text": "This road event involves a large vehicle stopped in the ego vehicle's lane.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-Stop-VehLane",
+      "text": "There is a large vehicle stopped in the ego vehicle's lane.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-Stop-Jun",
+      "text": "a large vehicle stopped at a road junction",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-Stop-Jun",
+      "text": "A large vehicle is stopped at a road junction.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-Stop-Jun",
+      "text": "The scene shows a large vehicle stopped at a road junction.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-Stop-Jun",
+      "text": "This road event involves a large vehicle stopped at a road junction.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:LarVeh-Stop-Jun",
+      "text": "There is a large vehicle stopped at a road junction.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-MovAway-OutgoLane",
+      "text": "a bus moving away from the ego vehicle in the outgoing traffic lane",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-MovAway-OutgoLane",
+      "text": "A bus is moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-MovAway-OutgoLane",
+      "text": "The scene shows a bus moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 25,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-MovAway-OutgoLane",
+      "text": "This road event involves a bus moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 26,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-MovAway-OutgoLane",
+      "text": "There is a bus moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 24,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-MovTow-IncomLane",
+      "text": "a bus moving toward the ego vehicle in the incoming traffic lane",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-MovTow-IncomLane",
+      "text": "A bus is moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-MovTow-IncomLane",
+      "text": "The scene shows a bus moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-MovTow-IncomLane",
+      "text": "This road event involves a bus moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-MovTow-IncomLane",
+      "text": "There is a bus moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-VehLane",
+      "text": "a bus stopped in the ego vehicle's lane",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-VehLane",
+      "text": "A bus is stopped in the ego vehicle's lane.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-VehLane",
+      "text": "The scene shows a bus stopped in the ego vehicle's lane.",
+      "tokens_including_special": 15,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-VehLane",
+      "text": "This road event involves a bus stopped in the ego vehicle's lane.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-VehLane",
+      "text": "There is a bus stopped in the ego vehicle's lane.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-OutgoLane",
+      "text": "a bus stopped in the outgoing traffic lane",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-OutgoLane",
+      "text": "A bus is stopped in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-OutgoLane",
+      "text": "The scene shows a bus stopped in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-OutgoLane",
+      "text": "This road event involves a bus stopped in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 21,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-OutgoLane",
+      "text": "There is a bus stopped in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-IncomLane",
+      "text": "a bus stopped in the incoming traffic lane",
+      "tokens_including_special": 10,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-IncomLane",
+      "text": "A bus is stopped in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 16,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-IncomLane",
+      "text": "The scene shows a bus stopped in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 18,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-IncomLane",
+      "text": "This road event involves a bus stopped in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 19,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-IncomLane",
+      "text": "There is a bus stopped in a traffic lane coming toward the ego vehicle.",
+      "tokens_including_special": 17,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-Jun",
+      "text": "a bus stopped at a road junction",
+      "tokens_including_special": 9,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-Jun",
+      "text": "A bus is stopped at a road junction.",
+      "tokens_including_special": 11,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-Jun",
+      "text": "The scene shows a bus stopped at a road junction.",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-Jun",
+      "text": "This road event involves a bus stopped at a road junction.",
+      "tokens_including_special": 14,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-Stop-Jun",
+      "text": "There is a bus stopped at a road junction.",
+      "tokens_including_special": 12,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-HazLit-OutgoLane",
+      "text": "a bus with hazard lights on in the outgoing traffic lane",
+      "tokens_including_special": 13,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-HazLit-OutgoLane",
+      "text": "A bus is showing hazard lights in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 20,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-HazLit-OutgoLane",
+      "text": "The scene shows a bus showing hazard lights in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 22,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-HazLit-OutgoLane",
+      "text": "This road event involves a bus showing hazard lights in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 23,
+      "truncated": false
+    },
+    {
+      "id": "triplet:Bus-HazLit-OutgoLane",
+      "text": "There is a bus showing hazard lights in a traffic lane going in the ego vehicle's direction.",
+      "tokens_including_special": 21,
+      "truncated": false
+    }
+  ],
+  "all_distinct_within_class": true,
+  "truncation_count": 0
+}

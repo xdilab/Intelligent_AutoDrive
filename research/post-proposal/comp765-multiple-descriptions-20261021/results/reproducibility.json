@@ -1,0 +1,143 @@
+{
+  "study": "COMP 765 \u2014 Multiple Class Descriptions for Long-Tail Road-Event Recognition",
+  "training_code_revision": "3f1a43a07f0224a7c56dfddcbe2fb263d9f745c8",
+  "asset_audit_code_revision": "2c78f6510bc1b0503cac020f4aaafac06ae9c4e0",
+  "revision_note": "Asset audit preceded the implementation commit; freeze records the exact code revision used for all primary runs.",
+  "freeze_sha256": "feee21f6b9f0eb15fdff60857c5ef89df654bf8031e418d7eaf5188786c178ec",
+  "protocol_sha256": "c4496ea1cf95e9a94302f535f05af6abec8ff47fa137a724622ea8894483f23f",
+  "dependencies": {
+    "torch": "2.9.0",
+    "numpy": "2.2.6",
+    "scipy": "1.16.3",
+    "transformers": "5.3.0",
+    "safetensors": "0.7.0",
+    "open_clip_torch": "3.3.0",
+    "torchvision": "0.24.0"
+  },
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "selection": "Final epoch10; no validation/development selection",
+  "frames": 36717,
+  "training_rows": 3743456,
+  "validation_candidates": 6163968,
+  "frame_sha256": "733ce2ce4bbbb59966fe3d588c9749e4e123290c7083d4af9aa1273f32a758b9",
+  "candidate_sha256": "fc84d73fdaa7b4f74ea2694aa54f3b4a1069f4b6d45276f2df5e9c5374378cb2",
+  "metric": "Detector frame AP@0.5, percentages",
+  "runtime_note": "Float32 batched GPU head inference in both fresh conditions; same score assembly and unchanged published NumPy AP functions. Older historical evaluator inferred per-frame on CPU; historical AP is not the primary baseline.",
+  "inputs": {
+    "train": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp12_phrase_head/crop_full/crop_feats_train.pkl",
+      "bytes": 9055762712,
+      "mtime_ns": 1788204089820017701,
+      "sha256": "b319317388937a04955e0c65b7e270da5aaaa4b57043c5725047a63748cd9f08"
+    },
+    "val": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp12_phrase_head/crop_full/crop_feats_val.pkl",
+      "bytes": 13047108219,
+      "mtime_ns": 1788261491555474309,
+      "sha256": "4598f2f185d5655b0fecf414c885bfbc09693f80a50935cd558e6ad975cf4155"
+    },
+    "yolo": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/dets_v8x_best_val_fullcand.pkl",
+      "bytes": 183339278,
+      "mtime_ns": 1787586572807239353,
+      "sha256": "447e28f0c071bb7910b5cc9ac37420c7da3bfa3827ad12b5eb3b61e7e5f64811"
+    },
+    "gt": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/dets_i3d_val_fullcand.pkl",
+      "bytes": 5000961817,
+      "mtime_ns": 1787591376422741017,
+      "sha256": "c792b324fa6f2cec88d2cafb48ee6dbf8682d62c89ff69f3025044bb1f82d68f"
+    },
+    "phrases": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp12_phrase_head/phrases.json",
+      "bytes": 11777,
+      "mtime_ns": 1787759808018802762,
+      "sha256": "ea2e4a93d82104c6f7fba79f76654a0c51a1401f15e2a073a26b7662b3945fc6"
+    },
+    "canonical_embeddings": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp12_phrase_head/phrase_embeds.pt",
+      "bytes": 383507,
+      "mtime_ns": 1787767289959429044,
+      "sha256": "e5dc182b6a48d5b8371f4cb783469eb62c1a2be8275819b52f34197d4a9fd89d"
+    },
+    "alphas": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp6_detection_steered/cache/flat_alphas.pt",
+      "bytes": 2309,
+      "mtime_ns": 1783010104631095499,
+      "sha256": "d8623d00c8dac4681637cf7420915900a93e43de8fc794551d21e49420eedb98"
+    },
+    "frames": {
+      "path": "/data/repos/wiki/artifacts/post-proposal-experiments/shared-frames.json",
+      "bytes": 922460,
+      "mtime_ns": 1789095203376041707,
+      "sha256": "2ef7e3c370a54cd0d61b9aff46acdab2a0e7fa23f1e5f91dd081b67cc35174f1"
+    },
+    "counts": {
+      "path": "/data/repos/wiki/artifacts/proposal-tail/train-counts.json",
+      "bytes": 9544,
+      "mtime_ns": 1788728528391247308,
+      "sha256": "8d8b168945a49d122af6de5b802fd46d80c80ea15cc9a08ec9ad9b121b12639f"
+    },
+    "annotation": {
+      "path": "/data/datasets/ROAD_plusplus/road_waymo_trainval_v1.1.json",
+      "bytes": 1149647915,
+      "mtime_ns": 1774922990732747348,
+      "sha256": "628b39bb9aabd917c6631144e319ecba25c1de3a10502c2360439af7e4f4586a"
+    },
+    "text_weights": {
+      "path": "/home/brandon/.cache/huggingface/hub/models--OpenGVLab--InternVideo2_CLIP_S/snapshots/1f9fca1389fd883defc652634d95a21121c85a8c/model.safetensors",
+      "bytes": 745562274,
+      "mtime_ns": 1787181232831080722,
+      "sha256": "136b42a078a8ec440e38b56d91d570fb0969643a641795e06e171162ab176b4e"
+    }
+  },
+  "runs": [
+    {
+      "run": "single-seed0",
+      "selected_epoch": 10,
+      "steps": 2290,
+      "checkpoint_sha256": "cb3b7af88c02d586e43b61f0bac3ad4c5f94adb3a9bea635d442eb9781755bc5",
+      "detector_result_sha256": "50944d3d36da66a0865de47e41a9a78dd7401b5d01dbfcf411da7948bd52f30f"
+    },
+    {
+      "run": "multi-seed0",
+      "selected_epoch": 10,
+      "steps": 2290,
+      "checkpoint_sha256": "4f356bdb8cd78794e899cd15ba612d3c88ff90e67af8b4200d36358dff90dfe6",
+      "detector_result_sha256": "71ce86f501920be4cf668c9aea6aba3a469530c9a9ba855e7509f71220b1ac69"
+    },
+    {
+      "run": "single-seed1",
+      "selected_epoch": 10,
+      "steps": 2290,
+      "checkpoint_sha256": "c1f785ef9c5ba680ee438ba6652916e5c803c8803d28a7a66132606072ce1225",
+      "detector_result_sha256": "065afc036cc0495af59ae37ddb31864b177287df7703c0ba8f47a991ca4c97ef"
+    },
+    {
+      "run": "multi-seed1",
+      "selected_epoch": 10,
+      "steps": 2290,
+      "checkpoint_sha256": "ac2590ce9defb282c64322fa665a658cece637c703a5aaf42f0193103c8bdb1b",
+      "detector_result_sha256": "6234cca0972cf16e60ed5a49e9f05c02083fb1a5a075014a77f76fba89169feb"
+    },
+    {
+      "run": "single-seed2",
+      "selected_epoch": 10,
+      "steps": 2290,
+      "checkpoint_sha256": "8eaa026121e86d5568faba258608e731686ac880e5ae69bb919d0351e1285596",
+      "detector_result_sha256": "b917189af793d6b1339ccff8dabbcb3fa2689078f51da448a6764e3a6fbf7da5"
+    },
+    {
+      "run": "multi-seed2",
+      "selected_epoch": 10,
+      "steps": 2290,
+      "checkpoint_sha256": "86ac7985ead566f51127c36406a9310e2bf88bbbc3fa10d1854ba133b3f51e19",
+      "detector_result_sha256": "5f662438393b7badfc57e62f228ded2e2eb8644b63b6321b3c1d544f5744890f"
+    }
+  ],
+  "scope": "Separate COMP765 coursework; thesis, slides, original results and raw assets unchanged"
+}

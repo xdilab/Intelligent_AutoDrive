@@ -1,0 +1,2271 @@
+{
+  "version": "comp765-description-templates-v1",
+  "rows": [
+    {
+      "row": 0,
+      "id": "agentness",
+      "special": true,
+      "descriptions": [
+        "an object of interest in the road scene"
+      ]
+    },
+    {
+      "row": 1,
+      "id": "agent:Ped",
+      "special": false,
+      "descriptions": [
+        "a pedestrian",
+        "The road agent is a pedestrian.",
+        "There is a pedestrian.",
+        "This is a pedestrian.",
+        "The scene contains a pedestrian."
+      ]
+    },
+    {
+      "row": 2,
+      "id": "agent:Car",
+      "special": false,
+      "descriptions": [
+        "a car",
+        "The road agent is a car.",
+        "There is a car.",
+        "This is a car.",
+        "The scene contains a car."
+      ]
+    },
+    {
+      "row": 3,
+      "id": "agent:Cyc",
+      "special": false,
+      "descriptions": [
+        "a cyclist",
+        "The road agent is a cyclist.",
+        "There is a cyclist.",
+        "This is a cyclist.",
+        "The scene contains a cyclist."
+      ]
+    },
+    {
+      "row": 4,
+      "id": "agent:Mobike",
+      "special": false,
+      "descriptions": [
+        "a motorcyclist",
+        "The road agent is a motorcyclist.",
+        "There is a motorcyclist.",
+        "This is a motorcyclist.",
+        "The scene contains a motorcyclist."
+      ]
+    },
+    {
+      "row": 5,
+      "id": "agent:SmalVeh",
+      "special": false,
+      "descriptions": [
+        "a small vehicle",
+        "The road agent is a small vehicle.",
+        "There is a small vehicle.",
+        "This is a small vehicle.",
+        "The scene contains a small vehicle."
+      ]
+    },
+    {
+      "row": 6,
+      "id": "agent:MedVeh",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle",
+        "The road agent is a medium-sized vehicle.",
+        "There is a medium-sized vehicle.",
+        "This is a medium-sized vehicle.",
+        "The scene contains a medium-sized vehicle."
+      ]
+    },
+    {
+      "row": 7,
+      "id": "agent:LarVeh",
+      "special": false,
+      "descriptions": [
+        "a large vehicle",
+        "The road agent is a large vehicle.",
+        "There is a large vehicle.",
+        "This is a large vehicle.",
+        "The scene contains a large vehicle."
+      ]
+    },
+    {
+      "row": 8,
+      "id": "agent:Bus",
+      "special": false,
+      "descriptions": [
+        "a bus",
+        "The road agent is a bus.",
+        "There is a bus.",
+        "This is a bus.",
+        "The scene contains a bus."
+      ]
+    },
+    {
+      "row": 9,
+      "id": "agent:EmVeh",
+      "special": false,
+      "descriptions": [
+        "an emergency vehicle",
+        "The road agent is an emergency vehicle.",
+        "There is an emergency vehicle.",
+        "This is an emergency vehicle.",
+        "The scene contains an emergency vehicle."
+      ]
+    },
+    {
+      "row": 10,
+      "id": "agent:TL",
+      "special": false,
+      "descriptions": [
+        "a traffic light",
+        "The road agent is a traffic light.",
+        "There is a traffic light.",
+        "This is a traffic light.",
+        "The scene contains a traffic light."
+      ]
+    },
+    {
+      "row": 11,
+      "id": "action:Red",
+      "special": false,
+      "descriptions": [
+        "showing a red light",
+        "A traffic light is showing a red light.",
+        "The observed state is showing a red light.",
+        "The scene shows an agent showing a red light.",
+        "This road event involves an agent showing a red light."
+      ]
+    },
+    {
+      "row": 12,
+      "id": "action:Amber",
+      "special": false,
+      "descriptions": [
+        "showing an amber light",
+        "A traffic light is showing an amber light.",
+        "The observed state is showing an amber light.",
+        "The scene shows an agent showing an amber light.",
+        "This road event involves an agent showing an amber light."
+      ]
+    },
+    {
+      "row": 13,
+      "id": "action:Green",
+      "special": false,
+      "descriptions": [
+        "showing a green light",
+        "A traffic light is showing a green light.",
+        "The observed state is showing a green light.",
+        "The scene shows an agent showing a green light.",
+        "This road event involves an agent showing a green light."
+      ]
+    },
+    {
+      "row": 14,
+      "id": "action:MovAway",
+      "special": false,
+      "descriptions": [
+        "moving away from the ego vehicle",
+        "An agent is moving away from the ego vehicle.",
+        "The observed state is moving away from the ego vehicle.",
+        "The scene shows an agent moving away from the ego vehicle.",
+        "This road event involves an agent moving away from the ego vehicle."
+      ]
+    },
+    {
+      "row": 15,
+      "id": "action:MovTow",
+      "special": false,
+      "descriptions": [
+        "moving toward the ego vehicle",
+        "An agent is moving toward the ego vehicle.",
+        "The observed state is moving toward the ego vehicle.",
+        "The scene shows an agent moving toward the ego vehicle.",
+        "This road event involves an agent moving toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 16,
+      "id": "action:Mov",
+      "special": false,
+      "descriptions": [
+        "moving",
+        "An agent is moving.",
+        "The observed state is moving.",
+        "The scene shows an agent moving.",
+        "This road event involves an agent moving."
+      ]
+    },
+    {
+      "row": 17,
+      "id": "action:Rev",
+      "special": false,
+      "descriptions": [
+        "reversing",
+        "An agent is reversing.",
+        "The observed state is reversing.",
+        "The scene shows an agent reversing.",
+        "This road event involves an agent reversing."
+      ]
+    },
+    {
+      "row": 18,
+      "id": "action:Brake",
+      "special": false,
+      "descriptions": [
+        "braking with its brake lights on",
+        "An agent is braking.",
+        "The observed state is braking.",
+        "The scene shows an agent braking.",
+        "This road event involves an agent braking."
+      ]
+    },
+    {
+      "row": 19,
+      "id": "action:Stop",
+      "special": false,
+      "descriptions": [
+        "stopped",
+        "An agent is stopped.",
+        "The observed state is stopped.",
+        "The scene shows an agent stopped.",
+        "This road event involves an agent stopped."
+      ]
+    },
+    {
+      "row": 20,
+      "id": "action:IncatLft",
+      "special": false,
+      "descriptions": [
+        "indicating a left turn",
+        "An agent is indicating a left turn.",
+        "The observed state is indicating a left turn.",
+        "The scene shows an agent indicating a left turn.",
+        "This road event involves an agent indicating a left turn."
+      ]
+    },
+    {
+      "row": 21,
+      "id": "action:IncatRht",
+      "special": false,
+      "descriptions": [
+        "indicating a right turn",
+        "An agent is indicating a right turn.",
+        "The observed state is indicating a right turn.",
+        "The scene shows an agent indicating a right turn.",
+        "This road event involves an agent indicating a right turn."
+      ]
+    },
+    {
+      "row": 22,
+      "id": "action:HazLit",
+      "special": false,
+      "descriptions": [
+        "with hazard lights on",
+        "An agent is showing hazard lights.",
+        "The observed state is showing hazard lights.",
+        "The scene shows an agent showing hazard lights.",
+        "This road event involves an agent showing hazard lights."
+      ]
+    },
+    {
+      "row": 23,
+      "id": "action:TurLft",
+      "special": false,
+      "descriptions": [
+        "turning left",
+        "An agent is turning left.",
+        "The observed state is turning left.",
+        "The scene shows an agent turning left.",
+        "This road event involves an agent turning left."
+      ]
+    },
+    {
+      "row": 24,
+      "id": "action:TurRht",
+      "special": false,
+      "descriptions": [
+        "turning right",
+        "An agent is turning right.",
+        "The observed state is turning right.",
+        "The scene shows an agent turning right.",
+        "This road event involves an agent turning right."
+      ]
+    },
+    {
+      "row": 25,
+      "id": "action:MovRht",
+      "special": false,
+      "descriptions": [
+        "moving to the right",
+        "An agent is moving to the right relative to the ego vehicle.",
+        "The observed state is moving to the right relative to the ego vehicle.",
+        "The scene shows an agent moving to the right relative to the ego vehicle.",
+        "This road event involves an agent moving to the right relative to the ego vehicle."
+      ]
+    },
+    {
+      "row": 26,
+      "id": "action:MovLft",
+      "special": false,
+      "descriptions": [
+        "moving to the left",
+        "An agent is moving to the left relative to the ego vehicle.",
+        "The observed state is moving to the left relative to the ego vehicle.",
+        "The scene shows an agent moving to the left relative to the ego vehicle.",
+        "This road event involves an agent moving to the left relative to the ego vehicle."
+      ]
+    },
+    {
+      "row": 27,
+      "id": "action:Ovtak",
+      "special": false,
+      "descriptions": [
+        "overtaking another vehicle",
+        "An agent is overtaking.",
+        "The observed state is overtaking.",
+        "The scene shows an agent overtaking.",
+        "This road event involves an agent overtaking."
+      ]
+    },
+    {
+      "row": 28,
+      "id": "action:Wait2X",
+      "special": false,
+      "descriptions": [
+        "waiting to cross the road",
+        "An agent is waiting to cross the road.",
+        "The observed state is waiting to cross the road.",
+        "The scene shows an agent waiting to cross the road.",
+        "This road event involves an agent waiting to cross the road."
+      ]
+    },
+    {
+      "row": 29,
+      "id": "action:XingFmLft",
+      "special": false,
+      "descriptions": [
+        "crossing from the left",
+        "An agent is crossing from the left relative to the ego vehicle.",
+        "The observed state is crossing from the left relative to the ego vehicle.",
+        "The scene shows an agent crossing from the left relative to the ego vehicle.",
+        "This road event involves an agent crossing from the left relative to the ego vehicle."
+      ]
+    },
+    {
+      "row": 30,
+      "id": "action:XingFmRht",
+      "special": false,
+      "descriptions": [
+        "crossing from the right",
+        "An agent is crossing from the right relative to the ego vehicle.",
+        "The observed state is crossing from the right relative to the ego vehicle.",
+        "The scene shows an agent crossing from the right relative to the ego vehicle.",
+        "This road event involves an agent crossing from the right relative to the ego vehicle."
+      ]
+    },
+    {
+      "row": 31,
+      "id": "action:Xing",
+      "special": false,
+      "descriptions": [
+        "crossing the road",
+        "An agent is crossing the road.",
+        "The observed state is crossing the road.",
+        "The scene shows an agent crossing the road.",
+        "This road event involves an agent crossing the road."
+      ]
+    },
+    {
+      "row": 32,
+      "id": "action:PushObj",
+      "special": false,
+      "descriptions": [
+        "pushing an object",
+        "An agent is pushing an object.",
+        "The observed state is pushing an object.",
+        "The scene shows an agent pushing an object.",
+        "This road event involves an agent pushing an object."
+      ]
+    },
+    {
+      "row": 33,
+      "id": "loc:VehLane",
+      "special": false,
+      "descriptions": [
+        "in the ego vehicle's lane",
+        "An agent is in the ego vehicle's lane.",
+        "The agent is located in the ego vehicle's lane.",
+        "The scene contains an agent in the ego vehicle's lane.",
+        "This road event involves an agent in the ego vehicle's lane."
+      ]
+    },
+    {
+      "row": 34,
+      "id": "loc:OutgoLane",
+      "special": false,
+      "descriptions": [
+        "in the outgoing traffic lane",
+        "An agent is in a traffic lane going in the ego vehicle's direction.",
+        "The agent is located in a traffic lane going in the ego vehicle's direction.",
+        "The scene contains an agent in a traffic lane going in the ego vehicle's direction.",
+        "This road event involves an agent in a traffic lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 35,
+      "id": "loc:OutgoCycLane",
+      "special": false,
+      "descriptions": [
+        "in the outgoing cycle lane",
+        "An agent is in a cycle lane going in the ego vehicle's direction.",
+        "The agent is located in a cycle lane going in the ego vehicle's direction.",
+        "The scene contains an agent in a cycle lane going in the ego vehicle's direction.",
+        "This road event involves an agent in a cycle lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 36,
+      "id": "loc:OutgoBusLane",
+      "special": false,
+      "descriptions": [
+        "in the outgoing bus lane",
+        "An agent is in a bus lane going in the ego vehicle's direction.",
+        "The agent is located in a bus lane going in the ego vehicle's direction.",
+        "The scene contains an agent in a bus lane going in the ego vehicle's direction.",
+        "This road event involves an agent in a bus lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 37,
+      "id": "loc:IncomLane",
+      "special": false,
+      "descriptions": [
+        "in the incoming traffic lane",
+        "An agent is in a traffic lane coming toward the ego vehicle.",
+        "The agent is located in a traffic lane coming toward the ego vehicle.",
+        "The scene contains an agent in a traffic lane coming toward the ego vehicle.",
+        "This road event involves an agent in a traffic lane coming toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 38,
+      "id": "loc:IncomCycLane",
+      "special": false,
+      "descriptions": [
+        "in the incoming cycle lane",
+        "An agent is in a cycle lane coming toward the ego vehicle.",
+        "The agent is located in a cycle lane coming toward the ego vehicle.",
+        "The scene contains an agent in a cycle lane coming toward the ego vehicle.",
+        "This road event involves an agent in a cycle lane coming toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 39,
+      "id": "loc:IncomBusLane",
+      "special": false,
+      "descriptions": [
+        "in the incoming bus lane",
+        "An agent is in a bus lane coming toward the ego vehicle.",
+        "The agent is located in a bus lane coming toward the ego vehicle.",
+        "The scene contains an agent in a bus lane coming toward the ego vehicle.",
+        "This road event involves an agent in a bus lane coming toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 40,
+      "id": "loc:Pav",
+      "special": false,
+      "descriptions": [
+        "on the pavement",
+        "An agent is on the pavement.",
+        "The agent is located on the pavement.",
+        "The scene contains an agent on the pavement.",
+        "This road event involves an agent on the pavement."
+      ]
+    },
+    {
+      "row": 41,
+      "id": "loc:LftPav",
+      "special": false,
+      "descriptions": [
+        "on the left pavement",
+        "An agent is on the pavement on the left of the ego vehicle.",
+        "The agent is located on the pavement on the left of the ego vehicle.",
+        "The scene contains an agent on the pavement on the left of the ego vehicle.",
+        "This road event involves an agent on the pavement on the left of the ego vehicle."
+      ]
+    },
+    {
+      "row": 42,
+      "id": "loc:RhtPav",
+      "special": false,
+      "descriptions": [
+        "on the right pavement",
+        "An agent is on the pavement on the right of the ego vehicle.",
+        "The agent is located on the pavement on the right of the ego vehicle.",
+        "The scene contains an agent on the pavement on the right of the ego vehicle.",
+        "This road event involves an agent on the pavement on the right of the ego vehicle."
+      ]
+    },
+    {
+      "row": 43,
+      "id": "loc:Jun",
+      "special": false,
+      "descriptions": [
+        "at a road junction",
+        "An agent is at a road junction.",
+        "The agent is located at a road junction.",
+        "The scene contains an agent at a road junction.",
+        "This road event involves an agent at a road junction."
+      ]
+    },
+    {
+      "row": 44,
+      "id": "loc:xing",
+      "special": false,
+      "descriptions": [
+        "at a pedestrian crossing",
+        "An agent is at a pedestrian crossing.",
+        "The agent is located at a pedestrian crossing.",
+        "The scene contains an agent at a pedestrian crossing.",
+        "This road event involves an agent at a pedestrian crossing."
+      ]
+    },
+    {
+      "row": 45,
+      "id": "loc:BusStop",
+      "special": false,
+      "descriptions": [
+        "at a bus stop",
+        "An agent is at a bus stop.",
+        "The agent is located at a bus stop.",
+        "The scene contains an agent at a bus stop.",
+        "This road event involves an agent at a bus stop."
+      ]
+    },
+    {
+      "row": 46,
+      "id": "loc:parking",
+      "special": false,
+      "descriptions": [
+        "in a parking area",
+        "An agent is in a parking area.",
+        "The agent is located in a parking area.",
+        "The scene contains an agent in a parking area.",
+        "This road event involves an agent in a parking area."
+      ]
+    },
+    {
+      "row": 47,
+      "id": "loc:LftParking",
+      "special": false,
+      "descriptions": [
+        "parked on the left side of the road",
+        "An agent is in the parking area on the left of the ego vehicle.",
+        "The agent is located in the parking area on the left of the ego vehicle.",
+        "The scene contains an agent in the parking area on the left of the ego vehicle.",
+        "This road event involves an agent in the parking area on the left of the ego vehicle."
+      ]
+    },
+    {
+      "row": 48,
+      "id": "loc:rightParking",
+      "special": false,
+      "descriptions": [
+        "parked on the right side of the road",
+        "An agent is in the parking area on the right of the ego vehicle.",
+        "The agent is located in the parking area on the right of the ego vehicle.",
+        "The scene contains an agent in the parking area on the right of the ego vehicle.",
+        "This road event involves an agent in the parking area on the right of the ego vehicle."
+      ]
+    },
+    {
+      "row": 49,
+      "id": "duplex:Ped-MovAway",
+      "special": false,
+      "descriptions": [
+        "a pedestrian moving away from the ego vehicle",
+        "A pedestrian is moving away from the ego vehicle.",
+        "The scene shows a pedestrian moving away from the ego vehicle.",
+        "This road event involves a pedestrian moving away from the ego vehicle.",
+        "There is a pedestrian moving away from the ego vehicle."
+      ]
+    },
+    {
+      "row": 50,
+      "id": "duplex:Ped-MovTow",
+      "special": false,
+      "descriptions": [
+        "a pedestrian moving toward the ego vehicle",
+        "A pedestrian is moving toward the ego vehicle.",
+        "The scene shows a pedestrian moving toward the ego vehicle.",
+        "This road event involves a pedestrian moving toward the ego vehicle.",
+        "There is a pedestrian moving toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 51,
+      "id": "duplex:Ped-Mov",
+      "special": false,
+      "descriptions": [
+        "a pedestrian moving",
+        "A pedestrian is moving.",
+        "The scene shows a pedestrian moving.",
+        "This road event involves a pedestrian moving.",
+        "There is a pedestrian moving."
+      ]
+    },
+    {
+      "row": 52,
+      "id": "duplex:Ped-Stop",
+      "special": false,
+      "descriptions": [
+        "a pedestrian stopped",
+        "A pedestrian is stopped.",
+        "The scene shows a pedestrian stopped.",
+        "This road event involves a pedestrian stopped.",
+        "There is a pedestrian stopped."
+      ]
+    },
+    {
+      "row": 53,
+      "id": "duplex:Ped-Wait2X",
+      "special": false,
+      "descriptions": [
+        "a pedestrian waiting to cross the road",
+        "A pedestrian is waiting to cross the road.",
+        "The scene shows a pedestrian waiting to cross the road.",
+        "This road event involves a pedestrian waiting to cross the road.",
+        "There is a pedestrian waiting to cross the road."
+      ]
+    },
+    {
+      "row": 54,
+      "id": "duplex:Ped-XingFmLft",
+      "special": false,
+      "descriptions": [
+        "a pedestrian crossing from the left",
+        "A pedestrian is crossing from the left relative to the ego vehicle.",
+        "The scene shows a pedestrian crossing from the left relative to the ego vehicle.",
+        "This road event involves a pedestrian crossing from the left relative to the ego vehicle.",
+        "There is a pedestrian crossing from the left relative to the ego vehicle."
+      ]
+    },
+    {
+      "row": 55,
+      "id": "duplex:Ped-XingFmRht",
+      "special": false,
+      "descriptions": [
+        "a pedestrian crossing from the right",
+        "A pedestrian is crossing from the right relative to the ego vehicle.",
+        "The scene shows a pedestrian crossing from the right relative to the ego vehicle.",
+        "This road event involves a pedestrian crossing from the right relative to the ego vehicle.",
+        "There is a pedestrian crossing from the right relative to the ego vehicle."
+      ]
+    },
+    {
+      "row": 56,
+      "id": "duplex:Ped-Xing",
+      "special": false,
+      "descriptions": [
+        "a pedestrian crossing the road",
+        "A pedestrian is crossing the road.",
+        "The scene shows a pedestrian crossing the road.",
+        "This road event involves a pedestrian crossing the road.",
+        "There is a pedestrian crossing the road."
+      ]
+    },
+    {
+      "row": 57,
+      "id": "duplex:Ped-PushObj",
+      "special": false,
+      "descriptions": [
+        "a pedestrian pushing an object",
+        "A pedestrian is pushing an object.",
+        "The scene shows a pedestrian pushing an object.",
+        "This road event involves a pedestrian pushing an object.",
+        "There is a pedestrian pushing an object."
+      ]
+    },
+    {
+      "row": 58,
+      "id": "duplex:Car-MovAway",
+      "special": false,
+      "descriptions": [
+        "a car moving away from the ego vehicle",
+        "A car is moving away from the ego vehicle.",
+        "The scene shows a car moving away from the ego vehicle.",
+        "This road event involves a car moving away from the ego vehicle.",
+        "There is a car moving away from the ego vehicle."
+      ]
+    },
+    {
+      "row": 59,
+      "id": "duplex:Car-MovTow",
+      "special": false,
+      "descriptions": [
+        "a car moving toward the ego vehicle",
+        "A car is moving toward the ego vehicle.",
+        "The scene shows a car moving toward the ego vehicle.",
+        "This road event involves a car moving toward the ego vehicle.",
+        "There is a car moving toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 60,
+      "id": "duplex:Car-Brake",
+      "special": false,
+      "descriptions": [
+        "a car braking with its brake lights on",
+        "A car is braking.",
+        "The scene shows a car braking.",
+        "This road event involves a car braking.",
+        "There is a car braking."
+      ]
+    },
+    {
+      "row": 61,
+      "id": "duplex:Car-Stop",
+      "special": false,
+      "descriptions": [
+        "a car stopped",
+        "A car is stopped.",
+        "The scene shows a car stopped.",
+        "This road event involves a car stopped.",
+        "There is a car stopped."
+      ]
+    },
+    {
+      "row": 62,
+      "id": "duplex:Car-IncatLft",
+      "special": false,
+      "descriptions": [
+        "a car indicating a left turn",
+        "A car is indicating a left turn.",
+        "The scene shows a car indicating a left turn.",
+        "This road event involves a car indicating a left turn.",
+        "There is a car indicating a left turn."
+      ]
+    },
+    {
+      "row": 63,
+      "id": "duplex:Car-IncatRht",
+      "special": false,
+      "descriptions": [
+        "a car indicating a right turn",
+        "A car is indicating a right turn.",
+        "The scene shows a car indicating a right turn.",
+        "This road event involves a car indicating a right turn.",
+        "There is a car indicating a right turn."
+      ]
+    },
+    {
+      "row": 64,
+      "id": "duplex:Car-HazLit",
+      "special": false,
+      "descriptions": [
+        "a car with hazard lights on",
+        "A car is showing hazard lights.",
+        "The scene shows a car showing hazard lights.",
+        "This road event involves a car showing hazard lights.",
+        "There is a car showing hazard lights."
+      ]
+    },
+    {
+      "row": 65,
+      "id": "duplex:Car-TurLft",
+      "special": false,
+      "descriptions": [
+        "a car turning left",
+        "A car is turning left.",
+        "The scene shows a car turning left.",
+        "This road event involves a car turning left.",
+        "There is a car turning left."
+      ]
+    },
+    {
+      "row": 66,
+      "id": "duplex:Car-TurRht",
+      "special": false,
+      "descriptions": [
+        "a car turning right",
+        "A car is turning right.",
+        "The scene shows a car turning right.",
+        "This road event involves a car turning right.",
+        "There is a car turning right."
+      ]
+    },
+    {
+      "row": 67,
+      "id": "duplex:Car-MovRht",
+      "special": false,
+      "descriptions": [
+        "a car moving to the right",
+        "A car is moving to the right relative to the ego vehicle.",
+        "The scene shows a car moving to the right relative to the ego vehicle.",
+        "This road event involves a car moving to the right relative to the ego vehicle.",
+        "There is a car moving to the right relative to the ego vehicle."
+      ]
+    },
+    {
+      "row": 68,
+      "id": "duplex:Car-MovLft",
+      "special": false,
+      "descriptions": [
+        "a car moving to the left",
+        "A car is moving to the left relative to the ego vehicle.",
+        "The scene shows a car moving to the left relative to the ego vehicle.",
+        "This road event involves a car moving to the left relative to the ego vehicle.",
+        "There is a car moving to the left relative to the ego vehicle."
+      ]
+    },
+    {
+      "row": 69,
+      "id": "duplex:Car-XingFmLft",
+      "special": false,
+      "descriptions": [
+        "a car crossing from the left",
+        "A car is crossing from the left relative to the ego vehicle.",
+        "The scene shows a car crossing from the left relative to the ego vehicle.",
+        "This road event involves a car crossing from the left relative to the ego vehicle.",
+        "There is a car crossing from the left relative to the ego vehicle."
+      ]
+    },
+    {
+      "row": 70,
+      "id": "duplex:Car-XingFmRht",
+      "special": false,
+      "descriptions": [
+        "a car crossing from the right",
+        "A car is crossing from the right relative to the ego vehicle.",
+        "The scene shows a car crossing from the right relative to the ego vehicle.",
+        "This road event involves a car crossing from the right relative to the ego vehicle.",
+        "There is a car crossing from the right relative to the ego vehicle."
+      ]
+    },
+    {
+      "row": 71,
+      "id": "duplex:Cyc-MovAway",
+      "special": false,
+      "descriptions": [
+        "a cyclist moving away from the ego vehicle",
+        "A cyclist is moving away from the ego vehicle.",
+        "The scene shows a cyclist moving away from the ego vehicle.",
+        "This road event involves a cyclist moving away from the ego vehicle.",
+        "There is a cyclist moving away from the ego vehicle."
+      ]
+    },
+    {
+      "row": 72,
+      "id": "duplex:Cyc-MovTow",
+      "special": false,
+      "descriptions": [
+        "a cyclist moving toward the ego vehicle",
+        "A cyclist is moving toward the ego vehicle.",
+        "The scene shows a cyclist moving toward the ego vehicle.",
+        "This road event involves a cyclist moving toward the ego vehicle.",
+        "There is a cyclist moving toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 73,
+      "id": "duplex:Cyc-Stop",
+      "special": false,
+      "descriptions": [
+        "a cyclist stopped",
+        "A cyclist is stopped.",
+        "The scene shows a cyclist stopped.",
+        "This road event involves a cyclist stopped.",
+        "There is a cyclist stopped."
+      ]
+    },
+    {
+      "row": 74,
+      "id": "duplex:Mobike-Stop",
+      "special": false,
+      "descriptions": [
+        "a motorcyclist stopped",
+        "A motorcyclist is stopped.",
+        "The scene shows a motorcyclist stopped.",
+        "This road event involves a motorcyclist stopped.",
+        "There is a motorcyclist stopped."
+      ]
+    },
+    {
+      "row": 75,
+      "id": "duplex:MedVeh-MovAway",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle moving away from the ego vehicle",
+        "A medium-sized vehicle is moving away from the ego vehicle.",
+        "The scene shows a medium-sized vehicle moving away from the ego vehicle.",
+        "This road event involves a medium-sized vehicle moving away from the ego vehicle.",
+        "There is a medium-sized vehicle moving away from the ego vehicle."
+      ]
+    },
+    {
+      "row": 76,
+      "id": "duplex:MedVeh-MovTow",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle moving toward the ego vehicle",
+        "A medium-sized vehicle is moving toward the ego vehicle.",
+        "The scene shows a medium-sized vehicle moving toward the ego vehicle.",
+        "This road event involves a medium-sized vehicle moving toward the ego vehicle.",
+        "There is a medium-sized vehicle moving toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 77,
+      "id": "duplex:MedVeh-Brake",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle braking with its brake lights on",
+        "A medium-sized vehicle is braking.",
+        "The scene shows a medium-sized vehicle braking.",
+        "This road event involves a medium-sized vehicle braking.",
+        "There is a medium-sized vehicle braking."
+      ]
+    },
+    {
+      "row": 78,
+      "id": "duplex:MedVeh-Stop",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle stopped",
+        "A medium-sized vehicle is stopped.",
+        "The scene shows a medium-sized vehicle stopped.",
+        "This road event involves a medium-sized vehicle stopped.",
+        "There is a medium-sized vehicle stopped."
+      ]
+    },
+    {
+      "row": 79,
+      "id": "duplex:MedVeh-IncatLft",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle indicating a left turn",
+        "A medium-sized vehicle is indicating a left turn.",
+        "The scene shows a medium-sized vehicle indicating a left turn.",
+        "This road event involves a medium-sized vehicle indicating a left turn.",
+        "There is a medium-sized vehicle indicating a left turn."
+      ]
+    },
+    {
+      "row": 80,
+      "id": "duplex:MedVeh-IncatRht",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle indicating a right turn",
+        "A medium-sized vehicle is indicating a right turn.",
+        "The scene shows a medium-sized vehicle indicating a right turn.",
+        "This road event involves a medium-sized vehicle indicating a right turn.",
+        "There is a medium-sized vehicle indicating a right turn."
+      ]
+    },
+    {
+      "row": 81,
+      "id": "duplex:MedVeh-HazLit",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle with hazard lights on",
+        "A medium-sized vehicle is showing hazard lights.",
+        "The scene shows a medium-sized vehicle showing hazard lights.",
+        "This road event involves a medium-sized vehicle showing hazard lights.",
+        "There is a medium-sized vehicle showing hazard lights."
+      ]
+    },
+    {
+      "row": 82,
+      "id": "duplex:MedVeh-TurRht",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle turning right",
+        "A medium-sized vehicle is turning right.",
+        "The scene shows a medium-sized vehicle turning right.",
+        "This road event involves a medium-sized vehicle turning right.",
+        "There is a medium-sized vehicle turning right."
+      ]
+    },
+    {
+      "row": 83,
+      "id": "duplex:MedVeh-XingFmLft",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle crossing from the left",
+        "A medium-sized vehicle is crossing from the left relative to the ego vehicle.",
+        "The scene shows a medium-sized vehicle crossing from the left relative to the ego vehicle.",
+        "This road event involves a medium-sized vehicle crossing from the left relative to the ego vehicle.",
+        "There is a medium-sized vehicle crossing from the left relative to the ego vehicle."
+      ]
+    },
+    {
+      "row": 84,
+      "id": "duplex:MedVeh-XingFmRht",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle crossing from the right",
+        "A medium-sized vehicle is crossing from the right relative to the ego vehicle.",
+        "The scene shows a medium-sized vehicle crossing from the right relative to the ego vehicle.",
+        "This road event involves a medium-sized vehicle crossing from the right relative to the ego vehicle.",
+        "There is a medium-sized vehicle crossing from the right relative to the ego vehicle."
+      ]
+    },
+    {
+      "row": 85,
+      "id": "duplex:LarVeh-MovAway",
+      "special": false,
+      "descriptions": [
+        "a large vehicle moving away from the ego vehicle",
+        "A large vehicle is moving away from the ego vehicle.",
+        "The scene shows a large vehicle moving away from the ego vehicle.",
+        "This road event involves a large vehicle moving away from the ego vehicle.",
+        "There is a large vehicle moving away from the ego vehicle."
+      ]
+    },
+    {
+      "row": 86,
+      "id": "duplex:LarVeh-MovTow",
+      "special": false,
+      "descriptions": [
+        "a large vehicle moving toward the ego vehicle",
+        "A large vehicle is moving toward the ego vehicle.",
+        "The scene shows a large vehicle moving toward the ego vehicle.",
+        "This road event involves a large vehicle moving toward the ego vehicle.",
+        "There is a large vehicle moving toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 87,
+      "id": "duplex:LarVeh-Stop",
+      "special": false,
+      "descriptions": [
+        "a large vehicle stopped",
+        "A large vehicle is stopped.",
+        "The scene shows a large vehicle stopped.",
+        "This road event involves a large vehicle stopped.",
+        "There is a large vehicle stopped."
+      ]
+    },
+    {
+      "row": 88,
+      "id": "duplex:LarVeh-HazLit",
+      "special": false,
+      "descriptions": [
+        "a large vehicle with hazard lights on",
+        "A large vehicle is showing hazard lights.",
+        "The scene shows a large vehicle showing hazard lights.",
+        "This road event involves a large vehicle showing hazard lights.",
+        "There is a large vehicle showing hazard lights."
+      ]
+    },
+    {
+      "row": 89,
+      "id": "duplex:Bus-MovAway",
+      "special": false,
+      "descriptions": [
+        "a bus moving away from the ego vehicle",
+        "A bus is moving away from the ego vehicle.",
+        "The scene shows a bus moving away from the ego vehicle.",
+        "This road event involves a bus moving away from the ego vehicle.",
+        "There is a bus moving away from the ego vehicle."
+      ]
+    },
+    {
+      "row": 90,
+      "id": "duplex:Bus-MovTow",
+      "special": false,
+      "descriptions": [
+        "a bus moving toward the ego vehicle",
+        "A bus is moving toward the ego vehicle.",
+        "The scene shows a bus moving toward the ego vehicle.",
+        "This road event involves a bus moving toward the ego vehicle.",
+        "There is a bus moving toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 91,
+      "id": "duplex:Bus-Brake",
+      "special": false,
+      "descriptions": [
+        "a bus braking with its brake lights on",
+        "A bus is braking.",
+        "The scene shows a bus braking.",
+        "This road event involves a bus braking.",
+        "There is a bus braking."
+      ]
+    },
+    {
+      "row": 92,
+      "id": "duplex:Bus-Stop",
+      "special": false,
+      "descriptions": [
+        "a bus stopped",
+        "A bus is stopped.",
+        "The scene shows a bus stopped.",
+        "This road event involves a bus stopped.",
+        "There is a bus stopped."
+      ]
+    },
+    {
+      "row": 93,
+      "id": "duplex:Bus-HazLit",
+      "special": false,
+      "descriptions": [
+        "a bus with hazard lights on",
+        "A bus is showing hazard lights.",
+        "The scene shows a bus showing hazard lights.",
+        "This road event involves a bus showing hazard lights.",
+        "There is a bus showing hazard lights."
+      ]
+    },
+    {
+      "row": 94,
+      "id": "duplex:EmVeh-Stop",
+      "special": false,
+      "descriptions": [
+        "an emergency vehicle stopped",
+        "An emergency vehicle is stopped.",
+        "The scene shows an emergency vehicle stopped.",
+        "This road event involves an emergency vehicle stopped.",
+        "There is an emergency vehicle stopped."
+      ]
+    },
+    {
+      "row": 95,
+      "id": "duplex:TL-Red",
+      "special": false,
+      "descriptions": [
+        "a traffic light showing a red light",
+        "A traffic light is showing a red light.",
+        "The scene shows a traffic light showing a red light.",
+        "This road event involves a traffic light showing a red light.",
+        "There is a traffic light showing a red light."
+      ]
+    },
+    {
+      "row": 96,
+      "id": "duplex:TL-Amber",
+      "special": false,
+      "descriptions": [
+        "a traffic light showing an amber light",
+        "A traffic light is showing an amber light.",
+        "The scene shows a traffic light showing an amber light.",
+        "This road event involves a traffic light showing an amber light.",
+        "There is a traffic light showing an amber light."
+      ]
+    },
+    {
+      "row": 97,
+      "id": "duplex:TL-Green",
+      "special": false,
+      "descriptions": [
+        "a traffic light showing a green light",
+        "A traffic light is showing a green light.",
+        "The scene shows a traffic light showing a green light.",
+        "This road event involves a traffic light showing a green light.",
+        "There is a traffic light showing a green light."
+      ]
+    },
+    {
+      "row": 98,
+      "id": "triplet:Ped-MovAway-LftPav",
+      "special": false,
+      "descriptions": [
+        "a pedestrian moving away from the ego vehicle on the left pavement",
+        "A pedestrian is moving away from the ego vehicle on the pavement on the left of the ego vehicle.",
+        "The scene shows a pedestrian moving away from the ego vehicle on the pavement on the left of the ego vehicle.",
+        "This road event involves a pedestrian moving away from the ego vehicle on the pavement on the left of the ego vehicle.",
+        "There is a pedestrian moving away from the ego vehicle on the pavement on the left of the ego vehicle."
+      ]
+    },
+    {
+      "row": 99,
+      "id": "triplet:Ped-MovAway-RhtPav",
+      "special": false,
+      "descriptions": [
+        "a pedestrian moving away from the ego vehicle on the right pavement",
+        "A pedestrian is moving away from the ego vehicle on the pavement on the right of the ego vehicle.",
+        "The scene shows a pedestrian moving away from the ego vehicle on the pavement on the right of the ego vehicle.",
+        "This road event involves a pedestrian moving away from the ego vehicle on the pavement on the right of the ego vehicle.",
+        "There is a pedestrian moving away from the ego vehicle on the pavement on the right of the ego vehicle."
+      ]
+    },
+    {
+      "row": 100,
+      "id": "triplet:Ped-MovAway-Jun",
+      "special": false,
+      "descriptions": [
+        "a pedestrian moving away from the ego vehicle at a road junction",
+        "A pedestrian is moving away from the ego vehicle at a road junction.",
+        "The scene shows a pedestrian moving away from the ego vehicle at a road junction.",
+        "This road event involves a pedestrian moving away from the ego vehicle at a road junction.",
+        "There is a pedestrian moving away from the ego vehicle at a road junction."
+      ]
+    },
+    {
+      "row": 101,
+      "id": "triplet:Ped-MovTow-LftPav",
+      "special": false,
+      "descriptions": [
+        "a pedestrian moving toward the ego vehicle on the left pavement",
+        "A pedestrian is moving toward the ego vehicle on the pavement on the left of the ego vehicle.",
+        "The scene shows a pedestrian moving toward the ego vehicle on the pavement on the left of the ego vehicle.",
+        "This road event involves a pedestrian moving toward the ego vehicle on the pavement on the left of the ego vehicle.",
+        "There is a pedestrian moving toward the ego vehicle on the pavement on the left of the ego vehicle."
+      ]
+    },
+    {
+      "row": 102,
+      "id": "triplet:Ped-MovTow-RhtPav",
+      "special": false,
+      "descriptions": [
+        "a pedestrian moving toward the ego vehicle on the right pavement",
+        "A pedestrian is moving toward the ego vehicle on the pavement on the right of the ego vehicle.",
+        "The scene shows a pedestrian moving toward the ego vehicle on the pavement on the right of the ego vehicle.",
+        "This road event involves a pedestrian moving toward the ego vehicle on the pavement on the right of the ego vehicle.",
+        "There is a pedestrian moving toward the ego vehicle on the pavement on the right of the ego vehicle."
+      ]
+    },
+    {
+      "row": 103,
+      "id": "triplet:Ped-MovTow-Jun",
+      "special": false,
+      "descriptions": [
+        "a pedestrian moving toward the ego vehicle at a road junction",
+        "A pedestrian is moving toward the ego vehicle at a road junction.",
+        "The scene shows a pedestrian moving toward the ego vehicle at a road junction.",
+        "This road event involves a pedestrian moving toward the ego vehicle at a road junction.",
+        "There is a pedestrian moving toward the ego vehicle at a road junction."
+      ]
+    },
+    {
+      "row": 104,
+      "id": "triplet:Ped-Mov-OutgoLane",
+      "special": false,
+      "descriptions": [
+        "a pedestrian moving in the outgoing traffic lane",
+        "A pedestrian is moving in a traffic lane going in the ego vehicle's direction.",
+        "The scene shows a pedestrian moving in a traffic lane going in the ego vehicle's direction.",
+        "This road event involves a pedestrian moving in a traffic lane going in the ego vehicle's direction.",
+        "There is a pedestrian moving in a traffic lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 105,
+      "id": "triplet:Ped-Mov-Pav",
+      "special": false,
+      "descriptions": [
+        "a pedestrian moving on the pavement",
+        "A pedestrian is moving on the pavement.",
+        "The scene shows a pedestrian moving on the pavement.",
+        "This road event involves a pedestrian moving on the pavement.",
+        "There is a pedestrian moving on the pavement."
+      ]
+    },
+    {
+      "row": 106,
+      "id": "triplet:Ped-Mov-RhtPav",
+      "special": false,
+      "descriptions": [
+        "a pedestrian moving on the right pavement",
+        "A pedestrian is moving on the pavement on the right of the ego vehicle.",
+        "The scene shows a pedestrian moving on the pavement on the right of the ego vehicle.",
+        "This road event involves a pedestrian moving on the pavement on the right of the ego vehicle.",
+        "There is a pedestrian moving on the pavement on the right of the ego vehicle."
+      ]
+    },
+    {
+      "row": 107,
+      "id": "triplet:Ped-Stop-OutgoLane",
+      "special": false,
+      "descriptions": [
+        "a pedestrian stopped in the outgoing traffic lane",
+        "A pedestrian is stopped in a traffic lane going in the ego vehicle's direction.",
+        "The scene shows a pedestrian stopped in a traffic lane going in the ego vehicle's direction.",
+        "This road event involves a pedestrian stopped in a traffic lane going in the ego vehicle's direction.",
+        "There is a pedestrian stopped in a traffic lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 108,
+      "id": "triplet:Ped-Stop-Pav",
+      "special": false,
+      "descriptions": [
+        "a pedestrian stopped on the pavement",
+        "A pedestrian is stopped on the pavement.",
+        "The scene shows a pedestrian stopped on the pavement.",
+        "This road event involves a pedestrian stopped on the pavement.",
+        "There is a pedestrian stopped on the pavement."
+      ]
+    },
+    {
+      "row": 109,
+      "id": "triplet:Ped-Stop-LftPav",
+      "special": false,
+      "descriptions": [
+        "a pedestrian stopped on the left pavement",
+        "A pedestrian is stopped on the pavement on the left of the ego vehicle.",
+        "The scene shows a pedestrian stopped on the pavement on the left of the ego vehicle.",
+        "This road event involves a pedestrian stopped on the pavement on the left of the ego vehicle.",
+        "There is a pedestrian stopped on the pavement on the left of the ego vehicle."
+      ]
+    },
+    {
+      "row": 110,
+      "id": "triplet:Ped-Stop-RhtPav",
+      "special": false,
+      "descriptions": [
+        "a pedestrian stopped on the right pavement",
+        "A pedestrian is stopped on the pavement on the right of the ego vehicle.",
+        "The scene shows a pedestrian stopped on the pavement on the right of the ego vehicle.",
+        "This road event involves a pedestrian stopped on the pavement on the right of the ego vehicle.",
+        "There is a pedestrian stopped on the pavement on the right of the ego vehicle."
+      ]
+    },
+    {
+      "row": 111,
+      "id": "triplet:Ped-Stop-BusStop",
+      "special": false,
+      "descriptions": [
+        "a pedestrian stopped at a bus stop",
+        "A pedestrian is stopped at a bus stop.",
+        "The scene shows a pedestrian stopped at a bus stop.",
+        "This road event involves a pedestrian stopped at a bus stop.",
+        "There is a pedestrian stopped at a bus stop."
+      ]
+    },
+    {
+      "row": 112,
+      "id": "triplet:Ped-Wait2X-RhtPav",
+      "special": false,
+      "descriptions": [
+        "a pedestrian waiting to cross the road on the right pavement",
+        "A pedestrian is waiting to cross the road on the pavement on the right of the ego vehicle.",
+        "The scene shows a pedestrian waiting to cross the road on the pavement on the right of the ego vehicle.",
+        "This road event involves a pedestrian waiting to cross the road on the pavement on the right of the ego vehicle.",
+        "There is a pedestrian waiting to cross the road on the pavement on the right of the ego vehicle."
+      ]
+    },
+    {
+      "row": 113,
+      "id": "triplet:Ped-Wait2X-Jun",
+      "special": false,
+      "descriptions": [
+        "a pedestrian waiting to cross the road at a road junction",
+        "A pedestrian is waiting to cross the road at a road junction.",
+        "The scene shows a pedestrian waiting to cross the road at a road junction.",
+        "This road event involves a pedestrian waiting to cross the road at a road junction.",
+        "There is a pedestrian waiting to cross the road at a road junction."
+      ]
+    },
+    {
+      "row": 114,
+      "id": "triplet:Ped-XingFmLft-Jun",
+      "special": false,
+      "descriptions": [
+        "a pedestrian crossing from the left at a road junction",
+        "A pedestrian is crossing from the left relative to the ego vehicle at a road junction.",
+        "The scene shows a pedestrian crossing from the left relative to the ego vehicle at a road junction.",
+        "This road event involves a pedestrian crossing from the left relative to the ego vehicle at a road junction.",
+        "There is a pedestrian crossing from the left relative to the ego vehicle at a road junction."
+      ]
+    },
+    {
+      "row": 115,
+      "id": "triplet:Ped-XingFmRht-Jun",
+      "special": false,
+      "descriptions": [
+        "a pedestrian crossing from the right at a road junction",
+        "A pedestrian is crossing from the right relative to the ego vehicle at a road junction.",
+        "The scene shows a pedestrian crossing from the right relative to the ego vehicle at a road junction.",
+        "This road event involves a pedestrian crossing from the right relative to the ego vehicle at a road junction.",
+        "There is a pedestrian crossing from the right relative to the ego vehicle at a road junction."
+      ]
+    },
+    {
+      "row": 116,
+      "id": "triplet:Ped-XingFmRht-xing",
+      "special": false,
+      "descriptions": [
+        "a pedestrian crossing from the right at a pedestrian crossing",
+        "A pedestrian is crossing from the right relative to the ego vehicle at a pedestrian crossing.",
+        "The scene shows a pedestrian crossing from the right relative to the ego vehicle at a pedestrian crossing.",
+        "This road event involves a pedestrian crossing from the right relative to the ego vehicle at a pedestrian crossing.",
+        "There is a pedestrian crossing from the right relative to the ego vehicle at a pedestrian crossing."
+      ]
+    },
+    {
+      "row": 117,
+      "id": "triplet:Ped-Xing-Jun",
+      "special": false,
+      "descriptions": [
+        "a pedestrian crossing the road at a road junction",
+        "A pedestrian is crossing the road at a road junction.",
+        "The scene shows a pedestrian crossing the road at a road junction.",
+        "This road event involves a pedestrian crossing the road at a road junction.",
+        "There is a pedestrian crossing the road at a road junction."
+      ]
+    },
+    {
+      "row": 118,
+      "id": "triplet:Ped-PushObj-LftPav",
+      "special": false,
+      "descriptions": [
+        "a pedestrian pushing an object on the left pavement",
+        "A pedestrian is pushing an object on the pavement on the left of the ego vehicle.",
+        "The scene shows a pedestrian pushing an object on the pavement on the left of the ego vehicle.",
+        "This road event involves a pedestrian pushing an object on the pavement on the left of the ego vehicle.",
+        "There is a pedestrian pushing an object on the pavement on the left of the ego vehicle."
+      ]
+    },
+    {
+      "row": 119,
+      "id": "triplet:Ped-PushObj-RhtPav",
+      "special": false,
+      "descriptions": [
+        "a pedestrian pushing an object on the right pavement",
+        "A pedestrian is pushing an object on the pavement on the right of the ego vehicle.",
+        "The scene shows a pedestrian pushing an object on the pavement on the right of the ego vehicle.",
+        "This road event involves a pedestrian pushing an object on the pavement on the right of the ego vehicle.",
+        "There is a pedestrian pushing an object on the pavement on the right of the ego vehicle."
+      ]
+    },
+    {
+      "row": 120,
+      "id": "triplet:Car-MovAway-VehLane",
+      "special": false,
+      "descriptions": [
+        "a car moving away from the ego vehicle in the ego vehicle's lane",
+        "A car is moving away from the ego vehicle in the ego vehicle's lane.",
+        "The scene shows a car moving away from the ego vehicle in the ego vehicle's lane.",
+        "This road event involves a car moving away from the ego vehicle in the ego vehicle's lane.",
+        "There is a car moving away from the ego vehicle in the ego vehicle's lane."
+      ]
+    },
+    {
+      "row": 121,
+      "id": "triplet:Car-MovAway-OutgoLane",
+      "special": false,
+      "descriptions": [
+        "a car moving away from the ego vehicle in the outgoing traffic lane",
+        "A car is moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+        "The scene shows a car moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+        "This road event involves a car moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+        "There is a car moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 122,
+      "id": "triplet:Car-MovAway-Jun",
+      "special": false,
+      "descriptions": [
+        "a car moving away from the ego vehicle at a road junction",
+        "A car is moving away from the ego vehicle at a road junction.",
+        "The scene shows a car moving away from the ego vehicle at a road junction.",
+        "This road event involves a car moving away from the ego vehicle at a road junction.",
+        "There is a car moving away from the ego vehicle at a road junction."
+      ]
+    },
+    {
+      "row": 123,
+      "id": "triplet:Car-MovTow-VehLane",
+      "special": false,
+      "descriptions": [
+        "a car moving toward the ego vehicle in the ego vehicle's lane",
+        "A car is moving toward the ego vehicle in the ego vehicle's lane.",
+        "The scene shows a car moving toward the ego vehicle in the ego vehicle's lane.",
+        "This road event involves a car moving toward the ego vehicle in the ego vehicle's lane.",
+        "There is a car moving toward the ego vehicle in the ego vehicle's lane."
+      ]
+    },
+    {
+      "row": 124,
+      "id": "triplet:Car-MovTow-IncomLane",
+      "special": false,
+      "descriptions": [
+        "a car moving toward the ego vehicle in the incoming traffic lane",
+        "A car is moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+        "The scene shows a car moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+        "This road event involves a car moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+        "There is a car moving toward the ego vehicle in a traffic lane coming toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 125,
+      "id": "triplet:Car-MovTow-Jun",
+      "special": false,
+      "descriptions": [
+        "a car moving toward the ego vehicle at a road junction",
+        "A car is moving toward the ego vehicle at a road junction.",
+        "The scene shows a car moving toward the ego vehicle at a road junction.",
+        "This road event involves a car moving toward the ego vehicle at a road junction.",
+        "There is a car moving toward the ego vehicle at a road junction."
+      ]
+    },
+    {
+      "row": 126,
+      "id": "triplet:Car-Brake-VehLane",
+      "special": false,
+      "descriptions": [
+        "a car braking with its brake lights on in the ego vehicle's lane",
+        "A car is braking in the ego vehicle's lane.",
+        "The scene shows a car braking in the ego vehicle's lane.",
+        "This road event involves a car braking in the ego vehicle's lane.",
+        "There is a car braking in the ego vehicle's lane."
+      ]
+    },
+    {
+      "row": 127,
+      "id": "triplet:Car-Brake-OutgoLane",
+      "special": false,
+      "descriptions": [
+        "a car braking with its brake lights on in the outgoing traffic lane",
+        "A car is braking in a traffic lane going in the ego vehicle's direction.",
+        "The scene shows a car braking in a traffic lane going in the ego vehicle's direction.",
+        "This road event involves a car braking in a traffic lane going in the ego vehicle's direction.",
+        "There is a car braking in a traffic lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 128,
+      "id": "triplet:Car-Brake-Jun",
+      "special": false,
+      "descriptions": [
+        "a car braking with its brake lights on at a road junction",
+        "A car is braking at a road junction.",
+        "The scene shows a car braking at a road junction.",
+        "This road event involves a car braking at a road junction.",
+        "There is a car braking at a road junction."
+      ]
+    },
+    {
+      "row": 129,
+      "id": "triplet:Car-Stop-VehLane",
+      "special": false,
+      "descriptions": [
+        "a car stopped in the ego vehicle's lane",
+        "A car is stopped in the ego vehicle's lane.",
+        "The scene shows a car stopped in the ego vehicle's lane.",
+        "This road event involves a car stopped in the ego vehicle's lane.",
+        "There is a car stopped in the ego vehicle's lane."
+      ]
+    },
+    {
+      "row": 130,
+      "id": "triplet:Car-Stop-OutgoLane",
+      "special": false,
+      "descriptions": [
+        "a car stopped in the outgoing traffic lane",
+        "A car is stopped in a traffic lane going in the ego vehicle's direction.",
+        "The scene shows a car stopped in a traffic lane going in the ego vehicle's direction.",
+        "This road event involves a car stopped in a traffic lane going in the ego vehicle's direction.",
+        "There is a car stopped in a traffic lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 131,
+      "id": "triplet:Car-Stop-IncomLane",
+      "special": false,
+      "descriptions": [
+        "a car stopped in the incoming traffic lane",
+        "A car is stopped in a traffic lane coming toward the ego vehicle.",
+        "The scene shows a car stopped in a traffic lane coming toward the ego vehicle.",
+        "This road event involves a car stopped in a traffic lane coming toward the ego vehicle.",
+        "There is a car stopped in a traffic lane coming toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 132,
+      "id": "triplet:Car-Stop-Jun",
+      "special": false,
+      "descriptions": [
+        "a car stopped at a road junction",
+        "A car is stopped at a road junction.",
+        "The scene shows a car stopped at a road junction.",
+        "This road event involves a car stopped at a road junction.",
+        "There is a car stopped at a road junction."
+      ]
+    },
+    {
+      "row": 133,
+      "id": "triplet:Car-Stop-parking",
+      "special": false,
+      "descriptions": [
+        "a car stopped in a parking area",
+        "A car is stopped in a parking area.",
+        "The scene shows a car stopped in a parking area.",
+        "This road event involves a car stopped in a parking area.",
+        "There is a car stopped in a parking area."
+      ]
+    },
+    {
+      "row": 134,
+      "id": "triplet:Car-IncatLft-VehLane",
+      "special": false,
+      "descriptions": [
+        "a car indicating a left turn in the ego vehicle's lane",
+        "A car is indicating a left turn in the ego vehicle's lane.",
+        "The scene shows a car indicating a left turn in the ego vehicle's lane.",
+        "This road event involves a car indicating a left turn in the ego vehicle's lane.",
+        "There is a car indicating a left turn in the ego vehicle's lane."
+      ]
+    },
+    {
+      "row": 135,
+      "id": "triplet:Car-IncatLft-OutgoLane",
+      "special": false,
+      "descriptions": [
+        "a car indicating a left turn in the outgoing traffic lane",
+        "A car is indicating a left turn in a traffic lane going in the ego vehicle's direction.",
+        "The scene shows a car indicating a left turn in a traffic lane going in the ego vehicle's direction.",
+        "This road event involves a car indicating a left turn in a traffic lane going in the ego vehicle's direction.",
+        "There is a car indicating a left turn in a traffic lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 136,
+      "id": "triplet:Car-IncatLft-IncomLane",
+      "special": false,
+      "descriptions": [
+        "a car indicating a left turn in the incoming traffic lane",
+        "A car is indicating a left turn in a traffic lane coming toward the ego vehicle.",
+        "The scene shows a car indicating a left turn in a traffic lane coming toward the ego vehicle.",
+        "This road event involves a car indicating a left turn in a traffic lane coming toward the ego vehicle.",
+        "There is a car indicating a left turn in a traffic lane coming toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 137,
+      "id": "triplet:Car-IncatLft-Jun",
+      "special": false,
+      "descriptions": [
+        "a car indicating a left turn at a road junction",
+        "A car is indicating a left turn at a road junction.",
+        "The scene shows a car indicating a left turn at a road junction.",
+        "This road event involves a car indicating a left turn at a road junction.",
+        "There is a car indicating a left turn at a road junction."
+      ]
+    },
+    {
+      "row": 138,
+      "id": "triplet:Car-IncatRht-VehLane",
+      "special": false,
+      "descriptions": [
+        "a car indicating a right turn in the ego vehicle's lane",
+        "A car is indicating a right turn in the ego vehicle's lane.",
+        "The scene shows a car indicating a right turn in the ego vehicle's lane.",
+        "This road event involves a car indicating a right turn in the ego vehicle's lane.",
+        "There is a car indicating a right turn in the ego vehicle's lane."
+      ]
+    },
+    {
+      "row": 139,
+      "id": "triplet:Car-IncatRht-OutgoLane",
+      "special": false,
+      "descriptions": [
+        "a car indicating a right turn in the outgoing traffic lane",
+        "A car is indicating a right turn in a traffic lane going in the ego vehicle's direction.",
+        "The scene shows a car indicating a right turn in a traffic lane going in the ego vehicle's direction.",
+        "This road event involves a car indicating a right turn in a traffic lane going in the ego vehicle's direction.",
+        "There is a car indicating a right turn in a traffic lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 140,
+      "id": "triplet:Car-IncatRht-IncomLane",
+      "special": false,
+      "descriptions": [
+        "a car indicating a right turn in the incoming traffic lane",
+        "A car is indicating a right turn in a traffic lane coming toward the ego vehicle.",
+        "The scene shows a car indicating a right turn in a traffic lane coming toward the ego vehicle.",
+        "This road event involves a car indicating a right turn in a traffic lane coming toward the ego vehicle.",
+        "There is a car indicating a right turn in a traffic lane coming toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 141,
+      "id": "triplet:Car-IncatRht-Jun",
+      "special": false,
+      "descriptions": [
+        "a car indicating a right turn at a road junction",
+        "A car is indicating a right turn at a road junction.",
+        "The scene shows a car indicating a right turn at a road junction.",
+        "This road event involves a car indicating a right turn at a road junction.",
+        "There is a car indicating a right turn at a road junction."
+      ]
+    },
+    {
+      "row": 142,
+      "id": "triplet:Car-HazLit-IncomLane",
+      "special": false,
+      "descriptions": [
+        "a car with hazard lights on in the incoming traffic lane",
+        "A car is showing hazard lights in a traffic lane coming toward the ego vehicle.",
+        "The scene shows a car showing hazard lights in a traffic lane coming toward the ego vehicle.",
+        "This road event involves a car showing hazard lights in a traffic lane coming toward the ego vehicle.",
+        "There is a car showing hazard lights in a traffic lane coming toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 143,
+      "id": "triplet:Car-TurLft-VehLane",
+      "special": false,
+      "descriptions": [
+        "a car turning left in the ego vehicle's lane",
+        "A car is turning left in the ego vehicle's lane.",
+        "The scene shows a car turning left in the ego vehicle's lane.",
+        "This road event involves a car turning left in the ego vehicle's lane.",
+        "There is a car turning left in the ego vehicle's lane."
+      ]
+    },
+    {
+      "row": 144,
+      "id": "triplet:Car-TurLft-Jun",
+      "special": false,
+      "descriptions": [
+        "a car turning left at a road junction",
+        "A car is turning left at a road junction.",
+        "The scene shows a car turning left at a road junction.",
+        "This road event involves a car turning left at a road junction.",
+        "There is a car turning left at a road junction."
+      ]
+    },
+    {
+      "row": 145,
+      "id": "triplet:Car-TurRht-Jun",
+      "special": false,
+      "descriptions": [
+        "a car turning right at a road junction",
+        "A car is turning right at a road junction.",
+        "The scene shows a car turning right at a road junction.",
+        "This road event involves a car turning right at a road junction.",
+        "There is a car turning right at a road junction."
+      ]
+    },
+    {
+      "row": 146,
+      "id": "triplet:Car-MovRht-OutgoLane",
+      "special": false,
+      "descriptions": [
+        "a car moving to the right in the outgoing traffic lane",
+        "A car is moving to the right relative to the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+        "The scene shows a car moving to the right relative to the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+        "This road event involves a car moving to the right relative to the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+        "There is a car moving to the right relative to the ego vehicle in a traffic lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 147,
+      "id": "triplet:Car-MovLft-VehLane",
+      "special": false,
+      "descriptions": [
+        "a car moving to the left in the ego vehicle's lane",
+        "A car is moving to the left relative to the ego vehicle in the ego vehicle's lane.",
+        "The scene shows a car moving to the left relative to the ego vehicle in the ego vehicle's lane.",
+        "This road event involves a car moving to the left relative to the ego vehicle in the ego vehicle's lane.",
+        "There is a car moving to the left relative to the ego vehicle in the ego vehicle's lane."
+      ]
+    },
+    {
+      "row": 148,
+      "id": "triplet:Car-MovLft-OutgoLane",
+      "special": false,
+      "descriptions": [
+        "a car moving to the left in the outgoing traffic lane",
+        "A car is moving to the left relative to the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+        "The scene shows a car moving to the left relative to the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+        "This road event involves a car moving to the left relative to the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+        "There is a car moving to the left relative to the ego vehicle in a traffic lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 149,
+      "id": "triplet:Car-XingFmLft-Jun",
+      "special": false,
+      "descriptions": [
+        "a car crossing from the left at a road junction",
+        "A car is crossing from the left relative to the ego vehicle at a road junction.",
+        "The scene shows a car crossing from the left relative to the ego vehicle at a road junction.",
+        "This road event involves a car crossing from the left relative to the ego vehicle at a road junction.",
+        "There is a car crossing from the left relative to the ego vehicle at a road junction."
+      ]
+    },
+    {
+      "row": 150,
+      "id": "triplet:Car-XingFmRht-Jun",
+      "special": false,
+      "descriptions": [
+        "a car crossing from the right at a road junction",
+        "A car is crossing from the right relative to the ego vehicle at a road junction.",
+        "The scene shows a car crossing from the right relative to the ego vehicle at a road junction.",
+        "This road event involves a car crossing from the right relative to the ego vehicle at a road junction.",
+        "There is a car crossing from the right relative to the ego vehicle at a road junction."
+      ]
+    },
+    {
+      "row": 151,
+      "id": "triplet:Cyc-MovAway-OutgoCycLane",
+      "special": false,
+      "descriptions": [
+        "a cyclist moving away from the ego vehicle in the outgoing cycle lane",
+        "A cyclist is moving away from the ego vehicle in a cycle lane going in the ego vehicle's direction.",
+        "The scene shows a cyclist moving away from the ego vehicle in a cycle lane going in the ego vehicle's direction.",
+        "This road event involves a cyclist moving away from the ego vehicle in a cycle lane going in the ego vehicle's direction.",
+        "There is a cyclist moving away from the ego vehicle in a cycle lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 152,
+      "id": "triplet:Cyc-MovAway-RhtPav",
+      "special": false,
+      "descriptions": [
+        "a cyclist moving away from the ego vehicle on the right pavement",
+        "A cyclist is moving away from the ego vehicle on the pavement on the right of the ego vehicle.",
+        "The scene shows a cyclist moving away from the ego vehicle on the pavement on the right of the ego vehicle.",
+        "This road event involves a cyclist moving away from the ego vehicle on the pavement on the right of the ego vehicle.",
+        "There is a cyclist moving away from the ego vehicle on the pavement on the right of the ego vehicle."
+      ]
+    },
+    {
+      "row": 153,
+      "id": "triplet:Cyc-MovTow-IncomLane",
+      "special": false,
+      "descriptions": [
+        "a cyclist moving toward the ego vehicle in the incoming traffic lane",
+        "A cyclist is moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+        "The scene shows a cyclist moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+        "This road event involves a cyclist moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+        "There is a cyclist moving toward the ego vehicle in a traffic lane coming toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 154,
+      "id": "triplet:Cyc-MovTow-RhtPav",
+      "special": false,
+      "descriptions": [
+        "a cyclist moving toward the ego vehicle on the right pavement",
+        "A cyclist is moving toward the ego vehicle on the pavement on the right of the ego vehicle.",
+        "The scene shows a cyclist moving toward the ego vehicle on the pavement on the right of the ego vehicle.",
+        "This road event involves a cyclist moving toward the ego vehicle on the pavement on the right of the ego vehicle.",
+        "There is a cyclist moving toward the ego vehicle on the pavement on the right of the ego vehicle."
+      ]
+    },
+    {
+      "row": 155,
+      "id": "triplet:MedVeh-MovAway-VehLane",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle moving away from the ego vehicle in the ego vehicle's lane",
+        "A medium-sized vehicle is moving away from the ego vehicle in the ego vehicle's lane.",
+        "The scene shows a medium-sized vehicle moving away from the ego vehicle in the ego vehicle's lane.",
+        "This road event involves a medium-sized vehicle moving away from the ego vehicle in the ego vehicle's lane.",
+        "There is a medium-sized vehicle moving away from the ego vehicle in the ego vehicle's lane."
+      ]
+    },
+    {
+      "row": 156,
+      "id": "triplet:MedVeh-MovAway-OutgoLane",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle moving away from the ego vehicle in the outgoing traffic lane",
+        "A medium-sized vehicle is moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+        "The scene shows a medium-sized vehicle moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+        "This road event involves a medium-sized vehicle moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+        "There is a medium-sized vehicle moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 157,
+      "id": "triplet:MedVeh-MovAway-Jun",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle moving away from the ego vehicle at a road junction",
+        "A medium-sized vehicle is moving away from the ego vehicle at a road junction.",
+        "The scene shows a medium-sized vehicle moving away from the ego vehicle at a road junction.",
+        "This road event involves a medium-sized vehicle moving away from the ego vehicle at a road junction.",
+        "There is a medium-sized vehicle moving away from the ego vehicle at a road junction."
+      ]
+    },
+    {
+      "row": 158,
+      "id": "triplet:MedVeh-MovTow-IncomLane",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle moving toward the ego vehicle in the incoming traffic lane",
+        "A medium-sized vehicle is moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+        "The scene shows a medium-sized vehicle moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+        "This road event involves a medium-sized vehicle moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+        "There is a medium-sized vehicle moving toward the ego vehicle in a traffic lane coming toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 159,
+      "id": "triplet:MedVeh-MovTow-Jun",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle moving toward the ego vehicle at a road junction",
+        "A medium-sized vehicle is moving toward the ego vehicle at a road junction.",
+        "The scene shows a medium-sized vehicle moving toward the ego vehicle at a road junction.",
+        "This road event involves a medium-sized vehicle moving toward the ego vehicle at a road junction.",
+        "There is a medium-sized vehicle moving toward the ego vehicle at a road junction."
+      ]
+    },
+    {
+      "row": 160,
+      "id": "triplet:MedVeh-Brake-VehLane",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle braking with its brake lights on in the ego vehicle's lane",
+        "A medium-sized vehicle is braking in the ego vehicle's lane.",
+        "The scene shows a medium-sized vehicle braking in the ego vehicle's lane.",
+        "This road event involves a medium-sized vehicle braking in the ego vehicle's lane.",
+        "There is a medium-sized vehicle braking in the ego vehicle's lane."
+      ]
+    },
+    {
+      "row": 161,
+      "id": "triplet:MedVeh-Brake-OutgoLane",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle braking with its brake lights on in the outgoing traffic lane",
+        "A medium-sized vehicle is braking in a traffic lane going in the ego vehicle's direction.",
+        "The scene shows a medium-sized vehicle braking in a traffic lane going in the ego vehicle's direction.",
+        "This road event involves a medium-sized vehicle braking in a traffic lane going in the ego vehicle's direction.",
+        "There is a medium-sized vehicle braking in a traffic lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 162,
+      "id": "triplet:MedVeh-Brake-Jun",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle braking with its brake lights on at a road junction",
+        "A medium-sized vehicle is braking at a road junction.",
+        "The scene shows a medium-sized vehicle braking at a road junction.",
+        "This road event involves a medium-sized vehicle braking at a road junction.",
+        "There is a medium-sized vehicle braking at a road junction."
+      ]
+    },
+    {
+      "row": 163,
+      "id": "triplet:MedVeh-Stop-VehLane",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle stopped in the ego vehicle's lane",
+        "A medium-sized vehicle is stopped in the ego vehicle's lane.",
+        "The scene shows a medium-sized vehicle stopped in the ego vehicle's lane.",
+        "This road event involves a medium-sized vehicle stopped in the ego vehicle's lane.",
+        "There is a medium-sized vehicle stopped in the ego vehicle's lane."
+      ]
+    },
+    {
+      "row": 164,
+      "id": "triplet:MedVeh-Stop-OutgoLane",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle stopped in the outgoing traffic lane",
+        "A medium-sized vehicle is stopped in a traffic lane going in the ego vehicle's direction.",
+        "The scene shows a medium-sized vehicle stopped in a traffic lane going in the ego vehicle's direction.",
+        "This road event involves a medium-sized vehicle stopped in a traffic lane going in the ego vehicle's direction.",
+        "There is a medium-sized vehicle stopped in a traffic lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 165,
+      "id": "triplet:MedVeh-Stop-IncomLane",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle stopped in the incoming traffic lane",
+        "A medium-sized vehicle is stopped in a traffic lane coming toward the ego vehicle.",
+        "The scene shows a medium-sized vehicle stopped in a traffic lane coming toward the ego vehicle.",
+        "This road event involves a medium-sized vehicle stopped in a traffic lane coming toward the ego vehicle.",
+        "There is a medium-sized vehicle stopped in a traffic lane coming toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 166,
+      "id": "triplet:MedVeh-Stop-Jun",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle stopped at a road junction",
+        "A medium-sized vehicle is stopped at a road junction.",
+        "The scene shows a medium-sized vehicle stopped at a road junction.",
+        "This road event involves a medium-sized vehicle stopped at a road junction.",
+        "There is a medium-sized vehicle stopped at a road junction."
+      ]
+    },
+    {
+      "row": 167,
+      "id": "triplet:MedVeh-Stop-parking",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle stopped in a parking area",
+        "A medium-sized vehicle is stopped in a parking area.",
+        "The scene shows a medium-sized vehicle stopped in a parking area.",
+        "This road event involves a medium-sized vehicle stopped in a parking area.",
+        "There is a medium-sized vehicle stopped in a parking area."
+      ]
+    },
+    {
+      "row": 168,
+      "id": "triplet:MedVeh-IncatLft-IncomLane",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle indicating a left turn in the incoming traffic lane",
+        "A medium-sized vehicle is indicating a left turn in a traffic lane coming toward the ego vehicle.",
+        "The scene shows a medium-sized vehicle indicating a left turn in a traffic lane coming toward the ego vehicle.",
+        "This road event involves a medium-sized vehicle indicating a left turn in a traffic lane coming toward the ego vehicle.",
+        "There is a medium-sized vehicle indicating a left turn in a traffic lane coming toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 169,
+      "id": "triplet:MedVeh-IncatRht-Jun",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle indicating a right turn at a road junction",
+        "A medium-sized vehicle is indicating a right turn at a road junction.",
+        "The scene shows a medium-sized vehicle indicating a right turn at a road junction.",
+        "This road event involves a medium-sized vehicle indicating a right turn at a road junction.",
+        "There is a medium-sized vehicle indicating a right turn at a road junction."
+      ]
+    },
+    {
+      "row": 170,
+      "id": "triplet:MedVeh-TurRht-Jun",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle turning right at a road junction",
+        "A medium-sized vehicle is turning right at a road junction.",
+        "The scene shows a medium-sized vehicle turning right at a road junction.",
+        "This road event involves a medium-sized vehicle turning right at a road junction.",
+        "There is a medium-sized vehicle turning right at a road junction."
+      ]
+    },
+    {
+      "row": 171,
+      "id": "triplet:MedVeh-XingFmLft-Jun",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle crossing from the left at a road junction",
+        "A medium-sized vehicle is crossing from the left relative to the ego vehicle at a road junction.",
+        "The scene shows a medium-sized vehicle crossing from the left relative to the ego vehicle at a road junction.",
+        "This road event involves a medium-sized vehicle crossing from the left relative to the ego vehicle at a road junction.",
+        "There is a medium-sized vehicle crossing from the left relative to the ego vehicle at a road junction."
+      ]
+    },
+    {
+      "row": 172,
+      "id": "triplet:MedVeh-XingFmRht-Jun",
+      "special": false,
+      "descriptions": [
+        "a medium-sized vehicle crossing from the right at a road junction",
+        "A medium-sized vehicle is crossing from the right relative to the ego vehicle at a road junction.",
+        "The scene shows a medium-sized vehicle crossing from the right relative to the ego vehicle at a road junction.",
+        "This road event involves a medium-sized vehicle crossing from the right relative to the ego vehicle at a road junction.",
+        "There is a medium-sized vehicle crossing from the right relative to the ego vehicle at a road junction."
+      ]
+    },
+    {
+      "row": 173,
+      "id": "triplet:LarVeh-MovAway-VehLane",
+      "special": false,
+      "descriptions": [
+        "a large vehicle moving away from the ego vehicle in the ego vehicle's lane",
+        "A large vehicle is moving away from the ego vehicle in the ego vehicle's lane.",
+        "The scene shows a large vehicle moving away from the ego vehicle in the ego vehicle's lane.",
+        "This road event involves a large vehicle moving away from the ego vehicle in the ego vehicle's lane.",
+        "There is a large vehicle moving away from the ego vehicle in the ego vehicle's lane."
+      ]
+    },
+    {
+      "row": 174,
+      "id": "triplet:LarVeh-MovTow-IncomLane",
+      "special": false,
+      "descriptions": [
+        "a large vehicle moving toward the ego vehicle in the incoming traffic lane",
+        "A large vehicle is moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+        "The scene shows a large vehicle moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+        "This road event involves a large vehicle moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+        "There is a large vehicle moving toward the ego vehicle in a traffic lane coming toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 175,
+      "id": "triplet:LarVeh-Stop-VehLane",
+      "special": false,
+      "descriptions": [
+        "a large vehicle stopped in the ego vehicle's lane",
+        "A large vehicle is stopped in the ego vehicle's lane.",
+        "The scene shows a large vehicle stopped in the ego vehicle's lane.",
+        "This road event involves a large vehicle stopped in the ego vehicle's lane.",
+        "There is a large vehicle stopped in the ego vehicle's lane."
+      ]
+    },
+    {
+      "row": 176,
+      "id": "triplet:LarVeh-Stop-Jun",
+      "special": false,
+      "descriptions": [
+        "a large vehicle stopped at a road junction",
+        "A large vehicle is stopped at a road junction.",
+        "The scene shows a large vehicle stopped at a road junction.",
+        "This road event involves a large vehicle stopped at a road junction.",
+        "There is a large vehicle stopped at a road junction."
+      ]
+    },
+    {
+      "row": 177,
+      "id": "triplet:Bus-MovAway-OutgoLane",
+      "special": false,
+      "descriptions": [
+        "a bus moving away from the ego vehicle in the outgoing traffic lane",
+        "A bus is moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+        "The scene shows a bus moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+        "This road event involves a bus moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction.",
+        "There is a bus moving away from the ego vehicle in a traffic lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 178,
+      "id": "triplet:Bus-MovTow-IncomLane",
+      "special": false,
+      "descriptions": [
+        "a bus moving toward the ego vehicle in the incoming traffic lane",
+        "A bus is moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+        "The scene shows a bus moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+        "This road event involves a bus moving toward the ego vehicle in a traffic lane coming toward the ego vehicle.",
+        "There is a bus moving toward the ego vehicle in a traffic lane coming toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 179,
+      "id": "triplet:Bus-Stop-VehLane",
+      "special": false,
+      "descriptions": [
+        "a bus stopped in the ego vehicle's lane",
+        "A bus is stopped in the ego vehicle's lane.",
+        "The scene shows a bus stopped in the ego vehicle's lane.",
+        "This road event involves a bus stopped in the ego vehicle's lane.",
+        "There is a bus stopped in the ego vehicle's lane."
+      ]
+    },
+    {
+      "row": 180,
+      "id": "triplet:Bus-Stop-OutgoLane",
+      "special": false,
+      "descriptions": [
+        "a bus stopped in the outgoing traffic lane",
+        "A bus is stopped in a traffic lane going in the ego vehicle's direction.",
+        "The scene shows a bus stopped in a traffic lane going in the ego vehicle's direction.",
+        "This road event involves a bus stopped in a traffic lane going in the ego vehicle's direction.",
+        "There is a bus stopped in a traffic lane going in the ego vehicle's direction."
+      ]
+    },
+    {
+      "row": 181,
+      "id": "triplet:Bus-Stop-IncomLane",
+      "special": false,
+      "descriptions": [
+        "a bus stopped in the incoming traffic lane",
+        "A bus is stopped in a traffic lane coming toward the ego vehicle.",
+        "The scene shows a bus stopped in a traffic lane coming toward the ego vehicle.",
+        "This road event involves a bus stopped in a traffic lane coming toward the ego vehicle.",
+        "There is a bus stopped in a traffic lane coming toward the ego vehicle."
+      ]
+    },
+    {
+      "row": 182,
+      "id": "triplet:Bus-Stop-Jun",
+      "special": false,
+      "descriptions": [
+        "a bus stopped at a road junction",
+        "A bus is stopped at a road junction.",
+        "The scene shows a bus stopped at a road junction.",
+        "This road event involves a bus stopped at a road junction.",
+        "There is a bus stopped at a road junction."
+      ]
+    },
+    {
+      "row": 183,
+      "id": "triplet:Bus-HazLit-OutgoLane",
+      "special": false,
+      "descriptions": [
+        "a bus with hazard lights on in the outgoing traffic lane",
+        "A bus is showing hazard lights in a traffic lane going in the ego vehicle's direction.",
+        "The scene shows a bus showing hazard lights in a traffic lane going in the ego vehicle's direction.",
+        "This road event involves a bus showing hazard lights in a traffic lane going in the ego vehicle's direction.",
+        "There is a bus showing hazard lights in a traffic lane going in the ego vehicle's direction."
+      ]
+    }
+  ],
+  "glossary": {
+    "agent": {
+      "Ped": "a pedestrian",
+      "Car": "a car",
+      "Cyc": "a cyclist",
+      "Mobike": "a motorcyclist",
+      "SmalVeh": "a small vehicle",
+      "MedVeh": "a medium-sized vehicle",
+      "LarVeh": "a large vehicle",
+      "Bus": "a bus",
+      "EmVeh": "an emergency vehicle",
+      "TL": "a traffic light"
+    },
+    "action": {
+      "Red": "showing a red light",
+      "Amber": "showing an amber light",
+      "Green": "showing a green light",
+      "MovAway": "moving away from the ego vehicle",
+      "MovTow": "moving toward the ego vehicle",
+      "Mov": "moving",
+      "Rev": "reversing",
+      "Brake": "braking",
+      "Stop": "stopped",
+      "IncatLft": "indicating a left turn",
+      "IncatRht": "indicating a right turn",
+      "HazLit": "showing hazard lights",
+      "TurLft": "turning left",
+      "TurRht": "turning right",
+      "MovRht": "moving to the right relative to the ego vehicle",
+      "MovLft": "moving to the left relative to the ego vehicle",
+      "Ovtak": "overtaking",
+      "Wait2X": "waiting to cross the road",
+      "XingFmLft": "crossing from the left relative to the ego vehicle",
+      "XingFmRht": "crossing from the right relative to the ego vehicle",
+      "Xing": "crossing the road",
+      "PushObj": "pushing an object"
+    },
+    "loc": {
+      "VehLane": "in the ego vehicle's lane",
+      "OutgoLane": "in a traffic lane going in the ego vehicle's direction",
+      "OutgoCycLane": "in a cycle lane going in the ego vehicle's direction",
+      "OutgoBusLane": "in a bus lane going in the ego vehicle's direction",
+      "IncomLane": "in a traffic lane coming toward the ego vehicle",
+      "IncomCycLane": "in a cycle lane coming toward the ego vehicle",
+      "IncomBusLane": "in a bus lane coming toward the ego vehicle",
+      "Pav": "on the pavement",
+      "LftPav": "on the pavement on the left of the ego vehicle",
+      "RhtPav": "on the pavement on the right of the ego vehicle",
+      "Jun": "at a road junction",
+      "xing": "at a pedestrian crossing",
+      "BusStop": "at a bus stop",
+      "parking": "in a parking area",
+      "LftParking": "in the parking area on the left of the ego vehicle",
+      "rightParking": "in the parking area on the right of the ego vehicle"
+    }
+  },
+  "rules": "Canonical exact, then four fixed observation/existence/event templates. No stochastic generation.",
+  "caveats": [
+    "Canonical wording is immutable, including historical Brake brake-light wording and parking phrases that say parked. Added descriptions use only annotated state/location. This inherited wording discrepancy is disclosed; it is not silently corrected in the baseline.",
+    "Waiting to cross is an observed dataset action; no future crossing outcome is added.",
+    "Outgoing/incoming and left/right locations are ego-relative; traffic-light colors remain displayed signal states, not agent motion."
+  ]
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "epoch": 1,
+    "loss": 0.004113832324962884,
+    "permutation_sha256": "00ad40a641328cd0fa848a14b33a4d1157383c3ff64bb3ce33f577f2fd2816dc"
+  },
+  {
+    "epoch": 2,
+    "loss": 0.003192711568653063,
+    "permutation_sha256": "f637cacb4031b4fb7d47317e302455754d637c95527415717a2403fd4471022c"
+  },
+  {
+    "epoch": 3,
+    "loss": 0.0030424872140794603,
+    "permutation_sha256": "4699f7361d3d46742eab3953aff9272241ded6c7ab3644863b356b06afaa949c"
+  },
+  {
+    "epoch": 4,
+    "loss": 0.002960267415733837,
+    "permutation_sha256": "323be34466ee1d763e71313cc7f087dcc7a417a84c0d9182b8e3de1200768396"
+  },
+  {
+    "epoch": 5,
+    "loss": 0.0028975800729019153,
+    "permutation_sha256": "42b4fc7618ef35e145469b23068a2321c13616ca396f637051829b9345386840"
+  },
+  {
+    "epoch": 6,
+    "loss": 0.002865222917145777,
+    "permutation_sha256": "b9d06dbd62781c1d6a404a05259ae2483fac3222c2fe33c4eb3d638a3a32d1ab"
+  },
+  {
+    "epoch": 7,
+    "loss": 0.0028290803479152737,
+    "permutation_sha256": "2a2fde9c2969ec19be1f8d1d10d8bd1db55195b6d5f3a710beca7ff0333e3885"
+  },
+  {
+    "epoch": 8,
+    "loss": 0.002804895843619147,
+    "permutation_sha256": "f381b7a7f231c9dcd7bc8e89dee705f77dd543df83e679ed95b03de1602a3de5"
+  },
+  {
+    "epoch": 9,
+    "loss": 0.0027812270480147097,
+    "permutation_sha256": "b47738064349627df0d704304fc649038ec85b7d08b71429633ffa4cf8fdfb59"
+  },
+  {
+    "epoch": 10,
+    "loss": 0.002773403299882943,
+    "permutation_sha256": "8dfdbc886378f62ac7e70e81c0f8a6f58fb83f4d9545e8320dc4c6219b241afc"
+  }
+]

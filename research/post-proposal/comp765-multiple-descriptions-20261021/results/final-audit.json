@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "time": 1792633286.4842424,
+  "frozen_files_unchanged": true,
+  "original_input_metadata_unchanged": true,
+  "selected_epoch": 10,
+  "paired_initializations_and_all_epoch_orders_equal": true,
+  "agent_and_agentness_AP_identical_across_all_runs": true,
+  "independent_summary_and_interval_checks": true,
+  "all86_csv_rows_verified": true,
+  "runs": [
+    {
+      "run": "single-seed0",
+      "selected_epoch": 10,
+      "steps": 2290,
+      "checkpoint_sha256": "cb3b7af88c02d586e43b61f0bac3ad4c5f94adb3a9bea635d442eb9781755bc5",
+      "detector_result_sha256": "50944d3d36da66a0865de47e41a9a78dd7401b5d01dbfcf411da7948bd52f30f"
+    },
+    {
+      "run": "multi-seed0",
+      "selected_epoch": 10,
+      "steps": 2290,
+      "checkpoint_sha256": "4f356bdb8cd78794e899cd15ba612d3c88ff90e67af8b4200d36358dff90dfe6",
+      "detector_result_sha256": "71ce86f501920be4cf668c9aea6aba3a469530c9a9ba855e7509f71220b1ac69"
+    },
+    {
+      "run": "single-seed1",
+      "selected_epoch": 10,
+      "steps": 2290,
+      "checkpoint_sha256": "c1f785ef9c5ba680ee438ba6652916e5c803c8803d28a7a66132606072ce1225",
+      "detector_result_sha256": "065afc036cc0495af59ae37ddb31864b177287df7703c0ba8f47a991ca4c97ef"
+    },
+    {
+      "run": "multi-seed1",
+      "selected_epoch": 10,
+      "steps": 2290,
+      "checkpoint_sha256": "ac2590ce9defb282c64322fa665a658cece637c703a5aaf42f0193103c8bdb1b",
+      "detector_result_sha256": "6234cca0972cf16e60ed5a49e9f05c02083fb1a5a075014a77f76fba89169feb"
+    },
+    {
+      "run": "single-seed2",
+      "selected_epoch": 10,
+      "steps": 2290,
+      "checkpoint_sha256": "8eaa026121e86d5568faba258608e731686ac880e5ae69bb919d0351e1285596",
+      "detector_result_sha256": "b917189af793d6b1339ccff8dabbcb3fa2689078f51da448a6764e3a6fbf7da5"
+    },
+    {
+      "run": "multi-seed2",
+      "selected_epoch": 10,
+      "steps": 2290,
+      "checkpoint_sha256": "86ac7985ead566f51127c36406a9310e2bf88bbbc3fa10d1854ba133b3f51e19",
+      "detector_result_sha256": "5f662438393b7badfc57e62f228ded2e2eb8644b63b6321b3c1d544f5744890f"
+    }
+  ]
+}

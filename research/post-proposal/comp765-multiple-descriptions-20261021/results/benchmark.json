@@ -1,0 +1,49 @@
+{
+  "time": 1792630861.634319,
+  "training": {
+    "measured_steps": 30,
+    "batch_size": 16384,
+    "mean_step_seconds": 0.014437150070443749,
+    "median_step_seconds": 0.014308026060461998,
+    "estimated_one_run_seconds": 33.061073661316186,
+    "peak_gpu_allocated_bytes": 343406592
+  },
+  "validation_rows": 6163968,
+  "inference_seconds": 12.390571891330183,
+  "detector_class_timings": [
+    {
+      "group": "triplet",
+      "class_id": 2,
+      "seconds": 9.856866888236254
+    },
+    {
+      "group": "triplet",
+      "class_id": 2,
+      "seconds": 10.364620001986623
+    },
+    {
+      "group": "triplet",
+      "class_id": 0,
+      "seconds": 13.665943571832031
+    },
+    {
+      "group": "loc",
+      "class_id": 0,
+      "seconds": 18.68294307589531
+    },
+    {
+      "group": "duplex",
+      "class_id": 0,
+      "seconds": 18.82925212709233
+    },
+    {
+      "group": "action",
+      "class_id": 3,
+      "seconds": 41.161448888946325
+    }
+  ],
+  "benchmark_wall_seconds": 43.57994703296572,
+  "estimated_evaluation_seconds": 443.87469101495424,
+  "peak_host_rss_kib": 45955540,
+  "scope": "Untrained runtime calibration only. No AP values retained. Six representative full-population classes;8 workers planned; class variability makes ETA provisional."
+}

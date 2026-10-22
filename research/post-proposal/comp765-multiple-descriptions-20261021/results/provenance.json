@@ -1,0 +1,98 @@
+{
+  "created": 1792630470.5799787,
+  "inputs": {
+    "train": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp12_phrase_head/crop_full/crop_feats_train.pkl",
+      "bytes": 9055762712,
+      "mtime_ns": 1788204089820017701,
+      "sha256": "b319317388937a04955e0c65b7e270da5aaaa4b57043c5725047a63748cd9f08"
+    },
+    "val": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp12_phrase_head/crop_full/crop_feats_val.pkl",
+      "bytes": 13047108219,
+      "mtime_ns": 1788261491555474309,
+      "sha256": "4598f2f185d5655b0fecf414c885bfbc09693f80a50935cd558e6ad975cf4155"
+    },
+    "yolo": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/dets_v8x_best_val_fullcand.pkl",
+      "bytes": 183339278,
+      "mtime_ns": 1787586572807239353,
+      "sha256": "447e28f0c071bb7910b5cc9ac37420c7da3bfa3827ad12b5eb3b61e7e5f64811"
+    },
+    "gt": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/dets_i3d_val_fullcand.pkl",
+      "bytes": 5000961817,
+      "mtime_ns": 1787591376422741017,
+      "sha256": "c792b324fa6f2cec88d2cafb48ee6dbf8682d62c89ff69f3025044bb1f82d68f"
+    },
+    "phrases": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp12_phrase_head/phrases.json",
+      "bytes": 11777,
+      "mtime_ns": 1787759808018802762,
+      "sha256": "ea2e4a93d82104c6f7fba79f76654a0c51a1401f15e2a073a26b7662b3945fc6"
+    },
+    "canonical_embeddings": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp12_phrase_head/phrase_embeds.pt",
+      "bytes": 383507,
+      "mtime_ns": 1787767289959429044,
+      "sha256": "e5dc182b6a48d5b8371f4cb783469eb62c1a2be8275819b52f34197d4a9fd89d"
+    },
+    "alphas": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp6_detection_steered/cache/flat_alphas.pt",
+      "bytes": 2309,
+      "mtime_ns": 1783010104631095499,
+      "sha256": "d8623d00c8dac4681637cf7420915900a93e43de8fc794551d21e49420eedb98"
+    },
+    "frames": {
+      "path": "/data/repos/wiki/artifacts/post-proposal-experiments/shared-frames.json",
+      "bytes": 922460,
+      "mtime_ns": 1789095203376041707,
+      "sha256": "2ef7e3c370a54cd0d61b9aff46acdab2a0e7fa23f1e5f91dd081b67cc35174f1"
+    },
+    "counts": {
+      "path": "/data/repos/wiki/artifacts/proposal-tail/train-counts.json",
+      "bytes": 9544,
+      "mtime_ns": 1788728528391247308,
+      "sha256": "8d8b168945a49d122af6de5b802fd46d80c80ea15cc9a08ec9ad9b121b12639f"
+    },
+    "annotation": {
+      "path": "/data/datasets/ROAD_plusplus/road_waymo_trainval_v1.1.json",
+      "bytes": 1149647915,
+      "mtime_ns": 1774922990732747348,
+      "sha256": "628b39bb9aabd917c6631144e319ecba25c1de3a10502c2360439af7e4f4586a"
+    },
+    "text_weights": {
+      "path": "/home/brandon/.cache/huggingface/hub/models--OpenGVLab--InternVideo2_CLIP_S/snapshots/1f9fca1389fd883defc652634d95a21121c85a8c/model.safetensors",
+      "bytes": 745562274,
+      "mtime_ns": 1787181232831080722,
+      "sha256": "136b42a078a8ec440e38b56d91d570fb0969643a641795e06e171162ab176b4e"
+    }
+  },
+  "dependencies": {
+    "torch": "2.9.0",
+    "numpy": "2.2.6",
+    "scipy": "1.16.3",
+    "transformers": "5.3.0",
+    "safetensors": "0.7.0",
+    "open_clip_torch": "3.3.0",
+    "torchvision": "0.24.0"
+  },
+  "git_revision": "2c78f6510bc1b0503cac020f4aaafac06ae9c4e0",
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:16:10) [GCC 11.2.0]",
+  "sources": {
+    "/data/repos/ROAD_Reason/research/post-proposal/historical/post-proposal-experiments/train-repeats.py": "b842fedcb483bd2c7ba71eecb80b9167e80154962a349204b046793cca020e75",
+    "/data/repos/ROAD_Reason/research/post-proposal/stage56-full/metric.py": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+    "/data/repos/ROAD_Reason/research/post-proposal/stage56-full/baseline-core.py": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9",
+    "/data/repos/ROAD_Reason/research/post-proposal/historical/post-proposal-experiments/baseline-core.py": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9",
+    "/data/repos/ROAD_Reason/experiments/exp12_phrase_head/embed_phrases.py": "7b6d58537d8e3d5ea29bd0547cc12aaca0222e545c533433ebeaf0ce50caa199",
+    "/data/repos/ROAD_Reason/experiments/exp12_phrase_head/crop_full/cache_crop_feats_h200.py": "234360892f9abc369ac40d5155d998f52b52a46e30414c48aab67c9d816d6829",
+    "/home/brandon/.cache/huggingface/hub/models--OpenGVLab--InternVideo2_CLIP_S/snapshots/1f9fca1389fd883defc652634d95a21121c85a8c/internvideo2_clip_vision.py": "7900257ef4458faab7191b19cd2e1e43b679f93f5f705dda62bea7261a1e300e",
+    "/home/brandon/.cache/huggingface/hub/models--OpenGVLab--InternVideo2_CLIP_S/snapshots/1f9fca1389fd883defc652634d95a21121c85a8c/mobile_clip_transformer.py": "22ae7340f94fa52ad2b944fceefa4cffa1c7f120e0ee0ff1162ac06b7300f023",
+    "/home/brandon/.cache/huggingface/hub/models--OpenGVLab--InternVideo2_CLIP_S/snapshots/1f9fca1389fd883defc652634d95a21121c85a8c/mobile_clip.py": "d2b6376533fa2d3dc314cdac6358334abd8efcc48a8806f3f0d10122d4abf1b8",
+    "/home/brandon/.cache/huggingface/hub/models--OpenGVLab--InternVideo2_CLIP_S/snapshots/1f9fca1389fd883defc652634d95a21121c85a8c/flash_attention_class.py": "c31e016d50268dd79bdf48cc6c6805982503622f9c3f6994ee78e95d00d79c60",
+    "/home/brandon/.cache/huggingface/hub/models--OpenGVLab--InternVideo2_CLIP_S/snapshots/1f9fca1389fd883defc652634d95a21121c85a8c/config.py": "a6d244fd4e6fc8f1713efad799cff8b738026442aaf597f9ec7351990ad04d75",
+    "/home/brandon/.cache/huggingface/hub/models--OpenGVLab--InternVideo2_CLIP_S/snapshots/1f9fca1389fd883defc652634d95a21121c85a8c/modeling_internvideo2encoder.py": "0b50d8f9b70e0c6089e14cbb66103851a2cc6a44eb7e14fa284371d230806065",
+    "/home/brandon/.cache/huggingface/hub/models--OpenGVLab--InternVideo2_CLIP_S/snapshots/1f9fca1389fd883defc652634d95a21121c85a8c/pos_embed.py": "9a6fe5fc6d364975a31c04fbf857218f6b87a6fb7cca460fba3cc902d0a2cdb9",
+    "/home/brandon/.cache/huggingface/hub/models--OpenGVLab--InternVideo2_CLIP_S/snapshots/1f9fca1389fd883defc652634d95a21121c85a8c/config.json": "fa2bdde7a33c96c78c608490dded6e6af6e6938bc16e3328ad1c99c5f16741bd"
+  }
+}

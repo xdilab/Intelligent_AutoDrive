@@ -1,0 +1,971 @@
+{
+  "canonical_max_abs_error": 1.1920928955078125e-07,
+  "canonical_min_cosine": 0.9999998211860657,
+  "same_special_row": true,
+  "per_class": [
+    {
+      "id": "agentness",
+      "row": 0,
+      "canonical_to_aggregate_cosine": 0.9999998807907104
+    },
+    {
+      "id": "agent:Ped",
+      "row": 1,
+      "canonical_to_aggregate_cosine": 0.9640060663223267
+    },
+    {
+      "id": "agent:Car",
+      "row": 2,
+      "canonical_to_aggregate_cosine": 0.9400370121002197
+    },
+    {
+      "id": "agent:Cyc",
+      "row": 3,
+      "canonical_to_aggregate_cosine": 0.9626011848449707
+    },
+    {
+      "id": "agent:Mobike",
+      "row": 4,
+      "canonical_to_aggregate_cosine": 0.963683009147644
+    },
+    {
+      "id": "agent:SmalVeh",
+      "row": 5,
+      "canonical_to_aggregate_cosine": 0.9589440822601318
+    },
+    {
+      "id": "agent:MedVeh",
+      "row": 6,
+      "canonical_to_aggregate_cosine": 0.958394467830658
+    },
+    {
+      "id": "agent:LarVeh",
+      "row": 7,
+      "canonical_to_aggregate_cosine": 0.9586156606674194
+    },
+    {
+      "id": "agent:Bus",
+      "row": 8,
+      "canonical_to_aggregate_cosine": 0.9676746129989624
+    },
+    {
+      "id": "agent:EmVeh",
+      "row": 9,
+      "canonical_to_aggregate_cosine": 0.9745402336120605
+    },
+    {
+      "id": "agent:TL",
+      "row": 10,
+      "canonical_to_aggregate_cosine": 0.9813836812973022
+    },
+    {
+      "id": "action:Red",
+      "row": 11,
+      "canonical_to_aggregate_cosine": 0.9565834403038025
+    },
+    {
+      "id": "action:Amber",
+      "row": 12,
+      "canonical_to_aggregate_cosine": 0.9369531869888306
+    },
+    {
+      "id": "action:Green",
+      "row": 13,
+      "canonical_to_aggregate_cosine": 0.9545507431030273
+    },
+    {
+      "id": "action:MovAway",
+      "row": 14,
+      "canonical_to_aggregate_cosine": 0.9346318244934082
+    },
+    {
+      "id": "action:MovTow",
+      "row": 15,
+      "canonical_to_aggregate_cosine": 0.9405661225318909
+    },
+    {
+      "id": "action:Mov",
+      "row": 16,
+      "canonical_to_aggregate_cosine": 0.9119230508804321
+    },
+    {
+      "id": "action:Rev",
+      "row": 17,
+      "canonical_to_aggregate_cosine": 0.9051961898803711
+    },
+    {
+      "id": "action:Brake",
+      "row": 18,
+      "canonical_to_aggregate_cosine": 0.8785430192947388
+    },
+    {
+      "id": "action:Stop",
+      "row": 19,
+      "canonical_to_aggregate_cosine": 0.900818943977356
+    },
+    {
+      "id": "action:IncatLft",
+      "row": 20,
+      "canonical_to_aggregate_cosine": 0.9612696170806885
+    },
+    {
+      "id": "action:IncatRht",
+      "row": 21,
+      "canonical_to_aggregate_cosine": 0.9589735269546509
+    },
+    {
+      "id": "action:HazLit",
+      "row": 22,
+      "canonical_to_aggregate_cosine": 0.9124143123626709
+    },
+    {
+      "id": "action:TurLft",
+      "row": 23,
+      "canonical_to_aggregate_cosine": 0.9104329347610474
+    },
+    {
+      "id": "action:TurRht",
+      "row": 24,
+      "canonical_to_aggregate_cosine": 0.9037193059921265
+    },
+    {
+      "id": "action:MovRht",
+      "row": 25,
+      "canonical_to_aggregate_cosine": 0.8207943439483643
+    },
+    {
+      "id": "action:MovLft",
+      "row": 26,
+      "canonical_to_aggregate_cosine": 0.8202219009399414
+    },
+    {
+      "id": "action:Ovtak",
+      "row": 27,
+      "canonical_to_aggregate_cosine": 0.9120512008666992
+    },
+    {
+      "id": "action:Wait2X",
+      "row": 28,
+      "canonical_to_aggregate_cosine": 0.9111625552177429
+    },
+    {
+      "id": "action:XingFmLft",
+      "row": 29,
+      "canonical_to_aggregate_cosine": 0.8155319690704346
+    },
+    {
+      "id": "action:XingFmRht",
+      "row": 30,
+      "canonical_to_aggregate_cosine": 0.824346125125885
+    },
+    {
+      "id": "action:Xing",
+      "row": 31,
+      "canonical_to_aggregate_cosine": 0.9146549105644226
+    },
+    {
+      "id": "action:PushObj",
+      "row": 32,
+      "canonical_to_aggregate_cosine": 0.9168868064880371
+    },
+    {
+      "id": "loc:VehLane",
+      "row": 33,
+      "canonical_to_aggregate_cosine": 0.918302059173584
+    },
+    {
+      "id": "loc:OutgoLane",
+      "row": 34,
+      "canonical_to_aggregate_cosine": 0.8418548107147217
+    },
+    {
+      "id": "loc:OutgoCycLane",
+      "row": 35,
+      "canonical_to_aggregate_cosine": 0.8954207897186279
+    },
+    {
+      "id": "loc:OutgoBusLane",
+      "row": 36,
+      "canonical_to_aggregate_cosine": 0.8694172501564026
+    },
+    {
+      "id": "loc:IncomLane",
+      "row": 37,
+      "canonical_to_aggregate_cosine": 0.8439207077026367
+    },
+    {
+      "id": "loc:IncomCycLane",
+      "row": 38,
+      "canonical_to_aggregate_cosine": 0.8985110521316528
+    },
+    {
+      "id": "loc:IncomBusLane",
+      "row": 39,
+      "canonical_to_aggregate_cosine": 0.8687630891799927
+    },
+    {
+      "id": "loc:Pav",
+      "row": 40,
+      "canonical_to_aggregate_cosine": 0.8775566816329956
+    },
+    {
+      "id": "loc:LftPav",
+      "row": 41,
+      "canonical_to_aggregate_cosine": 0.8060661554336548
+    },
+    {
+      "id": "loc:RhtPav",
+      "row": 42,
+      "canonical_to_aggregate_cosine": 0.8146549463272095
+    },
+    {
+      "id": "loc:Jun",
+      "row": 43,
+      "canonical_to_aggregate_cosine": 0.8965808153152466
+    },
+    {
+      "id": "loc:xing",
+      "row": 44,
+      "canonical_to_aggregate_cosine": 0.931159496307373
+    },
+    {
+      "id": "loc:BusStop",
+      "row": 45,
+      "canonical_to_aggregate_cosine": 0.9115605354309082
+    },
+    {
+      "id": "loc:parking",
+      "row": 46,
+      "canonical_to_aggregate_cosine": 0.8841502666473389
+    },
+    {
+      "id": "loc:LftParking",
+      "row": 47,
+      "canonical_to_aggregate_cosine": 0.8299622535705566
+    },
+    {
+      "id": "loc:rightParking",
+      "row": 48,
+      "canonical_to_aggregate_cosine": 0.8339940309524536
+    },
+    {
+      "id": "duplex:Ped-MovAway",
+      "row": 49,
+      "canonical_to_aggregate_cosine": 0.9768091440200806
+    },
+    {
+      "id": "duplex:Ped-MovTow",
+      "row": 50,
+      "canonical_to_aggregate_cosine": 0.9828757047653198
+    },
+    {
+      "id": "duplex:Ped-Mov",
+      "row": 51,
+      "canonical_to_aggregate_cosine": 0.9794434309005737
+    },
+    {
+      "id": "duplex:Ped-Stop",
+      "row": 52,
+      "canonical_to_aggregate_cosine": 0.9785481691360474
+    },
+    {
+      "id": "duplex:Ped-Wait2X",
+      "row": 53,
+      "canonical_to_aggregate_cosine": 0.9645872116088867
+    },
+    {
+      "id": "duplex:Ped-XingFmLft",
+      "row": 54,
+      "canonical_to_aggregate_cosine": 0.8939489126205444
+    },
+    {
+      "id": "duplex:Ped-XingFmRht",
+      "row": 55,
+      "canonical_to_aggregate_cosine": 0.8945982456207275
+    },
+    {
+      "id": "duplex:Ped-Xing",
+      "row": 56,
+      "canonical_to_aggregate_cosine": 0.978679895401001
+    },
+    {
+      "id": "duplex:Ped-PushObj",
+      "row": 57,
+      "canonical_to_aggregate_cosine": 0.9775844216346741
+    },
+    {
+      "id": "duplex:Car-MovAway",
+      "row": 58,
+      "canonical_to_aggregate_cosine": 0.9758408069610596
+    },
+    {
+      "id": "duplex:Car-MovTow",
+      "row": 59,
+      "canonical_to_aggregate_cosine": 0.9788659811019897
+    },
+    {
+      "id": "duplex:Car-Brake",
+      "row": 60,
+      "canonical_to_aggregate_cosine": 0.9135512113571167
+    },
+    {
+      "id": "duplex:Car-Stop",
+      "row": 61,
+      "canonical_to_aggregate_cosine": 0.9601330757141113
+    },
+    {
+      "id": "duplex:Car-IncatLft",
+      "row": 62,
+      "canonical_to_aggregate_cosine": 0.9577727317810059
+    },
+    {
+      "id": "duplex:Car-IncatRht",
+      "row": 63,
+      "canonical_to_aggregate_cosine": 0.9580186605453491
+    },
+    {
+      "id": "duplex:Car-HazLit",
+      "row": 64,
+      "canonical_to_aggregate_cosine": 0.9557836055755615
+    },
+    {
+      "id": "duplex:Car-TurLft",
+      "row": 65,
+      "canonical_to_aggregate_cosine": 0.9751665592193604
+    },
+    {
+      "id": "duplex:Car-TurRht",
+      "row": 66,
+      "canonical_to_aggregate_cosine": 0.9729436635971069
+    },
+    {
+      "id": "duplex:Car-MovRht",
+      "row": 67,
+      "canonical_to_aggregate_cosine": 0.8859560489654541
+    },
+    {
+      "id": "duplex:Car-MovLft",
+      "row": 68,
+      "canonical_to_aggregate_cosine": 0.8923339247703552
+    },
+    {
+      "id": "duplex:Car-XingFmLft",
+      "row": 69,
+      "canonical_to_aggregate_cosine": 0.8709033727645874
+    },
+    {
+      "id": "duplex:Car-XingFmRht",
+      "row": 70,
+      "canonical_to_aggregate_cosine": 0.8680758476257324
+    },
+    {
+      "id": "duplex:Cyc-MovAway",
+      "row": 71,
+      "canonical_to_aggregate_cosine": 0.9780813455581665
+    },
+    {
+      "id": "duplex:Cyc-MovTow",
+      "row": 72,
+      "canonical_to_aggregate_cosine": 0.9830777049064636
+    },
+    {
+      "id": "duplex:Cyc-Stop",
+      "row": 73,
+      "canonical_to_aggregate_cosine": 0.9774923920631409
+    },
+    {
+      "id": "duplex:Mobike-Stop",
+      "row": 74,
+      "canonical_to_aggregate_cosine": 0.977365255355835
+    },
+    {
+      "id": "duplex:MedVeh-MovAway",
+      "row": 75,
+      "canonical_to_aggregate_cosine": 0.9689022302627563
+    },
+    {
+      "id": "duplex:MedVeh-MovTow",
+      "row": 76,
+      "canonical_to_aggregate_cosine": 0.9710720181465149
+    },
+    {
+      "id": "duplex:MedVeh-Brake",
+      "row": 77,
+      "canonical_to_aggregate_cosine": 0.8972775936126709
+    },
+    {
+      "id": "duplex:MedVeh-Stop",
+      "row": 78,
+      "canonical_to_aggregate_cosine": 0.9547618627548218
+    },
+    {
+      "id": "duplex:MedVeh-IncatLft",
+      "row": 79,
+      "canonical_to_aggregate_cosine": 0.9523078203201294
+    },
+    {
+      "id": "duplex:MedVeh-IncatRht",
+      "row": 80,
+      "canonical_to_aggregate_cosine": 0.9525907039642334
+    },
+    {
+      "id": "duplex:MedVeh-HazLit",
+      "row": 81,
+      "canonical_to_aggregate_cosine": 0.9486991167068481
+    },
+    {
+      "id": "duplex:MedVeh-TurRht",
+      "row": 82,
+      "canonical_to_aggregate_cosine": 0.946321427822113
+    },
+    {
+      "id": "duplex:MedVeh-XingFmLft",
+      "row": 83,
+      "canonical_to_aggregate_cosine": 0.8684445023536682
+    },
+    {
+      "id": "duplex:MedVeh-XingFmRht",
+      "row": 84,
+      "canonical_to_aggregate_cosine": 0.8646925687789917
+    },
+    {
+      "id": "duplex:LarVeh-MovAway",
+      "row": 85,
+      "canonical_to_aggregate_cosine": 0.9739442467689514
+    },
+    {
+      "id": "duplex:LarVeh-MovTow",
+      "row": 86,
+      "canonical_to_aggregate_cosine": 0.9765448570251465
+    },
+    {
+      "id": "duplex:LarVeh-Stop",
+      "row": 87,
+      "canonical_to_aggregate_cosine": 0.9536125659942627
+    },
+    {
+      "id": "duplex:LarVeh-HazLit",
+      "row": 88,
+      "canonical_to_aggregate_cosine": 0.9526691436767578
+    },
+    {
+      "id": "duplex:Bus-MovAway",
+      "row": 89,
+      "canonical_to_aggregate_cosine": 0.9755966663360596
+    },
+    {
+      "id": "duplex:Bus-MovTow",
+      "row": 90,
+      "canonical_to_aggregate_cosine": 0.9785885810852051
+    },
+    {
+      "id": "duplex:Bus-Brake",
+      "row": 91,
+      "canonical_to_aggregate_cosine": 0.9184920787811279
+    },
+    {
+      "id": "duplex:Bus-Stop",
+      "row": 92,
+      "canonical_to_aggregate_cosine": 0.9744882583618164
+    },
+    {
+      "id": "duplex:Bus-HazLit",
+      "row": 93,
+      "canonical_to_aggregate_cosine": 0.9631960391998291
+    },
+    {
+      "id": "duplex:EmVeh-Stop",
+      "row": 94,
+      "canonical_to_aggregate_cosine": 0.9801316261291504
+    },
+    {
+      "id": "duplex:TL-Red",
+      "row": 95,
+      "canonical_to_aggregate_cosine": 0.9748001098632812
+    },
+    {
+      "id": "duplex:TL-Amber",
+      "row": 96,
+      "canonical_to_aggregate_cosine": 0.9770265221595764
+    },
+    {
+      "id": "duplex:TL-Green",
+      "row": 97,
+      "canonical_to_aggregate_cosine": 0.9760468602180481
+    },
+    {
+      "id": "triplet:Ped-MovAway-LftPav",
+      "row": 98,
+      "canonical_to_aggregate_cosine": 0.9577635526657104
+    },
+    {
+      "id": "triplet:Ped-MovAway-RhtPav",
+      "row": 99,
+      "canonical_to_aggregate_cosine": 0.9593380689620972
+    },
+    {
+      "id": "triplet:Ped-MovAway-Jun",
+      "row": 100,
+      "canonical_to_aggregate_cosine": 0.9706263542175293
+    },
+    {
+      "id": "triplet:Ped-MovTow-LftPav",
+      "row": 101,
+      "canonical_to_aggregate_cosine": 0.9551506042480469
+    },
+    {
+      "id": "triplet:Ped-MovTow-RhtPav",
+      "row": 102,
+      "canonical_to_aggregate_cosine": 0.9576247334480286
+    },
+    {
+      "id": "triplet:Ped-MovTow-Jun",
+      "row": 103,
+      "canonical_to_aggregate_cosine": 0.9682036638259888
+    },
+    {
+      "id": "triplet:Ped-Mov-OutgoLane",
+      "row": 104,
+      "canonical_to_aggregate_cosine": 0.9038046598434448
+    },
+    {
+      "id": "triplet:Ped-Mov-Pav",
+      "row": 105,
+      "canonical_to_aggregate_cosine": 0.9577924013137817
+    },
+    {
+      "id": "triplet:Ped-Mov-RhtPav",
+      "row": 106,
+      "canonical_to_aggregate_cosine": 0.8667974472045898
+    },
+    {
+      "id": "triplet:Ped-Stop-OutgoLane",
+      "row": 107,
+      "canonical_to_aggregate_cosine": 0.9107939004898071
+    },
+    {
+      "id": "triplet:Ped-Stop-Pav",
+      "row": 108,
+      "canonical_to_aggregate_cosine": 0.9623366594314575
+    },
+    {
+      "id": "triplet:Ped-Stop-LftPav",
+      "row": 109,
+      "canonical_to_aggregate_cosine": 0.8830398321151733
+    },
+    {
+      "id": "triplet:Ped-Stop-RhtPav",
+      "row": 110,
+      "canonical_to_aggregate_cosine": 0.8911739587783813
+    },
+    {
+      "id": "triplet:Ped-Stop-BusStop",
+      "row": 111,
+      "canonical_to_aggregate_cosine": 0.9664345979690552
+    },
+    {
+      "id": "triplet:Ped-Wait2X-RhtPav",
+      "row": 112,
+      "canonical_to_aggregate_cosine": 0.8809099793434143
+    },
+    {
+      "id": "triplet:Ped-Wait2X-Jun",
+      "row": 113,
+      "canonical_to_aggregate_cosine": 0.9622557163238525
+    },
+    {
+      "id": "triplet:Ped-XingFmLft-Jun",
+      "row": 114,
+      "canonical_to_aggregate_cosine": 0.9117169380187988
+    },
+    {
+      "id": "triplet:Ped-XingFmRht-Jun",
+      "row": 115,
+      "canonical_to_aggregate_cosine": 0.9133434295654297
+    },
+    {
+      "id": "triplet:Ped-XingFmRht-xing",
+      "row": 116,
+      "canonical_to_aggregate_cosine": 0.9198219180107117
+    },
+    {
+      "id": "triplet:Ped-Xing-Jun",
+      "row": 117,
+      "canonical_to_aggregate_cosine": 0.9637411832809448
+    },
+    {
+      "id": "triplet:Ped-PushObj-LftPav",
+      "row": 118,
+      "canonical_to_aggregate_cosine": 0.8779243230819702
+    },
+    {
+      "id": "triplet:Ped-PushObj-RhtPav",
+      "row": 119,
+      "canonical_to_aggregate_cosine": 0.8861441612243652
+    },
+    {
+      "id": "triplet:Car-MovAway-VehLane",
+      "row": 120,
+      "canonical_to_aggregate_cosine": 0.9768872261047363
+    },
+    {
+      "id": "triplet:Car-MovAway-OutgoLane",
+      "row": 121,
+      "canonical_to_aggregate_cosine": 0.9686890840530396
+    },
+    {
+      "id": "triplet:Car-MovAway-Jun",
+      "row": 122,
+      "canonical_to_aggregate_cosine": 0.9659181237220764
+    },
+    {
+      "id": "triplet:Car-MovTow-VehLane",
+      "row": 123,
+      "canonical_to_aggregate_cosine": 0.9763594269752502
+    },
+    {
+      "id": "triplet:Car-MovTow-IncomLane",
+      "row": 124,
+      "canonical_to_aggregate_cosine": 0.9639607667922974
+    },
+    {
+      "id": "triplet:Car-MovTow-Jun",
+      "row": 125,
+      "canonical_to_aggregate_cosine": 0.9648110866546631
+    },
+    {
+      "id": "triplet:Car-Brake-VehLane",
+      "row": 126,
+      "canonical_to_aggregate_cosine": 0.9271551370620728
+    },
+    {
+      "id": "triplet:Car-Brake-OutgoLane",
+      "row": 127,
+      "canonical_to_aggregate_cosine": 0.8861291408538818
+    },
+    {
+      "id": "triplet:Car-Brake-Jun",
+      "row": 128,
+      "canonical_to_aggregate_cosine": 0.9199858903884888
+    },
+    {
+      "id": "triplet:Car-Stop-VehLane",
+      "row": 129,
+      "canonical_to_aggregate_cosine": 0.9748709797859192
+    },
+    {
+      "id": "triplet:Car-Stop-OutgoLane",
+      "row": 130,
+      "canonical_to_aggregate_cosine": 0.9062301516532898
+    },
+    {
+      "id": "triplet:Car-Stop-IncomLane",
+      "row": 131,
+      "canonical_to_aggregate_cosine": 0.8994406461715698
+    },
+    {
+      "id": "triplet:Car-Stop-Jun",
+      "row": 132,
+      "canonical_to_aggregate_cosine": 0.9629301428794861
+    },
+    {
+      "id": "triplet:Car-Stop-parking",
+      "row": 133,
+      "canonical_to_aggregate_cosine": 0.9528179168701172
+    },
+    {
+      "id": "triplet:Car-IncatLft-VehLane",
+      "row": 134,
+      "canonical_to_aggregate_cosine": 0.9629576802253723
+    },
+    {
+      "id": "triplet:Car-IncatLft-OutgoLane",
+      "row": 135,
+      "canonical_to_aggregate_cosine": 0.9187327027320862
+    },
+    {
+      "id": "triplet:Car-IncatLft-IncomLane",
+      "row": 136,
+      "canonical_to_aggregate_cosine": 0.9123379588127136
+    },
+    {
+      "id": "triplet:Car-IncatLft-Jun",
+      "row": 137,
+      "canonical_to_aggregate_cosine": 0.9585034847259521
+    },
+    {
+      "id": "triplet:Car-IncatRht-VehLane",
+      "row": 138,
+      "canonical_to_aggregate_cosine": 0.9632370471954346
+    },
+    {
+      "id": "triplet:Car-IncatRht-OutgoLane",
+      "row": 139,
+      "canonical_to_aggregate_cosine": 0.9168335795402527
+    },
+    {
+      "id": "triplet:Car-IncatRht-IncomLane",
+      "row": 140,
+      "canonical_to_aggregate_cosine": 0.9116150736808777
+    },
+    {
+      "id": "triplet:Car-IncatRht-Jun",
+      "row": 141,
+      "canonical_to_aggregate_cosine": 0.9602822065353394
+    },
+    {
+      "id": "triplet:Car-HazLit-IncomLane",
+      "row": 142,
+      "canonical_to_aggregate_cosine": 0.9270260334014893
+    },
+    {
+      "id": "triplet:Car-TurLft-VehLane",
+      "row": 143,
+      "canonical_to_aggregate_cosine": 0.9691295623779297
+    },
+    {
+      "id": "triplet:Car-TurLft-Jun",
+      "row": 144,
+      "canonical_to_aggregate_cosine": 0.9591443538665771
+    },
+    {
+      "id": "triplet:Car-TurRht-Jun",
+      "row": 145,
+      "canonical_to_aggregate_cosine": 0.9602788090705872
+    },
+    {
+      "id": "triplet:Car-MovRht-OutgoLane",
+      "row": 146,
+      "canonical_to_aggregate_cosine": 0.8828396797180176
+    },
+    {
+      "id": "triplet:Car-MovLft-VehLane",
+      "row": 147,
+      "canonical_to_aggregate_cosine": 0.9628840684890747
+    },
+    {
+      "id": "triplet:Car-MovLft-OutgoLane",
+      "row": 148,
+      "canonical_to_aggregate_cosine": 0.8833526968955994
+    },
+    {
+      "id": "triplet:Car-XingFmLft-Jun",
+      "row": 149,
+      "canonical_to_aggregate_cosine": 0.9002628922462463
+    },
+    {
+      "id": "triplet:Car-XingFmRht-Jun",
+      "row": 150,
+      "canonical_to_aggregate_cosine": 0.8993512392044067
+    },
+    {
+      "id": "triplet:Cyc-MovAway-OutgoCycLane",
+      "row": 151,
+      "canonical_to_aggregate_cosine": 0.9798564314842224
+    },
+    {
+      "id": "triplet:Cyc-MovAway-RhtPav",
+      "row": 152,
+      "canonical_to_aggregate_cosine": 0.9635603427886963
+    },
+    {
+      "id": "triplet:Cyc-MovTow-IncomLane",
+      "row": 153,
+      "canonical_to_aggregate_cosine": 0.9694926738739014
+    },
+    {
+      "id": "triplet:Cyc-MovTow-RhtPav",
+      "row": 154,
+      "canonical_to_aggregate_cosine": 0.9615806937217712
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-VehLane",
+      "row": 155,
+      "canonical_to_aggregate_cosine": 0.9704223871231079
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-OutgoLane",
+      "row": 156,
+      "canonical_to_aggregate_cosine": 0.9599667191505432
+    },
+    {
+      "id": "triplet:MedVeh-MovAway-Jun",
+      "row": 157,
+      "canonical_to_aggregate_cosine": 0.9510941505432129
+    },
+    {
+      "id": "triplet:MedVeh-MovTow-IncomLane",
+      "row": 158,
+      "canonical_to_aggregate_cosine": 0.9503482580184937
+    },
+    {
+      "id": "triplet:MedVeh-MovTow-Jun",
+      "row": 159,
+      "canonical_to_aggregate_cosine": 0.9504730701446533
+    },
+    {
+      "id": "triplet:MedVeh-Brake-VehLane",
+      "row": 160,
+      "canonical_to_aggregate_cosine": 0.9229525327682495
+    },
+    {
+      "id": "triplet:MedVeh-Brake-OutgoLane",
+      "row": 161,
+      "canonical_to_aggregate_cosine": 0.893357515335083
+    },
+    {
+      "id": "triplet:MedVeh-Brake-Jun",
+      "row": 162,
+      "canonical_to_aggregate_cosine": 0.9095624685287476
+    },
+    {
+      "id": "triplet:MedVeh-Stop-VehLane",
+      "row": 163,
+      "canonical_to_aggregate_cosine": 0.9698153138160706
+    },
+    {
+      "id": "triplet:MedVeh-Stop-OutgoLane",
+      "row": 164,
+      "canonical_to_aggregate_cosine": 0.9138966798782349
+    },
+    {
+      "id": "triplet:MedVeh-Stop-IncomLane",
+      "row": 165,
+      "canonical_to_aggregate_cosine": 0.9122568964958191
+    },
+    {
+      "id": "triplet:MedVeh-Stop-Jun",
+      "row": 166,
+      "canonical_to_aggregate_cosine": 0.9488208293914795
+    },
+    {
+      "id": "triplet:MedVeh-Stop-parking",
+      "row": 167,
+      "canonical_to_aggregate_cosine": 0.9554123282432556
+    },
+    {
+      "id": "triplet:MedVeh-IncatLft-IncomLane",
+      "row": 168,
+      "canonical_to_aggregate_cosine": 0.9143881797790527
+    },
+    {
+      "id": "triplet:MedVeh-IncatRht-Jun",
+      "row": 169,
+      "canonical_to_aggregate_cosine": 0.9491909742355347
+    },
+    {
+      "id": "triplet:MedVeh-TurRht-Jun",
+      "row": 170,
+      "canonical_to_aggregate_cosine": 0.9357576370239258
+    },
+    {
+      "id": "triplet:MedVeh-XingFmLft-Jun",
+      "row": 171,
+      "canonical_to_aggregate_cosine": 0.8939683437347412
+    },
+    {
+      "id": "triplet:MedVeh-XingFmRht-Jun",
+      "row": 172,
+      "canonical_to_aggregate_cosine": 0.8924708366394043
+    },
+    {
+      "id": "triplet:LarVeh-MovAway-VehLane",
+      "row": 173,
+      "canonical_to_aggregate_cosine": 0.974462628364563
+    },
+    {
+      "id": "triplet:LarVeh-MovTow-IncomLane",
+      "row": 174,
+      "canonical_to_aggregate_cosine": 0.9568603038787842
+    },
+    {
+      "id": "triplet:LarVeh-Stop-VehLane",
+      "row": 175,
+      "canonical_to_aggregate_cosine": 0.9753766059875488
+    },
+    {
+      "id": "triplet:LarVeh-Stop-Jun",
+      "row": 176,
+      "canonical_to_aggregate_cosine": 0.9690659046173096
+    },
+    {
+      "id": "triplet:Bus-MovAway-OutgoLane",
+      "row": 177,
+      "canonical_to_aggregate_cosine": 0.9681111574172974
+    },
+    {
+      "id": "triplet:Bus-MovTow-IncomLane",
+      "row": 178,
+      "canonical_to_aggregate_cosine": 0.9593108892440796
+    },
+    {
+      "id": "triplet:Bus-Stop-VehLane",
+      "row": 179,
+      "canonical_to_aggregate_cosine": 0.9766438007354736
+    },
+    {
+      "id": "triplet:Bus-Stop-OutgoLane",
+      "row": 180,
+      "canonical_to_aggregate_cosine": 0.9245354533195496
+    },
+    {
+      "id": "triplet:Bus-Stop-IncomLane",
+      "row": 181,
+      "canonical_to_aggregate_cosine": 0.9168965816497803
+    },
+    {
+      "id": "triplet:Bus-Stop-Jun",
+      "row": 182,
+      "canonical_to_aggregate_cosine": 0.9680303335189819
+    },
+    {
+      "id": "triplet:Bus-HazLit-OutgoLane",
+      "row": 183,
+      "canonical_to_aggregate_cosine": 0.9350001811981201
+    }
+  ],
+  "single": {
+    "norm_min": 0.9999998807907104,
+    "norm_max": 1.0000001192092896,
+    "near_pairs": [
+      {
+        "a": "triplet:Ped-MovAway-RhtPav",
+        "b": "triplet:Ped-MovAway-LftPav",
+        "cosine": 0.999322235584259,
+        "exact": false
+      },
+      {
+        "a": "triplet:Ped-MovTow-RhtPav",
+        "b": "triplet:Ped-MovTow-LftPav",
+        "cosine": 0.9993250370025635,
+        "exact": false
+      },
+      {
+        "a": "triplet:Ped-PushObj-RhtPav",
+        "b": "triplet:Ped-PushObj-LftPav",
+        "cosine": 0.999041736125946,
+        "exact": false
+      }
+    ],
+    "mean_off_diagonal_cosine": 0.6748101115226746
+  },
+  "multi": {
+    "norm_min": 0.9999998211860657,
+    "norm_max": 1.0000001192092896,
+    "near_pairs": [
+      {
+        "a": "triplet:Ped-MovAway-RhtPav",
+        "b": "triplet:Ped-MovAway-LftPav",
+        "cosine": 0.9993003606796265,
+        "exact": false
+      },
+      {
+        "a": "triplet:Ped-MovTow-RhtPav",
+        "b": "triplet:Ped-MovTow-LftPav",
+        "cosine": 0.9992941617965698,
+        "exact": false
+      }
+    ],
+    "mean_off_diagonal_cosine": 0.7791376709938049
+  }
+}
