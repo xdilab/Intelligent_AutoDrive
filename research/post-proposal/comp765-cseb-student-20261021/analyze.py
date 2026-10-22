@@ -58,7 +58,7 @@ Frozen shared ImageNet ResNet50 through layer 3, 3×3 RoIAlign, a 256-unit scene
 
 The speed reduction comes from the smaller student architecture. Distillation changes its training objective, not its inference cost; the matched comparison tests whether it improves accuracy at that fixed cost.
 
-Final evaluation uses 36,717 scored frames from 198 official validation videos, 6,163,968 fixed detector candidates, and IoU 0.5. The student processes 38,663 current/past frames from video starts and resets only at video boundaries. Selection is minimum supervised development BCE. Official validation is disjoint from teacher/student training and selection, but had prior thesis research use. The student selection pool belongs to teacher historical development. This is not a pristine unseen teacher test.
+Final evaluation uses 36,717 scored frames from 198 official validation videos, 6,163,968 fixed detector candidates, and IoU 0.5. The student processes 38,663 current/past frames from video starts and resets only at video boundaries. Selection is minimum supervised development BCE. Official validation is disjoint from teacher/student semantic-head training and selection. However, all 198 videos and all 36,717 scored frames were used in the shared YOLO detector validation/checkpoint-selection pool, and the benchmark had prior thesis research use. The student selection pool belongs to teacher historical development. This is a reused validation benchmark, not a pristine independent test of the complete teacher/student systems. The pre-evaluation provenance addendum corrects the original protocol’s broader wording without changing the experiment.
 
 ## Official detector results
 
@@ -78,7 +78,7 @@ Stage-level load/decode/preprocess/detector/encoding/head/export times, GPU memo
 
 The original 24-frame pilot: 11.59% supervised versus 24.12% distilled proposal AP over 17 supported triplets. The completed 96-frame expansion: 17.67% versus 21.03% proposal AP over 45 classes. Neither is comparable numerically to this official detector endpoint, nor an independent teacher test.
 
-Only three seeds and 64 training videos; a frozen encoder; training 32-frame segments shorter than full streams; teacher provides richer future-context supervision. Absence of significance is not equivalence. No tuning on final AP, seed cherry-picking, architecture changes, or deployment-safety claims. No backbone-finetuning or other follow-up was mixed into the main comparison. More training coverage or fine-tuning would be separate future studies.
+The paired-seed interval describes training-seed variation on this fixed benchmark, not uncertainty over new videos. Only three seeds and 64 training videos; a frozen encoder; training 32-frame segments shorter than full streams; teacher provides richer future-context supervision. Absence of significance is not equivalence. No tuning on final AP, seed cherry-picking, architecture changes, or deployment-safety claims. No backbone-finetuning or other follow-up was mixed into the main comparison. More training coverage or fine-tuning would be separate future studies.
 
 ## Artifacts
 
