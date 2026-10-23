@@ -1,0 +1,58 @@
+{
+  "time": 1792774091.602117,
+  "stage": "prepare/train/evaluation-preflight",
+  "benchmark": {
+    "time": 1792773988.9864094,
+    "prepare32frames_seconds": 0.7010523891076446,
+    "train16sequences_seconds": 0.458810156211257,
+    "six_head_inference32frames_seconds": 0.6766233970411122,
+    "gpu": "NVIDIA RTX A6000",
+    "peak_gpu_gib": 0.18466520309448242,
+    "parameters": {
+      "frozen_backbone": 4007548,
+      "trainable_head": 1240664,
+      "semantic_total": 5248212
+    },
+    "scope": "One actual32frame training sequence; six random heads with no AP inspection. Broader full-video throughput measured before full evaluator launch."
+  },
+  "new_training_runs": 6,
+  "new_detector_evaluations": 6,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "gpu": 0,
+  "queue": "No queue; GPU0 idle, no other training jobs observed",
+  "first_useful_detector_comparison_minutes": [
+    25,
+    40
+  ],
+  "complete_study_minutes": [
+    40,
+    60
+  ],
+  "training_minutes": [
+    6,
+    10
+  ],
+  "preparation_minutes": [
+    1,
+    3
+  ],
+  "evaluation_compute": "Provisional before full-video benchmark: about14\u201320minutes six-head inference; AP uses identical evaluator/candidates with previous measured2.8minutes/checkpoint, to be updated on first actual run",
+  "expected_gpu_gib": [
+    1,
+    3
+  ],
+  "expected_host_ram_gib": [
+    60,
+    100
+  ],
+  "temporary_shm_gib": 25.36,
+  "persistent_disk_gib": [
+    1,
+    2
+  ],
+  "uncertainty": "Initial model throughput uses one32frame training sequence; full candidate counts and runtime audit/setup add uncertainty. No guaranteed speedup."
+}

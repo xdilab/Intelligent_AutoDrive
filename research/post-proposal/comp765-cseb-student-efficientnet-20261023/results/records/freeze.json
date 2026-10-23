@@ -1,0 +1,32 @@
+{
+  "time": 1792774091.4797776,
+  "scope": "Frozen before new full training/evaluation; numeric model, loss, preprocessing, evaluator, protocol, data and baseline results",
+  "files": {
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-efficientnet-20261023/model.py": "2b92e23ad0001357fa37ec6246e6baea931bbc3c67f28fb00ef7ffc2d53962b6",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-efficientnet-20261023/common.py": "02f7d88045f791556d91a24f858a48f899bfb4a98731e037c67d83c65f7f790a",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-efficientnet-20261023/prepare.py": "31789ce38fc0dc39d112c25017c53ee58622fa2dc619f399f687a337faf35885",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-efficientnet-20261023/train.py": "f0e381ed62737c4e704600faaf3874f5543b56532996cd97561f781e16765d28",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-efficientnet-20261023/evaluate.py": "45636e7442d9efa599be19e83ae14ae421d416bf6e2fc678420cda9a6f891141",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-efficientnet-20261023/preflight.py": "7e08559d4cd5d724081ce2e8ed24469d3e753d81b32f245b70487cd7bb2eec96",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-efficientnet-20261023/evaluation_preflight.py": "5e0476245a3e9657f5042c5001ea56abd1356af6abb1dace46d39127196986f8",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-efficientnet-20261023/standalone.py": "0a431f2aa9b337e53e0318c63be0011041ee879278f0d3cd162a9435ded42d2a",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-efficientnet-20261023/protocol.json": "9b7be1baec002bb43ba90e65eb60233aa4bc642c95e567590ef919b5785e1088",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-efficientnet-20261023/PROVENANCE-ADDENDUM.md": "6cf0a2ba9ea9e72117db2b357322c4e3719ca70281a36603b9030b058d22e624",
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-efficientnet-20261023/split-manifest.json": "a66487119d3b993ff8837befe566aaf6fac118d078dae5745aac74d578f75623",
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/data-manifest.json": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+    "/home/brandon/.cache/torch/hub/checkpoints/efficientnet_b0_rwightman-7f5810bc.pth": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934",
+    "/data/repos/ROAD_Reason/research/post-proposal/cseb-student/pilot.py": "c2da7f5eb8b2d536b76d25a6afc64e4ada07b503f43bc10e972558bdc3af6305",
+    "/data/repos/ROAD_Reason/research/post-proposal/stage56-full/metric.py": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+    "/data/repos/ROAD_Reason/research/post-proposal/stage56-full/baseline-core.py": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9",
+    "/data/repos/wiki/artifacts/post-proposal-experiments/shared-frames.json": "2ef7e3c370a54cd0d61b9aff46acdab2a0e7fa23f1e5f91dd081b67cc35174f1",
+    "/data/repos/wiki/artifacts/proposal-tail/train-counts.json": "8d8b168945a49d122af6de5b802fd46d80c80ea15cc9a08ec9ad9b121b12639f",
+    "/data/repos/ROAD_Reason/experiments/exp11_yolo/runs/v8x_agent_1280_eccv/weights/best.pt": "3ad32910bacaf1fa74174503c5c29f94cfbbd83de51e5e5c301e6fc7f13e8684",
+    "/home/brandon/.local/share/road-reason/contextual-roi-1b-20260930/attention-global-dcb-seed0/best.pt": "968aefaf7d9f896dd360baf1ab39fb75777693dbcdbd9a2663fb6696ae6c5567",
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/supervised-seed0/detector-results.json": "05c8cbd826c25d1a161f509038dbf86d03eddfbc208caa613b45474351cf94a2",
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed0/detector-results.json": "6f1adeeaa2b40e7aeab50bcca4e773b5073871f9847a0287ef4025501d18b8ea",
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/supervised-seed1/detector-results.json": "ce291e418aa03239d05b08b25b0692d8506722273f00c443ad8dc0b1862ba83a",
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed1/detector-results.json": "e5d391fb1136f7da2aec61b187528c260d271f429de8d23799e938eb8bcc3f3b",
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/supervised-seed2/detector-results.json": "ec385fd15e6568e12d1120119a9047c4ed2a5384f1c8590e60a339642b9a6982",
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed2/detector-results.json": "ad09c5791660d7c5180ce57e3d1c82225cb0ba23ca4794f656c0ba427cb663d2"
+  }
+}

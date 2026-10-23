@@ -1,0 +1,13 @@
+{
+  "signature": {
+    "protocol_sha256": "9b7be1baec002bb43ba90e65eb60233aa4bc642c95e567590ef919b5785e1088",
+    "freeze_sha256": "706bf1726ced8b0e60109c59e3e01171d96efa51674f5ebe9d524ebdc429b3c0"
+  },
+  "data_manifest_sha256": "4fce6a3722dfd0e439a080ab5a7f00e2159a8660796dec050c7cdef735105a59",
+  "original_data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+  "time": 1792774179.152819,
+  "seconds": 52.05601836787537,
+  "frames": 2432,
+  "teacher_targets_only_train": true,
+  "unchanged_supervision_verified": true
+}

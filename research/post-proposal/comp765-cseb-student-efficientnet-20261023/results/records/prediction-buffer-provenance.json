@@ -1,0 +1,40 @@
+{
+  "time": 1792776709.4225597,
+  "scope": "Only temporary EfficientNet prediction buffers; all model weights, caches, metrics and source data preserved.",
+  "final_audit_sha256": "47e7d2fbc2e94da8cbe03487c688062da6480c9d138790df54b75d199aec7d64",
+  "files": [
+    {
+      "path": "/dev/shm/comp765-cseb-student-efficientnet-20261023/distilled-seed0.npy",
+      "bytes": 4536680576,
+      "sha256": "2b200d8b89035e95c95ffa45d9e8c1a9fb5a439dd5d3bc73de58562e42deae12"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-efficientnet-20261023/distilled-seed1.npy",
+      "bytes": 4536680576,
+      "sha256": "17d28162f1d4306201bfa0985fbd0260438c20a035bd260ddd67ed6e60d22603"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-efficientnet-20261023/distilled-seed2.npy",
+      "bytes": 4536680576,
+      "sha256": "91ec662c63e33236d04fb7d75dfb191ec43f6832b2d4bda9eb9d9f48ed7cb8ba"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-efficientnet-20261023/supervised-seed0.npy",
+      "bytes": 4536680576,
+      "sha256": "2310e1250e8ff1c317882d10ed1670280b6c9fff8348f175adcd669e67a8f69d"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-efficientnet-20261023/supervised-seed1.npy",
+      "bytes": 4536680576,
+      "sha256": "ebf5bc607d8eb569ac55c7b21d2bbd90d9012197900cc9f964f62b14774fa0ae"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-efficientnet-20261023/supervised-seed2.npy",
+      "bytes": 4536680576,
+      "sha256": "15a522023bf3233ed1003cb65b085a2b7d319b0cc975320819460c1a8ef4d6da"
+    }
+  ],
+  "total_bytes": 27220083456,
+  "removed": true,
+  "removed_time": 1792776713.2461507
+}

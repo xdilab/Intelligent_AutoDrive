@@ -1,0 +1,952 @@
+{
+  "time": 1792776604.1427622,
+  "metric": "Official detector AP@0.5 (%)",
+  "primary": "triplet",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "endpoints": {
+    "agentness": {
+      "efficientnet": {
+        "supervised": {
+          "mean": 65.36385345458984,
+          "sample_sd": 0.0
+        },
+        "distilled": {
+          "mean": 65.36385345458984,
+          "sample_sd": 0.0
+        },
+        "paired_delta": {
+          "mean": 0.0,
+          "sample_sd": 0.0
+        },
+        "paired_deltas": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "paired_t95": [
+          0.0,
+          0.0
+        ],
+        "df": 2
+      },
+      "resnet": {
+        "supervised": {
+          "mean": 65.36385345458984,
+          "sample_sd": 0.0
+        },
+        "distilled": {
+          "mean": 65.36385345458984,
+          "sample_sd": 0.0
+        },
+        "paired_delta": {
+          "mean": 0.0,
+          "sample_sd": 0.0
+        },
+        "paired_deltas": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "paired_t95": [
+          0.0,
+          0.0
+        ],
+        "df": 2
+      }
+    },
+    "agent": {
+      "efficientnet": {
+        "supervised": {
+          "mean": 35.246027261996645,
+          "sample_sd": 0.0
+        },
+        "distilled": {
+          "mean": 35.246027261996645,
+          "sample_sd": 0.0
+        },
+        "paired_delta": {
+          "mean": 0.0,
+          "sample_sd": 0.0
+        },
+        "paired_deltas": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "paired_t95": [
+          0.0,
+          0.0
+        ],
+        "df": 2
+      },
+      "resnet": {
+        "supervised": {
+          "mean": 35.246027261996645,
+          "sample_sd": 0.0
+        },
+        "distilled": {
+          "mean": 35.246027261996645,
+          "sample_sd": 0.0
+        },
+        "paired_delta": {
+          "mean": 0.0,
+          "sample_sd": 0.0
+        },
+        "paired_deltas": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "paired_t95": [
+          0.0,
+          0.0
+        ],
+        "df": 2
+      }
+    },
+    "action": {
+      "efficientnet": {
+        "supervised": {
+          "mean": 10.100696239154786,
+          "sample_sd": 0.16022540607061828
+        },
+        "distilled": {
+          "mean": 10.732013075048048,
+          "sample_sd": 0.08828130172525953
+        },
+        "paired_delta": {
+          "mean": 0.6313168358932616,
+          "sample_sd": 0.21185969689492953
+        },
+        "paired_deltas": [
+          0.7102075670422465,
+          0.792412539859388,
+          0.3913304007781502
+        ],
+        "paired_t95": [
+          0.10502817323662927,
+          1.157605498549894
+        ],
+        "df": 2
+      },
+      "resnet": {
+        "supervised": {
+          "mean": 11.606677615309529,
+          "sample_sd": 0.6766414163684019
+        },
+        "distilled": {
+          "mean": 13.710811194201762,
+          "sample_sd": 0.33331868876570675
+        },
+        "paired_delta": {
+          "mean": 2.1041335788922333,
+          "sample_sd": 0.46045271227879914
+        },
+        "paired_deltas": [
+          2.5417955695566814,
+          1.6238533787598666,
+          2.1467517883601523
+        ],
+        "paired_t95": [
+          0.9603056318428669,
+          3.2479615259415997
+        ],
+        "df": 2
+      }
+    },
+    "loc": {
+      "efficientnet": {
+        "supervised": {
+          "mean": 12.021478342125192,
+          "sample_sd": 0.30565696694092936
+        },
+        "distilled": {
+          "mean": 12.80262400888993,
+          "sample_sd": 0.034511053486196853
+        },
+        "paired_delta": {
+          "mean": 0.7811456667647386,
+          "sample_sd": 0.2766257402223687
+        },
+        "paired_deltas": [
+          1.0870011791121215,
+          0.7079744421644136,
+          0.5484613790176809
+        ],
+        "paired_t95": [
+          0.09396923343757613,
+          1.4683221000919011
+        ],
+        "df": 2
+      },
+      "resnet": {
+        "supervised": {
+          "mean": 14.25818843949431,
+          "sample_sd": 0.8804805849357872
+        },
+        "distilled": {
+          "mean": 15.987647744671753,
+          "sample_sd": 0.533124915035216
+        },
+        "paired_delta": {
+          "mean": 1.7294593051774427,
+          "sample_sd": 0.7896296967824065
+        },
+        "paired_deltas": [
+          2.3402884107199498,
+          0.8378017047652975,
+          2.010287800047081
+        ],
+        "paired_t95": [
+          -0.2320896029175008,
+          3.6910082132723865
+        ],
+        "df": 2
+      }
+    },
+    "duplex": {
+      "efficientnet": {
+        "supervised": {
+          "mean": 8.422365261789817,
+          "sample_sd": 0.4829088455065588
+        },
+        "distilled": {
+          "mean": 8.984195029432728,
+          "sample_sd": 0.16560053937921357
+        },
+        "paired_delta": {
+          "mean": 0.5618297676429108,
+          "sample_sd": 0.42077893516158255
+        },
+        "paired_deltas": [
+          1.046850675165806,
+          0.34423821684619327,
+          0.2944004109167331
+        ],
+        "paired_t95": [
+          -0.4834430535020112,
+          1.607102588787833
+        ],
+        "df": 2
+      },
+      "resnet": {
+        "supervised": {
+          "mean": 10.085409885774475,
+          "sample_sd": 0.9477088515566259
+        },
+        "distilled": {
+          "mean": 11.721230046083948,
+          "sample_sd": 0.24357265949954893
+        },
+        "paired_delta": {
+          "mean": 1.635820160309473,
+          "sample_sd": 0.9507790579194058
+        },
+        "paired_deltas": [
+          2.652580093369078,
+          0.768789603550708,
+          1.486090784008633
+        ],
+        "paired_t95": [
+          -0.7260459530103205,
+          3.9976862736292667
+        ],
+        "df": 2
+      }
+    },
+    "triplet": {
+      "efficientnet": {
+        "supervised": {
+          "mean": 4.285349864747317,
+          "sample_sd": 0.24552235891918747
+        },
+        "distilled": {
+          "mean": 4.6383850174385675,
+          "sample_sd": 0.07314685958891365
+        },
+        "paired_delta": {
+          "mean": 0.35303515269125035,
+          "sample_sd": 0.2893570976265336
+        },
+        "paired_deltas": [
+          0.6779107454633557,
+          0.25819481825889223,
+          0.12299989435150316
+        ],
+        "paired_t95": [
+          -0.3657677256853666,
+          1.0718380310678672
+        ],
+        "df": 2
+      },
+      "resnet": {
+        "supervised": {
+          "mean": 5.5999073677393065,
+          "sample_sd": 0.6888102492370723
+        },
+        "distilled": {
+          "mean": 6.585892087166277,
+          "sample_sd": 0.33903745606713515
+        },
+        "paired_delta": {
+          "mean": 0.9859847194269703,
+          "sample_sd": 0.6675220292893075
+        },
+        "paired_deltas": [
+          1.7054619675902867,
+          0.3867674394738101,
+          0.8657247512168142
+        ],
+        "paired_t95": [
+          -0.6722319269545288,
+          2.6442013658084695
+        ],
+        "df": 2
+      }
+    },
+    "tail47": {
+      "efficientnet": {
+        "supervised": {
+          "mean": 1.6327908297551545,
+          "sample_sd": 0.15839699900710608
+        },
+        "distilled": {
+          "mean": 1.7603858078678025,
+          "sample_sd": 0.03879777369513821
+        },
+        "paired_delta": {
+          "mean": 0.1275949781126481,
+          "sample_sd": 0.13916918273502477
+        },
+        "paired_deltas": [
+          0.1394991566664836,
+          0.26042970133192367,
+          -0.017143923660462912
+        ],
+        "paired_t95": [
+          -0.2181204370328628,
+          0.47331039325815905
+        ],
+        "df": 2
+      },
+      "resnet": {
+        "supervised": {
+          "mean": 2.639413218357409,
+          "sample_sd": 0.5978467948888199
+        },
+        "distilled": {
+          "mean": 3.350645459105148,
+          "sample_sd": 0.5168949156392263
+        },
+        "paired_delta": {
+          "mean": 0.7112322407477397,
+          "sample_sd": 0.6602399552139879
+        },
+        "paired_deltas": [
+          1.3745482337779977,
+          0.05411192920415653,
+          0.7050365592610648
+        ],
+        "paired_t95": [
+          -0.9288947308035006,
+          2.35135921229898
+        ],
+        "df": 2
+      }
+    },
+    "deep28": {
+      "efficientnet": {
+        "supervised": {
+          "mean": 0.7376335531229242,
+          "sample_sd": 0.08446649728253475
+        },
+        "distilled": {
+          "mean": 1.0792678135580251,
+          "sample_sd": 0.22335552577312026
+        },
+        "paired_delta": {
+          "mean": 0.34163426043510087,
+          "sample_sd": 0.19443598504937562
+        },
+        "paired_deltas": [
+          0.5066661913712909,
+          0.3909465871152601,
+          0.12729000281875158
+        ],
+        "paired_t95": [
+          -0.1413715025473246,
+          0.8246400234175264
+        ],
+        "df": 2
+      },
+      "resnet": {
+        "supervised": {
+          "mean": 1.578949409259838,
+          "sample_sd": 0.49337349532086766
+        },
+        "distilled": {
+          "mean": 2.6458172512994635,
+          "sample_sd": 0.5332513388721646
+        },
+        "paired_delta": {
+          "mean": 1.0668678420396256,
+          "sample_sd": 0.8714278967324843
+        },
+        "paired_deltas": [
+          1.699166159361734,
+          0.07282805234925549,
+          1.4286093144078873
+        ],
+        "paired_t95": [
+          -1.0978790593045786,
+          3.2316147433838296
+        ],
+        "df": 2
+      }
+    },
+    "common39": {
+      "efficientnet": {
+        "supervised": {
+          "mean": 7.482023573584026,
+          "sample_sd": 0.517649381249187
+        },
+        "distilled": {
+          "mean": 8.106743039228977,
+          "sample_sd": 0.11495090721710483
+        },
+        "paired_delta": {
+          "mean": 0.6247194656449512,
+          "sample_sd": 0.6082620959420793
+        },
+        "paired_deltas": [
+          1.3267657370903558,
+          0.2555014976324186,
+          0.291891162212079
+        ],
+        "paired_t95": [
+          -0.8862873455129031,
+          2.1357262768028056
+        ],
+        "df": 2
+      },
+      "resnet": {
+        "supervised": {
+          "mean": 9.167682368276466,
+          "sample_sd": 0.8223368076257397
+        },
+        "distilled": {
+          "mean": 10.484779049188663,
+          "sample_sd": 0.1803403703442592
+        },
+        "paired_delta": {
+          "mean": 1.3170966809121978,
+          "sample_sd": 0.6951053144699414
+        },
+        "paired_deltas": [
+          2.1042554416717625,
+          0.7876599774910868,
+          1.0593746235737438
+        ],
+        "paired_t95": [
+          -0.40964064440047054,
+          3.0438340062248663
+        ],
+        "df": 2
+      }
+    }
+  },
+  "architecture_deltas": {
+    "agentness": {
+      "supervised": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "deltas": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      },
+      "distilled": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "deltas": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      }
+    },
+    "agent": {
+      "supervised": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "deltas": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      },
+      "distilled": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "deltas": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      }
+    },
+    "action": {
+      "supervised": {
+        "mean": -1.5059813761547431,
+        "sample_sd": 0.6047694717274085,
+        "deltas": [
+          -0.8548225407403969,
+          -2.050056199373847,
+          -1.6130653883499857
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      },
+      "distilled": {
+        "mean": -2.978798119153715,
+        "sample_sd": 0.3512942101017161,
+        "deltas": [
+          -2.6864105432548318,
+          -2.8814970382743255,
+          -3.368486775931988
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      }
+    },
+    "loc": {
+      "supervised": {
+        "mean": -2.236710097369117,
+        "sample_sd": 0.6148914822111197,
+        "deltas": [
+          -1.583220171451103,
+          -2.8038811871083453,
+          -2.323028933547903
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      },
+      "distilled": {
+        "mean": -3.185023735781821,
+        "sample_sd": 0.5217379505533257,
+        "deltas": [
+          -2.8365074030589312,
+          -2.933708449709229,
+          -3.784855354577303
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      }
+    },
+    "duplex": {
+      "supervised": {
+        "mean": -1.663044623984658,
+        "sample_sd": 0.47622784791172046,
+        "deltas": [
+          -1.1133314417912716,
+          -1.9254703615811106,
+          -1.9503320685815915
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      },
+      "distilled": {
+        "mean": -2.73703501665122,
+        "sample_sd": 0.3963061661296153,
+        "deltas": [
+          -2.719060859994544,
+          -2.3500217482856254,
+          -3.1420224416734914
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      }
+    },
+    "triplet": {
+      "supervised": {
+        "mean": -1.3145575029919894,
+        "sample_sd": 0.46208081785783167,
+        "deltas": [
+          -0.7812291064711161,
+          -1.5949802742350503,
+          -1.567463128269802
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      },
+      "distilled": {
+        "mean": -1.9475070697277095,
+        "sample_sd": 0.31696847420653174,
+        "deltas": [
+          -1.808780328598047,
+          -1.7235528954499681,
+          -2.310187985135113
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      }
+    },
+    "tail47": {
+      "supervised": {
+        "mean": -1.0066223886022543,
+        "sample_sd": 0.5916056956822853,
+        "deltas": [
+          -0.3246799405822729,
+          -1.312762988800619,
+          -1.3824242364238708
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      },
+      "distilled": {
+        "mean": -1.5902596512373457,
+        "sample_sd": 0.499779639323477,
+        "deltas": [
+          -1.559729017693787,
+          -1.1064452166728518,
+          -2.1046047193453985
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      }
+    },
+    "deep28": {
+      "supervised": {
+        "mean": -0.8413158561369137,
+        "sample_sd": 0.5730711034511623,
+        "deltas": [
+          -0.22253288215558453,
+          -1.3537866698544736,
+          -0.9476280164006831
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      },
+      "distilled": {
+        "mean": -1.5665494377414384,
+        "sample_sd": 0.6206686372125274,
+        "deltas": [
+          -1.4150328501460276,
+          -1.035668135088469,
+          -2.2489473279898187
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      }
+    },
+    "common39": {
+      "supervised": {
+        "mean": -1.685658794692439,
+        "sample_sd": 0.31517976612292464,
+        "deltas": [
+          -1.3314293833115167,
+          -1.9350882848867998,
+          -1.7904587158790006
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      },
+      "distilled": {
+        "mean": -2.378036009959686,
+        "sample_sd": 0.23743283843843999,
+        "deltas": [
+          -2.1089190878929234,
+          -2.467246764745468,
+          -2.5579421772406654
+        ],
+        "interpretation": "Exploratory architecture contrast, including stride/channels/pretraining/projection changes; no identical initialization across encoders"
+      }
+    }
+  },
+  "class_changes": {
+    "all86": {
+      "improve": 67,
+      "decline": 18,
+      "tie": 1
+    },
+    "tail47": {
+      "improve": 33,
+      "decline": 13,
+      "tie": 1
+    },
+    "deep28": {
+      "improve": 21,
+      "decline": 6,
+      "tie": 1
+    },
+    "common39": {
+      "improve": 34,
+      "decline": 5,
+      "tie": 0
+    }
+  },
+  "teacher_triplet": 16.05890389562173,
+  "input_parity_verified": true,
+  "all_12_run_records": {
+    "efficientnet-supervised-seed0": {
+      "result_sha256": "3bd9fc988bd88d9be168e22da8477872006810169704cb1fd71c955cd4c47cc9",
+      "training": {
+        "signature": {
+          "protocol_sha256": "9b7be1baec002bb43ba90e65eb60233aa4bc642c95e567590ef919b5785e1088",
+          "freeze_sha256": "706bf1726ced8b0e60109c59e3e01171d96efa51674f5ebe9d524ebdc429b3c0",
+          "data_manifest_sha256": "4fce6a3722dfd0e439a080ab5a7f00e2159a8660796dec050c7cdef735105a59",
+          "seed": 0,
+          "condition": "supervised",
+          "order_sha256": "bbb2a04fd3ef8d5ca7079a4d7dda72f34456b805c2e326c88ad957cb1c66640e"
+        },
+        "initialization_sha256": "57c95f8c992043bcefd3181a3dd0d8eb25cb66459bef7074c7545199673de355",
+        "order_sha256": "bbb2a04fd3ef8d5ca7079a4d7dda72f34456b805c2e326c88ad957cb1c66640e",
+        "checkpoint_sha256": "9cc3cf8c75a45d2ada9ebc26f51bd3f83214e002fbc84cc3fa893115f3c656a5",
+        "selected_epoch": 6,
+        "best_selection_bce": 0.057255443185567856,
+        "time": 1792774245.279726,
+        "seconds": 62.76057939697057,
+        "trainable_parameters": 1240664
+      },
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-efficientnet-20261023/runs/supervised-seed0"
+    },
+    "efficientnet-distilled-seed0": {
+      "result_sha256": "13cd7c908462e1fc36f2de1b5b3dc8efffa839afceaeee7990f981e30dfcc486",
+      "training": {
+        "signature": {
+          "protocol_sha256": "9b7be1baec002bb43ba90e65eb60233aa4bc642c95e567590ef919b5785e1088",
+          "freeze_sha256": "706bf1726ced8b0e60109c59e3e01171d96efa51674f5ebe9d524ebdc429b3c0",
+          "data_manifest_sha256": "4fce6a3722dfd0e439a080ab5a7f00e2159a8660796dec050c7cdef735105a59",
+          "seed": 0,
+          "condition": "distilled",
+          "order_sha256": "bbb2a04fd3ef8d5ca7079a4d7dda72f34456b805c2e326c88ad957cb1c66640e"
+        },
+        "initialization_sha256": "57c95f8c992043bcefd3181a3dd0d8eb25cb66459bef7074c7545199673de355",
+        "order_sha256": "bbb2a04fd3ef8d5ca7079a4d7dda72f34456b805c2e326c88ad957cb1c66640e",
+        "checkpoint_sha256": "a63c40ebacc02b7a14927c02ee7413a2cbfd94576c89b4abfe8bcc2ac02ed6d1",
+        "selected_epoch": 9,
+        "best_selection_bce": 0.05579919368028641,
+        "time": 1792774307.3851628,
+        "seconds": 62.09230985911563,
+        "trainable_parameters": 1240664
+      },
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-efficientnet-20261023/runs/distilled-seed0"
+    },
+    "efficientnet-supervised-seed1": {
+      "result_sha256": "1f72c0fecb0969aa63c8740d7992a11a50a2b561ede7faefefe3b7f30aa9dcde",
+      "training": {
+        "signature": {
+          "protocol_sha256": "9b7be1baec002bb43ba90e65eb60233aa4bc642c95e567590ef919b5785e1088",
+          "freeze_sha256": "706bf1726ced8b0e60109c59e3e01171d96efa51674f5ebe9d524ebdc429b3c0",
+          "data_manifest_sha256": "4fce6a3722dfd0e439a080ab5a7f00e2159a8660796dec050c7cdef735105a59",
+          "seed": 1,
+          "condition": "supervised",
+          "order_sha256": "a8eb5ae1abc2ba6a027bdf4119af84df458250f353c043b47fced25d4bbf62aa"
+        },
+        "initialization_sha256": "babc420194387b2b4119785a69eeb0628816bf58eae1bda4b9f3bc4b9a55c67e",
+        "order_sha256": "a8eb5ae1abc2ba6a027bdf4119af84df458250f353c043b47fced25d4bbf62aa",
+        "checkpoint_sha256": "6c338242e7a69aa4d65226b38c3555a3433d8a755c5940a20b89f39de01855ac",
+        "selected_epoch": 8,
+        "best_selection_bce": 0.05631183087825775,
+        "time": 1792774369.7310243,
+        "seconds": 62.33373371884227,
+        "trainable_parameters": 1240664
+      },
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-efficientnet-20261023/runs/supervised-seed1"
+    },
+    "efficientnet-distilled-seed1": {
+      "result_sha256": "b95b525c2974809a6ab8365f9d8e7192838dd497c062536beebcfd7858ddffc8",
+      "training": {
+        "signature": {
+          "protocol_sha256": "9b7be1baec002bb43ba90e65eb60233aa4bc642c95e567590ef919b5785e1088",
+          "freeze_sha256": "706bf1726ced8b0e60109c59e3e01171d96efa51674f5ebe9d524ebdc429b3c0",
+          "data_manifest_sha256": "4fce6a3722dfd0e439a080ab5a7f00e2159a8660796dec050c7cdef735105a59",
+          "seed": 1,
+          "condition": "distilled",
+          "order_sha256": "a8eb5ae1abc2ba6a027bdf4119af84df458250f353c043b47fced25d4bbf62aa"
+        },
+        "initialization_sha256": "babc420194387b2b4119785a69eeb0628816bf58eae1bda4b9f3bc4b9a55c67e",
+        "order_sha256": "a8eb5ae1abc2ba6a027bdf4119af84df458250f353c043b47fced25d4bbf62aa",
+        "checkpoint_sha256": "c82dc59cf3331f3944745cb6705613efb9b232493c9256ab64a47627bb74c362",
+        "selected_epoch": 8,
+        "best_selection_bce": 0.05505327880382538,
+        "time": 1792774431.6738064,
+        "seconds": 61.93105508573353,
+        "trainable_parameters": 1240664
+      },
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-efficientnet-20261023/runs/distilled-seed1"
+    },
+    "efficientnet-supervised-seed2": {
+      "result_sha256": "d75f4ff987db13784aca28f5d60bb7712c0b3dd14e5971a4cbea36969400d363",
+      "training": {
+        "signature": {
+          "protocol_sha256": "9b7be1baec002bb43ba90e65eb60233aa4bc642c95e567590ef919b5785e1088",
+          "freeze_sha256": "706bf1726ced8b0e60109c59e3e01171d96efa51674f5ebe9d524ebdc429b3c0",
+          "data_manifest_sha256": "4fce6a3722dfd0e439a080ab5a7f00e2159a8660796dec050c7cdef735105a59",
+          "seed": 2,
+          "condition": "supervised",
+          "order_sha256": "b1dad494a20bca318fd44ddf515d22c7381e623404ae383ed01f40c49aed7e84"
+        },
+        "initialization_sha256": "e292a0af24ef204d306bc05f059ab075be1e74151589f005949aa38a331a9702",
+        "order_sha256": "b1dad494a20bca318fd44ddf515d22c7381e623404ae383ed01f40c49aed7e84",
+        "checkpoint_sha256": "0b6593b5499f018e24470ac289f3960cc78d64267990806998fefff9b4d654ff",
+        "selected_epoch": 7,
+        "best_selection_bce": 0.05690496414899826,
+        "time": 1792774494.1734438,
+        "seconds": 62.48702175822109,
+        "trainable_parameters": 1240664
+      },
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-efficientnet-20261023/runs/supervised-seed2"
+    },
+    "efficientnet-distilled-seed2": {
+      "result_sha256": "8de102ec95d22dcc5793270a67ad758f99505d4c3069ec0b342600b1144f89b3",
+      "training": {
+        "signature": {
+          "protocol_sha256": "9b7be1baec002bb43ba90e65eb60233aa4bc642c95e567590ef919b5785e1088",
+          "freeze_sha256": "706bf1726ced8b0e60109c59e3e01171d96efa51674f5ebe9d524ebdc429b3c0",
+          "data_manifest_sha256": "4fce6a3722dfd0e439a080ab5a7f00e2159a8660796dec050c7cdef735105a59",
+          "seed": 2,
+          "condition": "distilled",
+          "order_sha256": "b1dad494a20bca318fd44ddf515d22c7381e623404ae383ed01f40c49aed7e84"
+        },
+        "initialization_sha256": "e292a0af24ef204d306bc05f059ab075be1e74151589f005949aa38a331a9702",
+        "order_sha256": "b1dad494a20bca318fd44ddf515d22c7381e623404ae383ed01f40c49aed7e84",
+        "checkpoint_sha256": "6bdbbaca8bb8443a8856826b926a31cecbb49a885d1c91759a6646e3f86f0305",
+        "selected_epoch": 7,
+        "best_selection_bce": 0.0562366284430027,
+        "time": 1792774556.0984328,
+        "seconds": 61.91414698306471,
+        "trainable_parameters": 1240664
+      },
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-efficientnet-20261023/runs/distilled-seed2"
+    },
+    "resnet-supervised-seed0": {
+      "result_sha256": "05c8cbd826c25d1a161f509038dbf86d03eddfbc208caa613b45474351cf94a2",
+      "training": {
+        "signature": {
+          "protocol_sha256": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+          "freeze_sha256": "669a55417023c4edad031e0d0a7ca38cf40b7170cfa0929656d0a57263b708ef",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 0,
+          "condition": "supervised",
+          "order_sha256": "bbb2a04fd3ef8d5ca7079a4d7dda72f34456b805c2e326c88ad957cb1c66640e"
+        },
+        "initialization_sha256": "f7adcab1b2aff695661dd40a3c729282ece8677f9a9addee6b4bca44e4fb2ab4",
+        "order_sha256": "bbb2a04fd3ef8d5ca7079a4d7dda72f34456b805c2e326c88ad957cb1c66640e",
+        "checkpoint_sha256": "525b672354b629afb9ad7fc0e972d8fc53bfeca2090ea7dd960004e893437e8e",
+        "selected_epoch": 6,
+        "best_selection_bce": 0.05323415994644165,
+        "time": 1792638030.2438004,
+        "seconds": 64.4986581960693,
+        "trainable_parameters": 1108568
+      },
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/supervised-seed0"
+    },
+    "resnet-distilled-seed0": {
+      "result_sha256": "6f1adeeaa2b40e7aeab50bcca4e773b5073871f9847a0287ef4025501d18b8ea",
+      "training": {
+        "signature": {
+          "protocol_sha256": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+          "freeze_sha256": "669a55417023c4edad031e0d0a7ca38cf40b7170cfa0929656d0a57263b708ef",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 0,
+          "condition": "distilled",
+          "order_sha256": "bbb2a04fd3ef8d5ca7079a4d7dda72f34456b805c2e326c88ad957cb1c66640e"
+        },
+        "initialization_sha256": "f7adcab1b2aff695661dd40a3c729282ece8677f9a9addee6b4bca44e4fb2ab4",
+        "order_sha256": "bbb2a04fd3ef8d5ca7079a4d7dda72f34456b805c2e326c88ad957cb1c66640e",
+        "checkpoint_sha256": "55a20fafb9dfbdf682559444e9673bc68f0a6b229c65d1bf00ddfead25902c26",
+        "selected_epoch": 17,
+        "best_selection_bce": 0.04953480884432793,
+        "time": 1792638092.8127654,
+        "seconds": 62.556829270906746,
+        "trainable_parameters": 1108568
+      },
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed0"
+    },
+    "resnet-supervised-seed1": {
+      "result_sha256": "ce291e418aa03239d05b08b25b0692d8506722273f00c443ad8dc0b1862ba83a",
+      "training": {
+        "signature": {
+          "protocol_sha256": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+          "freeze_sha256": "669a55417023c4edad031e0d0a7ca38cf40b7170cfa0929656d0a57263b708ef",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 1,
+          "condition": "supervised",
+          "order_sha256": "a8eb5ae1abc2ba6a027bdf4119af84df458250f353c043b47fced25d4bbf62aa"
+        },
+        "initialization_sha256": "45a8aa8e832a4a4732bb5c2aa6df301a8d5c1a983348d5b2f82e90935b4167ac",
+        "order_sha256": "a8eb5ae1abc2ba6a027bdf4119af84df458250f353c043b47fced25d4bbf62aa",
+        "checkpoint_sha256": "77c2e43369a4fe6dc3a73e9b60e60be91f18df491e504d948eda89559987ffc8",
+        "selected_epoch": 10,
+        "best_selection_bce": 0.05122283101081848,
+        "time": 1792638154.8127527,
+        "seconds": 61.98867907002568,
+        "trainable_parameters": 1108568
+      },
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/supervised-seed1"
+    },
+    "resnet-distilled-seed1": {
+      "result_sha256": "e5d391fb1136f7da2aec61b187528c260d271f429de8d23799e938eb8bcc3f3b",
+      "training": {
+        "signature": {
+          "protocol_sha256": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+          "freeze_sha256": "669a55417023c4edad031e0d0a7ca38cf40b7170cfa0929656d0a57263b708ef",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 1,
+          "condition": "distilled",
+          "order_sha256": "a8eb5ae1abc2ba6a027bdf4119af84df458250f353c043b47fced25d4bbf62aa"
+        },
+        "initialization_sha256": "45a8aa8e832a4a4732bb5c2aa6df301a8d5c1a983348d5b2f82e90935b4167ac",
+        "order_sha256": "a8eb5ae1abc2ba6a027bdf4119af84df458250f353c043b47fced25d4bbf62aa",
+        "checkpoint_sha256": "21219772e3d82ea9b8b66437a0268d5e8694175bdf8d87d347bc5a01cf3ac834",
+        "selected_epoch": 13,
+        "best_selection_bce": 0.04873818904161453,
+        "time": 1792638218.2495918,
+        "seconds": 63.424174236133695,
+        "trainable_parameters": 1108568
+      },
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed1"
+    },
+    "resnet-supervised-seed2": {
+      "result_sha256": "ec385fd15e6568e12d1120119a9047c4ed2a5384f1c8590e60a339642b9a6982",
+      "training": {
+        "signature": {
+          "protocol_sha256": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+          "freeze_sha256": "669a55417023c4edad031e0d0a7ca38cf40b7170cfa0929656d0a57263b708ef",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 2,
+          "condition": "supervised",
+          "order_sha256": "b1dad494a20bca318fd44ddf515d22c7381e623404ae383ed01f40c49aed7e84"
+        },
+        "initialization_sha256": "a1ee7fedff47361a2cb0b79a0fc840cafdfa2a1c5568539779fde486b1029c4f",
+        "order_sha256": "b1dad494a20bca318fd44ddf515d22c7381e623404ae383ed01f40c49aed7e84",
+        "checkpoint_sha256": "bda616564fcc842134ee9b4d9f643988cfee1fb73855d4b3c3cbb4c70c782b36",
+        "selected_epoch": 11,
+        "best_selection_bce": 0.0531122125685215,
+        "time": 1792638280.8958862,
+        "seconds": 62.634604645427316,
+        "trainable_parameters": 1108568
+      },
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/supervised-seed2"
+    },
+    "resnet-distilled-seed2": {
+      "result_sha256": "ad09c5791660d7c5180ce57e3d1c82225cb0ba23ca4794f656c0ba427cb663d2",
+      "training": {
+        "signature": {
+          "protocol_sha256": "68be19a5da4cf8e2eb1f9c6ee2ab6cdfc88ec78a33370a84d56d7b7b1de8adbc",
+          "freeze_sha256": "669a55417023c4edad031e0d0a7ca38cf40b7170cfa0929656d0a57263b708ef",
+          "data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+          "seed": 2,
+          "condition": "distilled",
+          "order_sha256": "b1dad494a20bca318fd44ddf515d22c7381e623404ae383ed01f40c49aed7e84"
+        },
+        "initialization_sha256": "a1ee7fedff47361a2cb0b79a0fc840cafdfa2a1c5568539779fde486b1029c4f",
+        "order_sha256": "b1dad494a20bca318fd44ddf515d22c7381e623404ae383ed01f40c49aed7e84",
+        "checkpoint_sha256": "ec0cfd20b86726f7a494cb9a19657ab2a3d4248ab2478056d097b08532a0cafe",
+        "selected_epoch": 22,
+        "best_selection_bce": 0.049487434327602386,
+        "time": 1792638343.8262973,
+        "seconds": 62.91901624714956,
+        "trainable_parameters": 1108568
+      },
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed2"
+    }
+  }
+}

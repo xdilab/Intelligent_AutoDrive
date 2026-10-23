@@ -1,0 +1,10 @@
+{
+  "time": 1792640144.4147336,
+  "all_candidate_confidence_exact": true,
+  "candidate_count": 6163968,
+  "teacher_minus_current_fixed_head_mAP": {
+    "agentness": 0.0006256103515625,
+    "agent": -0.000891229556877704
+  },
+  "interpretation": "Historical teacher result uses the same source manifests and metric/core hashes, but fixed detector heads are not numerically identical. Exact cross-environment replay has not been established. NumPy argsort tie ordering is one possible unverified cause; do not assert it as proven. Teacher gap is descriptive historical context; all new student runs share one environment and evaluator."
+}

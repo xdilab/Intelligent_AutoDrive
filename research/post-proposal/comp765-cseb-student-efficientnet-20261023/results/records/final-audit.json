@@ -1,0 +1,13 @@
+{
+  "time": 1792776631.5001395,
+  "passed": true,
+  "new_detector_runs": 6,
+  "original_resnet_runs_verified": 6,
+  "independent_statistics": true,
+  "original_results_unchanged": true,
+  "input_hash_parity": true,
+  "all_classes": true,
+  "checkpoints_and_backups_verified": 12,
+  "bundle_verified": true,
+  "raw_video_runtime_verified": true
+}

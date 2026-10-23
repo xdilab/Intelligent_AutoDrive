@@ -1,0 +1,11 @@
+{
+  "time": 1792776721.0569115,
+  "study_status": "complete",
+  "service": "research-comp765-student-efficientnet.service",
+  "service_result": "success",
+  "timer": "research-comp765-student-efficientnet-monitor.timer",
+  "timer_state": "ActiveState=inactive\nUnitFileState=disabled\n",
+  "desktop_notifications": false,
+  "other_services_unchanged": true,
+  "checkpoint_backups_verified": 12
+}

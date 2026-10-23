@@ -1,0 +1,14 @@
+{
+  "time": 1792773988.9864094,
+  "prepare32frames_seconds": 0.7010523891076446,
+  "train16sequences_seconds": 0.458810156211257,
+  "six_head_inference32frames_seconds": 0.6766233970411122,
+  "gpu": "NVIDIA RTX A6000",
+  "peak_gpu_gib": 0.18466520309448242,
+  "parameters": {
+    "frozen_backbone": 4007548,
+    "trainable_head": 1240664,
+    "semantic_total": 5248212
+  },
+  "scope": "One actual32frame training sequence; six random heads with no AP inspection. Broader full-video throughput measured before full evaluator launch."
+}

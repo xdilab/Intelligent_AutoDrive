@@ -1,0 +1,29 @@
+{
+  "time": 1792774716.7326343,
+  "phase": "full official evaluation and analysis",
+  "remaining_videos": 195,
+  "remaining_frames": 38098,
+  "measured_six_head_fps": 43.85410524185317,
+  "predicted_inference_seconds": 868.7442096900953,
+  "ap_basis": "Previous same evaluator/fullcandidate run measured~170s/checkpoint at16workers; update from first current checkpoint",
+  "first_useful_detector_pair_minutes": [
+    20,
+    25
+  ],
+  "full_report_minutes": [
+    35,
+    45
+  ],
+  "startup": "Noqueue; candidate/GT reload~20seconds",
+  "gpu": 0,
+  "temporary_predictions_gib": 25.36,
+  "host_memory_gib": [
+    60,
+    100
+  ],
+  "persistent_disk_gib": [
+    1,
+    2
+  ],
+  "uncertainty": "Frame/candidate variability and AP CPU contention; no final-AP results inspected before protocol freeze"
+}

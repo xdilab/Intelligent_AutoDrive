@@ -1,0 +1,9 @@
+{
+  "time": 1792775863.1209116,
+  "measured_first_checkpoint_AP_seconds": 169.07237839978188,
+  "all_detector_results_estimate": "2026-10-23 13:30 America/New_York",
+  "checked_report_estimate": "2026-10-23 13:35\u201313:40 America/New_York",
+  "remaining": "Five AP runs including active distilled seed0, then analysis/audit/archive",
+  "queue": "none",
+  "uncertainty": "CPU contention and final auditing; current throughput agrees with estimate"
+}

@@ -1,0 +1,16 @@
+{
+  "time": 1792774586.901589,
+  "phases": [
+    "runtime_audit",
+    "evaluation_benchmark"
+  ],
+  "estimate_minutes": [
+    2,
+    4
+  ],
+  "basis": "593full-video frames plus72instrumented frames; existing ResNet serial45.8ms/frame context only, B0 one-sequence inference benchmark0.68s/32frames; loads and officialcandidate deserialization add uncertainty",
+  "gpu": 0,
+  "queue": "none",
+  "memory": "GPU<3GiB; host<100GiB;25.36GiB temporary predictions",
+  "first_detector_pair_eta": "After full-video benchmark, then remaining inference plus two AP evaluations; no AP in this phase"
+}

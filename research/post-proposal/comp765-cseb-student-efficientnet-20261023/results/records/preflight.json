@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "time": 1792773988.9861877,
+  "checks": {
+    "feature_grid_and_roi_alignment": true,
+    "paired_initialization": {
+      "0": "57c95f8c992043bcefd3181a3dd0d8eb25cb66459bef7074c7545199673de355",
+      "1": "babc420194387b2b4119785a69eeb0628816bf58eae1bda4b9f3bc4b9a55c67e",
+      "2": "e292a0af24ef204d306bc05f059ab075be1e74151589f005949aa38a331a9702"
+    },
+    "smoke_losses": [
+      0.6928977370262146,
+      1.3858534097671509,
+      0.6937500834465027,
+      1.387458324432373,
+      0.6919026970863342,
+      1.3840842247009277
+    ],
+    "exact_optimizer_rng_resume": true,
+    "causal_prefix_and_video_reset": true,
+    "multilabel_slot0_mask": true,
+    "confidence_once": true,
+    "training_and_scoring_functions_unchanged": true
+  },
+  "parameters": {
+    "frozen_backbone": 4007548,
+    "trainable_head": 1240664,
+    "semantic_total": 5248212
+  }
+}

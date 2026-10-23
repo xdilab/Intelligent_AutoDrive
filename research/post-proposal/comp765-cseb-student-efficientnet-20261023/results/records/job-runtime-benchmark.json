@@ -1,0 +1,13 @@
+{
+  "root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-efficientnet-20261023",
+  "pid": 1511688,
+  "started": 1792774588.8048432,
+  "time": 1792774675.7777145,
+  "status": "complete",
+  "phases": [
+    "runtime_audit",
+    "evaluation_benchmark"
+  ],
+  "phase": "evaluation_benchmark",
+  "child_pid": 1513786
+}

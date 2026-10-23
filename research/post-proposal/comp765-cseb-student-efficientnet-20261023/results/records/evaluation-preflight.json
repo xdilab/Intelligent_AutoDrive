@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "time": 1792774563.245107,
+  "checks": {
+    "all76_supervision_and_candidates_identical": true,
+    "official_AP_fixture": [
+      100.0,
+      50.0
+    ],
+    "cached_to_fresh_max_abs": 0.0,
+    "packaged_evaluator_max_abs": 0.0,
+    "no_teacher_asset_in_bundle": true
+  },
+  "evaluation_signature": {
+    "protocol_sha256": "9b7be1baec002bb43ba90e65eb60233aa4bc642c95e567590ef919b5785e1088",
+    "freeze_sha256": "706bf1726ced8b0e60109c59e3e01171d96efa51674f5ebe9d524ebdc429b3c0",
+    "provenance_addendum_sha256": "6cf0a2ba9ea9e72117db2b357322c4e3719ca70281a36603b9030b058d22e624",
+    "evaluator_sha256": "45636e7442d9efa599be19e83ae14ae421d416bf6e2fc678420cda9a6f891141",
+    "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+    "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+  }
+}
