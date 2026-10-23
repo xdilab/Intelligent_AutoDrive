@@ -22,7 +22,7 @@ def main(root,self_test=False):
         save(evidence/'self-test.json',dict(passed=True,time=now,delivery='Silent JSON logs; read back verified',synthetic_alerts=a+b));assert read(evidence/'self-test.json')['passed'];return
     job=read(root/'job.json') if (root/'job.json').exists() else {'status':'prelaunch'}
     prog=read(root/'progress.json') if (root/'progress.json').exists() else {};logs={}
-    for name in ['pipeline','prepare','train','evaluation_preflight','evaluate','runtime_audit','analyze','final_audit']:
+    for name in ['pipeline','prepare','train','evaluation_preflight','evaluation_benchmark','evaluate','runtime_audit','analyze','final_audit']:
         p=root/'logs'/f'{name}.log'
         if p.exists():
             with p.open('rb') as f:f.seek(max(0,p.stat().st_size-6000));logs[name]=f.read().decode(errors='replace')
