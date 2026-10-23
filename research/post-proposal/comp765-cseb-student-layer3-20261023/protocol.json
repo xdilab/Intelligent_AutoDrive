@@ -1,0 +1,88 @@
+{
+  "title": "Teacher\u2013Student Distillation for Efficient Road-Event Recognition",
+  "version": "comp765-cseb-student-layer3-20261023-v1",
+  "status": "protocol fixed before new final evaluation",
+  "independence": "New post-defense COMP 765 student study; thesis CSEB is a fixed teacher. Prior pilot and expanded runs are historical context only.",
+  "student": "Same ResNet50 throughlayer3 + sceneGRU256/head as original; stem/layer1/layer2 frozen; layer3 frozen versus trainable. All BatchNorm running statistics fixed; layer3 BN affine weights train only in tuned arms.",
+  "student_parameters": {
+    "semantic_total": 9651864,
+    "head": 1108568,
+    "frozen_encoder_total": 8543296,
+    "layer3": 7098368
+  },
+  "teacher": "Fixed CSEB attention-global-dcb-seed0, 1B InternVideo2 visual encoder, classification/DCB and contrastive/DCB experts, composition blend weight0.5; current minus3 through plus4 at10Hz",
+  "conditions": {
+    "frozen-supervised": {
+      "layer3_trainable": false,
+      "kd_weight": 0.0
+    },
+    "frozen-distilled": {
+      "layer3_trainable": false,
+      "kd_weight": 1.0
+    },
+    "tuned-supervised": {
+      "layer3_trainable": true,
+      "kd_weight": 0.0
+    },
+    "tuned-distilled": {
+      "layer3_trainable": true,
+      "kd_weight": 1.0
+    }
+  },
+  "objective": "Mean BCEWithLogits over all proposal/class entries in each32-frame sequence, outputs1:184; supervised BCE plus kd_weight times BCE to independent teacher sigmoid probabilities; no softmax or temperature. Output0 excluded from both losses.",
+  "teacher_targets": "Fresh teacher scores on intended training candidates only; remove detector confidence once to recover probabilities, set unused slot0=1; reuse hash-verified original8-frame training cache where exact inputs match. No teacher target generation on selection/final inputs.",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "epochs": 30,
+  "optimizer": "AdamW; headlr0.001, trainablelayer3lr0.00001, weight_decay0.01; gradientnormclip5 over all trainable parameters",
+  "learning_rate": 0.001,
+  "weight_decay": 0.01,
+  "gradient_clip_norm": 5.0,
+  "lr_schedule": "constant",
+  "batch_unit": "one32-frame contiguous video sequence; average over proposals and183 outputs; same64 sequences per epoch for both conditions",
+  "initialization": "ImageNetV2 layer3 and exact original per-seed random head initialization; all four conditions paired at initialization and data order. No warmstart from AP-selected prior models.",
+  "selection": "Minimum supervised development BCE over30 epochs, first epoch wins ties; unchanged probability-clipped BCE from existing student; no final evaluation tuning",
+  "splits": "Exact expanded64 training videos and12 selection videos; original start frames retained; final198 official validation videos. Explicit lists in split-manifest.json. Historical12-video student holdout excluded from new selection and final.",
+  "history_disclosure": "Official198validationvideos previously used for sharedYOLO validation/checkpoint selection and thesis research. Disjoint only from teacher/student semantic-head training/selection. Not independent full-system test.",
+  "sequence_length": 32,
+  "sampling_hz": 10,
+  "training_state": "Zero at each32-frame segment; full32-frame BPTT; no future student inputs. Unannotated frames update scene state with empty actor inputs; excluded from both objectives, never treated as negatives.",
+  "evaluation_state": "Zero at each video boundary; process every image from frame1 to final scored frame at10Hz, including unscored frames with empty actors; never reset at annotation gaps. Score only locked36717 frames;38663 total recurrent steps.",
+  "feature_precision": "Frozen stem/layer1/layer2 outputs cached in exact bfloat16; layer3 encodes32 independent frames together underbf16 autocast; fixed BN statistics prevent cross-frame normalization. RoIAlign float32, pooled features roundfloat16 thenfloat32. Full32-frame recurrent BPTT. Runtime uses one current frame. Fresh frozen controls use same batched training features.",
+  "training_candidates": {
+    "imgsz": 1280,
+    "conf": 0.25,
+    "iou": 0.7,
+    "max_det": 300
+  },
+  "evaluation_candidates": "Exact historical dets_v8x_best_val_fullcand.pkl, 6163968 candidates, candidate_sha256 fc84d73fdaa7b4f74ea2694aa54f3b4a1069f4b6d45276f2df5e9c5374378cb2. This lower-threshold fixed-candidate evaluation differs from liveconf0.25; no causal detector AP claim for the live policy.",
+  "score_assembly": "sigmoid outputs multiplied by detector confidence exactly once; slot0 overwritten by confidence; official agent AP uses detector class and confidence, unchanged shared metric.py",
+  "primary_endpoint": "Paired tuned-distilled minus frozen-distilled official detector triplet mAP atIoU0.5 over86classes",
+  "secondary_endpoints": [
+    "Fine-tuning effect within supervised student",
+    "KD effect within frozen and tuned students",
+    "Interaction (KD effect tuned minus frozen)",
+    "Tail47,Deep28,Common39",
+    "All standard groups and per-class AP"
+  ],
+  "frequency_groups": "Fixed authoritative train-counts.json,600 training videos, standardizedlog10 counts across86 classes; never validation frequencies",
+  "analysis": "Three paired seeds; mean/sampleSD and paired-t95 df2 for prespecified contrasts. Include all outcomes. Exploratory follow-up on reused benchmark; no final-AP tuning or adaptive stopping.",
+  "teacher_accuracy_comparator": "Reuse verified exact-checkpoint official detector result only after matching checkpoint hash, frame/candidate hashes, labels, metric/core hashes. Teacher temporal inputs differ; accuracy gap is descriptive.",
+  "runtime": "Prespecified tuned-distilled seed0 export compared with fresh frozen-distilled seed0; same raw video/candidates,4warmup+32measured frames; continuous isolation/causal/memory checks. No automatic replacement of existing demo bundle.",
+  "runtime_videos": "First3 training videos in frozen split ordering; benchmarking uses training data only; no runtime-based accuracy selection",
+  "scope_limitations": [
+    "Three seeds,64 training videos,32frame windows",
+    "Fresh frozen controls because training feature batching and precision path changed; historical ResNet results contextual only",
+    "GPU RoIAlign backward may be nondeterministic; exact RNG/optimizer restoration plus numeric resume tolerance reported",
+    "Frozen BatchNorm statistics; layer3 affine parameters learn only in tuned arms",
+    "No guarantee of accuracy improvement",
+    "No hyperparameter search against official AP; no data expansion or architecture swap",
+    "Teacher future-window supervision; causal student inference",
+    "Benchmark exposure and different timing/AP candidate policies retained"
+  ],
+  "preservation": "Do not modify thesis, slides, historical checkpoints/results, v1 realtime bundle; no automatic model promotion",
+  "prefix_cache": "Temporary /dev/shm exactbfloat16 outputs, all76 sequences preloaded toGPU; ~10.91GiB. Regenerate with prepare.py after reboot. Source images and receipt hashes preserved."
+}

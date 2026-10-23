@@ -1,0 +1,16 @@
+[Unit]
+Description=COMP765 causal student controlled study
+[Service]
+Type=simple
+WorkingDirectory=/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-layer3-20261023
+Environment=CUDA_VISIBLE_DEVICES=0
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONPATH=/home/brandon/.local/share/road-reason/cseb-demo-runtime/packages
+Environment=PATH=/data/repos/ROAD_Reason/research/post-proposal/monitoring/silent-bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=/home/brandon/miniconda3/envs/road_reason/bin/python /data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-layer3-20261023/pipeline.py prepare train evaluation_preflight
+RuntimeMaxSec=28800
+KillMode=control-group
+Restart=no
+StandardOutput=append:/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/logs/pipeline.log
+StandardError=append:/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/logs/pipeline.log
