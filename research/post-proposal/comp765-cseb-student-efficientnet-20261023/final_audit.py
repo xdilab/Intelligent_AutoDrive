@@ -3,7 +3,7 @@ from common import *
 import math,statistics,csv
 
 def main():
- verify();assert read(ROOT/'study-complete.json')['passed'];out=ROOT/'results';summary=read(out/'summary.json');official=read(INPUTS['frames']);ix=groups(official['labels']['triplet']);data={}
+ verify();assert read(ROOT/'shared-assets-audit.json')['passed'];assert read(ROOT/'study-complete.json')['passed'];out=ROOT/'results';summary=read(out/'summary.json');official=read(INPUTS['frames']);ix=groups(official['labels']['triplet']);data={}
  for architecture,base in [('efficientnet',ROOT),('resnet',ORIGINAL_ROOT)]:
   for seed in [0,1,2]:
    pair=[]

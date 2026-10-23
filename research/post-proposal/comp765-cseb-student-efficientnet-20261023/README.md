@@ -26,6 +26,7 @@ $PY pipeline.py runtime_audit evaluation_benchmark
 $PY pipeline.py evaluate analyze
 # Verify checkpoints/backups before the independent final audit.
 $PY monitor.py
+$PY verify_assets.py
 $PY final_audit.py
 $PY archive_record.py
 ```
