@@ -18,7 +18,7 @@ def main():
   for seed in [0,1,2]:
    pair=[]
    for condition in ['supervised','distilled']:
-    folder=base/'runs'/f'{condition}-seed{seed}';d=read(folder/'detector-results.json');t=read(folder/'training-complete.json');assert sha(folder/'best.pt')==t['checkpoint_sha256']==d['signature']['checkpoint_sha256'];assert d['n_frames']==36717 and d['n_candidates']==6163968;pair.append(t);data[architecture,condition,seed]=d;records[f'{architecture}-{condition}-seed{seed}']=dict(result_sha256=sha(folder/'detector-results.json'),training=t,path=str(folder))
+    folder=base/'runs'/f'{condition}-seed{seed}';d=read(folder/'detector-results.json');t=read(folder/'training-complete.json');assert sha(folder/'best.pt')==t['checkpoint_sha256']==d['signature']['checkpoint_sha256'];assert t['signature']['data_manifest_sha256']==sha(base/'data-manifest.json');assert d['n_frames']==36717 and d['n_candidates']==6163968;pair.append(t);data[architecture,condition,seed]=d;records[f'{architecture}-{condition}-seed{seed}']=dict(result_sha256=sha(folder/'detector-results.json'),training=t,path=str(folder))
    assert pair[0]['initialization_sha256']==pair[1]['initialization_sha256'];assert pair[0]['order_sha256']==pair[1]['order_sha256']==read(ORIGINAL_ROOT/'runs'/f'supervised-seed{seed}'/'training-complete.json')['order_sha256']
  for video in read(ROOT/'split-manifest.json')['groups']['final']:assert read(ROOT/'evaluation-inputs'/f'{video}.json')['images_sha256']==read(ORIGINAL_ROOT/'evaluation-inputs'/f'{video}.json')['images_sha256']
  for d in data.values():

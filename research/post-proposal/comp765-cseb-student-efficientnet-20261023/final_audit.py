@@ -8,7 +8,7 @@ def main():
   for seed in [0,1,2]:
    pair=[]
    for condition in ['supervised','distilled']:
-    folder=base/'runs'/f'{condition}-seed{seed}';d=read(folder/'detector-results.json');t=read(folder/'training-complete.json');h=read(folder/'history.json');assert len(h)==30 and min(h,key=lambda v:v['selection_bce'])['epoch']==t['selected_epoch'];assert sha(folder/'best.pt')==t['checkpoint_sha256']==d['signature']['checkpoint_sha256'];assert d['n_frames']==36717 and d['processed_frames']==38663 and d['n_candidates']==6163968;assert d['frame_sha256']==official['frame_sha256'] and d['candidate_sha256']==official['candidate_sha256']
+    folder=base/'runs'/f'{condition}-seed{seed}';d=read(folder/'detector-results.json');t=read(folder/'training-complete.json');h=read(folder/'history.json');assert len(h)==30 and min(h,key=lambda v:v['selection_bce'])['epoch']==t['selected_epoch'];assert sha(folder/'best.pt')==t['checkpoint_sha256']==d['signature']['checkpoint_sha256'];assert t['signature']['data_manifest_sha256']==sha(base/'data-manifest.json');assert d['n_frames']==36717 and d['processed_frames']==38663 and d['n_candidates']==6163968;assert d['frame_sha256']==official['frame_sha256'] and d['candidate_sha256']==official['candidate_sha256']
     for group,values in d['per_class_AP'].items():assert all(math.isfinite(v) and 0<=v<=100 for v in values);assert math.isclose(statistics.mean(values),d['summary'][group],abs_tol=1e-10)
     for group,indices in ix.items():assert math.isclose(statistics.mean(d['per_class_AP']['triplet'][i] for i in indices),d['tail'][group]['mAP'],abs_tol=1e-10)
     data[architecture,condition,seed]=d;pair.append(t)
