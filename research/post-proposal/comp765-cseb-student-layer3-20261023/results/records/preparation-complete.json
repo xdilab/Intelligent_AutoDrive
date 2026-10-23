@@ -1,0 +1,10 @@
+{
+  "time": 1792777693.0595152,
+  "seconds": 78.97330467402935,
+  "data_manifest_sha256": "0a5fccee73819872fbf8db04356dad38befc4cd953827f3777f2089aff78ce63",
+  "original_data_manifest_sha256": "f83a6c08d3c5123ef63b88456c021599c02ebf495d233378915d2a2d5b87937b",
+  "frames": 2432,
+  "temporary_cache": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix",
+  "regenerate_command": "python prepare.py",
+  "teacher_targets_only_train": true
+}

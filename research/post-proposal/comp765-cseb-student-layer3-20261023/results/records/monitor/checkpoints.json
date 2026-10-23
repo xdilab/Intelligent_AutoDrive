@@ -1,0 +1,174 @@
+{
+  "time": 1792783047.010424,
+  "passed": true,
+  "checkpoints": [
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/tuned-distilled-seed0/last.pt",
+      "sha256": "82a1d705994c25fb2b5929093030e7790b107a5dc7d9afbe82525529f0175588",
+      "epoch": 30,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/tuned-distilled-seed0/last.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/tuned-distilled-seed0/best.pt",
+      "sha256": "fea02adc51f12a8b4b2186d635cfbf75a63f4db96c3d6eb976e58e622dfa708e",
+      "epoch": 16,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/tuned-distilled-seed0/best.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/frozen-supervised-seed2/last.pt",
+      "sha256": "255caef69bb5ad5d52caca22204176cf3305e8cb9b94bd90bde137b3015b253a",
+      "epoch": 30,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/frozen-supervised-seed2/last.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/frozen-supervised-seed2/best.pt",
+      "sha256": "51482a8a82e40a8074cff4d14b7a0a55cfbcd1ca4c1097a7e1558b63a7dc6d59",
+      "epoch": 11,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/frozen-supervised-seed2/best.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/tuned-supervised-seed1/last.pt",
+      "sha256": "04b33472d103724eb1062b889a4ec48fb8e57e10588dfccc4ffd76a93e29e3a6",
+      "epoch": 30,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/tuned-supervised-seed1/last.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/tuned-supervised-seed1/best.pt",
+      "sha256": "8d447626f9b68c97797c3e6198dfb7d1aa435f2f1d98c75144d4cd5d0561df5c",
+      "epoch": 8,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/tuned-supervised-seed1/best.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/frozen-distilled-seed0/last.pt",
+      "sha256": "73fa19a9c31556e75d808e5049ae210cf9e593bd0e831d7664177bc80af84519",
+      "epoch": 30,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/frozen-distilled-seed0/last.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/frozen-distilled-seed0/best.pt",
+      "sha256": "2e964e90bc7528dad44d62423581310a34ba2140f844ebf5e2a9ed9b978e474e",
+      "epoch": 17,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/frozen-distilled-seed0/best.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/frozen-distilled-seed1/last.pt",
+      "sha256": "d6d624607104b68d7f6309444027bf1001e0ae41189d4ad652857d62d7b16aa1",
+      "epoch": 30,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/frozen-distilled-seed1/last.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/frozen-distilled-seed1/best.pt",
+      "sha256": "0661cc5e3e0c21c466cf67cfc663ca39517922538e9ff62854a23c9124edf8bf",
+      "epoch": 13,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/frozen-distilled-seed1/best.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/frozen-distilled-seed2/last.pt",
+      "sha256": "e78b5631fe0843c89cd1a5442dca0e3efbe27109d701582067a6f46698b4c7f2",
+      "epoch": 30,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/frozen-distilled-seed2/last.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/frozen-distilled-seed2/best.pt",
+      "sha256": "6b43ff90129317f3495703d3bc98ef1e487165669788d760c98fef439372274a",
+      "epoch": 22,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/frozen-distilled-seed2/best.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/tuned-distilled-seed1/last.pt",
+      "sha256": "a324b9b1cb1cef33e729a8d1099db0ec64d858aae2d19de82ed0d4c75130329e",
+      "epoch": 30,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/tuned-distilled-seed1/last.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/tuned-distilled-seed1/best.pt",
+      "sha256": "3b6432ae6bc23ef3dd0626e92862334aba0703e960fa3848c045f875b4f924c1",
+      "epoch": 13,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/tuned-distilled-seed1/best.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/tuned-supervised-seed2/last.pt",
+      "sha256": "09c89a99408eb33400a6498e7709d2036c20f834e0fa1d046c6f76f9ed7fb93c",
+      "epoch": 30,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/tuned-supervised-seed2/last.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/tuned-supervised-seed2/best.pt",
+      "sha256": "fb9b7bd1f162e8c1b029653c68ba67d4fef651949f9da6b8351296ed63789256",
+      "epoch": 7,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/tuned-supervised-seed2/best.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/frozen-supervised-seed0/last.pt",
+      "sha256": "f30293d5a0d2719f1b0db8122bf96ce28dbf8eef8c04e0fc6437630103d2ea3b",
+      "epoch": 30,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/frozen-supervised-seed0/last.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/frozen-supervised-seed0/best.pt",
+      "sha256": "d430c8e96739d1033fe1eb3f4f71d4b6cb4fdd1add589830e697de5b727a69b8",
+      "epoch": 6,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/frozen-supervised-seed0/best.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/tuned-supervised-seed0/last.pt",
+      "sha256": "273181ea783524c07687466b49a37ea3324ccef7522a4ceb37f3c65dfe1697dd",
+      "epoch": 30,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/tuned-supervised-seed0/last.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/tuned-supervised-seed0/best.pt",
+      "sha256": "d0deaecc3b720d378b460fb7f10f96c72272a0bd412bf7305b1f27925fc8d22b",
+      "epoch": 8,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/tuned-supervised-seed0/best.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/frozen-supervised-seed1/last.pt",
+      "sha256": "6707e234323aef81597f961ed3b8b5b092a3c4668c9fe8373410b985045d9e89",
+      "epoch": 30,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/frozen-supervised-seed1/last.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/frozen-supervised-seed1/best.pt",
+      "sha256": "0391e75499f5178f4787aa59f5761491bf1485abcbeb21532f8be2f831a994bb",
+      "epoch": 10,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/frozen-supervised-seed1/best.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/tuned-distilled-seed2/last.pt",
+      "sha256": "94703c1e1a5f6c5c285fdb53b45a9fe3f2fb7e87f2f1fbd51671fd083e516185",
+      "epoch": 30,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/tuned-distilled-seed2/last.pt",
+      "verified_at": 1792783047.010424
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/runs/tuned-distilled-seed2/best.pt",
+      "sha256": "3266adc1b7c4a96621c7b652b343bb60950cce6ab40a9714dbfcc403fc3f1921",
+      "epoch": 11,
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-layer3-20261023/verified-checkpoint-backup/tuned-distilled-seed2/best.pt",
+      "verified_at": 1792783047.010424
+    }
+  ]
+}

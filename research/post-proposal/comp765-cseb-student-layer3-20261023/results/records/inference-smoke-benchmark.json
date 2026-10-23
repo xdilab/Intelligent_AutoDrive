@@ -1,0 +1,10 @@
+{
+  "frames": 32,
+  "seconds": 1.5751594491302967,
+  "frames_per_second": 20.31540363591024,
+  "heads": 12,
+  "layer3_branches": 7,
+  "peak_gpu_gib": 0.43696117401123047,
+  "scope": "Actual32trainingframes, training candidates, twelve random heads; no AP. Official full-candidate benchmark after training.",
+  "time": 1792777546.215167
+}

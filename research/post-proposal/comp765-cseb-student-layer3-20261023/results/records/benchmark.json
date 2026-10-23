@@ -1,0 +1,23 @@
+{
+  "time": 1792777507.4222953,
+  "prepare32frames_seconds": 1.1035525631159544,
+  "training": {
+    "frozen": {
+      "seconds_per_sequence": 0.02890498796477914,
+      "peak_gpu_gib": 0.2424159049987793
+    },
+    "tuned": {
+      "seconds_per_sequence": 0.07681945577496663,
+      "peak_gpu_gib": 2.2624106407165527
+    }
+  },
+  "gpu": "NVIDIA RTX A6000",
+  "prefix_cache_gib": 10.91015625,
+  "parameters": {
+    "semantic_total": 9651864,
+    "head": 1108568,
+    "frozen_encoder_total": 8543296,
+    "layer3": 7098368
+  },
+  "scope": "Eight actual32frame updates each arm after warmup, cached prefix onGPU; no AP inspected"
+}

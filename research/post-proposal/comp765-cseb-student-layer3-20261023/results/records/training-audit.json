@@ -1,0 +1,81 @@
+{
+  "time": 1792779624.2712338,
+  "passed": true,
+  "runs": [
+    {
+      "run": "frozen-supervised-seed0",
+      "selected_epoch": 6,
+      "checkpoint_sha256": "d430c8e96739d1033fe1eb3f4f71d4b6cb4fdd1add589830e697de5b727a69b8",
+      "passed": true
+    },
+    {
+      "run": "frozen-distilled-seed0",
+      "selected_epoch": 17,
+      "checkpoint_sha256": "2e964e90bc7528dad44d62423581310a34ba2140f844ebf5e2a9ed9b978e474e",
+      "passed": true
+    },
+    {
+      "run": "tuned-supervised-seed0",
+      "selected_epoch": 8,
+      "checkpoint_sha256": "d0deaecc3b720d378b460fb7f10f96c72272a0bd412bf7305b1f27925fc8d22b",
+      "passed": true
+    },
+    {
+      "run": "tuned-distilled-seed0",
+      "selected_epoch": 16,
+      "checkpoint_sha256": "fea02adc51f12a8b4b2186d635cfbf75a63f4db96c3d6eb976e58e622dfa708e",
+      "passed": true
+    },
+    {
+      "run": "frozen-supervised-seed1",
+      "selected_epoch": 10,
+      "checkpoint_sha256": "0391e75499f5178f4787aa59f5761491bf1485abcbeb21532f8be2f831a994bb",
+      "passed": true
+    },
+    {
+      "run": "frozen-distilled-seed1",
+      "selected_epoch": 13,
+      "checkpoint_sha256": "0661cc5e3e0c21c466cf67cfc663ca39517922538e9ff62854a23c9124edf8bf",
+      "passed": true
+    },
+    {
+      "run": "tuned-supervised-seed1",
+      "selected_epoch": 8,
+      "checkpoint_sha256": "8d447626f9b68c97797c3e6198dfb7d1aa435f2f1d98c75144d4cd5d0561df5c",
+      "passed": true
+    },
+    {
+      "run": "tuned-distilled-seed1",
+      "selected_epoch": 13,
+      "checkpoint_sha256": "3b6432ae6bc23ef3dd0626e92862334aba0703e960fa3848c045f875b4f924c1",
+      "passed": true
+    },
+    {
+      "run": "frozen-supervised-seed2",
+      "selected_epoch": 11,
+      "checkpoint_sha256": "51482a8a82e40a8074cff4d14b7a0a55cfbcd1ca4c1097a7e1558b63a7dc6d59",
+      "passed": true
+    },
+    {
+      "run": "frozen-distilled-seed2",
+      "selected_epoch": 22,
+      "checkpoint_sha256": "6b43ff90129317f3495703d3bc98ef1e487165669788d760c98fef439372274a",
+      "passed": true
+    },
+    {
+      "run": "tuned-supervised-seed2",
+      "selected_epoch": 7,
+      "checkpoint_sha256": "fb9b7bd1f162e8c1b029653c68ba67d4fef651949f9da6b8351296ed63789256",
+      "passed": true
+    },
+    {
+      "run": "tuned-distilled-seed2",
+      "selected_epoch": 11,
+      "checkpoint_sha256": "3266adc1b7c4a96621c7b652b343bb60950cce6ab40a9714dbfcc403fc3f1921",
+      "passed": true
+    }
+  ],
+  "paired_initialization_and_orders": true,
+  "frozen_parameters_and_BN_verified": true,
+  "selection_verified": true
+}

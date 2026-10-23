@@ -1,0 +1,67 @@
+{
+  "time": 1792777553.9005406,
+  "passed": true,
+  "original_provenance_sha256": "684b029075693275f13b67b5f8579428d6805cc2b209a21dec54b631e2b1113a",
+  "verified_original_assets": {
+    "frames": {
+      "path": "/data/repos/wiki/artifacts/post-proposal-experiments/shared-frames.json",
+      "sha256": "2ef7e3c370a54cd0d61b9aff46acdab2a0e7fa23f1e5f91dd081b67cc35174f1",
+      "bytes": 922460
+    },
+    "counts": {
+      "path": "/data/repos/wiki/artifacts/proposal-tail/train-counts.json",
+      "sha256": "8d8b168945a49d122af6de5b802fd46d80c80ea15cc9a08ec9ad9b121b12639f",
+      "bytes": 9544
+    },
+    "yolo": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/dets_v8x_best_val_fullcand.pkl",
+      "sha256": "447e28f0c071bb7910b5cc9ac37420c7da3bfa3827ad12b5eb3b61e7e5f64811",
+      "bytes": 183339278
+    },
+    "gt": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/dets_i3d_val_fullcand.pkl",
+      "sha256": "c792b324fa6f2cec88d2cafb48ee6dbf8682d62c89ff69f3025044bb1f82d68f",
+      "bytes": 5000961817
+    },
+    "teacher_result": {
+      "path": "/data/repos/wiki/artifacts/contextual-roi-1b-20260930/results-verified-20261005/attention-global-dcb-seed0-detector-results.json",
+      "sha256": "8acbaaf71a3f158727be5f53b0527e77c278b0f6ea7fa4954a858849fe754176",
+      "bytes": 6137
+    },
+    "backbone": {
+      "path": "/home/brandon/.cache/torch/hub/checkpoints/resnet50-11ad3fa6.pth",
+      "sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+      "bytes": 102540417
+    },
+    "detector": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/runs/v8x_agent_1280_eccv/weights/best.pt",
+      "sha256": "3ad32910bacaf1fa74174503c5c29f94cfbbd83de51e5e5c301e6fc7f13e8684",
+      "bytes": 136824954
+    },
+    "teacher": {
+      "path": "/home/brandon/.local/share/road-reason/contextual-roi-1b-20260930/attention-global-dcb-seed0/best.pt",
+      "sha256": "968aefaf7d9f896dd360baf1ab39fb75777693dbcdbd9a2663fb6696ae6c5567",
+      "bytes": 59165858
+    },
+    "annotation": {
+      "path": "/data/datasets/road_waymo/road_waymo_trainval_v1.1.json",
+      "sha256": "628b39bb9aabd917c6631144e319ecba25c1de3a10502c2360439af7e4f4586a",
+      "bytes": 1149647915
+    },
+    "expanded_manifest": {
+      "path": "/home/brandon/.local/share/road-reason/cseb-student-expanded-20261019/manifest.json",
+      "sha256": "900a233821e5748cf42684b1c493d3989a89ab14d5d61858a9a7b5926871ddf6",
+      "bytes": 146428
+    },
+    "teacher_partition": {
+      "path": "/data/repos/wiki/artifacts/stage56-full/collected/preparation.json",
+      "sha256": "f8704095dd068af74abbd0e42ad4c82d4421bd9edd9527d48b375d77d646b338",
+      "bytes": 16517
+    }
+  },
+  "new_backbone": {
+    "path": "/home/brandon/.cache/torch/hub/checkpoints/resnet50-11ad3fa6.pth",
+    "sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca"
+  },
+  "note": "Original ResNet backbone retained only as baseline; EfficientNet backbone is separate. Shared candidate/GT/annotation and teacher provenance unchanged."
+}

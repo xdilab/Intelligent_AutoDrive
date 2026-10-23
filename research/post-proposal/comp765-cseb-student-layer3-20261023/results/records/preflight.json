@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "time": 1792777507.4220462,
+  "checks": {
+    "all_arms_and_historical_head_initialization": {
+      "0": "f7adcab1b2aff695661dd40a3c729282ece8677f9a9addee6b4bca44e4fb2ab4",
+      "1": "45a8aa8e832a4a4732bb5c2aa6df301a8d5c1a983348d5b2f82e90935b4167ac",
+      "2": "a1ee7fedff47361a2cb0b79a0fc840cafdfa2a1c5568539779fde486b1029c4f"
+    },
+    "False_finite_smoke_loss": 1.3880627155303955,
+    "False_resume_max_abs": 0.0,
+    "True_finite_smoke_loss": 1.3880627155303955,
+    "True_resume_max_abs": 3.129243850708008e-07,
+    "BN_running_stats_frozen_and_causal_prefix_and_reset": true,
+    "multilabel_slot0_mask": true,
+    "confidence_once": true,
+    "official_metric_and_inputs_unchanged": true,
+    "split_encoder_framewise_exact": true,
+    "initial_batch32_vs_frame1_roi_max_abs": 0.04296875,
+    "initial_batch32_vs_frame1_scene_max_abs": 0.00390625
+  },
+  "parameters": {
+    "semantic_total": 9651864,
+    "head": 1108568,
+    "frozen_encoder_total": 8543296,
+    "layer3": 7098368
+  }
+}

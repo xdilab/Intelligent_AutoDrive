@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "time": 1792779275.169308,
+  "checks": {
+    "original_supervision_caches_unchanged": true,
+    "AP_fixture": [
+      100.0,
+      50.0
+    ],
+    "frozen-distilled_packaged_evaluator_max_abs": 0.0,
+    "tuned-distilled_packaged_evaluator_max_abs": 0.0
+  },
+  "evaluation_signature": {
+    "protocol_sha256": "f31945db5260f91e2ed5fb80eeeb1f43f5ac1dc31b27c246b302a2e230536712",
+    "freeze_sha256": "a564230fa896816624b21c38b378211772799ebf765529c0af1147b76594ef35",
+    "provenance_addendum_sha256": "6cf0a2ba9ea9e72117db2b357322c4e3719ca70281a36603b9030b058d22e624",
+    "evaluator_sha256": "059a90e39d152f8236c3e20e01b2bffd19cfbad4ffcc8df88210df76bb682f15",
+    "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+    "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9"
+  }
+}

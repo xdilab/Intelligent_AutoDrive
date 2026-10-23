@@ -1,0 +1,9 @@
+{
+  "time": 1792782859.2524037,
+  "passed": true,
+  "detector_runs": 12,
+  "pairs": 3,
+  "factorial_conditions": 4,
+  "input_parity": true,
+  "runtime_complete": true
+}

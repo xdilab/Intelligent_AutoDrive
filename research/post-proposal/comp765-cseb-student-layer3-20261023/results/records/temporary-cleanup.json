@@ -1,0 +1,537 @@
+{
+  "time": 1792783005.4183345,
+  "status": "removed-owned-regenerable-buffers",
+  "records": [
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023/frozen-supervised-seed0.npy",
+      "bytes": 4536680576,
+      "sha256": "fa6af9b2c50ed0442b887988a67810e87d3630017774ae07652e1a3711491acc",
+      "kind": "official_scores"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023/frozen-distilled-seed0.npy",
+      "bytes": 4536680576,
+      "sha256": "d124b84a6bfa80118efe5fa14d112002107bf0c9295f77476175344eadcb718c",
+      "kind": "official_scores"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023/tuned-supervised-seed0.npy",
+      "bytes": 4536680576,
+      "sha256": "0ad78efc6bc076e9964d6d882cf15584db26eae02fe1ff3c4fb3a3bd0fe8d2e9",
+      "kind": "official_scores"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023/tuned-distilled-seed0.npy",
+      "bytes": 4536680576,
+      "sha256": "ddca0e826b1d2468e45d13a834c1e1bb1b43e4107248c11a5b915e8ebb060f1a",
+      "kind": "official_scores"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023/frozen-supervised-seed1.npy",
+      "bytes": 4536680576,
+      "sha256": "f3c724c771a428e037bee9f164b9cc9e4823f9e9152789d26ddccbfcca3e28ea",
+      "kind": "official_scores"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023/frozen-distilled-seed1.npy",
+      "bytes": 4536680576,
+      "sha256": "87eb2a7f0363308cd8f31918a4a5ce597cbe0e2b8bc93ac411da6fccd46e9102",
+      "kind": "official_scores"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023/tuned-supervised-seed1.npy",
+      "bytes": 4536680576,
+      "sha256": "4198511f4ac571f52c437352dc1502ef9addb6e35e1b13fd510430f1e9822236",
+      "kind": "official_scores"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023/tuned-distilled-seed1.npy",
+      "bytes": 4536680576,
+      "sha256": "f76ad44e6cfda360e0dc5a2a9a2555a55ea589f3d1a0e8f68c2025b7f2fde0ef",
+      "kind": "official_scores"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023/frozen-supervised-seed2.npy",
+      "bytes": 4536680576,
+      "sha256": "8275670f4217d12f59d79b2e1523f8b7828e261db696dce13df639b5f52fe4aa",
+      "kind": "official_scores"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023/frozen-distilled-seed2.npy",
+      "bytes": 4536680576,
+      "sha256": "f5a725cfe2b8d10947cd5b51bb468ab30c00cc5449cbd2fa2cd196ac51123923",
+      "kind": "official_scores"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023/tuned-supervised-seed2.npy",
+      "bytes": 4536680576,
+      "sha256": "4375b666e3d89a0aa62a117d3a27f9007943c70e2596a3be4483003c0d6777c6",
+      "kind": "official_scores"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023/tuned-distilled-seed2.npy",
+      "bytes": 4536680576,
+      "sha256": "84c025622282608fdc08359c2c878e3be417433e4dde833caf3e50cf733001a4",
+      "kind": "official_scores"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00169.pt",
+      "bytes": 154141872,
+      "sha256": "f705076f07b748f65508685c8d911fd774aecfaa01f162e68d91e6363bb34685",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00254.pt",
+      "bytes": 154141872,
+      "sha256": "7c7c0a1a124a6fe593a93874e832b356bfad5bcab189732d74496a621cb70f17",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00532.pt",
+      "bytes": 154141872,
+      "sha256": "b3859b9bd649432e0d796b2a0d9b00d98892f5f74c7482c2c358bc10cf753dba",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00587.pt",
+      "bytes": 154141872,
+      "sha256": "9f3318a576711425942474bb542e985c80904f891b1dd8826f1c36aad610a9c7",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00315.pt",
+      "bytes": 154141872,
+      "sha256": "47c5e8a25ca6498163ef70fe56012dce5e4ee3541e362ff28edb9f0566024251",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00272.pt",
+      "bytes": 154141872,
+      "sha256": "bdd18875e1bb63cc2c94f57d32bc46b404eba567fc8f765008251cd14142b311",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00365.pt",
+      "bytes": 154141872,
+      "sha256": "f5c61956f737b569f3d3b26bd769d43d6344e97edc4b6b1a78a2d7b3dffd433b",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00002.pt",
+      "bytes": 154141872,
+      "sha256": "1f49fee79ba8035f73afb7eef86241bbfa840e399be547a157d728fa2ec02763",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00170.pt",
+      "bytes": 154141872,
+      "sha256": "d9a862e30396c57f697505d6abc2f837c308bee29d7d1eba89a6491ae09f0825",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00198.pt",
+      "bytes": 154141872,
+      "sha256": "a6b1156aee2bc57dad82ed79d6d3252a2ad3277d7ca0b8847fc518db02039705",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00300.pt",
+      "bytes": 154141872,
+      "sha256": "7a8d17364858763ab83e9264dc41d9f7708158bc761c5918af2d5eb24263fb26",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00264.pt",
+      "bytes": 154141872,
+      "sha256": "d435bd6575de701f8d041c4ae643fd1df33f9177a75b88630ef64cdc5060a4d7",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00246.pt",
+      "bytes": 154141872,
+      "sha256": "d1d7584ab9dce4f6fe42fd8188ec7814b7927a93ed47c75d1cdf7ff3c0bb5efc",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00455.pt",
+      "bytes": 154141872,
+      "sha256": "7fd05f8e462d4453e195ea79d86394fc772b755793be4e8aa4851f8bf097eef9",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00089.pt",
+      "bytes": 154141872,
+      "sha256": "eeb23ddd80d214ca372919598e6d1465b6f1920e4c804cfd0fdf2e3865a78340",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00364.pt",
+      "bytes": 154141872,
+      "sha256": "d6798b83531c9fa454840fb4cf173ad4030404750d92f7acc821f825a9d31ecf",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00480.pt",
+      "bytes": 154141872,
+      "sha256": "433d73bed6c01801ac8e91c6a8d69565b8733e308919ad6057af411c75a822c0",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00350.pt",
+      "bytes": 154141872,
+      "sha256": "b4b8b06a10e6dfab3bd8c80109464466ad6e08adb3ffd9d16a6aad6047ffcaa3",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00598.pt",
+      "bytes": 154141872,
+      "sha256": "eda1a17d273e425ed8b8557e59af9ac77949e15799118a2973bf9fb6dbee2a75",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00077.pt",
+      "bytes": 154141872,
+      "sha256": "fab7beb68f369f988a50793d9abce4af1b77974de30e8713b9162865b7d9b30d",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00553.pt",
+      "bytes": 154141872,
+      "sha256": "2c54c21a53733e2b2b62b0d1fcb28e742eac22e6e418ebdc37021d95acda9392",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00295.pt",
+      "bytes": 154141872,
+      "sha256": "69300931c3fb629761c900545b95737734a03c172d4c679fc183f16622defea3",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00525.pt",
+      "bytes": 154141872,
+      "sha256": "251e3cff834e8e4d538bd59f1845cbe2c96ae6df517c4af580b085018fca372c",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00287.pt",
+      "bytes": 154141872,
+      "sha256": "7751f1375f5de1c8f60b83d594cd0bbd910ee61be90d05b7fb9bfd742e723d0d",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00212.pt",
+      "bytes": 154141872,
+      "sha256": "4613606f6f57c3a832148be9feca906477377e64ba6b89ffc25149e40b81b6bb",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00582.pt",
+      "bytes": 154141872,
+      "sha256": "0474e51c73958bd65be1bd74c4759ae1a7fe2d00b0ac893bb2829643934f6c0b",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00075.pt",
+      "bytes": 154141872,
+      "sha256": "7238311170567f6267662517a59a3a8aa5d57445b711a2e5eecb7d7c3479aad5",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00276.pt",
+      "bytes": 154141872,
+      "sha256": "1d7732f521039c7dda9c6785b35cb54bd18da9e78995000d2609e2c7c05a7418",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00135.pt",
+      "bytes": 154141872,
+      "sha256": "1fb8c880561eddb08b939f59b4d2194c8e6a3e136882bf2307d024e768eced44",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00440.pt",
+      "bytes": 154141872,
+      "sha256": "97b333a9d14ddbeeb206989382b3b9f30901523bc4b8cb9c72bb1cba5f689d63",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00281.pt",
+      "bytes": 154141872,
+      "sha256": "09a3638d721f22f052b9d27d201f0975fa4b04acaf3efc8bc83649397631dfa8",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00469.pt",
+      "bytes": 154141872,
+      "sha256": "fb0219e0e8290f7db2b8a647c14226c0a7de03fa52de693600e5db95d1332077",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00154.pt",
+      "bytes": 154141872,
+      "sha256": "04612d1622132b59ce552bd2690afa0e8f170ebee4eb8f42a1e2383f02469d30",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00420.pt",
+      "bytes": 154141872,
+      "sha256": "b24ffe6dc3ab5d69d1a121fe55e0af171971c330d8df0f1d602b818cf801c6cb",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00447.pt",
+      "bytes": 154141872,
+      "sha256": "81a8e6245e5a6b2e73a2e6eedb53cdb79a4d6e43646a942b017f74cfc6ea6a72",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00249.pt",
+      "bytes": 154141872,
+      "sha256": "865c6aae1ab7a6bc9f9b140ec97efc259314c8b42e5ddff6e89ee2dd78664063",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00366.pt",
+      "bytes": 154141872,
+      "sha256": "f5420ec5162d97fe40a37a51aa04dcf41e51bdd406f66d06c215e47d7891d460",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00199.pt",
+      "bytes": 154141872,
+      "sha256": "d8942d00fc92b8937e550ec02288c5a7e572dd4e2e48d066cad02c811f377ba8",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00210.pt",
+      "bytes": 154141872,
+      "sha256": "65a17c47894e87dab37f1de2a6dc3994f95a10611c697b574e7469d1bf1228a8",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00389.pt",
+      "bytes": 154141872,
+      "sha256": "6b4730b0d701e2ae6bba5d775e24ffe48d565a7533e01341964898485ba90759",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00014.pt",
+      "bytes": 154141872,
+      "sha256": "d56f32c5de8d8a77a50dd25060f8b14111fa55e625cf3dddaa95a1b861a9351e",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00143.pt",
+      "bytes": 154141872,
+      "sha256": "5d17155af75f8f4ae241942cd228f855ea213c2f03f3984931b9353d057b9d9b",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00357.pt",
+      "bytes": 154141872,
+      "sha256": "37bf21d0b6c3a3dfdac44e541dc1aed5b10db5ea9c57afbecf899ba6b1656da5",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00382.pt",
+      "bytes": 154141872,
+      "sha256": "928ab125eac6a559efe4871e62c97d0eba7e16210f883e726411623388149621",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00243.pt",
+      "bytes": 154141872,
+      "sha256": "63d12bf3e0d798d9b41b8d58c09c1c8cdcb2dc25d4fb7fe248d75076384a14ba",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00316.pt",
+      "bytes": 154141872,
+      "sha256": "68e88c02c477d87d217775e5049d6bf407729e8594f392d76fb7ae4283fafc23",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00491.pt",
+      "bytes": 154141872,
+      "sha256": "a1e83abd0e0be95663b95cd577116618a20a06685c3db44f46e0db18d1c09fb0",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00250.pt",
+      "bytes": 154141872,
+      "sha256": "f2dc65de06b4bcdeaa72ee39455bf7ef9f0c9b5531ba018a2d831a1fdd6de2e9",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00136.pt",
+      "bytes": 154141872,
+      "sha256": "dbef7f2b1e1ea22eb8bded30e9afa8e1cb6a98b033798aabb8f63ddcb2aadc83",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00556.pt",
+      "bytes": 154141872,
+      "sha256": "f60ba08b1f3ae7f10e925ff40f563218066d57e27b680ba09eb5f06401eed5f7",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00537.pt",
+      "bytes": 154141872,
+      "sha256": "5a1d26503d028651c24d46c231643b953327c476a62cfddce3d4f8acb31a7b94",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00047.pt",
+      "bytes": 154141872,
+      "sha256": "ca20064e1ee9e3eba33d8c3e539c87ee511d4040c4649b62c8b47894c9ad30b9",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00188.pt",
+      "bytes": 154141872,
+      "sha256": "08bd872083dda5bd5c54f199a290d652489ac1f418c04af545ddd00354cfd72e",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00418.pt",
+      "bytes": 154141872,
+      "sha256": "3a29dff0c3a7c244017c7045370be578cf9def3ff1d50c3209f6178f568347b9",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00562.pt",
+      "bytes": 154141872,
+      "sha256": "a5e19d6de61eb046efe0cec5c8ff3f2e652a181895153ed6ec35718aa5776f6a",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00362.pt",
+      "bytes": 154141872,
+      "sha256": "0aeb6d9b8f75f14d5440fe8d154780bc73a4202df07afb8c2ba70b7778130f29",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00441.pt",
+      "bytes": 154141872,
+      "sha256": "73bfa71d94977a56df09741f05e9fba832fdf13428f38f3fd11f09eec80bf58e",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00020.pt",
+      "bytes": 154141872,
+      "sha256": "fc28cecfe14b115bd41aff649433c85b18af78f14016944c3b73adb6b106f514",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00439.pt",
+      "bytes": 154141872,
+      "sha256": "5b3d7f34c65aa425265b6c41c623e97833a7619be1eb2626e7c67257c874df62",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00284.pt",
+      "bytes": 154141872,
+      "sha256": "d5c24f18ba64d40e18c327c1b87b921e743a06d75d5cc4ca449e3a1eda8ac2ad",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00404.pt",
+      "bytes": 154141872,
+      "sha256": "0312915a9862a3adc2f3c8ba80a3587f47eeb3c7d8c68f04af388ccdd7d67e32",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00267.pt",
+      "bytes": 154141872,
+      "sha256": "6e42133cd0f2c154828d4364eb1500dc6a6139da0fee818a3370fd45100ad00a",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00301.pt",
+      "bytes": 154141872,
+      "sha256": "f738316ff26fac8687791ec3b35c204a0b0bba80b6a6107ad930e2ae4c90946e",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00302.pt",
+      "bytes": 154141872,
+      "sha256": "ebb38f260e1ac4d56f185718d99b09f656c4d6dcb12b6f92c468f5140a9bbf45",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00307.pt",
+      "bytes": 154141872,
+      "sha256": "dfebf4ae1a887257c1f13dcfe0dea556df60910891e92a444bd4afa0da41bc9e",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00334.pt",
+      "bytes": 154141872,
+      "sha256": "705d17e9feec338c78f336ff20901f31f54f174f7cee784358f5d4a35a81df65",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00363.pt",
+      "bytes": 154141872,
+      "sha256": "8abdb1092c6e6da8259d6677f0dfda548544ed0fda529f6cbd636b3230ea1883",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00092.pt",
+      "bytes": 154141872,
+      "sha256": "993a50c23e0141f162f7022dffcfef45b89f413bfe8518558b7dcd8f04caf4ed",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00114.pt",
+      "bytes": 154141872,
+      "sha256": "734b9cf40199de537fb815ba6739ef47e35a2b9e8bce689a89cec70644f92e27",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00385.pt",
+      "bytes": 154141872,
+      "sha256": "aa0e6d517c7718400d45d546f1b189c777bb02461b090eed4d029fff4b12f09b",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00105.pt",
+      "bytes": 154141872,
+      "sha256": "34a1ee85cff28d870f6714ec665268849f36cefdf237acea7456921c34937ddf",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00152.pt",
+      "bytes": 154141872,
+      "sha256": "6ffcce19d5e9c39a643a9970f25c13dda0d6d0d8ceba8a35a5311d76db55b594",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00025.pt",
+      "bytes": 154141872,
+      "sha256": "b209088bfe10c8463abac37c4b4293b911216fa049aab3926c5b46982f147a73",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00467.pt",
+      "bytes": 154141872,
+      "sha256": "1c101e4f75e2f99a078191c12eb5740f9b5c4311a284b91a8617e4a41ba4bb90",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00305.pt",
+      "bytes": 154141872,
+      "sha256": "7eefa29fbc7e76547f0b601e4b22fb373cf581ccf0c164f12b78b6d88bc0d9d4",
+      "kind": "frozen_prefix"
+    },
+    {
+      "path": "/dev/shm/comp765-cseb-student-layer3-20261023-prefix/train_00476.pt",
+      "bytes": 154141872,
+      "sha256": "582864e8cbb41333d4a66cd95440153006f8c377c1d9dfc8a8cd39c0bf30ae6b",
+      "kind": "frozen_prefix"
+    }
+  ],
+  "total_bytes": 66154949184,
+  "regenerate": "python prepare.py; scores regenerate from selected checkpoints with evaluate.py in a new scratch root; historical inputs/checkpoints preserved",
+  "completed": 1792783014.3021066
+}

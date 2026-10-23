@@ -1,0 +1,10 @@
+{
+  "time": 1792777834.6431594,
+  "scope": "Analysis and runtime implementation fixed before new official detector AP; protocol contrast definitions already frozen at launch",
+  "files": {
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-layer3-20261023/analyze.py": "9d76b55f3b6620231a86417d3ee13bc86f32293dbc336cf909502f2f2d2974c2",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-layer3-20261023/final_audit.py": "5a1899f06d56241e9f9cb5b7c545ca1acd730dbdda769f1c4926ee8c56cbc862",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-layer3-20261023/runtime_worker.py": "daeb4c65ec60b68c3dec8ba3052fd475b2775b0e023df40782a99cfe90251e60",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-layer3-20261023/runtime_audit.py": "86d0f6f10aedc222cbf581ee08daa61a826e34424baa0c8b2ab25a29d6666c6c"
+  }
+}

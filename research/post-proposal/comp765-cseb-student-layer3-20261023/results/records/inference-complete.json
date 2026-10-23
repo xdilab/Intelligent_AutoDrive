@@ -1,0 +1,30 @@
+{
+  "signature": {
+    "protocol_sha256": "f31945db5260f91e2ed5fb80eeeb1f43f5ac1dc31b27c246b302a2e230536712",
+    "freeze_sha256": "a564230fa896816624b21c38b378211772799ebf765529c0af1147b76594ef35",
+    "provenance_addendum_sha256": "6cf0a2ba9ea9e72117db2b357322c4e3719ca70281a36603b9030b058d22e624",
+    "evaluator_sha256": "059a90e39d152f8236c3e20e01b2bffd19cfbad4ffcc8df88210df76bb682f15",
+    "metric_sha256": "7cab7538a9b87dee300ff57cc1a6f3e62f43736c8ce729fc1a7863d23626044c",
+    "core_sha256": "fa70896a9cd048c54bf051b06bf7ba1230b7ff23c9572d66b51c70d892f0fda9",
+    "frozen-supervised-seed0": "d430c8e96739d1033fe1eb3f4f71d4b6cb4fdd1add589830e697de5b727a69b8",
+    "frozen-distilled-seed0": "2e964e90bc7528dad44d62423581310a34ba2140f844ebf5e2a9ed9b978e474e",
+    "tuned-supervised-seed0": "d0deaecc3b720d378b460fb7f10f96c72272a0bd412bf7305b1f27925fc8d22b",
+    "tuned-distilled-seed0": "fea02adc51f12a8b4b2186d635cfbf75a63f4db96c3d6eb976e58e622dfa708e",
+    "frozen-supervised-seed1": "0391e75499f5178f4787aa59f5761491bf1485abcbeb21532f8be2f831a994bb",
+    "frozen-distilled-seed1": "0661cc5e3e0c21c466cf67cfc663ca39517922538e9ff62854a23c9124edf8bf",
+    "tuned-supervised-seed1": "8d447626f9b68c97797c3e6198dfb7d1aa435f2f1d98c75144d4cd5d0561df5c",
+    "tuned-distilled-seed1": "3b6432ae6bc23ef3dd0626e92862334aba0703e960fa3848c045f875b4f924c1",
+    "frozen-supervised-seed2": "51482a8a82e40a8074cff4d14b7a0a55cfbcd1ca4c1097a7e1558b63a7dc6d59",
+    "frozen-distilled-seed2": "6b43ff90129317f3495703d3bc98ef1e487165669788d760c98fef439372274a",
+    "tuned-supervised-seed2": "fb9b7bd1f162e8c1b029653c68ba67d4fef651949f9da6b8351296ed63789256",
+    "tuned-distilled-seed2": "3266adc1b7c4a96621c7b652b343bb60950cce6ab40a9714dbfcc403fc3f1921"
+  },
+  "processed_frames": 38663,
+  "scored_frames": 36717,
+  "candidates": 6163968,
+  "seconds_this_session": 1367.497909354046,
+  "zero_reset_at_every_video": true,
+  "continuous_prefix": true,
+  "time": 1792780826.5547056,
+  "scratch": "/dev/shm/comp765-cseb-student-layer3-20261023"
+}

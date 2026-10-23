@@ -1,0 +1,36 @@
+{
+  "time": 1792778402.9983723,
+  "passed": true,
+  "rows": [
+    {
+      "run": "frozen-distilled-seed0",
+      "selected_epoch": 17,
+      "passed": true
+    },
+    {
+      "run": "frozen-distilled-seed1",
+      "selected_epoch": 13,
+      "passed": true
+    },
+    {
+      "run": "frozen-supervised-seed0",
+      "selected_epoch": 6,
+      "passed": true
+    },
+    {
+      "run": "frozen-supervised-seed1",
+      "selected_epoch": 10,
+      "passed": true
+    },
+    {
+      "run": "tuned-distilled-seed0",
+      "selected_epoch": 16,
+      "passed": true
+    },
+    {
+      "run": "tuned-supervised-seed0",
+      "selected_epoch": 8,
+      "passed": true
+    }
+  ]
+}
