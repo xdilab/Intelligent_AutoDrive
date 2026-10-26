@@ -1,0 +1,8 @@
+{
+  "time": 1793032077.9636395,
+  "scientific_code_revision": "193114f236e2ebfc7bedfe8c9c6efe36cd5d2904",
+  "pid": 1874054,
+  "service": "research-comp765-student-association-context.service",
+  "scientific_freeze": "/home/brandon/.local/share/road-reason/comp765-student-association-context-20261026/freeze.json",
+  "note": "Scientific files frozen before evaluation; reporting/audit/README updates remain separate from the frozen inference/mining code."
+}

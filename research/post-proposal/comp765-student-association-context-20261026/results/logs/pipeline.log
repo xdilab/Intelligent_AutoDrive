@@ -1,0 +1,23 @@
+{"time": 1793031499.7998376, "phase": "phase-start", "name": "mine", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/mine.py"]}
+{"time": 1793031550.6639895, "phase": "phase-complete", "name": "mine"}
+{"time": 1793031550.664571, "phase": "pipeline-complete"}
+{"time": 1793031621.3712785, "phase": "phase-start", "name": "mine", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/mine.py"]}
+{"time": 1793031672.2771668, "phase": "phase-complete", "name": "mine"}
+{"time": 1793031672.277754, "phase": "phase-start", "name": "preflight", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/preflight.py"]}
+{"time": 1793031675.0781462, "phase": "phase-complete", "name": "preflight"}
+{"time": 1793031675.078742, "phase": "phase-start", "name": "freeze_study", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/freeze_study.py"]}
+{"time": 1793031676.9981527, "phase": "phase-complete", "name": "freeze_study"}
+{"time": 1793031676.9987304, "phase": "phase-start", "name": "official-benchmark", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/official.py", "--benchmark-videos", "2"]}
+{"time": 1793031711.8089886, "phase": "phase-complete", "name": "official-benchmark"}
+{"time": 1793031711.8098893, "phase": "pipeline-complete"}
+{"time": 1793031801.2852995, "phase": "phase-start", "name": "official", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/official.py"]}
+{"time": 1793034030.453714, "phase": "phase-complete", "name": "official"}
+{"time": 1793034030.4540985, "phase": "phase-start", "name": "runtime", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/runtime.py"]}
+{"time": 1793034078.9679546, "phase": "phase-complete", "name": "runtime"}
+{"time": 1793034078.9683433, "phase": "phase-start", "name": "replay_audit", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/replay_audit.py"]}
+{"time": 1793034084.9279928, "phase": "phase-complete", "name": "replay_audit"}
+{"time": 1793034084.9285316, "phase": "phase-start", "name": "analyze", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/analyze.py"]}
+{"time": 1793034087.6592128, "phase": "phase-complete", "name": "analyze"}
+{"time": 1793034087.6595619, "phase": "phase-start", "name": "audit", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/audit.py"]}
+{"time": 1793034203.1265166, "phase": "phase-complete", "name": "audit"}
+{"time": 1793034203.1270382, "phase": "pipeline-complete"}

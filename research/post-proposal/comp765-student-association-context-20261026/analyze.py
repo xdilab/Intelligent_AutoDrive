@@ -1,6 +1,6 @@
 """All preregistered contrasts, seeds and event classes; no result-driven tuning."""
 from assoc_common import *
-import csv
+import csv,re
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -84,6 +84,9 @@ Protocol: protocol.json. Frozen source/rule/input/checkpoint hashes: run-root fr
 '''
  if runtime:
   rr=runtime['summary'];report+=f'''\n## Raw-video runtime\n\nThe full-pair adapter processed{runtime['frames']}frames across{runtime['videos']}complete videos,10Hz sampling, from raw MP4 with no teacher/features/future frames. The packaged model tensor hash matches the evaluated seed0checkpoint, and an independent NumPy replay checked all output scores. Memory bounds and video-boundary resets passed.\n\nFull-pair correction median{rr['correction']['median_ms']:.3f}ms, p95{rr['correction']['p95_ms']:.3f}ms. Serial total median{rr['total']['median_ms']:.3f}ms, p95{rr['total']['p95_ms']:.3f}ms; file-processing throughput{runtime['total_fps']:.2f}frames/s. The total includes decoding, production detector, student, correction and compressed JSON export, excludes camera/display/transport, and is not a claim of online end-to-end latency. Per-component timing, model loading, sample sizes/resolution/candidate counts and GPU memory are in runtime-summary.json and per-video report.json. Detector AP uses the fixed full-candidate manifest; production runtime uses confidence0.25/NMS0.7/max300.\n'''
+ inventory=read(ROOT/'model-inventory.json')
+ report+=f"\nThe unchanged semantic student has {inventory['semantic_total_parameters']:,} parameters ({inventory['student_encoder_parameters']:,} encoder and {inventory['student_head_parameters']:,} head). The detector contributes another {inventory['detector_parameters']:,} parameters and is included in raw-video total latency, but excluded from the semantic parameter count. The rule bank adds {inventory['rule_nonzero_coefficients']:,} nonzero fixed effects stored in {inventory['rule_dense_coefficients']:,} dense coefficient slots; these are nontrainable constants. The readable full rule manifest occupies {inventory['rule_manifest_bytes']:,} bytes.\n"
+ report=re.sub(r'(?<=\d)(?=[A-Za-z])',' ',report)
  (out/'FINDINGS.md').write_text(report)
  fig,axes=plt.subplots(1,3,figsize=(15,4));x=np.arange(len(CONDITIONS));axes[0].errorbar(x,[summary[c]['triplet']['mean'] for c in CONDITIONS],yerr=[summary[c]['triplet']['sample_sd'] for c in CONDITIONS],fmt='o',capsize=3);axes[0].set_xticks(x,CONDITIONS,rotation=60,ha='right');axes[0].set_ylabel('Triplet detector mAP (%) ± sample SD')
  triplets=[r for r in rows if r['group']=='triplet']

@@ -1,0 +1,125 @@
+{
+  "protocol": {
+    "study": "COMP765 full-video mining and two-event association extension",
+    "created": "2026-10-26",
+    "question": "Does expanded training-only mining improve fixed student scores, and do incremental two-event conjunctions add benefit beyond single events?",
+    "baseline": "Original frozen ResNet50 through layer3, shared448x672 image features, RoI features/geometry/agent embedding and scene GRU256; original distilled checkpoints seeds0,1,2 selected by supervised development BCE",
+    "conditions": [
+      "baseline",
+      "short_single",
+      "short_frequency",
+      "full_single",
+      "full_frequency",
+      "full_pair",
+      "full_pair_frequency"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "data": "Same64training videos, now ALL annotated frames for full conditions. Pilot32frame mining retained as short controls. Same12development and198officialvalidation videos.",
+    "rule_mining": {
+      "source": "ground truth actors in exact training segments only; IDs remapped via master label strings",
+      "items": "49duplex+86triplet",
+      "transaction": "target actor and presence of events on other nearby actors",
+      "neighborhood_center_distance": 0.5,
+      "exclude_iou_ge": 0.3,
+      "exclude_intersection_over_minarea_ge": 0.5,
+      "weight": "Each target-agent/video contributes total1, divided across its target actor-frames",
+      "min_joint_actor_frames": 5,
+      "min_joint_videos": 3,
+      "smoothing_video_equivalents": 5,
+      "effect": "logit(shrunk conditional probability)-logit(marginal target probability), clipped[-1,1]",
+      "min_absolute_log_lift": 0.09531017980432493,
+      "exclude_identity_and_same_event_parent_child": true
+    },
+    "inference": {
+      "single_pass": true,
+      "context": "Original current-frame predictions only, before correction; detector confidence>=0.25; class-agnostic NMS IoU0.5; at most30context candidates; neighbor and overlap filters identical to mining",
+      "evidence": "max over eligible other actors of q*semantic probability for each agent-compatible antecedent",
+      "delta": "sum(evidence*rule_effect)/(1+sum(evidence*rule_indicator)); target-agent-compatible outputs only",
+      "score": "q*sigmoid(original_logit+lambda*delta); slot0=q, primitive outputs unchanged",
+      "no_context": "association delta exactly zero",
+      "frequency_control": "Same rule effects and denominator but replace per-frame evidence with training marginal antecedent-presence probabilities conditional on target agent",
+      "state": "Original GRU reset at video boundary, continuous current/past prefixes; postprocessor stateless"
+    },
+    "selection": {
+      "strength": 1,
+      "source": "Frozen pilot selected strength1 for both contextual and frequency corrections; fixed here without new development/AP selection",
+      "checkpoint_selection": "Unchanged original BCE-selected distilled seeds0,1,2; no retraining"
+    },
+    "evaluation": {
+      "metric": "Unchanged official detector AP@IoU0.5,36717scoredframes,38663continuousprefixsteps,6163968candidates",
+      "primary": "Triplet detector mAP paired contrasts: data scale full_single-short_single; rule complexity full_pair-full_single; total full_pair-baseline",
+      "secondary": [
+        "duplex",
+        "Tail47",
+        "Deep28",
+        "Common39",
+        "all per-class AP",
+        "frequency-minus-baseline",
+        "association-minus-frequency"
+      ],
+      "tail": "Existing training-derived86class standardized log10 frequency; fixed manifest",
+      "statistics": "Three paired seeds0,1,2; mean/sampleSD, individual paired deltas,95%paired-t df2; exploratory multiple contrasts, no multiplicity-adjusted claims.",
+      "reuse_caveat": "Official validation benchmark has prior research use and detector checkpoint selection exposure. This is exploratory, not an untouched test. Student development videos overlap teacher historical development.",
+      "reuse": "Pilot results may be reused only after exact SHA256 parity of all freshly generated full score arrays; otherwise stop and investigate."
+    },
+    "freeze": "Protocol before mining/new AP. Rules/code/source hashes before official AP. No final-AP tuning.",
+    "limitations": [
+      "Extra ground-truth frames are additional supervision; no student retraining.",
+      "Same3existing seeds; no additional seed run in this methodological extension.",
+      "Two-event test uses residual conditional effect and deterministic runtime cap; conclusions apply to this specified implementation.",
+      "Mining actor-frame transactions are dependent; video support is not a significance test.",
+      "Official validation has prior research/detector-selection exposure; exploratory benchmark, not untouched test.",
+      "No causal/interactions/intent or future-event claims.",
+      "No proof about GRU internal representations."
+    ],
+    "primary_contrasts": [
+      [
+        "full_single",
+        "short_single"
+      ],
+      [
+        "full_pair",
+        "full_single"
+      ],
+      [
+        "full_pair",
+        "baseline"
+      ]
+    ],
+    "control_contrasts": [
+      [
+        "full_single",
+        "full_frequency"
+      ],
+      [
+        "full_pair",
+        "full_pair_frequency"
+      ],
+      [
+        "full_pair_frequency",
+        "full_frequency"
+      ],
+      [
+        "short_single",
+        "short_frequency"
+      ]
+    ],
+    "pair_rules": {
+      "antecedents": "Two distinct nonhierarchical event labels present on eligible other actors; may be same or different other actors. Binary conjunction in mining; min(original per-event evidence) at inference. No corrected-score feedback.",
+      "exclusions": "Identity/parent-child between either antecedent and consequent and between the two antecedents",
+      "weighting_support_smoothing": "Identical target-agent/video balancing, joint actor-frame>=5, joint video>=3,5video-equivalent shrinkage toward target marginal",
+      "incremental_effect": "If shrunk pair conditional exceeds both constituent single conditionals: logit(pair)-logit(max singles). If below both: logit(pair)-logit(min singles). Otherwise zero. Clip[-1,1]. Require abs(effect)>=log(1.1).",
+      "cap": 16,
+      "cap_scope": "Per consequent; rank by joint videos descending, absolute incremental effect descending, then antecedent IDs ascending; training-only selection",
+      "combination": "Pair correction weighted average with denominator1+sum(pair evidences for nonzero rules). Add to full single delta then clip[-1,1], strength1. Empty pair bank exactly full_single.",
+      "frequency": "Use target-agent-conditioned training marginal conjunction presence, same pair rule effects and bounded combination as contextual pair condition."
+    }
+  },
+  "stage": "before mining and new evaluation",
+  "sha256": "d3a5bde060d668e1c96137f03a3d48d7fb5f398a7a77411480cc1fa827dd65fe",
+  "time": 1793031622.7742405
+}

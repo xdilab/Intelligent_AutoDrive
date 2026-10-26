@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "time": 1793031674.6556118,
+  "checks": {
+    "original_score_assembly_exact": true,
+    "finite_bounded_agent_mask_primitives_q_once_zero_strength": true,
+    "single_context_and_frequency_parity": true,
+    "no_self_no_context_empty_permutation_duplicate": true,
+    "zero_pair_exact_single_recovery": true,
+    "independent_numpy_pair_arithmetic": true,
+    "conjunction_truth_table": true,
+    "class_order_nonhierarchical_cap": true,
+    "pilot_mining_reproduction_and_full_coverage": true,
+    "training_only_rule_inputs": true,
+    "unchanged_checkpoints_shapes_reset": true
+  },
+  "checkpoints": {
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed0/best.pt": {
+      "sha256": "55a20fafb9dfbdf682559444e9673bc68f0a6b229c65d1bf00ddfead25902c26",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed0/best.pt",
+      "backup_sha256": "55a20fafb9dfbdf682559444e9673bc68f0a6b229c65d1bf00ddfead25902c26",
+      "selected_epoch": 17
+    },
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed1/best.pt": {
+      "sha256": "21219772e3d82ea9b8b66437a0268d5e8694175bdf8d87d347bc5a01cf3ac834",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed1/best.pt",
+      "backup_sha256": "21219772e3d82ea9b8b66437a0268d5e8694175bdf8d87d347bc5a01cf3ac834",
+      "selected_epoch": 13
+    },
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed2/best.pt": {
+      "sha256": "ec0cfd20b86726f7a494cb9a19657ab2a3d4248ab2478056d097b08532a0cafe",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed2/best.pt",
+      "backup_sha256": "ec0cfd20b86726f7a494cb9a19657ab2a3d4248ab2478056d097b08532a0cafe",
+      "selected_epoch": 22
+    }
+  },
+  "benchmark": {
+    "full_single": {
+      "candidates": 56,
+      "samples": 100,
+      "warmup": 10,
+      "median_ms": 0.7558509241789579,
+      "p95_ms": 0.7680741371586919
+    },
+    "full_pair": {
+      "candidates": 56,
+      "samples": 100,
+      "warmup": 10,
+      "median_ms": 0.9102486073970795,
+      "p95_ms": 0.9242027997970581
+    }
+  },
+  "resume": "Unchanged student; no training/optimizer state to resume. Score arrays flush all7conditions/all3seeds before video receipt commit. Benchmark receipt replayed by full run."
+}

@@ -1,0 +1,115 @@
+{
+  "time": 1793034347.1943567,
+  "final_audit_sha256": "07a10f1f6875b706cbd2c2c975a76076c909ba8fa6401e4c38bf05d7a8fec66e",
+  "files": [
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/baseline-seed0.npy",
+      "sha256": "bc23c51364a97667b2525e792ce98bf45da62ce92c2e5fd06ea64e9e5991d81d",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/short_single-seed0.npy",
+      "sha256": "4e98383202cb2264a5b6d464203dcae2e1969b7d03e0e1b8e675bdf4cdd4a5f9",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/short_frequency-seed0.npy",
+      "sha256": "898b78198b0ab85104c3fdd40976e90a64936a65179ea807a660738485ef2e1d",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/full_single-seed0.npy",
+      "sha256": "1ca84ae8f076be2b2cbbedeee81405c21e21bf1ac841f154b879a4338240b41f",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/full_frequency-seed0.npy",
+      "sha256": "8b0b65d2371d36bd2e40a0720e6133eaa6b927e4310684c257ff67e5e6c3d296",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/full_pair-seed0.npy",
+      "sha256": "44f0858a81f34dcbe725ac1cb1a3f5529daae99058be425d409d809f91e0764f",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/full_pair_frequency-seed0.npy",
+      "sha256": "7457ecd770111375bb87fa29afd3ae37a152ef6ef04a3f0af30f870875fbb7e9",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/baseline-seed1.npy",
+      "sha256": "f45e8b9fb74b69a3489f12d7b21158b812632927561b04fc97cf04e54c0fa3b3",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/short_single-seed1.npy",
+      "sha256": "9de177a806323a59beb8e80493c9564cdec8db150a02b751ba59f33c2eda6e38",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/short_frequency-seed1.npy",
+      "sha256": "2d69c3fd0233f428eda557e910812ce455ecfc9e66d8389706575c668988f16f",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/full_single-seed1.npy",
+      "sha256": "b56d553f948d08d3e6d809c126d922f081bfc7106cbfe342952aa36a29e4cbe9",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/full_frequency-seed1.npy",
+      "sha256": "c016e7e079814f867476a080f9ccbd1a7e2d31baaf4134724f15d20de26a3c7c",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/full_pair-seed1.npy",
+      "sha256": "5d6b6fae6e4bb629daef17262ffe47f559456d1efda4b9f6de1761cbc7369411",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/full_pair_frequency-seed1.npy",
+      "sha256": "ca13f87390341478d738942ff377c5ecc5e5947b46c4ec6aac75b6113dca90cf",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/baseline-seed2.npy",
+      "sha256": "a20d81bb31a798120da7d23c9f8cdb31cac89f2e681e47fdd07f43b9c59ec05c",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/short_single-seed2.npy",
+      "sha256": "46ed0e4b12acfe5607e44cf9990d6fabacf97c3a43fcf6296343a90160641a47",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/short_frequency-seed2.npy",
+      "sha256": "6efeece645cd9161c5149cf67866c6000d7b47e9d0a6646df71ed48f006bec68",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/full_single-seed2.npy",
+      "sha256": "e130d19e6de8b462fe95f0132982e4599ed5e5ef4eec0168ec14112d213433a4",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/full_frequency-seed2.npy",
+      "sha256": "ce99f2a60470a631316d6ab59dd254c50a3c733c776d52ab0ad36b610f725b94",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/full_pair-seed2.npy",
+      "sha256": "34506145a213cb047db52e3d876ddf9a88258a6094a5ac52e403ba56f2a3459c",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-20261026/full_pair_frequency-seed2.npy",
+      "sha256": "f3079b4cc43f82520b1d35e8f88a122887ecfd1004a1b06c44008bb0102f189d",
+      "bytes": 4536680576
+    }
+  ],
+  "total_bytes": 95270292096,
+  "scope": "Only audited, owned, regenerable scores; immutable result/checkpoint/input artifacts preserved",
+  "removed": true,
+  "removed_time": 1793034359.8474164
+}

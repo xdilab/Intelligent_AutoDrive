@@ -1,0 +1,1 @@
+{"time": 1793031618.2801292, "alerts": ["PIPELINE_FAILED: CalledProcessError(1, ['/home/brandon/miniconda3/envs/road_reason/bin/python', '-u', '/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/preflight.py'])", "LOG_ERROR: preflight"], "repeat_count": 1, "escalated": false, "desktop_notifications": false}

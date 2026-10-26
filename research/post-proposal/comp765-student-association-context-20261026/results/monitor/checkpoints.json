@@ -1,0 +1,24 @@
+{
+  "time": 1793034346.7866037,
+  "passed": true,
+  "checkpoints": [
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed0/best.pt",
+      "sha256": "55a20fafb9dfbdf682559444e9673bc68f0a6b229c65d1bf00ddfead25902c26",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed0/best.pt",
+      "verified_at": 1793034346.7866037
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed1/best.pt",
+      "sha256": "21219772e3d82ea9b8b66437a0268d5e8694175bdf8d87d347bc5a01cf3ac834",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed1/best.pt",
+      "verified_at": 1793034346.7866037
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed2/best.pt",
+      "sha256": "ec0cfd20b86726f7a494cb9a19657ab2a3d4248ab2478056d097b08532a0cafe",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed2/best.pt",
+      "verified_at": 1793034346.7866037
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "time": 1793032537.6007173,
+  "student_head_parameters": 1108568,
+  "student_encoder_parameters": 8543296,
+  "semantic_total_parameters": 9651864,
+  "detector_parameters": 68162238,
+  "rule_dense_coefficients": 71550,
+  "rule_nonzero_coefficients": 5502,
+  "rule_trainable_parameters": 0,
+  "rule_manifest_bytes": 1040434,
+  "bundle_manifest_sha256": "43969149a7bce4cf98843b17c0948c7c6a41c16a03206747e826cafe387fbb23",
+  "source": "Actual unchanged bundle/model weights; CPU counts only. Postprocessing coefficients are separate nontrainable constants, not student network parameters."
+}

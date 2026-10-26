@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "time": 1793032858.09663,
+  "records": [
+    {
+      "run": "baseline-seed0",
+      "score_sha256": "bc23c51364a97667b2525e792ce98bf45da62ce92c2e5fd06ea64e9e5991d81d",
+      "source_result_sha256": "b5f2ac99119e75a7b5d52b5cc932cd455c48c2f6df682d57003a1256686b6ced"
+    },
+    {
+      "run": "short_single-seed0",
+      "score_sha256": "4e98383202cb2264a5b6d464203dcae2e1969b7d03e0e1b8e675bdf4cdd4a5f9",
+      "source_result_sha256": "e1cb5da829969491877d81bee905ff9c7d5a8f70a7b88b7e63bce4ef4dabc943"
+    },
+    {
+      "run": "short_frequency-seed0",
+      "score_sha256": "898b78198b0ab85104c3fdd40976e90a64936a65179ea807a660738485ef2e1d",
+      "source_result_sha256": "18880bea5fc758b80f09894a1e714f5ff3627f9c481447303b6ffea6458eb840"
+    },
+    {
+      "run": "baseline-seed1",
+      "score_sha256": "f45e8b9fb74b69a3489f12d7b21158b812632927561b04fc97cf04e54c0fa3b3",
+      "source_result_sha256": "dbe93a81bdf512eb12fff1ffb3437cfba0aaec0c7b946a41978f50dcf8747212"
+    },
+    {
+      "run": "short_single-seed1",
+      "score_sha256": "9de177a806323a59beb8e80493c9564cdec8db150a02b751ba59f33c2eda6e38",
+      "source_result_sha256": "f9a17b12439b8d54447bccba9d9a3aff54ecc3ed686af98cc6692fa031a14b6f"
+    },
+    {
+      "run": "short_frequency-seed1",
+      "score_sha256": "2d69c3fd0233f428eda557e910812ce455ecfc9e66d8389706575c668988f16f",
+      "source_result_sha256": "25097b8938b16af76cc77511a7d25175dbd1aff893f2ceac40ae6525b9ad7459"
+    },
+    {
+      "run": "baseline-seed2",
+      "score_sha256": "a20d81bb31a798120da7d23c9f8cdb31cac89f2e681e47fdd07f43b9c59ec05c",
+      "source_result_sha256": "6926c347449fdadb1010ccd98a18c17f4475e1ea4238bd6a7e2cff768553e203"
+    },
+    {
+      "run": "short_single-seed2",
+      "score_sha256": "46ed0e4b12acfe5607e44cf9990d6fabacf97c3a43fcf6296343a90160641a47",
+      "source_result_sha256": "bc996bf40bdaafd80343939fbc158c549739e5c74891268e3408130e70ee53e3"
+    },
+    {
+      "run": "short_frequency-seed2",
+      "score_sha256": "6efeece645cd9161c5149cf67866c6000d7b47e9d0a6646df71ed48f006bec68",
+      "source_result_sha256": "9af9756979cce49164b9fa0efafae6b25b8c13c54c67d7d5c78fe4477c003743"
+    }
+  ]
+}

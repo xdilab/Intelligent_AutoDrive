@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "time": 1793034201.8864465,
+  "protocol_frozen_before_official": true,
+  "split_identity": true,
+  "training_selection_final_disjoint": true,
+  "images_verified": 38663,
+  "source_checkpoints_unchanged": [
+    {
+      "seed": 0,
+      "checkpoint": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed0/best.pt",
+      "sha256": "55a20fafb9dfbdf682559444e9673bc68f0a6b229c65d1bf00ddfead25902c26"
+    },
+    {
+      "seed": 1,
+      "checkpoint": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed1/best.pt",
+      "sha256": "21219772e3d82ea9b8b66437a0268d5e8694175bdf8d87d347bc5a01cf3ac834"
+    },
+    {
+      "seed": 2,
+      "checkpoint": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed2/best.pt",
+      "sha256": "ec0cfd20b86726f7a494cb9a19657ab2a3d4248ab2478056d097b08532a0cafe"
+    }
+  ],
+  "all21score_arrays_finite_bounded": true,
+  "primitive_scores_bit_identical": true,
+  "baseline_per_class_AP_parity_tolerance": 1e-06,
+  "all135event_class_rows_reported": true,
+  "independent_statistical_checks": 70,
+  "single_rules_validated": 3970,
+  "pair_rules_validated": 1532,
+  "runtime_frames": 593,
+  "runtime_teacher_free": true,
+  "code_sha256": {
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/assoc_common.py": "6251fb0151956bb0e2c1ed85810a6b208405b499e4d6461ca89f4e7109cf6852",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/official.py": "eab24e971d426c7c6969a308296d6691e5621abc1e6a82478f20621d662d54c9",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/audit.py": "e78fbf977ff67031c9bd17dac83612b187aa4a031b34ce72288c8d5ca2b3c358",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/asset_audit.py": "3a5a63f49a54e7651c17a98cac5826f5b9876a09a20418b6537a317fa3fbf358",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/run_video.py": "db512f06bb54948e690b7e5955cfaa138d147c0deb92059a9542a82a2d4e3ae5",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/pipeline.py": "6891d240c7b1b3b24423d04714f0162efbd32dd9284a3debbae2edb49e416fb3",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/preflight.py": "fb24a78cfb5c712a854aab5462435d03a9316f07206dad270a51e9230baa8bce",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/analyze.py": "ae3b2698d5938d20cb20060645add7b3947f6e021ba6fce3a2fada04d809e5fa",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/correction.py": "b084c3517113af0437684fd5bbeaeeee5260e20709e9e623199ac693420db6d3",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/monitor.py": "1f6e0ecce9677651470e3e987b4bffc591eec7049c729a71742304a25ef33755",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/freeze_study.py": "29d5c083723ecc205b923cc1bcb3c2090089d77e0dfb9a8ff72ca057a846a7ef",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/archive.py": "f7073252f2d97d10fa1744eb518e81f1136d0b0caae7b069e9228844f1c2c151",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/mine.py": "531496bcf0b4af02f9cc2cce8d8e460f1b69456ba5e282380c4cb4cb16a0411b",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/single_correction.py": "722356e346bf78b3a31813b1a8fe167eb78e425cbfddcb38d52cb7e9097d181c",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/replay_audit.py": "daa0d87cb4305d8f045c4a44935570bdbef26507d6ffe9072d00785feac67bbb",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/model_inventory.py": "a4e85d444981f8eb1f49e022249caef0b35326be7dd8c34b0fca4fa502db3764",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/runtime.py": "a651668d1b7944513c601c81c3221fc4c7f0ea3684470e847822ab5d60acecec"
+  },
+  "score_diagnostics_sha256": "ed714f20e994bb7b8dafc54ac907ac6aa6f92d809fdc81f4573deb2c8d254c18",
+  "base_revision": "fa77929cfdfea8c9642662dafecaba49b07488ac"
+}

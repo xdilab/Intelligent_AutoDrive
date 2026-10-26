@@ -1,0 +1,30 @@
+{
+  "time": 1793031797.9074514,
+  "gpu": 0,
+  "conditions": 7,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "new_AP_runs": 12,
+  "pilot_exact_replays": 9,
+  "benchmark_fps": 37.751262131940194,
+  "first_useful_minutes": [
+    20,
+    25
+  ],
+  "full_study_minutes": [
+    40,
+    55
+  ],
+  "scratch_GiB": 88.72737121582031,
+  "estimated_memory_GiB": [
+    125,
+    160
+  ],
+  "queue": "No queue;GPU0free;GPU1desktop untouched",
+  "AP_timing_basis": "Same immutable pilot evaluator,135eventclasses,16workers:about95seconds per corrected condition; update from first new run",
+  "uncertainty": "CPU I/O contention, class AP workload, hash/audit time; no new training/teacher feature generation",
+  "monitoring": "Silent120second timer; log/progress/frozen asset/checkpoint backup checks. No arbitrary automatic repair guarantee."
+}

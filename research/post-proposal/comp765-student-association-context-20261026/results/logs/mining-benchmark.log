@@ -1,0 +1,2 @@
+{"time": 1793031452.6347654, "phase": "mining-training-only", "videos": 1, "total": 64, "video": "train_00169", "annotated_frames": 198, "target_actor_frames": 6713, "short_frames": 32, "short_actor_frames": 1342, "seconds": 0.697371147107333}
+{"time": 1793031453.2589052, "phase": "mining-training-only", "videos": 2, "total": 64, "video": "train_00254", "annotated_frames": 197, "target_actor_frames": 6890, "short_frames": 32, "short_actor_frames": 1157, "seconds": 0.6238370561040938}

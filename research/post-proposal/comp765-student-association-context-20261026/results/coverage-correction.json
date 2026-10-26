@@ -1,0 +1,6 @@
+{
+  "time": 1793031619.8164513,
+  "issue": "Initial annotated_frames counter counted only frames with usable target actors. Corrected reporting to separate all annotated and nonempty target frames. No transaction/rule/protocol changes. Before freeze/new detector AP.",
+  "expected_annotated_frames": 12270,
+  "nonempty_target_frames": 11948
+}

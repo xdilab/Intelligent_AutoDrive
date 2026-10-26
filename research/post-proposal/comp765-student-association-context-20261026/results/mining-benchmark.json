@@ -1,0 +1,25 @@
+{
+  "videos": 2,
+  "seconds": 21.749715809244663,
+  "compute_seconds": 1.3218809068202972,
+  "pair_candidates": 8959,
+  "records": [
+    {
+      "video": "train_00169",
+      "annotated_frames": 198,
+      "target_actor_frames": 6713,
+      "short_frames": 32,
+      "short_actor_frames": 1342,
+      "seconds": 0.697371147107333
+    },
+    {
+      "video": "train_00254",
+      "annotated_frames": 197,
+      "target_actor_frames": 6890,
+      "short_frames": 32,
+      "short_actor_frames": 1157,
+      "seconds": 0.6238370561040938
+    }
+  ],
+  "projected64video_compute_seconds": 42.300206020474434
+}

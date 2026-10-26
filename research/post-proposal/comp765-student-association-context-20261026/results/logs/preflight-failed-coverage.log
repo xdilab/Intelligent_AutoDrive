@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/preflight.py", line 45, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-20261026/preflight.py", line 28, in main
+    mining=read(ROOT/'mining-summary.json');assert mining['short_max_abs_reproduction_error']<1e-12 and mining['short_actor_frames']==45766 and mining['annotated_frames']==12270;checks['pilot_mining_reproduction_and_full_coverage']=True
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
