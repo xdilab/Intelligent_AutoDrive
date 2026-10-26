@@ -1,0 +1,8 @@
+[Unit]
+Description=Check association pilot every2minutes
+[Timer]
+OnBootSec=30
+OnUnitActiveSec=120
+AccuracySec=10
+[Install]
+WantedBy=timers.target
