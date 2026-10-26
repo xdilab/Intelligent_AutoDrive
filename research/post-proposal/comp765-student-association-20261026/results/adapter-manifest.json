@@ -1,0 +1,18 @@
+{
+  "time": 1793029889.113658,
+  "format": 1,
+  "base_bundle": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/bundle-seed0",
+  "base_bundle_sha256": "43969149a7bce4cf98843b17c0948c7c6a41c16a03206747e826cafe387fbb23",
+  "student_checkpoint_sha256": "55a20fafb9dfbdf682559444e9673bc68f0a6b229c65d1bf00ddfead25902c26",
+  "rules": "/home/brandon/.local/share/road-reason/comp765-student-association-20261026/rules.json",
+  "rules_sha256": "7c5cda65784f7cc72d602c7cdbe72858c44d3f33b751dc312bf3143ae683dc50",
+  "strength": 1,
+  "code_sha256": {
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/run_video.py": "ac4865ad83a3d7a2e9117c37b4b7f1183608e9fbb769088046870ef10904ddc5",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/correction.py": "722356e346bf78b3a31813b1a8fe167eb78e425cbfddcb38d52cb7e9097d181c"
+  },
+  "teacher_required": false,
+  "cached_features_required": false,
+  "future_frames_required": false,
+  "original_bundle_modified": false
+}

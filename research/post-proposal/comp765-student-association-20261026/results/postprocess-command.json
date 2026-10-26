@@ -1,0 +1,13 @@
+{
+  "time": 1793029882.8579075,
+  "phases": [
+    "replay_audit",
+    "analyze",
+    "audit"
+  ],
+  "expected_minutes": [
+    1,
+    3
+  ],
+  "basis": "593frame replay,9small detector summaries,39GiB score verification/hashing; no training or AP rerun"
+}

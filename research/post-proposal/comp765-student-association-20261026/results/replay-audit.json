@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "time": 1793029889.113395,
+  "frames": 593,
+  "max_abs_score_error": 1.7881393432617188e-07,
+  "tolerance": 1e-06,
+  "exact_candidates_and_primitives": true,
+  "reports": [
+    {
+      "video": "train_00169",
+      "frames": 198,
+      "max_abs_score_error": 1.7881393432617188e-07,
+      "reference_predictions_sha256": "c34f908ef0e6e640a3249167b08087b12503d26e8598df68cd709a8fa794ca14",
+      "adapter_predictions_sha256": "edfc1f09fb5557a173cb73a54d93af324813c7f485c4d5c25bc18a3c7582fa89"
+    },
+    {
+      "video": "train_00254",
+      "frames": 197,
+      "max_abs_score_error": 1.7881393432617188e-07,
+      "reference_predictions_sha256": "eaec742d7bbb81a8967bff9ed0e8b621fa64e788620bf8544a217e48688b0ace",
+      "adapter_predictions_sha256": "689d84ba931cda705d16ac92da6e92679175c1fdf73cbc0b5cb76d93c13d9736"
+    },
+    {
+      "video": "train_00532",
+      "frames": 198,
+      "max_abs_score_error": 1.7881393432617188e-07,
+      "reference_predictions_sha256": "8a2ef91038d8d774ad3b7cd97acf9d3c3f073ac82b2582f39349e7451bea389e",
+      "adapter_predictions_sha256": "24d9debc537e62178b40db862c822ca9b66cfbfd40e43e206c73a74c1b2fb0ba"
+    }
+  ],
+  "method": "Independent NumPy evidence/association/odds-update replay from the original verified raw-video baseline scores; GPU NMS tie policy shared. Historical predictions are audit references only, never adapter dependencies."
+}

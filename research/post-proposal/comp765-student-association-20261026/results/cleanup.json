@@ -1,0 +1,59 @@
+{
+  "time": 1793030052.5590487,
+  "removed": [
+    {
+      "path": "/dev/shm/comp765-student-association-20261026/inference.json",
+      "bytes": 4013,
+      "sha256": "4873831e917a508cb5c3b4bcc2a09a4792607ef6781115c5c0e95131042c9ba0"
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-20261026/frequency-seed2.npy",
+      "bytes": 4536680576,
+      "sha256": "6efeece645cd9161c5149cf67866c6000d7b47e9d0a6646df71ed48f006bec68"
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-20261026/association-seed2.npy",
+      "bytes": 4536680576,
+      "sha256": "46ed0e4b12acfe5607e44cf9990d6fabacf97c3a43fcf6296343a90160641a47"
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-20261026/baseline-seed2.npy",
+      "bytes": 4536680576,
+      "sha256": "a20d81bb31a798120da7d23c9f8cdb31cac89f2e681e47fdd07f43b9c59ec05c"
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-20261026/frequency-seed1.npy",
+      "bytes": 4536680576,
+      "sha256": "2d69c3fd0233f428eda557e910812ce455ecfc9e66d8389706575c668988f16f"
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-20261026/association-seed1.npy",
+      "bytes": 4536680576,
+      "sha256": "9de177a806323a59beb8e80493c9564cdec8db150a02b751ba59f33c2eda6e38"
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-20261026/baseline-seed1.npy",
+      "bytes": 4536680576,
+      "sha256": "f45e8b9fb74b69a3489f12d7b21158b812632927561b04fc97cf04e54c0fa3b3"
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-20261026/frequency-seed0.npy",
+      "bytes": 4536680576,
+      "sha256": "898b78198b0ab85104c3fdd40976e90a64936a65179ea807a660738485ef2e1d"
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-20261026/association-seed0.npy",
+      "bytes": 4536680576,
+      "sha256": "4e98383202cb2264a5b6d464203dcae2e1969b7d03e0e1b8e675bdf4cdd4a5f9"
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-20261026/baseline-seed0.npy",
+      "bytes": 4536680576,
+      "sha256": "bc23c51364a97667b2525e792ce98bf45da62ce92c2e5fd06ea64e9e5991d81d"
+    }
+  ],
+  "total_bytes": 40830129197,
+  "scope": "Only this completed pilot owned temporary score arrays and resume receipt; all raw datasets, source caches, checkpoints and original bundle preserved",
+  "timer_retired": true,
+  "desktop_notifications": false
+}

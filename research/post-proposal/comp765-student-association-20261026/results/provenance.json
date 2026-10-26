@@ -1,0 +1,41 @@
+{
+  "time": 1793027743.448084,
+  "base_revision": "775aed198d069bcff8f96ba0dc6934e0348343f6",
+  "python": "3.11.15 (main, Mar 11 2026, 17:20:07) [GCC 14.3.0]",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "torch": "2.4.1+cu124",
+  "numpy": "2.4.3",
+  "cuda": "12.4",
+  "gpu": "NVIDIA RTX A6000",
+  "original_provenance": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/provenance.json",
+  "original_provenance_sha256": "684b029075693275f13b67b5f8579428d6805cc2b209a21dec54b631e2b1113a",
+  "source_checkpoints": {
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed0/best.pt": {
+      "sha256": "55a20fafb9dfbdf682559444e9673bc68f0a6b229c65d1bf00ddfead25902c26",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed0/best.pt",
+      "backup_sha256": "55a20fafb9dfbdf682559444e9673bc68f0a6b229c65d1bf00ddfead25902c26",
+      "selected_epoch": 17
+    },
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed1/best.pt": {
+      "sha256": "21219772e3d82ea9b8b66437a0268d5e8694175bdf8d87d347bc5a01cf3ac834",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed1/best.pt",
+      "backup_sha256": "21219772e3d82ea9b8b66437a0268d5e8694175bdf8d87d347bc5a01cf3ac834",
+      "selected_epoch": 13
+    },
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed2/best.pt": {
+      "sha256": "ec0cfd20b86726f7a494cb9a19657ab2a3d4248ab2478056d097b08532a0cafe",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed2/best.pt",
+      "backup_sha256": "ec0cfd20b86726f7a494cb9a19657ab2a3d4248ab2478056d097b08532a0cafe",
+      "selected_epoch": 22
+    }
+  },
+  "development_selection": {
+    "association": 1,
+    "frequency": 1
+  },
+  "scope": "No student retraining. Original paired seeds reused for fixed postprocessing comparison.",
+  "recovery": "Renamed select.py to tune.py before preflight/dev because it shadowed Python stdlib select; original failed log preserved. No scientific change.",
+  "implementation_revision": "1b2eda25593668c59770fb78e4625b9bbf732f64",
+  "implementation_committed_at": 1793028553.419882,
+  "commit_note": "Frozen scientific source hashes unchanged; local commit recorded during inference, before any new detector AP."
+}

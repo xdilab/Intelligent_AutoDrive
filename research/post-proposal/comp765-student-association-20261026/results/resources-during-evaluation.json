@@ -1,0 +1,7 @@
+{
+  "time": 1793029337.8904173,
+  "phase": "official-metrics",
+  "service_properties": "MainPID=1798553\nMemoryCurrent=78467588096\nActiveState=active\n",
+  "memory": "               total        used        free      shared  buff/cache   available\nMem:     270090903552 62537502720 15754993664 41357737984 191798407168 170591907840\nSwap:     2147479552   200278016  1947201536\n",
+  "disk": "Filesystem         1B-blocks          Used   Available Use% Mounted on\ntmpfs           135045451776   40856866816 94188584960  31% /dev/shm\n/dev/nvme1n1p2 1888559353856 1790098763776  2451558400 100% /\n/dev/nvme0n1p1 7619772022784 7235247063040   433197056 100% /data\n"
+}

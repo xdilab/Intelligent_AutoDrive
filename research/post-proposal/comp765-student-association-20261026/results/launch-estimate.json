@@ -1,0 +1,25 @@
+{
+  "time": 1793027868.6998308,
+  "gpu": 0,
+  "benchmark_fps": 46.8290435621635,
+  "remaining_prefix_steps": 38268,
+  "estimated_inference_seconds": 817.1851716168602,
+  "first_detector_comparison_minutes": [
+    20,
+    25
+  ],
+  "complete_minutes": [
+    35,
+    50
+  ],
+  "queue_seconds": 0,
+  "startup": "under1minute",
+  "evaluation_uncertainty": "AP timing provisional; update after first completed detector run",
+  "temporary_scores_GiB": 38.02601623535156,
+  "ram_GiB": [
+    40,
+    60
+  ],
+  "gpu_GiB_upper": 4,
+  "persistent_additional_MiB_upper": 200
+}

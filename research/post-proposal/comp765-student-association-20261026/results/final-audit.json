@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "time": 1793029938.2269166,
+  "protocol_frozen_before_official": true,
+  "split_identity": true,
+  "training_selection_final_disjoint": true,
+  "images_verified": 38663,
+  "source_checkpoints_unchanged": [
+    {
+      "seed": 0,
+      "checkpoint": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed0/best.pt",
+      "sha256": "55a20fafb9dfbdf682559444e9673bc68f0a6b229c65d1bf00ddfead25902c26"
+    },
+    {
+      "seed": 1,
+      "checkpoint": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed1/best.pt",
+      "sha256": "21219772e3d82ea9b8b66437a0268d5e8694175bdf8d87d347bc5a01cf3ac834"
+    },
+    {
+      "seed": 2,
+      "checkpoint": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed2/best.pt",
+      "sha256": "ec0cfd20b86726f7a494cb9a19657ab2a3d4248ab2478056d097b08532a0cafe"
+    }
+  ],
+  "all9score_arrays_finite_bounded": true,
+  "primitive_scores_bit_identical": true,
+  "baseline_per_class_AP_parity_tolerance": 1e-06,
+  "all135event_class_rows_reported": true,
+  "rules_validated": 2537,
+  "runtime_frames": 593,
+  "runtime_teacher_free": true,
+  "code_sha256": {
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/assoc_common.py": "f413d34fe187b7267f5e79f3748ed5a6955e7ede0da8df622e2102da1420357c",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/official.py": "65425da8991932a41abdf9987fa04f775ad7cb6a617e671c43433b53fa732c9d",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/audit.py": "f54ab8af4d4efd613e23396d189ceea8a49d604faf98d04152a0f1dc3941407b",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/asset_audit.py": "3a5a63f49a54e7651c17a98cac5826f5b9876a09a20418b6537a317fa3fbf358",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/run_video.py": "ac4865ad83a3d7a2e9117c37b4b7f1183608e9fbb769088046870ef10904ddc5",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/pipeline.py": "6891d240c7b1b3b24423d04714f0162efbd32dd9284a3debbae2edb49e416fb3",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/preflight.py": "2906e233129924000244a60ebf068700afc265e340a35ee608134fc94ecb5454",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/analyze.py": "20953737ead015ad9c4b5163b9cdf6177ff1d4cbb4e514bc9216c039d7ed3829",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/correction.py": "722356e346bf78b3a31813b1a8fe167eb78e425cbfddcb38d52cb7e9097d181c",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/monitor.py": "2ba71de9a479846f4519b23e7c3918ab73af5365b28a097d706fb07e22cce8c8",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/freeze_study.py": "53798dd1d30ba821e33104fbcc75dc89047855c30155a83761e9240827a6657e",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/tune.py": "33600d600e6955d655d78c22989ed157d1013767fcb6b2c823a9621157c936a2",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/archive.py": "0769af60f549adfc42612f266974e53d5da120eac34aa6f6c2c1b361b3304fbb",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/mine.py": "71af38125209113901c0ffd895350d25d6416dabf8da9bcd89070eca59989302",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/replay_audit.py": "1cadbab6544e7802d44c7afeb5abf35f7cd8c8d474e19c61eb97dd787e15314f",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/runtime.py": "f2a69626b48db1c39519c923bc7410e84d0293c7921a6ba94c6a30a09d2a3b0a"
+  },
+  "score_diagnostics_sha256": "b8f15b28f8b8f2102f1073f39f352c76245b95fc8ef4b8ca0bb05248d09c3a5e",
+  "base_revision": "775aed198d069bcff8f96ba0dc6934e0348343f6"
+}

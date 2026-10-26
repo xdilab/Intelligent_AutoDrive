@@ -1,0 +1,23 @@
+{
+  "time": 1793027322.7766886,
+  "rules": 2537,
+  "positive": 1727,
+  "negative": 810,
+  "consequents_covered": 84,
+  "duplex_covered": 36,
+  "triplet_covered": 48,
+  "target_actor_frames": 45766,
+  "target_agents_videos": [
+    39.0,
+    63.0,
+    4.0,
+    2.0,
+    2.0,
+    47.0,
+    14.0,
+    15.0,
+    1.0,
+    19.0
+  ],
+  "rules_sha256": "7c5cda65784f7cc72d602c7cdbe72858c44d3f33b751dc312bf3143ae683dc50"
+}

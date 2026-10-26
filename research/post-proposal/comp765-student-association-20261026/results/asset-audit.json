@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "time": 1793028321.7039802,
+  "verified": {
+    "frames": {
+      "path": "/data/repos/wiki/artifacts/post-proposal-experiments/shared-frames.json",
+      "sha256": "2ef7e3c370a54cd0d61b9aff46acdab2a0e7fa23f1e5f91dd081b67cc35174f1",
+      "bytes": 922460
+    },
+    "counts": {
+      "path": "/data/repos/wiki/artifacts/proposal-tail/train-counts.json",
+      "sha256": "8d8b168945a49d122af6de5b802fd46d80c80ea15cc9a08ec9ad9b121b12639f",
+      "bytes": 9544
+    },
+    "yolo": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/dets_v8x_best_val_fullcand.pkl",
+      "sha256": "447e28f0c071bb7910b5cc9ac37420c7da3bfa3827ad12b5eb3b61e7e5f64811",
+      "bytes": 183339278
+    },
+    "gt": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/dets_i3d_val_fullcand.pkl",
+      "sha256": "c792b324fa6f2cec88d2cafb48ee6dbf8682d62c89ff69f3025044bb1f82d68f",
+      "bytes": 5000961817
+    },
+    "backbone": {
+      "path": "/home/brandon/.cache/torch/hub/checkpoints/resnet50-11ad3fa6.pth",
+      "sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+      "bytes": 102540417
+    },
+    "detector": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/runs/v8x_agent_1280_eccv/weights/best.pt",
+      "sha256": "3ad32910bacaf1fa74174503c5c29f94cfbbd83de51e5e5c301e6fc7f13e8684",
+      "bytes": 136824954
+    },
+    "annotation": {
+      "path": "/data/datasets/road_waymo/road_waymo_trainval_v1.1.json",
+      "sha256": "628b39bb9aabd917c6631144e319ecba25c1de3a10502c2360439af7e4f4586a",
+      "bytes": 1149647915
+    },
+    "teacher_partition": {
+      "path": "/data/repos/wiki/artifacts/stage56-full/collected/preparation.json",
+      "sha256": "f8704095dd068af74abbd0e42ad4c82d4421bd9edd9527d48b375d77d646b338",
+      "bytes": 16517
+    }
+  },
+  "versions": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "numpy": "2.4.3",
+    "opencv-python": "4.13.0.92",
+    "ultralytics": "8.3.226",
+    "Pillow": "12.1.1",
+    "matplotlib": "3.10.8"
+  },
+  "note": "Teacher model is not needed or opened by this pilot; original teacher partition is read only to preserve split provenance."
+}

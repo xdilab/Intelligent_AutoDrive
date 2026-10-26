@@ -1,0 +1,9 @@
+{"time": 1793027790.5573816, "phase": "official-assets-loaded", "frames": 36717, "candidates": 6163968}
+{"time": 1793027792.3530977, "phase": "official-inference", "video": "train_00600", "fid": 50, "completed_videos": 0, "total_videos": 198, "steps_this_session": 50, "elapsed": 1.1725616650655866}
+{"time": 1793027793.4074142, "phase": "official-inference", "video": "train_00600", "fid": 100, "completed_videos": 0, "total_videos": 198, "steps_this_session": 100, "elapsed": 2.2268780870363116}
+{"time": 1793027794.4431884, "phase": "official-inference", "video": "train_00600", "fid": 150, "completed_videos": 0, "total_videos": 198, "steps_this_session": 150, "elapsed": 3.262652074918151}
+{"time": 1793027795.4626646, "phase": "official-video-complete", "video": "train_00600", "completed_videos": 1, "steps_this_session": 198, "elapsed": 4.2821290348656476}
+{"time": 1793027796.503432, "phase": "official-inference", "video": "train_00601", "fid": 50, "completed_videos": 1, "total_videos": 198, "steps_this_session": 248, "elapsed": 5.322894556913525}
+{"time": 1793027797.5652251, "phase": "official-inference", "video": "train_00601", "fid": 100, "completed_videos": 1, "total_videos": 198, "steps_this_session": 298, "elapsed": 6.3846890716813505}
+{"time": 1793027798.6266701, "phase": "official-inference", "video": "train_00601", "fid": 150, "completed_videos": 1, "total_videos": 198, "steps_this_session": 348, "elapsed": 7.446132949087769}
+{"time": 1793027799.6152916, "phase": "official-video-complete", "video": "train_00601", "completed_videos": 2, "steps_this_session": 395, "elapsed": 8.434756031725556}

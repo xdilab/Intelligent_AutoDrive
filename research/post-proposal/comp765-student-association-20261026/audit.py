@@ -3,7 +3,7 @@ from assoc_common import *
 import csv,subprocess
 
 def main():
- setup();verify();assert read(ROOT/'asset-audit.json')['passed'];split=read(ROOT/'split-manifest.json');assert sha(ROOT/'split-manifest.json')==sha(BASE_ROOT/'split-manifest.json');assert not set(split['groups']['train'])&set(split['groups']['selection']+split['groups']['final']);assert not set(split['groups']['selection'])&set(split['groups']['final'])
+ setup();verify();assert read(ROOT/'asset-audit.json')['passed'];assert read(ROOT/'replay-audit.json')['passed'];split=read(ROOT/'split-manifest.json');assert sha(ROOT/'split-manifest.json')==sha(BASE_ROOT/'split-manifest.json');assert not set(split['groups']['train'])&set(split['groups']['selection']+split['groups']['final']);assert not set(split['groups']['selection'])&set(split['groups']['final'])
  receipt=read(SCRATCH/'inference.json');assert receipt['signature']==signature();assert set(receipt['videos'])==set(split['groups']['final']);images=0
  for video in split['groups']['final']:
   actual=read(ROOT/'evaluation-inputs'/f'{video}.json');source=read(BASE_ROOT/'evaluation-inputs'/f'{video}.json');assert actual['images_sha256']==source['images_sha256'];assert actual['processed_frames']==split['final_last_frame'][video] and actual['reset_at']==1;images+=actual['processed_frames']

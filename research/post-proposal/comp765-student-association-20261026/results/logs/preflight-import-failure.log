@@ -1,0 +1,38 @@
+Traceback (most recent call last):
+  File "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/preflight.py", line 1, in <module>
+    from assoc_common import *
+  File "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/assoc_common.py", line 6, in <module>
+    import common as original
+  File "/data/repos/ROAD_Reason/research/post-proposal/comp765-cseb-student-20261021/common.py", line 5, in <module>
+    import torch
+  File "/home/brandon/miniconda3/envs/road_reason/lib/python3.11/site-packages/torch/__init__.py", line 33, in <module>
+    from ._utils_internal import get_file_path, prepare_multiprocessing_environment, \
+  File "/home/brandon/miniconda3/envs/road_reason/lib/python3.11/site-packages/torch/_utils_internal.py", line 10, in <module>
+    from torch._strobelight.compile_time_profiler import StrobelightCompileTimeProfiler
+  File "/home/brandon/miniconda3/envs/road_reason/lib/python3.11/site-packages/torch/_strobelight/compile_time_profiler.py", line 7, in <module>
+    from socket import gethostname
+  File "/home/brandon/miniconda3/envs/road_reason/lib/python3.11/socket.py", line 54, in <module>
+    import os, sys, io, selectors
+  File "/home/brandon/miniconda3/envs/road_reason/lib/python3.11/selectors.py", line 12, in <module>
+    import select
+  File "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/select.py", line 3, in <module>
+    from correction import Correction
+  File "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/correction.py", line 3, in <module>
+    from torchvision.ops import nms
+  File "/home/brandon/miniconda3/envs/road_reason/lib/python3.11/site-packages/torchvision/__init__.py", line 9, in <module>
+    from .extension import _HAS_OPS  # usort:skip
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/brandon/miniconda3/envs/road_reason/lib/python3.11/site-packages/torchvision/extension.py", line 6, in <module>
+    from ._internally_replaced_utils import _get_extension_path
+  File "/home/brandon/miniconda3/envs/road_reason/lib/python3.11/site-packages/torchvision/_internally_replaced_utils.py", line 4, in <module>
+    from torch.hub import _get_torch_home
+  File "/home/brandon/miniconda3/envs/road_reason/lib/python3.11/site-packages/torch/hub.py", line 19, in <module>
+    from urllib.request import urlopen, Request
+  File "/home/brandon/miniconda3/envs/road_reason/lib/python3.11/urllib/request.py", line 88, in <module>
+    import http.client
+  File "/home/brandon/miniconda3/envs/road_reason/lib/python3.11/http/client.py", line 821, in <module>
+    class HTTPConnection:
+  File "/home/brandon/miniconda3/envs/road_reason/lib/python3.11/http/client.py", line 869, in HTTPConnection
+    def __init__(self, host, port=None, timeout=socket._GLOBAL_DEFAULT_TIMEOUT,
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: partially initialized module 'socket' has no attribute '_GLOBAL_DEFAULT_TIMEOUT' (most likely due to a circular import)

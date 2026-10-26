@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "time": 1793030044.881335,
+  "checks": 30,
+  "method": "Independent Python statistics mean/sampleSD/paired-t reconstruction from all9raw detector files"
+}

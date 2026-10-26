@@ -10,7 +10,21 @@ The three conditions use the original frozen-ResNet distilled checkpoints for se
 
 Rules come only from ground-truth actors in the original64training-video32frame segments. Strength selection uses the12development videos. Final evaluation reuses the exact198-video detector benchmark, with its prior-use and detector-selection caveats. This is exploratory evidence, not an untouched test.
 
-The machine-readable protocol is [protocol.json](protocol.json). Results will be archived in `results/`; the authoritative live root is `/home/brandon/.local/share/road-reason/comp765-student-association-20261026/`.
+The machine-readable protocol is [protocol.json](protocol.json). Verified results are archived in [results/FINDINGS.md](results/FINDINGS.md); the authoritative live root is `/home/brandon/.local/share/road-reason/comp765-student-association-20261026/`.
+
+## Completed result
+
+Official ROAD-Waymo detector AP at IoU 0.5, mean across the same three distilled student seeds:
+
+| Condition | Triplet | Duplex | Tail47 |
+|---|---:|---:|---:|
+| Original student | 6.586% | 11.721% | 3.351% |
+| Association correction | 6.693% | 11.792% | 3.374% |
+| Context-free frequency control | 6.613% | 11.772% | 3.389% |
+
+Association triplet gains: +0.079, +0.127 and +0.114 percentage points; mean +0.107, nominal paired 95% interval [+0.046,+0.168]. Its advantage over the frequency control is +0.080 points, with interval [−0.034,+0.193]; that contrast remains uncertain with three seeds. Most gain is in Common39 (+0.207). Only 10/47 tail and 1/28 deep-tail classes have eligible rules; tail class changes are 8 improvements, 2 declines and 37 ties. This is a modest inference-only gain on reused validation, not evidence of a general rare-event solution or proof of what the GRU represents.
+
+The correction took 0.94 ms median (0.98 ms p95) on an RTX A6000. Three complete raw videos, 593 sampled frames, passed causal/teacher-free/memory checks. Independent score replay differed by at most 1.79e-7, below the declared 1e-6 tolerance. All baseline class APs exactly reproduced the original results. Full per-seed/per-class results, rules and provenance are linked in `results/`. No working bundle was replaced.
 
 ## Rule meaning
 
@@ -42,6 +56,7 @@ $PY asset_audit.py
 $PY official.py --benchmark-videos 2
 $PY official.py --workers 16
 $PY runtime.py
+$PY replay_audit.py
 $PY analyze.py
 $PY audit.py
 ```
@@ -75,3 +90,5 @@ Use an output directory that does not already exist. An asset-access audit rejec
 - Ground-truth presence during mining differs from uncertain inference evidence. Sparse rule coverage, correlated actor-frames and short training segments constrain rare-event conclusions. Any gain may include score calibration. This experiment does not prove what the GRU learned internally.
 
 A setup-only import failure occurred because `select.py` shadowed Python's standard-library module. It was renamed `tune.py` before development evaluation; the failed log is preserved. Scientific settings were unchanged.
+
+`replay_audit.py` independently recomputes the correction with NumPy from the original verified raw-video baseline outputs, checking all three complete videos. Those historical predictions are verification references only; `run_video.py` never reads them.

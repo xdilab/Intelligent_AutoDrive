@@ -1,0 +1,15 @@
+{"time": 1793027767.870626, "phase": "phase-start", "name": "official-benchmark", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/official.py", "--benchmark-videos", "2"]}
+{"time": 1793027800.6677148, "phase": "phase-complete", "name": "official-benchmark"}
+{"time": 1793027800.6682475, "phase": "pipeline-complete"}
+{"time": 1793027870.2948847, "phase": "phase-start", "name": "official", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/official.py"]}
+{"time": 1793029796.5422642, "phase": "phase-complete", "name": "official"}
+{"time": 1793029796.5426285, "phase": "phase-start", "name": "runtime", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/runtime.py"]}
+{"time": 1793029845.0066285, "phase": "phase-complete", "name": "runtime"}
+{"time": 1793029845.007124, "phase": "pipeline-complete"}
+{"time": 1793029884.2800977, "phase": "phase-start", "name": "replay_audit", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/replay_audit.py"]}
+{"time": 1793029889.498544, "phase": "phase-complete", "name": "replay_audit"}
+{"time": 1793029889.4990847, "phase": "phase-start", "name": "analyze", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/analyze.py"]}
+{"time": 1793029892.0405633, "phase": "phase-complete", "name": "analyze"}
+{"time": 1793029892.0410728, "phase": "phase-start", "name": "audit", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-20261026/audit.py"]}
+{"time": 1793029938.9371502, "phase": "phase-complete", "name": "audit"}
+{"time": 1793029938.9377317, "phase": "pipeline-complete"}

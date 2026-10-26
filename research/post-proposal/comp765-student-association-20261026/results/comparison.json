@@ -1,0 +1,537 @@
+{
+  "time": 1793029891.155791,
+  "signature": {
+    "protocol_sha256": "413e7a5ebea66517b2318c0615e609ad53a82c0a3b0c852763a8c5f276d8f453",
+    "freeze_sha256": "a94f2aadae167ac8e280c84cc7c0dc546b833c47676c82876df9ae6ae0d1114d"
+  },
+  "metric": "Official detector AP@0.5 (%)",
+  "conditions": {
+    "baseline": {
+      "triplet": {
+        "values": [
+          6.517495664811238,
+          6.286267225933803,
+          6.95391337075379
+        ],
+        "mean": 6.585892087166276,
+        "sample_sd": 0.3390374560671351
+      },
+      "duplex": {
+        "values": [
+          11.652833903740559,
+          11.519167421751522,
+          11.991688812759762
+        ],
+        "mean": 11.721230046083948,
+        "sample_sd": 0.2435726594995489
+      },
+      "tail47": {
+        "values": [
+          3.3599498380926693,
+          2.8291611641724694,
+          3.8628253750503063
+        ],
+        "mean": 3.3506454591051487,
+        "sample_sd": 0.5168949156392263
+      },
+      "deep28": {
+        "values": [
+          2.735505357584251,
+          2.073408962160881,
+          3.128537434153259
+        ],
+        "mean": 2.6458172512994635,
+        "sample_sd": 0.5332513388721646
+      },
+      "common39": {
+        "values": [
+          10.322743199574642,
+          10.452523249082077,
+          10.679070698909271
+        ],
+        "mean": 10.484779049188663,
+        "sample_sd": 0.1803403703442592
+      }
+    },
+    "association": {
+      "triplet": {
+        "values": [
+          6.5968756915481634,
+          6.413447506314274,
+          7.06772880451104
+        ],
+        "mean": 6.692684000791158,
+        "sample_sd": 0.3374987827867124
+      },
+      "duplex": {
+        "values": [
+          11.696110457600076,
+          11.626052000412566,
+          12.053739963023334
+        ],
+        "mean": 11.791967473678659,
+        "sample_sd": 0.2293919658339297
+      },
+      "tail47": {
+        "values": [
+          3.3837858433339822,
+          2.8518234474307045,
+          3.886116913420723
+        ],
+        "mean": 3.37390873472847,
+        "sample_sd": 0.5172174701256863
+      },
+      "deep28": {
+        "values": [
+          2.8023123551559235,
+          2.0852684983318404,
+          3.139205439415361
+        ],
+        "mean": 2.6755954309677086,
+        "sample_sd": 0.5382737715158649
+      },
+      "common39": {
+        "values": [
+          10.469060893242176,
+          10.705661115738062,
+          10.901979032235268
+        ],
+        "mean": 10.692233680405169,
+        "sample_sd": 0.21677119453936844
+      }
+    },
+    "frequency": {
+      "triplet": {
+        "values": [
+          6.569517717523457,
+          6.300255207929673,
+          6.969548904142061
+        ],
+        "mean": 6.613107276531731,
+        "sample_sd": 0.3367692833206613
+      },
+      "duplex": {
+        "values": [
+          11.671995904182596,
+          11.60927516619713,
+          12.035188080590903
+        ],
+        "mean": 11.772153050323544,
+        "sample_sd": 0.2299435650418894
+      },
+      "tail47": {
+        "values": [
+          3.444127309948523,
+          2.8452461458980403,
+          3.8776049757415945
+        ],
+        "mean": 3.388992810529386,
+        "sample_sd": 0.5183831094457431
+      },
+      "deep28": {
+        "values": [
+          2.896497094405017,
+          2.077243746191795,
+          3.1437071738764644
+        ],
+        "mean": 2.7058160048244253,
+        "sample_sd": 0.5582163730042004
+      },
+      "common39": {
+        "values": [
+          10.336013849729147,
+          10.463984077557539,
+          10.695737740932367
+        ],
+        "mean": 10.498578556073019,
+        "sample_sd": 0.1823400749517643
+      }
+    }
+  },
+  "contrasts": {
+    "association-minus-baseline": {
+      "triplet": {
+        "deltas": [
+          0.07938002673692512,
+          0.1271802803804709,
+          0.11381543375724945
+        ],
+        "mean": 0.10679191362488183,
+        "sample_sd": 0.02466198366685369,
+        "ci95": [
+          0.0455281499491759,
+          0.16805567730058776
+        ],
+        "interval": "paired t, df2; only3seeds; descriptive exploratory interval"
+      },
+      "duplex": {
+        "deltas": [
+          0.04327655385951701,
+          0.1068845786610435,
+          0.06205115026357255
+        ],
+        "mean": 0.07073742759471102,
+        "sample_sd": 0.03268155083824802,
+        "ci95": [
+          -0.010448045324119692,
+          0.15192290051354174
+        ],
+        "interval": "paired t, df2; only3seeds; descriptive exploratory interval"
+      },
+      "tail47": {
+        "deltas": [
+          0.023836005241312908,
+          0.02266228325823505,
+          0.023291538370416642
+        ],
+        "mean": 0.023263275623321533,
+        "sample_sd": 0.000587371186342228,
+        "ci95": [
+          0.021804164708478402,
+          0.024722386538164665
+        ],
+        "interval": "paired t, df2; only3seeds; descriptive exploratory interval"
+      },
+      "deep28": {
+        "deltas": [
+          0.06680699757167252,
+          0.011859536170959473,
+          0.01066800526210221
+        ],
+        "mean": 0.029778179668244736,
+        "sample_sd": 0.032073430639247204,
+        "ci95": [
+          -0.04989663893091412,
+          0.1094529982674036
+        ],
+        "interval": "paired t, df2; only3seeds; descriptive exploratory interval"
+      },
+      "common39": {
+        "deltas": [
+          0.1463176936675339,
+          0.2531378666559849,
+          0.22290833332599647
+        ],
+        "mean": 0.2074546312165051,
+        "sample_sd": 0.05506132963330367,
+        "ci95": [
+          0.0706747058101555,
+          0.3442345566228547
+        ],
+        "interval": "paired t, df2; only3seeds; descriptive exploratory interval"
+      }
+    },
+    "frequency-minus-baseline": {
+      "triplet": {
+        "deltas": [
+          0.0520220527122186,
+          0.013987981995870591,
+          0.01563553338827095
+        ],
+        "mean": 0.02721518936545338,
+        "sample_sd": 0.02149916180288113,
+        "ci95": [
+          -0.026191689242114357,
+          0.08062206797302111
+        ],
+        "interval": "paired t, df2; only3seeds; descriptive exploratory interval"
+      },
+      "duplex": {
+        "deltas": [
+          0.019162000442037197,
+          0.0901077444456071,
+          0.043499267831141
+        ],
+        "mean": 0.050923004239595095,
+        "sample_sd": 0.03605077731133788,
+        "ci95": [
+          -0.038632091220780464,
+          0.14047809969997066
+        ],
+        "interval": "paired t, df2; only3seeds; descriptive exploratory interval"
+      },
+      "tail47": {
+        "deltas": [
+          0.08417747185585345,
+          0.016084981725570824,
+          0.014779600691288142
+        ],
+        "mean": 0.03834735142423747,
+        "sample_sd": 0.03969541483589111,
+        "ci95": [
+          -0.06026152555688163,
+          0.13695622840535657
+        ],
+        "interval": "paired t, df2; only3seeds; descriptive exploratory interval"
+      },
+      "deep28": {
+        "deltas": [
+          0.16099173682076584,
+          0.0038347840309143066,
+          0.015169739723205566
+        ],
+        "mean": 0.0599987535249619,
+        "sample_sd": 0.08764592010685067,
+        "ci95": [
+          -0.1577257819017105,
+          0.2777232889516343
+        ],
+        "interval": "paired t, df2; only3seeds; descriptive exploratory interval"
+      },
+      "common39": {
+        "deltas": [
+          0.013270650154504793,
+          0.011460828475462037,
+          0.0166670420230961
+        ],
+        "mean": 0.01379950688435431,
+        "sample_sd": 0.0026430913636161847,
+        "ci95": [
+          0.007233703952146816,
+          0.020365309816561802
+        ],
+        "interval": "paired t, df2; only3seeds; descriptive exploratory interval"
+      }
+    },
+    "association-minus-frequency": {
+      "triplet": {
+        "deltas": [
+          0.02735797402470652,
+          0.11319229838460032,
+          0.0981799003689785
+        ],
+        "mean": 0.07957672425942845,
+        "sample_sd": 0.045841481548942825,
+        "ci95": [
+          -0.03429982882308999,
+          0.1934532773419469
+        ],
+        "interval": "paired t, df2; only3seeds; descriptive exploratory interval"
+      },
+      "duplex": {
+        "deltas": [
+          0.02411455341747981,
+          0.01677683421543641,
+          0.018551882432431555
+        ],
+        "mean": 0.019814423355115924,
+        "sample_sd": 0.0038283205140242165,
+        "ci95": [
+          0.010304347993203308,
+          0.029324498717028538
+        ],
+        "interval": "paired t, df2; only3seeds; descriptive exploratory interval"
+      },
+      "tail47": {
+        "deltas": [
+          -0.06034146661454054,
+          0.006577301532664226,
+          0.0085119376791285
+        ],
+        "mean": -0.015084075800915938,
+        "sample_sd": 0.039205985151474845,
+        "ci95": [
+          -0.1124771420456808,
+          0.08230899044384893
+        ],
+        "interval": "paired t, df2; only3seeds; descriptive exploratory interval"
+      },
+      "deep28": {
+        "deltas": [
+          -0.09418473924909332,
+          0.008024752140045166,
+          -0.004501734461103357
+        ],
+        "mean": -0.03022057385671717,
+        "sample_sd": 0.055747547546054675,
+        "ci95": [
+          -0.16870515905867425,
+          0.10826401134523991
+        ],
+        "interval": "paired t, df2; only3seeds; descriptive exploratory interval"
+      },
+      "common39": {
+        "deltas": [
+          0.1330470435130291,
+          0.24167703818052289,
+          0.20624129130290036
+        ],
+        "mean": 0.1936551243321508,
+        "sample_sd": 0.05539790279989508,
+        "ci95": [
+          0.05603910482987681,
+          0.3312711438344248
+        ],
+        "interval": "paired t, df2; only3seeds; descriptive exploratory interval"
+      }
+    }
+  },
+  "changed_classes": {
+    "all_triplet": {
+      "association": {
+        "improve": 41,
+        "decline": 7,
+        "tie": 38
+      },
+      "frequency": {
+        "improve": 35,
+        "decline": 13,
+        "tie": 38
+      }
+    },
+    "tail47": {
+      "association": {
+        "improve": 8,
+        "decline": 2,
+        "tie": 37
+      },
+      "frequency": {
+        "improve": 9,
+        "decline": 1,
+        "tie": 37
+      }
+    },
+    "deep28": {
+      "association": {
+        "improve": 1,
+        "decline": 0,
+        "tie": 27
+      },
+      "frequency": {
+        "improve": 1,
+        "decline": 0,
+        "tie": 27
+      }
+    },
+    "common39": {
+      "association": {
+        "improve": 33,
+        "decline": 5,
+        "tie": 1
+      },
+      "frequency": {
+        "improve": 26,
+        "decline": 12,
+        "tie": 1
+      }
+    },
+    "duplex": {
+      "association": {
+        "improve": 23,
+        "decline": 13,
+        "tie": 13
+      },
+      "frequency": {
+        "improve": 25,
+        "decline": 11,
+        "tie": 13
+      }
+    }
+  },
+  "rule_triplet_coverage": {
+    "tail47": 10,
+    "deep28": 1,
+    "common39": 38
+  },
+  "frames": 36717,
+  "candidates": 6163968,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "coverage_triplet_supported": 85,
+  "development": [
+    {
+      "condition": "association",
+      "strength": 0,
+      "mean_triplet_proposal_AP": 21.79055193244099
+    },
+    {
+      "condition": "association",
+      "strength": 0.25,
+      "mean_triplet_proposal_AP": 21.87959065061308
+    },
+    {
+      "condition": "association",
+      "strength": 0.5,
+      "mean_triplet_proposal_AP": 21.962387218514397
+    },
+    {
+      "condition": "association",
+      "strength": 1,
+      "mean_triplet_proposal_AP": 22.108234332487047
+    },
+    {
+      "condition": "frequency",
+      "strength": 0,
+      "mean_triplet_proposal_AP": 21.79055193244099
+    },
+    {
+      "condition": "frequency",
+      "strength": 0.25,
+      "mean_triplet_proposal_AP": 21.81900908268048
+    },
+    {
+      "condition": "frequency",
+      "strength": 0.5,
+      "mean_triplet_proposal_AP": 21.843947309104696
+    },
+    {
+      "condition": "frequency",
+      "strength": 1,
+      "mean_triplet_proposal_AP": 21.884133218974625
+    }
+  ],
+  "strengths": {
+    "association": 1,
+    "frequency": 1
+  },
+  "runtime": {
+    "time": 1793029844.7336779,
+    "videos": 3,
+    "frames": 593,
+    "timed_after_warmup": 563,
+    "summary": {
+      "decode": {
+        "median_ms": 1.3875318691134453,
+        "p95_ms": 1.6684926114976406
+      },
+      "detector": {
+        "median_ms": 30.376001726835966,
+        "p95_ms": 31.206262344494462
+      },
+      "student": {
+        "median_ms": 6.129103247076273,
+        "p95_ms": 6.279790122061968
+      },
+      "correction": {
+        "median_ms": 0.9389095939695835,
+        "p95_ms": 0.9817407466471196
+      },
+      "export": {
+        "median_ms": 18.99594208225608,
+        "p95_ms": 29.61652115918696
+      },
+      "total": {
+        "median_ms": 57.95455211773515,
+        "p95_ms": 68.91944254748523
+      }
+    },
+    "total_fps": 15.520934915296303,
+    "load_seconds": [
+      0.9961952739395201,
+      0.8869557739235461,
+      0.8858796330168843
+    ],
+    "max_gpu_bytes": 454891008,
+    "checkpoint_bundle_tensor_exact": true,
+    "shared_correction_code_exact": true,
+    "source_bundle": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/bundle-seed0",
+    "source_bundle_sha256": "43969149a7bce4cf98843b17c0948c7c6a41c16a03206747e826cafe387fbb23",
+    "no_teacher_or_feature_assets": true,
+    "reset_at_each_video": true,
+    "memory_bounds_passed": true,
+    "limitation": "Runtime includes compressed prediction export. Official benchmark used all fixed candidates; raw video uses production confidence0.25/NMS0.7/max300. No end-to-end real-time claim."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "time": 1793029844.7336779,
+  "videos": 3,
+  "frames": 593,
+  "timed_after_warmup": 563,
+  "summary": {
+    "decode": {
+      "median_ms": 1.3875318691134453,
+      "p95_ms": 1.6684926114976406
+    },
+    "detector": {
+      "median_ms": 30.376001726835966,
+      "p95_ms": 31.206262344494462
+    },
+    "student": {
+      "median_ms": 6.129103247076273,
+      "p95_ms": 6.279790122061968
+    },
+    "correction": {
+      "median_ms": 0.9389095939695835,
+      "p95_ms": 0.9817407466471196
+    },
+    "export": {
+      "median_ms": 18.99594208225608,
+      "p95_ms": 29.61652115918696
+    },
+    "total": {
+      "median_ms": 57.95455211773515,
+      "p95_ms": 68.91944254748523
+    }
+  },
+  "total_fps": 15.520934915296303,
+  "load_seconds": [
+    0.9961952739395201,
+    0.8869557739235461,
+    0.8858796330168843
+  ],
+  "max_gpu_bytes": 454891008,
+  "checkpoint_bundle_tensor_exact": true,
+  "shared_correction_code_exact": true,
+  "source_bundle": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/bundle-seed0",
+  "source_bundle_sha256": "43969149a7bce4cf98843b17c0948c7c6a41c16a03206747e826cafe387fbb23",
+  "no_teacher_or_feature_assets": true,
+  "reset_at_each_video": true,
+  "memory_bounds_passed": true,
+  "limitation": "Runtime includes compressed prediction export. Official benchmark used all fixed candidates; raw video uses production confidence0.25/NMS0.7/max300. No end-to-end real-time claim."
+}

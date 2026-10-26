@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "time": 1793027428.822916,
+  "checks": {
+    "zero_strength_exact_original_score_assembly": true,
+    "primitive_slots_q_once_finite_bounded": true,
+    "agent_compatible_rows": true,
+    "single_actor_no_self_reinforcement": true,
+    "permutation_invariance": true,
+    "duplicate_context_invariance": true,
+    "empty_and_unreliable_context_identity": true,
+    "nonzero_rule_target_attribution": true,
+    "label_order_and_training_sources": true,
+    "unchanged_checkpoints_shapes_reset_causal_function": true
+  },
+  "checkpoints": {
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed0/best.pt": {
+      "sha256": "55a20fafb9dfbdf682559444e9673bc68f0a6b229c65d1bf00ddfead25902c26",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed0/best.pt",
+      "backup_sha256": "55a20fafb9dfbdf682559444e9673bc68f0a6b229c65d1bf00ddfead25902c26",
+      "selected_epoch": 17
+    },
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed1/best.pt": {
+      "sha256": "21219772e3d82ea9b8b66437a0268d5e8694175bdf8d87d347bc5a01cf3ac834",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed1/best.pt",
+      "backup_sha256": "21219772e3d82ea9b8b66437a0268d5e8694175bdf8d87d347bc5a01cf3ac834",
+      "selected_epoch": 13
+    },
+    "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed2/best.pt": {
+      "sha256": "ec0cfd20b86726f7a494cb9a19657ab2a3d4248ab2478056d097b08532a0cafe",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed2/best.pt",
+      "backup_sha256": "ec0cfd20b86726f7a494cb9a19657ab2a3d4248ab2478056d097b08532a0cafe",
+      "selected_epoch": 22
+    }
+  },
+  "benchmark": {
+    "scope": "association correction plus score assembly/export only; cached proposal frame",
+    "samples": 100,
+    "warmup": 10,
+    "candidates": 56,
+    "median_ms": 0.7234138902276754,
+    "p95_ms": 0.7326166378334165
+  },
+  "runtime_notes": "No student retraining; optimizer/RNG resume unchanged and not invoked. Official inference resumes at video boundaries after flushing all arrays."
+}
