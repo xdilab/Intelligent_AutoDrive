@@ -1,0 +1,51 @@
+{
+  "time": 1793034862.9936054,
+  "gpu": 0,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "batches": [
+    [
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      7,
+      8,
+      9
+    ]
+  ],
+  "new_corrected_AP_runs": 42,
+  "baseline_replays": 7,
+  "original_results_reused": 21,
+  "benchmark_fps": 33.382465300189295,
+  "benchmark_steps": 395,
+  "first_added_comparison_minutes": [
+    25,
+    30
+  ],
+  "full_study_minutes": [
+    110,
+    135
+  ],
+  "scratch_GiB_largest": 118.30316495895386,
+  "expected_peak_memory_GiB": [
+    150,
+    165
+  ],
+  "AP_throughput_basis": "Measured same7-condition three-seed block:about98seconds per corrected135-class evaluation with16workers",
+  "queue": "No queue,GPU0free;GPU1desktop untouched",
+  "uncertainty": "CPU/I/O contention, hash/audit overhead, baseline parity; all7additional seeds complete regardless of AP",
+  "monitoring": "Silent120second timer,5hour service coverage,real log/counter/checkpoint checks;no arbitrary unattended repair guarantee"
+}

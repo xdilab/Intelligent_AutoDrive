@@ -1,0 +1,43 @@
+{
+  "signature": {
+    "protocol_sha256": "fdd5e69b131b64e3e850429572ee1aa990fc52e12d1b5d66c3577cd21d2b9372",
+    "freeze_sha256": "c3c0763ba048d0d1c884f33f438a049efa0c90fca6c00c5143b4190cd3340fe4"
+  },
+  "processed_frames": 38663,
+  "videos": 198,
+  "completed_videos": 198,
+  "seconds": 964.0978202708066,
+  "frames_per_second": 40.10277711149674,
+  "phase_timing": {
+    "image": {
+      "median_ms": 9.06000891700387,
+      "p95_ms": 10.33172495663166,
+      "total_seconds": 351.10236620297655
+    },
+    "encoder": {
+      "median_ms": 5.385090131312609,
+      "p95_ms": 5.6146609131246805,
+      "total_seconds": 209.1365208812058
+    },
+    "heads_and_correction_export": {
+      "median_ms": 9.0325390920043,
+      "p95_ms": 9.42231067456305,
+      "total_seconds": 336.58492708485574
+    },
+    "array_write": {
+      "median_ms": 1.595602836459875,
+      "p95_ms": 3.022698033601046,
+      "total_seconds": 63.848268328700215
+    }
+  },
+  "peak_gpu_bytes": 124035072,
+  "scope": "Fresh current-image encoding shared by3student heads,21score exports; fixed detector candidates; detector/MP4 decoding excluded",
+  "time": 1793039560.4090772,
+  "seeds": [
+    7,
+    8,
+    9
+  ],
+  "student_heads": 3,
+  "score_exports": 21
+}

@@ -1,0 +1,203 @@
+{
+  "time": 1793038558.0762858,
+  "score_hashes": {
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/baseline-seed3.npy": "5247041d8a8d0097e4080f69a390a7e30a9bea93c0100f39acd989a2fe6c5e67",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/short_single-seed3.npy": "bac2cf45003bfc613c5832bc3bc50c8dcd9fda1cfd8f5c04520c027c4dfdbceb",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/short_frequency-seed3.npy": "11148e9855df851f65c544930fcf59b5e79181c2c562b22b3353567152a788d9",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/full_single-seed3.npy": "f2ae5b3aaa54d42dfae7ed5d588a31e0def087ae5edfb1383e377aa877a2f8d3",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/full_frequency-seed3.npy": "244cc573493af2b3e22e707db524a418ca7ce0d378f519e4fb5bff1d6684e733",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/full_pair-seed3.npy": "a5994d3317e7f210ad22f6678a0706d8e6ccea9008f524cc5a30fd5c51ee2de5",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/full_pair_frequency-seed3.npy": "f6c34d5fa3b2f8ece82d205eb223e057747c35340aa0cf9b7486663e59352a05",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/baseline-seed4.npy": "72a5dc1c339e48dd80e6af2044d9e745ff397af510b297ae70f5e467be82aa3b",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/short_single-seed4.npy": "4884282d22e88287e87bf55abf4bc1c1c629a58e44ffb1a5acee9801f4ef811e",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/short_frequency-seed4.npy": "fcaf2da9ab05755dc2cbab2fa99f7ecb524efbdb3154f37947db9411af2e759f",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/full_single-seed4.npy": "a6bd29c377e89dc1053f88ab3bbd9df936414453582f4bf882e983b7335a7dce",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/full_frequency-seed4.npy": "cc41274caa1874d40dfaec389236a43d45f4a696c3ac9bd798a4a432984ab013",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/full_pair-seed4.npy": "85cb4676595eea9d50dce770e86ec76b8916eeea04cc1550cfc5546682c2558e",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/full_pair_frequency-seed4.npy": "e95ee0dc7f3f2146b5db1c97630cf6e428936a7014786c5257f81ca194967998",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/baseline-seed5.npy": "dabc14d6ca3e3be892813e355607d2684b56d18e409f74a6044419317df1d4b4",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/short_single-seed5.npy": "9459250bb86a727810d557c4d4374e0a0ed2914bdb193aec764d7031cbd51806",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/short_frequency-seed5.npy": "99f98af43a58f73f50c14536ff3e3619577a11a5b06368953189a37728235d29",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/full_single-seed5.npy": "65c9fc8ff898f1862dd5e0d9a3cfc3acbdc9ef4b5d88b8c302d8685155846415",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/full_frequency-seed5.npy": "640e7f75a2d66ec73bc839cd9b5aa6ee2ca7849581940cfb17ffa6a2256bfcd0",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/full_pair-seed5.npy": "ab20c9e253489019689b89f9386039e6ca2f7186352e00598a843e74c126fa92",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/full_pair_frequency-seed5.npy": "6b5038b538cb976095f1ee1436cd4ef2037e68f1bd08595021e96abea5a9b539",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/baseline-seed6.npy": "e4737e69e7ff219731e8d11401a823adae27dbf838fcdef0e8504572e03593f8",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/short_single-seed6.npy": "56d7413166afc17a92eee6fd3fa18da7747830628d420ae477fb31cdcbbbef76",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/short_frequency-seed6.npy": "8766ca5d2379def7274c9f76e892a5785887d565faee22c464674f34e682cf57",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/full_single-seed6.npy": "f42ddac85741cdc80bdba8f81d673e04689298f0398e55c3228e291050ccc968",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/full_frequency-seed6.npy": "11b2f9531e0ead733a49531a4facd566f17a7c10cd62f9df0030b8f205bb6845",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/full_pair-seed6.npy": "d71ff2cbbf50efb9ede54afc4d91ce6620c8723d82b76382b40c8374151d88ac",
+    "/dev/shm/comp765-student-association-context-seeds-20261026/seeds3-6/full_pair_frequency-seed6.npy": "e3d1e500f7faae9f7d6a76cbd1357513bd68e6bd65fee7188cc9de4f6c82d3d2"
+  },
+  "diagnostics": [
+    {
+      "seed": 3,
+      "condition": "baseline",
+      "changed_event_scores": 0,
+      "max_abs_score_change": 0.0
+    },
+    {
+      "seed": 3,
+      "condition": "short_single",
+      "changed_event_scores": 174420375,
+      "max_abs_score_change": 0.13760337233543396
+    },
+    {
+      "seed": 3,
+      "condition": "short_frequency",
+      "changed_event_scores": 176716426,
+      "max_abs_score_change": 0.08747506141662598
+    },
+    {
+      "seed": 3,
+      "condition": "full_single",
+      "changed_event_scores": 204506977,
+      "max_abs_score_change": 0.13915970921516418
+    },
+    {
+      "seed": 3,
+      "condition": "full_frequency",
+      "changed_event_scores": 207374833,
+      "max_abs_score_change": 0.08095851540565491
+    },
+    {
+      "seed": 3,
+      "condition": "full_pair",
+      "changed_event_scores": 204506780,
+      "max_abs_score_change": 0.16037499904632568
+    },
+    {
+      "seed": 3,
+      "condition": "full_pair_frequency",
+      "changed_event_scores": 207374833,
+      "max_abs_score_change": 0.10642647743225098
+    },
+    {
+      "seed": 4,
+      "condition": "baseline",
+      "changed_event_scores": 0,
+      "max_abs_score_change": 0.0
+    },
+    {
+      "seed": 4,
+      "condition": "short_single",
+      "changed_event_scores": 174420241,
+      "max_abs_score_change": 0.14140808582305908
+    },
+    {
+      "seed": 4,
+      "condition": "short_frequency",
+      "changed_event_scores": 176716426,
+      "max_abs_score_change": 0.12494510412216187
+    },
+    {
+      "seed": 4,
+      "condition": "full_single",
+      "changed_event_scores": 204506911,
+      "max_abs_score_change": 0.17189094424247742
+    },
+    {
+      "seed": 4,
+      "condition": "full_frequency",
+      "changed_event_scores": 207374833,
+      "max_abs_score_change": 0.12210544943809509
+    },
+    {
+      "seed": 4,
+      "condition": "full_pair",
+      "changed_event_scores": 204506899,
+      "max_abs_score_change": 0.1947513222694397
+    },
+    {
+      "seed": 4,
+      "condition": "full_pair_frequency",
+      "changed_event_scores": 207374833,
+      "max_abs_score_change": 0.1366424560546875
+    },
+    {
+      "seed": 5,
+      "condition": "baseline",
+      "changed_event_scores": 0,
+      "max_abs_score_change": 0.0
+    },
+    {
+      "seed": 5,
+      "condition": "short_single",
+      "changed_event_scores": 174420308,
+      "max_abs_score_change": 0.13628163933753967
+    },
+    {
+      "seed": 5,
+      "condition": "short_frequency",
+      "changed_event_scores": 176716426,
+      "max_abs_score_change": 0.11757299304008484
+    },
+    {
+      "seed": 5,
+      "condition": "full_single",
+      "changed_event_scores": 204507030,
+      "max_abs_score_change": 0.14148691296577454
+    },
+    {
+      "seed": 5,
+      "condition": "full_frequency",
+      "changed_event_scores": 207374833,
+      "max_abs_score_change": 0.11488208174705505
+    },
+    {
+      "seed": 5,
+      "condition": "full_pair",
+      "changed_event_scores": 204506967,
+      "max_abs_score_change": 0.1641409695148468
+    },
+    {
+      "seed": 5,
+      "condition": "full_pair_frequency",
+      "changed_event_scores": 207374833,
+      "max_abs_score_change": 0.11555510759353638
+    },
+    {
+      "seed": 6,
+      "condition": "baseline",
+      "changed_event_scores": 0,
+      "max_abs_score_change": 0.0
+    },
+    {
+      "seed": 6,
+      "condition": "short_single",
+      "changed_event_scores": 174420380,
+      "max_abs_score_change": 0.13611531257629395
+    },
+    {
+      "seed": 6,
+      "condition": "short_frequency",
+      "changed_event_scores": 176716426,
+      "max_abs_score_change": 0.0883147120475769
+    },
+    {
+      "seed": 6,
+      "condition": "full_single",
+      "changed_event_scores": 204506845,
+      "max_abs_score_change": 0.137491375207901
+    },
+    {
+      "seed": 6,
+      "condition": "full_frequency",
+      "changed_event_scores": 207374833,
+      "max_abs_score_change": 0.08435899019241333
+    },
+    {
+      "seed": 6,
+      "condition": "full_pair",
+      "changed_event_scores": 204506953,
+      "max_abs_score_change": 0.16548192501068115
+    },
+    {
+      "seed": 6,
+      "condition": "full_pair_frequency",
+      "changed_event_scores": 207374833,
+      "max_abs_score_change": 0.10715359449386597
+    }
+  ]
+}

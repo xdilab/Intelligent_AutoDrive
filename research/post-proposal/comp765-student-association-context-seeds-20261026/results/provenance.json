@@ -1,0 +1,56 @@
+{
+  "time": 1793034624.811505,
+  "base_revision": "2043aa127f3bdfd5c9fe83a7a59c7f63bbe445b0",
+  "python": "3.11.15 (main, Mar 11 2026, 17:20:07) [GCC 14.3.0]",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "torch": "2.4.1+cu124",
+  "numpy": "2.4.3",
+  "cuda": "12.4",
+  "gpu": "NVIDIA RTX A6000",
+  "parent_root": "/home/brandon/.local/share/road-reason/comp765-student-association-context-20261026",
+  "parent_final_audit_sha256": "07a10f1f6875b706cbd2c2c975a76076c909ba8fa6401e4c38bf05d7a8fec66e",
+  "additional_checkpoint_root": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022",
+  "assets": {
+    "frames": {
+      "path": "/data/repos/wiki/artifacts/post-proposal-experiments/shared-frames.json",
+      "sha256": "2ef7e3c370a54cd0d61b9aff46acdab2a0e7fa23f1e5f91dd081b67cc35174f1",
+      "bytes": 922460
+    },
+    "counts": {
+      "path": "/data/repos/wiki/artifacts/proposal-tail/train-counts.json",
+      "sha256": "8d8b168945a49d122af6de5b802fd46d80c80ea15cc9a08ec9ad9b121b12639f",
+      "bytes": 9544
+    },
+    "yolo": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/dets_v8x_best_val_fullcand.pkl",
+      "sha256": "447e28f0c071bb7910b5cc9ac37420c7da3bfa3827ad12b5eb3b61e7e5f64811",
+      "bytes": 183339278
+    },
+    "gt": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/dets_i3d_val_fullcand.pkl",
+      "sha256": "c792b324fa6f2cec88d2cafb48ee6dbf8682d62c89ff69f3025044bb1f82d68f",
+      "bytes": 5000961817
+    },
+    "backbone": {
+      "path": "/home/brandon/.cache/torch/hub/checkpoints/resnet50-11ad3fa6.pth",
+      "sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+      "bytes": 102540417
+    },
+    "detector": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/runs/v8x_agent_1280_eccv/weights/best.pt",
+      "sha256": "3ad32910bacaf1fa74174503c5c29f94cfbbd83de51e5e5c301e6fc7f13e8684",
+      "bytes": 136824954
+    },
+    "annotation": {
+      "path": "/data/datasets/road_waymo/road_waymo_trainval_v1.1.json",
+      "sha256": "628b39bb9aabd917c6631144e319ecba25c1de3a10502c2360439af7e4f4586a",
+      "bytes": 1149647915
+    },
+    "teacher_partition": {
+      "path": "/data/repos/wiki/artifacts/stage56-full/collected/preparation.json",
+      "sha256": "f8704095dd068af74abbd0e42ad4c82d4421bd9edd9527d48b375d77d646b338",
+      "bytes": 16517
+    }
+  },
+  "scientific_change": "Only seed count0\u20132 to0\u20139; same seven conditions, frozen rules/strength/model/evaluator. User requested after original3outcomes."
+}

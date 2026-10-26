@@ -1,0 +1,7 @@
+{"time": 1793034864.5372045, "phase": "phase-start", "name": "official", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-seeds-20261026/official.py"]}
+{"time": 1793041471.5573263, "phase": "phase-complete", "name": "official"}
+{"time": 1793041471.5577168, "phase": "phase-start", "name": "analyze", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-seeds-20261026/analyze.py"]}
+{"time": 1793041474.694956, "phase": "phase-complete", "name": "analyze"}
+{"time": 1793041474.6953328, "phase": "phase-start", "name": "audit", "command": ["/home/brandon/miniconda3/envs/road_reason/bin/python", "-u", "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-seeds-20261026/audit.py"]}
+{"time": 1793041480.1790946, "phase": "phase-complete", "name": "audit"}
+{"time": 1793041480.1796265, "phase": "pipeline-complete"}

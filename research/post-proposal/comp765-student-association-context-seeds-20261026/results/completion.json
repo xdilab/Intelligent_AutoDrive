@@ -1,0 +1,15 @@
+{
+  "time": 1793041547.4782178,
+  "status": "complete",
+  "final_audit_passed": true,
+  "aggregate_checks": 210,
+  "per_class_numeric_checks": 11340,
+  "results": 70,
+  "seeds": 10,
+  "elapsed_launch_to_audit_minutes": 110.28172900676728,
+  "temporary_score_GiB_released": 207.03053867816925,
+  "monitor_timer_retired": true,
+  "desktop_notifications": false,
+  "thesis_slides_and_working_bundle_unchanged": true,
+  "remote_push": false
+}

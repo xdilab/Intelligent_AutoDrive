@@ -1,0 +1,9 @@
+{"time": 1793034647.9507208, "phase": "batch-assets-loaded", "batch": "seeds3-6", "seeds": [3, 4, 5, 6], "expected_score_GiB": 118.30316495895386}
+{"time": 1793034650.169711, "phase": "official-inference", "batch": "seeds3-6", "video": "train_00600", "fid": 50, "completed_videos": 0, "total_videos": 198, "steps_this_session": 50, "elapsed": 1.5905775628052652}
+{"time": 1793034651.6908011, "phase": "official-inference", "batch": "seeds3-6", "video": "train_00600", "fid": 100, "completed_videos": 0, "total_videos": 198, "steps_this_session": 100, "elapsed": 3.111667023971677}
+{"time": 1793034653.2230246, "phase": "official-inference", "batch": "seeds3-6", "video": "train_00600", "fid": 150, "completed_videos": 0, "total_videos": 198, "steps_this_session": 150, "elapsed": 4.643890623003244}
+{"time": 1793034654.7422025, "phase": "official-video-complete", "batch": "seeds3-6", "video": "train_00600", "completed_videos": 1, "steps_this_session": 198, "elapsed": 6.163070423994213}
+{"time": 1793034656.1324224, "phase": "official-inference", "batch": "seeds3-6", "video": "train_00601", "fid": 50, "completed_videos": 1, "total_videos": 198, "steps_this_session": 248, "elapsed": 7.553284797817469}
+{"time": 1793034657.6010952, "phase": "official-inference", "batch": "seeds3-6", "video": "train_00601", "fid": 100, "completed_videos": 1, "total_videos": 198, "steps_this_session": 298, "elapsed": 9.02196091460064}
+{"time": 1793034659.0778258, "phase": "official-inference", "batch": "seeds3-6", "video": "train_00601", "fid": 150, "completed_videos": 1, "total_videos": 198, "steps_this_session": 348, "elapsed": 10.498690380714834}
+{"time": 1793034660.4114926, "phase": "official-video-complete", "batch": "seeds3-6", "video": "train_00601", "completed_videos": 2, "steps_this_session": 395, "elapsed": 11.832360345870256}

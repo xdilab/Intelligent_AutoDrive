@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "time": 1793041578.9572687,
+  "total_seeds": 10,
+  "total_condition_results": 70,
+  "additional_corrected_AP_runs": 42,
+  "additional_baseline_whole_score_replays": 7,
+  "original_results_preserved": 21,
+  "checkpoints": [
+    {
+      "seed": 0,
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed0/best.pt",
+      "sha256": "55a20fafb9dfbdf682559444e9673bc68f0a6b229c65d1bf00ddfead25902c26",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed0/best.pt"
+    },
+    {
+      "seed": 1,
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed1/best.pt",
+      "sha256": "21219772e3d82ea9b8b66437a0268d5e8694175bdf8d87d347bc5a01cf3ac834",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed1/best.pt"
+    },
+    {
+      "seed": 2,
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed2/best.pt",
+      "sha256": "ec0cfd20b86726f7a494cb9a19657ab2a3d4248ab2478056d097b08532a0cafe",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed2/best.pt"
+    },
+    {
+      "seed": 3,
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed3/best.pt",
+      "sha256": "19287e0205b252acb2316831f79e81b7192805e7bd00183eaa36135d3db97b02",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed3/best.pt"
+    },
+    {
+      "seed": 4,
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed4/best.pt",
+      "sha256": "c4e1701a91de59e260dfabe38a842a4326826d2642738b2871b343f67bc0b577",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed4/best.pt"
+    },
+    {
+      "seed": 5,
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed5/best.pt",
+      "sha256": "d5fbfed13513e2e334c7724164322e3dcbd613af5d4aae570c2fdd571965e4ad",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed5/best.pt"
+    },
+    {
+      "seed": 6,
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed6/best.pt",
+      "sha256": "1029d67c5b4321388936b44b5f4722e5175736aa16363e5cecbbe2b5e0adae40",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed6/best.pt"
+    },
+    {
+      "seed": 7,
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed7/best.pt",
+      "sha256": "eb92df5f4a5762cc503b70c360c93cc22c4fa92b58a27c0f563cc47144a37951",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed7/best.pt"
+    },
+    {
+      "seed": 8,
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed8/best.pt",
+      "sha256": "a3412899e13cd3534440fdb8f50947cc6c7fdd448fc659f160e7048f9e63a32c",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed8/best.pt"
+    },
+    {
+      "seed": 9,
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed9/best.pt",
+      "sha256": "3d8a77e84011a1c53ec1d07372dad9fd9cd442d1ed4739fbc1b59ce22c61c03f",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed9/best.pt"
+    }
+  ],
+  "batches": [
+    {
+      "batch": "seeds3-6",
+      "audit_sha256": "4080097ea3df1693c8f9709749b9891b2783b802e4d7bbcee25514e26e9b92d0",
+      "score_diagnostics_sha256": "a5da460822e0abb27542129e16701a8d28349203531c323e415e2c2ad1ab9370",
+      "cleanup_sha256": "12e07f3fc25806543990a61d6011f87a2d1674da8479f276a50b1719fe1a5f57"
+    },
+    {
+      "batch": "seeds7-9",
+      "audit_sha256": "3baebfcf5924f21b55028df12e21b1a40a93e770a6394929a998e84583eecbee",
+      "score_diagnostics_sha256": "1ec58f43d5bb811596cb9a1c34ad2fe2e29bd83be378cadbb99ae475d193963e",
+      "cleanup_sha256": "ef8adceafdffb7b742fa98eb674b373923024220c5d7294fff6a6c1c2748cefe"
+    }
+  ],
+  "statistical_checks": 210,
+  "per_class_numeric_cells_verified": 11340,
+  "all135event_classes_reported": true,
+  "parent_rules_byte_identical": true,
+  "parent_runtime_replay_reused_by_hash": true,
+  "no_new_training": true,
+  "source_revision": "2043aa127f3bdfd5c9fe83a7a59c7f63bbe445b0",
+  "code_sha256": {
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-seeds-20261026/official.py": "94527df9d622cc6fb09fa92f6099a853ea6e8fff98d8b027a584a87b23553bc8",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-seeds-20261026/audit.py": "edaf30a7aad67ad0aae59431125341546ce3959fe355cf55c379a67c504b903e",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-seeds-20261026/prepare.py": "a73d1b860d02bd6d2c539a9dcb2aa3b7a26c1bcf89699a82bd5f1f522c58c928",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-seeds-20261026/pipeline.py": "27aa36b48a3fc0655163002c29754c628d7cb5f08b55ba89a35b37f445d5ff6b",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-seeds-20261026/analyze.py": "09ae7dfb5bc81a6c913ca3374bba30c151e65f0c22503e838a0f0cf2426eaa98",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-seeds-20261026/monitor.py": "decfe5e3a526d71ef4fa2068266a7d2467b220fe1c31b2ac9f64c1b82766da96",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-seeds-20261026/archive.py": "4cb9e1fb33f94d40ec851d09e41c55ad7dd8a75b1b67ea4bed3d018a7735ea7a",
+    "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-seeds-20261026/context_common.py": "7681d9fc6199189dd92aeac016750940a640c6f4e940966369940e33b0432670"
+  }
+}

@@ -77,7 +77,7 @@ The audited, prespecified seed-0 raw-video adapter is unchanged. Its prior 593-f
 
 ## Limits
 
-The official validation set has prior research use and detector checkpoint-selection exposure. Student/semantic-teacher training/selection are disjoint from it, but it is not an untouched full-system test. More seeds improve measurement of training randomness; they do not remove dataset reuse or establish generalization to new video populations.
+The official validation set has prior research use and detector checkpoint-selection exposure. Student/semantic-teacher training/selection are disjoint from it, but it is not an untouched full-system test. More seeds improve measurement of training randomness; they do not remove dataset reuse or establish generalization to new video populations. All seeds share one fixed mined rule bank; these intervals do not measure uncertainty from resampling mining data or constructing different rules.
 
 Dependent actor-frame transactions and uncertain predicted context differ from ground-truth mining. Nearby actors need not interact. Associations do not establish causes, intentions, future events or the GRU's internal representations. The pair rule design and cap are one fixed practical implementation, not an exhaustive search. No deployment-safety claim is made. No thesis, slides, original checkpoints, production bundle or remote branch were modified.
 '''
@@ -86,7 +86,13 @@ Dependent actor-frame transactions and uncertain predicted context differ from g
  for c in ['baseline','short_single','full_single','full_pair']:axes[0].plot(SEEDS,combined['conditions'][c]['triplet']['values'],marker='o',label=c)
  axes[0].set(xlabel='Seed',ylabel='Triplet detector mAP (%)',xticks=SEEDS);axes[0].legend(fontsize=8)
  tr=[r for r in rows if r['group']=='triplet']
- for ax,key,title in [(axes[1],'full_single-minus-short_single','More mining frames'),(axes[2],'full_pair-minus-full_single','Two-event increment')]:ax.bar(range(86),[r[key] for r in tr],color=['#28788c' if r['tail47'] else '#777777' for r in tr]);ax.axhline(0,color='black',lw=.7);ax.set(title=title,xlabel='All86triplet class IDs',ylabel='Mean class AP change (pp)')
+ for ax,key,title in [(axes[1],'full_single-minus-short_single','More mining frames'),(axes[2],'full_pair-minus-full_single','Two-event increment')]:ax.bar(range(86),[r[key] for r in tr],color=['#28788c' if r['tail47'] else '#777777' for r in tr]);ax.axhline(0,color='black',lw=.7);ax.set(title=title,xlabel='All 86 triplet class IDs',ylabel='Mean class AP change (pp)')
+ from matplotlib.patches import Patch
+ axes[1].legend(handles=[Patch(color='#28788c',label='Tail47'),Patch(color='#777777',label='Common39')],fontsize=8)
  fig.tight_layout();fig.savefig(out/'comparisons.png',dpi=180);fig.savefig(out/'comparisons.pdf');plt.close(fig)
+ bench=read(CONTEXT_ROOT/'preflight.json')['benchmark'];fig,ax=plt.subplots(figsize=(6,4))
+ for c,x in [('baseline',0),('full_single',bench['full_single']['median_ms']),('full_pair',bench['full_pair']['median_ms'])]:
+  ax.scatter(x,combined['conditions'][c]['triplet']['mean']);ax.annotate(c,(x,combined['conditions'][c]['triplet']['mean']),xytext=(4,4),textcoords='offset points')
+ ax.set(xlabel='Same-frame correction+export median ms (reused benchmark)',ylabel='Ten-seed mean triplet detector mAP (%)',title='Incremental rule cost; detector/encoding excluded');ax.margins(.25);fig.tight_layout();fig.savefig(out/'incremental-cost.png',dpi=180);plt.close(fig)
  progress('analysis-complete',seeds=10,contrasts={k:v['triplet']['mean'] for k,v in combined['contrasts'].items()})
 if __name__=='__main__':main()

@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "time": 1793034624.7332106,
+  "checkpoints": {
+    "0": {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed0/best.pt",
+      "sha256": "55a20fafb9dfbdf682559444e9673bc68f0a6b229c65d1bf00ddfead25902c26",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed0/best.pt",
+      "selected_epoch": 17,
+      "tensor_sha256": "545f36e24e93978d4e93458fe27abcd0ecd83dd7edff39fc6b4a6d7995366a75"
+    },
+    "1": {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed1/best.pt",
+      "sha256": "21219772e3d82ea9b8b66437a0268d5e8694175bdf8d87d347bc5a01cf3ac834",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed1/best.pt",
+      "selected_epoch": 13,
+      "tensor_sha256": "196fac96b3cbaf7841e4001e45677e4497e0db62e3a97affaa8ef853cbcaffd8"
+    },
+    "2": {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed2/best.pt",
+      "sha256": "ec0cfd20b86726f7a494cb9a19657ab2a3d4248ab2478056d097b08532a0cafe",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed2/best.pt",
+      "selected_epoch": 22,
+      "tensor_sha256": "1ec48b324dfb1d22995dade5df4f0a7f6880cc3c7e27b1b2b765044718b06827"
+    },
+    "3": {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed3/best.pt",
+      "sha256": "19287e0205b252acb2316831f79e81b7192805e7bd00183eaa36135d3db97b02",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed3/best.pt",
+      "selected_epoch": 10,
+      "tensor_sha256": "1e58de343afecacc37e25b35f7fb93c34ffba3184e83a2afb497d795d7b9ba13"
+    },
+    "4": {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed4/best.pt",
+      "sha256": "c4e1701a91de59e260dfabe38a842a4326826d2642738b2871b343f67bc0b577",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed4/best.pt",
+      "selected_epoch": 17,
+      "tensor_sha256": "c60816ae228c4d3f45ad33412836820480201ca4fca6a2859d024ae9ec7a3ad2"
+    },
+    "5": {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed5/best.pt",
+      "sha256": "d5fbfed13513e2e334c7724164322e3dcbd613af5d4aae570c2fdd571965e4ad",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed5/best.pt",
+      "selected_epoch": 12,
+      "tensor_sha256": "ab81300177062b37ac05026503ceb462aabcc00e265fb8917b6de9521670f857"
+    },
+    "6": {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed6/best.pt",
+      "sha256": "1029d67c5b4321388936b44b5f4722e5175736aa16363e5cecbbe2b5e0adae40",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed6/best.pt",
+      "selected_epoch": 9,
+      "tensor_sha256": "cf982b32544f7756dc116077963b5fde68079e04d133dd0a48ec0a159a3f56db"
+    },
+    "7": {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed7/best.pt",
+      "sha256": "eb92df5f4a5762cc503b70c360c93cc22c4fa92b58a27c0f563cc47144a37951",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed7/best.pt",
+      "selected_epoch": 19,
+      "tensor_sha256": "0ec74eb6d63be47d39716eab1307e7bc89b7ba07b13be903ba3243f3adbb0948"
+    },
+    "8": {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed8/best.pt",
+      "sha256": "a3412899e13cd3534440fdb8f50947cc6c7fdd448fc659f160e7048f9e63a32c",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed8/best.pt",
+      "selected_epoch": 18,
+      "tensor_sha256": "5af11143a5017b3014d44a572f3c4bb2f9ac13f811be63e6107afa48109c4e5a"
+    },
+    "9": {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed9/best.pt",
+      "sha256": "3d8a77e84011a1c53ec1d07372dad9fd9cd442d1ed4739fbc1b59ce22c61c03f",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed9/best.pt",
+      "selected_epoch": 17,
+      "tensor_sha256": "30b5309cc52c5529df952e2a043942139676af4f5e89a57f24c556dcd92fb156"
+    }
+  },
+  "checks": {
+    "all10_checkpoints_backups_shapes_finite": true,
+    "all7_score_conditions_finite_bounded": true,
+    "primitive_scores_q_unchanged": true,
+    "zero_strength_and_state_reset": true,
+    "training_manifests_byte_identical": true,
+    "original_expansion_input_parity": true,
+    "rules_splits_byte_identical_to_parent": true,
+    "frozen_numerical_functions_imported_unchanged": true
+  },
+  "assets": {
+    "frames": {
+      "path": "/data/repos/wiki/artifacts/post-proposal-experiments/shared-frames.json",
+      "sha256": "2ef7e3c370a54cd0d61b9aff46acdab2a0e7fa23f1e5f91dd081b67cc35174f1",
+      "bytes": 922460
+    },
+    "counts": {
+      "path": "/data/repos/wiki/artifacts/proposal-tail/train-counts.json",
+      "sha256": "8d8b168945a49d122af6de5b802fd46d80c80ea15cc9a08ec9ad9b121b12639f",
+      "bytes": 9544
+    },
+    "yolo": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/dets_v8x_best_val_fullcand.pkl",
+      "sha256": "447e28f0c071bb7910b5cc9ac37420c7da3bfa3827ad12b5eb3b61e7e5f64811",
+      "bytes": 183339278
+    },
+    "gt": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/dets_i3d_val_fullcand.pkl",
+      "sha256": "c792b324fa6f2cec88d2cafb48ee6dbf8682d62c89ff69f3025044bb1f82d68f",
+      "bytes": 5000961817
+    },
+    "backbone": {
+      "path": "/home/brandon/.cache/torch/hub/checkpoints/resnet50-11ad3fa6.pth",
+      "sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+      "bytes": 102540417
+    },
+    "detector": {
+      "path": "/data/repos/ROAD_Reason/experiments/exp11_yolo/runs/v8x_agent_1280_eccv/weights/best.pt",
+      "sha256": "3ad32910bacaf1fa74174503c5c29f94cfbbd83de51e5e5c301e6fc7f13e8684",
+      "bytes": 136824954
+    },
+    "annotation": {
+      "path": "/data/datasets/road_waymo/road_waymo_trainval_v1.1.json",
+      "sha256": "628b39bb9aabd917c6631144e319ecba25c1de3a10502c2360439af7e4f4586a",
+      "bytes": 1149647915
+    },
+    "teacher_partition": {
+      "path": "/data/repos/wiki/artifacts/stage56-full/collected/preparation.json",
+      "sha256": "f8704095dd068af74abbd0e42ad4c82d4421bd9edd9527d48b375d77d646b338",
+      "bytes": 16517
+    }
+  }
+}

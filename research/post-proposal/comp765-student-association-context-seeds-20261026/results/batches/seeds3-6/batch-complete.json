@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "time": 1793038558.0765426,
+  "seeds": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "signature": {
+    "protocol_sha256": "fdd5e69b131b64e3e850429572ee1aa990fc52e12d1b5d66c3577cd21d2b9372",
+    "freeze_sha256": "c3c0763ba048d0d1c884f33f438a049efa0c90fca6c00c5143b4190cd3340fe4"
+  },
+  "score_arrays": 28,
+  "images_verified": 38663,
+  "finite_bounded": true,
+  "primitive_scores_exact": true,
+  "baseline_replay": true,
+  "score_diagnostics_sha256": "a5da460822e0abb27542129e16701a8d28349203531c323e415e2c2ad1ab9370"
+}

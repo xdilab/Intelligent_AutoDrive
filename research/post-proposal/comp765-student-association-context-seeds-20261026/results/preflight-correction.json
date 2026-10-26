@@ -1,0 +1,4 @@
+{
+  "time": 1793034617.4033742,
+  "issue": "Inspect the original infer function via inspect.unwrap because torch.inference_mode decorates it. No numerical change. Failure occurred before freeze or new scores. Also normalize batch timing metadata and make audited cleanup resumable before freeze."
+}

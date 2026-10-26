@@ -1,0 +1,114 @@
+{
+  "time": 1793041457.344514,
+  "files": [
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/baseline-seed7.npy",
+      "sha256": "3851d22f9a550633204617fa372c3756ab726499af26598cfdd6c85bb4430b2a",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/short_single-seed7.npy",
+      "sha256": "b9057bf19baa82e267b1025bb992d90f83df51a2c116db7a743b779b19363497",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/short_frequency-seed7.npy",
+      "sha256": "a1757dfb08400af71a2008388fbd51767a07f75d0dd55990c87be85ea1868934",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/full_single-seed7.npy",
+      "sha256": "e195b80c01e5a19edb71453d427dfb40b04f45ccc2faa214369cab77ef83fe14",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/full_frequency-seed7.npy",
+      "sha256": "63307852a67bf36b920830087485516d4066ada452f5fd68cd1d9f42c8d1c6f3",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/full_pair-seed7.npy",
+      "sha256": "385fade96c1e80bc442d60d99601584b5d94dd74165aa2b15f6aa3c723f3d634",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/full_pair_frequency-seed7.npy",
+      "sha256": "d3cb6bc84fe292fc021731c7357d68ae827b1ed8575cf1cbe72e0154c34e63dd",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/baseline-seed8.npy",
+      "sha256": "7ab96f37309ca95ff60e4292bc15d386cf12f8403981fbc04c94115b938910a2",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/short_single-seed8.npy",
+      "sha256": "1a9b4b70bb184308ddfa3d725704a2f37fa4a1aa854abefbd179a30bd7ac6700",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/short_frequency-seed8.npy",
+      "sha256": "5a8ec6edf92b91d7d806d60cc7ec88b4dab68fcec4711e9399d8221ce2967bfb",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/full_single-seed8.npy",
+      "sha256": "5d4f0aa13ed11388920653fb55d08d296637a42ee9c35d03c1b17383c050566d",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/full_frequency-seed8.npy",
+      "sha256": "4b03d3fb524f05d2250f5b5bdd5cd429d44a85e7baf75487b6ed22c669c082bf",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/full_pair-seed8.npy",
+      "sha256": "b09aea2ebc9d955d2bb78c22898b942edaf3cbfa3936fb47010372abb0c0bc1e",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/full_pair_frequency-seed8.npy",
+      "sha256": "e7fba5752fdfe82d30a42e691e035734171635356255c4ef1f7a625ff4128dc5",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/baseline-seed9.npy",
+      "sha256": "03f21385624767d914b120d04ef33b122803c8484ffaf90b53d76d97794cc763",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/short_single-seed9.npy",
+      "sha256": "9ef9444cd1766192a3bb689a190f0e81d29494f9772c5651b51950dbbf95f59c",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/short_frequency-seed9.npy",
+      "sha256": "fbca54ae106576581abd2236acd80f5239b53246a92c4f9828eaa983b53274e4",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/full_single-seed9.npy",
+      "sha256": "4b3509f611676aca7741b389ea993efdfaf8d2e5d7a8cded93c79ffa36966a25",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/full_frequency-seed9.npy",
+      "sha256": "ccfc53dd72abeb039fbcf3f57c571042544f0936230f2aded058fa097b67dbb3",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/full_pair-seed9.npy",
+      "sha256": "2ad26f0d6d9490628d67f264ba5e0cf5d7ba95e7e97d0f5d089f58415c9dc7b9",
+      "bytes": 4536680576
+    },
+    {
+      "path": "/dev/shm/comp765-student-association-context-seeds-20261026/seeds7-9/full_pair_frequency-seed9.npy",
+      "sha256": "82c5584358473eae6986977fe06b57a6ed94222b0ae1cf082216b9dfa565588a",
+      "bytes": 4536680576
+    }
+  ],
+  "total_bytes": 95270292096,
+  "removed": true,
+  "scope": "Only this completed audited batch temporary predictions. Original checkpoints/caches/results preserved.",
+  "removed_time": 1793041470.2818491
+}

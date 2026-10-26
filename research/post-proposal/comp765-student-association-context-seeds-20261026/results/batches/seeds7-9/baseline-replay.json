@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "time": 1793039571.3061588,
+  "records": [
+    {
+      "seed": 7,
+      "score_sha256": "3851d22f9a550633204617fa372c3756ab726499af26598cfdd6c85bb4430b2a",
+      "source_result_sha256": "5efa1cc343e969184fa09556f0a6eb8328cd9acc9028402c414c3ca445f3d5d3"
+    },
+    {
+      "seed": 8,
+      "score_sha256": "7ab96f37309ca95ff60e4292bc15d386cf12f8403981fbc04c94115b938910a2",
+      "source_result_sha256": "b171efe567490ffdabc803af7d40bac6b521933feb02e0031cf76bef66b40211"
+    },
+    {
+      "seed": 9,
+      "score_sha256": "03f21385624767d914b120d04ef33b122803c8484ffaf90b53d76d97794cc763",
+      "source_result_sha256": "98930f7eb998c44ad8673d72d1b60626f970a5ac8ef6990a37ab3df1e9461ec2"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "time": 1793041596.9493508,
+  "passed": true,
+  "checkpoints": [
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed0/best.pt",
+      "sha256": "55a20fafb9dfbdf682559444e9673bc68f0a6b229c65d1bf00ddfead25902c26",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed0/best.pt",
+      "verified_at": 1793041596.9493508
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed1/best.pt",
+      "sha256": "21219772e3d82ea9b8b66437a0268d5e8694175bdf8d87d347bc5a01cf3ac834",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed1/best.pt",
+      "verified_at": 1793041596.9493508
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/runs/distilled-seed2/best.pt",
+      "sha256": "ec0cfd20b86726f7a494cb9a19657ab2a3d4248ab2478056d097b08532a0cafe",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-20261021/verified-checkpoint-backup/distilled-seed2/best.pt",
+      "verified_at": 1793041596.9493508
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed3/best.pt",
+      "sha256": "19287e0205b252acb2316831f79e81b7192805e7bd00183eaa36135d3db97b02",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed3/best.pt",
+      "verified_at": 1793041596.9493508
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed4/best.pt",
+      "sha256": "c4e1701a91de59e260dfabe38a842a4326826d2642738b2871b343f67bc0b577",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed4/best.pt",
+      "verified_at": 1793041596.9493508
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed5/best.pt",
+      "sha256": "d5fbfed13513e2e334c7724164322e3dcbd613af5d4aae570c2fdd571965e4ad",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed5/best.pt",
+      "verified_at": 1793041596.9493508
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed6/best.pt",
+      "sha256": "1029d67c5b4321388936b44b5f4722e5175736aa16363e5cecbbe2b5e0adae40",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed6/best.pt",
+      "verified_at": 1793041596.9493508
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed7/best.pt",
+      "sha256": "eb92df5f4a5762cc503b70c360c93cc22c4fa92b58a27c0f563cc47144a37951",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed7/best.pt",
+      "verified_at": 1793041596.9493508
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed8/best.pt",
+      "sha256": "a3412899e13cd3534440fdb8f50947cc6c7fdd448fc659f160e7048f9e63a32c",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed8/best.pt",
+      "verified_at": 1793041596.9493508
+    },
+    {
+      "path": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/runs/distilled-seed9/best.pt",
+      "sha256": "3d8a77e84011a1c53ec1d07372dad9fd9cd442d1ed4739fbc1b59ce22c61c03f",
+      "backup": "/home/brandon/.local/share/road-reason/comp765-cseb-student-seeds-20261022/verified-checkpoint-backup/distilled-seed9/best.pt",
+      "verified_at": 1793041596.9493508
+    }
+  ]
+}

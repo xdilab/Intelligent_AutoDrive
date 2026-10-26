@@ -1,0 +1,11 @@
+{"time": 1793034620.880998, "phase": "checkpoint-preflight", "seed": 0}
+{"time": 1793034620.9272742, "phase": "checkpoint-preflight", "seed": 1}
+{"time": 1793034620.9677615, "phase": "checkpoint-preflight", "seed": 2}
+{"time": 1793034621.0102942, "phase": "checkpoint-preflight", "seed": 3}
+{"time": 1793034621.0529368, "phase": "checkpoint-preflight", "seed": 4}
+{"time": 1793034621.0948176, "phase": "checkpoint-preflight", "seed": 5}
+{"time": 1793034621.1373048, "phase": "checkpoint-preflight", "seed": 6}
+{"time": 1793034621.1796415, "phase": "checkpoint-preflight", "seed": 7}
+{"time": 1793034621.2222977, "phase": "checkpoint-preflight", "seed": 8}
+{"time": 1793034621.2638583, "phase": "checkpoint-preflight", "seed": 9}
+{"time": 1793034624.9684112, "phase": "preflight-passed", "checkpoints": 10, "original_results_preserved": 21}

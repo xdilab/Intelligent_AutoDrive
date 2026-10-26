@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "time": 1793034796.9132109,
+  "synthetic_alerts": [
+    "PIPELINE_FAILED: synthetic",
+    "LOG_ERROR: test",
+    "SERVICE_NOT_RUNNING: inactive",
+    "NO_PROGRESS_10MIN"
+  ],
+  "delivery": "Silent JSON logs; readback verified; no banner"
+}

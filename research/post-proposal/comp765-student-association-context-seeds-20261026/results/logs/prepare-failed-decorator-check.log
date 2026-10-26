@@ -1,0 +1,18 @@
+{"time": 1793034535.7439115, "phase": "checkpoint-preflight", "seed": 0}
+{"time": 1793034535.7897005, "phase": "checkpoint-preflight", "seed": 1}
+{"time": 1793034535.8301363, "phase": "checkpoint-preflight", "seed": 2}
+{"time": 1793034535.8767896, "phase": "checkpoint-preflight", "seed": 3}
+{"time": 1793034535.9236386, "phase": "checkpoint-preflight", "seed": 4}
+{"time": 1793034535.9719043, "phase": "checkpoint-preflight", "seed": 5}
+{"time": 1793034536.0180995, "phase": "checkpoint-preflight", "seed": 6}
+{"time": 1793034536.064508, "phase": "checkpoint-preflight", "seed": 7}
+{"time": 1793034536.1108036, "phase": "checkpoint-preflight", "seed": 8}
+{"time": 1793034536.157365, "phase": "checkpoint-preflight", "seed": 9}
+Traceback (most recent call last):
+  File "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-seeds-20261026/prepare.py", line 37, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/data/repos/ROAD_Reason/research/post-proposal/comp765-student-association-context-seeds-20261026/prepare.py", line 24, in main
+    e=evaluator(seeds);assert e.infer.__code__.co_filename==str(CONTEXT_CODE/'official.py') and e.metrics.__code__.co_filename==str(CONTEXT_CODE/'official.py');assert e.Correction is Correction and e.SEEDS==seeds;e.ROOT.mkdir(parents=True,exist_ok=True)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
