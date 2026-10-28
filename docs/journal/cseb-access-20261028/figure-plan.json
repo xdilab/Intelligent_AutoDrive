@@ -1,0 +1,95 @@
+[
+  {
+    "id": 1,
+    "title": "Road-event task, temporal input and evaluation protocol",
+    "section": "Problem formulation / experimental setup",
+    "assets": [],
+    "why": "Define agent-action-location compositions, candidate boxes, the eight-frame window, and training-derived tail groups before model comparisons.",
+    "caption": "ROAD-Waymo event recognition associates a candidate box at time t with agent, action, location and valid composition labels. The CSEB visual window includes t-3 through t+4; detector evaluation uses fixed candidates and frames, while head training and checkpoint/blend selection use distinct recorded partitions.",
+    "evidence": "Locked 36,717-frame protocol; 184 outputs include agentness; Tail47 and Deep28 are derived from training counts.",
+    "action": "Compose a journal-sized task/protocol figure from the existing crop and frame-map ancestors; inspect annotations before choosing the example. Do not imply causal or real-time inference."
+  },
+  {
+    "id": 2,
+    "title": "Why move beyond local scoring? Selected crop baselines",
+    "section": "Baseline architectures",
+    "assets": [
+      "stage4",
+      "stage5",
+      "stage6"
+    ],
+    "why": "Three aligned panels distinguish phrase scoring, visual composition and explicit phrase-score fusion without reproducing every historical experiment.",
+    "caption": "Selected actor-crop baselines: (a) semantic phrase classifier; (b) crop features and primitive scores with a composition MLP; (c) additional phrase-composition evidence. These are historical architectural alternatives, not isolated single-factor comparisons with CSEB.",
+    "evidence": "Workbook models57/59/60: triplet9.065/11.226/11.275; tail5.775/6.164/6.168. Stage5 does not consume phrase-composition scores; Stage6 does.",
+    "action": "Reduce shared detail into one registered three-panel plate. Keep Stage0 and Stage1\u20133 in the baseline table and supplementary evolution figures unless the manuscript needs their full derivation."
+  },
+  {
+    "id": 3,
+    "title": "CSEB: complete inference architecture",
+    "section": "Proposed method, opening",
+    "assets": [
+      "cseb-scaled"
+    ],
+    "why": "Give the reviewer one definitive view of the chosen model and identify what is inherited versus contributed.",
+    "caption": "CSEB combines actor-crop, RoI, scene-token and geometry representations in two contextual experts. Both experts contain scene and language attention. Their135 composition probabilities are blended using a selection-set weight; classification-expert primitive scores are retained before detector assembly. Frozen video/text encoders are shared feature sources, not separately trained expert backbones.",
+    "evidence": "Scaled CSEB:15.748\u00b10.274 triplet,9.000\u00b10.644 Tail47,6.354\u00b10.571 Deep28, three seeds. Visual width1408, phrase bank184\u00d7768, head width512.",
+    "action": "Use the approved editable CSEB ancestor. For the journal, clarify that duplicated encoder drawings denote shared weights and explain the InternVL text-checkpoint provenance in the caption/methods. Do not label its text tower as having1B parameters."
+  },
+  {
+    "id": 4,
+    "title": "Actor-conditioned scene attention versus mean pooling",
+    "section": "Context-fusion subsection",
+    "assets": [
+      "context-mean",
+      "context-attention"
+    ],
+    "why": "Explain why an actor should select relevant scene context instead of receiving one indiscriminate scene average.",
+    "caption": "Both contextual heads fuse crop, RoI, scene and geometry evidence. The mean-pool variant averages scene tokens; scene attention uses crop plus box position as its query and scene tokens as keys and values. Language attention follows visual fusion and is a distinct operation.",
+    "evidence": "Matched focal classification study, models88/89: triplet11.740\u219212.024; Tail47 5.473\u21926.189. Report paired seed variability before making a significance claim.",
+    "action": "Make a two-panel close-up retaining shared geometry. This figure tests scene aggregation; it does not establish separate crop/RoI/geometry component effects."
+  },
+  {
+    "id": 5,
+    "title": "Expert training objectives and gradient paths",
+    "section": "Training objectives",
+    "assets": [
+      "context-attention-all184"
+    ],
+    "why": "Explain precisely how the two experts differ and why the contrastive branch is a training objective rather than another inference input.",
+    "caption": "The classification expert minimizes the implemented difficulty-calibrated classification objective. The second expert adds a multi-positive auxiliary aligning pre-language visual representations with adapted text across all184 outputs, including agentness. Frozen encoders receive no head-training gradients; both experts retain scene and language attention.",
+    "evidence": "Scaled experts: triplet15.026 versus15.081; tail8.396 versus8.533; the latter alone does not establish a reliable semantic-language benefit. Lambda0.001. DCB is adapted from prior work and must be attributed.",
+    "action": "Derive a focused gradient/loss panel from this small-encoder ancestor, updating scaled dimensions from code. Do not present the existing small-encoder figure as an exact scaled-expert diagram. Explain the local DCB reduction/history rather than silently equating it with the published formula."
+  },
+  {
+    "id": 6,
+    "title": "Composition blending, selection and rejected routing complexity",
+    "section": "Expert aggregation",
+    "assets": [
+      "context-dcb"
+    ],
+    "why": "Show why a fixed scalar blend was retained instead of a learned classwise or sample-dependent router.",
+    "caption": "A fixed, selection-set-chosen alpha combines sigmoid composition scores from the two frozen experts. Primitive outputs follow the classification expert. The final semantic scores receive candidate confidence once. The inference blend is parameter-free after alpha selection and is not a sample-dependent gate.",
+    "evidence": "Scaled blend versus classification: +0.722 triplet and +0.604 Tail47; versus contrastive: +0.667 and +0.468. Small-encoder focal global/classwise/generic/factorized triplet means12.584/12.590/12.588/12.593 do not demonstrate a meaningful routing advantage.",
+    "action": "Use a compact scoring-and-selection diagram rather than another complete backbone drawing. Small-encoder DCB source is an ancestor, not the final scaled configuration. Keep gate negative results in an explicit comparison table."
+  },
+  {
+    "id": 7,
+    "title": "What worked: controlled comparisons and frequency-stratified results",
+    "section": "Results and ablations",
+    "assets": [],
+    "why": "Connect each design decision to measured outcomes and distinguish architecture changes from encoder-system scaling.",
+    "caption": "Detector frame-mAP at IoU0.5 on the locked ROAD-Waymo validation frames. Show individual seeds and mean\u00b1sample SD for matched studies; separate historical families and published external references. Tail47, Deep28 and Common39 use fixed training-derived membership.",
+    "evidence": "Include mean-versus-attention, experts-versus-blend, focal-versus-DCB, scaled-versus-original system, and per-class gains/losses. DCB improves overall triplet but decreases Tail47 in the original-encoder comparison. Scaling changes both encoder checkpoints, projection and numerical extraction conditions.",
+    "action": "Generate plots from raw result JSONs, not rounded spreadsheet cells. Include complete class outcomes and clearly label missing cells. No overall chronological line implying every step is a controlled causal improvement."
+  },
+  {
+    "id": 8,
+    "title": "Qualitative improvements, failures and practical cost",
+    "section": "Error analysis / discussion",
+    "assets": [],
+    "why": "Show what predictions change, where the final model fails, and what the expensive encoder costs.",
+    "caption": "Illustrative CSEB predictions and representative failure cases under a documented candidate/display policy. These examples support interpretation; they do not replace detector AP or establish deployment safety. Runtime includes explicitly named decoding, detection, encoding, head and export components.",
+    "evidence": "Existing raw-video demo is120frames with3,634 proposals; original measured visual encoding325.26s and both heads2.16s. That particular prototype is offline and its display threshold differs from detector AP.",
+    "action": "Select examples using a stated rule, include failures, and verify label/box provenance. Reuse the existing qualitative footage as a candidate, not an accuracy measurement. Keep the separate COMP765 student and market-basket study out of this thesis-derived journal scope."
+  }
+]

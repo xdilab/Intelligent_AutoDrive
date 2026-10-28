@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-28",
+  "status": "Review packet; manuscript source not located; no manuscript or thesis edits",
+  "revision": "7c13f8e799990a1657e0e0e9dc3af3f118ed92dc",
+  "workbook": {
+    "path": "/home/brandon/Downloads/ROAD-Waymo Results(1).xlsx",
+    "sha256": "13b244c74bb7dd727fd587943d9f0298c74d238be89bed69bd8be5836395ded0",
+    "sheet": "Clean Metrics Fall 2026",
+    "cloud_identity_verified": false
+  },
+  "headline_summary": {
+    "path": "/data/repos/ROAD_Reason/research/post-proposal/results-snapshots/20261019-headline/scaled-cseb/full-summary.json",
+    "sha256": "dc2b40e73f1c29806676cfd02b2801888194105c3d85aea7a97a8d85a0fd69a5"
+  },
+  "headline_raw_results_verified": 9,
+  "headline_workbook_values_verified": 6,
+  "assets": [
+    {
+      "path": "/data/repos/ROAD_Reason/docs/architectures/assets/context-attention.png",
+      "sha256": "82b495c1883b0c057dc63d08e1872dd3e2b9c32f5272e8d32351066e4d82c2d2"
+    },
+    {
+      "path": "/data/repos/ROAD_Reason/docs/architectures/assets/context-attention.drawio",
+      "sha256": "854126bbcd83c948c804cd2f703a30a8a85c92bb95ea1e2dcff08e38d84377d3"
+    },
+    {
+      "path": "/data/repos/ROAD_Reason/docs/architectures/assets/context-attention-all184.png",
+      "sha256": "99199ed1ad57023873de69be6957d3feb71338a516271b9cb07611b3eca42f07"
+    },
+    {
+      "path": "/data/repos/ROAD_Reason/docs/architectures/assets/context-attention-all184.drawio",
+      "sha256": "93072a08a01ea119ad0bd9ba3e12862bdf15d804cdb1a3fb2015e80c79a9a720"
+    },
+    {
+      "path": "/data/repos/ROAD_Reason/docs/architectures/assets/context-dcb.png",
+      "sha256": "93e74cc737edbd79e5faf5e748b430550cd83aecdb2890d41d9927533e5196c3"
+    },
+    {
+      "path": "/data/repos/ROAD_Reason/docs/architectures/assets/context-dcb.drawio",
+      "sha256": "2734c735ad6394a17c4de55f7aba8b863f71da7a1ad5aeef8fc0441173e466fd"
+    },
+    {
+      "path": "/data/repos/ROAD_Reason/docs/architectures/assets/context-mean.png",
+      "sha256": "ebcdc791211ecaa5dd70e2a1115183435f9b88dcaf3a192d2b60f7017700ef06"
+    },
+    {
+      "path": "/data/repos/ROAD_Reason/docs/architectures/assets/context-mean.drawio",
+      "sha256": "6db4bf111f79b1b1e5eda911bbe998fe8bc05316bf6f67a1d380a38cc30bdc69"
+    },
+    {
+      "path": "/data/repos/ROAD_Reason/docs/architectures/assets/cseb-scaled.png",
+      "sha256": "94825a93193cabdbe5358a640e1ae560a336c0da5e60526242129944dd815d72"
+    },
+    {
+      "path": "/data/repos/ROAD_Reason/docs/architectures/assets/cseb-scaled.drawio",
+      "sha256": "9ee7deec5e869bec8b8cfaf3ab0df27b83ca16a49b254041f26a43d7059c2977"
+    },
+    {
+      "path": "/data/repos/ROAD_Reason/docs/architectures/assets/stage4.png",
+      "sha256": "edad7890fd4b922cac85f798976cd67dbf6978e5b15932c5e70b9dd6fb3a2e6c"
+    },
+    {
+      "path": "/data/repos/ROAD_Reason/docs/architectures/assets/stage4.drawio",
+      "sha256": "ed771e10c041f92b1f88f056ee527bfb201a231bae8c34925cebbf907c4166bc"
+    },
+    {
+      "path": "/data/repos/ROAD_Reason/docs/architectures/assets/stage5.png",
+      "sha256": "9b24cc07c1675d9e5d21269209e29b579777ae3c9b71d332d6c08fda6c657535"
+    },
+    {
+      "path": "/data/repos/ROAD_Reason/docs/architectures/assets/stage5.drawio",
+      "sha256": "0abcc2f78efcb04edd0301224092e83ceaf6a7fa97b7fad91c309e1b95a91535"
+    },
+    {
+      "path": "/data/repos/ROAD_Reason/docs/architectures/assets/stage6.png",
+      "sha256": "e67d94c94806c61f4d388a7fe02f5cf6bd5327468497f34bec285616a10a8587"
+    },
+    {
+      "path": "/data/repos/ROAD_Reason/docs/architectures/assets/stage6.drawio",
+      "sha256": "7429b8f3da6a2fb8b82be1eed8624b16191c75350c013cf2cb58b78b1eb94632"
+    }
+  ],
+  "figure_status": "Unmodified historical source previews; journal derivatives remain planned",
+  "ieee_guidelines": "https://ieeeaccess.ieee.org/authors/submission-guidelines/",
+  "sharepoint_access": "Web tool could not retrieve the linked workbook; local copy is not asserted to be current cloud bytes",
+  "no_new_experiments": true
+}

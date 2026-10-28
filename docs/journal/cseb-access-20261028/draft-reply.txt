@@ -1,0 +1,14 @@
+DRAFT FOR BRANDON TO REVIEW — NOT SENT
+
+Dear Dr. Moradi,
+
+Thank you for the feedback. I will organize the journal version around the Contextual Scene-Attention Expert Blend (CSEB), with a selected set of baseline and intermediate architectures that explains why the final design was chosen.
+
+For our next meeting, I will prepare the manuscript in IEEE Access format and place the proposed figures alongside the relevant method and results sections. The figure plan covers the selected crop-based baselines, the complete CSEB architecture, scene attention, the two expert-training objectives, and composition blending. I will pair these with controlled comparisons, tail-class analysis, and qualitative successes and failures, so that each figure explains a specific choice rather than reproducing the entire slide deck.
+
+I will distinguish the components inherited from prior work from our contributions, and keep historical comparisons separate from matched ablations. I will also include alternatives that did not provide a clear benefit, particularly the more complex routing and composition-head variants, to explain what was retained and why. We can revise the selection and placement together at the meeting.
+
+I understand that journal submission remains outstanding. I am committed to continuing the work after graduation, addressing reviewer concerns, and working with you on revisions and resubmissions toward publication.
+
+Best,
+Brandon
